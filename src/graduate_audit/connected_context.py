@@ -37,11 +37,11 @@ def compare(calendar_path: Path, output_root: Path) -> list[dict[str, str]]:
     portfolio_status: dict[str, str] = {}
     for category, label in (("core", "Core"), ("reserve", "Reserve"), ("monitor_for_2027_position", "Monitor")):
         for row in portfolio.get(category, []):
-            portfolio_status[_key(row.get("institution_name", ""))] = label
+            portfolio_status.setdefault(_key(row.get("institution_name", "")), label)
 
     deep_by_name: dict[str, list[dict[str, str]]] = {}
     for row in programs:
-        if row.get("verification_status", "").lower() in {"", "mechanical", "preliminary"}:
+        if row.get("verification_status", "").lower() in {"", "mechanical", "preliminary"} or not row.get("overall_score") or row.get("overall_score") == "0":
             continue
         deep_by_name.setdefault(_key(row.get("institution_name", "")), []).append(row)
 

@@ -113,9 +113,9 @@ async function main() {
   const manifest = JSON.parse(await fs.readFile(path.join(outputRoot, "run_manifest.json"), "utf8"));
   const validation = JSON.parse(await fs.readFile(path.join(outputRoot, "validation.json"), "utf8"));
   const portfolio = JSON.parse(await fs.readFile(path.join(outputRoot, "portfolio.json"), "utf8"));
-  const reviewed = programs.filter(row => !["", "mechanical", "preliminary"].includes((row.verification_status ?? "").toLowerCase()));
+  const reviewed = programs.filter(row => !["", "mechanical", "preliminary"].includes((row.verification_status ?? "").toLowerCase()) && Number(row.overall_score || 0) > 0);
   const retained = programs.filter(row => (row.screening_decision ?? "").toLowerCase() === "retained");
-  const recommended = professors.filter(row => ["first wave", "first-wave", "high"].includes((row.outreach_priority ?? "").toLowerCase()));
+  const recommended = drafts.filter(row => (row.contact_type ?? "").toLowerCase() === "professor");
   const workbook = Workbook.create();
   let tableIndex = 1;
 
@@ -137,11 +137,12 @@ async function main() {
     ["Programs deeply reviewed", reviewed.length],
     ["Programs retained", retained.length],
     ["Programs excluded", programs.filter(r => ["excluded", "screened_out", "do_not_apply"].includes((r.screening_decision ?? "").toLowerCase())).length],
-    ["Professors evaluated", professors.length],
+    ["Distinct professors evaluated", counts.professors_evaluated ?? professors.length],
+    ["Professor-program matches", professors.length],
     ["Professors recommended", recommended.length],
-    ["First-wave contacts", Math.min(15, recommended.length + admins.filter(r => (r.priority ?? "").toLowerCase().includes("first")).length)],
+    ["First-wave contacts", drafts.length],
     ["Source claims", sources.length],
-    ["Blocked/unverified institutions", Number((counts.by_institution_status ?? {}).indexed ?? 0) + Number((counts.by_institution_status ?? {}).program_screened_out ?? 0)],
+    ["Blocked/unverified institutions", Number((counts.by_institution_status ?? {}).indexed ?? 0)],
   ];
   dashboard.getRange(`A4:B${3 + metrics.length}`).values = metrics;
   dashboard.getRange("A4:B4").format = { fill: COLORS.blue, font: { name: "Arial", bold: true, color: COLORS.white } };
@@ -167,7 +168,7 @@ async function main() {
 
   const schoolHeaders = ["University","Stable Institution ID","Country","Program","Degree Type","Department","Program Priority","Research Fit Score","Professor Fit Score","Faculty Depth Score","Funding Score","Eligibility Score","Overall Score","Research Fit Explanation","Relevant Courses or Research Infrastructure","Direct-from-Bachelor’s Eligible","International Eligible","Minimum GPA","English Requirement or Waiver","Admissions Model","Faculty Contact Expectation","Fall 2027 Deadline","Deadline Cycle Status","Funding Model","Stipend","Funding Duration","Tuition Coverage","Fees and Insurance Coverage","Summer Funding","PhD Funding","Master’s Funding","Scholarships and Fellowships","Application Fee","Fee Waiver Possibility","Multiple Applications Allowed","Official Program URL","Current Status","Recommended Action","Final Decision","Biggest Risk","Unresolved Question","Notes"];
   const schoolMap = [
-    ["University","institution_name"],["Stable Institution ID","institution_id"],["Country","country"],["Program","program_name"],["Degree Type","degree_type"],["Department","department"],["Program Priority","recommendation"],
+    ["University","institution_name"],["Stable Institution ID","institution_id"],["Country","country"],["Program","program_name"],["Degree Type","degree_type"],["Department","department"],["Program Priority","final_decision"],
     ["Research Fit Score","research_fit_score",numberValue],["Professor Fit Score","professor_fit_score",numberValue],["Faculty Depth Score","faculty_depth_score",numberValue],["Funding Score","funding_score",numberValue],["Eligibility Score","eligibility_score",numberValue],["Overall Score","overall_score",numberValue],
     ["Research Fit Explanation","preliminary_fit"],["Relevant Courses or Research Infrastructure","research_groups_labs"],["Direct-from-Bachelor’s Eligible","direct_from_bachelors_eligible"],["International Eligible","international_student_eligible"],["Minimum GPA","minimum_gpa"],["English Requirement or Waiver","english_requirement_waiver"],["Admissions Model","admissions_model"],["Faculty Contact Expectation","faculty_contact_expectation"],["Fall 2027 Deadline","fall_2027_deadline"],["Deadline Cycle Status","deadline_cycle_status"],["Funding Model","funding_model"],["Stipend","stipend_amount",(v,r)=>[v,r.stipend_currency].filter(Boolean).join(" ")],["Funding Duration","funding_duration_years"],["Tuition Coverage","tuition_coverage"],["Fees and Insurance Coverage","mandatory_fee_coverage",(v,r)=>[v,r.health_insurance_coverage].filter(Boolean).join("; ")],["Summer Funding","summer_funding"],["PhD Funding","phd_funding"],["Master’s Funding","masters_funding"],["Scholarships and Fellowships","scholarships_fellowships"],["Application Fee","application_fee",(v,r)=>[v,r.fee_currency].filter(Boolean).join(" ")],["Fee Waiver Possibility","fee_waiver_rules"],["Multiple Applications Allowed","multiple_applications_allowed"],["Official Program URL","official_program_url"],["Current Status","verification_status"],["Recommended Action","recommendation"],["Final Decision","final_decision"],["Biggest Risk","biggest_risk"],["Unresolved Question","unresolved_question"],["Notes","notes"]
   ];
@@ -190,9 +191,19 @@ async function main() {
 
   const queueHeaders=["Rank","Person","University","Program","Professor or Admin","Why Contact Them Now","What This Contact Resolves","Email Address","Prior Contact?","Draft Ready?","Send Status","Date Sent","Follow-Up Date","Result"];
   const queue=[];
-  for(const p of recommended){queue.push({"Person":p.full_name,"University":p.institution_name,"Program":p.program_name,"Professor or Admin":"Professor","Why Contact Them Now":p.recommended_outreach_angle,"What This Contact Resolves":p.specific_question_goal,"Email Address":p.official_email,"Prior Contact?":p.already_contacted||"No","Draft Ready?":drafts.some(d=>d.recipient_email===p.official_email)?"Yes":"No","Send Status":"Not sent","Date Sent":"","Follow-Up Date":"","Result":"","_score":Number(p.outreach_score||0)});}
-  for(const a of admins){if((a.Priority??a.priority??"").toLowerCase().includes("first")){queue.push({"Person":a["Contact Name"]??a.contact_name??"Graduate program","University":a.University??a.university??"","Program":a.Program??a.program??"","Professor or Admin":"Admin","Why Contact Them Now":a["Why It Matters"]??a.why_it_matters??"","What This Contact Resolves":a["Question to Resolve"]??a.question_to_resolve??"","Email Address":a["Official Email"]??a.official_email??"","Prior Contact?":a["Already Contacted?"]??a.already_contacted??"No","Draft Ready?":drafts.some(d=>d.recipient_email===(a["Official Email"]??a.official_email))?"Yes":"No","Send Status":"Not sent","Date Sent":"","Follow-Up Date":"","Result":"","_score":70});}}
-  queue.sort((a,b)=>b._score-a._score); queue.slice(0,15).forEach((row,i)=>row.Rank=i+1);
+  for (const draft of drafts) {
+    const professor = professors.find(row => row.official_email === draft.recipient_email);
+    const admin = admins.find(row => (row["Official Email"] ?? row.official_email) === draft.recipient_email);
+    queue.push({
+      "Rank": numberValue(draft.rank), "Person": draft.recipient, "University": draft.university,
+      "Program": draft.program, "Professor or Admin": draft.contact_type,
+      "Why Contact Them Now": professor?.recommended_outreach_angle ?? admin?.["Why It Matters"] ?? admin?.why_it_matters ?? draft.personalization_anchor,
+      "What This Contact Resolves": professor?.specific_question_goal ?? admin?.["Question to Resolve"] ?? admin?.question_to_resolve ?? "",
+      "Email Address": draft.recipient_email, "Prior Contact?": professor?.already_contacted ?? admin?.["Already Contacted?"] ?? admin?.already_contacted ?? "No",
+      "Draft Ready?": "Yes", "Send Status": "Not sent", "Date Sent": "", "Follow-Up Date": "", "Result": "",
+    });
+  }
+  queue.sort((a,b)=>Number(a.Rank||0)-Number(b.Rank||0));
   addTableSheet(workbook,{name:"THIS WEEKEND OUTREACH QUEUE",title:"This Weekend Outreach Queue",subtitle:"Ranked by information value, research fit, supervisor/funding dependence, uncertainty, and contact appropriateness. Nothing has been sent.",headers:queueHeaders,rows:queue.slice(0,15),tableIndex:tableIndex++,validations:{"Send Status":["Not sent","Ready","Sent","Do not send"]}});
 
   const draftHeaders=["Rank","University","Program","Recipient","Recipient Email","Subject","Personalization Anchor","Draft"];

@@ -1,0 +1,1367 @@
+{
+  "run_id": "20260909-fall2027-audit",
+  "current_date": "2026-09-09",
+  "generated_at": "2026-09-10T04:52:48.336082+00:00",
+  "region_definitions": {
+    "us": "50 states, District of Columbia, and IPEDS other US jurisdictions",
+    "canada": "all provinces and territories",
+    "europe": "EU-27 plus United Kingdom, Norway, Switzerland, and Iceland"
+  },
+  "counts": {
+    "institutions_indexed": 5833,
+    "programs_considered": 1880,
+    "exclusions": 5099,
+    "professors_evaluated": 52,
+    "sources": 13254,
+    "by_region": {
+      "US state": 2037,
+      "District of Columbia": 17,
+      "IPEDS other jurisdiction": 53,
+      "Canada — Alberta": 7,
+      "Canada — British Columbia": 10,
+      "Canada — Manitoba": 4,
+      "Canada — New Brunswick": 4,
+      "Canada — Newfoundland and Labrador": 1,
+      "Canada — Nova Scotia": 11,
+      "Canada — Ontario": 26,
+      "Canada — Prince Edward Island": 1,
+      "Canada — Quebec": 26,
+      "Canada — Saskatchewan": 7,
+      "Canada — Yukon": 1,
+      "Europe": 3628
+    },
+    "by_country": {
+      "United States": 2107,
+      "Canada": 98,
+      "Austria": 86,
+      "Belgium": 64,
+      "Bulgaria": 51,
+      "Croatia": 62,
+      "Cyprus": 47,
+      "Czechia": 86,
+      "Denmark": 50,
+      "Estonia": 27,
+      "Finland": 47,
+      "France": 407,
+      "Germany": 487,
+      "Greece": 53,
+      "Hungary": 64,
+      "Iceland": 10,
+      "Ireland": 34,
+      "Italy": 207,
+      "Latvia": 44,
+      "Lithuania": 41,
+      "Luxembourg": 10,
+      "Malta": 9,
+      "Netherlands": 123,
+      "Norway": 66,
+      "Poland": 258,
+      "Portugal": 297,
+      "Romania": 93,
+      "Slovakia": 40,
+      "Slovenia": 53,
+      "Spain": 174,
+      "Sweden": 67,
+      "Switzerland": 118,
+      "United Kingdom": 453
+    },
+    "by_institution_status": {
+      "preliminary_fit": 686,
+      "no_relevant_graduate_field": 1446,
+      "retained": 20,
+      "deep_review": 14,
+      "indexed": 50,
+      "program_screened_out": 3604,
+      "no_graduate_degree_authority": 13
+    },
+    "by_program_decision": {
+      "advance_to_official_review": 1141,
+      "secondary_signal_manual_review": 645,
+      "advance_to_deep_review": 9,
+      "preliminary_fit": 29,
+      "retained": 22,
+      "deep_review_pending_numeric_funding": 3,
+      "downgraded_pending_funding_and_deadline": 1,
+      "downgraded": 2,
+      "deep_review": 10,
+      "excluded": 8,
+      "downgrade": 10
+    },
+    "institutions_screened": 5833,
+    "programs_screened": 1880,
+    "programs_deeply_reviewed": 56,
+    "programs_retained": 22,
+    "programs_excluded_or_downgraded": 20,
+    "professor_program_matches_evaluated": 56,
+    "professors_recommended": 12,
+    "first_wave_contacts": 15,
+    "core_applications": 20,
+    "reserve_applications": 10,
+    "monitor_routes": 3
+  },
+  "deduplication": {
+    "duplicate_institution_ids_resolved": [],
+    "duplicate_program_ids_resolved": [],
+    "duplicate_professor_ids_resolved": []
+  },
+  "dataset_manifests": [
+    {
+      "path": "data\\manifests\\canada\\blocked_sources.json",
+      "payload": {
+        "access_date": "2026-09-09",
+        "sources": [
+          {
+            "institution": "University of Alberta",
+            "program": "MSc in Computing Science (thesis)",
+            "url": "https://www.ualberta.ca/en/computing-science/graduate-studies/programs-and-admissions/index.html",
+            "status": "blocked",
+            "error": "request failed: https://www.ualberta.ca/en/computing-science/graduate-studies/programs-and-admissions/index.html: 403 Client Error: Forbidden for url: https://www.ualberta.ca/en/computing-science/graduate-studies/programs-and-admissions/index.html"
+          },
+          {
+            "institution": "Simon Fraser University",
+            "program": "MSc in Computing Science",
+            "url": "https://www.sfu.ca/fas/computing/future-students/graduate-students/programs/msc.html",
+            "status": "blocked",
+            "error": "request failed: https://www.sfu.ca/fas/computing/future-students/graduate-students/programs/msc.html: 404 Client Error: Not Found for url: https://www.sfu.ca/fas/computing/future-students/graduate-students/programs/msc.html"
+          },
+          {
+            "institution": "University of Northern British Columbia",
+            "program": "MSc in Computer Science",
+            "url": "https://www.unbc.ca/calendar/graduate/computer-science",
+            "status": "blocked",
+            "error": "request failed: https://www.unbc.ca/calendar/graduate/computer-science: 404 Client Error: Not Found for url: https://www.unbc.ca/calendar/graduate/computer-science"
+          },
+          {
+            "institution": "University of Winnipeg",
+            "program": "MSc in Applied Computer Science and Society",
+            "url": "https://www.uwinnipeg.ca/graduate-studies/graduate-programs/applied-computer-science.html",
+            "status": "blocked",
+            "error": "request failed: https://www.uwinnipeg.ca/graduate-studies/graduate-programs/applied-computer-science.html: 403 Client Error: Forbidden for url: https://www.uwinnipeg.ca/graduate-studies/graduate-programs/applied-computer-science.html"
+          },
+          {
+            "institution": "University of Prince Edward Island",
+            "program": "MSc in Mathematical and Computational Sciences",
+            "url": "https://www.upei.ca/programs/master-science-mathematical-and-computational-sciences",
+            "status": "insufficient page signals",
+            "error": "Required degree/research terms were not both present in the opened content"
+          },
+          {
+            "institution": "McGill University",
+            "program": "MSc in Computer Science (thesis)",
+            "url": "https://coursecatalogue.mcgill.ca/en/graduate/science/computer-science/computer-science-thesis-msc/computer-science-thesis-msc.pdf",
+            "status": "insufficient page signals",
+            "error": "Required degree/research terms were not both present in the opened content"
+          },
+          {
+            "institution": "Université du Québec à Chicoutimi",
+            "program": "Maîtrise en informatique",
+            "url": "https://programmes.uqac.ca/1641",
+            "status": "insufficient page signals",
+            "error": "Required degree/research terms were not both present in the opened content"
+          },
+          {
+            "institution": "Université du Québec à Montréal",
+            "program": "Maîtrise en informatique",
+            "url": "https://etudier.uqam.ca/programme?code=2014",
+            "status": "insufficient page signals",
+            "error": "Required degree/research terms were not both present in the opened content"
+          },
+          {
+            "institution": "École Polytechnique de Montréal",
+            "program": "Maîtrise recherche en génie informatique",
+            "url": "https://www.polymtl.ca/programmes/programmes/maitrise-recherche-en-genie-informatique",
+            "status": "insufficient page signals",
+            "error": "Required degree/research terms were not both present in the opened content"
+          }
+        ]
+      }
+    },
+    {
+      "path": "data\\manifests\\canada\\cicic_snapshot.json",
+      "payload": {
+        "dataset": "CICIC Directory of Educational Institutions in Canada",
+        "url": "https://www.cicic.ca/869/results.canada?t=1&search=",
+        "directory_scope_url": "https://www.cicic.ca/871/read_more_information_about_the_directory_of_educational_institutions_in_canada.canada",
+        "access_date": "2026-09-09",
+        "page_count": 8,
+        "institution_count": 230,
+        "page_sha256": [
+          "e6ca2fa53fcef99f7c0580a4b426b349677dbccd220a2f7d175909e22abd3714",
+          "04aa254ae972381a28266a839c4113f1f8a2332d74f0ecf592f202b8290f526b",
+          "989daec84c0dd4bb3f915bfb1c7528c184882fe720313c370d86920ac3eb8c06",
+          "77936a6a946d84043e1e5d8b403619a2ddd53b7ea24075f61a88e920767c9348",
+          "e96f6b86ed8529c8889fa36fb4e53e5adaaf437b5d5a38eba0fe30cd5bd9b2f0",
+          "ac40a943b498cf27e8babaa7f513cc4a8954230adc977bd6d48000fc553974ad",
+          "c791e9e21998632b2d4c1dca51f40acde8596ca80d2285c1c1f6c99c372f51e1",
+          "7d60c8c0651c23d7bbb203c6dfa3a2bee4a78aee54ca878773459273093835de"
+        ],
+        "note": "CICIC states that the live directory contains only currently recognized, authorized, registered and/or licensed institutions."
+      }
+    },
+    {
+      "path": "data\\manifests\\canada\\ircc_snapshot.json",
+      "payload": {
+        "dataset": "IRCC Designated Learning Institutions list",
+        "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/study-permit/prepare/designated-learning-institutions-list.html",
+        "page_modified": "2026-09-01",
+        "access_date": "2026-09-09",
+        "http_status": 200,
+        "sha256": "1fbc9150e8ac1aed47a673aca16af5e4a0163d0c59e940679db144fa38e4dfa1",
+        "campus_row_count": 1441
+      }
+    },
+    {
+      "path": "data\\manifests\\canada\\ror_snapshot.json",
+      "payload": {
+        "dataset": "Research Organization Registry API v2",
+        "url": "https://api.ror.org/v2/organizations",
+        "documentation": "https://ror.readme.io/docs/rest-api",
+        "access_date": "2026-09-09",
+        "reported_count": 402,
+        "retrieved_count": 402,
+        "filter": "country.country_code:CA,types:education,status:active",
+        "note": "ROR supplies persistent cross-reference identifiers and official-domain metadata; it is not used as an accreditation authority."
+      }
+    },
+    {
+      "path": "data\\manifests\\deep_review\\canada\\coverage.json",
+      "payload": {
+        "region": "canada",
+        "phase": "finalist_deep_review",
+        "access_date": "2026-09-09",
+        "scope": {
+          "institutions": 10,
+          "program_routes_reviewed": 20,
+          "deep_program_rows": 13
+        },
+        "route_selection": {
+          "primary_routes": 10,
+          "material_alternates": 3,
+          "alternates": [
+            "Waterloo direct-entry PhD",
+            "UBC PhD Track",
+            "Calgary MSc thesis"
+          ]
+        },
+        "counts": {
+          "deep_programs": 13,
+          "professor_program_matches": 13,
+          "distinct_professors": 10,
+          "source_rows": 48,
+          "admin_contacts": 10,
+          "exclusions_or_downgrades": 10
+        },
+        "recommendations": {
+          "Likely Apply": 6,
+          "Outreach Before Decision": 5,
+          "Investigate Further": 1,
+          "Deprioritize": 1
+        },
+        "known_failures": [
+          "University of Alberta current Computing Science program/funding detail pages were not reliably accessible; route remains Investigate Further.",
+          "University of Toronto Fall 2027 application page is live but the deadline is not yet published.",
+          "Several universities publish recurring deadline day/month without explicitly labeling the Fall 2027 cycle; those rows retain the recurring wording and require recheck.",
+          "McGill, Concordia, and UVic do not publish a current universal numeric MSc funding floor in the reviewed official pages."
+        ],
+        "non_actions": [
+          "No email sent",
+          "No Gmail accessed",
+          "No Calendar accessed or modified",
+          "No application submitted"
+        ]
+      }
+    },
+    {
+      "path": "data\\manifests\\deep_review\\europe\\manifest.json",
+      "payload": {
+        "generated_at": "2026-09-09",
+        "scope": "12 Europe screening candidates plus 6 requested institutional seed checks",
+        "artifacts": [
+          {
+            "path": "data/processed/deep_review/europe/deep_programs.csv",
+            "sha256": "fc57797d44aa68a7109f4046a8d8a5537cd958d8bdfeeb647cfa92e4033b25b6",
+            "bytes": 45311
+          },
+          {
+            "path": "data/processed/deep_review/europe/professors.csv",
+            "sha256": "13818535be0beda4098a7237b8f40b347989e5199317b9a2c566b333c4d3c24c",
+            "bytes": 28447
+          },
+          {
+            "path": "data/processed/deep_review/europe/sources.csv",
+            "sha256": "ff50b6739b6194cd1bcf8d4bcdcfaa1283a59769daa7e30b719ebf81ed68e017",
+            "bytes": 53062
+          },
+          {
+            "path": "data/processed/deep_review/europe/admin_contacts.csv",
+            "sha256": "b05079aec54e1b51668b2a30dd9b7e5bffe9bf4f97c4bd693d051c33af12ae0b",
+            "bytes": 5060
+          },
+          {
+            "path": "data/processed/deep_review/europe/exclusion_or_downgrade.csv",
+            "sha256": "137e25f869143c3f826dc966b40e2c87c210b7fd55c9d9136d8cdacff0a9550a",
+            "bytes": 9508
+          },
+          {
+            "path": "data/processed/deep_review/europe/validation.json",
+            "sha256": "946164a492ef28c5ff635232990aa7f62647501b8090f599065a01bda7f60724",
+            "bytes": 1922
+          },
+          {
+            "path": "evidence/deep_review/europe/README.md",
+            "sha256": "5c2dedb75b9b8e2bd49ddf101bd7eb1ca1e3d8d19b6bba457c1f5a439f8c409b",
+            "bytes": 1495
+          },
+          {
+            "path": "evidence/deep_review/europe/source_notes.json",
+            "sha256": "6386761d7f49e41383b7b43b377f766d2fb99ce1fd91c5e603007bb188bcae46",
+            "bytes": 787
+          }
+        ],
+        "generator": "data/manifests/deep_review/europe/build_outputs.py"
+      }
+    },
+    {
+      "path": "data\\manifests\\deep_review\\us\\run_manifest.json",
+      "payload": {
+        "region": "us",
+        "phase": "finalist_deep_review",
+        "generated_at": "2026-09-10T04:09:24.241430+00:00",
+        "data_access_date": "2026-09-09",
+        "status": "PASS",
+        "scope": {
+          "initial_institutions_reviewed": 20,
+          "priority_second_tranche_reviewed": [
+            "Vanderbilt University",
+            "University of Notre Dame",
+            "Washington University in St Louis",
+            "Case Western Reserve University",
+            "Rochester Institute of Technology"
+          ],
+          "deferred_second_tranche": [
+            "Lehigh University",
+            "University of Texas at San Antonio",
+            "Colorado School of Mines",
+            "University of Houston",
+            "Michigan Technological University"
+          ]
+        },
+        "counts": {
+          "programs": 25,
+          "professors": 25,
+          "sources": 113,
+          "admin_contacts": 25,
+          "exclusion_or_downgrade": 11,
+          "retained": 14,
+          "downgraded": 10,
+          "excluded": 1,
+          "cycle_labeled_fall_2027_deadlines": 12,
+          "recruiting_confirmed": 1,
+          "recruiting_unknown": 24
+        },
+        "files": [
+          {
+            "path": "data/processed/deep_review/us/deep_programs.csv",
+            "sha256": "a7f762c0c5c29ad34c91101ba3e51238dbd4dff18bab3787abc9711e013b8eac",
+            "bytes": 63589
+          },
+          {
+            "path": "data/processed/deep_review/us/professors.csv",
+            "sha256": "7b66984227d659dfb88725ace5d94f941c5faed634a86ffaec61c342bb787322",
+            "bytes": 35744
+          },
+          {
+            "path": "data/processed/deep_review/us/sources.csv",
+            "sha256": "883593b8b27b343676347e731338ddb353136b0d08d4e43691f2b83bba7ae815",
+            "bytes": 50445
+          },
+          {
+            "path": "data/processed/deep_review/us/admin_contacts.csv",
+            "sha256": "b16e247651a28110ca97bb0f7dba22b486ae1bc49de77e1fd6c5a62cc33828b2",
+            "bytes": 13455
+          },
+          {
+            "path": "data/processed/deep_review/us/exclusion_or_downgrade.csv",
+            "sha256": "b12e8e1f573a52254478418c177a983ebd48b40d3fa6d0ebf93f09dfeee3e067",
+            "bytes": 6060
+          },
+          {
+            "path": "data/processed/deep_review/us/validation.json",
+            "sha256": "0d12b8de21edfbb1990d2df37924690af4d416a4ce729db1fb77a659a36aef9f",
+            "bytes": 2229
+          }
+        ],
+        "source_policy": "Official institution pages for program/admissions/funding/faculty claims; scholarly publisher or university-hosted paper for recent work. Search snippets were discovery only."
+      }
+    },
+    {
+      "path": "data\\manifests\\europe\\blocked_sources.json",
+      "payload": {
+        "access_date": "2026-09-09",
+        "sources": [
+          {
+            "name": "EHESO/ETER HEI API",
+            "url": "https://observatory.eter-project.com/api/v1/layer",
+            "status": "blocked",
+            "http_status": 401,
+            "impact": "No ETER identifiers or institution-level degree/doctoral-award fields could be cross-walked."
+          },
+          {
+            "name": "Danish Ministry of Higher Education and Science",
+            "url": "https://ufm.dk/en/education/higher-education/danish-universities",
+            "status": "blocked",
+            "error": "404 Client Error: Not Found for url: https://ufm.dk/en/education/higher-education/danish-universities"
+          },
+          {
+            "name": "AIKA Higher Education Institution List",
+            "url": "https://eplatforma.aika.lv/index.php?r=site%2Fhei-list",
+            "status": "blocked",
+            "error": "404 Client Error: Not Found for url: https://eplatforma.aika.lv/index.php?r=site%2Fhei-list"
+          },
+          {
+            "name": "Ministry of Research and Higher Education",
+            "url": "https://mesr.gouvernement.lu/en/enseignementsuperieur.html",
+            "status": "blocked",
+            "error": "404 Client Error: Not Found for url: https://mesr.gouvernement.lu/en/enseignementsuperieur.html"
+          },
+          {
+            "name": "Malta Further and Higher Education Authority",
+            "url": "https://mfhea.mt/higher-education-licensees/",
+            "status": "blocked",
+            "error": "403 Client Error: Forbidden for url: https://mfhea.mt/higher-education-licensees/"
+          },
+          {
+            "name": "DPhil in Computer Science",
+            "url": "https://www.ox.ac.uk/admissions/graduate/courses/dphil-computer-science",
+            "status": "blocked",
+            "error": "403 Client Error: Forbidden for url: https://www.ox.ac.uk/admissions/graduate/courses/dphil-computer-science"
+          }
+        ]
+      }
+    },
+    {
+      "path": "data\\manifests\\europe\\national_registry_checks.json",
+      "payload": [
+        {
+          "country": "Austria",
+          "authority": "Agency for Quality Assurance and Accreditation Austria",
+          "url": "https://www.aq.ac.at/en/",
+          "final_url": "https://www.aq.ac.at/en/",
+          "status_code": 200,
+          "ok": true,
+          "checked_at": "2026-09-09T00:00:00Z",
+          "content_sha256": "0c868c81f9f349066985006fc692b7c1d844f7864ef540a8a7281daa9591cf90",
+          "title": "AQ Austria - Agency for Quality Assurance and\nAccreditation Austria",
+          "excerpt": "ty in higher education within the Austrian and European Higher Education Area. Through consulting, evaluation, and support of higher education institutions and research organisations, we fulfill both our societal and legal mandate. Accreditation We evaluate higher education institutions and degree programmes, thereby enabling state recognition. In addition, we conduct voluntary accreditations in Austria and abroad. Audit We audit quality management systems at universities, universities of applied sciences, and teacher education institutions. Through the audit, we certify the internal quality management system. Consulting and Evaluation We advise universities, higher education institutions, and research organizations on issues of quality development, quality assurance, and quality management, and we conduct evaluations through peer-review procedures both nationally and internationally. Notification of Foreign Degree Programmes As a notification office pursuant to § 27 HS-QSG, we carry out statutory notification procedures for foreign degree programs, thereby creating transparency and providing information. Analyses and Quality Enhancement We analyse quality-related topics in higher ",
+          "signals": {
+            "doctoral": false,
+            "research": true,
+            "computer_science": false,
+            "english": false
+          }
+        },
+        {
+          "country": "Belgium",
+          "authority": "Flemish Higher Education Register",
+          "url": "https://www.highereducation.be/",
+          "final_url": "https://www.highereducation.be/",
+          "status_code": 200,
+          "ok": true,
+          "checked_at": "2026-09-09T00:00:00Z",
+          "content_sha256": "81621671fd7a5ffb7e92ce7d0542b2d2eeb1962bc3e9ef712f68d9188e12b599",
+          "title": "Hogeronderwijsregister",
+          "excerpt": "Hogeronderwijsregister Loading ...",
+          "signals": {
+            "doctoral": false,
+            "research": false,
+            "computer_science": false,
+            "english": false
+          }
+        },
+        {
+          "country": "Bulgaria",
+          "authority": "National Evaluation and Accreditation Agency",
+          "url": "https://www.neaa.government.bg/en/",
+          "final_url": "https://www.neaa.government.bg/en/",
+          "status_code": 200,
+          "ok": true,
+          "checked_at": "2026-09-09T00:00:00Z",
+          "content_sha256": "74fa1f5916aeea9afb47a89f1bb35bb6294a757f9f397041c1efc94dc366483b",
+          "title": "Home",
+          "excerpt": "Home Contacts Home Evaluation and accreditation Institutional accreditation Programme accreditation PROFESSIONAL FIELDS MAJORS FROM THE REGULATED PROFESSIONS DOCTORAL PROGRAMMES Evaluation of projects DISTANCE LEARNING Altering the capacity METHODOLOGICAL DOCUMENTS AND PROCEDURES OF THE NATIONAL EVALUATION AND ACCREDITATION AGENCY Structure of reports Voting rules PAMC Criteria and procedures Accredited higher education institutions Higher education institutions Scientific organizations About us Establishment and functions Structure Mission and strategy Quality assurance in the activities of the NEAA International activities of NEAA PROJECTS COOPERATION Contact us Menu Home Evaluation and accreditation Institutional accreditation Programme accreditation PROFESSIONAL FIELDS MAJORS FROM THE REGULATED PROFESSIONS DOCTORAL PROGRAMMES Evaluation of projects DISTANCE LEARNING Altering the capacity METHODOLOGICAL DOCUMENTS AND PROCEDURES OF THE NATIONAL EVALUATION AND ACCREDITATION AGENCY Structure of reports Voting rules PAMC Criteria and procedures Accredited higher education institutions Higher education institutions Scientific organizations About us Establishment and functions Structu",
+          "signals": {
+            "doctoral": true,
+            "research": true,
+            "computer_science": false,
+            "english": true
+          }
+        },
+        {
+          "country": "Croatia",
+          "authority": "Agency for Science and Higher Education",
+          "url": "https://www.azvo.hr/en/",
+          "final_url": "https://www.azvo.hr/en/",
+          "status_code": 200,
+          "ok": true,
+          "checked_at": "2026-09-09T00:00:00Z",
+          "content_sha256": "8ca5e9698f8a39635ac5f9c3843cab097014ea336fc1166b1a310b816b8c59c5",
+          "title": "Homepage - AZVO",
+          "excerpt": "Studies How to Apply to Study? Studies Statistics Frequently Asked Questions about Applying for Studies News News and Announcements Evaluation Higher education Research institutes Initial accreditation Re-accreditation Thematic evaluation One-off evaluation Cross-border evaluations Complaints and appeals Outcomes of conducted evaluations Follow-up evaluation Programme agreements Procedures archive Become a reviewer in external quality assessment procedures Croatian Qualifications Framework Register Publications and analyses Tracking Employment of Graduate Students Videos Statistics Publications Thematic analyses Committees and Working Bodies Croatian Conference of Universities of Applied Sciences Scientific Field Committees Scientific Area Councils and Council for Arts Log in Contact The Agency for Science and Higher Education fosters the social development of the Republic of Croatia by supporting high-quality, internationally recognised higher education and science. Read more Evaluations Foreign Education Qualification How to Apply to Study? Research institutes Higher education institutions Outcomes of conducted evaluations Become a reviewer in external quality assessment procedur",
+          "signals": {
+            "doctoral": false,
+            "research": true,
+            "computer_science": false,
+            "english": false
+          }
+        },
+        {
+          "country": "Cyprus",
+          "authority": "Cyprus Agency of Quality Assurance and Accreditation in Higher Education",
+          "url": "https://www.dipae.ac.cy/index.php/en/",
+          "final_url": "https://www.dipae.ac.cy/index.php/en/",
+          "status_code": 200,
+          "ok": true,
+          "checked_at": "2026-09-09T00:00:00Z",
+          "content_sha256": "85744cf2ff49bf938b18db8167b73c0e5e16e2f5620d17d3dcff90a818985831",
+          "title": "CYQAA",
+          "excerpt": "rus, as well as the accredited programs of study, departments, and institutions. Transformation and Sustainability in Higher Education: Emerging Issues and the Research Upcoming Events When What Where NewsFeed ENQA News Bulletin ENQA News Bulletin (09/2023) Webinar Online site visits and EQA in times of COVID-19 (17/06/2020) Statement on COVID-19 05/05/2020 | 26/03/2020 | 30/03/2020 Remote Evaluations Procedural Guidelines for Remote (Online) External Evaluations (24/06/2020) Legal Ports Legal Ports of Entry in the Republic of Cyprus and the “Universities” in the occupied areas (06/12/2024) ENQA Members’ Forum Note from the ENQA President – Members’ Forum , Pafos (Cyprus) (04/2025) ENQA Members’ Forum , Pafos (Cyprus) (09–11/04/2025) Related Global Academic Integrity Network (GAIN) Organization Announcement Title Global Academic Integrity Network urges leading social media and online platforms to take a stand against academic dishonesty Files FORMS REPORTS Ανακοινώσεις Εκδηλώσεις Announcments Events Update Regarding the Templates/Forms and the External Evaluation Procedures Templates to support Course Alignment in Higher Education Programmes Students' Assessment Student-centered le",
+          "signals": {
+            "doctoral": true,
+            "research": true,
+            "computer_science": false,
+            "english": true
+          }
+        },
+        {
+          "country": "Czechia",
+          "authority": "Ministry Register of Higher Education Institutions",
+          "url": "https://regvssp.msmt.cz/registrvssp/",
+          "final_url": "https://regvssp.msmt.cz/registrvssp/",
+          "status_code": 200,
+          "ok": true,
+          "checked_at": "2026-09-09T00:00:00Z",
+          "content_sha256": "9f205f37338fe14d2f09e8762df089158cdbb9ac0be0b380a57bca00a85cfccb",
+          "title": "Registr vysokých škol a uskutečňovaných studijních programů",
+          "excerpt": "Registr vysokých škol a uskutečňovaných studijních programů MINISTERSTVO ŠKOLSTVÍ MLÁDEŽE A TĚLOVÝCHOVY REGISTR VYSOKÝCH ŠKOL a uskutečňovaných studijních programů Registr vysokých škol a uskutečňovaných studijních programů je veden dle § 87 odst. 1 písm. j) bod 2. zákona č. 111/1998 Sb., o vysokých školách a o změně a doplnění některých zákonů (zákon o vysokých školách), ve znění pozdějších předpisů. © 2022 Ministerstvo školství, mládeže a tělovýchovy, aktualizace k 09.02.2022 18:06",
+          "signals": {
+            "doctoral": false,
+            "research": false,
+            "computer_science": false,
+            "english": false
+          }
+        },
+        {
+          "country": "Denmark",
+          "authority": "Danish Ministry of Higher Education and Science",
+          "url": "https://ufm.dk/en/education/higher-education/danish-universities",
+          "ok": false,
+          "checked_at": "2026-09-09T00:00:00Z",
+          "error": "404 Client Error: Not Found for url: https://ufm.dk/en/education/higher-education/danish-universities"
+        },
+        {
+          "country": "Estonia",
+          "authority": "Estonian Quality Agency for Education",
+          "url": "https://haka.ee/en/",
+          "final_url": "https://haka.ee/en/",
+          "status_code": 200,
+          "ok": true,
+          "checked_at": "2026-09-09T00:00:00Z",
+          "content_sha256": "89e1da0d521c7629f296fc72f645e1425d0c0ac372c543b5d5184a61dffcf246",
+          "title": "Home - Eesti Hariduse Kvaliteediagentuur",
+          "excerpt": "panels Quality assessment of study programme groups (until 2019) Open submenu Assessment decisions and reports (I & II cycle) Assessment decisions and reports (doctoral studies) Expert panels Assessment Council Open submenu Appeals Committee Digital Education Quality Label A Guide to Creating a High-Quality e-course Cross-border assessments Vocational Education Open submenu Assessments in Estonia Assessment Council Open submenu Appeals Committee Quality assessment of VET study programme groups Accreditation of study programme groups in vocational education and training (until end of 2018) EQAVET General Education Open submenu Cooperation activities Piloting of quality assessment Development programmes for schools International services Open submenu Close submenu International services International services Open submenu Institutional accreditation Study programme accreditation Contacts The main task of the Estonian Quality Agency for Education (HAKA) is to assess the quality and promote quality culture of educational and training institutions. HAKA conducts evaluations and development activities in the field of higher education, vocational education and training, continuing educati",
+          "signals": {
+            "doctoral": true,
+            "research": false,
+            "computer_science": false,
+            "english": true
+          }
+        },
+        {
+          "country": "Finland",
+          "authority": "Finnish Ministry of Education and Culture",
+          "url": "https://okm.fi/en/universities",
+          "final_url": "https://okm.fi/en/universities",
+          "status_code": 200,
+          "ok": true,
+          "checked_at": "2026-09-09T00:00:00Z",
+          "content_sha256": "b274b0b43c3d32e195a93ea0ca3309ff1b0ea937c3171cad8a64b50599a942f0",
+          "title": "Universities -             OKM - Ministry of Education and Culture, Finland",
+          "excerpt": "igation Frontpage Frontpage Areas of Expertise Open submenu Early childhood education and care General education Upper secondary education Higher education and research Student financial aid Culture Copyright Libraries Religious affairs Youth Sports and physical activity Current issues Project and legislation Publications Subsidies Ministry Contact information Open menu Search Open menu Menu Opetus- ja kulttuuriministeriö en Areas of Expertise Higher education and research Higher education institutions and science agencies Universities Higher education and research Higher education institutions and science agencies Universities University Consortiums Universities of Applied Sciences Science agencies, research institutes and scientific organisations in Finland Policy and development in higher education and science International cooperation Steering, financing and agreements Higher education and degrees Science and research Statistics Universities in Finland A total of 13 universities operate within the Ministry of Education and Culture's administrative branch. Two of these are foundations pursuant to the Foundations Act and the others are corporations under public law. Higher educat",
+          "signals": {
+            "doctoral": true,
+            "research": true,
+            "computer_science": false,
+            "english": true
+          }
+        },
+        {
+          "country": "France",
+          "authority": "French Ministry of Higher Education open data",
+          "url": "https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-principaux-etablissements-enseignement-superieur/",
+          "final_url": "https://data.enseignementsup-recherche.gouv.fr/explore/assets/fr-esr-principaux-etablissements-enseignement-superieur/",
+          "status_code": 200,
+          "ok": true,
+          "checked_at": "2026-09-09T00:00:00Z",
+          "content_sha256": "5ca1e95fa017aa9b2eea131b3e974a3465a94201c8a91897849252decc5623d6",
+          "title": "Main French Higher Education Institutions — Enseignement supérieur, recherche, innovation open data (données ouvertes) MESRE",
+          "excerpt": "ecteur public Structures publiques de recherche Secteur privé Entreprises Brevets Régions Communes Themes Higher Education Students Training and qualifications Research Scientific employment Innovation Intellectual property Finance Real estate Human resources Statistics Nomenclatures, reference system Prizes, calls for projects Territories Points of interest Higher education institutions Universities Grands établissements Engineering schools Training Fundings Latitude Longitude Public sector Public research organisations Private sector Compagnies Patents French regions French communes info.gouv.fr service-public.fr legifrance.gouv.fr data.gouv.fr fr en Mentions légales Legal notices Données personnelles Personal data Accessibilité : partiellement conforme Accessibility: partially compliant Nous contacter Contact us Sauf mention explicite de propriété intellectuelle détenue par des tiers, les contenus de ce site sont proposés sous Licence Ouverte 2.0 Unless explicitly stated otherwise, the contents of this site are offered under Licence Ouverte 2.0",
+          "signals": {
+            "doctoral": false,
+            "research": true,
+            "computer_science": false,
+            "english": false
+          }
+        },
+        {
+          "country": "Germany",
+          "authority": "Higher Education Compass (German Rectors' Conference)",
+          "url": "https://www.hochschulkompass.de/en/higher-education-institutions.html",
+          "final_url": "https://www.hochschulkompass.de/en/higher-education-institutions.html",
+          "status_code": 200,
+          "ok": true,
+          "checked_at": "2026-09-09T00:00:00Z",
+          "content_sha256": "041f20f77bb0c5299d9af2fd405c9c0e2d3f94d6b308fe5f344ef7e38e42656c",
+          "title": "Higher Education Institutions in Germany - Hochschulkompass",
+          "excerpt": "w Higher Education Autonomy Higher Education Funding Higher Education and Studies Higher Education and Studies Higher Education and Europe Higher Education and Research Higher Education and Research Doctoral Degrees Excellence Downloads Doctoral Studies Doctoral Studies Doctorate Search Preparing for a doctoral degree Preparing for a doctoral degree Admission requirements Admission requirements Doing a doctorate with a German degree Doing a doctorate with a foreign degree Supervision Funding & financial support Online information from universities Doctoral phase Doctoral phase Acceptance as a doctoral candidate Dissertation - research phase Dissertation - research phase Permission to sit for examination – start of the process for the awarding of a doctorate Review of the dissertation Oral examination Completing your doctorate Completing your doctorate Overall mark Doctorate Publication of the dissertation About us About us Criteria for inclusion Collaborative partners Collaborative partners Nationwide Nationwide Collaborative partners with their own search form Collaborative partners with the Higher Education Compass advanced search Collaborative partners with deep links Regional R",
+          "signals": {
+            "doctoral": true,
+            "research": true,
+            "computer_science": false,
+            "english": false
+          }
+        },
+        {
+          "country": "Greece",
+          "authority": "Hellenic Authority for Higher Education",
+          "url": "https://www.ethaae.gr/en/",
+          "final_url": "https://www.ethaae.gr/en/",
+          "status_code": 200,
+          "ok": true,
+          "checked_at": "2026-09-09T00:00:00Z",
+          "content_sha256": "d3f8545b4d26144a0e9b4bc48d4989ecdb5a63449123c8963bf1422762c8b081",
+          "title": "HAHE - ΕΘΑΑΕ - Εθνική Αρχή  Ανώτατης Εκπαίδευσης",
+          "excerpt": "HAHE - ΕΘΑΑΕ - Εθνική Αρχή Ανώτατης Εκπαίδευσης Accessibility Tools Invert colors Monochrome Dark contrast Light contrast Low saturation High saturation Highlight links Highlight headings Screen reader Read mode Content scaling 100 % Font size 100 % Line height 100 % Letter spacing 100 % Login In order to login you have to have an account at ADIP's SSO TPL_ADMIN_MOD_LOGIN_SSO_BTN +30 210 922 0944 secretariat@ethaae.gr Αριστείδου 1 & Ευριπίδου 2, 10559 Αθήνα Contact +30 211 1903 400 Ελ En Εθνική Αρχή Ανώτατης Εκπαίδευσης Hellenic Authority for Higher Education HAHE Back About HAHE Vision-Mission-Values Legal framework Former Presidents and Vice-Presidents of the HQA Responsibilities Quality Policy Evaluation and Publication of HAHE Work Structure Supreme Council Evaluation and Accreditation Council Scientific and Administrative Staff HAHE Annual Reports Publications Graduate tracking Contact Us Quality Assurance Back Quality Assurance Definition What is evaluation What is Accreditation Study programme accreditation reports IQAS Accreditation Reports Quality Data Evaluation External Evaluation Reports of Academic Units External evaluation reports of Institutions Summary Accreditation",
+          "signals": {
+            "doctoral": false,
+            "research": false,
+            "computer_science": true,
+            "english": false
+          }
+        },
+        {
+          "country": "Hungary",
+          "authority": "Hungarian Accreditation Committee",
+          "url": "https://www.mab.hu/en/",
+          "final_url": "https://www.mab.hu/en/",
+          "status_code": 200,
+          "ok": true,
+          "checked_at": "2026-09-09T00:00:00Z",
+          "content_sha256": "dcf295de35951592f601b9634a1f4cc3413fef264b608c11da81040695f783a9",
+          "title": "MAB – Magyar Felsőoktatási Akkreditációs Bizottság",
+          "excerpt": "More European Quality Assurance Forum in Budapest Read More Celebratory Conference for the 25th Anniversary of ENQA’s Establishment Read More New Directions in Research Assessment in the Service of Researchers – CoARA Hungarian National Chapter Forum Tovább Further Strengthening Regional Cooperation: NAKVIS Delegation visits Budapest Read More The Hungarian Accreditation Committee continues its work with a new Board Read More The WFME World Conference 2025 in Bangkok Tovább Quality Assurance in European University Alliances – Current State and Future Perspectives Tovább External quality assurance of research in higher education institutions Tovább How universities can protect and promote academic freedom ? - EUA principles and guidelines Read More Doctoral (PhD) training before a turning point? - Conference and discussion forum on the future of doctoral education Tovább MAB-DOSZ COOPERATION FOR YOUNG PEOPLE Read More Global action to address academic dishonesty Tovább International conference on the occasion of the 30th anniversary of the Hungarian Accreditation Committee Read More The complete program of the MAB30 anniversary conference is available Read More MAB’s participation i",
+          "signals": {
+            "doctoral": true,
+            "research": true,
+            "computer_science": false,
+            "english": false
+          }
+        },
+        {
+          "country": "Ireland",
+          "authority": "Quality and Qualifications Ireland",
+          "url": "https://www.qqi.ie/what-we-do/the-qualifications-system/irish-register-of-qualifications",
+          "final_url": "https://www.qqi.ie/what-we-do/the-qualifications-system/irish-register-of-qualifications",
+          "status_code": 200,
+          "ok": true,
+          "checked_at": "2026-09-09T00:00:00Z",
+          "content_sha256": "c4cac1db67a4e8aaae563a4bc43af7d8f874513af08ab631514e050df515ea91",
+          "title": "Irish Register of Qualifications | Quality and Qualifications Ireland",
+          "excerpt": "Irish Register of Qualifications | Quality and Qualifications Ireland Skip to main content Quicklinks QHelp - raise a query Recognition of foreign qualifications Infographics - our data Qualifax Irish Register of Qualifications Pre header Careers Log-in Quality and Qualifications Ireland Main navigation + - About us Our role Organisational structure Governance Planning and reporting Working at QQI + - What we do QQI Awards Quality assurance of education and training The qualifications system Engagement, insights and knowledge-sharing News Events + - Gaeilge Ár ról Structúr eagrúcháin Rialachas Pleanáil agus tuairisciú Ag obair ag QQI + - Quicklinks Careers Log-in Our data Irish Register of Qualifications QHelp Qualifax Recognition of Foreign Qualifications Search this site Menu Menu Off Canvas Main navigation + - About us Our role Organisational structure Governance Planning and reporting Working at QQI + - What we do QQI Awards Quality assurance of education and training + - The qualifications system Recognition of foreign qualifications The National Framework of Qualifications Including awards on the NFQ Irish Register of Qualifications Europass Qualifax Engagement, insights and ",
+          "signals": {
+            "doctoral": false,
+            "research": false,
+            "computer_science": false,
+            "english": true
+          }
+        },
+        {
+          "country": "Italy",
+          "authority": "Italian Ministry of Universities and Research",
+          "url": "https://www.mur.gov.it/en",
+          "final_url": "https://www.mur.gov.it/en",
+          "status_code": 200,
+          "ok": true,
+          "checked_at": "2026-09-09T00:00:00Z",
+          "content_sha256": "f4dc03f5886620666a852489f3d25cf10c54e305e69fc948e0e430d4cc542566",
+          "title": "Home | Ministero dell'Università e della Ricerca",
+          "excerpt": " in un altro Stato membro Traineeships in another Member State Attività di ricerca in un altro Stato membro nell’ambito di un programma d’istruzione Conducting research in another Member State as part of an education programme Richiesta di riconoscimento accademico di diplomi, certificati o altri attestato relativi a studi o corsi Academic recognition of a foreign higher education academic qualification awarded by a university, polytechnic, school or higher education institution Presentazione di una domanda iniziale di ammissione presso un istituto pubblico di istruzione terziari - procedura Submission of an initial application for admission to a public tertiary education institution Domanda di finanziamento degli studi per l’istruzione terziaria, come borse di studio e prestiti per studenti offerti da un organismo o ente pubblico Applying for a tertiary education study financing, such as study grants and loans from a public body or institution Università straniere e filiazioni Ricerca Il sistema della ricerca Visione d'insieme Cinque per mille Enti di ricerca pubblici Area di Ricerca Scientifica e Tecnologica di Trieste - Area Science Park Organi Normativa Consiglio Nazionale dell",
+          "signals": {
+            "doctoral": false,
+            "research": true,
+            "computer_science": false,
+            "english": false
+          }
+        },
+        {
+          "country": "Latvia",
+          "authority": "AIKA Higher Education Institution List",
+          "url": "https://eplatforma.aika.lv/index.php?r=site%2Fhei-list",
+          "ok": false,
+          "checked_at": "2026-09-09T00:00:00Z",
+          "error": "404 Client Error: Not Found for url: https://eplatforma.aika.lv/index.php?r=site%2Fhei-list"
+        },
+        {
+          "country": "Lithuania",
+          "authority": "Centre for Quality Assessment in Higher Education",
+          "url": "https://www.skvc.lt/default/en/education-in-lithuania/higher-education-institutions",
+          "final_url": "https://www.skvc.lt/default/en/",
+          "status_code": 200,
+          "ok": true,
+          "checked_at": "2026-09-09T00:00:00Z",
+          "content_sha256": "70f2ef7db301b6d3ae819be2b08f7a83eb5384558da87c96c92eca404f07d79d",
+          "title": "General Education |  | Studijų kokybės vertinimo centras",
+          "excerpt": "General Education | | Studijų kokybės vertinimo centras Centre for quality assessment in higher education Accessibility Site map lt en For employees Institutional login Information Newsletter subscription New website of SKVC 2024-03-29 We would like to inform you that the website of the Centre for Quality Assessment of Higher Education has been moved to the institutions' portal \"My Government\" and can be accessed at https://skvc.lrv.lt/en/ . The information on this website will not be updated from 29-03-2024 . Events Previous Next September 2026 Mo Tu We Th Fr Sa Su 31 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 01 02 03 04 Centre for Quality Assessment in Higher Education Qualification recognition: +370 5 210 4772 Formal Vocational Education Licensing: +370 5 210 4777 Evaluation of study fields: +370 5 210 6304 Evaluation of new study programmes: +370 5 210 7727 Institutional review: +370 5 205 3323 E-mail: skvc @ skvc.lt A. Goštauto g. 12, LT-01108 Vilnius Lithuania Legal entity's code: 111959192 S/a: LT35 7300 0100 0245 6921 Bank name: „Swedbank“, AB Bank code: 73000, SWIFT code:HABALT22 Working hours 7.30-16.30 Monday to Thursday 7.30-15.15 ",
+          "signals": {
+            "doctoral": false,
+            "research": false,
+            "computer_science": false,
+            "english": false
+          }
+        },
+        {
+          "country": "Luxembourg",
+          "authority": "Ministry of Research and Higher Education",
+          "url": "https://mesr.gouvernement.lu/en/enseignementsuperieur.html",
+          "ok": false,
+          "checked_at": "2026-09-09T00:00:00Z",
+          "error": "404 Client Error: Not Found for url: https://mesr.gouvernement.lu/en/enseignementsuperieur.html"
+        },
+        {
+          "country": "Malta",
+          "authority": "Malta Further and Higher Education Authority",
+          "url": "https://mfhea.mt/higher-education-licensees/",
+          "ok": false,
+          "checked_at": "2026-09-09T00:00:00Z",
+          "error": "403 Client Error: Forbidden for url: https://mfhea.mt/higher-education-licensees/"
+        },
+        {
+          "country": "Netherlands",
+          "authority": "Accreditation Organisation of the Netherlands and Flanders",
+          "url": "https://www.nvao.net/en/decisions/institutions",
+          "final_url": "https://www.nvao.net/en/decisions/institutions",
+          "status_code": 200,
+          "ok": true,
+          "checked_at": "2026-09-09T00:00:00Z",
+          "content_sha256": "aa516bea00363280409f61176f5aec043438858877f0833bfd0a9fe7bbddd2a1",
+          "title": "Decisions and reports Flanders | NVAO",
+          "excerpt": "Decisions and reports Flanders | NVAO NVAO Woo request FAQ Contact Complaints Press nl en en nl en Menu News & events Events News Publications Newsletter NVAO About NVAO Board Team Jobs Procedures The Netherlands Flanders Luxembourg Appeal procedures Decisions Decisions and reports NL and other regions Decisions and reports FL DLR International International strategy International procedures European Projects & Partners European Approach CeQuInt International branch campuses Panels Panels The Netherlands Panels Flanders & Luxembourg Alumni & students The Netherlands Flanders & Luxembourg Home Decisions Institutions Decisions and reports Flanders Search our decisions and reports. You can apply filters at institution or educational level. Search {{ institution[prefix + 'Institution'].name }} {{ institution[prefix + 'Institution'].education_count }} {{ $t('decisions.education') }} {{ $t('decisions.educations') }} Karel de Grote University of Applied Sciences (and Arts) 53 Programmes Thomas More Kempen 67 Programmes Thomas More Mechelen-Antwerp 68 Programmes Erasmus University of Applied Sciences (and Arts) Brussels 64 Programmes LUCA School of Arts 55 Programmes UC Leuven 48 Programme",
+          "signals": {
+            "doctoral": false,
+            "research": false,
+            "computer_science": false,
+            "english": false
+          }
+        },
+        {
+          "country": "Poland",
+          "authority": "POL-on higher education information system",
+          "url": "https://polon.nauka.gov.pl/",
+          "final_url": "https://polon.nauka.gov.pl/",
+          "status_code": 200,
+          "ok": true,
+          "checked_at": "2026-09-09T00:00:00Z",
+          "content_sha256": "cad76fb5caf287c84a805b70908c4641296f7465afcc110675897d9b6a24b296",
+          "title": "POL-on – zintegrowany system informacji o nauce polskiej i szkolnictwie wyższym",
+          "excerpt": "POL-on – zintegrowany system informacji o nauce polskiej i szkolnictwie wyższym Przejdź do treści Przejdź do stopki POL-on – zintegrowany system informacji o nauce polskiej i szkolnictwie wyższym Aktualności O systemie Dane publiczne Harmonogram Moduły Dostęp ZALOGUJ SIĘ EN ZALOGUJ SIĘ menu Menu Główne System POL‑on Najbogatsze źródło danych o polskiej nauce i szkolnictwie wyższym Aktualności 07 września 2026 Nowa wersja dokumentacji technicznej RDE 28 sierpnia 2026 Krótkie prace techniczne 25 sierpnia 2026 Prace techniczne 13 sierpnia 2026 Prace techniczne 12 sierpnia 2026 Prace techniczne Zobacz wszystkie O systemie Czym jest system POL‑on System jest głównym źródłem wiedzy o polskiej nauce i szkolnictwie wyższym. Zebrane w nim dane są analizowane przez administrację centralną, która kształtuje politykę państwa w zakresie nauki i szkolnictwa wyższego. Dlaczego go tworzymy System pozwala uczelniom i instytucjom nauki składać wymagane przez prawo elektroniczne sprawozdania. W ten sposób umożliwia racjonalne zarządzanie nauką i szkolnictwem wyższym. Oba te cele są regulowane aktami prawnymi. Kto wprowadza dane Wszystkie uczelnie, instytuty badawcze, naukowe oraz inne instytucje nauk",
+          "signals": {
+            "doctoral": false,
+            "research": false,
+            "computer_science": false,
+            "english": false
+          }
+        },
+        {
+          "country": "Portugal",
+          "authority": "Directorate-General for Higher Education",
+          "url": "https://www.dges.gov.pt/en/pesquisa_cursos_instituicoes",
+          "final_url": "https://www.dges.gov.pt/en/pesquisa_cursos_instituicoes",
+          "status_code": 200,
+          "ok": true,
+          "checked_at": "2026-09-09T00:00:00Z",
+          "content_sha256": "c8f53aba2cd021a30d451af385a7e3b4ca9069aba606cc5aa64a76189946c021",
+          "title": "Search for Courses and Higher Education Institutions | DGES",
+          "excerpt": "Search for Courses and Higher Education Institutions | DGES Search form Search INSTITUCIONAL News Events CONTACTS Home Higher Education Portuguese Higher Education System Description Degrees and Diplomas of HE Short cycle (TESP) 1st cycle – Licenciatura Integrated cycle - Mestrado Integrado 2nd cycle – Mestrado 3rd cycle – Doutoramento Attendance NQF/EQF Policies and Programmes EU “Education and Training 2020” Strategic Framework EU External Cooperation Education Council Agenda for the Modernisation of Higher Education Erasmus+ Bilateral Cooperation Multilateral Cooperation Community of Portuguese Speaking Countries – CPLP Council of Europe Iberoamerican Cooperation OECD UNESCO European University Institute Courses And Institutions Access to Higher Education 1st Cycles and Integrated Cycle EU Students General Information Private Higher Education Over 23 Years Old Non-EU Students International Students Special Regime - Diplomatic Mission Accredited in Portugal Higher Professional Education Change of Institution/Course 2nd Cycle 3rd Cycle International Students Course Index 1st and 1st+2nd Cycles - Undergraduate Studies and Integrated Masters 2nd Cycle - Post graduate Studies 3rd Cyc",
+          "signals": {
+            "doctoral": false,
+            "research": false,
+            "computer_science": false,
+            "english": false
+          }
+        },
+        {
+          "country": "Romania",
+          "authority": "Romanian Agency for Quality Assurance in Higher Education",
+          "url": "https://www.aracis.ro/en/",
+          "final_url": "https://www.aracis.ro/en/about-aracis/",
+          "status_code": 200,
+          "ok": true,
+          "checked_at": "2026-09-09T00:00:00Z",
+          "content_sha256": "94533d58cd8109effb827ada10937cbbc9f24138a70d378e8e629dfdb1fec9fc",
+          "title": "About Aracis • ARACIS",
+          "excerpt": "About Aracis • ARACIS Facebook Linkedin About ARACIS Organization ARACIS Council Executive Board Technical Staff Organization regulations Permanent Specialty Commissions National Register of Evaluators Commissions Institutional Commission Consultative Commission Disciplinary Commission Ethics Commission Monitoring Committee Strategy Internal Quality Assurance Legislation Higher education legislation Quality Assurance Legislation Government Decision – Study Programmes Nomenclature Public Information Public information request Financial Statements Transparency of salary income Public procurement Declarations of wealth and interests Documents of public interest GDPR Evaluations General Methodology Guidelines and Standards Institutional Short Cycle Bachelor’s Degree Master’s Degree Doctorate Postgraduate Teacher Training Preparatory Year Joint Programmes International Evaluations Appeals and complaints Evaluators National Register of Evaluators Announcements and Useful Information How to Become an Evaluator Training Sessions Stakeholders Students Employers Evaluations Reports International cooperation International Recognition ARACIS External Evaluation International Documents Publicat",
+          "signals": {
+            "doctoral": true,
+            "research": false,
+            "computer_science": false,
+            "english": true
+          }
+        },
+        {
+          "country": "Slovakia",
+          "authority": "Slovak Higher Education Portal",
+          "url": "https://www.portalvs.sk/en/",
+          "final_url": "https://www.portalvs.sk/en/",
+          "status_code": 200,
+          "ok": true,
+          "checked_at": "2026-09-09T00:00:00Z",
+          "content_sha256": "b8f4416e192d3c5e33b7797d1f547fb5839a84342ca6b0d77bcb6b82e16bee77",
+          "title": "Všetky vysoké školy, fakulty a študijné programy na jednom mieste | Portal VS",
+          "excerpt": "Všetky vysoké školy, fakulty a študijné programy na jednom mieste | Portal VS Go to content Navigation Menu Applicant, Student University employee Public Login Change page language SK EN 40 universities, 117 faculties, 5106 study programms in one place. Search... Study options Employees Conferences Calendar of Events SEARCH Study in Slovakia and receive a scholarship of €5,000 per academic year. More information Study programmes divided by the fields of study Security Sciences, Defense and Military Humanities Agricultural and Veterinary Science Natural Sciences, Mathematics, Informatics Social, Economic and Legal Sciences Technical Sciences Art Education Healthcare Always up-to-date news about universities that interest you. Send me news News Calendar of Events Deadlines Most Popular Universities by Traffic Comenius University Bratislava Alexander Dubček University of Trenčín Academy of the Police Force in Bratislava Slovak Medical University in Bratislava St. Elizabeth University of Healt and Social Work DTI University University of SS. Cyril and Methodius in Trnava The University of Žilina Register of all universities Show my selection My choice Close Login Login Forgotten Passwo",
+          "signals": {
+            "doctoral": false,
+            "research": false,
+            "computer_science": true,
+            "english": false
+          }
+        },
+        {
+          "country": "Slovenia",
+          "authority": "Slovenian Quality Assurance Agency for Higher Education",
+          "url": "https://www.nakvis.si/?lang=en",
+          "final_url": "https://nakvis.si/?lang=en",
+          "status_code": 200,
+          "ok": true,
+          "checked_at": "2026-09-09T00:00:00Z",
+          "content_sha256": "a9cddfa773d78b8701ff5971ce2c17bcdad83f6fb5fb9fdb676eef28def7304a",
+          "title": "Home | NAKVIS",
+          "excerpt": "Home | NAKVIS Skip to Content Sitemap ACCESSIBILITY HIGHLIGHT FOCUS BOLD SIMPLIFY PAG FONT Privzeto Arial Verdana Tahoma Open dyslexic COLOUR THEME Default White text on black background Black text on white background Yellow text on blue background Black text on beige background Green text on black background RESET ALL ACCESSIBILITY STATEMENT Enter eNAKVIS Sitemap Slovenian English Search for: About NAKVIS History Strategy and internal quality Organisation Director of the Agency Agency Council Appeal Committee List of Employees Personal data protection Contact information Accreditations and Evaluations Types of accreditation and evaluation procedures External evaluation of higher vocational colleges Register of experts Regulation and Legislation Portal NAKVIS – Public Records Ongoing accreditation and evaluation procedures International Cooperation International Memberships International documents Projects Partners Transnational Higher Education External Quality Assurance of the Agency Reports and Analyses Information on Higher Education Institutions Analyses Work reports, plans and self-assesment Latest Home NAKVIS Quality in Slovenian Higher Education >> BIC Ljubljana, Higher Voc",
+          "signals": {
+            "doctoral": false,
+            "research": false,
+            "computer_science": false,
+            "english": true
+          }
+        },
+        {
+          "country": "Spain",
+          "authority": "Registry of Universities, Centres and Degrees",
+          "url": "https://www.educacion.gob.es/ruct/home",
+          "final_url": "https://www.educacion.gob.es/ruct/home",
+          "status_code": 200,
+          "ok": true,
+          "checked_at": "2026-09-09T00:00:00Z",
+          "content_sha256": "51b0b06b4d5f98024a040519277d27254facd59b09b10dda84976a45527362e6",
+          "title": "Registro de Universidades, Centros y Títulos (RUCT) - Ministerio de Educación, Cultura y Deporte",
+          "excerpt": "Registro de Universidades, Centros y Títulos (RUCT) - Ministerio de Educación, Cultura y Deporte Está usted en: Portada Universidades Registro de Universidades, Centros y Títulos (RUCT) Contacte Registro de Universidades, Centros y Títulos (RUCT) Creado mediante RD 1509/2008, de 12 de septiembre El RUCT ha sido creado para proporcionar la información más relevante sobre las universidades, centros y los títulos que conforman el sistema universitario español, en el que constan inscritos los nuevos títulos de Grado, Máster y Doctorado oficiales. Además, el RUCT tiene carácter público y de registro administrativo, y ha sido concebido como un instrumento en continua actualización. Sección universidades Sección centros Sección títulos © Ministerio de Ciencia, Innovación y Universidades Aviso legal Accesibilidad",
+          "signals": {
+            "doctoral": false,
+            "research": false,
+            "computer_science": false,
+            "english": false
+          }
+        },
+        {
+          "country": "Sweden",
+          "authority": "Swedish Higher Education Authority",
+          "url": "https://www.uka.se/swedish-higher-education-authority",
+          "final_url": "https://www.uka.se/swedish-higher-education-authority",
+          "status_code": 200,
+          "ok": true,
+          "checked_at": "2026-09-09T00:00:00Z",
+          "content_sha256": "d760e2a0c9bd7a764e93d1beba4dfe8e2e1a35cb26d226fb2903eb0d37df6dd3",
+          "title": "Startpage \n\n - Startsida",
+          "excerpt": "läst Lyssna Welcome to the Swedish Higher Education Authority Welcome to the Swedish Higher Education Authority We evaluate the quality of higher education and research. We are responsible for official statistics and monitor compliance with laws and regulations among universities and university colleges. Popular on uka.se What we do Higher education institutions Laws and regulations FAQ about student's legal rights Higher education in Sweden Fair examination (Pdf, 58 kB) Länk till en fil Latest news News 20 May 2026 UKÄ maintains its membership in ENQA News 24 March 2026 Language choice affects international students' participation in quality assurance News 26 November 2025 New Publication in English on Higher Education in Sweden News 30 October 2025 ENQA celebrates 25 years – UKÄ participates in the Annual General Assembly in Brussels News 29 September 2025 International Quality Assurance Exchange at UKÄ News 13 June 2025 ENQA reviews UKÄ on site News archive Publications Tematisk analys 2026 The Role of Language in HigherEducation Institutions’ QualityAssurance Processes International Evaluation Tematisk analys Report 2025 Sweden’s Academic Landscape: Higher Education and Researc",
+          "signals": {
+            "doctoral": true,
+            "research": true,
+            "computer_science": false,
+            "english": true
+          }
+        },
+        {
+          "country": "United Kingdom",
+          "authority": "GOV.UK recognised bodies and degree-awarding powers",
+          "url": "https://www.gov.uk/check-university-award-degree",
+          "final_url": "https://www.gov.uk/check-university-award-degree",
+          "status_code": 200,
+          "ok": true,
+          "checked_at": "2026-09-09T00:00:00Z",
+          "content_sha256": "ff4a6d651a79acfe0d66f39f88936f7c546dc1572c90b626eb6cba7f98efc047",
+          "title": "Check if your university or college can award a degree: Overview - GOV.UK",
+          "excerpt": "ments Departments, agencies and public bodies News News stories, speeches, letters and notices Guidance and regulation Detailed guidance, regulations and rules Research and statistics Reports, analysis and official statistics Policy papers and consultations Consultations and strategy Transparency Data, Freedom of Information releases and corporate reports Search GOV.UK × Search GOV.UK Search Search GOV.UK Search Home Education and learning Universities and higher education Check if your university or college can award a degree Skip contents Contents Overview Recognised bodies in Wales Recognised awards Overview You can check if a degree you’re studying for is officially recognised. If your degree is not officially recognised, employers or universities might not accept it. Not all colleges that teach degrees can award them. Your degree might be awarded by a higher education institution that’s different from the place you’re studying. If you’re not sure who awards your degree, ask your college or check their website or prospectus. You can double check this with the higher education institution you’re told awards your degree. How you check if your degree is officially recognised depen",
+          "signals": {
+            "doctoral": false,
+            "research": true,
+            "computer_science": false,
+            "english": false
+          }
+        },
+        {
+          "country": "Norway",
+          "authority": "Norwegian Agency for Quality Assurance in Education",
+          "url": "https://www.nokut.no/en/higher-education/",
+          "final_url": "https://www.nokut.no/en/higher-education/",
+          "status_code": 200,
+          "ok": true,
+          "checked_at": "2026-09-09T00:00:00Z",
+          "content_sha256": "308b2148dc7192d7bb68b49a2930675ea30280c982ebcf5bf44196a6e9836e13",
+          "title": "Higher education | Nokut",
+          "excerpt": "or study programmes in higher education Higher education institutions Experts – study programmes at bachelor's and master's level Experts – study programmes at PhD level Tertiary vocational education General information about tertiary vocational education About Norwegian education General information about education in Norway The Norwegian qualifications framework for lifelong learning Rules and regulations Publications Accreditation and quality assurance Annual reports Evaluations – quality in education External evaluations/reports Other evaluations Research and analyses Thematic analyses – higher education Topic-specific national assessment examinations Quality assurance and enhancement Institutional responsibility for educational quality Accreditation, periodic reviews, and supervision National study programme evaluations Topic-specific national examinations NOKUT projects Studiebarometeret – the Student Survey International cooperation (ENQA, EU projects, Diploma Supplement) About NOKUT Contact us Select language English Norsk Search on website Search Start Higher education Higher education NOKUT accredits higher education study programmes and higher education institutions. NOK",
+          "signals": {
+            "doctoral": true,
+            "research": true,
+            "computer_science": false,
+            "english": true
+          }
+        },
+        {
+          "country": "Switzerland",
+          "authority": "swissuniversities accredited higher education institutions",
+          "url": "https://www.swissuniversities.ch/en/topics/studying/accredited-swiss-higher-education-institutions",
+          "final_url": "https://www.swissuniversities.ch/en/topics/studying/accredited-swiss-higher-education-institutions",
+          "status_code": 200,
+          "ok": true,
+          "checked_at": "2026-09-09T00:00:00Z",
+          "content_sha256": "86633a32289b4e460d73ff173513ace0dd995e879981626612e8d1f4f4a37f72",
+          "title": "Accredited Swiss Higher Education Institutions - swissuniversities",
+          "excerpt": "te in Rome EURAXESS Topics Higher Education Policy Equal Opportunities and Diversity Digitalisation Open Science European Programmes Subject-Specific Education Research Sustainability Teaching & Studies Admission Promoting Young Talent Refugees Academic Values International Relations Ukraine Organisation about swissuniversities Members Bodies General Secretariat Programmes and projects Documentation Press releases Statements Agreements Recommendations and Best Practices Events Reports Legal basis Calls Annual report 2025 Former annual reports P-5 Services P-8 Digital Skills Publikationen CRUS bis 2014 Publikationen KFH bis 2014 Publikationen COHEP bis 2014 Show search Hide search Media Vacancies Contact Main Content Topics Teaching & Studies Accredited Swiss Higher Education Institutions Teaching & Studies Verordnung Koordination Lehre Qualifications Framework Accredited Swiss Higher Education Institutions Übergang von der Sekundarstufe II an die Hochschulen Diploma Supplement Microcredentials Weiterbildung Flexibilisierung Umsetzung Pflegeinitiative European Higher Eduacation Area Professional Bachelor Information on Studies Accredited Swiss Higher Education Institutions in accord",
+          "signals": {
+            "doctoral": false,
+            "research": true,
+            "computer_science": true,
+            "english": true
+          }
+        },
+        {
+          "country": "Iceland",
+          "authority": "Government of Iceland universities",
+          "url": "https://www.government.is/topics/education/universities/",
+          "final_url": "https://www.government.is/ministries/diplomatic-missions/permanent-mission-of-iceland-to-the-united-nations/",
+          "status_code": 200,
+          "ok": true,
+          "checked_at": "2026-09-09T00:00:00Z",
+          "content_sha256": "052d7324897f03dfdb4c112ba647aee9d86a59ed7b7ba861c5f309920f381e04",
+          "title": "Government of Iceland | Permanent Mission of Iceland to the United Nations",
+          "excerpt": " Local authorities and regional policy Natural resources Operations and state assets Personal law Planning and construction Public safety and security Science, research and innovation Religion and non-religious convictions Social security and pensions Social welfare and families Sustainable Iceland Transport and telecommunications Topics News Publications Legislation Reports Statements Design standard Dictionary of Icelandic terminology Publications Ministries Prime Minister's Office Ministry for Foreign Affairs Ministry of Culture, Innovation and Higher Education Ministry of Education and Children Ministry of Finance and Economic Affairs Ministry of Health Ministry of Industries Ministry of Infrastructure Ministry of Justice Ministry of Social Affairs and Housing Ministry of the Environment, Energy and Climate Diplomatic Missions Employees Agencies About Government Offices Contact Emails, Phone Numbers, and Locations Government Offices Services Ministries Government Current government About the Government Government IS Topics Open navigation Topics Business and industry Consumer Affairs Culture Economic affairs and economic outlook Education Elections Environment, climate and natu",
+          "signals": {
+            "doctoral": false,
+            "research": true,
+            "computer_science": false,
+            "english": false
+          }
+        }
+      ]
+    },
+    {
+      "path": "data\\manifests\\europe\\ror_snapshot.json",
+      "payload": {
+        "dataset": "Research Organization Registry",
+        "release": "v2.10 (2026-07-20)",
+        "record_id": "21458494",
+        "record_url": "https://zenodo.org/records/21458494",
+        "published": "2026-07-20",
+        "bulk_zip_name": "v2.10-2026-07-20-ror-data.zip",
+        "published_md5": "ad7e842ce1b296fc066a0babe86ec48e",
+        "access_date": "2026-09-09",
+        "transport": "ROR API v2 country/type/status filtered snapshot",
+        "endpoint": "https://api.ror.org/v2/organizations",
+        "country_counts_reported": {
+          "Belgium": 87,
+          "Denmark": 56,
+          "Bulgaria": 58,
+          "Cyprus": 47,
+          "Czechia": 108,
+          "Estonia": 27,
+          "Austria": 103,
+          "Croatia": 62,
+          "Germany": 619,
+          "Greece": 62,
+          "Hungary": 73,
+          "France": 500,
+          "Ireland": 43,
+          "Finland": 50,
+          "Latvia": 44,
+          "Italy": 257,
+          "Lithuania": 41,
+          "Luxembourg": 10,
+          "Malta": 9,
+          "Poland": 322,
+          "Netherlands": 132,
+          "Romania": 108,
+          "Portugal": 415,
+          "Slovakia": 48,
+          "Slovenia": 65,
+          "Spain": 218,
+          "Sweden": 67,
+          "Norway": 71,
+          "Switzerland": 164,
+          "Iceland": 10,
+          "United Kingdom": 586
+        },
+        "api_completeness_warning": "ROR documents that filter-only aggregate paging can contain duplicates and omissions; use --bulk-zip for a complete release.",
+        "exact_seed_records_added": [
+          "01jdpyv68",
+          "02jx3x895",
+          "040af2s02",
+          "041kmwe10"
+        ]
+      }
+    },
+    {
+      "path": "data\\manifests\\openalex_discovery.json",
+      "payload": {
+        "source": "OpenAlex Works API",
+        "base_url": "https://api.openalex.org/works",
+        "retrieved_at": "2026-09-10T03:17:27.841880+00:00",
+        "query_window": {
+          "from": "2022-01-01",
+          "to": "2026-09-09"
+        },
+        "queries": [
+          "large language models software engineering",
+          "LLM code repair testing debugging maintenance",
+          "coding agent evaluation reliability security",
+          "automated program repair program analysis",
+          "configuration repair infrastructure as code Terraform",
+          "static dynamic analysis software reliability",
+          "trustworthy AI evaluation assurance auditing",
+          "LLM factuality grounding claim verification",
+          "agent security AI-generated code security",
+          "secure dependable software systems",
+          "cloud configuration security DevOps security",
+          "security policy verification"
+        ],
+        "per_query_requested": 200,
+        "request_urls": [],
+        "raw_path": "data\\raw\\openalex\\query_results.json",
+        "raw_sha256": "bffe824fe8f4d80d6237da967d1c2d48ecf8f0a285c685353f5099395c759615",
+        "raw_bytes": 15349435,
+        "query_failures": [],
+        "counts": {
+          "query_results": 2400,
+          "institutions_ranked": 1647,
+          "author_institution_pairs": 6923
+        },
+        "limitations": [
+          "Search relevance is a discovery signal, not final research-fit evidence.",
+          "Authorship affiliations are publication-time metadata and require current official verification."
+        ]
+      }
+    },
+    {
+      "path": "data\\manifests\\us\\coverage.json",
+      "payload": {
+        "generated_at": "2026-09-10T03:27:44.154825+00:00",
+        "access_date": "2026-09-09",
+        "method": {
+          "universe_filter": "HD2024 CYACTIVE=1 AND DEGGRANT=1, with HLOFFER 7/9 or HLOFFER=8 plus a positive IC2024 master's/doctoral level indicator",
+          "program_signal_filter": "C2022_A/C2023_A/C2024_A revised member where MAJORNUM=1, AWLEVEL in (7,17,18,19), configured CIP, and CTOTALT>0",
+          "important_limitations": [
+            "IPEDS completions lag current catalogs and omit new or not-yet-completing programs.",
+            "CIP assignment does not prove research fit, current program operation, direct entry, funding, or faculty availability.",
+            "IPEDS inclusion is not a substitute for institution-level accreditation verification.",
+            "Only a small official-page spot check was completed; remaining candidates require deep review."
+          ]
+        },
+        "datasets": [
+          {
+            "dataset": "HD2024",
+            "url": "https://nces.ed.gov/ipeds/datacenter/data/HD2024.zip",
+            "selected_member": "HD2024.csv",
+            "sha256": "d98425c123d7c0e872aec6e83960dfb501884818bf17385c340790f3d1f28345",
+            "last_modified": "2025-09-21T20:40:58Z",
+            "bytes": 1088372,
+            "release": "2024-25 provisional",
+            "description": "IPEDS 2024 directory information",
+            "zip_members": {
+              "HD2024.csv": 4470409
+            }
+          },
+          {
+            "dataset": "IC2024",
+            "url": "https://nces.ed.gov/ipeds/datacenter/data/IC2024.zip",
+            "selected_member": "IC2024.csv",
+            "sha256": "924f04f0afd953633a34bbc2ad1beaa65fdbf2a7ba25ebe364bac7469a976288",
+            "last_modified": "2025-09-21T20:41:04Z",
+            "bytes": 135305,
+            "release": "2024-25 provisional",
+            "description": "IPEDS institutional educational offerings",
+            "zip_members": {
+              "IC2024.csv": 1513979
+            }
+          },
+          {
+            "dataset": "C2024_A",
+            "url": "https://nces.ed.gov/ipeds/datacenter/data/C2024_A.zip",
+            "selected_member": "C2024_a.csv",
+            "sha256": "03234cc27fe4e7eb835a66d4f37aaec11bdac8dfa278f971584e1b20d03e1159",
+            "last_modified": "2025-09-21T20:40:37Z",
+            "bytes": 4680679,
+            "release": "2023-24 provisional",
+            "description": "IPEDS completions by 6-digit CIP and award level",
+            "zip_members": {
+              "C2024_a.csv": 62757116
+            }
+          },
+          {
+            "dataset": "C2023_A",
+            "url": "https://nces.ed.gov/ipeds/datacenter/data/C2023_A.zip",
+            "selected_member": "C2023_a_RV.csv",
+            "sha256": "651d95b6405bb86c6c14884ed54225a27492199d21d8acd63cda2581aa60838a",
+            "last_modified": "2025-09-21T20:41:09Z",
+            "bytes": 9294160,
+            "release": "2022-23 final/revised member",
+            "description": "IPEDS completions by 6-digit CIP and award level",
+            "zip_members": {
+              "C2023_a.csv": 61854597,
+              "C2023_a_RV.csv": 61888672
+            }
+          },
+          {
+            "dataset": "C2022_A",
+            "url": "https://nces.ed.gov/ipeds/datacenter/data/C2022_A.zip",
+            "selected_member": "c2022_a_rv.csv",
+            "sha256": "f81b8390d1758ac710b85a1d5a7af51372770335a02c0d06802a46d3a068126c",
+            "last_modified": "2024-06-05T13:45:15Z",
+            "bytes": 8288979,
+            "release": "2021-22 final/revised member",
+            "description": "IPEDS completions by 6-digit CIP and award level",
+            "zip_members": {
+              "c2022_a.csv": 61615966,
+              "c2022_a_rv.csv": 61652091
+            }
+          }
+        ],
+        "counts": {
+          "hd_rows_total": 6072,
+          "ic_rows_total": 5963,
+          "active_graduate_degree_granting_institutions": 2107,
+          "institutions_with_any_configured_signal": 679,
+          "institutions_with_primary_signal": 598,
+          "institutions_with_secondary_only_signal": 81,
+          "institutions_without_configured_signal": 1428,
+          "mechanical_program_signal_rows": 1786,
+          "official_program_spot_checks": 9,
+          "program_rows_total": 1795,
+          "source_claim_rows": 8997,
+          "completion_rows_scanned": {
+            "C2022_A": 301055,
+            "C2023_A": 303460,
+            "C2024_A": 307707
+          },
+          "qualifying_completion_rows_before_current_universe_join": {
+            "C2022_A": 1936,
+            "C2023_A": 2025,
+            "C2024_A": 2119
+          },
+          "signal_unitids_outside_current_universe": 4
+        },
+        "institution_status_counts": {
+          "no_relevant_graduate_field": 1428,
+          "preliminary_fit": 679
+        },
+        "jurisdiction_group_counts": {
+          "District of Columbia": 17,
+          "IPEDS other jurisdiction": 53,
+          "US state": 2037
+        },
+        "state_or_jurisdiction_counts": {
+          "AK": 5,
+          "AL": 33,
+          "AR": 25,
+          "AZ": 27,
+          "CA": 212,
+          "CO": 30,
+          "CT": 22,
+          "DC": 17,
+          "DE": 5,
+          "FL": 79,
+          "GA": 54,
+          "GU": 1,
+          "HI": 8,
+          "IA": 29,
+          "ID": 10,
+          "IL": 84,
+          "IN": 51,
+          "KS": 28,
+          "KY": 32,
+          "LA": 30,
+          "MA": 74,
+          "MD": 31,
+          "ME": 18,
+          "MI": 47,
+          "MN": 42,
+          "MO": 57,
+          "MS": 17,
+          "MT": 9,
+          "NC": 61,
+          "ND": 11,
+          "NE": 22,
+          "NH": 15,
+          "NJ": 38,
+          "NM": 13,
+          "NV": 8,
+          "NY": 159,
+          "OH": 74,
+          "OK": 25,
+          "OR": 26,
+          "PA": 126,
+          "PR": 51,
+          "RI": 12,
+          "SC": 35,
+          "SD": 16,
+          "TN": 50,
+          "TX": 115,
+          "UT": 15,
+          "VA": 57,
+          "VI": 1,
+          "VT": 11,
+          "WA": 28,
+          "WI": 40,
+          "WV": 20,
+          "WY": 1
+        },
+        "signal_tier_counts_by_institution_cip": {
+          "primary": 1141,
+          "secondary_review_only": 645
+        },
+        "signal_unitids_outside_current_universe": [
+          "105367",
+          "211352",
+          "460376",
+          "490063"
+        ],
+        "blocked_sources": [],
+        "validation": {
+          "status": "PASS",
+          "errors": [],
+          "warnings": [],
+          "counts": {
+            "institutions": 2107,
+            "programs": 1795,
+            "exclusions": 1428,
+            "professors": 0
+          }
+        }
+      }
+    },
+    {
+      "path": "data\\manifests\\us\\ipeds_release_manifest.json",
+      "payload": {
+        "datasets": [
+          {
+            "dataset": "HD2024",
+            "url": "https://nces.ed.gov/ipeds/datacenter/data/HD2024.zip",
+            "selected_member": "HD2024.csv",
+            "sha256": "d98425c123d7c0e872aec6e83960dfb501884818bf17385c340790f3d1f28345",
+            "last_modified": "2025-09-21T20:40:58Z",
+            "bytes": 1088372,
+            "release": "2024-25 provisional",
+            "description": "IPEDS 2024 directory information",
+            "zip_members": {
+              "HD2024.csv": 4470409
+            }
+          },
+          {
+            "dataset": "IC2024",
+            "url": "https://nces.ed.gov/ipeds/datacenter/data/IC2024.zip",
+            "selected_member": "IC2024.csv",
+            "sha256": "924f04f0afd953633a34bbc2ad1beaa65fdbf2a7ba25ebe364bac7469a976288",
+            "last_modified": "2025-09-21T20:41:04Z",
+            "bytes": 135305,
+            "release": "2024-25 provisional",
+            "description": "IPEDS institutional educational offerings",
+            "zip_members": {
+              "IC2024.csv": 1513979
+            }
+          },
+          {
+            "dataset": "C2024_A",
+            "url": "https://nces.ed.gov/ipeds/datacenter/data/C2024_A.zip",
+            "selected_member": "C2024_a.csv",
+            "sha256": "03234cc27fe4e7eb835a66d4f37aaec11bdac8dfa278f971584e1b20d03e1159",
+            "last_modified": "2025-09-21T20:40:37Z",
+            "bytes": 4680679,
+            "release": "2023-24 provisional",
+            "description": "IPEDS completions by 6-digit CIP and award level",
+            "zip_members": {
+              "C2024_a.csv": 62757116
+            }
+          },
+          {
+            "dataset": "C2023_A",
+            "url": "https://nces.ed.gov/ipeds/datacenter/data/C2023_A.zip",
+            "selected_member": "C2023_a_RV.csv",
+            "sha256": "651d95b6405bb86c6c14884ed54225a27492199d21d8acd63cda2581aa60838a",
+            "last_modified": "2025-09-21T20:41:09Z",
+            "bytes": 9294160,
+            "release": "2022-23 final/revised member",
+            "description": "IPEDS completions by 6-digit CIP and award level",
+            "zip_members": {
+              "C2023_a.csv": 61854597,
+              "C2023_a_RV.csv": 61888672
+            }
+          },
+          {
+            "dataset": "C2022_A",
+            "url": "https://nces.ed.gov/ipeds/datacenter/data/C2022_A.zip",
+            "selected_member": "c2022_a_rv.csv",
+            "sha256": "f81b8390d1758ac710b85a1d5a7af51372770335a02c0d06802a46d3a068126c",
+            "last_modified": "2024-06-05T13:45:15Z",
+            "bytes": 8288979,
+            "release": "2021-22 final/revised member",
+            "description": "IPEDS completions by 6-digit CIP and award level",
+            "zip_members": {
+              "c2022_a.csv": 61615966,
+              "c2022_a_rv.csv": 61652091
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "scripts_executed": [
+    "graduate_audit.research_fit.openalex_discovery",
+    "graduate_audit.normalize.integrate",
+    "graduate_audit.connected_context",
+    "graduate_audit.portfolio",
+    "graduate_audit.reporting.outreach",
+    "graduate_audit.validation",
+    "graduate_audit.reporting.reports",
+    "scripts/build_workbook.mjs"
+  ],
+  "known_failures": [
+    "Europe ROR API fallback captured 3,628 unique records of 4,462 reported filtered records (81.31%); Zenodo bulk download timed out.",
+    "EHESO/ETER API returned HTTP 401 and four national-registry pages were blocked.",
+    "Canada retains 50 explicitly unresolved indexed institutions; unresolved records are not treated as evidence of no program."
+  ],
+  "blocked_websites": [],
+  "unresolved_coverage_gaps": [
+    "European registry coverage is broad but incomplete because the ROR bulk archive and EHESO were unavailable.",
+    "Mechanical screens do not exhaustively crawl every official catalogue; absence of a positive signal is not a universal no-program finding.",
+    "Fall 2027 pages, funding awards, and employment vacancies not yet published remain explicitly unresolved."
+  ],
+  "validation_results": {
+    "status": "PASS",
+    "errors": [],
+    "warnings": [],
+    "counts": {
+      "institutions": 5833,
+      "programs": 1880,
+      "exclusions": 5099,
+      "professors": 56,
+      "sources": 13254,
+      "outreach_drafts": 15
+    }
+  }
+}

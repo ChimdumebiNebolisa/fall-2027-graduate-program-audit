@@ -1,10 +1,13 @@
 {
   "project": "fall-2027-graduate-program-audit",
-  "current_phase": "deep_review",
+  "current_phase": "workbook_and_final_qa",
   "phases": {
     "foundation": "complete",
     "universe": "complete",
-    "deep_review": "in_progress"
+    "deep_review": "complete",
+    "independent_validation": "complete",
+    "connected_context": "complete",
+    "final_outputs": "in_progress"
   },
   "regions": {
     "us": "complete",
@@ -13,9 +16,14 @@
   },
   "counts": {
     "institutions_indexed": 5833,
-    "program_rows_screened": 1837,
-    "institution_or_program_exclusions": 5063,
-    "source_claims": 12916
+    "program_rows_screened": 1880,
+    "programs_deeply_reviewed": 56,
+    "programs_retained": 22,
+    "core_applications": 20,
+    "reserve_applications": 10,
+    "institution_or_program_exclusions": 5099,
+    "distinct_professors_evaluated": 52,
+    "source_claims": 13254
   },
   "known_failures": [
     "Europe ROR API fallback exposed 3,628 unique records of 4,462 reported filtered records (81.31%); bulk download timed out.",

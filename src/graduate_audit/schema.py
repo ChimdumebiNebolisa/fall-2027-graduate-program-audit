@@ -79,7 +79,7 @@ PROGRAM_COLUMNS = (
     "scholarships_fellowships", "professor_fit_score", "faculty_depth_score",
     "research_fit_score", "funding_score", "eligibility_score", "degree_admissions_score",
     "application_economics_score", "overall_score", "admission_plausibility",
-    "recommendation", "biggest_risk", "unresolved_question", "single_professor_dependency",
+    "recommendation", "final_decision", "biggest_risk", "unresolved_question", "single_professor_dependency",
     "verification_status", "notes",
 )
 
@@ -135,4 +135,3 @@ def program_id(institution_id: str, degree_type: str, program_name: str) -> str:
 
 def professor_id(institution_id: str, full_name: str) -> str:
     return f"{institution_id}:faculty:{slugify(full_name)}"
-

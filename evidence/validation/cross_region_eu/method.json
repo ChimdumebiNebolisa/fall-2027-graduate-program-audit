@@ -1,0 +1,20 @@
+{
+  "checked_date": "2026-09-09",
+  "official_only": true,
+  "search_snippets": "Discovery only; output records the official destination URLs.",
+  "canada_exclusion_sample_ids": [
+    "ca:dli:O19359010910",
+    "ca:dli:O19332928222",
+    "ca:dli:O122051172047",
+    "ca:dli:O19395677925",
+    "ca:dli:O19359010924"
+  ],
+  "us_sample_program_ids": [
+    "us:ipeds:195003:program:phd:computing-and-information-sciences-phd",
+    "us:ipeds:233921:program:phd:computer-science-phd",
+    "us:ipeds:110653:program:phd:software-engineering-phd",
+    "us:ipeds:163286:program:phd:computer-science-phd",
+    "us:ipeds:228778:program:phd:computer-science-phd"
+  ],
+  "sha256_second_source_checks": "b3fb7e4198984c023d9d7426a5c7036f91e352200f9d2876ab505c2f5e9e16ae"
+}

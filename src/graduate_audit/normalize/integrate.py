@@ -46,6 +46,11 @@ def _read_deep_review(filename: str) -> list[dict[str, str]]:
     return rows
 
 
+def _read_validation_sources() -> list[dict[str, str]]:
+    path = ROOT / "data/processed/validation/second_source_ledger/sources.csv"
+    return read_csv(path) if path.exists() else []
+
+
 def _replace_with_deep_review(
     base_rows: list[dict[str, str]],
     deep_rows: list[dict[str, str]],
@@ -94,7 +99,7 @@ def integrate(output_dir: str | Path) -> dict[str, object]:
         _merge_rows("program"), _read_deep_review("deep_programs.csv"), "program_id"
     )
     exclusions_raw = _merge_rows("exclusion") + _read_deep_review("exclusion_or_downgrade.csv")
-    sources_raw = _merge_rows("source") + _read_deep_review("sources.csv")
+    sources_raw = _merge_rows("source") + _read_deep_review("sources.csv") + _read_validation_sources()
     professors_raw = _merge_rows("professor") + _read_deep_review("professors.csv")
 
     institutions, duplicate_institutions = _dedupe(institutions_raw, "institution_id")

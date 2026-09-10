@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "errors": [],
+  "checks": {
+    "core_finalists_second_source_checked": 20,
+    "exclusion_sample_regions": [
+      "canada",
+      "europe",
+      "us"
+    ],
+    "independent_review_corrections": {
+      "Vanderbilt final deadline": true,
+      "Virginia Tech standing policy": true,
+      "Saskatchewan cycle label": true,
+      "RIT GRE": true,
+      "UCI recurring deadline": true,
+      "UIUC restored": true,
+      "NC State restored": true,
+      "Maryland reserve": true,
+      "Imperial immediate route excluded": true,
+      "HMU false negative restored": true
+    },
+    "first_wave_contacts": 15
+  }
+}

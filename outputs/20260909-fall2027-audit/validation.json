@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "errors": [],
+  "warnings": [],
+  "counts": {
+    "institutions": 5833,
+    "programs": 1880,
+    "exclusions": 5099,
+    "professors": 56,
+    "sources": 13254,
+    "outreach_drafts": 15
+  }
+}

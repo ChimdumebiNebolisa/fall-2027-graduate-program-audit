@@ -1,0 +1,145 @@
+﻿rank,contact_type,university,program,recipient,recipient_email,subject,personalization_anchor,body,already_contacted,outreach_score
+1,Professor,University of Saskatchewan,MSc in Computer Science (thesis),Chanchal K. Roy,chanchal.roy@usask.ca,Prospective Fall 2027 student — software maintenance and evolution; clone detection; empirical software engineering; repository mining,Xmentor: rank-aware aggregation for explainable JIT defect prediction,"Dear Professor Roy,
+
+I am writing to ask about prospective Fall 2027 graduate supervision. I am Chimdumebi Mitchell Nebolisa, a Computer Science undergraduate at East Texas A&M University graduating in May 2027. My research includes TerraProbe, work on LLM-based Terraform repair accepted as a full paper at ICTAI 2026, and Evidex, work on evidence-based claim verification and evaluation.
+
+I was especially interested in Xmentor: rank-aware aggregation for explainable JIT defect prediction. LLM-assisted repair plus trustworthy software analytics for infrastructure/configuration defects.
+
+Whether they anticipate supervising a Fall 2027 student in the stated research direction?
+
+yours sincerely,
+Chimdumebi Mitchell Nebolisa",No,283
+2,Professor,Rochester Institute of Technology,Computing and Information Sciences PhD,Yinxi Liu,yxlics@rit.edu,Prospective Fall 2027 student — Software/web security; AI and agent security; program analysis; testing; security measurement,Current PhD Research Opening: AI/Agent Security and Program Analysis/Testing,"Dear Professor Liu,
+
+I am writing to ask about prospective Fall 2027 graduate supervision. I am Chimdumebi Mitchell Nebolisa, a Computer Science undergraduate at East Texas A&M University graduating in May 2027. My research includes TerraProbe, work on LLM-based Terraform repair accepted as a full paper at ICTAI 2026, and Evidex, work on evidence-based claim verification and evaluation.
+
+I was especially interested in Current PhD Research Opening: AI/Agent Security and Program Analysis/Testing. Lead with TerraProbe's infrastructure repair/security and Evidex's evaluation/grounding work.
+
+Is the advertised PhD opening intended for Fall 2027, and what funding duration/benefits are guaranteed?
+
+yours sincerely,
+Chimdumebi Mitchell Nebolisa",No,275
+3,Professor,University of Waterloo,MMath in Computer Science (thesis),Shane McIntosh,shane.mcintosh@uwaterloo.ca,Prospective Fall 2027 student — empirical software engineering; release engineering; DevOps; software quality,Characterizing Timeout Builds in Continuous Integration,"Dear Professor McIntosh,
+
+I am writing to ask about prospective Fall 2027 graduate supervision. I am Chimdumebi Mitchell Nebolisa, a Computer Science undergraduate at East Texas A&M University graduating in May 2027. My research includes TerraProbe, work on LLM-based Terraform repair accepted as a full paper at ICTAI 2026, and Evidex, work on evidence-based claim verification and evaluation.
+
+I was especially interested in Characterizing Timeout Builds in Continuous Integration. TerraProbe's LLM-assisted Terraform repair and reliable CI/configuration workflows.
+
+Whether they anticipate supervising a Fall 2027 student in the stated research direction?
+
+yours sincerely,
+Chimdumebi Mitchell Nebolisa",No,274
+4,Professor,Washington University in St Louis,Computer Science PhD,Umar Iqbal,umar.iqbal@wustl.edu,Prospective Fall 2027 student — AI-agent security and reliability; web privacy/security; LLM-platform evaluation,"AI Agents Prompt Redesign of Web for Security, Privacy, Reliability","Dear Professor Iqbal,
+
+I am writing to ask about prospective Fall 2027 graduate supervision. I am Chimdumebi Mitchell Nebolisa, a Computer Science undergraduate at East Texas A&M University graduating in May 2027. My research includes TerraProbe, work on LLM-based Terraform repair accepted as a full paper at ICTAI 2026, and Evidex, work on evidence-based claim verification and evaluation.
+
+I was especially interested in AI Agents Prompt Redesign of Web for Security, Privacy, Reliability. Connect Evidex to claim fidelity and TerraProbe to safe agent actions over infrastructure.
+
+Which agent reliability or permission failures are the strongest fit for an incoming Fall 2027 student?
+
+yours sincerely,
+Chimdumebi Mitchell Nebolisa",No,273
+5,Professor,Vanderbilt University,Computer Science PhD,Kevin Leach,kevin.leach@vanderbilt.edu,Prospective Fall 2027 student — Software engineering; cybersecurity; dependable systems; human factors,Who's Pushing the Code? An Exploration of GitHub Impersonation,"Dear Professor Leach,
+
+I am writing to ask about prospective Fall 2027 graduate supervision. I am Chimdumebi Mitchell Nebolisa, a Computer Science undergraduate at East Texas A&M University graduating in May 2027. My research includes TerraProbe, work on LLM-based Terraform repair accepted as a full paper at ICTAI 2026, and Evidex, work on evidence-based claim verification and evaluation.
+
+I was especially interested in Who's Pushing the Code? An Exploration of GitHub Impersonation. Connect repair-agent trust and evidence provenance to secure developer workflows.
+
+What Fall 2027 projects at the software-engineering/security intersection would benefit from repair and claim-verification experience?
+
+yours sincerely,
+Chimdumebi Mitchell Nebolisa",No,272
+6,Professor,University of Calgary,MSc in Computer Science (thesis),Mahmoud Alfadel,mahmoud.alfadel@ucalgary.ca,Prospective Fall 2027 student — software ecosystems; releases; build systems; security vulnerabilities; mining repositories,BLAZE: Cross-Language and Cross-Project Bug Localization,"Dear Professor Alfadel,
+
+I am writing to ask about prospective Fall 2027 graduate supervision. I am Chimdumebi Mitchell Nebolisa, a Computer Science undergraduate at East Texas A&M University graduating in May 2027. My research includes TerraProbe, work on LLM-based Terraform repair accepted as a full paper at ICTAI 2026, and Evidex, work on evidence-based claim verification and evaluation.
+
+I was especially interested in BLAZE: Cross-Language and Cross-Project Bug Localization. Ask which route best fits TerraProbe and whether two-year MSc funding is net-sufficient.
+
+Whether they anticipate supervising a Fall 2027 student in the stated research direction?
+
+yours sincerely,
+Chimdumebi Mitchell Nebolisa",No,271
+7,Professor,Virginia Polytechnic Institute and State University,Computer Science PhD,Na Meng,nm8247@cs.vt.edu,Prospective Fall 2027 student — Software engineering; program transformation; LLMs; testing; security,How Effectively Do LLMs Help with Build Conflict Resolution?,"Dear Professor Meng,
+
+I am writing to ask about prospective Fall 2027 graduate supervision. I am Chimdumebi Mitchell Nebolisa, a Computer Science undergraduate at East Texas A&M University graduating in May 2027. My research includes TerraProbe, work on LLM-based Terraform repair accepted as a full paper at ICTAI 2026, and Evidex, work on evidence-based claim verification and evaluation.
+
+I was especially interested in How Effectively Do LLMs Help with Build Conflict Resolution?. Lead with TerraProbe and ask about build/configuration conflict evaluation.
+
+What failure modes matter most in current LLM-assisted build and configuration repair research?
+
+yours sincerely,
+Chimdumebi Mitchell Nebolisa",No,269
+8,Professor,University of Massachusetts-Amherst,Computer Science PhD,Yuriy Brun,brun@cs.umass.edu,Prospective Fall 2027 student — Software engineering; automated repair; testing; reliable AI-assisted development,LLM-Assisted Formal Verification,"Dear Professor Brun,
+
+I am writing to ask about prospective Fall 2027 graduate supervision. I am Chimdumebi Mitchell Nebolisa, a Computer Science undergraduate at East Texas A&M University graduating in May 2027. My research includes TerraProbe, work on LLM-based Terraform repair accepted as a full paper at ICTAI 2026, and Evidex, work on evidence-based claim verification and evaluation.
+
+I was especially interested in LLM-Assisted Formal Verification. Connect TerraProbe repair evidence and Evidex grounding to reliable AI-for-SE.
+
+Which reliability benchmarks would be most valuable for infrastructure-code repair agents?
+
+yours sincerely,
+Chimdumebi Mitchell Nebolisa",No,269
+9,Professor,Northeastern University,Computer Science PhD,Jonathan Bell,j.bell@northeastern.edu,Prospective Fall 2027 student — Software engineering; program analysis; testing; dependency management,Dependency management and software supply-chain analysis,"Dear Professor Bell,
+
+I am writing to ask about prospective Fall 2027 graduate supervision. I am Chimdumebi Mitchell Nebolisa, a Computer Science undergraduate at East Texas A&M University graduating in May 2027. My research includes TerraProbe, work on LLM-based Terraform repair accepted as a full paper at ICTAI 2026, and Evidex, work on evidence-based claim verification and evaluation.
+
+I was especially interested in Dependency management and software supply-chain analysis. Connect Terraform dependency/configuration repair to supply-chain and testing research.
+
+What build/configuration reliability problems are current priorities for the group?
+
+yours sincerely,
+Chimdumebi Mitchell Nebolisa",No,269
+10,Professor,William & Mary,Computer Science PhD,Denys Poshyvanyk,dposhyvanyk@wm.edu,Prospective Fall 2027 student — Software evolution; repository mining; testing; AI-for-SE; security,Hallucination Detection in LLM-Generated Code,"Dear Professor Poshyvanyk,
+
+I am writing to ask about prospective Fall 2027 graduate supervision. I am Chimdumebi Mitchell Nebolisa, a Computer Science undergraduate at East Texas A&M University graduating in May 2027. My research includes TerraProbe, work on LLM-based Terraform repair accepted as a full paper at ICTAI 2026, and Evidex, work on evidence-based claim verification and evaluation.
+
+I was especially interested in Hallucination Detection in LLM-Generated Code. Connect Evidex grounding and TerraProbe to hallucination/provenance validation in generated code.
+
+Which empirical signals best distinguish plausible from trustworthy LLM-generated code changes?
+
+yours sincerely,
+Chimdumebi Mitchell Nebolisa",No,268
+11,Professor,Iowa State University,Computer Science PhD,Myra Cohen,mcohen@iastate.edu,Prospective Fall 2027 student — Configurable software; software testing; search-based software engineering,Configurable-software failure and testing research,"Dear Professor Cohen,
+
+I am writing to ask about prospective Fall 2027 graduate supervision. I am Chimdumebi Mitchell Nebolisa, a Computer Science undergraduate at East Texas A&M University graduating in May 2027. My research includes TerraProbe, work on LLM-based Terraform repair accepted as a full paper at ICTAI 2026, and Evidex, work on evidence-based claim verification and evaluation.
+
+I was especially interested in Configurable-software failure and testing research. Lead with Terraform configuration repair and testing methodology.
+
+Which configurable-systems benchmarks would make a strong Fall 2027 PhD project, and how secure is years 3–5 funding?
+
+yours sincerely,
+Chimdumebi Mitchell Nebolisa",No,268
+12,Professor,University of Notre Dame,Computer Science and Engineering PhD,Joanna Cecilia da Silva Santos,jdasilv2@nd.edu,Prospective Fall 2027 student — Software engineering; software security; program analysis; source-code manipulation,Leveraging LLMs to Generate Security Tests for Mobile Apps,"Dear Professor Santos,
+
+I am writing to ask about prospective Fall 2027 graduate supervision. I am Chimdumebi Mitchell Nebolisa, a Computer Science undergraduate at East Texas A&M University graduating in May 2027. My research includes TerraProbe, work on LLM-based Terraform repair accepted as a full paper at ICTAI 2026, and Evidex, work on evidence-based claim verification and evaluation.
+
+I was especially interested in Leveraging LLMs to Generate Security Tests for Mobile Apps. Lead with TerraProbe and ask about adapting LLM repair/testing to security-sensitive configurations.
+
+Does S2E anticipate a funded Fall 2027 opening focused on LLM security testing or program analysis?
+
+yours sincerely,
+Chimdumebi Mitchell Nebolisa",No,268
+13,Admin,Concordia University,Master of Computer Science (thesis),Gina Cody Graduate Admissions,graduate-admission@encs.concordia.ca,Fall 2027 Master of Computer Science (thesis) question,What two-year net funding minimum can an international MCompSc thesis offer guarantee?,"Dear Graduate Program Team,
+
+I am an international applicant completing a U.S. B.S. in Computer Science in May 2027 and am considering the Master of Computer Science (thesis) at Concordia University.
+
+What two-year net funding minimum can an international MCompSc thesis offer guarantee?
+
+yours sincerely,
+Chimdumebi Mitchell Nebolisa",,185
+14,Admin,McGill University,MSc in Computer Science (thesis),Graduate Program Coordinator,graduate-coordinator.cs@mcgill.ca,Fall 2027 MSc in Computer Science (thesis) question,"Does every international thesis-MSc offer include a guaranteed net amount after tuition, and for how long?","Dear Graduate Program Team,
+
+I am an international applicant completing a U.S. B.S. in Computer Science in May 2027 and am considering the MSc in Computer Science (thesis) at McGill University.
+
+Does every international thesis-MSc offer include a guaranteed net amount after tuition, and for how long?
+
+yours sincerely,
+Chimdumebi Mitchell Nebolisa",,185
+15,Admin,University of Calgary,PhD in Computer Science (without completed MSc),Science Student Centre,sci.grad@ucalgary.ca,Fall 2027 PhD in Computer Science (without completed MSc) question,"For PhD entry without an MSc, is year five funded and what is net support after all tuition/mandatory fees?","Dear Graduate Program Team,
+
+I am an international applicant completing a U.S. B.S. in Computer Science in May 2027 and am considering the PhD in Computer Science (without completed MSc) at University of Calgary.
+
+For PhD entry without an MSc, is year five funded and what is net support after all tuition/mandatory fees?
+
+yours sincerely,
+Chimdumebi Mitchell Nebolisa",,185

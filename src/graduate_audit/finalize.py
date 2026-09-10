@@ -22,8 +22,20 @@ def finalize(repo_root: Path, output_root: Path, report_root: Path) -> dict[str,
         output_root / "institution_universe.csv",
         output_root / "professor_evidence.csv",
     )
-    write_csv(output_root / "program_screening.csv", programs, PROGRAM_COLUMNS)
     portfolio = select_portfolio(programs)
+    portfolio_decisions = {
+        row.get("program_id", ""): label
+        for label, key in (("Core", "core"), ("Reserve", "reserve"), ("Monitor", "monitor_for_2027_position"))
+        for row in portfolio.get(key, [])
+    }
+    for row in programs:
+        if row.get("program_id", "") in portfolio_decisions:
+            row["final_decision"] = portfolio_decisions[row["program_id"]]
+        elif row.get("screening_decision", "").lower() in {"excluded", "screened_out", "do_not_apply"}:
+            row["final_decision"] = "Do Not Apply"
+        elif float(row.get("overall_score") or 0) > 0:
+            row["final_decision"] = "Not selected"
+    write_csv(output_root / "program_screening.csv", programs, PROGRAM_COLUMNS)
     write_json(output_root / "portfolio.json", portfolio)
 
     calendar_path = repo_root / "data/private/calendar_candidate_summary.csv"
@@ -43,9 +55,19 @@ def finalize(repo_root: Path, output_root: Path, report_root: Path) -> dict[str,
     deep_programs = [
         row for row in programs
         if row.get("verification_status", "").lower() not in {"", "mechanical", "preliminary"}
+        and float(row.get("overall_score") or 0) > 0
     ]
     retained = [row for row in programs if row.get("screening_decision", "").lower() == "retained"]
-    recommended_professors = [row for row in professors if row.get("outreach_priority") == "First wave"]
+    recommended_professors = [row for row in drafts if row.get("contact_type", "").lower() == "professor"]
+    distinct_professors = {
+        (
+            row.get("institution_id", ""),
+            row.get("full_name", "").strip().lower(),
+            row.get("email", "").strip().lower(),
+        )
+        for row in professors
+        if row.get("full_name", "").strip()
+    }
     manifest["current_date"] = datetime.now().astimezone().date().isoformat()
     manifest["counts"].update({
         "institutions_indexed": len(institutions),
@@ -54,10 +76,11 @@ def finalize(repo_root: Path, output_root: Path, report_root: Path) -> dict[str,
         "programs_deeply_reviewed": len(deep_programs),
         "programs_retained": len(retained),
         "programs_excluded_or_downgraded": sum(
-            row.get("screening_decision", "").lower() in {"excluded", "screened_out", "downgraded", "do_not_apply"}
+            row.get("screening_decision", "").lower() in {"excluded", "screened_out", "downgrade", "downgraded", "do_not_apply"}
             for row in programs
         ),
-        "professors_evaluated": len(professors),
+        "professor_program_matches_evaluated": len(professors),
+        "professors_evaluated": len(distinct_professors),
         "professors_recommended": len(recommended_professors),
         "first_wave_contacts": len(drafts),
         "sources": len(sources),

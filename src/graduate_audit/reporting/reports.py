@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 from collections import Counter
 from pathlib import Path
 
@@ -19,6 +20,10 @@ def _table(headers: list[str], rows: list[list[object]]) -> str:
 
 def _load_json(path: Path) -> dict[str, object]:
     return json.loads(path.read_text(encoding="utf-8")) if path.exists() else {}
+
+
+def _name_key(value: str) -> str:
+    return re.sub(r"[^a-z0-9]", "", value.lower())
 
 
 def build_reports(output_dir: str | Path, reports_dir: str | Path) -> None:
@@ -39,11 +44,18 @@ def build_reports(output_dir: str | Path, reports_dir: str | Path) -> None:
     region_counts = Counter(row.get("region", "Unspecified") for row in institutions)
     status_counts = Counter(row.get("screening_status", "") for row in institutions)
     exclusion_counts = Counter(row.get("primary_exclusion_reason", "") for row in exclusions)
-    reviewed = [row for row in programs if row.get("verification_status", "").lower() not in {"", "mechanical", "preliminary"}]
-    retained = [row for row in programs if row.get("screening_decision", "").lower() == "retained"]
-    recommended_professors = [
-        row for row in professors if row.get("outreach_priority", "").lower() in {"first wave", "first-wave", "high"}
+    reviewed = [
+        row for row in programs
+        if row.get("verification_status", "").lower() not in {"", "mechanical", "preliminary"}
+        and float(row.get("overall_score") or 0) > 0
     ]
+    retained = [row for row in programs if row.get("screening_decision", "").lower() == "retained"]
+    distinct_professors = {
+        (row.get("institution_id", ""), row.get("full_name", "").strip().lower(), row.get("email", "").strip().lower())
+        for row in professors if row.get("full_name", "").strip()
+    }
+    drafts = read_csv(output_root / "outreach_drafts.csv") if (output_root / "outreach_drafts.csv").exists() else []
+    recommended_professors = [row for row in drafts if row.get("contact_type", "").lower() == "professor"]
 
     coverage = f"""# Coverage Report — Fall 2027 Graduate Program Audit
 
@@ -57,7 +69,8 @@ Validation: {validation.get('status', 'not yet run')}
     ['Programs mechanically screened', len(programs)],
     ['Programs deeply reviewed', len(reviewed)],
     ['Programs retained', len(retained)],
-    ['Professors evaluated', len(professors)],
+    ['Distinct professors evaluated', len(distinct_professors)],
+    ['Professor-program matches evaluated', len(professors)],
     ['First-wave professors', len(recommended_professors)],
     ['Source claims', len(sources)],
 ])}
@@ -92,6 +105,17 @@ The search is broad and auditable within the frozen source universes, but it is 
             for r in portfolio.get(kind, [])
         ]
 
+    calendar_keys = {_name_key(row.get("existing_calendar_school", "")) for row in calendar}
+    calendar_aliases = {
+        _name_key("Virginia Tech"): _name_key("Virginia Polytechnic Institute and State University"),
+    }
+    calendar_keys.update(calendar_aliases[key] for key in list(calendar_keys) if key in calendar_aliases)
+    newly_discovered_core = [
+        row for row in portfolio.get("core", [])
+        if _name_key(row.get("institution_name", "")) not in calendar_keys
+    ]
+    removed_or_downgraded = [row for row in calendar if row.get("survived_new_audit") != "Yes"]
+
     shortlist = f"""# Final Shortlist — Fall 2027
 
 The portfolio applies eligibility and funding gates before score ranking. Scores are comparative evidence summaries, not admission probabilities.
@@ -108,9 +132,25 @@ The portfolio applies eligibility and funding gates before score ranking. Scores
 
 {_table(['University', 'Program', 'Score', 'Plausibility', 'Recommendation', 'Biggest risk'], portfolio_rows('monitor_for_2027_position'))}
 
+## Newly discovered core universities absent from the bounded Calendar list
+
+{_table(['University', 'Program', 'Score', 'Plausibility'], [[r.get('institution_name'), r.get('program_name'), r.get('overall_score'), r.get('admission_plausibility')] for r in newly_discovered_core])}
+
+## Highest-value first-wave contacts
+
+{_table(['Rank', 'Type', 'Person', 'University', 'Email', 'Personalization anchor'], [[r.get('rank'), r.get('contact_type'), r.get('recipient'), r.get('university'), r.get('recipient_email'), r.get('personalization_anchor')] for r in drafts])}
+
 ## Calendar comparison
 
 {_table(['Previous candidate', 'Previous category', 'New outcome', 'Reason'], [[r.get('existing_calendar_school'), r.get('previous_category'), r.get('new_status'), r.get('reason')] for r in calendar])}
+
+## Removed or substantially downgraded Calendar candidates
+
+{_table(['Previous candidate', 'Previous category', 'New outcome', 'Reason'], [[r.get('existing_calendar_school'), r.get('previous_category'), r.get('new_status'), r.get('reason')] for r in removed_or_downgraded])}
+
+## Core unresolved questions
+
+{_table(['University', 'Question'], [[r.get('institution_name'), r.get('unresolved_question')] for r in portfolio.get('core', [])])}
 
 ## Decision rule
 

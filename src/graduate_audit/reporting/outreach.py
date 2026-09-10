@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import argparse
 from pathlib import Path
+import json
 
 from graduate_audit.io import read_csv, write_csv
 from graduate_audit.schema import PROFESSOR_COLUMNS
@@ -36,6 +37,15 @@ def _combine_admin(root: Path) -> list[dict[str, str]]:
             for column in ADMIN_COLUMNS:
                 snake = column.lower().replace("?", "").replace("-", "_").replace(" ", "_")
                 normalized[column] = row.get(column) or row.get(snake) or ""
+            normalized["University"] = normalized["University"] or row.get("institution_name", "")
+            normalized["Program"] = normalized["Program"] or row.get("program_name", "")
+            normalized["Department"] = normalized["Department"] or row.get("department", "")
+            normalized["Priority"] = normalized["Priority"] or row.get("priority", "")
+            normalized["Contact Name"] = normalized["Contact Name"] or row.get("contact_name", "")
+            normalized["Contact Role"] = normalized["Contact Role"] or row.get("contact_role", "")
+            normalized["Official Email"] = normalized["Official Email"] or row.get("official_email", "")
+            normalized["Question to Resolve"] = normalized["Question to Resolve"] or row.get("question_to_resolve", "")
+            normalized["Why It Matters"] = normalized["Why It Matters"] or row.get("why_it_matters", "")
             rows.append(normalized)
     return rows
 
@@ -96,21 +106,40 @@ def prepare(repo_root: Path, output_root: Path, limit: int = 15) -> None:
     admins = _combine_admin(repo_root)
     write_csv(output_root / "admin_contacts.csv", admins, ADMIN_COLUMNS)
 
-    candidates: list[tuple[int, str, dict[str, str]]] = []
+    portfolio = json.loads((output_root / "portfolio.json").read_text(encoding="utf-8"))
+    core_ids = {row.get("program_id", "") for row in portfolio.get("core", [])}
+    reserve_ids = {row.get("program_id", "") for row in portfolio.get("reserve", [])}
+    program_rows = read_csv(output_root / "program_screening.csv")
+    program_by_id = {row.get("program_id", ""): row for row in program_rows}
+    route_by_name = {
+        (row.get("institution_name", ""), row.get("program_name", "")): row.get("program_id", "")
+        for row in program_rows
+    }
+    professor_candidates: list[tuple[int, str, dict[str, str]]] = []
     for row in professors:
         if not row.get("official_email") or not _yes(row.get("contacting_faculty_appropriate")):
+            continue
+        program_id = row.get("program_id", "")
+        if program_id not in core_ids and program_id not in reserve_ids:
             continue
         score = _integer(row.get("outreach_score"))
         if score == 0:
             score = {"exceptional": 90, "direct": 84, "strong": 78, "adjacent": 60}.get(row.get("fit_strength", "").lower(), 50)
-        priority = row.get("outreach_priority", "").lower()
-        if "first" in priority or priority == "high" or score >= 75:
-            candidates.append((score, "Professor", row))
+        score += 100 if program_id in core_ids else 80
+        score += _integer(program_by_id.get(program_id, {}).get("overall_score"))
+        if row.get("recruiting_status") == "Confirmed recruiting":
+            score += 10
+        professor_candidates.append((score, "Professor", row))
+    admin_candidates: list[tuple[int, str, dict[str, str]]] = []
     for row in admins:
+        program_id = route_by_name.get((row.get("University", ""), row.get("Program", "")), "")
         priority = row.get("Priority", "").lower()
-        if "first" in priority or "high" in priority:
-            candidates.append((72, "Admin", row))
+        if program_id in reserve_ids and ("first" in priority or "high" in priority) and row.get("Official Email"):
+            admin_candidates.append((185, "Admin", row))
 
+    professor_candidates.sort(key=lambda item: item[0], reverse=True)
+    admin_candidates.sort(key=lambda item: (item[2].get("University", ""), item[2].get("Program", "")))
+    candidates = professor_candidates[: max(0, limit - min(3, len(admin_candidates)))] + admin_candidates[:3]
     candidates.sort(key=lambda item: item[0], reverse=True)
     selected: list[tuple[int, str, dict[str, str]]] = []
     used_email: set[str] = set()

@@ -1,0 +1,88 @@
+{
+  "checked_date": "2026-09-09",
+  "portfolio_path": "outputs/20260909-fall2027-audit/portfolio.json",
+  "portfolio_sha256": "c2243437848db4d9128116f4ebc70362cc7c3ca47aa0d738b7ec740283238d01",
+  "scope": {
+    "current_core_programs": 18,
+    "corrected_former_core_programs": 1,
+    "total_program_rows": 19,
+    "sampled_us_exclusions": 5
+  },
+  "program_results": {
+    "confirmed": 4,
+    "conflict": 4,
+    "qualified": 11
+  },
+  "exclusion_sample_results": {
+    "confirmed": 2,
+    "conflict": 2,
+    "qualified": 1
+  },
+  "pending_correction_count": 7,
+  "pending_corrections": [
+    {
+      "institution_name": "Vanderbilt University",
+      "program_id": "us:ipeds:221999:program:phd:computer-science-phd",
+      "portfolio_tier": "current_core",
+      "result": "conflict",
+      "correction": "Use 2027-01-08 as the final Fall 2027 deadline, or add a distinct recommended-deadline field for 2026-12-15."
+    },
+    {
+      "institution_name": "Virginia Polytechnic Institute and State University",
+      "program_id": "us:ipeds:233921:program:phd:computer-science-phd",
+      "portfolio_tier": "current_core",
+      "result": "qualified",
+      "correction": "Revise the portfolio risk wording: the funding policy is effective beginning Fall 2026, not stated as limited only to the Fall 2026 cohort."
+    },
+    {
+      "institution_name": "University of Saskatchewan",
+      "program_id": "ca:dli:O19425660421:program:thesis-or-research-master-s:msc-in-computer-science-thesis",
+      "portfolio_tier": "current_core",
+      "result": "conflict",
+      "correction": "Treat the Fall 2027 deadline as TBD until an official page labels the new cycle; do not carry the Fall 2026 date forward as a current-cycle deadline."
+    },
+    {
+      "institution_name": "Rochester Institute of Technology",
+      "program_id": "us:ipeds:195003:program:phd:computing-and-information-sciences-phd",
+      "portfolio_tier": "current_core",
+      "result": "conflict",
+      "correction": "Change GRE policy to Required. Preserve funding as qualified until offer duration, health, fees, and summer are explicit; keep the Fall 2027 deadline TBD."
+    },
+    {
+      "institution_name": "University of California-Irvine",
+      "program_id": "us:ipeds:110653:program:phd:software-engineering-phd",
+      "portfolio_tier": "current_core",
+      "result": "conflict",
+      "correction": "Clear or qualify 2026-12-15 as a recurring, not cycle-labeled, deadline until an official Fall 2027 page appears; retain aspirational funding language."
+    },
+    {
+      "institution_name": "University of Illinois Urbana-Champaign",
+      "program_id": "us:ipeds:145637:program:phd:computer-science-phd",
+      "portfolio_tier": "deep_review_exclusion_sample",
+      "result": "conflict",
+      "correction": "Remove hard-GPA exclusion and reconsider as a reach/reserve candidate using the applicant's recent-two-year GPA; do not describe 3.40 as a minimum."
+    },
+    {
+      "institution_name": "North Carolina State University at Raleigh",
+      "program_id": "us:ipeds:199193:program:phd:computer-science-phd",
+      "portfolio_tier": "deep_review_exclusion_sample",
+      "result": "conflict",
+      "correction": "Re-score funding and reconsider for reserve/core comparison; retain explicit risks for student fees, summer support, year five, and transition to advisor-funded RA."
+    }
+  ],
+  "resolved_correction_count": 1,
+  "resolved_corrections": [
+    {
+      "institution_name": "University of Maryland-College Park",
+      "program_id": "us:ipeds:163286:program:phd:computer-science-phd",
+      "resolution": "Current portfolio already moved Maryland from core to reserve and reduced funding strength after the official FAQ was found to disclaim an admission-offer funding guarantee."
+    }
+  ],
+  "method": "Claims were checked against a distinct current official university, school, department, catalog, funding, or official faculty-hosted page. Search snippets were used only to locate pages; result classifications use the opened official pages. Recruiting was not inferred from an active lab or publications.",
+  "limitations": [
+    "A qualified result means the route remains plausible but at least one hard-gate term is conditional, recurring rather than cycle-labeled, offer-specific, or not independently quantified.",
+    "Northeastern's dedicated funding subpage returned HTTP 403 to the audit client; the independent 2026-27 official catalog was used to confirm the active bachelor-entry PhD and supervision structure, while the funding wording remains sourced to the official application page.",
+    "Michigan CSE's FAQ and faculty profile returned HTTP 403 to direct retrieval. A distinct current College of Engineering PhD page confirmed bachelor entry and full funding; the faculty check is therefore qualified rather than treated as fresh recruiting evidence.",
+    "No row interprets a current faculty appointment as evidence that the faculty member is recruiting for Fall 2027."
+  ]
+}

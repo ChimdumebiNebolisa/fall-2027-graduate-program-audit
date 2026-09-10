@@ -1,0 +1,77 @@
+{
+  "status": "pass_with_findings",
+  "date_checked": "2026-09-09",
+  "selection_seed": "cross-region-ca-v1",
+  "source_file_sha256": {
+    "data/processed/regions/us/exclusion_log.csv": "0c572d891e0955be34c0c475775eb65fb9aa1a9555327a419f74bac784c9287d",
+    "data/processed/regions/europe/exclusion_log.csv": "fec953157e423c38c79a2b92eade0e22abd9d9cf160f2830e3bfc51d6d67df24",
+    "data/processed/deep_review/europe/deep_programs.csv": "fc57797d44aa68a7109f4046a8d8a5537cd958d8bdfeeb647cfa92e4033b25b6",
+    "data/processed/deep_review/europe/professors.csv": "13818535be0beda4098a7237b8f40b347989e5199317b9a2c566b333c4d3c24c"
+  },
+  "counts": {
+    "exclusion_samples_total": 13,
+    "us_exclusion_samples": 7,
+    "europe_exclusion_samples": 6,
+    "europe_sample_countries": 6,
+    "europe_sample_reasons": 2,
+    "false_negatives": 1,
+    "europe_finalist_programs_checked": 18,
+    "europe_finalist_unique_institutions": 17,
+    "europe_finalist_unique_professors": 17,
+    "europe_finalist_overall_results": {
+      "confirmed": 14,
+      "confirmed_with_caveat": 1,
+      "material_discrepancy": 3
+    },
+    "europe_finalist_dimension_results": {
+      "confirmed": 50,
+      "material_discrepancy": 3,
+      "uncertain": 1
+    }
+  },
+  "false_negative_ids": [
+    "ror:039ce0m20"
+  ],
+  "material_finalist_findings": [
+    {
+      "program_id": "ror:041kmwe10:program:phd:phd-in-computing",
+      "institution_name": "Imperial College London",
+      "corrective_action": "Change direct_from_bachelors_eligible from yes to no/not normally; downgrade or exclude this immediate route unless Imperial confirms an exceptional bachelor-only case in writing."
+    },
+    {
+      "program_id": "ror:05a28rw58:program:direct-entry-phd:direct-doctorate-in-computer-science",
+      "institution_name": "ETH Zurich",
+      "corrective_action": "Replace the vague program funding model with guaranteed conditional-on-admission support/waiver terms for the direct route; still keep applicant award and supervisor recruiting status distinct and unconfirmed."
+    },
+    {
+      "program_id": "ror:05m7pjf47:program:phd:phd-computer-science",
+      "institution_name": "University College Dublin",
+      "corrective_action": "Change direct_from_bachelors_eligible from no to project-specific/yes where a call permits it, and do not exclude solely for degree entry; retain Investigate/Do Not Apply until a matching 2027 fully funded international call is verified. Recheck the guide because direct fetch returned 404 during this audit even though UCD search indexing exposed its contents."
+    }
+  ],
+  "caveats": [
+    "This was a bounded official-source audit, not an exhaustive re-screen of every excluded institution.",
+    "No recruiting inference was made from faculty activity, publications, grants, or current students.",
+    "UCD's current 2026 guide was visible through the official-domain search index but returned 404 on direct fetch; its degree-entry correction should be reconfirmed from the School or a refreshed official guide before outreach.",
+    "Aalto publishes conflicting current rank labels for Fabian Fagerholm; appointment is current, exact rank needs reconciliation."
+  ],
+  "checks": {
+    "us_sample_at_least_5": true,
+    "europe_sample_at_least_5": true,
+    "europe_sample_at_least_5_countries": true,
+    "europe_sample_at_least_2_reasons": true,
+    "false_negative_enum_valid": true,
+    "exclusion_required_fields_complete": true,
+    "all_europe_finalist_programs_covered_once": true,
+    "all_europe_finalist_professors_covered": true,
+    "all_finalist_dimensions_sourced": true,
+    "finalist_result_enums_valid": true,
+    "corrective_action_present_for_all_findings": true
+  },
+  "outputs": [
+    "data/processed/validation/cross_region_ca/exclusion_sample_audit.csv",
+    "data/processed/validation/cross_region_ca/europe_finalist_second_source.csv",
+    "data/processed/validation/cross_region_ca/validation.json",
+    "evidence/validation/cross_region_ca/README.md"
+  ]
+}

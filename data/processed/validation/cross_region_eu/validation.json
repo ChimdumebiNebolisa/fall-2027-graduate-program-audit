@@ -1,0 +1,33 @@
+{
+  "generated_at": "2026-09-09",
+  "status": "pass",
+  "counts": {
+    "checks_total": 42,
+    "canada_retained_routes": 8,
+    "canada_retained_claim_checks": 32,
+    "canada_exclusions_sampled": 5,
+    "us_retained_funding_sampled": 5,
+    "corrections_or_clarifications": 12,
+    "high_severity_corrections": 5
+  },
+  "sampling": {
+    "canada_exclusions": "Sort source exclusion_log.csv by SHA-256(institution_id), then institution_id; take first five.",
+    "us_retained": "Filter screening_decision=retained; sort by SHA-256(program_id); take first five. These five also span materially different funding wordings."
+  },
+  "checks": {
+    "all_eight_canadian_retained_routes_covered": true,
+    "four_claim_categories_each_canadian_route": true,
+    "at_least_five_canadian_exclusions": true,
+    "at_least_five_us_retained_finalists": true,
+    "all_checks_have_primary_and_second_source": true,
+    "source_datasets_unchanged_by_this_script": true
+  },
+  "material_findings": [
+    "Calgary PhD direct-from-bachelor eligibility is not explicit enough to record as yes.",
+    "Calgary MSc and PhD recurring deadlines were incorrectly assigned calendar-year 2027.",
+    "UMD's official FAQ says funding is not guaranteed in the admission offer.",
+    "OCAD's stored exclusion source URL points to NSCAD, a different institution.",
+    "UBC department and Graduate School pages disagree on whether the upcoming intake deadline is configured."
+  ],
+  "errors": []
+}
