@@ -113,13 +113,15 @@ def test_stage_six_artifact_covers_every_program_and_all_ten_questions():
         for key in ("core", "reserve", "monitor", "do_not_apply", "not_retained_alternates")
         for row in portfolio[key]
     ]
+    hard_gate_survivors = [row for row in scores if row["all_hard_gates_pass"] == "true"]
+    failed_gate_programs = [row for row in scores if row["all_hard_gates_pass"] != "true"]
 
-    assert len(entries) == len(scores) == 45
+    assert len(entries) == len(scores)
     assert {row["program_id"] for row in entries} == {row["program_id"] for row in scores}
     assert portfolio["decision"] == "RETURN_TO_CANDIDATE_DISCOVERY"
     assert len(portfolio["core"]) == 0
-    assert len(portfolio["monitor"]) == 7
-    assert len(portfolio["do_not_apply"]) == 38
+    assert len(portfolio["monitor"]) == len(hard_gate_survivors)
+    assert len(portfolio["do_not_apply"]) == len(failed_gate_programs)
     for row in entries:
         assert len(row["pressure_test_answers"]) == len(PRESSURE_QUESTIONS) == 10
         for answer in row["pressure_test_answers"]:
@@ -129,7 +131,8 @@ def test_stage_six_artifact_covers_every_program_and_all_ten_questions():
 
 def test_stage_six_manifest_passes_every_acceptance_assertion():
     manifest = read_json(REPO_ROOT / "data/manifests/pass2/stage_06.json")
+    scores = read_csv(REPO_ROOT / "data/processed/pass2/program_scores.csv")
 
     assert manifest["decision"] == "PASS"
-    assert manifest["counts"]["pressure_test_answers"] == 450
+    assert manifest["counts"]["pressure_test_answers"] == len(scores) * len(PRESSURE_QUESTIONS)
     assert all(manifest["validation"]["assertions"].values())

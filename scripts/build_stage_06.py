@@ -117,8 +117,8 @@ def validate(
     active_second_programs = [row for row in active if not row["is_primary_program"]]
 
     assertions = {
-        "all_scored_programs_receive_one_disposition": len(entries) == len(scores) == 45 and {row["program_id"] for row in entries} == set(score_by_program),
-        "every_university_has_exactly_one_primary_program": set(entries_by_institution) == institution_ids and len(primaries) == len(institution_ids) == 42 and all(sum(bool(row["is_primary_program"]) for row in rows) == 1 for rows in entries_by_institution.values()),
+        "all_scored_programs_receive_one_disposition": bool(scores) and len(entries) == len(scores) and {row["program_id"] for row in entries} == set(score_by_program),
+        "every_university_has_exactly_one_primary_program": set(entries_by_institution) == institution_ids and len(primaries) == len(institution_ids) and all(sum(bool(row["is_primary_program"]) for row in rows) == 1 for rows in entries_by_institution.values()),
         "primary_program_selection_uses_evidence_not_prestige": primary_is_best_evidence_row,
         "every_program_answers_all_ten_pressure_questions": all(
             len(row["pressure_test_answers"]) == 10
@@ -226,6 +226,12 @@ def write_report(portfolio: dict[str, object], assertions: dict[str, bool], coun
         [number, question, ", ".join(f"{key}: {value}" for key, value in sorted(assessment_counts[number].items()))]
         for number, question in PRESSURE_QUESTIONS
     ]
+    policy_summary = (
+        "The core is intentionally empty. Every hard-gate survivor still lacks an evidence-supported strategic admission calibration. "
+        "Stage 6 therefore returns to candidate discovery instead of padding a 12–16 application target or relabeling a program as Plausible."
+        if not portfolio["core"]
+        else "The core contains only hard-gate-clearing programs with evidence-supported strategic admission calibration and respects the 12–16 quality-first limit."
+    )
     lines = [
         "# Pass 2 Stage 6 — Portfolio construction and pressure test",
         "",
@@ -240,10 +246,7 @@ def write_report(portfolio: dict[str, object], assertions: dict[str, bool], coun
             f"The evidence supports {counts['core']} core, {counts['reserve']} reserve, {counts['monitor']} monitor, and {counts['do_not_apply']} do-not-apply programs."
         ),
         "",
-        (
-            "The core is intentionally empty. Every hard-gate survivor still has `Insufficient evidence` for strategic admission calibration and a single-professor dependency. "
-            "Stage 6 therefore returns to candidate discovery instead of padding a 12–16 application target or relabeling a program as Plausible."
-        ),
+        policy_summary,
         "",
         "## Preliminary active portfolio",
         "",
@@ -262,7 +265,7 @@ def write_report(portfolio: dict[str, object], assertions: dict[str, bool], coun
         "",
         "## Pressure-test coverage",
         "",
-        table(["Question", "Prompt", "Assessments across 45 programs"], pressure_rows),
+        table(["Question", "Prompt", f"Assessments across {counts['scored_programs']} programs"], pressure_rows),
         "",
         "The complete answer text and resolving Stage 5 score-evidence IDs are stored with every program in `data/processed/pass2/portfolio.json`.",
         "",
@@ -276,10 +279,10 @@ def write_report(portfolio: dict[str, object], assertions: dict[str, bool], coun
         "",
         "## Unresolved coverage",
         "",
-        "- All 7 monitor programs have only one verified strong professor and need either a verified second match or persuasive availability confirmation.",
-        "- All 7 monitor programs lack evidence adequate for a strategic Competitive/Plausible/Reach calibration.",
-        "- 38 programs fail at least one hard gate and remain do-not-apply until direct official evidence resolves every failure.",
-        "- Applicant preference among the 7 monitor opportunities is not directly verified.",
+        f"- All {counts['monitor']} monitor programs have only one verified strong professor and need either a verified second match or persuasive availability confirmation.",
+        f"- All {counts['monitor']} monitor programs lack evidence adequate for a strategic Competitive/Plausible/Reach calibration.",
+        f"- {counts['do_not_apply']} programs fail at least one hard gate and remain do-not-apply until direct official evidence resolves every failure.",
+        f"- Applicant preference among the {counts['monitor']} monitor opportunities is not directly verified.",
         "- Offer-specific funding, fee, health-insurance, summer, and duration gaps remain where recorded in Stage 5 evidence.",
         "- Candidate discovery must find additional hard-gate-clearing, strategically calibrated options before a quality-first core can be recommended.",
         "",
@@ -314,6 +317,7 @@ def main() -> int:
     pass2 = dict(progress.get("pass2", {}))
     stage_status = dict(pass2.get("stage_status", {}))
     stage_status["6"] = "complete" if status == "PASS" else "failed"
+    stage_status["6_reentry_01"] = "complete" if status == "PASS" else "failed"
     pass2.update({
         "current_stage": 6,
         "last_completed_stage": 6 if status == "PASS" else 5,
@@ -329,6 +333,8 @@ def main() -> int:
         "stage_06_portfolio_decision": portfolio["decision"],
         "stage_06_core_count": counts["core"],
         "stage_06_monitor_count": counts["monitor"],
+        "stage_06_reentry_completed": 1 if status == "PASS" else 0,
+        "stage_06_reentry_scored_programs": counts["scored_programs"],
     })
     update_progress(
         progress_path,
@@ -348,21 +354,23 @@ def main() -> int:
     ]
     unresolved = [
         "No program has evidence adequate for a strategic Competitive, Plausible, Reach, or Lottery calibration; the core remains empty and candidate discovery must resume.",
-        "All 7 monitor programs are single-professor dependencies.",
-        "38 programs fail one or more hard gates.",
-        "Applicant preference among monitor opportunities is not directly verified.",
+        f"All {counts['monitor']} monitor programs are single-professor dependencies.",
+        f"{counts['do_not_apply']} programs fail one or more hard gates.",
+        f"Applicant preference among the {counts['monitor']} monitor opportunities is not directly verified.",
         "Offer-specific net funding and application-cost details remain incomplete where recorded.",
     ]
     manifest = {
         "manifest_version": "1.0",
         "schema_version": "2.0",
         "stage": 6,
+        "run_type": "portfolio_reentry_01",
         "name": "Construct and pressure-test the application portfolio",
         "status": "complete" if status == "PASS" else "failed",
         "decision": status,
         "portfolio_decision": portfolio["decision"],
         "next_action": "RETURN_TO_STAGE_2_CANDIDATE_DISCOVERY" if portfolio["discovery_return"]["return_to_candidate_discovery"] else "CONTINUE_TO_STAGE_7",
         "source_commit_before_stage": source_commit,
+        "triggered_by_stage": 5,
         "started_at": started_at,
         "completed_at": now(),
         "inputs": [file_record(path) for path in input_paths()],

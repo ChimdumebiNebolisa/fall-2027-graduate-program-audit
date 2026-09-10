@@ -1,6 +1,6 @@
 {
   "project": "fall-2027-graduate-program-audit",
-  "current_phase": "pass2_stage_05_complete",
+  "current_phase": "pass2_stage_06_complete",
   "phases": {
     "foundation": "complete",
     "universe": "complete",
@@ -32,7 +32,7 @@
     "Canada retains 50 explicitly unresolved indexed institutions and 9 blocked/insufficient program pages."
   ],
   "pass2": {
-    "current_stage": 5,
+    "current_stage": 6,
     "last_completed_stage": 6,
     "stage_status": {
       "0": "complete",
@@ -45,12 +45,13 @@
       "2_reentry_01": "complete",
       "3_reentry_01": "complete",
       "4_reentry_01": "complete",
-      "5_reentry_01": "complete"
+      "5_reentry_01": "complete",
+      "6_reentry_01": "complete"
     },
-    "next_stage": 6,
+    "next_stage": 2,
     "next_stage_authorized": true,
     "baseline_commit": "d2e770b2d5dafe25537481f7b83663471e7060fc",
-    "stage_manifest": "data/manifests/pass2/stage_05.json",
+    "stage_manifest": "data/manifests/pass2/stage_06.json",
     "open_issue_count": 17,
     "critical_issue_count": 6,
     "high_issue_count": 9,
@@ -67,9 +68,9 @@
     "stage_06_acceptance": "PASS",
     "stage_06_portfolio_decision": "RETURN_TO_CANDIDATE_DISCOVERY",
     "stage_06_core_count": 0,
-    "stage_06_monitor_count": 7,
-    "stage_02_reentry_required": false,
-    "stage_02_reentry_reason": "Stage 6 returned to candidate discovery because no hard-gate survivor had a strategically usable plausibility calibration.",
+    "stage_06_monitor_count": 13,
+    "stage_02_reentry_required": true,
+    "stage_02_reentry_reason": "Only 0 hard-gate-clearing programs have an evidence-supported Competitive, Plausible, Reach, or Lottery calibration; fewer than 12 core applications are justified.",
     "forward_stage_after_discovery_reentry": 7,
     "stage_02_reentry_completed": 1,
     "stage_02_reentry_new_exact_candidates": 12,
@@ -78,7 +79,9 @@
     "stage_04_reentry_completed": 1,
     "stage_04_reentry_programs": 10,
     "stage_05_reentry_completed": 1,
-    "stage_05_reentry_serious_programs": 55
+    "stage_05_reentry_serious_programs": 55,
+    "stage_06_reentry_completed": 1,
+    "stage_06_reentry_scored_programs": 55
   },
-  "updated_at": "2026-09-10T21:35:38.289483+00:00"
+  "updated_at": "2026-09-10T21:41:53.743549+00:00"
 }
