@@ -17,17 +17,33 @@ def test_controlled_reentry_status_uses_only_route_gates():
     assert _controlled_status("pass", "unverified") == "monitor"
 
 
-def test_stage3_reentry_artifacts_pass_incremental_gate():
+def _validate_round(round_number: int):
     definitions = json.loads(
-        (REPO_ROOT / "data/raw/pass2/stage_03_reentry_01.json").read_text(encoding="utf-8")
+        (REPO_ROOT / f"data/raw/pass2/stage_03_reentry_{round_number:02d}.json").read_text(
+            encoding="utf-8"
+        )
     )["programs"]
     verification = read_csv(OUTPUT_DIR / "program_verification.csv")
     sources = read_csv(OUTPUT_DIR / "program_sources.csv")
     exclusions = read_csv(OUTPUT_DIR / "program_exclusions.csv")
-    result = validate_program_reentry(definitions, verification, sources, exclusions)
+    return validate_program_reentry(definitions, verification, sources, exclusions)
+
+
+def test_stage3_reentry_01_artifacts_survive_cumulative_rebuild():
+    result = _validate_round(1)
 
     assert result["validation_status"] == "PASS"
     assert all(result["assertions"].values())
     assert result["counts"]["reentry_retained"] == 8
     assert result["counts"]["reentry_conditional"] == 2
     assert result["counts"]["reentry_monitor"] == 2
+
+
+def test_stage3_reentry_02_artifacts_pass_incremental_gate():
+    result = _validate_round(2)
+
+    assert result["validation_status"] == "PASS"
+    assert all(result["assertions"].values())
+    assert result["counts"]["reentry_retained"] == 3
+    assert result["counts"]["reentry_conditional"] == 5
+    assert result["counts"]["reentry_monitor"] == 4

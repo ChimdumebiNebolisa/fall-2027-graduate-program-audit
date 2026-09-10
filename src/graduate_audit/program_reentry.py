@@ -301,15 +301,16 @@ def write_reentry_subsets(
     definitions: list[dict[str, object]],
     verification_rows: list[dict[str, str]],
     source_rows: list[dict[str, str]],
+    suffix: str = "",
 ) -> None:
     program_ids = {str(item["candidate_program_id"]) for item in definitions}
     write_csv(
-        output_dir / "stage_03_reentry_verification.csv",
+        output_dir / f"stage_03_reentry{suffix}_verification.csv",
         (row for row in verification_rows if row["candidate_program_id"] in program_ids),
         PROGRAM_VERIFICATION_COLUMNS_V2,
     )
     write_csv(
-        output_dir / "stage_03_reentry_sources.csv",
+        output_dir / f"stage_03_reentry{suffix}_sources.csv",
         (row for row in source_rows if row["candidate_program_id"] in program_ids),
         PROGRAM_SOURCE_COLUMNS_V2,
     )

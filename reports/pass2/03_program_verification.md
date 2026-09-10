@@ -1,41 +1,41 @@
 # Pass 2 Stage 3 — Program structure, eligibility, and funding verification
 
-Generated: 2026-09-10T21:05:18.303739+00:00
+Generated: 2026-09-10T22:25:51.519734+00:00
 
-Decision: **PASS — verification re-entry 01 complete**
+Decision: **PASS — verification re-entry 02 complete**
 
 ## Outcome
 
-All 1,977 Stage 2 candidates now have exactly one controlled retained, conditional, monitor, or excluded status with an evidence-backed reason. The 12 Stage 2 re-entry routes were re-verified from official program, admissions, funding, fee, and deadline sources. No score or admission recommendation was created.
+All 1,989 Stage 2 candidates now have exactly one controlled retained, conditional, monitor, or excluded status with an evidence-backed reason. The 12 latest Stage 2 re-entry routes were re-verified from official program, admissions, funding, fee, and deadline sources. No score or admission recommendation was created.
 
 | Status | All candidates | New routes |
 | --- | --- | --- |
-| Retained | 26 | 8 |
-| Conditional | 29 | 2 |
-| Monitor | 295 | 2 |
+| Retained | 29 | 3 |
+| Conditional | 34 | 5 |
+| Monitor | 299 | 4 |
 | Excluded | 1627 | 0 |
-| Faculty-review ready | 55 | 10 |
+| Faculty-review ready | 63 | 8 |
 
 ## Stage 2 re-entry routes
 
 | Institution | Program | Status | Eligibility gate | Funding gate | Largest unresolved question |
 | --- | --- | --- | --- | --- | --- |
-| University of Wisconsin-Madison | [Computer Sciences, PhD](https://guide.wisc.edu/graduate/computer-sciences/computer-sciences-phd/) | conditional | pass | resolvable_inquiry | Will an admission offer include the published four-year funding guarantee for this applicant? |
-| University of Minnesota-Twin Cities | [PhD in Computer Science](https://cse.umn.edu/cs/phd-admissions) | retained | pass | pass | What are the offer-specific stipend, summer, remaining health-insurance, and mandatory-fee amounts? |
-| University of Colorado Boulder | [Doctor of Philosophy in Computer Science](https://www.colorado.edu/cs/academics/graduate-programs/doctor-philosophy) | retained | pass | pass | What summer support and current 2027-2028 stipend will the individual offer provide? |
-| University of Arizona | [Computer Science PhD](https://cs.arizona.edu/graduate/prospective-students) | retained | pass | pass | What duration, stipend, mandatory-fee, and summer terms will the admission offer specify? |
-| University at Buffalo | [PhD in Computer Science and Engineering](https://engineering.buffalo.edu/computer-science-engineering/graduate/degrees-and-programs/phd-in-computer-science-and-engineering.html) | monitor | resolvable_question | resolvable_inquiry | Will the committee admit this bachelor's applicant directly and issue a fully funded multi-year offer? |
-| University of Utah | [Computing PhD](https://www.cs.utah.edu/graduate/academic-programs/ms-and-phd-programs/) | retained | pass | pass | What is the correct Fall 2027 deadline, and will the offer specify full first-year appointment and differential-fee coverage? |
-| University of California-San Diego | [Computer Science and Engineering PhD](https://cse.ucsd.edu/graduate/doctoral-programs-computer-science-and-engineering) | retained | pass | pass | What multi-year and summer support will the offer and prospective advisor commit beyond year one? |
-| Duke University | [Computer Science PhD](https://cs.duke.edu/graduate/phd) | retained | pass | pass | What are the 2027-2028 stipend, summer-support, and offer-specific conditions? |
-| Brown University | [Computer Science PhD](https://cs.brown.edu/degrees/doctoral/) | retained | pass | pass | What are the exact guaranteed duration, 2027-2028 stipend, summer, and mandatory-fee terms? |
-| University of Virginia-Main Campus | [Ph.D. in Computer Science](https://engineering.virginia.edu/department/computer-science/academics/graduate-programs/phd-computer-science) | retained | pass | pass | Will the individual offer guarantee support beyond the first year and specify summer coverage? |
-| Simon Fraser University | [Master of Science in Computing Science — Thesis Option](https://www.sfu.ca/fas/study/future-graduates/programs/master-science-thesis.html) | conditional | resolvable_question | pass | Will SFU deem the applicant's 3.35/4.0 GPA equivalent to its 3.00/4.33 threshold, and what is net support after tuition and fees? |
-| Chalmers University of Technology | [Computer Science, MSc](https://www.chalmers.se/en/education/find-masters-programme/computer-science-msc/) | monitor | resolvable_question | unverified | Does the transcript satisfy every credit prerequisite, and is there a scholarship covering tuition plus adequate living costs? |
+| Rutgers University-New Brunswick | [Computer Science (Ph.D.), New Brunswick](https://www.cs.rutgers.edu/academics/graduate/ph-d-program/computer-science-program) | conditional | pass | resolvable_inquiry | Will the admission offer guarantee adequate stipend, tuition, insurance, fees, and summer support for all five years? |
+| Ohio State University-Main Campus | [Doctor of Philosophy in Computer Science and Engineering](https://cse.osu.edu/graduate/graduate/doctor-philosophy-program) | conditional | pass | resolvable_inquiry | Will the individual offer include a renewable associateship or fellowship, and which fees and summer living costs remain? |
+| Stony Brook University | [PhD in Computer Science](https://www.cs.stonybrook.edu/students/Graduate-Studies) | conditional | pass | resolvable_inquiry | Does every Fall 2027 PhD admit receive first-year support, and what advisor-backed summer and later-year support is guaranteed? |
+| University of California-Santa Barbara | [Doctor of Philosophy in Computer Science](https://cs.ucsb.edu/index.php/education/graduate/phd-degree) | conditional | pass | resolvable_inquiry | Will the offer guarantee year-round stipend, full tuition/NRST, mandatory fees, and health insurance for the expected duration? |
+| University of Delaware | [Ph.D. in Computer Science](https://www.udel.edu/academics/colleges/grad/prospective-students/programs/computer-science/) | retained | pass | pass | What exact stipend, mandatory-fee, insurance, and summer terms will the individual funded offer contain? |
+| Boston University | [PhD in Computer Science](https://www.bu.edu/cs/phd-program/) | retained | pass | pass | Does the Computer Science offer fund 12 months each year, and what net amount remains after housing and any insurance balance? |
+| University of North Carolina at Charlotte | [Ph.D. in Computing and Information Systems — Software and Information Systems Track](https://cci.charlotte.edu/academics/software-and-information-systems/phd-sis-track) | conditional | pass | resolvable_inquiry | Will the SIS track offer an eligible assistantship with sufficient stipend and GASP coverage for the full expected duration? |
+| Indiana University-Bloomington | [Ph.D. in Computer Science](https://luddy.iu.edu/academics/doctoral/computer-science.html) | monitor | not_met | unverified | Would Luddy formally consider a 3.35 cumulative applicant despite its published 3.5 eligibility rule, and would any exception include full support? |
+| York University | [Master of Science in Computer Science — Thesis Option](https://lassonde.yorku.ca/academics/graduate-program-in-computer-science) | retained | pass | pass | What will the Fall 2027 offer's net amount be after international tuition, ancillary fees, taxes, and health costs? |
+| University of Regina | [M.Sc. in Computer Science — Thesis Route](https://www.uregina.ca/science/computer-science/graduate-programs/msc-cs-thesis.html) | monitor | resolvable_question | resolvable_inquiry | Which accepting supervisor can commit to this applicant, and what continuous net funding will that supervisor or the department provide? |
+| University of Twente | [Master of Science in Computer Science — Software Technology specialisation](https://www.utwente.nl/en/education/master/programmes/computer-science/specialisation/software-technology/) | monitor | resolvable_question | unverified | Can the applicant prove the 15 ECTS research-methods gate and secure full remaining tuition plus living costs beyond any competitive UTS award? |
+| Radboud University Nijmegen | [Master's in Computing Science — Software Science specialisation](https://www.ru.nl/en/education/masters/software-science) | monitor | resolvable_question | unverified | Can the transcript satisfy the theory and ten-EC thesis gates, and can the applicant fund all living costs plus remaining tuition if no Radboud Scholarship is awarded? |
 
 Retained means an exact research route, formal applicant eligibility, and a credible officially sourced funding route are present. It does not mean admission is likely or that an eventual offer will contain adequate net funding.
 
-Conditional rows are positioned only as `Outreach Before Decision`. Wisconsin needs a funding-incidence answer because its four-year guarantee applies to many, not all, admits. SFU needs an official interpretation of the applicant's 4.0-scale GPA against its 4.33-scale minimum. Buffalo and Chalmers remain monitors because each has more than one material gate unresolved.
+Conditional rows are positioned only as `Outreach Before Decision`. Rutgers, Ohio State, Stony Brook, UC Santa Barbara, and UNC Charlotte each need an offer- or department-specific funding-incidence answer. Indiana, Regina, Twente, and Radboud remain monitors because each has more than one material eligibility or funding gate unresolved.
 
 ## Acceptance checks
 
@@ -62,11 +62,11 @@ None prevented Stage 3 completion.
 
 ## Unresolved coverage
 
-- Fall 2027 is explicitly published for Colorado, UC San Diego, Duke, UVA, SFU (deadline TBD), and Chalmers; other rows use the latest current deadline page with the cycle limitation labeled.
-- University of Virginia's official pages remained blocked to automated HTTP retrieval, although their current indexed official-page content was available; Stage 4 should browser-check them again before using the row.
-- Application-fee amounts remain unverified for Wisconsin and Brown; simultaneous-application rules remain unknown for most routes.
+- Fall 2027 is explicitly published for Rutgers, Ohio State, Boston University, Indiana, Twente, and Radboud; other rows use the latest current deadline page with the cycle limitation labeled.
+- Stony Brook's current handbook URL returned HTTP 404 to direct retrieval even though current official indexed content was available; Stage 4 should browser-check it again before using the row.
+- Simultaneous-application rules remain unknown for Stony Brook and York; UC Santa Barbara permits only one application per cycle.
 - Offer-specific stipend, mandatory-fee, health-insurance, and summer coverage remain explicit unknowns wherever the official page did not publish them.
-- Chalmers has no verified adequate funding route for this fee-paying Nigerian applicant; Buffalo has both direct-entry and funding-incidence uncertainty.
-- 4 new routes remain conditional or monitor and must not be treated as funded recommendations.
-- Stage 4 may evaluate current faculty only for the 10 new retained/conditional routes; the two monitor routes do not pass the faculty-review gate.
-- The full test suite therefore has two expected Stage 4 coverage failures: roster configuration and five-professor evaluation coverage for the 10 new faculty-review-ready routes. Stage 3-specific tests pass.
+- Twente and Radboud have no verified adequate full-cost funding route for this fee-paying Nigerian applicant; Regina requires both a willing supervisor and a separate funding answer; Indiana's published 3.5 PhD GPA gate exceeds the applicant's 3.35 cumulative GPA.
+- 9 new routes remain conditional or monitor and must not be treated as funded recommendations.
+- Stage 4 may evaluate current faculty only for the eight new retained/conditional routes; the four monitor routes do not pass the faculty-review gate.
+- The full suite has three expected downstream coverage failures until Stage 4 regenerates rosters and five-professor evaluations and Stage 5 regenerates scores for the eight new faculty-review-ready routes; Stage 3-specific tests pass.
