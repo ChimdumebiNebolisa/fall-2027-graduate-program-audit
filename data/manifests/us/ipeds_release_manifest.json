@@ -1,0 +1,71 @@
+{
+  "datasets": [
+    {
+      "dataset": "HD2024",
+      "url": "https://nces.ed.gov/ipeds/datacenter/data/HD2024.zip",
+      "selected_member": "HD2024.csv",
+      "sha256": "d98425c123d7c0e872aec6e83960dfb501884818bf17385c340790f3d1f28345",
+      "last_modified": "2025-09-21T20:40:58Z",
+      "bytes": 1088372,
+      "release": "2024-25 provisional",
+      "description": "IPEDS 2024 directory information",
+      "zip_members": {
+        "HD2024.csv": 4470409
+      }
+    },
+    {
+      "dataset": "IC2024",
+      "url": "https://nces.ed.gov/ipeds/datacenter/data/IC2024.zip",
+      "selected_member": "IC2024.csv",
+      "sha256": "924f04f0afd953633a34bbc2ad1beaa65fdbf2a7ba25ebe364bac7469a976288",
+      "last_modified": "2025-09-21T20:41:04Z",
+      "bytes": 135305,
+      "release": "2024-25 provisional",
+      "description": "IPEDS institutional educational offerings",
+      "zip_members": {
+        "IC2024.csv": 1513979
+      }
+    },
+    {
+      "dataset": "C2024_A",
+      "url": "https://nces.ed.gov/ipeds/datacenter/data/C2024_A.zip",
+      "selected_member": "C2024_a.csv",
+      "sha256": "03234cc27fe4e7eb835a66d4f37aaec11bdac8dfa278f971584e1b20d03e1159",
+      "last_modified": "2025-09-21T20:40:37Z",
+      "bytes": 4680679,
+      "release": "2023-24 provisional",
+      "description": "IPEDS completions by 6-digit CIP and award level",
+      "zip_members": {
+        "C2024_a.csv": 62757116
+      }
+    },
+    {
+      "dataset": "C2023_A",
+      "url": "https://nces.ed.gov/ipeds/datacenter/data/C2023_A.zip",
+      "selected_member": "C2023_a_RV.csv",
+      "sha256": "651d95b6405bb86c6c14884ed54225a27492199d21d8acd63cda2581aa60838a",
+      "last_modified": "2025-09-21T20:41:09Z",
+      "bytes": 9294160,
+      "release": "2022-23 final/revised member",
+      "description": "IPEDS completions by 6-digit CIP and award level",
+      "zip_members": {
+        "C2023_a.csv": 61854597,
+        "C2023_a_RV.csv": 61888672
+      }
+    },
+    {
+      "dataset": "C2022_A",
+      "url": "https://nces.ed.gov/ipeds/datacenter/data/C2022_A.zip",
+      "selected_member": "c2022_a_rv.csv",
+      "sha256": "f81b8390d1758ac710b85a1d5a7af51372770335a02c0d06802a46d3a068126c",
+      "last_modified": "2024-06-05T13:45:15Z",
+      "bytes": 8288979,
+      "release": "2021-22 final/revised member",
+      "description": "IPEDS completions by 6-digit CIP and award level",
+      "zip_members": {
+        "c2022_a.csv": 61615966,
+        "c2022_a_rv.csv": 61652091
+      }
+    }
+  ]
+}

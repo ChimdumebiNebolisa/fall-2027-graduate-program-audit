@@ -1,0 +1,194 @@
+{
+  "generated_at": "2026-09-10T03:27:44.154825+00:00",
+  "access_date": "2026-09-09",
+  "method": {
+    "universe_filter": "HD2024 CYACTIVE=1 AND DEGGRANT=1, with HLOFFER 7/9 or HLOFFER=8 plus a positive IC2024 master's/doctoral level indicator",
+    "program_signal_filter": "C2022_A/C2023_A/C2024_A revised member where MAJORNUM=1, AWLEVEL in (7,17,18,19), configured CIP, and CTOTALT>0",
+    "important_limitations": [
+      "IPEDS completions lag current catalogs and omit new or not-yet-completing programs.",
+      "CIP assignment does not prove research fit, current program operation, direct entry, funding, or faculty availability.",
+      "IPEDS inclusion is not a substitute for institution-level accreditation verification.",
+      "Only a small official-page spot check was completed; remaining candidates require deep review."
+    ]
+  },
+  "datasets": [
+    {
+      "dataset": "HD2024",
+      "url": "https://nces.ed.gov/ipeds/datacenter/data/HD2024.zip",
+      "selected_member": "HD2024.csv",
+      "sha256": "d98425c123d7c0e872aec6e83960dfb501884818bf17385c340790f3d1f28345",
+      "last_modified": "2025-09-21T20:40:58Z",
+      "bytes": 1088372,
+      "release": "2024-25 provisional",
+      "description": "IPEDS 2024 directory information",
+      "zip_members": {
+        "HD2024.csv": 4470409
+      }
+    },
+    {
+      "dataset": "IC2024",
+      "url": "https://nces.ed.gov/ipeds/datacenter/data/IC2024.zip",
+      "selected_member": "IC2024.csv",
+      "sha256": "924f04f0afd953633a34bbc2ad1beaa65fdbf2a7ba25ebe364bac7469a976288",
+      "last_modified": "2025-09-21T20:41:04Z",
+      "bytes": 135305,
+      "release": "2024-25 provisional",
+      "description": "IPEDS institutional educational offerings",
+      "zip_members": {
+        "IC2024.csv": 1513979
+      }
+    },
+    {
+      "dataset": "C2024_A",
+      "url": "https://nces.ed.gov/ipeds/datacenter/data/C2024_A.zip",
+      "selected_member": "C2024_a.csv",
+      "sha256": "03234cc27fe4e7eb835a66d4f37aaec11bdac8dfa278f971584e1b20d03e1159",
+      "last_modified": "2025-09-21T20:40:37Z",
+      "bytes": 4680679,
+      "release": "2023-24 provisional",
+      "description": "IPEDS completions by 6-digit CIP and award level",
+      "zip_members": {
+        "C2024_a.csv": 62757116
+      }
+    },
+    {
+      "dataset": "C2023_A",
+      "url": "https://nces.ed.gov/ipeds/datacenter/data/C2023_A.zip",
+      "selected_member": "C2023_a_RV.csv",
+      "sha256": "651d95b6405bb86c6c14884ed54225a27492199d21d8acd63cda2581aa60838a",
+      "last_modified": "2025-09-21T20:41:09Z",
+      "bytes": 9294160,
+      "release": "2022-23 final/revised member",
+      "description": "IPEDS completions by 6-digit CIP and award level",
+      "zip_members": {
+        "C2023_a.csv": 61854597,
+        "C2023_a_RV.csv": 61888672
+      }
+    },
+    {
+      "dataset": "C2022_A",
+      "url": "https://nces.ed.gov/ipeds/datacenter/data/C2022_A.zip",
+      "selected_member": "c2022_a_rv.csv",
+      "sha256": "f81b8390d1758ac710b85a1d5a7af51372770335a02c0d06802a46d3a068126c",
+      "last_modified": "2024-06-05T13:45:15Z",
+      "bytes": 8288979,
+      "release": "2021-22 final/revised member",
+      "description": "IPEDS completions by 6-digit CIP and award level",
+      "zip_members": {
+        "c2022_a.csv": 61615966,
+        "c2022_a_rv.csv": 61652091
+      }
+    }
+  ],
+  "counts": {
+    "hd_rows_total": 6072,
+    "ic_rows_total": 5963,
+    "active_graduate_degree_granting_institutions": 2107,
+    "institutions_with_any_configured_signal": 679,
+    "institutions_with_primary_signal": 598,
+    "institutions_with_secondary_only_signal": 81,
+    "institutions_without_configured_signal": 1428,
+    "mechanical_program_signal_rows": 1786,
+    "official_program_spot_checks": 9,
+    "program_rows_total": 1795,
+    "source_claim_rows": 8997,
+    "completion_rows_scanned": {
+      "C2022_A": 301055,
+      "C2023_A": 303460,
+      "C2024_A": 307707
+    },
+    "qualifying_completion_rows_before_current_universe_join": {
+      "C2022_A": 1936,
+      "C2023_A": 2025,
+      "C2024_A": 2119
+    },
+    "signal_unitids_outside_current_universe": 4
+  },
+  "institution_status_counts": {
+    "no_relevant_graduate_field": 1428,
+    "preliminary_fit": 679
+  },
+  "jurisdiction_group_counts": {
+    "District of Columbia": 17,
+    "IPEDS other jurisdiction": 53,
+    "US state": 2037
+  },
+  "state_or_jurisdiction_counts": {
+    "AK": 5,
+    "AL": 33,
+    "AR": 25,
+    "AZ": 27,
+    "CA": 212,
+    "CO": 30,
+    "CT": 22,
+    "DC": 17,
+    "DE": 5,
+    "FL": 79,
+    "GA": 54,
+    "GU": 1,
+    "HI": 8,
+    "IA": 29,
+    "ID": 10,
+    "IL": 84,
+    "IN": 51,
+    "KS": 28,
+    "KY": 32,
+    "LA": 30,
+    "MA": 74,
+    "MD": 31,
+    "ME": 18,
+    "MI": 47,
+    "MN": 42,
+    "MO": 57,
+    "MS": 17,
+    "MT": 9,
+    "NC": 61,
+    "ND": 11,
+    "NE": 22,
+    "NH": 15,
+    "NJ": 38,
+    "NM": 13,
+    "NV": 8,
+    "NY": 159,
+    "OH": 74,
+    "OK": 25,
+    "OR": 26,
+    "PA": 126,
+    "PR": 51,
+    "RI": 12,
+    "SC": 35,
+    "SD": 16,
+    "TN": 50,
+    "TX": 115,
+    "UT": 15,
+    "VA": 57,
+    "VI": 1,
+    "VT": 11,
+    "WA": 28,
+    "WI": 40,
+    "WV": 20,
+    "WY": 1
+  },
+  "signal_tier_counts_by_institution_cip": {
+    "primary": 1141,
+    "secondary_review_only": 645
+  },
+  "signal_unitids_outside_current_universe": [
+    "105367",
+    "211352",
+    "460376",
+    "490063"
+  ],
+  "blocked_sources": [],
+  "validation": {
+    "status": "PASS",
+    "errors": [],
+    "warnings": [],
+    "counts": {
+      "institutions": 2107,
+      "programs": 1795,
+      "exclusions": 1428,
+      "professors": 0
+    }
+  }
+}
