@@ -1,0 +1,60 @@
+primary_topics:
+  - AI for software engineering
+  - LLM-assisted software development
+  - automated program repair
+  - configuration repair
+  - infrastructure as code analysis
+  - Terraform and cloud configuration security
+  - software testing and evaluation
+  - program analysis
+  - empirical software engineering
+  - software reliability
+  - trustworthy and reliable AI
+  - LLM and coding-agent evaluation
+  - agent security
+  - software and systems security
+  - evidence-grounded claim verification
+  - factuality and grounding evaluation
+discovery_query_clusters:
+  ai_for_se:
+    - large language models software engineering
+    - LLM code repair testing debugging maintenance
+    - coding agent evaluation reliability security
+  repair_analysis:
+    - automated program repair program analysis
+    - configuration repair infrastructure as code Terraform
+    - static dynamic analysis software reliability
+  trustworthy_ai:
+    - trustworthy AI evaluation assurance auditing
+    - LLM factuality grounding claim verification
+    - agent security AI-generated code security
+  systems_security:
+    - secure dependable software systems
+    - cloud configuration security DevOps security
+    - security policy verification
+us_cip_2020:
+  primary:
+    - "11.0101"
+    - "11.0102"
+    - "11.0104"
+    - "11.0401"
+    - "11.0701"
+    - "11.0902"
+    - "11.1003"
+    - "14.0901"
+    - "14.0903"
+  secondary_review_only:
+    - "11.0103"
+    - "11.0105"
+    - "11.0199"
+    - "11.0901"
+    - "11.0999"
+    - "14.0902"
+    - "14.0999"
+    - "14.1001"
+    - "14.4201"
+    - "30.7001"
+    - "30.7101"
+    - "43.0403"
+cip_rule: A CIP code is only a discovery signal; official program and research evidence control retention.
+

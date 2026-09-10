@@ -1,0 +1,45 @@
+snapshot_policy: freeze_latest_official_release_at_run_start
+target_entry_window:
+  start: 2027-08-01
+  end: 2027-12-31
+united_states:
+  include_50_states: true
+  include_district_of_columbia: true
+  include_ipeds_other_jurisdictions: true
+canada:
+  provinces_and_territories: all
+europe:
+  countries:
+    - Austria
+    - Belgium
+    - Bulgaria
+    - Croatia
+    - Cyprus
+    - Czechia
+    - Denmark
+    - Estonia
+    - Finland
+    - France
+    - Germany
+    - Greece
+    - Hungary
+    - Ireland
+    - Italy
+    - Latvia
+    - Lithuania
+    - Luxembourg
+    - Malta
+    - Netherlands
+    - Poland
+    - Portugal
+    - Romania
+    - Slovakia
+    - Slovenia
+    - Spain
+    - Sweden
+    - United Kingdom
+    - Norway
+    - Switzerland
+    - Iceland
+language_rule: Require explicit official evidence that the program or graduate research can be completed in English outside primarily English-speaking jurisdictions.
+

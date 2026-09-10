@@ -1,0 +1,16 @@
+name: Chimdumebi Mitchell Nebolisa
+nationality: Nigerian
+current_institution: East Texas A&M University
+degree: B.S. in Computer Science
+expected_graduation: 2027-05
+cumulative_gpa: 3.35
+recent_two_year_gpa: ">3.5"
+verified_background:
+  - TerraProbe: LLM-based Terraform repair; accepted as a full paper at ICTAI 2026
+  - Evidex: evidence-based claim verification and evaluation research
+  - Software engineering internship experience
+  - Undergraduate research and technical-project experience
+rules:
+  - Do not infer project contributions beyond the verified statements above.
+  - Do not convert GPA scales without an official institutional conversion policy.
+

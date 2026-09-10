@@ -1,0 +1,43 @@
+weights:
+  professor_alignment: 30
+  department_program_depth: 15
+  funding_net_viability: 25
+  eligibility_credential_plausibility: 15
+  degree_admissions_alignment: 10
+  application_economics: 5
+hard_gates:
+  - recognized_active_institution
+  - relevant_research_program
+  - international_student_eligible
+  - bachelor_entry_or_research_masters_route
+  - verified_professor_match
+  - credible_funding_or_full_scholarship
+  - compatible_degree_structure
+recommendations:
+  strong_apply:
+    minimum_score: 85
+    requires_verified_funding: true
+    material_blockers_allowed: 0
+  likely_apply:
+    minimum_score: 75
+    requires_credible_funding: true
+    material_blockers_allowed: 0
+  deprioritize:
+    minimum_score: 65
+portfolio:
+  core_target_min: 18
+  core_target_max: 20
+  reserve_target_min: 6
+  reserve_target_max: 10
+  maximum_reach_assessments_in_core: 5
+  normally_one_program_per_university: true
+  never_pad_to_quota: true
+outreach_weights:
+  information_value: 25
+  research_match: 20
+  admission_supervisor_impact: 15
+  funding_supervisor_impact: 15
+  resolvable_uncertainty: 10
+  contact_appropriateness: 10
+  timing: 5
+

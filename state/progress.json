@@ -1,0 +1,15 @@
+{
+  "project": "fall-2027-graduate-program-audit",
+  "current_phase": "universe",
+  "phases": {
+    "foundation": "complete",
+    "universe": "in_progress"
+  },
+  "regions": {
+    "us": "pending",
+    "canada": "pending",
+    "europe": "pending"
+  },
+  "counts": {},
+  "known_failures": []
+}

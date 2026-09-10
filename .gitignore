@@ -1,0 +1,49 @@
+# Credentials and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*credentials*.json
+*secrets*.json
+
+# Private connected-source material
+data/private/**
+!data/private/README.md
+data/raw/**
+!data/raw/README.md
+*.mbox
+*takeout*
+*gmail-export*
+*calendar-export*
+
+# Browser and temporary files
+.browser-data/
+browser-data/
+playwright-report/
+test-results/
+*.tmp
+*.temp
+
+# Python / Node caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+node_modules/
+
+# Local databases and bulk downloads
+*.sqlite
+*.sqlite3
+*.duckdb
+*.db
+*.zip
+*.gz
+*.parquet
+
+# Office lock files
+~$*.xlsx
+
