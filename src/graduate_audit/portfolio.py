@@ -20,7 +20,16 @@ COMPATIBLE_DEGREES = {
 
 
 def _yes(value: object) -> bool:
-    return str(value or "").strip().lower() in YES
+    normalized = str(value or "").strip().lower()
+    return normalized in YES or normalized.startswith(("yes;", "yes —", "yes -", "verified;"))
+
+
+def _credible_funding(value: object) -> bool:
+    normalized = str(value or "").strip().lower()
+    return normalized in CREDIBLE_FUNDING or any(
+        token in normalized
+        for token in ("normally funded", "guaranteed", "full tuition and stipend", "position salary")
+    )
 
 
 def _number(value: object) -> int:
@@ -30,6 +39,17 @@ def _number(value: object) -> int:
         return 0
 
 
+def _recognized_active(institution: dict[str, str]) -> bool:
+    recognition = institution.get("recognition_status", "").lower()
+    source_database = institution.get("source_database", "").lower()
+    active = institution.get("active_status", "").lower()
+    registry_evidence = any(
+        token in recognition or token in source_database
+        for token in ("recognized", "accredited", "official", "ipeds", "cicic", "ircc")
+    )
+    return registry_evidence and any(token in active for token in ("active", "current", "yes"))
+
+
 def score_programs(program_path: Path, institution_path: Path, professor_path: Path) -> list[dict[str, str]]:
     programs = read_csv(program_path)
     institutions = {row["institution_id"]: row for row in read_csv(institution_path)}
@@ -37,7 +57,11 @@ def score_programs(program_path: Path, institution_path: Path, professor_path: P
     supervisor_programs = {
         row.get("program_id", "")
         for row in professors
-        if _yes(row.get("can_supervise_program")) and row.get("verification_status", "").lower() in {"verified", "complete", "official"}
+        if _yes(row.get("can_supervise_program"))
+        and any(
+            token in row.get("verification_status", "").lower()
+            for token in ("verified", "complete", "official")
+        )
     }
 
     for row in programs:
@@ -48,14 +72,11 @@ def score_programs(program_path: Path, institution_path: Path, professor_path: P
         screening = row.get("screening_decision", "").strip().lower()
         evidence = {
             **row,
-            "recognized_active_institution": (
-                institution.get("recognition_status", "").lower() in {"recognized", "accredited", "official"}
-                and institution.get("active_status", "").lower() in {"active", "current", "yes"}
-            ),
+            "recognized_active_institution": _recognized_active(institution),
             "relevant_research_program": _number(row.get("research_fit_score")) > 0 and screening not in {"excluded", "screened_out"},
             "bachelor_entry_or_research_masters_route": _yes(row.get("direct_from_bachelors_eligible")),
             "verified_professor_match": row.get("program_id", "") in supervisor_programs,
-            "credible_funding_or_full_scholarship": funding in CREDIBLE_FUNDING,
+            "credible_funding_or_full_scholarship": _credible_funding(funding),
             "compatible_degree_structure": degree in COMPATIBLE_DEGREES,
             "position_monitor_only": row.get("recommendation") == "Monitor for 2027 Position",
             "material_unresolved_gate": row.get("recommendation") == "Outreach Before Decision",
@@ -145,6 +166,4 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-
-
 
