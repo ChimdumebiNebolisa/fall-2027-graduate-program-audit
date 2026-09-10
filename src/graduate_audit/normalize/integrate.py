@@ -17,6 +17,7 @@ from graduate_audit.schema import (
 
 ROOT = Path(__file__).resolve().parents[3]
 REGIONS = ("us", "canada", "europe")
+DEEP_REVIEW_ROOT = ROOT / "data" / "processed" / "deep_review"
 
 
 def _find_region_file(region: str, kind: str) -> Path | None:
@@ -34,6 +35,27 @@ def _merge_rows(kind: str) -> list[dict[str, str]]:
                 row.setdefault("region", region)
                 rows.append(row)
     return rows
+
+
+def _read_deep_review(filename: str) -> list[dict[str, str]]:
+    rows: list[dict[str, str]] = []
+    if not DEEP_REVIEW_ROOT.exists():
+        return rows
+    for path in sorted(DEEP_REVIEW_ROOT.glob(f"*/{filename}")):
+        rows.extend(read_csv(path))
+    return rows
+
+
+def _replace_with_deep_review(
+    base_rows: list[dict[str, str]],
+    deep_rows: list[dict[str, str]],
+    key: str,
+) -> list[dict[str, str]]:
+    """Use a verified deep-review row when it shares a stable key with a seed row."""
+    if not deep_rows:
+        return base_rows
+    deep_keys = {row.get(key, "").strip() for row in deep_rows if row.get(key, "").strip()}
+    return [row for row in base_rows if row.get(key, "").strip() not in deep_keys] + deep_rows
 
 
 def _dedupe(rows: list[dict[str, str]], key: str) -> tuple[list[dict[str, str]], list[str]]:
@@ -59,14 +81,33 @@ def integrate(output_dir: str | Path) -> dict[str, object]:
     destination.mkdir(parents=True, exist_ok=True)
 
     institutions_raw = _merge_rows("institution")
-    programs_raw = _merge_rows("program")
-    exclusions_raw = _merge_rows("exclusion")
-    sources_raw = _merge_rows("source")
-    professors_raw = _merge_rows("professor")
+    programs_raw = _replace_with_deep_review(
+        _merge_rows("program"), _read_deep_review("deep_programs.csv"), "program_id"
+    )
+    exclusions_raw = _merge_rows("exclusion") + _read_deep_review("exclusion_or_downgrade.csv")
+    sources_raw = _merge_rows("source") + _read_deep_review("sources.csv")
+    professors_raw = _merge_rows("professor") + _read_deep_review("professors.csv")
 
     institutions, duplicate_institutions = _dedupe(institutions_raw, "institution_id")
     programs, duplicate_programs = _dedupe(programs_raw, "program_id")
     professors, duplicate_professors = _dedupe(professors_raw, "professor_id")
+
+    program_decisions: dict[str, set[str]] = {}
+    for row in programs:
+        program_decisions.setdefault(row.get("institution_id", ""), set()).add(
+            row.get("screening_decision", "").strip().lower()
+        )
+    for row in institutions:
+        decisions = program_decisions.get(row.get("institution_id", ""), set())
+        if "retained" in decisions:
+            row["screening_status"] = "retained"
+            row["exclusion_reason"] = ""
+        elif decisions & {"deep_review", "advance_to_deep_review"}:
+            row["screening_status"] = "deep_review"
+        elif decisions and decisions <= {"excluded", "screened_out", "do_not_apply", "deprioritize"}:
+            row["screening_status"] = "program_screened_out"
+            if not row.get("exclusion_reason"):
+                row["exclusion_reason"] = "All identified candidate programs failed a program-level hard gate or fit screen."
 
     write_csv(destination / "institution_universe.csv", institutions, INSTITUTION_COLUMNS)
     write_csv(destination / "program_screening.csv", programs, PROGRAM_COLUMNS)
@@ -136,4 +177,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-
