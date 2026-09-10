@@ -147,6 +147,35 @@ OUTREACH_PRIORITY_COLUMNS_V2 = (
     "outreach_status", "evidence_ids",
 )
 
+CANDIDATE_FUNNEL_COLUMNS_V2 = (
+    "schema_version", "program_id", "institution_id", "institution_name",
+    "country", "region", "regional_admissions_model", "program_name",
+    "degree_type", "relevant_degree_route", "discovery_paths",
+    "research_topic_clusters", "exact_research_fit_signal",
+    "preliminary_international_eligibility", "preliminary_funding_signal",
+    "official_program_url", "official_institution_url", "evidence_confidence",
+    "affiliation_normalization_status", "seed_adjacency", "funnel_status",
+    "proposed_next_action", "exclusion_reason", "unresolved_fields",
+    "source_record_paths",
+)
+
+DISCOVERY_SOURCE_YIELD_COLUMNS_V2 = (
+    "schema_version", "discovery_path", "source_records_examined",
+    "candidate_rows_contributed", "candidate_rows_introduced",
+    "advanced_to_stage_3", "catalog_or_manual_review", "screened_out",
+    "yield_rate", "non_educational_filtered", "unmatched_affiliations",
+    "stale_affiliation_name_corrections", "notes",
+)
+
+EXCLUSION_SAMPLE_AUDIT_COLUMNS_V2 = (
+    "schema_version", "sample_id", "region", "institution_id",
+    "institution_name", "country", "exclusion_reason_category",
+    "original_exclusion_reason", "original_supporting_evidence",
+    "original_source_url", "independent_discovery_paths",
+    "independent_research_signal", "audit_result", "false_negative_risk",
+    "audit_rationale", "funnel_program_id", "sample_status", "audit_date",
+)
+
 
 def slugify(value: str) -> str:
     value = value.strip().lower()

@@ -1,10 +1,10 @@
 {
   "source": "OpenAlex Works API",
   "base_url": "https://api.openalex.org/works",
-  "retrieved_at": "2026-09-10T03:17:27.841880+00:00",
+  "retrieved_at": "2026-09-10T18:47:04.894927+00:00",
   "query_window": {
     "from": "2022-01-01",
-    "to": "2026-09-09"
+    "to": "2026-09-10"
   },
   "queries": [
     "large language models software engineering",
@@ -29,8 +29,12 @@
   "counts": {
     "query_results": 2400,
     "institutions_ranked": 1647,
-    "author_institution_pairs": 6923
+    "institutions_exported": 1647,
+    "non_educational_institutions_observed": 815,
+    "author_institution_pairs": 6923,
+    "author_institution_pairs_exported": 6923
   },
+  "selection_policy": "Export every observed target-country institution and author-institution pair; do not apply a global top-N cutoff. Downstream discovery filters non-educational organizations and reports regional/topic contribution.",
   "limitations": [
     "Search relevance is a discovery signal, not final research-fit evidence.",
     "Authorship affiliations are publication-time metadata and require current official verification."

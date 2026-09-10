@@ -40,6 +40,15 @@ def load_queries() -> list[str]:
     return [query for group in config["discovery_query_clusters"].values() for query in group]
 
 
+def load_query_clusters() -> dict[str, str]:
+    config = yaml.safe_load((ROOT / "config" / "research_topics.yaml").read_text(encoding="utf-8"))
+    return {
+        query: cluster
+        for cluster, queries in config["discovery_query_clusters"].items()
+        for query in queries
+    }
+
+
 def _get_with_backoff(session: requests.Session, params: dict[str, object]) -> requests.Response:
     for attempt in range(6):
         response = session.get(API_URL, params=params, timeout=60)
@@ -79,6 +88,7 @@ def fetch_query(session: requests.Session, query: str, per_query: int) -> tuple[
 
 def discover(per_query: int = 200) -> dict[str, object]:
     queries = load_queries()
+    query_clusters = load_query_clusters()
     raw_root = ROOT / "data" / "raw" / "openalex"
     processed_root = ROOT / "data" / "processed"
     manifest_root = ROOT / "data" / "manifests"
@@ -211,6 +221,10 @@ def discover(per_query: int = 200) -> dict[str, object]:
             "relevant_work_count": len(record["work_ids"]),
             "precision_work_count": len(record["precision_work_ids"]),
             "query_cluster_count": len(record["queries"]),
+            "research_topic_clusters": "|".join(
+                sorted({query_clusters[query] for query in record["queries"]})
+            ),
+            "queries": "|".join(sorted(record["queries"])),
             "author_count": len(record["authors"]),
             "top_works": " || ".join(f"{year}: {title} [{url}]" for _, title, year, url in top),
         })
@@ -230,15 +244,25 @@ def discover(per_query: int = 200) -> dict[str, object]:
             "relevant_work_count": len(record["work_ids"]),
             "precision_work_count": len(record["precision_work_ids"]),
             "query_cluster_count": len(record["queries"]),
+            "research_topic_clusters": "|".join(
+                sorted({query_clusters[query] for query in record["queries"]})
+            ),
+            "queries": "|".join(sorted(record["queries"])),
             "top_works": " || ".join(f"{year}: {title} [{url}]" for _, title, year, url in top),
         })
 
-    pd.DataFrame(institution_rows).sort_values(
+    institution_frame = pd.DataFrame(institution_rows).sort_values(
         ["precision_signal", "precision_work_count", "weighted_signal"], ascending=False
-    ).head(300).to_csv(processed_root / "openalex_institution_signals.csv", index=False, encoding="utf-8-sig")
-    pd.DataFrame(faculty_rows).sort_values(
+    )
+    faculty_frame = pd.DataFrame(faculty_rows).sort_values(
         ["precision_signal", "precision_work_count", "weighted_signal"], ascending=False
-    ).head(1000).to_csv(processed_root / "openalex_faculty_signals.csv", index=False, encoding="utf-8-sig")
+    )
+    institution_frame.to_csv(
+        processed_root / "openalex_institution_signals.csv", index=False, encoding="utf-8-sig"
+    )
+    faculty_frame.to_csv(
+        processed_root / "openalex_faculty_signals.csv", index=False, encoding="utf-8-sig"
+    )
     pd.DataFrame(work_rows).to_csv(processed_root / "openalex_query_works.csv", index=False, encoding="utf-8-sig")
 
     manifest = {
@@ -256,8 +280,18 @@ def discover(per_query: int = 200) -> dict[str, object]:
         "counts": {
             "query_results": sum(len(v) for v in all_query_results.values()),
             "institutions_ranked": len(institution_rows),
+            "institutions_exported": len(institution_frame),
+            "non_educational_institutions_observed": sum(
+                row["institution_type"] != "education" for row in institution_rows
+            ),
             "author_institution_pairs": len(faculty_rows),
+            "author_institution_pairs_exported": len(faculty_frame),
         },
+        "selection_policy": (
+            "Export every observed target-country institution and author-institution pair; "
+            "do not apply a global top-N cutoff. Downstream discovery filters non-educational "
+            "organizations and reports regional/topic contribution."
+        ),
         "limitations": [
             "Search relevance is a discovery signal, not final research-fit evidence.",
             "Authorship affiliations are publication-time metadata and require current official verification.",

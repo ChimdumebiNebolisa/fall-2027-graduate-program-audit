@@ -1,0 +1,409 @@
+{
+  "manifest_version": "1.0",
+  "schema_version": "2.0",
+  "stage": 2,
+  "name": "Rebuild the high-recall candidate funnel",
+  "status": "complete",
+  "decision": "PASS",
+  "source_commit_before_stage": "c2ce1dd5bfc1364ae9f47adaa68abbc48e28b74e",
+  "started_at": "2026-09-10T19:04:48.910396+00:00",
+  "completed_at": "2026-09-10T19:04:59.009029+00:00",
+  "inputs": [
+    {
+      "path": "config/applicant_profile.yaml",
+      "sha256": "295715c90ad3ad7dd49c5de7af8e7ff2c0d7224ca5525299e5cd8d84a46fce0f",
+      "bytes": 664,
+      "modified_at": "2026-09-10T02:57:42.908352+00:00",
+      "row_count": null
+    },
+    {
+      "path": "config/geographic_scope.yaml",
+      "sha256": "cd4c0d03c67fef557b41cd642710a0ee82f38f1e60cf1b8287bb67335fa2e7c9",
+      "bytes": 914,
+      "modified_at": "2026-09-10T02:57:42.916878+00:00",
+      "row_count": null
+    },
+    {
+      "path": "config/research_topics.yaml",
+      "sha256": "28ecf12b2dae7b67b82288a18c114ef205d2b158f18eae9b5da991fd7cefecc0",
+      "bytes": 1718,
+      "modified_at": "2026-09-10T02:57:42.928366+00:00",
+      "row_count": null
+    },
+    {
+      "path": "data/manifests/openalex_discovery.json",
+      "sha256": "85c191d262595a84ee10f0613eb5b2219ac0eb9d82c489ba696561eab02b3399",
+      "bytes": 1809,
+      "modified_at": "2026-09-10T18:47:04.897791+00:00",
+      "row_count": null
+    },
+    {
+      "path": "data/processed/openalex_institution_signals.csv",
+      "sha256": "63be13f7a85c30aacb31c9208e7d974993b8b58cc09420e6eae5feb2fa9ab323",
+      "bytes": 853696,
+      "modified_at": "2026-09-10T18:47:04.571039+00:00",
+      "row_count": 1647
+    },
+    {
+      "path": "data/processed/openalex_faculty_signals.csv",
+      "sha256": "bcf3531764db8b0da43bc38c989be2636988e5cbbaa1bd6b3d1bc012a2d94fa5",
+      "bytes": 2813187,
+      "modified_at": "2026-09-10T18:47:04.811934+00:00",
+      "row_count": 6923
+    },
+    {
+      "path": "reports/20260909-fall2027-audit/final_shortlist.md",
+      "sha256": "c715604de28deb7844bbc8ac54ed9a63f67749d847098c53a968cb06f1121406",
+      "bytes": 35122,
+      "modified_at": "2026-09-10T05:23:34.507180+00:00",
+      "row_count": null
+    },
+    {
+      "path": "src/graduate_audit/candidate_funnel.py",
+      "sha256": "12105d6d020dd28239bd3fec96c9dfcb5a17cbc7b725ae5953995c3517015327",
+      "bytes": 48582,
+      "modified_at": "2026-09-10T19:01:08.944486+00:00",
+      "row_count": null
+    },
+    {
+      "path": "src/graduate_audit/research_fit/openalex_discovery.py",
+      "sha256": "1401be4b432e99638cb580b9f94b645e0a49d8dab859c44e954ac6d91bedfdfc",
+      "bytes": 14534,
+      "modified_at": "2026-09-10T18:46:35.545195+00:00",
+      "row_count": null
+    },
+    {
+      "path": "src/graduate_audit/schema.py",
+      "sha256": "68c7da914b02c219352d9c5b477d658b975a1ca27b4b77d276fdba51d89c8418",
+      "bytes": 8399,
+      "modified_at": "2026-09-10T18:48:14.253658+00:00",
+      "row_count": null
+    },
+    {
+      "path": "data/processed/regions/us/institution_universe.csv",
+      "sha256": "8dd1467f5177cdc93457dc49858166e78267911c93064ffcf19d27d13a6d3168",
+      "bytes": 1727819,
+      "modified_at": "2026-09-10T03:27:44.292101+00:00",
+      "row_count": 2107
+    },
+    {
+      "path": "data/processed/regions/us/program_screening.csv",
+      "sha256": "df1d9dc8ddd18bdc9562287ae2131a429e1a32856c003e617d3002080fc0e7d2",
+      "bytes": 1668187,
+      "modified_at": "2026-09-10T03:27:44.393055+00:00",
+      "row_count": 1795
+    },
+    {
+      "path": "data/processed/regions/us/exclusion_log.csv",
+      "sha256": "0c572d891e0955be34c0c475775eb65fb9aa1a9555327a419f74bac784c9287d",
+      "bytes": 671614,
+      "modified_at": "2026-09-10T03:27:44.433263+00:00",
+      "row_count": 1428
+    },
+    {
+      "path": "data/processed/deep_review/us/deep_programs.csv",
+      "sha256": "ba98527c01e7db4403d7b9294c46d41acd1b8649e0ecc98ff2d638cc6a01c657",
+      "bytes": 64618,
+      "modified_at": "2026-09-10T04:50:55.044878+00:00",
+      "row_count": 25
+    },
+    {
+      "path": "data/processed/deep_review/us/professors.csv",
+      "sha256": "25b996be3056bf3e5b453cc8d0c932c57c0768b016301946753a2eb39b28cfb7",
+      "bytes": 35858,
+      "modified_at": "2026-09-10T04:50:55.085917+00:00",
+      "row_count": 25
+    },
+    {
+      "path": "data/processed/regions/canada/institution_universe.csv",
+      "sha256": "fa55ed2a0e3e62a1af04ad4e95929170ae3b13aa236c5eb842d8a2f48f9f4935",
+      "bytes": 75498,
+      "modified_at": "2026-09-10T03:25:58.365833+00:00",
+      "row_count": 98
+    },
+    {
+      "path": "data/processed/regions/canada/program_screening.csv",
+      "sha256": "a00cc065d468394b8b70170fcbd9a303b4051fe349bfb9aff74bda632e914988",
+      "bytes": 38506,
+      "modified_at": "2026-09-10T03:25:58.373456+00:00",
+      "row_count": 30
+    },
+    {
+      "path": "data/processed/regions/canada/exclusion_log.csv",
+      "sha256": "9fef777ac052dc42bf45d9878b3e3afb6fdc78a54e40d9d3af881b7c349ae889",
+      "bytes": 9045,
+      "modified_at": "2026-09-10T04:50:55.675256+00:00",
+      "row_count": 18
+    },
+    {
+      "path": "data/processed/deep_review/canada/deep_programs.csv",
+      "sha256": "e329b5736d4864d91f4a54e6ce020f88f9858b16b3703ee52d5fa91b664a6004",
+      "bytes": 30456,
+      "modified_at": "2026-09-10T04:50:55.024512+00:00",
+      "row_count": 13
+    },
+    {
+      "path": "data/processed/deep_review/canada/professors.csv",
+      "sha256": "7e4acfd5f5758bf18be8a134a05b432c88c38603c20694ae0ec5305d1826afe3",
+      "bytes": 20244,
+      "modified_at": "2026-09-10T04:04:52.548301+00:00",
+      "row_count": 13
+    },
+    {
+      "path": "data/processed/regions/europe/institution_universe.csv",
+      "sha256": "a9b7983a92defe36b2cae649b7eb1019f5dbab2f37d6132fbedb6bb4534de9a6",
+      "bytes": 2606179,
+      "modified_at": "2026-09-10T04:50:55.445180+00:00",
+      "row_count": 3628
+    },
+    {
+      "path": "data/processed/regions/europe/program_screening.csv",
+      "sha256": "45f958bae5cf7bf10ba0a98a372ee16f8a8d95a9ba8620da4585146d835798a3",
+      "bytes": 21284,
+      "modified_at": "2026-09-10T04:50:55.454721+00:00",
+      "row_count": 14
+    },
+    {
+      "path": "data/processed/regions/europe/exclusion_log.csv",
+      "sha256": "66d9d2043b3acd4fbde940953b5b262eddd2c18435330fe6dde731a1fa9b40b8",
+      "bytes": 1747664,
+      "modified_at": "2026-09-10T04:50:55.646101+00:00",
+      "row_count": 3616
+    },
+    {
+      "path": "data/processed/deep_review/europe/deep_programs.csv",
+      "sha256": "0c25ea7888660b05418fd5243cc034a70ad7cfe4cc266e3e96448de5f25376d6",
+      "bytes": 46213,
+      "modified_at": "2026-09-10T04:50:55.059600+00:00",
+      "row_count": 18
+    },
+    {
+      "path": "data/processed/deep_review/europe/professors.csv",
+      "sha256": "6c43a6c319358ec978a0a35abcd9596d45cf1b4b50c237d46c71d6b1babce406",
+      "bytes": 28619,
+      "modified_at": "2026-09-10T04:50:55.071702+00:00",
+      "row_count": 18
+    }
+  ],
+  "outputs": [
+    {
+      "path": "data/processed/pass2/candidate_program_funnel.csv",
+      "sha256": "75f31199cd13fb25bd4724c1c7b048819728890867000a3cf0c5391e32316061",
+      "bytes": 2293203,
+      "modified_at": "2026-09-10T19:04:58.759976+00:00",
+      "row_count": 1965
+    },
+    {
+      "path": "data/processed/pass2/discovery_source_yield.csv",
+      "sha256": "f656d33025f32952a89fb9c4a969eb9259c6c60d517d0fbf31f3e71b2dfb6d15",
+      "bytes": 1889,
+      "modified_at": "2026-09-10T19:04:58.767743+00:00",
+      "row_count": 9
+    },
+    {
+      "path": "data/processed/pass2/exclusion_sample_audit.csv",
+      "sha256": "cdcbe9c58630e94facb854e1dca9d5fced80f6b311e98f27294155dc06538639",
+      "bytes": 26278,
+      "modified_at": "2026-09-10T19:04:58.781890+00:00",
+      "row_count": 33
+    },
+    {
+      "path": "reports/pass2/02_candidate_funnel.md",
+      "sha256": "2b24d71149c9c676d9d22d13cfa8d0a79bfc7a3ba64a7f8a54c1fa313e750ec1",
+      "bytes": 9906,
+      "modified_at": "2026-09-10T19:04:58.994621+00:00",
+      "row_count": null
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "data/manifests/openalex_discovery.json",
+      "sha256": "85c191d262595a84ee10f0613eb5b2219ac0eb9d82c489ba696561eab02b3399",
+      "bytes": 1809,
+      "modified_at": "2026-09-10T18:47:04.897791+00:00",
+      "row_count": null
+    },
+    {
+      "path": "data/processed/openalex_institution_signals.csv",
+      "sha256": "63be13f7a85c30aacb31c9208e7d974993b8b58cc09420e6eae5feb2fa9ab323",
+      "bytes": 853696,
+      "modified_at": "2026-09-10T18:47:04.571039+00:00",
+      "row_count": 1647
+    },
+    {
+      "path": "data/processed/openalex_faculty_signals.csv",
+      "sha256": "bcf3531764db8b0da43bc38c989be2636988e5cbbaa1bd6b3d1bc012a2d94fa5",
+      "bytes": 2813187,
+      "modified_at": "2026-09-10T18:47:04.811934+00:00",
+      "row_count": 6923
+    },
+    {
+      "path": "src/graduate_audit/research_fit/openalex_discovery.py",
+      "sha256": "1401be4b432e99638cb580b9f94b645e0a49d8dab859c44e954ac6d91bedfdfc",
+      "bytes": 14534,
+      "modified_at": "2026-09-10T18:46:35.545195+00:00",
+      "row_count": null
+    },
+    {
+      "path": "src/graduate_audit/candidate_funnel.py",
+      "sha256": "12105d6d020dd28239bd3fec96c9dfcb5a17cbc7b725ae5953995c3517015327",
+      "bytes": 48582,
+      "modified_at": "2026-09-10T19:01:08.944486+00:00",
+      "row_count": null
+    },
+    {
+      "path": "src/graduate_audit/schema.py",
+      "sha256": "68c7da914b02c219352d9c5b477d658b975a1ca27b4b77d276fdba51d89c8418",
+      "bytes": 8399,
+      "modified_at": "2026-09-10T18:48:14.253658+00:00",
+      "row_count": null
+    },
+    {
+      "path": "tests/test_candidate_funnel.py",
+      "sha256": "ede3fe3c39b63414b9283c0724bd214c6ab8523c244a8b0a1720e283740dd49e",
+      "bytes": 3055,
+      "modified_at": "2026-09-10T18:54:29.842940+00:00",
+      "row_count": null
+    },
+    {
+      "path": "scripts/build_stage_02.py",
+      "sha256": "062120b27384e68c9318557f769c03029affd18ec67d1064768194005d1aca2a",
+      "bytes": 19509,
+      "modified_at": "2026-09-10T19:00:11.540706+00:00",
+      "row_count": null
+    },
+    {
+      "path": "state/progress.json",
+      "sha256": "75f57b1ddd449fb27a99c8587f7c6c00ce7a37bec208220db6b49dad0cb65fc6",
+      "bytes": 1817,
+      "modified_at": "2026-09-10T19:04:59.005940+00:00",
+      "row_count": null
+    },
+    {
+      "path": "data/processed/pass2/candidate_program_funnel.csv",
+      "sha256": "75f31199cd13fb25bd4724c1c7b048819728890867000a3cf0c5391e32316061",
+      "bytes": 2293203,
+      "modified_at": "2026-09-10T19:04:58.759976+00:00",
+      "row_count": 1965
+    },
+    {
+      "path": "data/processed/pass2/discovery_source_yield.csv",
+      "sha256": "f656d33025f32952a89fb9c4a969eb9259c6c60d517d0fbf31f3e71b2dfb6d15",
+      "bytes": 1889,
+      "modified_at": "2026-09-10T19:04:58.767743+00:00",
+      "row_count": 9
+    },
+    {
+      "path": "data/processed/pass2/exclusion_sample_audit.csv",
+      "sha256": "cdcbe9c58630e94facb854e1dca9d5fced80f6b311e98f27294155dc06538639",
+      "bytes": 26278,
+      "modified_at": "2026-09-10T19:04:58.781890+00:00",
+      "row_count": 33
+    },
+    {
+      "path": "reports/pass2/02_candidate_funnel.md",
+      "sha256": "2b24d71149c9c676d9d22d13cfa8d0a79bfc7a3ba64a7f8a54c1fa313e750ec1",
+      "bytes": 9906,
+      "modified_at": "2026-09-10T19:04:58.994621+00:00",
+      "row_count": null
+    }
+  ],
+  "validation": {
+    "status": "PASS",
+    "assertions": {
+      "all_regions_represented": true,
+      "priority_degree_routes_represented": true,
+      "terraprobe_adjacent_seed_recovered": true,
+      "evidex_adjacent_seed_recovered": true,
+      "exclusion_sample_all_regions": true,
+      "exclusion_sample_all_major_strata": true,
+      "exclusion_sample_complete": true,
+      "required_candidate_fields_complete": true,
+      "missing_program_urls_explicitly_flagged": true,
+      "screened_out_rows_have_reasons": true,
+      "all_discovery_paths_reported": true,
+      "non_educational_contamination_reported": true,
+      "affiliation_corrections_reported": true,
+      "no_global_top_n_cutoff": true,
+      "no_university_scoring_fields": true,
+      "false_negative_saturation_or_limitation_documented": true
+    },
+    "regions": [
+      "canada",
+      "europe",
+      "us"
+    ],
+    "route_buckets": [
+      "doctoral_bachelors_entry",
+      "research_masters",
+      "structured_or_masters_required_doctorate",
+      "unresolved_or_exceptional_route"
+    ],
+    "seed_categories": [
+      "Evidex-adjacent",
+      "TerraProbe-adjacent"
+    ],
+    "audit_strata": [
+      "canada/official_inventory_no_research_computing_route",
+      "canada/specialized_noncomputing_scope",
+      "europe/non_university_school_entity",
+      "europe/outside_bounded_positive_seed_screen",
+      "us/no_recent_configured_cip_signal"
+    ],
+    "saturation_status": "not_reached_documented",
+    "missing_required_rows": [],
+    "missing_url_without_flag": [],
+    "screened_without_reason": []
+  },
+  "counts": {
+    "candidate_rows": 1965,
+    "candidate_institutions": 815,
+    "advance_to_stage_3": 83,
+    "catalog_verification_required": 253,
+    "manual_secondary_review": 11,
+    "screened_out": 1618,
+    "official_program_url_present": 93,
+    "official_program_url_unresolved": 1872,
+    "calendar_rows": 55,
+    "calendar_in_scope_matched": 53,
+    "calendar_unmatched_or_out_of_scope": 2,
+    "openalex_institution_rows": 1647,
+    "openalex_educational_institution_rows": 832,
+    "openalex_matched_educational_institutions": 666,
+    "openalex_non_educational_filtered": 815,
+    "openalex_unmatched_educational_institutions": 166,
+    "openalex_institution_name_corrections": 30,
+    "openalex_faculty_affiliation_rows": 6923,
+    "openalex_faculty_current_official_matches": 11,
+    "openalex_faculty_publication_time_only": 3686,
+    "openalex_faculty_unmatched_affiliations": 712,
+    "openalex_faculty_non_educational_filtered": 2514,
+    "openalex_faculty_affiliation_name_corrections": 166,
+    "exclusion_audit_unresolved": 13,
+    "exclusion_audit_sample_rows": 33,
+    "exclusion_audit_confirmed": 16,
+    "exclusion_audit_reopened": 4,
+    "exclusion_audit_strata": 5
+  },
+  "source_counts": {
+    "institution_rows": 5833,
+    "regional_program_rows": 1839,
+    "first_audit_program_rows": 56,
+    "calendar_rows": 55
+  },
+  "unmatched_calendar_candidates": [
+    "Gwangju Institute of Science and Technology",
+    "University of Limerick"
+  ],
+  "failures": [],
+  "blockers": [],
+  "unresolved_coverage": [
+    "European registry coverage remains 3,628 of 4,462 reported filtered ROR records.",
+    "University of Limerick is an in-scope Calendar seed absent from the frozen registry snapshot.",
+    "EHESO/ETER and several national registries remain blocked.",
+    "264 active candidates require exact official-program catalog resolution.",
+    "166 educational OpenAlex institutions could not be normalized to the regional registry.",
+    "Most OpenAlex faculty affiliations remain publication-time-only or unmatched.",
+    "Program eligibility, funding, language, and Fall 2027 evidence remain for Stage 3."
+  ]
+}

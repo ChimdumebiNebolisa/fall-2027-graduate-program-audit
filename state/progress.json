@@ -1,6 +1,6 @@
 {
   "project": "fall-2027-graduate-program-audit",
-  "current_phase": "pass2_stage_01_complete",
+  "current_phase": "pass2_stage_02_complete",
   "phases": {
     "foundation": "complete",
     "universe": "complete",
@@ -32,20 +32,23 @@
     "Canada retains 50 explicitly unresolved indexed institutions and 9 blocked/insufficient program pages."
   ],
   "pass2": {
-    "current_stage": 1,
-    "last_completed_stage": 1,
+    "current_stage": 2,
+    "last_completed_stage": 2,
     "stage_status": {
       "0": "complete",
-      "1": "complete"
+      "1": "complete",
+      "2": "complete"
     },
-    "next_stage": 2,
-    "next_stage_authorized": false,
+    "next_stage": 3,
+    "next_stage_authorized": true,
     "baseline_commit": "d2e770b2d5dafe25537481f7b83663471e7060fc",
-    "stage_manifest": "data/manifests/pass2/stage_01.json",
+    "stage_manifest": "data/manifests/pass2/stage_02.json",
     "open_issue_count": 17,
     "critical_issue_count": 6,
     "high_issue_count": 9,
-    "stage_01_acceptance": "PASS"
+    "stage_01_acceptance": "PASS",
+    "authorization_mode": "agent_stage_gate_per_user_instruction",
+    "stage_02_acceptance": "PASS"
   },
-  "updated_at": "2026-09-10T18:32:22.184308+00:00"
+  "updated_at": "2026-09-10T19:04:59.001862+00:00"
 }
