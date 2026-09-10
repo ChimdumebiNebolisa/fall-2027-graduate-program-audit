@@ -444,4 +444,104 @@ FACULTY_ROSTERS: dict[str, FacultyRoster] = {
             _c("Niki Trigoni", "cyber-physical systems; sensing; dependable AI systems"),
         ),
     ),
+    "University of Wisconsin-Madison": FacultyRoster(
+        "Department of Computer Sciences",
+        "https://madpl.cs.wisc.edu/",
+        (
+            _c("Ethan Cecchetti", "programming languages; systems security; verification"),
+            _c("Somesh Jha", "software security; program analysis; machine learning security"),
+            _c("Adithya Murali", "program verification; automated reasoning; programming languages"),
+            _c("Charles Yuan", "programming languages; verification; systems"),
+        ),
+    ),
+    "University of Minnesota-Twin Cities": FacultyRoster(
+        "Department of Computer Science and Engineering",
+        "https://cse.umn.edu/cs/faculty",
+        (
+            _c("Stephen McCamant", "program analysis; software security; programming languages"),
+            _c("Gopalan Nadathur", "logic programming; proof assistants; programming languages"),
+            _c("Nick Hopper", "computer security; privacy; applied cryptography"),
+            _c("Abhishek Chandra", "distributed systems; cloud computing; systems reliability"),
+        ),
+    ),
+    "University of Colorado Boulder": FacultyRoster(
+        "Department of Computer Science",
+        "https://plv.colorado.edu/",
+        (
+            _c("Bor-Yuh Evan Chang", "program analysis; verification; reliable software systems"),
+            _c("Danny Dig", "software engineering; program transformation; software evolution"),
+            _c("Gowtham Kaki", "programming languages; verification; distributed systems"),
+            _c("Dirk Grunwald", "computer systems; compilers; dependable computing"),
+        ),
+    ),
+    "University of Arizona": FacultyRoster(
+        "Department of Computer Science",
+        "https://cs.arizona.edu/about/faculty",
+        (
+            _c("Christian Collberg", "software security; obfuscation; program transformation"),
+            _c("Sazzadur Rahaman", "software security; program analysis; security auditing"),
+            _c("Ravi Sethi", "compilers; programming languages; software technologies"),
+            _c("Quinn Burke", "systems security; network security; computer systems"),
+        ),
+    ),
+    "University of Utah": FacultyRoster(
+        "Kahlert School of Computing",
+        "https://www.cs.utah.edu/people/faculty/",
+        (
+            _c("Pavel Panchekha", "programming languages; formal verification; numerical software"),
+            _c("Stefan Nagy", "software security testing; fuzzing; program analysis"),
+            _c("Matthew Flatt", "programming languages; language implementation; software systems"),
+            _c("Zvonimir Rakamarić", "formal methods; software verification; static analysis"),
+        ),
+    ),
+    "University of California-San Diego": FacultyRoster(
+        "Department of Computer Science and Engineering",
+        "https://cse.ucsd.edu/people/faculty-profiles",
+        (
+            _c("Ranjit Jhala", "program verification; refinement types; program analysis"),
+            _c("Loris D'Antoni", "program synthesis; automated reasoning; programming languages"),
+            _c("Deian Stefan", "secure systems; programming languages; software security"),
+            _c("Michael Coblenz", "programming languages; human-centered software engineering"),
+        ),
+    ),
+    "Duke University": FacultyRoster(
+        "Department of Computer Science",
+        "https://cs.duke.edu/research/security-and-privacy",
+        (
+            _c("Matthew Lentz", "secure trustworthy systems; systems verification; cloud infrastructure"),
+            _c("Pardis Emami-Naeini", "usable privacy and security; trustworthy systems"),
+            _c("Kartik Nayak", "distributed systems security; blockchains; applied cryptography"),
+            _c("Michael Reiter", "systems security; software security; distributed systems"),
+        ),
+    ),
+    "Brown University": FacultyRoster(
+        "Department of Computer Science",
+        "https://cs.brown.edu/people/faculty/",
+        (
+            _c("Shriram Krishnamurthi", "programming languages; software engineering; formal methods"),
+            _c("Nikos Vasilakis", "programming systems; software security; distributed systems"),
+            _c("Deepti Raghavan", "systems; secure software; AI systems"),
+            _c("Kathi Fisler", "formal methods; programming languages; software engineering"),
+        ),
+    ),
+    "University of Virginia-Main Campus": FacultyRoster(
+        "Department of Computer Science",
+        "https://engineering.virginia.edu/department/computer-science/people",
+        (
+            _c("Kevin Sullivan", "software engineering; formal methods; systems assurance"),
+            _c("Matthew Dwyer", "software engineering; program analysis; verification"),
+            _c("Wajih Ul Hassan", "systems security; software analysis; threat detection"),
+            _c("Samira Khan", "computer systems; reliability; architecture"),
+        ),
+    ),
+    "Simon Fraser University": FacultyRoster(
+        "School of Computing Science",
+        "https://www.sfu.ca/fas/computing/people/faculty.html",
+        (
+            _c("Anders Miltner", "program synthesis; automated refactoring; verification"),
+            _c("William Nick Sumner", "software testing; program analysis; automated repair"),
+            _c("Steven Y. Ko", "distributed systems; vulnerability discovery and repair"),
+            _c("Yuepeng Wang", "program synthesis; programming languages; software engineering"),
+        ),
+    ),
 }

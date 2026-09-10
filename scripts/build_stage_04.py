@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import csv
 import hashlib
+import json
 import re
 import subprocess
 import sys
@@ -31,6 +32,7 @@ MANIFEST_PATH = REPO_ROOT / "data/manifests/pass2/stage_04.json"
 EVALUATED_PATH = OUTPUT_DIR / "professor_candidates_evaluated.csv"
 RETAINED_PATH = OUTPUT_DIR / "professor_matches_retained.csv"
 SOURCES_PATH = OUTPUT_DIR / "professor_sources.csv"
+REENTRY_RAW_PATH = REPO_ROOT / "data/raw/pass2/stage_04_reentry_01.json"
 UNKNOWN = "Not located in bounded Stage 4 review"
 CHECK_DATE = "2026-09-10"
 
@@ -179,6 +181,14 @@ def build() -> dict[str, object]:
     ]
     deep_professors, _ = _regional_rows("professors.csv")
     deep_sources, source_paths = _regional_rows("sources.csv")
+    reentry = json.loads(REENTRY_RAW_PATH.read_text(encoding="utf-8"))
+    reentry_professors = [dict(row) for row in reentry["professors"]]
+    reentry_sources = [dict(row) for row in reentry["sources"]]
+    deep_professors.extend(reentry_professors)
+    deep_sources.extend(reentry_sources)
+    raw_source_path = REENTRY_RAW_PATH.relative_to(REPO_ROOT).as_posix()
+    source_paths.update({row["source_id"]: raw_source_path for row in reentry_sources})
+    reentry_program_ids = {row["program_id"] for row in reentry_professors}
     deep_by_program = {row["program_id"]: row for row in deep_professors}
     deep_source_by_url: dict[str, list[dict[str, str]]] = defaultdict(list)
     for row in deep_sources:
@@ -261,7 +271,12 @@ def build() -> dict[str, object]:
             qualifies = is_primary and strongest_qualifies
             if is_primary:
                 works = list(strongest_works)
-                evidence_urls = [strongest["official_faculty_url"]] + [url for _, url, _ in works]
+                extra_evidence_urls = [
+                    url.strip()
+                    for url in strongest.get("extra_evidence_urls", "").split("|")
+                    if url.strip()
+                ]
+                evidence_urls = [strongest["official_faculty_url"]] + [url for _, url, _ in works] + extra_evidence_urls
                 for url in dict.fromkeys(evidence_urls):
                     original = (deep_source_by_url.get(url.rstrip("/")) or [None])[0]
                     is_profile = url.rstrip("/") == strongest["official_faculty_url"].rstrip("/")
@@ -269,11 +284,11 @@ def build() -> dict[str, object]:
                         program=program,
                         professor={"professor_id": pid, "full_name": name},
                         url=url,
-                        claim_categories=(
+                        claim_categories=(original.get("stage4_claim_categories", "") if original else "") or (
                             "current appointment|program supervision authority|research themes"
                             if is_profile else "recent work|research fit"
                         ),
-                        exact_claim=(
+                        exact_claim=(original.get("exact_claim_supported", "") if original else "") or (
                             f"{name} has a current verified appointment and verified authority to supervise this program."
                             if is_profile
                             else f"Recent work supports the recorded TerraProbe/Evidex research overlap for {name}."
@@ -287,7 +302,9 @@ def build() -> dict[str, object]:
                         ),
                         verification_status="verified",
                         source_record_path=(source_paths.get(original["source_id"], "") if original else ""),
-                        publication_year=(next((year for _, work_url, year in works if work_url == url), "")),
+                        publication_year=(
+                            original.get("publication_year", "") if original else ""
+                        ) or next((year for _, work_url, year in works if work_url == url), ""),
                         access_note=(original["access_note"] if original else "Carried from verified regional deep-review evidence."),
                     )
                     sources.append(source)
@@ -485,6 +502,11 @@ def build() -> dict[str, object]:
         "source_rows": len(sources),
         "official_source_rows": sum(row["official_or_secondary"] == "official" for row in sources),
         "secondary_discovery_source_rows": sum(row["official_or_secondary"] == "secondary" for row in sources),
+        "reentry_programs": len(reentry_program_ids),
+        "reentry_retained_match_rows": sum(row["program_id"] in reentry_program_ids for row in retained),
+        "reentry_zero_match_programs": sum(
+            not retained_by_program[program_id] for program_id in reentry_program_ids
+        ),
     }
     return {
         "assertions": assertions,
@@ -600,10 +622,12 @@ def write_report(result: dict[str, object]) -> None:
         "",
         "## Unresolved coverage",
         "",
+        f"- The 10 Stage 3 re-entry routes produced {counts['reentry_retained_match_rows']} fully verified strong lead matches; {counts['reentry_zero_match_programs']} route remains without a retained match.",
+        "- UVA's strongest bounded fit has a current courtesy Computer Science appointment, but exact Computer Science PhD supervision authority was not verified; the candidate remains unscored and unretained.",
         f"- {counts['programs_with_one_strong_match']} of {counts['serious_programs']} programs have only one fully verified strong match and remain single-professor dependencies.",
         f"- {counts['programs_with_zero_strong_matches']} programs have no candidate that clears every current-appointment, supervision-authority, strong-fit, and recent-work gate; their faculty depth is 0.",
         f"- {counts['candidate_evaluations'] - counts['retained_match_rows']} plausible program-candidate evaluations were not retained because exact-route supervision authority and/or candidate-specific recent-work evidence remains incomplete.",
-        "- Official email was not located in the bounded record for some retained professors and most unretained candidates; those fields are explicit, not guessed.",
+        "- Official email was verified for every retained professor; it remains unlocated for most unretained candidates and is never guessed.",
         "- Recruiting status remains unknown unless a current direct statement/opening was already verified; publication activity and open labs are not used as recruiting proxies.",
         "- Faculty appointments, supervision rules, and recruiting statements are time-sensitive and require a refresh immediately before outreach or application submission.",
         "- Stage 5 may use only the 5-point faculty-depth values supported here; it may not resurrect the inflated Pass 1 depth scores.",
@@ -618,6 +642,7 @@ def input_paths() -> list[Path]:
         REPO_ROOT / "data/manifests/pass2/stage_03.json",
         OUTPUT_DIR / "program_verification.csv",
         REPO_ROOT / "data/processed/openalex_faculty_signals.csv",
+        REENTRY_RAW_PATH,
         REPO_ROOT / "src/graduate_audit/professor_mapping.py",
         REPO_ROOT / "src/graduate_audit/schema.py",
     ]
@@ -642,9 +667,10 @@ def main() -> int:
     pass2 = dict(progress.get("pass2", {}))
     stage_status = dict(pass2.get("stage_status", {}))
     stage_status["4"] = "complete" if result["status"] == "PASS" else "failed"
+    stage_status["4_reentry_01"] = "complete" if result["status"] == "PASS" else "failed"
     pass2.update({
         "current_stage": 4,
-        "last_completed_stage": 4 if result["status"] == "PASS" else 3,
+        "last_completed_stage": max(int(pass2.get("last_completed_stage", 0)), 4) if result["status"] == "PASS" else 3,
         "stage_status": stage_status,
         "next_stage": 5,
         "next_stage_authorized": result["status"] == "PASS",
@@ -653,6 +679,8 @@ def main() -> int:
         "stage_04_acceptance": result["status"],
         "stage_04_serious_programs": result["counts"]["serious_programs"],
         "stage_04_distinct_retained_professors": result["counts"]["distinct_retained_professors"],
+        "stage_04_reentry_completed": 1 if result["status"] == "PASS" else 0,
+        "stage_04_reentry_programs": result["counts"]["reentry_programs"],
     })
     update_progress(
         progress_path,
@@ -664,9 +692,10 @@ def main() -> int:
         f"{result['counts']['programs_with_one_strong_match']} serious programs remain single-professor dependencies with one verified strong match and 5 faculty-depth points.",
         f"{result['counts']['programs_with_zero_strong_matches']} serious programs have no match clearing every evidence gate and receive 0 faculty-depth points.",
         f"The {result['counts']['candidate_evaluations'] - result['counts']['retained_match_rows']} unretained longlist evaluations still need exact-route supervision-authority and/or candidate-specific current-work verification before they could become strong matches.",
-        "Official email is incomplete for some retained professors and most unretained candidates.",
+        "Official email remains incomplete for most unretained candidates; every retained professor has a verified official email.",
         "Recruiting remains unknown unless supported by a current explicit statement; research activity is not recruiting evidence.",
         "Faculty appointment and recruiting evidence must be refreshed before outreach or submission.",
+        "The strongest bounded UVA fit has a courtesy Computer Science appointment, but exact Computer Science PhD supervision authority remains unresolved and no UVA match was retained.",
     ]
     output_paths = [EVALUATED_PATH, RETAINED_PATH, SOURCES_PATH, REPORT_PATH]
     artifacts = [
@@ -674,6 +703,7 @@ def main() -> int:
         REPO_ROOT / "src/graduate_audit/schema.py",
         REPO_ROOT / "scripts/build_stage_04.py",
         REPO_ROOT / "tests/test_professor_mapping.py",
+        REENTRY_RAW_PATH,
         progress_path,
         *output_paths,
     ]
@@ -681,10 +711,12 @@ def main() -> int:
         "manifest_version": "1.0",
         "schema_version": PASS2_SCHEMA_VERSION,
         "stage": 4,
+        "run_type": "faculty_reentry_01",
         "name": "Deep professor and department fit mapping",
         "status": "complete" if result["status"] == "PASS" else "failed",
         "decision": result["status"],
         "source_commit_before_stage": source_commit,
+        "triggered_by_stage": 3,
         "started_at": started_at,
         "completed_at": now(),
         "inputs": [file_record(path) for path in input_paths()],
