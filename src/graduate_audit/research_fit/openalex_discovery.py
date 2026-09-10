@@ -24,6 +24,16 @@ TARGET_COUNTRY_CODES = {
     "RO", "SK", "SI", "ES", "SE", "GB", "NO", "CH", "IS",
 }
 
+PRECISION_TERMS = (
+    "software engineering", "program repair", "software repair", "automated repair",
+    "fault localization", "bug fixing", "bug fix", "code generation", "code repair",
+    "code review", "code security", "ai-generated code", "llm for code", "coding agent",
+    "software testing", "test generation", "debugging", "program analysis", "static analysis",
+    "dynamic analysis", "infrastructure as code", "terraform", "configuration repair",
+    "devops", "software reliability", "software maintenance", "factuality", "fact-checking",
+    "fact checking", "claim verification", "grounding documents", "agent security",
+)
+
 
 def load_queries() -> list[str]:
     config = yaml.safe_load((ROOT / "config" / "research_topics.yaml").read_text(encoding="utf-8"))
@@ -107,6 +117,8 @@ def discover(per_query: int = 200) -> dict[str, object]:
     for query, works in all_query_results.items():
         for rank, work in enumerate(works, start=1):
             title = work.get("title") or ""
+            title_lower = title.lower()
+            precision_hit = any(term in title_lower for term in PRECISION_TERMS)
             citations = int(work.get("cited_by_count") or 0)
             base_weight = 1 / (1 + rank / 25) + min(math.log1p(citations) / 5, 1)
             work_id = work.get("id", "")
@@ -132,12 +144,17 @@ def discover(per_query: int = 200) -> dict[str, object]:
                             "institution_type": inst_type,
                             "ror_id": ror,
                             "weighted_signal": 0.0,
+                            "precision_signal": 0.0,
                             "work_ids": set(),
+                            "precision_work_ids": set(),
                             "queries": set(),
                             "top_works": [],
                             "authors": set(),
                         })
                         record["weighted_signal"] = float(record["weighted_signal"]) + base_weight
+                        if precision_hit:
+                            record["precision_signal"] = float(record["precision_signal"]) + base_weight
+                            record["precision_work_ids"].add(work_id)
                         record["work_ids"].add(work_id)
                         record["queries"].add(query)
                         record["top_works"].append((base_weight, title, work.get("publication_year"), work.get("doi") or work_id))
@@ -154,11 +171,16 @@ def discover(per_query: int = 200) -> dict[str, object]:
                             "country_code": country_code,
                             "ror_id": ror,
                             "weighted_signal": 0.0,
+                            "precision_signal": 0.0,
                             "work_ids": set(),
+                            "precision_work_ids": set(),
                             "queries": set(),
                             "top_works": [],
                         })
                         faculty["weighted_signal"] = float(faculty["weighted_signal"]) + base_weight
+                        if precision_hit:
+                            faculty["precision_signal"] = float(faculty["precision_signal"]) + base_weight
+                            faculty["precision_work_ids"].add(work_id)
                         faculty["work_ids"].add(work_id)
                         faculty["queries"].add(query)
                         faculty["top_works"].append((base_weight, title, work.get("publication_year"), work.get("doi") or work_id))
@@ -185,7 +207,9 @@ def discover(per_query: int = 200) -> dict[str, object]:
             "institution_type": record["institution_type"],
             "ror_id": record["ror_id"],
             "weighted_signal": round(float(record["weighted_signal"]), 3),
+            "precision_signal": round(float(record["precision_signal"]), 3),
             "relevant_work_count": len(record["work_ids"]),
+            "precision_work_count": len(record["precision_work_ids"]),
             "query_cluster_count": len(record["queries"]),
             "author_count": len(record["authors"]),
             "top_works": " || ".join(f"{year}: {title} [{url}]" for _, title, year, url in top),
@@ -202,16 +226,18 @@ def discover(per_query: int = 200) -> dict[str, object]:
             "country_code": record["country_code"],
             "ror_id": record["ror_id"],
             "weighted_signal": round(float(record["weighted_signal"]), 3),
+            "precision_signal": round(float(record["precision_signal"]), 3),
             "relevant_work_count": len(record["work_ids"]),
+            "precision_work_count": len(record["precision_work_ids"]),
             "query_cluster_count": len(record["queries"]),
             "top_works": " || ".join(f"{year}: {title} [{url}]" for _, title, year, url in top),
         })
 
     pd.DataFrame(institution_rows).sort_values(
-        ["weighted_signal", "relevant_work_count"], ascending=False
+        ["precision_signal", "precision_work_count", "weighted_signal"], ascending=False
     ).head(300).to_csv(processed_root / "openalex_institution_signals.csv", index=False, encoding="utf-8-sig")
     pd.DataFrame(faculty_rows).sort_values(
-        ["weighted_signal", "relevant_work_count"], ascending=False
+        ["precision_signal", "precision_work_count", "weighted_signal"], ascending=False
     ).head(1000).to_csv(processed_root / "openalex_faculty_signals.csv", index=False, encoding="utf-8-sig")
     pd.DataFrame(work_rows).to_csv(processed_root / "openalex_query_works.csv", index=False, encoding="utf-8-sig")
 
