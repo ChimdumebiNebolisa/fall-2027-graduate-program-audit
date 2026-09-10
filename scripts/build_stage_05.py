@@ -36,6 +36,7 @@ EVIDENCE_PATH = OUTPUT_DIR / "score_evidence.csv"
 REPORT_PATH = REPO_ROOT / "reports/pass2/05_scoring_and_calibration.md"
 MANIFEST_PATH = REPO_ROOT / "data/manifests/pass2/stage_05.json"
 RUBRIC_PATH = REPO_ROOT / "config/scoring_rubric.yaml"
+LATEST_REENTRY_PATH = OUTPUT_DIR / "stage_03_reentry_02_verification.csv"
 
 
 def now() -> str:
@@ -137,6 +138,11 @@ def build() -> dict[str, object]:
         row for row in read_csv(OUTPUT_DIR / "program_verification.csv")
         if row["faculty_review_ready"] == "yes"
     ]
+    latest_reentry_ids = {
+        row["candidate_program_id"]
+        for row in read_csv(LATEST_REENTRY_PATH)
+        if row["faculty_review_ready"] == "yes"
+    }
     candidates_by_program: dict[str, list[dict[str, str]]] = defaultdict(list)
     retained_by_program: dict[str, list[dict[str, str]]] = defaultdict(list)
     for row in read_csv(OUTPUT_DIR / "professor_candidates_evaluated.csv"):
@@ -207,6 +213,12 @@ def build() -> dict[str, object]:
     constant_hits = _institution_score_constant_hits()
     assertions = {
         "entire_serious_program_pool_recalculated": bool(programs) and len(scores) == len(programs) and {row["program_id"] for row in scores} == {row["candidate_program_id"] for row in programs},
+        "latest_reentry_02_fully_recalculated": (
+            len(latest_reentry_ids) == 8
+            and {row["program_id"] for row in scores if row["program_id"] in latest_reentry_ids}
+            == latest_reentry_ids
+            and all(len(evidence_by_program[program_id]) == len(COMPONENT_ORDER) for program_id in latest_reentry_ids)
+        ),
         "exactly_six_components_per_program": len(score_evidence) == len(scores) * 6 and all({row["component"] for row in evidence_by_program[pid]} == set(COMPONENT_ORDER) for pid in evidence_by_program),
         "program_rows_reference_exact_component_evidence": all(
             set(split_ids(row["score_evidence_ids"]))
@@ -258,6 +270,19 @@ def build() -> dict[str, object]:
         "insufficient_admission_evidence": sum(row["admission_plausibility"] == "Insufficient evidence" for row in scores),
         "eligibility_concerns": sum(row["admission_plausibility"] == "Eligibility concern" for row in scores),
         "institution_score_constant_hits": len(constant_hits),
+        "latest_reentry_programs": len(latest_reentry_ids),
+        "latest_reentry_hard_gate_survivors": sum(
+            row["program_id"] in latest_reentry_ids and row["all_hard_gates_pass"] == "true"
+            for row in scores
+        ),
+        "latest_reentry_funding_gate_pass": sum(
+            row["program_id"] in latest_reentry_ids and row["funding_hard_gate"] == "true"
+            for row in scores
+        ),
+        "latest_reentry_professor_gate_pass": sum(
+            row["program_id"] in latest_reentry_ids and row["professor_hard_gate"] == "true"
+            for row in scores
+        ),
     }
     return {
         "status": "PASS" if all(assertions.values()) else "FAIL",
@@ -341,12 +366,18 @@ def write_report(result: dict[str, object]) -> None:
         "",
         "## Unresolved coverage",
         "",
+        (
+            f"- Stage 5 re-entry 02 recalculated {counts['latest_reentry_programs']} newly eligible routes. "
+            f"All {counts['latest_reentry_professor_gate_pass']} pass the professor gate, but only "
+            f"{counts['latest_reentry_funding_gate_pass']} passes the direct funding gate and therefore only "
+            f"{counts['latest_reentry_hard_gate_survivors']} clears every hard gate."
+        ),
         f"- {counts['serious_programs_scored'] - counts['funding_gate_pass']} programs lack direct source evidence strong enough for the funding hard gate.",
         f"- {counts['serious_programs_scored'] - counts['professor_gate_pass']} programs lack a fully verified strong professor with exact-route supervision authority.",
         f"- {counts['zero_depth_programs']} programs have zero verified faculty-depth points; {counts['single_professor_dependencies']} have only one verified strong match and remain capped at 5 points.",
         f"- {counts['insufficient_admission_evidence']} programs lack official cohort/selectivity evidence for strategic admission calibration.",
         "- Offer-specific net funding, fees, health insurance, summers, and duration remain incomplete where identified in the component evidence.",
-        "- The existing Stage 6 portfolio still covers the pre-re-entry 45-program pool; Stage 6 must be rebuilt against these 55 scores.",
+        f"- The existing Stage 6 portfolio still covers the prior score pool; Stage 6 must be rebuilt against these {counts['serious_programs_scored']} scores.",
         "- Stage 6 must pressure-test only hard-gate survivors for a core portfolio; diagnostic totals cannot override a failed gate.",
         "",
     ]
@@ -360,6 +391,7 @@ def input_paths() -> list[Path]:
         REPO_ROOT / "config/applicant_profile.yaml",
         RUBRIC_PATH,
         OUTPUT_DIR / "program_verification.csv",
+        LATEST_REENTRY_PATH,
         OUTPUT_DIR / "program_sources.csv",
         OUTPUT_DIR / "professor_candidates_evaluated.csv",
         OUTPUT_DIR / "professor_matches_retained.csv",
@@ -381,6 +413,7 @@ def main() -> int:
     stage_status = dict(pass2.get("stage_status", {}))
     stage_status["5"] = "complete" if result["status"] == "PASS" else "failed"
     stage_status["5_reentry_01"] = "complete" if result["status"] == "PASS" else "failed"
+    stage_status["5_reentry_02"] = "complete" if result["status"] == "PASS" else "failed"
     pass2.update({
         "current_stage": 5,
         "last_completed_stage": max(int(pass2.get("last_completed_stage", 0)), 5) if result["status"] == "PASS" else 4,
@@ -391,8 +424,12 @@ def main() -> int:
         "authorization_mode": "agent_stage_gate_per_user_instruction",
         "stage_05_acceptance": result["status"],
         "stage_05_hard_gate_survivors": result["counts"]["hard_gate_survivors"],
-        "stage_05_reentry_completed": 1 if result["status"] == "PASS" else 0,
+        "stage_05_reentry_completed": 2 if result["status"] == "PASS" else 1,
         "stage_05_reentry_serious_programs": result["counts"]["serious_programs_scored"],
+        "stage_05_reentry_latest_programs": result["counts"]["latest_reentry_programs"],
+        "stage_05_reentry_required": False,
+        "stage_06_reentry_required": result["status"] == "PASS",
+        "stage_06_reentry_source_stage": 5,
     })
     update_progress(
         progress_path,
@@ -407,7 +444,8 @@ def main() -> int:
         f"{counts['zero_depth_programs']} programs have zero verified faculty depth and {counts['single_professor_dependencies']} are single-professor dependencies.",
         f"{counts['insufficient_admission_evidence']} programs lack official cohort/selectivity evidence for strategic admission calibration.",
         "Offer-specific net cost and coverage details remain incomplete where recorded in score evidence.",
-        "The existing Stage 6 portfolio covers the pre-re-entry 45-program pool and must be rebuilt against the 55 current score rows.",
+        f"Stage 5 re-entry 02 produced {counts['latest_reentry_hard_gate_survivors']} hard-gate survivor from {counts['latest_reentry_programs']} newly scored routes; the others fail at least the direct funding gate.",
+        f"The existing Stage 6 portfolio covers the prior score pool and must be rebuilt against the {counts['serious_programs_scored']} current score rows.",
     ]
     outputs = [SCORES_PATH, EVIDENCE_PATH, REPORT_PATH]
     artifacts = [
@@ -430,7 +468,7 @@ def main() -> int:
         "manifest_version": "1.0",
         "schema_version": "2.0",
         "stage": 5,
-        "run_type": "scoring_reentry_01",
+        "run_type": "scoring_reentry_02",
         "name": "Evidence-based scoring and admission calibration",
         "status": "complete" if result["status"] == "PASS" else "failed",
         "decision": result["status"],
