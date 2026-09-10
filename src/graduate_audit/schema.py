@@ -216,6 +216,51 @@ PROGRAM_EXCLUSION_COLUMNS_V2 = (
     "source_ids", "source_urls", "source_record_paths", "excluded_at",
 )
 
+PROFESSOR_CANDIDATE_EVALUATED_COLUMNS_V2 = (
+    "schema_version", "evaluation_id", "professor_id", "institution_id",
+    "institution_name", "country", "region", "program_id", "program_name",
+    "full_name", "current_department", "faculty_position",
+    "appointment_status", "supervision_authority_status", "official_email",
+    "official_faculty_or_lab_url", "official_roster_url", "research_themes",
+    "recent_work_1_title", "recent_work_1_url", "recent_work_1_year",
+    "recent_work_2_title", "recent_work_2_url", "recent_work_2_year",
+    "recent_work_3_title", "recent_work_3_url", "recent_work_3_year",
+    "recent_work_evidence_count", "specific_overlap", "fit_strength",
+    "fit_rationale", "candidate_disposition", "non_retention_reason",
+    "recruiting_evidence", "recruiting_status",
+    "prospective_student_instructions", "contacting_faculty_appropriate",
+    "openalex_author_id", "source_ids", "unresolved_question",
+    "verification_status", "plausible_candidates_evaluated",
+    "distinct_verified_strong_matches", "faculty_depth_points",
+    "single_professor_dependency", "good_faith_search_result", "evaluated_at",
+)
+
+PROFESSOR_MATCH_RETAINED_COLUMNS_V2 = (
+    "schema_version", "match_id", "match_rank", "professor_id",
+    "institution_id", "institution_name", "country", "region", "program_id",
+    "program_name", "full_name", "current_department", "faculty_position",
+    "appointment_status", "supervision_authority_status", "official_email",
+    "official_faculty_or_lab_url", "research_themes", "recent_work_1_title",
+    "recent_work_1_url", "recent_work_1_year", "recent_work_2_title",
+    "recent_work_2_url", "recent_work_2_year", "recent_work_3_title",
+    "recent_work_3_url", "recent_work_3_year", "recent_work_evidence_count",
+    "specific_overlap", "fit_strength", "fit_rationale",
+    "recruiting_evidence", "recruiting_status",
+    "prospective_student_instructions", "contacting_faculty_appropriate",
+    "source_ids", "unresolved_question", "verification_status",
+    "plausible_candidates_evaluated", "distinct_verified_strong_matches",
+    "faculty_depth_points", "single_professor_dependency",
+    "good_faith_search_result", "retained_at",
+)
+
+PROFESSOR_SOURCE_COLUMNS_V2 = (
+    "schema_version", "stage4_source_id", "institution_id", "institution_name",
+    "program_id", "professor_id", "professor_name", "claim_categories",
+    "exact_claim_supported", "source_title", "publisher", "url",
+    "source_type", "official_or_secondary", "date_accessed", "publication_year",
+    "confidence", "verification_status", "source_record_path", "access_note",
+)
+
 
 def slugify(value: str) -> str:
     value = value.strip().lower()

@@ -1,6 +1,6 @@
 {
   "project": "fall-2027-graduate-program-audit",
-  "current_phase": "pass2_stage_03_complete",
+  "current_phase": "pass2_stage_04_complete",
   "phases": {
     "foundation": "complete",
     "universe": "complete",
@@ -32,18 +32,19 @@
     "Canada retains 50 explicitly unresolved indexed institutions and 9 blocked/insufficient program pages."
   ],
   "pass2": {
-    "current_stage": 3,
-    "last_completed_stage": 3,
+    "current_stage": 4,
+    "last_completed_stage": 4,
     "stage_status": {
       "0": "complete",
       "1": "complete",
       "2": "complete",
-      "3": "complete"
+      "3": "complete",
+      "4": "complete"
     },
-    "next_stage": 4,
+    "next_stage": 5,
     "next_stage_authorized": true,
     "baseline_commit": "d2e770b2d5dafe25537481f7b83663471e7060fc",
-    "stage_manifest": "data/manifests/pass2/stage_03.json",
+    "stage_manifest": "data/manifests/pass2/stage_04.json",
     "open_issue_count": 17,
     "critical_issue_count": 6,
     "high_issue_count": 9,
@@ -51,7 +52,10 @@
     "authorization_mode": "agent_stage_gate_per_user_instruction",
     "stage_02_acceptance": "PASS",
     "stage_03_acceptance": "PASS",
-    "stage_03_faculty_review_ready": 45
+    "stage_03_faculty_review_ready": 45,
+    "stage_04_acceptance": "PASS",
+    "stage_04_serious_programs": 45,
+    "stage_04_distinct_retained_professors": 25
   },
-  "updated_at": "2026-09-10T19:28:16.193234+00:00"
+  "updated_at": "2026-09-10T19:51:06.338331+00:00"
 }
