@@ -1,0 +1,603 @@
+{
+  "definition_version": "2.0",
+  "reentry_id": "stage_02_reentry_02",
+  "created_date": "2026-09-10",
+  "trigger": "Stage 6 re-entry 01 again returned to candidate discovery because the evidence-calibrated portfolio still had zero justified core applications.",
+  "scope": "A bounded second non-saturation pass for exact, previously unverified research routes; discovery evidence only, with no scoring or retention decision.",
+  "false_negative_audits": [
+    {
+      "institution_id": "us:ipeds:186380",
+      "exclusion_reason_category": "single_bounded_registry_signal_without_independent_topic_signal",
+      "original_supporting_evidence": "All Rutgers mechanical program-code rows were screened out because the initial bounded pass recovered no independent topical signal; current official program, faculty, and funding pages now contradict that omission."
+    },
+    {
+      "institution_id": "ror:016xsfp80",
+      "exclusion_reason_category": "outside_bounded_positive_seed_screen",
+      "original_supporting_evidence": "Radboud had no Stage 2 funnel row even though its current official Software Science route and institute pages show directly relevant software-analysis, verification, and security work."
+    }
+  ],
+  "candidates": [
+    {
+      "institution_id": "us:ipeds:186380",
+      "institution_name": "Rutgers University-New Brunswick",
+      "country": "United States",
+      "region": "us",
+      "program_name": "Computer Science PhD",
+      "degree_type": "PhD",
+      "relevant_degree_route": "Doctoral route accepting baccalaureate applicants; exact credential and prerequisite fit requires Stage 3 verification",
+      "research_topic_clusters": ["repair_analysis", "systems_security", "ai_for_se"],
+      "exact_research_fit_signal": "Current official Rutgers pages show a Computer Science PhD and active work on robust and secure software systems spanning programming languages, compilers, runtimes, operating systems, and program analysis.",
+      "preliminary_international_eligibility": "The department publishes baccalaureate-entry criteria and international language requirements; the applicant's course equivalencies and academic alignment remain unverified.",
+      "preliminary_funding_signal": "The department says PhD support typically includes a stipend, health insurance, and tuition remission, normally guaranteed for two years and expected to extend for three more; an individual offer is not established.",
+      "official_program_url": "https://www.cs.rutgers.edu/academics/graduate/ph-d-program/computer-science-program",
+      "seed_adjacency": ["TerraProbe-adjacent"],
+      "unresolved_fields": ["Fall 2027 cycle", "prerequisite equivalency", "admission plausibility", "individual funding terms", "current faculty supervision"],
+      "evidence_confidence": "high",
+      "additional_discovery_paths": ["recognized_institution_record", "underrepresented_route_search"],
+      "sources": [
+        {
+          "source_id": "reentry02:rutgers:program",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "program and entry route",
+          "title": "Computer Science Program",
+          "url": "https://www.cs.rutgers.edu/academics/graduate/ph-d-program/computer-science-program",
+          "evidence_summary": "Official department page identifies the Computer Science doctoral program.",
+          "limitations": "Fall 2027 application details require Stage 3 verification."
+        },
+        {
+          "source_id": "reentry02:rutgers:fit",
+          "discovery_path": "current_faculty_topic_signal",
+          "evidence_role": "current research fit",
+          "title": "Santosh Nagarakatte",
+          "url": "https://people.cs.rutgers.edu/~sn349/",
+          "evidence_summary": "Current Rutgers professor page describes robust and secure systems research across programming languages, compilers, runtimes, architecture, and operating systems, with 2026 activity.",
+          "limitations": "Current appointment does not establish Fall 2027 supervision capacity or recruiting."
+        },
+        {
+          "source_id": "reentry02:rutgers:funding",
+          "discovery_path": "underrepresented_route_search",
+          "evidence_role": "preliminary funding",
+          "title": "Ph.D. Program Financial Aid",
+          "url": "https://www.cs.rutgers.edu/academics/graduate/ph-d-program/financial-aid",
+          "evidence_summary": "Department describes typical assistantship or fellowship support covering stipend, health insurance, and tuition remission.",
+          "limitations": "Typical support is not an individual funding offer or unconditional five-year guarantee."
+        }
+      ]
+    },
+    {
+      "institution_id": "us:ipeds:204796",
+      "institution_name": "Ohio State University-Main Campus",
+      "country": "United States",
+      "region": "us",
+      "program_name": "Computer Science and Engineering PhD",
+      "degree_type": "PhD",
+      "relevant_degree_route": "Research doctorate with direct application from a relevant bachelor's background",
+      "research_topic_clusters": ["repair_analysis", "systems_security", "ai_for_se"],
+      "exact_research_fit_signal": "Official research pages identify verification, specification, static and dynamic program analysis, testing, software security, fuzzing, compilers, and reliable software systems.",
+      "preliminary_international_eligibility": "The department accepts applicants with a relevant undergraduate background, publishes a 3.0 minimum, and separately flags international English requirements; full equivalency remains for Stage 3.",
+      "preliminary_funding_signal": "Graduate associateships are described as the primary assistance route, and most fellowships and associateships include tuition and fee authorization, stipend, and subsidized health insurance; availability is competitive.",
+      "official_program_url": "https://cse.osu.edu/graduate/graduate/doctor-philosophy-program",
+      "seed_adjacency": ["TerraProbe-adjacent"],
+      "unresolved_fields": ["Fall 2027 final cycle details", "competitiveness above minimum GPA", "funding duration", "individual award", "current faculty supervision"],
+      "evidence_confidence": "high",
+      "additional_discovery_paths": ["recognized_institution_record", "underrepresented_route_search"],
+      "sources": [
+        {
+          "source_id": "reentry02:osu:program",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "program and admissions route",
+          "title": "Doctor of Philosophy Program",
+          "url": "https://cse.osu.edu/graduate/graduate/doctor-philosophy-program",
+          "evidence_summary": "Official department page documents the research doctorate and its software engineering, programming languages, systems, and security course categories.",
+          "limitations": "Program structure is discovery evidence; full entry and cycle claims require Stage 3."
+        },
+        {
+          "source_id": "reentry02:osu:fit",
+          "discovery_path": "lab_or_center_signal",
+          "evidence_role": "research fit",
+          "title": "Computer Security Laboratory",
+          "url": "https://cse.osu.edu/computer-security-laboratory",
+          "evidence_summary": "Official lab page identifies current software-security work in binary analysis, rewriting, hardening, vulnerability discovery, fuzzing, systems, AI, and cloud security.",
+          "limitations": "Lab activity does not establish supervision authority or recruiting for the target cycle."
+        },
+        {
+          "source_id": "reentry02:osu:funding",
+          "discovery_path": "underrepresented_route_search",
+          "evidence_role": "preliminary funding",
+          "title": "Funding",
+          "url": "https://cse.osu.edu/prospective-students/graduate/graduate/funding",
+          "evidence_summary": "Department lists graduate associateships and fellowships, most with tuition and fee authorization, stipend, and subsidized health insurance, with PhD-only preference.",
+          "limitations": "The page does not establish that every admitted PhD student receives support or its duration."
+        }
+      ]
+    },
+    {
+      "institution_id": "us:ipeds:196097",
+      "institution_name": "Stony Brook University",
+      "country": "United States",
+      "region": "us",
+      "program_name": "Computer Science PhD",
+      "degree_type": "PhD",
+      "relevant_degree_route": "Research doctorate accepting applicants with a bachelor's degree and required computing preparation",
+      "research_topic_clusters": ["repair_analysis", "systems_security", "trustworthy_ai"],
+      "exact_research_fit_signal": "Current university-hosted research pages show dynamic and static program analysis for security vulnerabilities, reliable systems, compilers, operating systems, and security with recent 2023-2025 work.",
+      "preliminary_international_eligibility": "The current graduate handbook describes MS and PhD Computer Science routes, while published program materials identify bachelor's preparation and international requirements; exact Fall 2027 rules remain unverified.",
+      "preliminary_funding_signal": "Current orientation and handbook materials state that PhD assistantships carry tuition support and that support conditions depend on appointment, standing, and summer advisor funding.",
+      "official_program_url": "https://www.fsl.cs.stonybrook.edu/SBU-CS-Grad-Admissions/",
+      "seed_adjacency": ["TerraProbe-adjacent"],
+      "unresolved_fields": ["Fall 2027 admissions page", "prerequisite equivalency", "offer-specific funding duration", "summer coverage", "current faculty supervision"],
+      "evidence_confidence": "high",
+      "additional_discovery_paths": ["recognized_institution_record", "underrepresented_route_search"],
+      "sources": [
+        {
+          "source_id": "reentry02:stonybrook:program",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "program route",
+          "title": "Stony Brook Computer Science Graduate Admissions Information",
+          "url": "https://www.fsl.cs.stonybrook.edu/SBU-CS-Grad-Admissions/",
+          "evidence_summary": "Official department graduate-admissions resource page provides current Computer Science PhD program and orientation materials.",
+          "limitations": "The resource page is not itself a Fall 2027 application specification."
+        },
+        {
+          "source_id": "reentry02:stonybrook:fit",
+          "discovery_path": "current_faculty_topic_signal",
+          "evidence_role": "current research fit",
+          "title": "Dongyoon Lee - Research",
+          "url": "https://www3.cs.stonybrook.edu/~dongyoon/research.html",
+          "evidence_summary": "University-hosted current faculty page describes compilers, operating systems, security, and dynamic/static program analysis, with recent projects and publications.",
+          "limitations": "The page's recruiting statement must be rechecked in Stage 4 and cannot establish department-wide capacity."
+        },
+        {
+          "source_id": "reentry02:stonybrook:funding",
+          "discovery_path": "underrepresented_route_search",
+          "evidence_role": "preliminary funding",
+          "title": "PhD Program Orientation FA25",
+          "url": "https://www.fsl.cs.stonybrook.edu/SBU-CS-Grad-Admissions/SRC/2025-08-21-SBU-CS-PhD-Program-Orientation-FA25.pdf",
+          "evidence_summary": "Official department orientation states PhD TA/RA appointments include tuition and fee scholarship, with standing and summer-support conditions.",
+          "limitations": "Fall 2025 orientation evidence is not a Fall 2027 offer or guarantee."
+        }
+      ]
+    },
+    {
+      "institution_id": "us:ipeds:110705",
+      "institution_name": "University of California-Santa Barbara",
+      "country": "United States",
+      "region": "us",
+      "program_name": "Computer Science PhD",
+      "degree_type": "PhD",
+      "relevant_degree_route": "Research doctorate open to applicants with a bachelor's degree in a relevant science, engineering, or mathematics discipline",
+      "research_topic_clusters": ["repair_analysis", "systems_security", "ai_for_se"],
+      "exact_research_fit_signal": "The department explicitly lists automated software verification, program analysis, formal methods, language-based security, distributed systems, software engineering, and cloud computing.",
+      "preliminary_international_eligibility": "The graduate overview publishes bachelor's preparation, a 3.0 undergraduate minimum, and international language rules; detailed credential evaluation remains for Stage 3.",
+      "preliminary_funding_signal": "The department says admitted PhD students are typically supported through fee-remitting employment and fellowships, conditional on academic and employment standing; it does not state an unconditional guarantee.",
+      "official_program_url": "https://cs.ucsb.edu/index.php/education/graduate/phd-degree",
+      "seed_adjacency": ["TerraProbe-adjacent"],
+      "unresolved_fields": ["Fall 2027 deadline", "international transcript equivalency", "funding duration and summer coverage", "current faculty supervision"],
+      "evidence_confidence": "high",
+      "additional_discovery_paths": ["recognized_institution_record", "underrepresented_route_search"],
+      "sources": [
+        {
+          "source_id": "reentry02:ucsb:program-funding",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "program, eligibility, and preliminary funding",
+          "title": "Graduate Education",
+          "url": "https://www.cs.ucsb.edu/index.php/education/graduate/overview",
+          "evidence_summary": "Official overview identifies the CS PhD, bachelor's preparation, research areas, international language rules, and typical fee-remitting support.",
+          "limitations": "Typical support is not an unconditional offer; Fall 2027 details remain unverified."
+        },
+        {
+          "source_id": "reentry02:ucsb:degree",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "exact doctorate route",
+          "title": "Doctor of Philosophy Degree",
+          "url": "https://cs.ucsb.edu/index.php/education/graduate/phd-degree",
+          "evidence_summary": "Official degree page documents a research-intensive Computer Science PhD.",
+          "limitations": "Admissions-cycle and offer details require Stage 3 verification."
+        },
+        {
+          "source_id": "reentry02:ucsb:fit",
+          "discovery_path": "lab_or_center_signal",
+          "evidence_role": "research fit",
+          "title": "Research Overview",
+          "url": "https://www.cs.ucsb.edu/research",
+          "evidence_summary": "Department research page explicitly lists automated verification, program analysis, formal methods, language-based security, software engineering, and distributed systems.",
+          "limitations": "Department-level breadth does not establish individual faculty availability."
+        }
+      ]
+    },
+    {
+      "institution_id": "us:ipeds:130943",
+      "institution_name": "University of Delaware",
+      "country": "United States",
+      "region": "us",
+      "program_name": "Computer Science PhD",
+      "degree_type": "PhD",
+      "relevant_degree_route": "Direct doctoral application from a relevant bachelor's degree; a master's is not required",
+      "research_topic_clusters": ["repair_analysis", "systems_security", "ai_for_se", "trustworthy_ai"],
+      "exact_research_fit_signal": "The research-centered CIS graduate program includes computer systems, networks, security, AI/ML, and active doctoral work in software design, analysis, engineering, quality, maintenance, and LLMs.",
+      "preliminary_international_eligibility": "The department explicitly encourages strong bachelor's applicants to apply directly to the PhD and publishes international English requirements; course and major-GPA checks remain.",
+      "preliminary_funding_signal": "Official pages say nearly all doctoral students receive a stipend and full tuition scholarship, while department details clarify that aid is competitive and not automatic.",
+      "official_program_url": "https://www.udel.edu/academics/colleges/grad/prospective-students/programs/computer-science/",
+      "seed_adjacency": ["TerraProbe-adjacent", "Evidex-adjacent"],
+      "unresolved_fields": ["Fall 2027 cycle", "major GPA calculation", "English rule after U.S. bachelor's", "individual funding package", "current faculty supervision"],
+      "evidence_confidence": "high",
+      "additional_discovery_paths": ["recognized_institution_record", "underrepresented_route_search"],
+      "sources": [
+        {
+          "source_id": "reentry02:udel:program-funding",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "program and preliminary funding",
+          "title": "Computer Science",
+          "url": "https://www.udel.edu/academics/colleges/grad/prospective-students/programs/computer-science/",
+          "evidence_summary": "Official graduate-program finder lists the Computer Science PhD, research strengths, current deadlines, and near-universal doctoral stipend and tuition support.",
+          "limitations": "The current cycle and aggregate funding statement do not establish an individual Fall 2027 offer."
+        },
+        {
+          "source_id": "reentry02:udel:admissions",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "entry and funding conditions",
+          "title": "Graduate Admissions",
+          "url": "https://www.cis.udel.edu/academics/graduate-programs/graduate-admissions/",
+          "evidence_summary": "Department confirms direct bachelor's-to-PhD application, academic prerequisites, international testing rules, and competitive assistantship routes.",
+          "limitations": "Meeting minimums does not establish admission plausibility or aid."
+        },
+        {
+          "source_id": "reentry02:udel:fit",
+          "discovery_path": "lab_or_center_signal",
+          "evidence_role": "research fit",
+          "title": "Research Overview",
+          "url": "https://www.cis.udel.edu/research/research-overview/",
+          "evidence_summary": "Department describes a research-centered graduate program spanning AI/ML and computer systems, networks, and security.",
+          "limitations": "Specific faculty-level software-repair and verification matches remain Stage 4 work."
+        }
+      ]
+    },
+    {
+      "institution_id": "us:ipeds:164988",
+      "institution_name": "Boston University",
+      "country": "United States",
+      "region": "us",
+      "program_name": "Computer Science PhD",
+      "degree_type": "PhD",
+      "relevant_degree_route": "Research doctorate with direct graduate-school application; prior master's is not stated as required on the program page",
+      "research_topic_clusters": ["repair_analysis", "systems_security", "trustworthy_ai", "evidence_verification"],
+      "exact_research_fit_signal": "The official CS research organization includes Programming and Verification, Security, Systems, Machine Learning, and related qualifying areas in programming languages and cryptography/security.",
+      "preliminary_international_eligibility": "The official PhD admissions page accepts applications through the Graduate School and provides international application guidance; exact credential and English requirements remain for Stage 3.",
+      "preliminary_funding_signal": "BU states that Charles River Campus PhD programs use a five-year full-funding model covering tuition, mandatory fees, basic health insurance, and stipend for students in good standing.",
+      "official_program_url": "https://www.bu.edu/cs/phd-program/",
+      "seed_adjacency": ["TerraProbe-adjacent", "Evidex-adjacent"],
+      "unresolved_fields": ["bachelor's-entry wording", "international credential equivalency", "program-specific application of full-funding model", "current faculty supervision"],
+      "evidence_confidence": "high",
+      "additional_discovery_paths": ["recognized_institution_record", "underrepresented_route_search"],
+      "sources": [
+        {
+          "source_id": "reentry02:bu:program",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "program route",
+          "title": "PhD Program",
+          "url": "https://www.bu.edu/cs/phd-program/",
+          "evidence_summary": "Official department page identifies a research-intensive Computer Science PhD and its disciplinary breadth.",
+          "limitations": "The page does not by itself resolve international credential requirements."
+        },
+        {
+          "source_id": "reentry02:bu:fit",
+          "discovery_path": "lab_or_center_signal",
+          "evidence_role": "research fit",
+          "title": "Research",
+          "url": "https://www.bu.edu/cs/research-groups/",
+          "evidence_summary": "Official research page identifies Programming and Verification, Security, Systems, and Machine Learning groups.",
+          "limitations": "Group presence does not establish three current strong faculty matches or recruiting."
+        },
+        {
+          "source_id": "reentry02:bu:funding",
+          "discovery_path": "underrepresented_route_search",
+          "evidence_role": "preliminary funding",
+          "title": "PhD Funding",
+          "url": "https://www.bu.edu/cds-faculty/programs-admissions/phd-degree/funding/",
+          "evidence_summary": "Official BU page describes the Charles River Campus five-year full-funding model with tuition, fees, health insurance, and stipend.",
+          "limitations": "Stage 3 must confirm the model's exact application to the CAS Computer Science PhD and offer conditions."
+        }
+      ]
+    },
+    {
+      "institution_id": "us:ipeds:199139",
+      "institution_name": "University of North Carolina at Charlotte",
+      "country": "United States",
+      "region": "us",
+      "program_name": "Computing and Information Systems PhD - Software and Information Systems Track",
+      "degree_type": "PhD",
+      "relevant_degree_route": "Post-baccalaureate research doctorate requiring 72 credits and dissertation research",
+      "research_topic_clusters": ["systems_security", "repair_analysis", "trustworthy_ai"],
+      "exact_research_fit_signal": "The SIS track and research pages identify software engineering, formal methods, security configuration analytics, software and cloud security, reliability, and automated security research.",
+      "preliminary_international_eligibility": "The degree requirements explicitly use a 72-credit post-baccalaureate structure; program-specific international admission requirements remain unverified.",
+      "preliminary_funding_signal": "The department says research and teaching assistant positions are available particularly for PhD students, but no guarantee, duration, or international coverage was found in this discovery pass.",
+      "official_program_url": "https://cci.charlotte.edu/academics/software-and-information-systems/phd-sis-track",
+      "seed_adjacency": ["TerraProbe-adjacent"],
+      "unresolved_fields": ["Fall 2027 application cycle", "international eligibility details", "assistantship guarantee and duration", "current faculty supervision"],
+      "evidence_confidence": "medium",
+      "additional_discovery_paths": ["recognized_institution_record", "underrepresented_route_search"],
+      "sources": [
+        {
+          "source_id": "reentry02:uncc:program",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "exact program route",
+          "title": "Ph.D. in Computing and Information Systems, SIS Track",
+          "url": "https://cci.charlotte.edu/academics/software-and-information-systems/phd-sis-track",
+          "evidence_summary": "Official college page identifies the interdisciplinary CIS PhD Software and Information Systems track and external research funding.",
+          "limitations": "The page does not establish applicant-specific eligibility or assistantship coverage."
+        },
+        {
+          "source_id": "reentry02:uncc:fit",
+          "discovery_path": "lab_or_center_signal",
+          "evidence_role": "research fit",
+          "title": "SIS Research",
+          "url": "https://cci.charlotte.edu/research/sis-research/",
+          "evidence_summary": "Official research page identifies formal methods, security analytics and automation, configuration analysis, software security, cloud security, and reliability topics.",
+          "limitations": "Faculty currency and individual supervision fit remain Stage 4 work."
+        },
+        {
+          "source_id": "reentry02:uncc:funding",
+          "discovery_path": "underrepresented_route_search",
+          "evidence_role": "preliminary funding",
+          "title": "About Software and Information Systems",
+          "url": "https://cci.charlotte.edu/departments/department-of-software-information-systems/about-software-information-systems/",
+          "evidence_summary": "Department says research and teaching assistant positions are available for graduate students, particularly PhD students.",
+          "limitations": "Availability is not a guarantee and coverage, duration, and international eligibility are unstated."
+        }
+      ]
+    },
+    {
+      "institution_id": "us:ipeds:151351",
+      "institution_name": "Indiana University-Bloomington",
+      "country": "United States",
+      "region": "us",
+      "program_name": "Computer Science PhD",
+      "degree_type": "PhD",
+      "relevant_degree_route": "Research doctorate accepting three- or four-year bachelor's credentials, subject to published doctoral GPA eligibility",
+      "research_topic_clusters": ["systems_security", "repair_analysis", "trustworthy_ai"],
+      "exact_research_fit_signal": "Official degree pages identify programming languages, security, software engineering, systems, AI, and machine learning as active doctoral research areas.",
+      "preliminary_international_eligibility": "Luddy states that it considers three- or four-year bachelor's degrees but lists 3.5 or higher for PhD applicants; the applicant's current approximately 3.35 GPA creates an explicit eligibility concern.",
+      "preliminary_funding_signal": "The application provides consideration for financial aid and IU has competitive multi-year recruitment fellowships backed by departmental funding; no department-wide PhD guarantee was found.",
+      "official_program_url": "https://luddy.iu.edu/academics/doctoral/computer-science.html",
+      "seed_adjacency": ["TerraProbe-adjacent", "Evidex-adjacent"],
+      "unresolved_fields": ["3.5 doctoral GPA rule applicability", "Fall 2027 final credential evaluation", "department funding norm and duration", "current faculty supervision"],
+      "evidence_confidence": "high",
+      "additional_discovery_paths": ["recognized_institution_record", "underrepresented_route_search"],
+      "sources": [
+        {
+          "source_id": "reentry02:iu:program-fit",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "program and research fit",
+          "title": "Doctor of Philosophy in Computer Science",
+          "url": "https://luddy.iu.edu/academics/doctoral/computer-science.html",
+          "evidence_summary": "Official program page identifies the CS PhD and research in AI, machine learning, theory, cybersecurity, systems, and programming languages.",
+          "limitations": "The program page does not establish funding or faculty availability."
+        },
+        {
+          "source_id": "reentry02:iu:admissions",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "international and GPA eligibility",
+          "title": "Graduate Admissions",
+          "url": "https://luddy.iu.edu/admissions/graduate/index.html",
+          "evidence_summary": "Luddy admissions page states three- or four-year bachelor's credentials are considered and lists 3.5 or higher for PhD applicants.",
+          "limitations": "The applicant is presently below the published figure; Stage 3 must determine whether it is a hard requirement and how final GPA is evaluated."
+        },
+        {
+          "source_id": "reentry02:iu:funding",
+          "discovery_path": "underrepresented_route_search",
+          "evidence_role": "preliminary funding",
+          "title": "Graduate Recruitment Fellowships",
+          "url": "https://graduate.indiana.edu/funding-professional-dev/funding/recruitment-awards.html",
+          "evidence_summary": "Official graduate-school page describes competitive five-year structures for bachelor's-entry PhD fellowship nominees using university and departmental support.",
+          "limitations": "Competitive nomination funding does not establish routine department funding or applicant receipt."
+        }
+      ]
+    },
+    {
+      "institution_id": "ca:dli:O19361109242",
+      "institution_name": "York University",
+      "country": "Canada",
+      "region": "canada",
+      "program_name": "Computer Science MSc (Thesis Option)",
+      "degree_type": "Thesis or research master's",
+      "relevant_degree_route": "Twenty-month research-intensive MSc thesis option with faculty supervision",
+      "research_topic_clusters": ["repair_analysis", "systems_security", "ai_for_se", "trustworthy_ai"],
+      "exact_research_fit_signal": "York's official program pages identify a thesis MSc and research specializations in software engineering, computer security, systems, AI, and theory of computation.",
+      "preliminary_international_eligibility": "The program publishes an honours Computer Science or equivalent background and a B+ minimum in the final two years; international equivalency requires Stage 3 review.",
+      "preliminary_funding_signal": "Lassonde describes guaranteed competitive packages for qualified thesis/dissertation students and gives an international-student average, while EECS notes offer-specific terms and self-funded admissions can occur.",
+      "official_program_url": "https://lassonde.yorku.ca/eecs/academics/graduate/computer-science-msc/",
+      "seed_adjacency": ["TerraProbe-adjacent", "Evidex-adjacent"],
+      "unresolved_fields": ["Fall 2027 international deadline", "degree equivalency", "net funding after international tuition", "supervisor assignment and current capacity"],
+      "evidence_confidence": "high",
+      "additional_discovery_paths": ["recognized_institution_record", "research_masters_or_scholarship_search", "underrepresented_route_search"],
+      "sources": [
+        {
+          "source_id": "reentry02:york:program",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "exact thesis route",
+          "title": "Computer Science (MSc)",
+          "url": "https://lassonde.yorku.ca/eecs/academics/graduate/computer-science-msc/",
+          "evidence_summary": "Official EECS page documents the MSc Thesis Option, five courses, supervised research, thesis, and defense.",
+          "limitations": "International credential equivalency and final cycle requirements require Stage 3."
+        },
+        {
+          "source_id": "reentry02:york:fit",
+          "discovery_path": "lab_or_center_signal",
+          "evidence_role": "research fit",
+          "title": "Graduate Program in Computer Science",
+          "url": "https://lassonde.yorku.ca/academics/graduate-program-in-computer-science",
+          "evidence_summary": "Official program page lists Software Engineering, Computer Security, Systems, AI, and Theory of Computation specializations.",
+          "limitations": "Research-area presence does not establish current strong faculty depth."
+        },
+        {
+          "source_id": "reentry02:york:funding",
+          "discovery_path": "research_masters_or_scholarship_search",
+          "evidence_role": "preliminary funding",
+          "title": "Financial Information and Awards",
+          "url": "https://lassonde.yorku.ca/eecs/academics/financial-information-awards/",
+          "evidence_summary": "EECS describes competitive full-time master's funding components and international-student bursary support for the nominal funding period.",
+          "limitations": "Offer amounts, net international cost, eligibility, and guarantee wording require reconciliation in Stage 3."
+        }
+      ]
+    },
+    {
+      "institution_id": "ca:dli:O19425660270",
+      "institution_name": "University of Regina",
+      "country": "Canada",
+      "region": "canada",
+      "program_name": "Computer Science MSc (Thesis-Based)",
+      "degree_type": "Thesis or research master's",
+      "relevant_degree_route": "Research MSc requiring thesis research and defense under a supervisor",
+      "research_topic_clusters": ["repair_analysis", "systems_security", "ai_for_se"],
+      "exact_research_fit_signal": "The official program identifies software engineering, systems, communication, cybersecurity, AI/deep learning, and theoretical computer science, with a 15-credit thesis research component.",
+      "preliminary_international_eligibility": "The department publishes a four-year CS bachelor's, 70% overall, and 75% CS average for MSc admission, plus an explicit supervisor requirement for thesis applicants; exact equivalency remains open.",
+      "preliminary_funding_signal": "Official funding guidance lists supervisor research awards and university scholarships but explicitly says supervisor funding is not guaranteed or necessarily continuing.",
+      "official_program_url": "https://www.uregina.ca/academics/programs/science/master-phd-computer-science.html",
+      "seed_adjacency": ["TerraProbe-adjacent"],
+      "unresolved_fields": ["Fall 2027 cycle", "degree and CS-course equivalency", "available supervisor", "funding amount, duration, and net international cost"],
+      "evidence_confidence": "high",
+      "additional_discovery_paths": ["recognized_institution_record", "research_masters_or_scholarship_search", "underrepresented_route_search"],
+      "sources": [
+        {
+          "source_id": "reentry02:regina:program-fit",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "exact thesis route and research fit",
+          "title": "Computer Science (MSc, PhD)",
+          "url": "https://www.uregina.ca/academics/programs/science/master-phd-computer-science.html",
+          "evidence_summary": "Official program page documents the thesis MSc and research in software engineering, systems, cybersecurity, AI, and theory.",
+          "limitations": "The page does not establish supervisor availability or funding."
+        },
+        {
+          "source_id": "reentry02:regina:admissions",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "eligibility and supervision model",
+          "title": "Application Process",
+          "url": "https://www.uregina.ca/science/computer-science/graduate-programs/application-process.html",
+          "evidence_summary": "Department publishes bachelor's preparation, grade thresholds, international pathway, and the requirement to find a thesis supervisor accepting students.",
+          "limitations": "Applicant course equivalency and live supervisor availability remain unresolved."
+        },
+        {
+          "source_id": "reentry02:regina:funding",
+          "discovery_path": "research_masters_or_scholarship_search",
+          "evidence_role": "preliminary funding",
+          "title": "Financial Support and Tuition",
+          "url": "https://www.uregina.ca/science/computer-science/graduate-programs/financial-support-and-tuition.html",
+          "evidence_summary": "Official page lists scholarships and supervisor-funded research awards while explicitly warning that supervisor support is not guaranteed or necessarily continuing.",
+          "limitations": "No credible guaranteed package is established at discovery stage."
+        }
+      ]
+    },
+    {
+      "institution_id": "ror:006hf6230",
+      "institution_name": "University of Twente",
+      "country": "Netherlands",
+      "region": "europe",
+      "program_name": "Computer Science MSc - Software Technology",
+      "degree_type": "Thesis or research master's",
+      "relevant_degree_route": "Two-year 120-EC research-oriented MSc with Software Technology specialization and a 40-EC research-thesis sequence",
+      "research_topic_clusters": ["repair_analysis", "systems_security", "ai_for_se"],
+      "exact_research_fit_signal": "The specialization focuses on software engineering and formal methods, including validation, verification, testing, program analysis, language design, reliable systems, and security.",
+      "preliminary_international_eligibility": "Official international criteria accept an equivalent research-university CS-related bachelor's with specified CS, mathematics, and research credits; transcript mapping and English exemption require Stage 3.",
+      "preliminary_funding_signal": "The UTS is open to excellent non-EU/EEA MSc applicants but is competitive and partial (EUR 3,000-22,000 per year); the university explicitly says recipients must cover remaining costs.",
+      "official_program_url": "https://www.utwente.nl/en/education/master/programmes/computer-science/specialisation/software-technology/",
+      "seed_adjacency": ["TerraProbe-adjacent"],
+      "unresolved_fields": ["international degree equivalency", "research-credit mapping", "English test exemption", "scholarship competitiveness", "remaining international cost", "thesis supervisor fit"],
+      "evidence_confidence": "high",
+      "additional_discovery_paths": ["recognized_institution_record", "research_masters_or_scholarship_search", "underrepresented_route_search"],
+      "sources": [
+        {
+          "source_id": "reentry02:twente:program",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "exact research master's route",
+          "title": "Software Technology",
+          "url": "https://www.utwente.nl/en/education/master/programmes/computer-science/specialisation/software-technology/",
+          "evidence_summary": "Official specialization page identifies software engineering, formal methods, software validation, reliability, and security.",
+          "limitations": "Individual thesis supervision and topic availability remain unverified."
+        },
+        {
+          "source_id": "reentry02:twente:fit",
+          "discovery_path": "lab_or_center_signal",
+          "evidence_role": "research fit",
+          "title": "Formal Methods and Tools",
+          "url": "https://www.utwente.nl/en/eemcs/fmt/",
+          "evidence_summary": "Current FMT page lists static analysis, theorem proving, testing, language design, empirical software engineering, model checking, and reliable-system research.",
+          "limitations": "Research-group strength does not establish a funded thesis place."
+        },
+        {
+          "source_id": "reentry02:twente:eligibility",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "international eligibility",
+          "title": "Applying with an International Degree",
+          "url": "https://www.utwente.nl/en/education/master/programmes/computer-science/admission/admission-international/",
+          "evidence_summary": "Official page states subject, mathematics, research-credit, English, and international application requirements for the CS MSc.",
+          "limitations": "The eligibility check is indicative; the admissions office makes the final decision."
+        },
+        {
+          "source_id": "reentry02:twente:funding",
+          "discovery_path": "research_masters_or_scholarship_search",
+          "evidence_role": "preliminary scholarship",
+          "title": "University of Twente Scholarship",
+          "url": "https://www.utwente.nl/en/education/scholarship-finder/university-of-twente-scholarship/",
+          "evidence_summary": "Official page identifies a competitive non-EU/EEA MSc scholarship of EUR 3,000-22,000 per year and explicitly says it is not full funding.",
+          "limitations": "Applicant top-5-to-10-percent criterion and remaining cost make financial viability uncertain."
+        }
+      ]
+    },
+    {
+      "institution_id": "ror:016xsfp80",
+      "institution_name": "Radboud University Nijmegen",
+      "country": "Netherlands",
+      "region": "europe",
+      "program_name": "Computing Science MSc - Software Science",
+      "degree_type": "Thesis or research master's",
+      "relevant_degree_route": "Two-year 120-EC Computing Science MSc specialization leading to research in software analysis, testing, and formal foundations",
+      "research_topic_clusters": ["repair_analysis", "systems_security", "trustworthy_ai"],
+      "exact_research_fit_signal": "The program and iCIS pages emphasize code analysis and testing, software verification, model checking, functional programming, formal foundations, and mathematically grounded reliable and secure software methods.",
+      "preliminary_international_eligibility": "The official international criteria accept equivalent research-university bachelor's degrees in Computing Science or related areas with substantial mathematics, theory, programming, and thesis preparation; transcript equivalency is unresolved.",
+      "preliminary_funding_signal": "The Radboud Scholarship Programme is available to eligible non-EU/EEA applicants as a competitive partial scholarship; full international-cost coverage is not established.",
+      "official_program_url": "https://www.ru.nl/en/education/masters/software-science",
+      "seed_adjacency": ["TerraProbe-adjacent"],
+      "unresolved_fields": ["international degree equivalency", "theory-credit mapping", "bachelor thesis equivalency", "scholarship competitiveness and amount", "remaining international cost", "thesis supervisor fit"],
+      "evidence_confidence": "high",
+      "additional_discovery_paths": ["recognized_institution_record", "research_masters_or_scholarship_search", "underrepresented_route_search"],
+      "sources": [
+        {
+          "source_id": "reentry02:radboud:program",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "exact research master's route",
+          "title": "Software Science",
+          "url": "https://www.ru.nl/en/education/masters/software-science",
+          "evidence_summary": "Official page identifies the two-year Computing Science MSc specialization focused on code analysis, testing, embedded software, and functional programming.",
+          "limitations": "The route alone does not establish funding or individual thesis fit."
+        },
+        {
+          "source_id": "reentry02:radboud:fit",
+          "discovery_path": "lab_or_center_signal",
+          "evidence_role": "research fit",
+          "title": "Institute for Computing and Information Sciences",
+          "url": "https://www.ru.nl/en/institute-for-computing-and-information-sciences",
+          "evidence_summary": "Official institute page describes formal, mathematically founded specification, design, analysis, and evaluation of software systems across Software Science and Digital Security.",
+          "limitations": "Institute breadth does not establish a specific current supervisor match."
+        },
+        {
+          "source_id": "reentry02:radboud:eligibility",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "international eligibility",
+          "title": "Admission and Application",
+          "url": "https://www.ru.nl/en/education/masters/software-science/admission-and-application",
+          "evidence_summary": "Official page lists international bachelor's equivalency plus mathematics, theory, programming, research-methods, and thesis requirements.",
+          "limitations": "The admissions office must evaluate the applicant's transcript and thesis preparation."
+        },
+        {
+          "source_id": "reentry02:radboud:funding",
+          "discovery_path": "research_masters_or_scholarship_search",
+          "evidence_role": "preliminary scholarship",
+          "title": "Radboud Scholarship Programme",
+          "url": "https://www.ru.nl/en/education/scholarships/radboud-scholarship-programme",
+          "evidence_summary": "Official scholarship page identifies a competitive partial award for eligible non-EU/EEA master's applicants with degrees obtained outside the Netherlands.",
+          "limitations": "Award receipt, exact value, eligible-program status, and remaining international cost require Stage 3 verification."
+        }
+      ]
+    }
+  ]
+}

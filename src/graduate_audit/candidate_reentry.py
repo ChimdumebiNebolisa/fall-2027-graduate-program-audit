@@ -45,6 +45,7 @@ def build_reentry_rows(
     definitions: list[dict[str, object]],
     institutions: dict[str, dict[str, str]],
     reentry_path: str,
+    reentry_id: str = "stage_02_reentry_01",
 ) -> tuple[list[dict[str, str]], list[dict[str, str]]]:
     candidates: list[dict[str, str]] = []
     sources: list[dict[str, str]] = []
@@ -132,7 +133,7 @@ def build_reentry_rows(
                 "unresolved_fields": _pipe(str(value) for value in definition["unresolved_fields"]),
                 "source_record_paths": reentry_path,
                 "source_ids": _pipe(source_ids),
-                "reentry_id": "stage_02_reentry_01",
+                "reentry_id": reentry_id,
             }
         )
     if len({row["program_id"] for row in candidates}) != len(candidates):
@@ -156,6 +157,7 @@ def augment_source_yield(
     baseline: list[dict[str, str]],
     additions: list[dict[str, str]],
     sources: list[dict[str, str]],
+    reentry_label: str = "01",
 ) -> list[dict[str, str]]:
     candidate_counts = Counter()
     for candidate in additions:
@@ -175,16 +177,20 @@ def augment_source_yield(
         row["yield_rate"] = f"{active / contributed:.3f}" if contributed else "0.000"
         row["notes"] = (
             row["notes"].rstrip(". ")
-            + f". Stage 2 re-entry 01 contributed {contribution} exact route(s) from {source_counts[path]} official source record(s)."
+            + f". Stage 2 re-entry {reentry_label} contributed {contribution} exact route(s) "
+            f"from {source_counts[path]} official source record(s)."
         )
         rows.append(row)
     return rows
 
 
 def augment_exclusion_audit(
-    baseline: list[dict[str, str]], additions: list[dict[str, str]]
+    baseline: list[dict[str, str]],
+    additions: list[dict[str, str]],
+    reentry_prefix: str = "reentry01",
+    audit_targets: dict[str, tuple[str, str]] | None = None,
 ) -> list[dict[str, str]]:
-    targets = {
+    targets = audit_targets or {
         "ca:dli:O18781994282": (
             "official_inventory_no_research_computing_route",
             "The original mechanical screen noted a relevant seed but failed to retain an exact official program page.",
@@ -194,14 +200,14 @@ def augment_exclusion_audit(
             "The original bounded screen left the exact route unresolved despite a current official research-master page.",
         ),
     }
-    clean = [row for row in baseline if not row["sample_id"].startswith("reentry01:")]
+    clean = [row for row in baseline if not row["sample_id"].startswith(f"{reentry_prefix}:")]
     by_institution = {row["institution_id"]: row for row in additions}
     for institution_id, (category, rationale) in targets.items():
         candidate = by_institution[institution_id]
         clean.append(
             {
                 "schema_version": PASS2_SCHEMA_VERSION,
-                "sample_id": f"reentry01:{institution_id}",
+                "sample_id": f"{reentry_prefix}:{institution_id}",
                 "region": candidate["region"],
                 "institution_id": institution_id,
                 "institution_name": candidate["institution_name"],
@@ -230,9 +236,18 @@ def write_reentry_outputs(
     output_dir: Path,
     candidates: list[dict[str, str]],
     sources: list[dict[str, str]],
+    filename_suffix: str = "",
 ) -> None:
-    write_csv(output_dir / "stage_02_reentry_candidates.csv", candidates, REENTRY_CANDIDATE_COLUMNS)
-    write_csv(output_dir / "stage_02_reentry_sources.csv", sources, REENTRY_SOURCE_COLUMNS)
+    write_csv(
+        output_dir / f"stage_02_reentry{filename_suffix}_candidates.csv",
+        candidates,
+        REENTRY_CANDIDATE_COLUMNS,
+    )
+    write_csv(
+        output_dir / f"stage_02_reentry{filename_suffix}_sources.csv",
+        sources,
+        REENTRY_SOURCE_COLUMNS,
+    )
 
 
 def validate_reentry(
@@ -240,6 +255,7 @@ def validate_reentry(
     sources: list[dict[str, str]],
     merged: list[dict[str, str]],
     audits: list[dict[str, str]],
+    reentry_prefix: str = "reentry01",
 ) -> dict[str, object]:
     merged_by_id = {row["program_id"]: row for row in merged}
     source_ids = {row["source_id"] for row in sources}
@@ -282,7 +298,9 @@ def validate_reentry(
         ),
         "known_seed_adjacency_retained": all(row["seed_adjacency"] for row in candidates),
         "confirmed_false_negatives_reaudited": sum(
-            row["audit_result"] == "false_negative_corrected" for row in audits
+            row["audit_result"] == "false_negative_corrected"
+            and row["sample_id"].startswith(f"{reentry_prefix}:")
+            for row in audits
         ) >= 2,
         "no_scoring_fields_introduced": all(
             "score" not in column.casefold() for column in CANDIDATE_FUNNEL_COLUMNS_V2
