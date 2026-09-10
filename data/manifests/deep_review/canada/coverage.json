@@ -1,0 +1,45 @@
+{
+  "region": "canada",
+  "phase": "finalist_deep_review",
+  "access_date": "2026-09-09",
+  "scope": {
+    "institutions": 10,
+    "program_routes_reviewed": 20,
+    "deep_program_rows": 13
+  },
+  "route_selection": {
+    "primary_routes": 10,
+    "material_alternates": 3,
+    "alternates": [
+      "Waterloo direct-entry PhD",
+      "UBC PhD Track",
+      "Calgary MSc thesis"
+    ]
+  },
+  "counts": {
+    "deep_programs": 13,
+    "professor_program_matches": 13,
+    "distinct_professors": 10,
+    "source_rows": 48,
+    "admin_contacts": 10,
+    "exclusions_or_downgrades": 10
+  },
+  "recommendations": {
+    "Likely Apply": 6,
+    "Outreach Before Decision": 5,
+    "Investigate Further": 1,
+    "Deprioritize": 1
+  },
+  "known_failures": [
+    "University of Alberta current Computing Science program/funding detail pages were not reliably accessible; route remains Investigate Further.",
+    "University of Toronto Fall 2027 application page is live but the deadline is not yet published.",
+    "Several universities publish recurring deadline day/month without explicitly labeling the Fall 2027 cycle; those rows retain the recurring wording and require recheck.",
+    "McGill, Concordia, and UVic do not publish a current universal numeric MSc funding floor in the reviewed official pages."
+  ],
+  "non_actions": [
+    "No email sent",
+    "No Gmail accessed",
+    "No Calendar accessed or modified",
+    "No application submitted"
+  ]
+}

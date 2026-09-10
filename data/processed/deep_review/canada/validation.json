@@ -1,0 +1,48 @@
+{
+  "validated_at": "2026-09-09",
+  "status": "pass",
+  "checks": {
+    "program_header_exact": true,
+    "professor_header_exact": true,
+    "source_header_exact": true,
+    "exclusion_header_exact": true,
+    "program_ids_unique": true,
+    "ten_institutions_covered": true,
+    "all_program_urls_official_http": true,
+    "all_program_types_valid": true,
+    "all_recommendations_valid": true,
+    "all_admission_plausibility_valid": true,
+    "all_score_components_present": true,
+    "all_research_fit_sums_correct": true,
+    "all_overall_sums_correct": true,
+    "component_scores_within_weights": true,
+    "all_funding_resolved_or_flagged": true,
+    "uncertain_funding_not_retained": true,
+    "all_eligibility_determined": true,
+    "every_program_has_professor_match": true,
+    "all_professor_appointments_checked": true,
+    "all_supervision_capacity_explicit": true,
+    "all_recruiting_statuses_valid": true,
+    "confirmed_recruiting_has_evidence": true,
+    "all_deadline_cycles_labeled": true,
+    "all_exclusions_have_reason_and_source": true,
+    "all_admin_questions_have_official_contact": true,
+    "no_strong_apply_with_unknown_funding": true,
+    "only_explicit_recruiting_is_confirmed": true
+  },
+  "counts": {
+    "deep_programs": 13,
+    "professor_program_matches": 13,
+    "distinct_professors": 10,
+    "source_rows": 48,
+    "admin_contacts": 10,
+    "exclusions_or_downgrades": 10
+  },
+  "failed_checks": [],
+  "limitations": [
+    "University of Alberta current Computing Science program/funding detail pages were not reliably accessible; route remains Investigate Further.",
+    "University of Toronto Fall 2027 application page is live but the deadline is not yet published.",
+    "Several universities publish recurring deadline day/month without explicitly labeling the Fall 2027 cycle; those rows retain the recurring wording and require recheck.",
+    "McGill, Concordia, and UVic do not publish a current universal numeric MSc funding floor in the reviewed official pages."
+  ]
+}
