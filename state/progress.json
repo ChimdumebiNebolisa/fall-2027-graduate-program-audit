@@ -1,6 +1,6 @@
 {
   "project": "fall-2027-graduate-program-audit",
-  "current_phase": "pass2_stage_05_complete",
+  "current_phase": "pass2_stage_06_complete",
   "phases": {
     "foundation": "complete",
     "universe": "complete",
@@ -32,20 +32,21 @@
     "Canada retains 50 explicitly unresolved indexed institutions and 9 blocked/insufficient program pages."
   ],
   "pass2": {
-    "current_stage": 5,
-    "last_completed_stage": 5,
+    "current_stage": 6,
+    "last_completed_stage": 6,
     "stage_status": {
       "0": "complete",
       "1": "complete",
       "2": "complete",
       "3": "complete",
       "4": "complete",
-      "5": "complete"
+      "5": "complete",
+      "6": "complete"
     },
-    "next_stage": 6,
+    "next_stage": 2,
     "next_stage_authorized": true,
     "baseline_commit": "d2e770b2d5dafe25537481f7b83663471e7060fc",
-    "stage_manifest": "data/manifests/pass2/stage_05.json",
+    "stage_manifest": "data/manifests/pass2/stage_06.json",
     "open_issue_count": 17,
     "critical_issue_count": 6,
     "high_issue_count": 9,
@@ -58,7 +59,14 @@
     "stage_04_serious_programs": 45,
     "stage_04_distinct_retained_professors": 25,
     "stage_05_acceptance": "PASS",
-    "stage_05_hard_gate_survivors": 7
+    "stage_05_hard_gate_survivors": 7,
+    "stage_06_acceptance": "PASS",
+    "stage_06_portfolio_decision": "RETURN_TO_CANDIDATE_DISCOVERY",
+    "stage_06_core_count": 0,
+    "stage_06_monitor_count": 7,
+    "stage_02_reentry_required": true,
+    "stage_02_reentry_reason": "Only 0 hard-gate-clearing programs have an evidence-supported Competitive, Plausible, Reach, or Lottery calibration; fewer than 12 core applications are justified.",
+    "forward_stage_after_discovery_reentry": 7
   },
-  "updated_at": "2026-09-10T20:10:23.425303+00:00"
+  "updated_at": "2026-09-10T20:24:04.443426+00:00"
 }

@@ -1,0 +1,165 @@
+{
+  "manifest_version": "1.0",
+  "schema_version": "2.0",
+  "stage": 6,
+  "name": "Construct and pressure-test the application portfolio",
+  "status": "complete",
+  "decision": "PASS",
+  "portfolio_decision": "RETURN_TO_CANDIDATE_DISCOVERY",
+  "next_action": "RETURN_TO_STAGE_2_CANDIDATE_DISCOVERY",
+  "source_commit_before_stage": "389925af42885067749152b1a6c9191b3d9f7c54",
+  "started_at": "2026-09-10T20:24:04.212067+00:00",
+  "completed_at": "2026-09-10T20:24:04.445444+00:00",
+  "inputs": [
+    {
+      "path": "data/manifests/pass2/stage_05.json",
+      "sha256": "8f55c830482d510bd479f97de25ce15f375bee3cc528f4adb4e798a6843b3835",
+      "bytes": 10249,
+      "modified_at": "2026-09-10T20:10:23.737413+00:00",
+      "row_count": null
+    },
+    {
+      "path": "data/processed/pass2/program_scores.csv",
+      "sha256": "6307419d0d1b4ffc76c9a42559e1f84a04b191b933d720968728805dc833984f",
+      "bytes": 63304,
+      "modified_at": "2026-09-10T20:10:22.950844+00:00",
+      "row_count": 45
+    },
+    {
+      "path": "data/processed/pass2/score_evidence.csv",
+      "sha256": "c332f9afe463f9776c63f1cfd8ebe3b15c24f863fa608cd5933348baba7fafc9",
+      "bytes": 135957,
+      "modified_at": "2026-09-10T20:10:22.960316+00:00",
+      "row_count": 270
+    },
+    {
+      "path": "data/processed/pass2/program_verification.csv",
+      "sha256": "d8b5263582025b7d8b97f4939cf40b25f2f5dde2761368f61cc06a4107b79485",
+      "bytes": 4052289,
+      "modified_at": "2026-09-10T19:28:15.223067+00:00",
+      "row_count": 1965
+    }
+  ],
+  "outputs": [
+    {
+      "path": "data/processed/pass2/portfolio.json",
+      "sha256": "9f55b33c5d93ab102aa0db5e4a016c89a47d9050fa0e1d8a6b450fd07fcd31a8",
+      "bytes": 293438,
+      "modified_at": "2026-09-10T20:24:04.436640+00:00",
+      "row_count": null
+    },
+    {
+      "path": "reports/pass2/06_portfolio_pressure_test.md",
+      "sha256": "a6a047f116c372de09f46d11aea039b4ea8326d32a048d84bdafbaddebe420ef",
+      "bytes": 8405,
+      "modified_at": "2026-09-10T20:24:04.441911+00:00",
+      "row_count": null
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "src/graduate_audit/portfolio_pressure.py",
+      "sha256": "ece0b5989f88e9b6919607ba60665cc08e689405bff3c30d1fc6a185c1fe13b4",
+      "bytes": 20792,
+      "modified_at": "2026-09-10T20:18:00.443214+00:00",
+      "row_count": null
+    },
+    {
+      "path": "src/graduate_audit/portfolio.py",
+      "sha256": "26d63ca2f6fc8e6c99a914665df4392a626358f2f2df4244c890c389a032fb1b",
+      "bytes": 7537,
+      "modified_at": "2026-09-10T20:18:43.846590+00:00",
+      "row_count": null
+    },
+    {
+      "path": "scripts/build_stage_06.py",
+      "sha256": "2aa63383512e3ccda370bd7473adbfbbfc0061f5bca525dbe8fdd25e48e006b6",
+      "bytes": 18814,
+      "modified_at": "2026-09-10T20:23:43.457956+00:00",
+      "row_count": null
+    },
+    {
+      "path": "tests/test_portfolio_pressure.py",
+      "sha256": "c66d2de803482134167c860d22a3bc4b754ede4853fd64faf8264a59d92df420",
+      "bytes": 5516,
+      "modified_at": "2026-09-10T20:22:41.003580+00:00",
+      "row_count": null
+    },
+    {
+      "path": "tests/test_portfolio.py",
+      "sha256": "504b964ad722b4e9abcf6a7785da45b9ebfe8deb5609252d0b0aca849cdad6d7",
+      "bytes": 2396,
+      "modified_at": "2026-09-10T20:21:16.828548+00:00",
+      "row_count": null
+    },
+    {
+      "path": "state/progress.json",
+      "sha256": "729fcb615077ba79fcf0903db27e07c0390d5cb88fbaa7ea236e2ee8e6e15172",
+      "bytes": 2649,
+      "modified_at": "2026-09-10T20:24:04.444447+00:00",
+      "row_count": null
+    },
+    {
+      "path": "data/processed/pass2/portfolio.json",
+      "sha256": "9f55b33c5d93ab102aa0db5e4a016c89a47d9050fa0e1d8a6b450fd07fcd31a8",
+      "bytes": 293438,
+      "modified_at": "2026-09-10T20:24:04.436640+00:00",
+      "row_count": null
+    },
+    {
+      "path": "reports/pass2/06_portfolio_pressure_test.md",
+      "sha256": "a6a047f116c372de09f46d11aea039b4ea8326d32a048d84bdafbaddebe420ef",
+      "bytes": 8405,
+      "modified_at": "2026-09-10T20:24:04.441911+00:00",
+      "row_count": null
+    }
+  ],
+  "validation": {
+    "status": "PASS",
+    "assertions": {
+      "all_scored_programs_receive_one_disposition": true,
+      "every_university_has_exactly_one_primary_program": true,
+      "primary_program_selection_uses_evidence_not_prestige": true,
+      "every_program_answers_all_ten_pressure_questions": true,
+      "pressure_test_evidence_ids_resolve": true,
+      "every_active_selection_passes_all_hard_gates": true,
+      "every_hard_gate_survivor_is_preserved": true,
+      "failed_gate_programs_are_do_not_apply": true,
+      "one_active_program_per_university_unless_second_rule_verified": true,
+      "active_second_programs_are_independently_compelling_and_simultaneous_verified": true,
+      "core_is_quality_limited_not_quota_filled": true,
+      "lottery_cap_enforced": true,
+      "lottery_plus_reach_share_within_one_third": true,
+      "plausibility_labels_are_unchanged": true,
+      "insufficient_calibration_returns_to_discovery_instead_of_padding": true,
+      "all_required_preliminary_lists_exist": true,
+      "composition_reports_all_required_dimensions": true,
+      "active_composition_reconciles": true,
+      "all_disposition_composition_reconciles": true
+    }
+  },
+  "counts": {
+    "scored_programs": 45,
+    "universities": 42,
+    "primary_programs": 42,
+    "core": 0,
+    "reserve": 0,
+    "monitor": 7,
+    "do_not_apply": 38,
+    "not_retained_alternates": 0,
+    "active_selections": 7,
+    "hard_gate_survivors": 7,
+    "pressure_test_answers": 450,
+    "lottery_in_core": 0,
+    "stretch_in_core": 0
+  },
+  "failures": [],
+  "blockers": [],
+  "unresolved_coverage": [
+    "No program has evidence adequate for a strategic Competitive, Plausible, Reach, or Lottery calibration; the core remains empty and candidate discovery must resume.",
+    "All 7 monitor programs are single-professor dependencies.",
+    "38 programs fail one or more hard gates.",
+    "Applicant preference among monitor opportunities is not directly verified.",
+    "Offer-specific net funding and application-cost details remain incomplete where recorded."
+  ]
+}

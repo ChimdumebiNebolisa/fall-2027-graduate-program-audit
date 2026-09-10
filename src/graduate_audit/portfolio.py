@@ -57,7 +57,11 @@ def score_programs(
     return programs
 
 
-def select_portfolio(programs: list[dict[str, str]], core_max: int = 20, reserve_max: int = 10) -> dict[str, object]:
+def select_portfolio(
+    programs: list[dict[str, str]],
+    core_max: int = 16,
+    reserve_max: int | None = None,
+) -> dict[str, object]:
     ranked = sorted(
         programs,
         key=lambda row: (_number(row.get("overall_score")), _number(row.get("research_fit_score")), _number(row.get("funding_score"))),
@@ -66,8 +70,11 @@ def select_portfolio(programs: list[dict[str, str]], core_max: int = 20, reserve
     core: list[dict[str, str]] = []
     reserve: list[dict[str, str]] = []
     monitors: list[dict[str, str]] = []
+    do_not_apply: list[dict[str, str]] = []
+    alternates: list[dict[str, str]] = []
     used_institutions: set[str] = set()
-    reach_count = 0
+    pending_stretch_institutions: set[str] = set()
+    stretch_candidates: list[dict[str, str]] = []
 
     for row in ranked:
         recommendation = row.get("recommendation", "")
@@ -85,28 +92,60 @@ def select_portfolio(programs: list[dict[str, str]], core_max: int = 20, reserve
             "biggest_risk": row.get("biggest_risk", ""),
             "unresolved_question": row.get("unresolved_question", ""),
         }
-        if recommendation == "Monitor for 2027 Position":
+        explicit_gate = row.get("all_hard_gates_pass", "").strip().lower()
+        hard_gate_pass = explicit_gate == "true" if explicit_gate else not row.get("hard_gate_failures", "").strip()
+        if not hard_gate_pass or recommendation == "Do Not Apply":
+            do_not_apply.append(summary)
+            continue
+        if recommendation == "Monitor for 2027 Position" or row.get("admission_plausibility") in {
+            "Insufficient evidence", "Eligibility concern", "Clearly ineligible"
+        }:
+            if row.get("institution_id", "") in used_institutions:
+                alternates.append(summary)
+                continue
             monitors.append(summary)
+            used_institutions.add(row.get("institution_id", ""))
             continue
         if recommendation not in {"Strong Apply", "Likely Apply", "Outreach Before Decision"}:
             continue
         institution_id = row.get("institution_id", "")
-        is_reach = row.get("admission_plausibility") == "Reach"
+        if institution_id in used_institutions or institution_id in pending_stretch_institutions:
+            alternates.append(summary)
+            continue
+        is_stretch = row.get("admission_plausibility") in {"Reach", "Lottery", "Plausible to reach"}
         core_eligible = recommendation in {"Strong Apply", "Likely Apply"}
-        if core_eligible and institution_id not in used_institutions and len(core) < core_max and (not is_reach or reach_count < 5):
+        if core_eligible and is_stretch:
+            stretch_candidates.append(summary)
+            pending_stretch_institutions.add(institution_id)
+            continue
+        if core_eligible and len(core) < core_max:
             core.append(summary)
             used_institutions.add(institution_id)
-            reach_count += int(is_reach)
-        elif len(reserve) < reserve_max:
+        elif reserve_max is None or len(reserve) < reserve_max:
             reserve.append(summary)
+            used_institutions.add(institution_id)
+
+    stretch_capacity = min(max(0, core_max - len(core)), len(core) // 2)
+    lottery_count = 0
+    for summary in stretch_candidates:
+        is_lottery = summary["admission_plausibility"] == "Lottery"
+        if len([row for row in core if row["admission_plausibility"] in {"Reach", "Lottery", "Plausible to reach"}]) < stretch_capacity and (not is_lottery or lottery_count < 1):
+            core.append(summary)
+            lottery_count += int(is_lottery)
+        elif reserve_max is None or len(reserve) < reserve_max:
+            reserve.append(summary)
+        used_institutions.add(summary["institution_id"])
 
     return {
         "core": core,
         "reserve": reserve,
         "monitor_for_2027_position": monitors,
+        "do_not_apply": do_not_apply,
+        "not_retained_alternates": alternates,
         "rules": {
-            "core_target": "18-20, never padded",
-            "maximum_reach_in_core": 5,
+            "core_working_range": "12-16, never padded",
+            "maximum_lottery_in_core": 1,
+            "maximum_lottery_plus_reach_share": "one-third",
             "normally_one_program_per_institution": True,
         },
     }

@@ -28,11 +28,11 @@ def test_core_is_not_padded_with_outreach_or_monitor_rows():
     assert len(result["monitor_for_2027_position"]) == 1
 
 
-def test_core_caps_reaches_at_five():
+def test_reaches_do_not_create_a_core_without_non_stretch_programs():
     rows = [program(i, plausibility="Reach") for i in range(10)]
     result = select_portfolio(rows)
-    assert len(result["core"]) == 5
-    assert len(result["reserve"]) == 5
+    assert len(result["core"]) == 0
+    assert len(result["reserve"]) == 10
 
 
 def test_core_uses_one_program_per_institution():
@@ -40,7 +40,8 @@ def test_core_uses_one_program_per_institution():
     second = dict(first, program_id="program:alternate", program_name="Software Engineering", overall_score="80")
     result = select_portfolio([first, second])
     assert len(result["core"]) == 1
-    assert len(result["reserve"]) == 1
+    assert len(result["reserve"]) == 0
+    assert len(result["not_retained_alternates"]) == 1
 
 
 def test_legacy_rows_cannot_be_silently_rescored(tmp_path):
