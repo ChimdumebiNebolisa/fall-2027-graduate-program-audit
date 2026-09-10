@@ -1,0 +1,43 @@
+{
+  "generated_at": "2026-09-09",
+  "status": "pass",
+  "counts": {
+    "deep_programs": 18,
+    "professors": 18,
+    "sources": 80,
+    "admin_contacts": 18,
+    "exclusions_or_downgrades": 18,
+    "immediate_bachelors_entry": 9,
+    "masters_required_future": 6,
+    "research_masters": 0,
+    "position_only_monitor": 3,
+    "fall_2027_eligible_yes": 8,
+    "screening_deep_review": 11,
+    "screening_retained": 0,
+    "screening_excluded": 7,
+    "monitor_for_2027_position": 3
+  },
+  "checks": {
+    "all_program_ids_unique": true,
+    "all_routes_enum_valid": true,
+    "program_columns_exact": true,
+    "professor_columns_exact": true,
+    "source_columns_exact": true,
+    "exclusion_columns_exact": true,
+    "original_12_program_ids_reused": true,
+    "every_program_has_professor_row": true,
+    "every_program_has_admin_contact_route": true,
+    "no_faculty_match_encoded_as_recruiting": true,
+    "no_unfunded_route_retained": true,
+    "position_only_routes_are_monitors": true,
+    "scores_sum_to_components": true
+  },
+  "warnings": [
+    "No route is retained for application because no applicant-specific Fall 2027 full-funding award or salaried position is verified.",
+    "Fall 2027 deadlines or fees not yet published are labelled latest-cycle/not-yet-published; current examples are not projected forward.",
+    "Oxford official course page was discoverable/indexed but intermittently returned access restrictions; claims are conservative and must be rechecked when the 2027/28 application opens.",
+    "UCD official course metadata marks international non-EU suitability 'No'; this conflicts with the presence of a non-EU fee and requires written clarification.",
+    "Only one faculty match per program was retained. Three rows lack an independently selected 2024–26 paper and are marked partial rather than silently inferred."
+  ],
+  "errors": []
+}

@@ -1,0 +1,47 @@
+{
+  "generated_at": "2026-09-09",
+  "scope": "12 Europe screening candidates plus 6 requested institutional seed checks",
+  "artifacts": [
+    {
+      "path": "data/processed/deep_review/europe/deep_programs.csv",
+      "sha256": "fc57797d44aa68a7109f4046a8d8a5537cd958d8bdfeeb647cfa92e4033b25b6",
+      "bytes": 45311
+    },
+    {
+      "path": "data/processed/deep_review/europe/professors.csv",
+      "sha256": "13818535be0beda4098a7237b8f40b347989e5199317b9a2c566b333c4d3c24c",
+      "bytes": 28447
+    },
+    {
+      "path": "data/processed/deep_review/europe/sources.csv",
+      "sha256": "ff50b6739b6194cd1bcf8d4bcdcfaa1283a59769daa7e30b719ebf81ed68e017",
+      "bytes": 53062
+    },
+    {
+      "path": "data/processed/deep_review/europe/admin_contacts.csv",
+      "sha256": "b05079aec54e1b51668b2a30dd9b7e5bffe9bf4f97c4bd693d051c33af12ae0b",
+      "bytes": 5060
+    },
+    {
+      "path": "data/processed/deep_review/europe/exclusion_or_downgrade.csv",
+      "sha256": "137e25f869143c3f826dc966b40e2c87c210b7fd55c9d9136d8cdacff0a9550a",
+      "bytes": 9508
+    },
+    {
+      "path": "data/processed/deep_review/europe/validation.json",
+      "sha256": "946164a492ef28c5ff635232990aa7f62647501b8090f599065a01bda7f60724",
+      "bytes": 1922
+    },
+    {
+      "path": "evidence/deep_review/europe/README.md",
+      "sha256": "5c2dedb75b9b8e2bd49ddf101bd7eb1ca1e3d8d19b6bba457c1f5a439f8c409b",
+      "bytes": 1495
+    },
+    {
+      "path": "evidence/deep_review/europe/source_notes.json",
+      "sha256": "6386761d7f49e41383b7b43b377f766d2fb99ce1fd91c5e603007bb188bcae46",
+      "bytes": 787
+    }
+  ],
+  "generator": "data/manifests/deep_review/europe/build_outputs.py"
+}

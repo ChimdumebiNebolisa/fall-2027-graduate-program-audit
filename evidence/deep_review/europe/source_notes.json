@@ -1,0 +1,19 @@
+{
+  "checked_date": "2026-09-09",
+  "official_source_policy": "Official university, department, careers, or institutional repository pages only for retained claims.",
+  "search_snippets_policy": "Used for discovery/access diagnosis only; CSV claims point to the official destination URL.",
+  "blocked_or_partial": [
+    {
+      "institution": "University of Oxford",
+      "issue": "official course page intermittently access-restricted; recheck at 2027/28 opening"
+    },
+    {
+      "institution": "University College Dublin",
+      "issue": "official course metadata contains internally conflicting non-EU signals"
+    },
+    {
+      "scope": "Fall 2027",
+      "issue": "many continental vacancy-based systems have not posted positions this far ahead"
+    }
+  ]
+}
