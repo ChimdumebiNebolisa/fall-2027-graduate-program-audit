@@ -534,6 +534,86 @@ FACULTY_ROSTERS: dict[str, FacultyRoster] = {
             _c("Samira Khan", "computer systems; reliability; architecture"),
         ),
     ),
+    "Rutgers University-New Brunswick": FacultyRoster(
+        "Department of Computer Science",
+        "https://www.cs.rutgers.edu/people/directory.php?type=faculty",
+        (
+            _c("Shiqing Ma", "software security; program analysis; systems security"),
+            _c("Zheng Zhang", "programming languages; compilers; software systems"),
+            _c("He Zhu", "programming languages; formal methods; software systems"),
+            _c("Ulrich Kremer", "compilers; runtime systems; programming systems"),
+        ),
+    ),
+    "Ohio State University-Main Campus": FacultyRoster(
+        "Department of Computer Science and Engineering",
+        "https://cse.osu.edu/directory/faculty",
+        (
+            _c("Michael Bond", "program analysis; software systems; reliability; security"),
+            _c("Atanas Rountev", "static and dynamic analysis; testing; software evolution"),
+            _c("Carter Yagemann", "systems security; software security; vulnerability analysis"),
+            _c("Neelam Soundarajan", "formal correctness; software engineering; programming languages"),
+        ),
+    ),
+    "Stony Brook University": FacultyRoster(
+        "Department of Computer Science",
+        "https://www.cs.stonybrook.edu/people/faculty",
+        (
+            _c("R. Sekar", "software security; program analysis; systems security"),
+            _c("Y. Annie Liu", "programming languages; verification; distributed systems"),
+            _c("Michalis Polychronakis", "systems security; vulnerability analysis; malware defense"),
+            _c("Erez Zadok", "operating systems; file systems; software reliability"),
+        ),
+    ),
+    "University of California-Santa Barbara": FacultyRoster(
+        "Department of Computer Science",
+        "https://www.cs.ucsb.edu/people/faculty",
+        (
+            _c("Ben Hardekopf", "programming languages; static analysis; software verification"),
+            _c("Giovanni Vigna", "software security; vulnerability analysis; systems security"),
+            _c("Christopher Kruegel", "systems security; program analysis; malware detection"),
+            _c("Chandra Krintz", "programming systems; cloud systems; software performance"),
+        ),
+    ),
+    "University of Delaware": FacultyRoster(
+        "Department of Computer and Information Sciences",
+        "https://www.cis.udel.edu/research/computing-foundations/",
+        (
+            _c("James Clause", "software testing; program analysis; software engineering"),
+            _c("Sunita Chandrasekaran", "parallel programming; compilers; verification"),
+            _c("Xi Peng", "trustworthy AI; explainable AI; software systems"),
+            _c("Austin Cory Bart", "software tools; programming systems; software engineering"),
+        ),
+    ),
+    "Boston University": FacultyRoster(
+        "Department of Computer Science",
+        "https://www.bu.edu/cs/about/people/faculty/",
+        (
+            _c("Marco Gaboardi", "programming languages; program verification; privacy"),
+            _c("Hongwei Xi", "type systems; safe software; programming languages"),
+            _c("Manuel Egele", "software security; program analysis; vulnerability detection"),
+            _c("Gianluca Stringhini", "systems security; abuse detection; trustworthy systems"),
+        ),
+    ),
+    "University of North Carolina at Charlotte": FacultyRoster(
+        "College of Computing and Informatics, Software and Information Systems",
+        "https://cci.charlotte.edu/sis-faculty/",
+        (
+            _c("Meera Sridhar", "language and systems security; formal methods; software assurance"),
+            _c("Rrezarta Krasniqi", "AI for software engineering; software quality; maintenance"),
+            _c("L. Jean Camp", "computer security; privacy; trustworthy systems"),
+            _c("Heather Lipford", "usable security; privacy; secure software design"),
+        ),
+    ),
+    "York University": FacultyRoster(
+        "Department of Electrical Engineering and Computer Science",
+        "https://lassonde.yorku.ca/eecs/academics/graduate/graduate-faculty/",
+        (
+            _c("Song Wang", "AI for software engineering; testing; static analysis"),
+            _c("Maleknaz Nayebi", "empirical software engineering; release engineering; platforms"),
+            _c("Franck van Breugel", "concurrency; formal verification; software semantics"),
+            _c("Marios Fokaefs", "software engineering; cloud systems; service computing"),
+        ),
+    ),
     "Simon Fraser University": FacultyRoster(
         "School of Computing Science",
         "https://www.sfu.ca/fas/computing/people/faculty.html",

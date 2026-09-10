@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import json
 from collections import defaultdict
 from pathlib import Path
 
@@ -24,6 +25,26 @@ def test_roster_configuration_covers_every_serious_institution():
     assert set(FACULTY_ROSTERS) == {row["institution_name"] for row in programs}
     assert all(len(roster.alternatives) == 4 for roster in FACULTY_ROSTERS.values())
     assert all(roster.roster_url.startswith("https://") for roster in FACULTY_ROSTERS.values())
+
+
+def test_reentry_02_evidence_exactly_covers_new_faculty_ready_routes():
+    raw = json.loads(
+        (REPO_ROOT / "data/raw/pass2/stage_04_reentry_02.json").read_text(encoding="utf-8")
+    )
+    newly_ready = {
+        row["candidate_program_id"]
+        for row in _rows("stage_03_reentry_02_verification.csv")
+        if row["faculty_review_ready"] == "yes"
+    }
+    professors = raw["professors"]
+    assert {row["program_id"] for row in professors} == newly_ready
+    assert len(professors) == len(newly_ready) == 8
+    assert all(row["can_supervise_program"].casefold() == "yes" for row in professors)
+    assert all(row["fit_strength"].casefold() == "strong" for row in professors)
+    assert all(row["recent_work_1_url"].startswith("https://") for row in professors)
+    assert all(row["recent_work_1_year"].isdigit() for row in professors)
+    assert all(row["official_email"] for row in professors)
+    assert all(row["recruiting_status"] in RECRUITING_STATUSES for row in professors)
 
 
 def test_every_serious_program_has_five_evaluations_and_at_most_three_retained_matches():
