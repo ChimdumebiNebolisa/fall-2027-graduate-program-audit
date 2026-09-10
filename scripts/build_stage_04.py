@@ -35,6 +35,7 @@ SOURCES_PATH = OUTPUT_DIR / "professor_sources.csv"
 REENTRY_RAW_PATHS = (
     REPO_ROOT / "data/raw/pass2/stage_04_reentry_01.json",
     REPO_ROOT / "data/raw/pass2/stage_04_reentry_02.json",
+    REPO_ROOT / "data/raw/pass2/stage_04_reentry_03.json",
 )
 LATEST_REENTRY_RAW_PATH = REENTRY_RAW_PATHS[-1]
 UNKNOWN = "Not located in bounded Stage 4 review"
@@ -643,9 +644,9 @@ def write_report(result: dict[str, object]) -> None:
         "## Unresolved coverage",
         "",
         (
-            f"- Stage 4 re-entry 02 evaluated {counts['latest_reentry_programs']} newly eligible routes and retained "
+            f"- Stage 4 re-entry 03 evaluated {counts['latest_reentry_programs']} newly eligible routes and retained "
             f"{counts['latest_reentry_retained_match_rows']} fully verified strong lead matches; "
-            f"{counts['latest_reentry_zero_match_programs']} new route remains without a retained match. Across both "
+            f"{counts['latest_reentry_zero_match_programs']} new routes remain without a retained match. Across all three "
             f"re-entry batches, {counts['reentry_retained_match_rows']} of {counts['reentry_programs']} routes have a retained match."
         ),
         "- UVA's strongest bounded fit has a current courtesy Computer Science appointment, but exact Computer Science PhD supervision authority was not verified; the candidate remains unscored and unretained.",
@@ -655,7 +656,7 @@ def write_report(result: dict[str, object]) -> None:
         f"- Official email remains unlocated for {counts['retained_matches_without_official_email']} retained professors and most unretained candidates; no address is guessed.",
         "- Recruiting status remains unknown unless a current direct statement/opening was already verified; publication activity and open labs are not used as recruiting proxies.",
         "- Faculty appointments, supervision rules, and recruiting statements are time-sensitive and require a refresh immediately before outreach or application submission.",
-        "- Stage 5 scoring still covers the prior 55-program roster. Its eight-route coverage gap is intentionally unresolved at this stage boundary and must be rebuilt in Stage 5 re-entry 02.",
+        "- Stage 5 scoring still covers the prior 63-program roster. Its eight-route coverage gap is intentionally unresolved at this stage boundary and must be rebuilt in Stage 5 re-entry 03.",
         "- Stage 5 may use only the 5-point faculty-depth values supported here; it may not resurrect the inflated Pass 1 depth scores.",
         "",
     ]
@@ -695,6 +696,7 @@ def main() -> int:
     stage_status["4"] = "complete" if result["status"] == "PASS" else "failed"
     stage_status["4_reentry_01"] = "complete" if result["status"] == "PASS" else "failed"
     stage_status["4_reentry_02"] = "complete" if result["status"] == "PASS" else "failed"
+    stage_status["4_reentry_03"] = "complete" if result["status"] == "PASS" else "failed"
     pass2.update({
         "current_stage": 4,
         "last_completed_stage": max(int(pass2.get("last_completed_stage", 0)), 4) if result["status"] == "PASS" else 3,
@@ -706,7 +708,7 @@ def main() -> int:
         "stage_04_acceptance": result["status"],
         "stage_04_serious_programs": result["counts"]["serious_programs"],
         "stage_04_distinct_retained_professors": result["counts"]["distinct_retained_professors"],
-        "stage_04_reentry_completed": 2 if result["status"] == "PASS" else 1,
+        "stage_04_reentry_completed": 3 if result["status"] == "PASS" else 2,
         "stage_04_reentry_programs": result["counts"]["latest_reentry_programs"],
         "stage_04_reentry_cumulative_programs": result["counts"]["reentry_programs"],
         "stage_04_reentry_required": False,
@@ -715,7 +717,7 @@ def main() -> int:
     })
     update_progress(
         progress_path,
-        current_phase="pass2_stage_04_complete" if result["status"] == "PASS" else "pass2_stage_04_failed",
+        current_phase="pass2_stage_04_reentry_03_complete" if result["status"] == "PASS" else "pass2_stage_04_reentry_03_failed",
         pass2=pass2,
     )
 
@@ -727,7 +729,7 @@ def main() -> int:
         "Recruiting remains unknown unless supported by a current explicit statement; research activity is not recruiting evidence.",
         "Faculty appointment and recruiting evidence must be refreshed before outreach or submission.",
         "The strongest bounded UVA fit has a courtesy Computer Science appointment, but exact Computer Science PhD supervision authority remains unresolved and no UVA match was retained.",
-        "Stage 5 scoring still covers the prior 55-program roster; all eight new routes remain intentionally absent until Stage 5 re-entry 02 is executed.",
+        "Stage 5 scoring still covers the prior 63-program roster; all eight new routes remain intentionally absent until Stage 5 re-entry 03 is executed.",
     ]
     output_paths = [EVALUATED_PATH, RETAINED_PATH, SOURCES_PATH, REPORT_PATH]
     artifacts = [
@@ -743,8 +745,8 @@ def main() -> int:
         "manifest_version": "1.0",
         "schema_version": PASS2_SCHEMA_VERSION,
         "stage": 4,
-        "run_type": "faculty_reentry_02",
-        "name": "Deep professor and department fit mapping",
+        "run_type": "faculty_reentry_03",
+        "name": "Deep professor and department fit mapping — re-entry 03",
         "status": "complete" if result["status"] == "PASS" else "failed",
         "decision": result["status"],
         "source_commit_before_stage": source_commit,

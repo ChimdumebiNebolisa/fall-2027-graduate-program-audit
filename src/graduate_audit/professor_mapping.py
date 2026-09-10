@@ -624,4 +624,84 @@ FACULTY_ROSTERS: dict[str, FacultyRoster] = {
             _c("Yuepeng Wang", "program synthesis; programming languages; software engineering"),
         ),
     ),
+    "Colorado State University-Fort Collins": FacultyRoster(
+        "Department of Computer Science",
+        "https://compsci.colostate.edu/people/",
+        (
+            _c("Ravi Mangal", "programming languages; program analysis; verification"),
+            _c("Indrakshi Ray", "formal methods; database security; secure software"),
+            _c("Vinayak Prabhu", "formal methods; hybrid systems; verification"),
+            _c("Yashwant Malaiya", "software reliability; testing; vulnerability discovery"),
+        ),
+    ),
+    "University of Central Florida": FacultyRoster(
+        "Department of Computer Science",
+        "https://www.cs.ucf.edu/faculty-directory/",
+        (
+            _c("David Mohaisen", "software and systems security; threat detection; trustworthy systems"),
+            _c("Yan Solihin", "computer architecture; systems security; dependable computing"),
+            _c("Cliff Zou", "network and software security; vulnerability analysis"),
+            _c("Liqiang Wang", "distributed systems; software systems; machine learning"),
+        ),
+    ),
+    "University of Illinois Chicago": FacultyRoster(
+        "Department of Computer Science",
+        "https://cs.uic.edu/cs-research/research-areas-2/",
+        (
+            _c("William Mansky", "formal verification; program logic; software analysis"),
+            _c("Luis Pina", "program analysis; programming languages; software systems"),
+            _c("Ugo Buy", "software analysis; software engineering; formal methods"),
+            _c("Venkat Venkatakrishnan", "software security; program analysis; secure systems"),
+        ),
+    ),
+    "University of Kansas": FacultyRoster(
+        "Department of Electrical Engineering and Computer Science",
+        "https://eecs.ku.edu/faculty",
+        (
+            _c("Drew J. Davidson", "program analysis; secure design; software security"),
+            _c("Hossein Saiedian", "formal methods; secure software engineering; software architecture"),
+            _c("Alexandru Bardas", "cybersecurity; systems security; dependable systems"),
+            _c("Hongyang Sun", "distributed systems; fault tolerance; resilient computing"),
+        ),
+    ),
+    "University of Kentucky": FacultyRoster(
+        "Department of Computer Science",
+        "https://cs.engr.uky.edu/people-4",
+        (
+            _c("A.B. Siddique", "AI for software engineering; code language models; trustworthy NLP"),
+            _c("Zongming Fei", "distributed systems; cybersecurity; cloud computing"),
+            _c("Kenneth L. Calvert", "network security; programmable infrastructure; dependable networks"),
+            _c("Dakshnamoorthy Manivannan", "distributed systems; fault tolerance; software systems"),
+        ),
+    ),
+    "Stevens Institute of Technology": FacultyRoster(
+        "Department of Computer Science",
+        "https://www.stevens.edu/page-minisite-landing/computer-science-department",
+        (
+            _c("David Naumann", "program verification; programming languages; secure software"),
+            _c("William Eiers", "formal methods; quantitative program analysis; verification"),
+            _c("Michael Greenberg", "programming languages; software reliability; program analysis"),
+            _c("Eric Koskinen", "program verification; concurrency; formal methods"),
+        ),
+    ),
+    "University of New Mexico-Main Campus": FacultyRoster(
+        "Department of Computer Science",
+        "https://www.cs.unm.edu/directory/index.html",
+        (
+            _c("Patrick G. Bridges", "fault tolerance; operating systems; large-scale systems"),
+            _c("Afsah Anwar", "distributed systems; cloud computing; dependable systems"),
+            _c("Matthew Lakin", "formal methods; programming languages; verified systems"),
+            _c("Abdullah A. Mueen", "data mining; time-series analysis; reliable analytics"),
+        ),
+    ),
+    "The University of Tennessee-Knoxville": FacultyRoster(
+        "Min H. Kao Department of Electrical Engineering and Computer Science",
+        "https://eecs.utk.edu/faculty/",
+        (
+            _c("Scott Ruoti", "systems security; usable security; web security"),
+            _c("Doowon Kim", "cybersecurity; mobile systems; human-centered security"),
+            _c("Michael Jantz", "compilers; software systems; program optimization"),
+            _c("Qing Charles Cao", "networked systems; cybersecurity; dependable computing"),
+        ),
+    ),
 }
