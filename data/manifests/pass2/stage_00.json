@@ -1,0 +1,2887 @@
+{
+  "stage": 0,
+  "stage_name": "Freeze and diagnose the existing baseline",
+  "decision": "Pass",
+  "status": "complete",
+  "generated_at": "2026-09-10T09:31:10.496716+00:00",
+  "baseline_commit": "d2e770b2d5dafe25537481f7b83663471e7060fc",
+  "baseline_commit_time": "2026-09-10T00:24:01-05:00",
+  "inputs": [
+    {
+      "path": "AGENTS.md",
+      "sha256": "f0027c7e26f10c4a4e350b7eb8df9a1e8458b816d9c58af48314c242011b32b2",
+      "source": "baseline commit"
+    },
+    {
+      "path": "C:\\Users\\Chimdumebi\\Downloads\\PASS_2_EXECUTION_PLAN.md",
+      "sha256": "4e1bf6ff8639bf4088fd89a1268e4d3a8e4319554edfc98d8403945deb3f1ed8",
+      "source": "user-provided execution plan"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "reports/pass2/00_baseline_diagnosis.md",
+      "sha256": "3bdfe3b2c81b56e4ffade2fa2574d3842d7ed22711e6604bd55b963d55be0a3f",
+      "size_bytes": 20801,
+      "row_count": null
+    },
+    {
+      "path": "data/processed/pass2/baseline_issue_register.csv",
+      "sha256": "8f092d74842ef6df4737a02c281db19a8f5f6de56ad76defe39f427ea4553862",
+      "size_bytes": 8056,
+      "row_count": 17
+    },
+    {
+      "path": "state/progress.json",
+      "sha256": "d4744d098f2b591fc1761004e7d2c6ec83857404692be6ceeff0c31380d18931",
+      "size_bytes": 1630,
+      "row_count": null
+    },
+    {
+      "path": "scripts/build_stage_00.py",
+      "sha256": "425363e5585c76a9822389c7fccb6cbfae48651b1eb5f4f83b5375c9aafad8e1",
+      "size_bytes": 47037,
+      "row_count": null
+    },
+    {
+      "path": "data/manifests/pass2/stage_00.json",
+      "sha256": null,
+      "size_bytes": null,
+      "row_count": null,
+      "note": "Manifest does not self-hash."
+    }
+  ],
+  "counts": {
+    "baseline_tracked_files": 169,
+    "workbook_sheets": 11,
+    "artifact_inventory_records": 180,
+    "current_final_outputs_and_reports": 52,
+    "traceable_final_artifacts": 41,
+    "explicitly_non_reproducible_final_artifacts": 11,
+    "open_issues": 17,
+    "critical_issues": 6,
+    "high_issues": 9,
+    "medium_issues": 2,
+    "program_rows": 1880,
+    "scored_programs": 56,
+    "professor_rows": 56,
+    "depth_violations": 56,
+    "unresolved_supervision": 31,
+    "invalid_plausibility": 23,
+    "draft_rows": 15,
+    "draft_contact_unknown": 3,
+    "qa_renders": 11
+  },
+  "classification_counts": {
+    "repairable": 51,
+    "reusable": 71,
+    "superseded": 44,
+    "unverified": 14
+  },
+  "artifact_type_counts": {
+    "contract/configuration": 5,
+    "dataset": 78,
+    "documentation": 13,
+    "manifest": 16,
+    "project file": 34,
+    "report": 4,
+    "script": 34,
+    "source ledger": 12,
+    "validation": 33,
+    "workbook": 1,
+    "workbook sheet": 11
+  },
+  "privacy": {
+    "status": "PASS",
+    "tracked_private_files_other_than_readme": [],
+    "tracked_raw_connected_source_markers": [],
+    "sanitized_connected_context_note": "Calendar comparison and broad contact outcomes are tracked; raw messages/events are not."
+  },
+  "validation": [
+    {
+      "check": "baseline_commit_resolves",
+      "status": "PASS"
+    },
+    {
+      "check": "all_artifacts_classified",
+      "status": "PASS"
+    },
+    {
+      "check": "workbook_sheet_inventory",
+      "status": "PASS",
+      "count": 11
+    },
+    {
+      "check": "final_output_traceability",
+      "status": "PASS",
+      "unmapped": []
+    },
+    {
+      "check": "raw_private_content_not_tracked",
+      "status": "PASS"
+    },
+    {
+      "check": "recommendations_unchanged",
+      "status": "PASS"
+    },
+    {
+      "check": "issue_register_present",
+      "status": "PASS",
+      "rows": 17
+    },
+    {
+      "check": "stage_report_template",
+      "status": "PASS"
+    }
+  ],
+  "blockers": [
+    {
+      "status": "open",
+      "issue_id": "P2-0001",
+      "severity": "critical",
+      "category": "pipeline",
+      "summary": "Seven documented CLI commands only record a phase name and perform no audit work.",
+      "affected_records": "universe; screen; research-fit; verify; score; report; run",
+      "affected_record_count": 7,
+      "evidence": "src/graduate_audit/cli.py:26-40; README.md:10-20",
+      "proposed_repair": "Wire each command to a real stage boundary with explicit inputs, outputs, failures, and row counts.",
+      "stage_owner": "Stage 1",
+      "acceptance_impact": "Blocks the executable-pipeline completion gate."
+    },
+    {
+      "status": "open",
+      "issue_id": "P2-0002",
+      "severity": "critical",
+      "category": "resume",
+      "summary": "run --resume ignores checkpoints and merely registers the run phase.",
+      "affected_records": "graduate-audit run --resume",
+      "affected_record_count": 1,
+      "evidence": "src/graduate_audit/cli.py:24-40; src/graduate_audit/progress.py:17-24",
+      "proposed_repair": "Validate checkpoint manifests and continue from the last valid completed stage.",
+      "stage_owner": "Stage 1",
+      "acceptance_impact": "Blocks resumability and deterministic reconstruction."
+    },
+    {
+      "status": "open",
+      "issue_id": "P2-0003",
+      "severity": "critical",
+      "category": "schema",
+      "summary": "The shared schema lacks the required Pass 2 evidence, confidence, depth, funding-gate, regional-model, rationale, and conflict fields.",
+      "affected_records": "src/graduate_audit/schema.py; config/scoring_rubric.yaml",
+      "affected_record_count": 2,
+      "evidence": "PASS_2_EXECUTION_PLAN.md Stage 1; src/graduate_audit/schema.py:69-84",
+      "proposed_repair": "Version the schema and add the eight required contract areas before migrating data.",
+      "stage_owner": "Stage 1",
+      "acceptance_impact": "Blocks evidence-backed scoring and later stage manifests."
+    },
+    {
+      "status": "open",
+      "issue_id": "P2-0004",
+      "severity": "critical",
+      "category": "scoring",
+      "summary": "Institution/program score components are hard-coded rather than calculated from claim-level evidence.",
+      "affected_records": "US, Canada, and Europe deep-program score maps plus score corrections",
+      "affected_record_count": 56,
+      "evidence": "evidence/deep_review/us/build_deep_review.py:709-747; data/processed/deep_review/canada/build_outputs.py:515-542; data/manifests/deep_review/europe/build_outputs.py:56-83; src/graduate_audit/verify/apply_corrections.py:17-129",
+      "proposed_repair": "Replace constants with anchored component calculations carrying evidence IDs, confidence, reviewer, and verification status.",
+      "stage_owner": "Stage 5",
+      "acceptance_impact": "All current numeric rankings are non-auditable."
+    },
+    {
+      "status": "open",
+      "issue_id": "P2-0005",
+      "severity": "critical",
+      "category": "faculty depth",
+      "summary": "Every scored program receives more than five faculty-depth points despite only one distinct professor row.",
+      "affected_records": "program_screening.csv scored rows",
+      "affected_record_count": 56,
+      "evidence": "outputs/20260909-fall2027-audit/program_screening.csv joined to professor_evidence.csv; evidence/deep_review/us/build_deep_review.py:1233-1235",
+      "proposed_repair": "Evaluate at least five plausible faculty where available, retain genuine matches, deduplicate people, and cap one-match depth at five.",
+      "stage_owner": "Stage 4 + Stage 5",
+      "acceptance_impact": "Inflates department depth and total scores."
+    },
+    {
+      "status": "open",
+      "issue_id": "P2-0006",
+      "severity": "critical",
+      "category": "funding gate",
+      "summary": "The funding hard gate can pass from a retained label, funding score, and any verification text.",
+      "affected_records": "program scoring gate",
+      "affected_record_count": 1880,
+      "evidence": "src/graduate_audit/portfolio.py:84-94",
+      "proposed_repair": "Read funding eligibility, coverage, duration, conditions, and source IDs directly; never use recommendation or score as gate evidence.",
+      "stage_owner": "Stage 1 + Stage 3 + Stage 5",
+      "acceptance_impact": "Can turn unsupported funding into an apply recommendation."
+    }
+  ],
+  "unresolved_coverage": [
+    "European ROR/API coverage is 3,628 of 4,462 reported filtered records (81.31%); 834 records remain unexposed.",
+    "EHESO/ETER returned HTTP 401 and multiple European national-registry pages were blocked.",
+    "Canada retains 50 unresolved indexed institutions and nine blocked/insufficient official program pages.",
+    "The prior mechanical screens are not an exhaustive official-program catalogue crawl.",
+    "Fall 2027 pages, funding awards, and employment vacancies that are not published remain unresolved."
+  ],
+  "recommendations_changed": false,
+  "next_stage": {
+    "number": 1,
+    "authorized": false,
+    "recommendation": "Begin only after explicit user approval."
+  },
+  "artifact_inventory": [
+    {
+      "path": ".gitignore",
+      "artifact_types": [
+        "project file"
+      ],
+      "size_bytes": 666,
+      "sha256": "0ba45d8d8a8ed685f853feebbad5359d77ff31fe27288736626c718c701e5e7d",
+      "row_count": null,
+      "classification": "reusable",
+      "classification_reason": "No Stage 0 defect requires discarding this baseline artifact.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "AGENTS.md",
+      "artifact_types": [
+        "documentation"
+      ],
+      "size_bytes": 812,
+      "sha256": "f0027c7e26f10c4a4e350b7eb8df9a1e8458b816d9c58af48314c242011b32b2",
+      "row_count": null,
+      "classification": "reusable",
+      "classification_reason": "No Stage 0 defect requires discarding this baseline artifact.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "README.md",
+      "artifact_types": [
+        "documentation"
+      ],
+      "size_bytes": 1541,
+      "sha256": "2166ebb55597fce0691791eb3bcdce0156f59a1cfd3510c1fac4288aba63608d",
+      "row_count": null,
+      "classification": "repairable",
+      "classification_reason": "Documents commands that currently register phases instead of running work.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "config/applicant_profile.yaml",
+      "artifact_types": [
+        "contract/configuration"
+      ],
+      "size_bytes": 680,
+      "sha256": "e661b1649f1b48bd75355365c3a7ea945ac449d9d48c5776e3465084b7ef209c",
+      "row_count": null,
+      "classification": "reusable",
+      "classification_reason": "No Stage 0 defect requires discarding this baseline artifact.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "config/geographic_scope.yaml",
+      "artifact_types": [
+        "contract/configuration"
+      ],
+      "size_bytes": 959,
+      "sha256": "5d666d3e6160d7978bfab581136d991a5a28a13a9d1e4f7e719ee2e75d4de48c",
+      "row_count": null,
+      "classification": "reusable",
+      "classification_reason": "No Stage 0 defect requires discarding this baseline artifact.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "config/research_topics.yaml",
+      "artifact_types": [
+        "contract/configuration"
+      ],
+      "size_bytes": 1778,
+      "sha256": "34f45e3b998751d20eb73eb50df329d8cd8147d4bbe6e2805a0c0ebac17142ef",
+      "row_count": null,
+      "classification": "reusable",
+      "classification_reason": "No Stage 0 defect requires discarding this baseline artifact.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "config/scoring_rubric.yaml",
+      "artifact_types": [
+        "contract/configuration"
+      ],
+      "size_bytes": 1182,
+      "sha256": "df3bc75b7c538a5afce80465546f626d8269b2c3308f2ffada373110ac9864c6",
+      "row_count": null,
+      "classification": "repairable",
+      "classification_reason": "Shared contract lacks required Pass 2 evidence/conflict fields or anchors.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "data/manifests/canada/blocked_sources.json",
+      "artifact_types": [
+        "dataset",
+        "manifest",
+        "source ledger"
+      ],
+      "size_bytes": 3784,
+      "sha256": "365d233a9acf6a52a4c4a0a91098402cf24f48d9aa7974d820ae563b1a787a49",
+      "row_count": null,
+      "classification": "reusable",
+      "classification_reason": "Source/provenance evidence is reusable subject to freshness review.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "data/manifests/canada/cicic_snapshot.json",
+      "artifact_types": [
+        "dataset",
+        "manifest"
+      ],
+      "size_bytes": 1112,
+      "sha256": "33722a90849017c889fb26d4fe515401bb6603dfdc18a1131ec1de1d780e7cb5",
+      "row_count": null,
+      "classification": "reusable",
+      "classification_reason": "Provenance or official-page evidence can be rechecked in Pass 2.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "data/manifests/canada/ircc_snapshot.json",
+      "artifact_types": [
+        "dataset",
+        "manifest"
+      ],
+      "size_bytes": 421,
+      "sha256": "e23a2962464f2e2f3d394923e2311070c2dba1cb5a07b9d2f9142337711d921e",
+      "row_count": null,
+      "classification": "reusable",
+      "classification_reason": "Provenance or official-page evidence can be rechecked in Pass 2.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "data/manifests/canada/ror_snapshot.json",
+      "artifact_types": [
+        "dataset",
+        "manifest"
+      ],
+      "size_bytes": 466,
+      "sha256": "dd4bfe22d293b051e51464ee1455bc3e99b7ef88518f68470a1f931ed4653bad",
+      "row_count": null,
+      "classification": "reusable",
+      "classification_reason": "Provenance or official-page evidence can be rechecked in Pass 2.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "data/manifests/deep_review/canada/README.md",
+      "artifact_types": [
+        "manifest",
+        "documentation"
+      ],
+      "size_bytes": 752,
+      "sha256": "464d6f9cb7e05e2c7f8bbf3f4597b03b6a41d3083a17d76175c84cc2929a3877",
+      "row_count": null,
+      "classification": "reusable",
+      "classification_reason": "Provenance or official-page evidence can be rechecked in Pass 2.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "data/manifests/deep_review/canada/coverage.json",
+      "artifact_types": [
+        "dataset",
+        "manifest"
+      ],
+      "size_bytes": 1492,
+      "sha256": "2c385a727904619351bf5efb5ea05b8186c9a75d09cc8fef24187e5f8e79e51a",
+      "row_count": null,
+      "classification": "reusable",
+      "classification_reason": "Provenance or official-page evidence can be rechecked in Pass 2.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "data/manifests/deep_review/europe/build_outputs.py",
+      "artifact_types": [
+        "script",
+        "manifest"
+      ],
+      "size_bytes": 61000,
+      "sha256": "99e608879ebec10de75bd16aa2966a3b719ad87ba5cdf4d1d0740e9d29fe3d41",
+      "row_count": null,
+      "classification": "repairable",
+      "classification_reason": "Contains or consumes a diagnosed Pass 2 contract/gate defect.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "data/manifests/deep_review/europe/manifest.json",
+      "artifact_types": [
+        "dataset",
+        "manifest"
+      ],
+      "size_bytes": 1729,
+      "sha256": "e84df9c1da2396a2c7413f490cf37fcc85a891060047fe15df4026a9b8a097b7",
+      "row_count": null,
+      "classification": "reusable",
+      "classification_reason": "Provenance or official-page evidence can be rechecked in Pass 2.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "data/manifests/deep_review/us/run_manifest.json",
+      "artifact_types": [
+        "dataset",
+        "manifest"
+      ],
+      "size_bytes": 2368,
+      "sha256": "47582d4ed48dbd88031cc3ea336ae0e7b66aef693a4df3039967095b00ff0433",
+      "row_count": null,
+      "classification": "reusable",
+      "classification_reason": "Provenance or official-page evidence can be rechecked in Pass 2.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "data/manifests/europe/blocked_sources.json",
+      "artifact_types": [
+        "dataset",
+        "manifest",
+        "source ledger"
+      ],
+      "size_bytes": 1801,
+      "sha256": "37435cc512cf5eadf6347992848460f5177e01c2e40ece27497541252e52e38d",
+      "row_count": null,
+      "classification": "reusable",
+      "classification_reason": "Source/provenance evidence is reusable subject to freshness review.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "data/manifests/europe/national_registry_checks.json",
+      "artifact_types": [
+        "dataset",
+        "manifest"
+      ],
+      "size_bytes": 48901,
+      "sha256": "306d94540412d804b7add5e3bf5573fa2964b925b81cdcde38d3b6df4adf7908",
+      "row_count": null,
+      "classification": "reusable",
+      "classification_reason": "Provenance or official-page evidence can be rechecked in Pass 2.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "data/manifests/europe/ror_snapshot.json",
+      "artifact_types": [
+        "dataset",
+        "manifest"
+      ],
+      "size_bytes": 1415,
+      "sha256": "cb1da2efb22f20454eb3254bb2febaf1d83749a758cfbae6f590a1156a5133ac",
+      "row_count": null,
+      "classification": "reusable",
+      "classification_reason": "Provenance or official-page evidence can be rechecked in Pass 2.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "data/manifests/openalex_discovery.json",
+      "artifact_types": [
+        "dataset",
+        "manifest"
+      ],
+      "size_bytes": 1434,
+      "sha256": "c030d4459b054574d6ec602d385f1edc1a08332507873f9a20546709aa996b8d",
+      "row_count": null,
+      "classification": "reusable",
+      "classification_reason": "Provenance or official-page evidence can be rechecked in Pass 2.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "data/manifests/us/coverage.json",
+      "artifact_types": [
+        "dataset",
+        "manifest"
+      ],
+      "size_bytes": 5785,
+      "sha256": "9a1694bb18f8a275c9eaa9244dfc74a3ef2368d642eeeb140da150ca5132dcfd",
+      "row_count": null,
+      "classification": "reusable",
+      "classification_reason": "Provenance or official-page evidence can be rechecked in Pass 2.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "data/manifests/us/ipeds_release_manifest.json",
+      "artifact_types": [
+        "dataset",
+        "manifest"
+      ],
+      "size_bytes": 2566,
+      "sha256": "a7dd85877018ad462c80b1d23dbf378219f16c8a6e3df1d3afc04b71f5ece572",
+      "row_count": null,
+      "classification": "reusable",
+      "classification_reason": "Provenance or official-page evidence can be rechecked in Pass 2.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "data/private/README.md",
+      "artifact_types": [
+        "documentation"
+      ],
+      "size_bytes": 209,
+      "sha256": "50d49528e8a14e0a540e1696e52c97d675a716f646080b5bf684efae7d34c5b5",
+      "row_count": null,
+      "classification": "reusable",
+      "classification_reason": "No Stage 0 defect requires discarding this baseline artifact.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "data/processed/deep_review/canada/admin_contacts.csv",
+      "artifact_types": [
+        "dataset"
+      ],
+      "size_bytes": 5354,
+      "sha256": "0e95ee8431fb3f3f02172630a06fde38eebc2c0bf7a991e1fb0acf396b81277c",
+      "row_count": 10,
+      "classification": "repairable",
+      "classification_reason": "Deep-review output includes hard-coded scoring or shallow faculty depth.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "data/processed/deep_review/canada/build_outputs.py",
+      "artifact_types": [
+        "script"
+      ],
+      "size_bytes": 95239,
+      "sha256": "4ce30b86cc01e1081b8fd4e49826531f5122e9a19118dc3e753594746d752635",
+      "row_count": null,
+      "classification": "repairable",
+      "classification_reason": "Contains or consumes a diagnosed Pass 2 contract/gate defect.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "data/processed/deep_review/canada/deep_programs.csv",
+      "artifact_types": [
+        "dataset"
+      ],
+      "size_bytes": 30456,
+      "sha256": "e329b5736d4864d91f4a54e6ce020f88f9858b16b3703ee52d5fa91b664a6004",
+      "row_count": 13,
+      "classification": "repairable",
+      "classification_reason": "Deep-review output includes hard-coded scoring or shallow faculty depth.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "data/processed/deep_review/canada/exclusion_or_downgrade.csv",
+      "artifact_types": [
+        "dataset"
+      ],
+      "size_bytes": 4741,
+      "sha256": "cb5c2436d4f3bb83e1e7d4e953ffbf3e9a2455982ef3e84e7165f18f035d8fbf",
+      "row_count": 10,
+      "classification": "repairable",
+      "classification_reason": "Deep-review output includes hard-coded scoring or shallow faculty depth.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "data/processed/deep_review/canada/professors.csv",
+      "artifact_types": [
+        "dataset"
+      ],
+      "size_bytes": 20244,
+      "sha256": "7e4acfd5f5758bf18be8a134a05b432c88c38603c20694ae0ec5305d1826afe3",
+      "row_count": 13,
+      "classification": "repairable",
+      "classification_reason": "Deep-review output includes hard-coded scoring or shallow faculty depth.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "data/processed/deep_review/canada/sources.csv",
+      "artifact_types": [
+        "dataset",
+        "source ledger"
+      ],
+      "size_bytes": 27489,
+      "sha256": "b7034c2969e9a1b5524d7ff1030157b2f33e2ccb659a3f762bcca37606071b9a",
+      "row_count": 48,
+      "classification": "reusable",
+      "classification_reason": "Prior source evidence is reusable after freshness and claim checks.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "data/processed/deep_review/canada/validation.json",
+      "artifact_types": [
+        "dataset",
+        "validation"
+      ],
+      "size_bytes": 2070,
+      "sha256": "3594c2db1deac647b2a714d1b1b1938c491622032f3af3d82cc98fd3898ffa80",
+      "row_count": null,
+      "classification": "repairable",
+      "classification_reason": "Deep-review output includes hard-coded scoring or shallow faculty depth.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "data/processed/deep_review/europe/admin_contacts.csv",
+      "artifact_types": [
+        "dataset"
+      ],
+      "size_bytes": 5060,
+      "sha256": "b05079aec54e1b51668b2a30dd9b7e5bffe9bf4f97c4bd693d051c33af12ae0b",
+      "row_count": 18,
+      "classification": "repairable",
+      "classification_reason": "Deep-review output includes hard-coded scoring or shallow faculty depth.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "data/processed/deep_review/europe/deep_programs.csv",
+      "artifact_types": [
+        "dataset"
+      ],
+      "size_bytes": 46213,
+      "sha256": "0c25ea7888660b05418fd5243cc034a70ad7cfe4cc266e3e96448de5f25376d6",
+      "row_count": 18,
+      "classification": "repairable",
+      "classification_reason": "Deep-review output includes hard-coded scoring or shallow faculty depth.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "data/processed/deep_review/europe/exclusion_or_downgrade.csv",
+      "artifact_types": [
+        "dataset"
+      ],
+      "size_bytes": 9508,
+      "sha256": "137e25f869143c3f826dc966b40e2c87c210b7fd55c9d9136d8cdacff0a9550a",
+      "row_count": 18,
+      "classification": "repairable",
+      "classification_reason": "Deep-review output includes hard-coded scoring or shallow faculty depth.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "data/processed/deep_review/europe/professors.csv",
+      "artifact_types": [
+        "dataset"
+      ],
+      "size_bytes": 28619,
+      "sha256": "6c43a6c319358ec978a0a35abcd9596d45cf1b4b50c237d46c71d6b1babce406",
+      "row_count": 18,
+      "classification": "repairable",
+      "classification_reason": "Deep-review output includes hard-coded scoring or shallow faculty depth.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "data/processed/deep_review/europe/sources.csv",
+      "artifact_types": [
+        "dataset",
+        "source ledger"
+      ],
+      "size_bytes": 53062,
+      "sha256": "ff50b6739b6194cd1bcf8d4bcdcfaa1283a59769daa7e30b719ebf81ed68e017",
+      "row_count": 80,
+      "classification": "reusable",
+      "classification_reason": "Prior source evidence is reusable after freshness and claim checks.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "data/processed/deep_review/europe/validation.json",
+      "artifact_types": [
+        "dataset",
+        "validation"
+      ],
+      "size_bytes": 1922,
+      "sha256": "946164a492ef28c5ff635232990aa7f62647501b8090f599065a01bda7f60724",
+      "row_count": null,
+      "classification": "repairable",
+      "classification_reason": "Deep-review output includes hard-coded scoring or shallow faculty depth.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "data/processed/deep_review/us/admin_contacts.csv",
+      "artifact_types": [
+        "dataset"
+      ],
+      "size_bytes": 13455,
+      "sha256": "b16e247651a28110ca97bb0f7dba22b486ae1bc49de77e1fd6c5a62cc33828b2",
+      "row_count": 25,
+      "classification": "repairable",
+      "classification_reason": "Deep-review output includes hard-coded scoring or shallow faculty depth.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "data/processed/deep_review/us/deep_programs.csv",
+      "artifact_types": [
+        "dataset"
+      ],
+      "size_bytes": 64618,
+      "sha256": "ba98527c01e7db4403d7b9294c46d41acd1b8649e0ecc98ff2d638cc6a01c657",
+      "row_count": 25,
+      "classification": "repairable",
+      "classification_reason": "Deep-review output includes hard-coded scoring or shallow faculty depth.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "data/processed/deep_review/us/exclusion_or_downgrade.csv",
+      "artifact_types": [
+        "dataset"
+      ],
+      "size_bytes": 4976,
+      "sha256": "7f849a192cf2ba48d24a9782aafee2bed7b1e2afac82abbb77c6ff8db1b2c7c0",
+      "row_count": 9,
+      "classification": "repairable",
+      "classification_reason": "Deep-review output includes hard-coded scoring or shallow faculty depth.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "data/processed/deep_review/us/professors.csv",
+      "artifact_types": [
+        "dataset"
+      ],
+      "size_bytes": 35858,
+      "sha256": "25b996be3056bf3e5b453cc8d0c932c57c0768b016301946753a2eb39b28cfb7",
+      "row_count": 25,
+      "classification": "repairable",
+      "classification_reason": "Deep-review output includes hard-coded scoring or shallow faculty depth.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "data/processed/deep_review/us/sources.csv",
+      "artifact_types": [
+        "dataset",
+        "source ledger"
+      ],
+      "size_bytes": 50445,
+      "sha256": "883593b8b27b343676347e731338ddb353136b0d08d4e43691f2b83bba7ae815",
+      "row_count": 113,
+      "classification": "reusable",
+      "classification_reason": "Prior source evidence is reusable after freshness and claim checks.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "data/processed/deep_review/us/validation.json",
+      "artifact_types": [
+        "dataset",
+        "validation"
+      ],
+      "size_bytes": 2229,
+      "sha256": "0d12b8de21edfbb1990d2df37924690af4d416a4ce729db1fb77a659a36aef9f",
+      "row_count": null,
+      "classification": "repairable",
+      "classification_reason": "Deep-review output includes hard-coded scoring or shallow faculty depth.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "data/processed/openalex_faculty_signals.csv",
+      "artifact_types": [
+        "dataset"
+      ],
+      "size_bytes": 526397,
+      "sha256": "e74cf2dc0c5b7359f35db14f94f0f9b55830e2ea5956e56da6e611f8475ba5be",
+      "row_count": 1000,
+      "classification": "unverified",
+      "classification_reason": "Discovery-only scholarly signal is truncated and is not final evidence.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "data/processed/openalex_institution_signals.csv",
+      "artifact_types": [
+        "dataset"
+      ],
+      "size_bytes": 188443,
+      "sha256": "39912d0ffea243116a19f9bd3bb517dfcfab564f2bb6926c1248cc1522292cdf",
+      "row_count": 300,
+      "classification": "unverified",
+      "classification_reason": "Discovery-only scholarly signal is truncated and is not final evidence.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "data/processed/openalex_query_works.csv",
+      "artifact_types": [
+        "dataset"
+      ],
+      "size_bytes": 566581,
+      "sha256": "772999b5ec04c55ebbc70c4b7ddad40d1d016c8b07e05fcb0a32a6640c823620",
+      "row_count": 2400,
+      "classification": "unverified",
+      "classification_reason": "Discovery-only scholarly signal is truncated and is not final evidence.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "data/processed/regions/canada/README.md",
+      "artifact_types": [
+        "documentation"
+      ],
+      "size_bytes": 727,
+      "sha256": "2759c120d65a840b0894414b7ff3740fb060d961773d1a08b2bae4b197aed653",
+      "row_count": null,
+      "classification": "reusable",
+      "classification_reason": "Regional discovery baseline can seed the Pass 2 candidate funnel.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "data/processed/regions/canada/coverage.json",
+      "artifact_types": [
+        "dataset"
+      ],
+      "size_bytes": 7854,
+      "sha256": "af93ea0167ede31b3ff83a964098b2d1096c3bb87d30438975c9f05a60fdc929",
+      "row_count": null,
+      "classification": "reusable",
+      "classification_reason": "Regional discovery baseline can seed the Pass 2 candidate funnel.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "data/processed/regions/canada/exclusion_log.csv",
+      "artifact_types": [
+        "dataset"
+      ],
+      "size_bytes": 9045,
+      "sha256": "9fef777ac052dc42bf45d9878b3e3afb6fdc78a54e40d9d3af881b7c349ae889",
+      "row_count": 18,
+      "classification": "reusable",
+      "classification_reason": "Regional discovery baseline can seed the Pass 2 candidate funnel.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "data/processed/regions/canada/institution_universe.csv",
+      "artifact_types": [
+        "dataset"
+      ],
+      "size_bytes": 75498,
+      "sha256": "fa55ed2a0e3e62a1af04ad4e95929170ae3b13aa236c5eb842d8a2f48f9f4935",
+      "row_count": 98,
+      "classification": "reusable",
+      "classification_reason": "Regional discovery baseline can seed the Pass 2 candidate funnel.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "data/processed/regions/canada/program_screening.csv",
+      "artifact_types": [
+        "dataset"
+      ],
+      "size_bytes": 38506,
+      "sha256": "a00cc065d468394b8b70170fcbd9a303b4051fe349bfb9aff74bda632e914988",
+      "row_count": 30,
+      "classification": "reusable",
+      "classification_reason": "Regional discovery baseline can seed the Pass 2 candidate funnel.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "data/processed/regions/canada/source_ledger.csv",
+      "artifact_types": [
+        "dataset",
+        "source ledger"
+      ],
+      "size_bytes": 140324,
+      "sha256": "7539ecd93e461679cde74fd01a9284273191757f60eac6633a27252d1afcd204",
+      "row_count": 244,
+      "classification": "reusable",
+      "classification_reason": "Source/provenance evidence is reusable subject to freshness review.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "data/processed/regions/europe/README.md",
+      "artifact_types": [
+        "documentation"
+      ],
+      "size_bytes": 1337,
+      "sha256": "6a0285d0955031de2319c24ea54966cdc067912a7c0b6730927a7860d55c5f91",
+      "row_count": null,
+      "classification": "reusable",
+      "classification_reason": "Regional discovery baseline can seed the Pass 2 candidate funnel.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "data/processed/regions/europe/coverage.json",
+      "artifact_types": [
+        "dataset"
+      ],
+      "size_bytes": 3850,
+      "sha256": "12dff55b161988adddfcf2556c8b70c39599c548e35470aa9040428734bb74b0",
+      "row_count": null,
+      "classification": "reusable",
+      "classification_reason": "Regional discovery baseline can seed the Pass 2 candidate funnel.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "data/processed/regions/europe/exclusion_log.csv",
+      "artifact_types": [
+        "dataset"
+      ],
+      "size_bytes": 1747664,
+      "sha256": "66d9d2043b3acd4fbde940953b5b262eddd2c18435330fe6dde731a1fa9b40b8",
+      "row_count": 3616,
+      "classification": "reusable",
+      "classification_reason": "Regional discovery baseline can seed the Pass 2 candidate funnel.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "data/processed/regions/europe/institution_universe.csv",
+      "artifact_types": [
+        "dataset"
+      ],
+      "size_bytes": 2606179,
+      "sha256": "a9b7983a92defe36b2cae649b7eb1019f5dbab2f37d6132fbedb6bb4534de9a6",
+      "row_count": 3628,
+      "classification": "reusable",
+      "classification_reason": "Regional discovery baseline can seed the Pass 2 candidate funnel.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "data/processed/regions/europe/program_screening.csv",
+      "artifact_types": [
+        "dataset"
+      ],
+      "size_bytes": 21284,
+      "sha256": "45f958bae5cf7bf10ba0a98a372ee16f8a8d95a9ba8620da4585146d835798a3",
+      "row_count": 14,
+      "classification": "reusable",
+      "classification_reason": "Regional discovery baseline can seed the Pass 2 candidate funnel.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "data/processed/regions/europe/source_ledger.csv",
+      "artifact_types": [
+        "dataset",
+        "source ledger"
+      ],
+      "size_bytes": 1908057,
+      "sha256": "9f87822dcc382647f4ae094429615a9786296cc6b7af78ebee0ac22fc1fc5d1a",
+      "row_count": 3675,
+      "classification": "reusable",
+      "classification_reason": "Source/provenance evidence is reusable subject to freshness review.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "data/processed/regions/us/README.md",
+      "artifact_types": [
+        "documentation"
+      ],
+      "size_bytes": 2690,
+      "sha256": "e225f2c838aab2db975169b9ad191d78448a5488de095fec93628d0fea0c6fa4",
+      "row_count": null,
+      "classification": "reusable",
+      "classification_reason": "Regional discovery baseline can seed the Pass 2 candidate funnel.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "data/processed/regions/us/exclusion_log.csv",
+      "artifact_types": [
+        "dataset"
+      ],
+      "size_bytes": 671614,
+      "sha256": "0c572d891e0955be34c0c475775eb65fb9aa1a9555327a419f74bac784c9287d",
+      "row_count": 1428,
+      "classification": "reusable",
+      "classification_reason": "Regional discovery baseline can seed the Pass 2 candidate funnel.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "data/processed/regions/us/institution_universe.csv",
+      "artifact_types": [
+        "dataset"
+      ],
+      "size_bytes": 1727819,
+      "sha256": "8dd1467f5177cdc93457dc49858166e78267911c93064ffcf19d27d13a6d3168",
+      "row_count": 2107,
+      "classification": "reusable",
+      "classification_reason": "Regional discovery baseline can seed the Pass 2 candidate funnel.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "data/processed/regions/us/program_screening.csv",
+      "artifact_types": [
+        "dataset"
+      ],
+      "size_bytes": 1668187,
+      "sha256": "df1d9dc8ddd18bdc9562287ae2131a429e1a32856c003e617d3002080fc0e7d2",
+      "row_count": 1795,
+      "classification": "reusable",
+      "classification_reason": "Regional discovery baseline can seed the Pass 2 candidate funnel.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "data/processed/regions/us/source_ledger.csv",
+      "artifact_types": [
+        "dataset",
+        "source ledger"
+      ],
+      "size_bytes": 5424224,
+      "sha256": "f3952f418531bdb75e63335481e200c65a132dd840466ae7f000f3834fb1b50c",
+      "row_count": 8997,
+      "classification": "reusable",
+      "classification_reason": "Source/provenance evidence is reusable subject to freshness review.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "data/processed/validation/cross_region_ca/build_validation.py",
+      "artifact_types": [
+        "script",
+        "validation"
+      ],
+      "size_bytes": 43636,
+      "sha256": "e02ba926bb3b6735cf7babef6995c178bda053d5bec27eaf8388d9b9a6919163",
+      "row_count": null,
+      "classification": "repairable",
+      "classification_reason": "Validation logic is useful but incomplete against Pass 2 gates.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "data/processed/validation/cross_region_ca/europe_finalist_second_source.csv",
+      "artifact_types": [
+        "dataset",
+        "source ledger",
+        "validation"
+      ],
+      "size_bytes": 22448,
+      "sha256": "ba3ddc7ed446f3df88ad09ad6023d947910e93e8b9a218add4e852a4e3092e4f",
+      "row_count": 18,
+      "classification": "reusable",
+      "classification_reason": "Prior check evidence is reusable but not a current Pass 2 conclusion.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "data/processed/validation/cross_region_ca/exclusion_sample_audit.csv",
+      "artifact_types": [
+        "dataset",
+        "validation"
+      ],
+      "size_bytes": 11635,
+      "sha256": "ba814c0c76507cbc7fe42c8ccd8db523d716b2603ede33fb80b8ccc99a0cc96a",
+      "row_count": 13,
+      "classification": "reusable",
+      "classification_reason": "Prior check evidence is reusable but not a current Pass 2 conclusion.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "data/processed/validation/cross_region_ca/validation.json",
+      "artifact_types": [
+        "dataset",
+        "validation"
+      ],
+      "size_bytes": 4087,
+      "sha256": "958d4732bab3e53f8e1b1757664086b3e3cd5c4589d2e6cb0f77eb328d25fccf",
+      "row_count": null,
+      "classification": "repairable",
+      "classification_reason": "Partial validation cannot be treated as full substantive validation.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "data/processed/validation/cross_region_eu/build_validation.py",
+      "artifact_types": [
+        "script",
+        "validation"
+      ],
+      "size_bytes": 29071,
+      "sha256": "d0b2d9f6fa48ea1f724c514b30a2d8610d62bb55a43470ba18c1442a7f1834df",
+      "row_count": null,
+      "classification": "repairable",
+      "classification_reason": "Validation logic is useful but incomplete against Pass 2 gates.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "data/processed/validation/cross_region_eu/corrections_needed.csv",
+      "artifact_types": [
+        "dataset",
+        "validation"
+      ],
+      "size_bytes": 9356,
+      "sha256": "f978f38a0350e72c46480df01cb7a3556b51a328de00fdc5c40838746376996c",
+      "row_count": 12,
+      "classification": "reusable",
+      "classification_reason": "Prior check evidence is reusable but not a current Pass 2 conclusion.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "data/processed/validation/cross_region_eu/second_source_checks.csv",
+      "artifact_types": [
+        "dataset",
+        "source ledger",
+        "validation"
+      ],
+      "size_bytes": 27843,
+      "sha256": "b3fb7e4198984c023d9d7426a5c7036f91e352200f9d2876ab505c2f5e9e16ae",
+      "row_count": 42,
+      "classification": "reusable",
+      "classification_reason": "Prior check evidence is reusable but not a current Pass 2 conclusion.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "data/processed/validation/cross_region_eu/validation.json",
+      "artifact_types": [
+        "dataset",
+        "validation"
+      ],
+      "size_bytes": 1504,
+      "sha256": "21980f655aca1034ccaa9c8f4f34ca20e5a79476d328bf1ab18e002cc699128d",
+      "row_count": null,
+      "classification": "repairable",
+      "classification_reason": "Partial validation cannot be treated as full substantive validation.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "data/processed/validation/finalists_us/exclusion_sample_checks.csv",
+      "artifact_types": [
+        "dataset",
+        "validation"
+      ],
+      "size_bytes": 3548,
+      "sha256": "ca5d6f8249dcf8b4c54dd8988a30dc50ad3c1a212f15a8c2d875c557d708a29b",
+      "row_count": 5,
+      "classification": "reusable",
+      "classification_reason": "Prior check evidence is reusable but not a current Pass 2 conclusion.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "data/processed/validation/finalists_us/program_checks.csv",
+      "artifact_types": [
+        "dataset",
+        "validation"
+      ],
+      "size_bytes": 16480,
+      "sha256": "4d30aecf7355aed20b1e2ceb4b5a2945884b2d0d7dee6edb44523e35b5276e15",
+      "row_count": 19,
+      "classification": "reusable",
+      "classification_reason": "Prior check evidence is reusable but not a current Pass 2 conclusion.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "data/processed/validation/finalists_us/validation.json",
+      "artifact_types": [
+        "dataset",
+        "validation"
+      ],
+      "size_bytes": 5092,
+      "sha256": "c81985382a70565497495b191422348c3477023d3456e70e05b31233af57c0b9",
+      "row_count": null,
+      "classification": "repairable",
+      "classification_reason": "Partial validation cannot be treated as full substantive validation.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "data/processed/validation/second_source_ledger/sources.csv",
+      "artifact_types": [
+        "dataset",
+        "source ledger",
+        "validation"
+      ],
+      "size_bytes": 73921,
+      "sha256": "9c257c41e66765dfadc2b41737b0407bba9d75a0ea2fa7d1d16e167f41a1c2e2",
+      "row_count": 97,
+      "classification": "reusable",
+      "classification_reason": "Prior check evidence is reusable but not a current Pass 2 conclusion.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "data/raw/README.md",
+      "artifact_types": [
+        "documentation"
+      ],
+      "size_bytes": 242,
+      "sha256": "bac18c4667f7b65f89516b8267ae2dc93dee6e43c3560fbbaf0f10229ecd9301",
+      "row_count": null,
+      "classification": "reusable",
+      "classification_reason": "No Stage 0 defect requires discarding this baseline artifact.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "evidence/deep_review/canada/README.md",
+      "artifact_types": [
+        "documentation"
+      ],
+      "size_bytes": 2501,
+      "sha256": "bbb3206592c9349d05d3dd915d913a966696a2796f6add037a900a1d5a1dc97d",
+      "row_count": null,
+      "classification": "reusable",
+      "classification_reason": "No Stage 0 defect requires discarding this baseline artifact.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "evidence/deep_review/europe/README.md",
+      "artifact_types": [
+        "documentation"
+      ],
+      "size_bytes": 1495,
+      "sha256": "5c2dedb75b9b8e2bd49ddf101bd7eb1ca1e3d8d19b6bba457c1f5a439f8c409b",
+      "row_count": null,
+      "classification": "reusable",
+      "classification_reason": "No Stage 0 defect requires discarding this baseline artifact.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "evidence/deep_review/europe/source_notes.json",
+      "artifact_types": [
+        "dataset"
+      ],
+      "size_bytes": 787,
+      "sha256": "6386761d7f49e41383b7b43b377f766d2fb99ce1fd91c5e603007bb188bcae46",
+      "row_count": null,
+      "classification": "reusable",
+      "classification_reason": "No Stage 0 defect requires discarding this baseline artifact.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "evidence/deep_review/us/build_deep_review.py",
+      "artifact_types": [
+        "script"
+      ],
+      "size_bytes": 136318,
+      "sha256": "27885579f35e0890b5c9430fd2f545813b145c75d829c202d1e42d654d31e851",
+      "row_count": null,
+      "classification": "repairable",
+      "classification_reason": "Contains or consumes a diagnosed Pass 2 contract/gate defect.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "evidence/deep_review/us/verify_deep_review.py",
+      "artifact_types": [
+        "script",
+        "validation"
+      ],
+      "size_bytes": 7278,
+      "sha256": "2320428b917744784e241fadee270ea6400f2c1d7b7c5acda082cd321bba1847",
+      "row_count": null,
+      "classification": "repairable",
+      "classification_reason": "Validation logic is useful but incomplete against Pass 2 gates.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "evidence/programs/canada/official_program_page_checks.json",
+      "artifact_types": [
+        "dataset"
+      ],
+      "size_bytes": 75183,
+      "sha256": "f5a4fb90ca5fe8e8708c967621491b3dc290977af1ca36097d178ad21426dec7",
+      "row_count": null,
+      "classification": "reusable",
+      "classification_reason": "Provenance or official-page evidence can be rechecked in Pass 2.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "evidence/programs/europe/official_program_page_checks.json",
+      "artifact_types": [
+        "dataset"
+      ],
+      "size_bytes": 40455,
+      "sha256": "99749c24218ec9742b8dcd709d84d511300e6881f4d6f25ea0b31cdbc24532e9",
+      "row_count": null,
+      "classification": "reusable",
+      "classification_reason": "Provenance or official-page evidence can be rechecked in Pass 2.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "evidence/programs/us/official_program_verification.csv",
+      "artifact_types": [
+        "dataset"
+      ],
+      "size_bytes": 4294,
+      "sha256": "830683c5f06cb67e6b638e67a22bf2a760f97af5e5b2439cc818a897b3ec6554",
+      "row_count": 9,
+      "classification": "reusable",
+      "classification_reason": "Provenance or official-page evidence can be rechecked in Pass 2.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "evidence/validation/cross_region_ca/README.md",
+      "artifact_types": [
+        "validation",
+        "documentation"
+      ],
+      "size_bytes": 3356,
+      "sha256": "92e11424572376f08df0c489d9234e5416b639f8c87895adfaf805cb681f9b98",
+      "row_count": null,
+      "classification": "reusable",
+      "classification_reason": "Prior check evidence is reusable but not a current Pass 2 conclusion.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "evidence/validation/cross_region_eu/README.md",
+      "artifact_types": [
+        "validation",
+        "documentation"
+      ],
+      "size_bytes": 1132,
+      "sha256": "71ec7c7ec38b4bbc60c670e78ce841e1fbd8d6da9b73bf559608cad38743b855",
+      "row_count": null,
+      "classification": "reusable",
+      "classification_reason": "Prior check evidence is reusable but not a current Pass 2 conclusion.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "evidence/validation/cross_region_eu/method.json",
+      "artifact_types": [
+        "dataset",
+        "validation"
+      ],
+      "size_bytes": 777,
+      "sha256": "cfc996812cad82f7f438b92e4dbc8406903210a09930445d5ba1c67c419a3d8e",
+      "row_count": null,
+      "classification": "reusable",
+      "classification_reason": "Prior check evidence is reusable but not a current Pass 2 conclusion.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "evidence/validation/finalists_us/README.md",
+      "artifact_types": [
+        "validation",
+        "documentation"
+      ],
+      "size_bytes": 1420,
+      "sha256": "b7a4fe8f088a874984f6b87155827208c8495ba425e8d4bd3efe0abf2a961ef2",
+      "row_count": null,
+      "classification": "reusable",
+      "classification_reason": "Prior check evidence is reusable but not a current Pass 2 conclusion.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "evidence/validation/finalists_us/build_validation.py",
+      "artifact_types": [
+        "script",
+        "validation"
+      ],
+      "size_bytes": 34524,
+      "sha256": "a0e98f45278b5496f1741c2dc8399c79642e8d0cf9913f6bd3ef08f9738d6bd7",
+      "row_count": null,
+      "classification": "repairable",
+      "classification_reason": "Validation logic is useful but incomplete against Pass 2 gates.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "evidence/validation/finalists_us/verify_validation.py",
+      "artifact_types": [
+        "script",
+        "validation"
+      ],
+      "size_bytes": 3837,
+      "sha256": "0807c2c23e5045ecf167310310c9d65d933a4e863b8eb42df246d47a0621b642",
+      "row_count": null,
+      "classification": "repairable",
+      "classification_reason": "Validation logic is useful but incomplete against Pass 2 gates.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "outputs/20260909-fall2027-audit/admin_contacts.csv",
+      "artifact_types": [
+        "dataset"
+      ],
+      "size_bytes": 9473,
+      "sha256": "c54241a096733e36b4cddeea9312e31c8a5022d1b32c5f9b7a675590433b1346",
+      "row_count": 53,
+      "classification": "superseded",
+      "classification_reason": "Recommendation-bearing Pass 1 output must not control Pass 2.",
+      "producer": "src/graduate_audit/reporting/outreach.py; src/graduate_audit/finalize.py",
+      "traceability": "tracked producer"
+    },
+    {
+      "path": "outputs/20260909-fall2027-audit/calendar_comparison.csv",
+      "artifact_types": [
+        "dataset"
+      ],
+      "size_bytes": 17574,
+      "sha256": "666e25b70cc1cc2feae2cb32f45a403e2261c23ead95adb06775040d63f3ec31",
+      "row_count": 55,
+      "classification": "superseded",
+      "classification_reason": "Recommendation-bearing Pass 1 output must not control Pass 2.",
+      "producer": "src/graduate_audit/connected_context.py; src/graduate_audit/finalize.py",
+      "traceability": "tracked producer"
+    },
+    {
+      "path": "outputs/20260909-fall2027-audit/exclusion_log.csv",
+      "artifact_types": [
+        "dataset"
+      ],
+      "size_bytes": 2446613,
+      "sha256": "6eb06407dffc4cda9847ea87650d74eff979fa1a9b0d860df3786213553134f6",
+      "row_count": 5099,
+      "classification": "reusable",
+      "classification_reason": "Useful baseline evidence/provenance; claims still require Pass 2 checks.",
+      "producer": "src/graduate_audit/normalize/integrate.py; src/graduate_audit/verify/apply_corrections.py",
+      "traceability": "tracked producer"
+    },
+    {
+      "path": "outputs/20260909-fall2027-audit/final_validation.json",
+      "artifact_types": [
+        "dataset",
+        "validation"
+      ],
+      "size_bytes": 757,
+      "sha256": "99a9f5a306445249551f04527bc4235f9827ba5500ee7fd75c614408e631de8f",
+      "row_count": null,
+      "classification": "repairable",
+      "classification_reason": "Traceable but does not establish all Pass 2 substantive gates.",
+      "producer": "src/graduate_audit/verify/final_validation.py",
+      "traceability": "tracked producer"
+    },
+    {
+      "path": "outputs/20260909-fall2027-audit/graduate_program_audit.xlsx",
+      "artifact_types": [
+        "workbook"
+      ],
+      "size_bytes": 206871,
+      "sha256": "90509c3c4b12528286d8015e5f8618175aebda68d707b95987a4f1211dd2a89d",
+      "row_count": null,
+      "classification": "superseded",
+      "classification_reason": "Recommendation-bearing Pass 1 output must not control Pass 2.",
+      "producer": "scripts/build_workbook.mjs",
+      "traceability": "tracked producer"
+    },
+    {
+      "path": "outputs/20260909-fall2027-audit/institution_universe.csv",
+      "artifact_types": [
+        "dataset"
+      ],
+      "size_bytes": 4409042,
+      "sha256": "683e8cc3dee95b5347c6dc7b7bb45256377a3175b11013db646aeb6eb131b0a2",
+      "row_count": 5833,
+      "classification": "reusable",
+      "classification_reason": "Useful baseline evidence/provenance; claims still require Pass 2 checks.",
+      "producer": "src/graduate_audit/normalize/integrate.py; src/graduate_audit/verify/apply_corrections.py",
+      "traceability": "tracked producer"
+    },
+    {
+      "path": "outputs/20260909-fall2027-audit/outreach_drafts.csv",
+      "artifact_types": [
+        "dataset"
+      ],
+      "size_bytes": 14256,
+      "sha256": "833db3f4ea18759089a1cdad331205b7d95400405b06f7987b471a5de7776e08",
+      "row_count": 15,
+      "classification": "superseded",
+      "classification_reason": "Recommendation-bearing Pass 1 output must not control Pass 2.",
+      "producer": "src/graduate_audit/reporting/outreach.py; src/graduate_audit/finalize.py",
+      "traceability": "tracked producer"
+    },
+    {
+      "path": "outputs/20260909-fall2027-audit/portfolio.json",
+      "artifact_types": [
+        "dataset"
+      ],
+      "size_bytes": 23911,
+      "sha256": "fd1bbb0e6e802f824992fcf2f0eae83844720434a77f04757fc31074657b3500",
+      "row_count": null,
+      "classification": "superseded",
+      "classification_reason": "Recommendation-bearing Pass 1 output must not control Pass 2.",
+      "producer": "src/graduate_audit/portfolio.py; src/graduate_audit/finalize.py",
+      "traceability": "tracked producer"
+    },
+    {
+      "path": "outputs/20260909-fall2027-audit/professor_evidence.csv",
+      "artifact_types": [
+        "dataset"
+      ],
+      "size_bytes": 83873,
+      "sha256": "a02f68de4e15bd436aaca16826ba0b0e43a0ec629e1530cde67b3620bbbc2dc6",
+      "row_count": 56,
+      "classification": "superseded",
+      "classification_reason": "Recommendation-bearing Pass 1 output must not control Pass 2.",
+      "producer": "src/graduate_audit/normalize/integrate.py; src/graduate_audit/reporting/outreach.py; src/graduate_audit/verify/apply_corrections.py",
+      "traceability": "tracked producer"
+    },
+    {
+      "path": "outputs/20260909-fall2027-audit/program_screening.csv",
+      "artifact_types": [
+        "dataset"
+      ],
+      "size_bytes": 2239469,
+      "sha256": "43bb75f33e5cb3b6176880eec833698922070bcff40c462f497fa7a137644896",
+      "row_count": 1880,
+      "classification": "superseded",
+      "classification_reason": "Recommendation-bearing Pass 1 output must not control Pass 2.",
+      "producer": "src/graduate_audit/normalize/integrate.py; src/graduate_audit/portfolio.py; src/graduate_audit/verify/apply_corrections.py; src/graduate_audit/finalize.py",
+      "traceability": "tracked producer"
+    },
+    {
+      "path": "outputs/20260909-fall2027-audit/render_html/calendar_comparison.html",
+      "artifact_types": [
+        "project file"
+      ],
+      "size_bytes": 47752,
+      "sha256": "79e8b5897e9d67eae8b3c85a01032ad787bad7b96f6c2049c896f8e08fc25fd6",
+      "row_count": null,
+      "classification": "superseded",
+      "classification_reason": "Recommendation-bearing Pass 1 output must not control Pass 2.",
+      "producer": "scripts/build_workbook.mjs",
+      "traceability": "tracked producer"
+    },
+    {
+      "path": "outputs/20260909-fall2027-audit/render_html/coverage_dashboard.html",
+      "artifact_types": [
+        "project file"
+      ],
+      "size_bytes": 23288,
+      "sha256": "1432ef24d92ac93a6c440de4d9d63d30380d3d4aa58a7fdbc99253a453149aa1",
+      "row_count": null,
+      "classification": "superseded",
+      "classification_reason": "Recommendation-bearing Pass 1 output must not control Pass 2.",
+      "producer": "scripts/build_workbook.mjs",
+      "traceability": "tracked producer"
+    },
+    {
+      "path": "outputs/20260909-fall2027-audit/render_html/department_and_admin_outreach.html",
+      "artifact_types": [
+        "project file"
+      ],
+      "size_bytes": 95797,
+      "sha256": "ea58440acd43ff8a94b29efff2e727f112e33a8bad7922b34dde7d9b07c00e1f",
+      "row_count": null,
+      "classification": "superseded",
+      "classification_reason": "Recommendation-bearing Pass 1 output must not control Pass 2.",
+      "producer": "scripts/build_workbook.mjs",
+      "traceability": "tracked producer"
+    },
+    {
+      "path": "outputs/20260909-fall2027-audit/render_html/methodology.html",
+      "artifact_types": [
+        "project file"
+      ],
+      "size_bytes": 13866,
+      "sha256": "0609c3af10752588e4e8d7bdadfcb0b4b63e1da2940366d147b4bc17484ec968",
+      "row_count": null,
+      "classification": "superseded",
+      "classification_reason": "Recommendation-bearing Pass 1 output must not control Pass 2.",
+      "producer": "scripts/build_workbook.mjs",
+      "traceability": "tracked producer"
+    },
+    {
+      "path": "outputs/20260909-fall2027-audit/render_html/outreach_drafts.html",
+      "artifact_types": [
+        "project file"
+      ],
+      "size_bytes": 66809,
+      "sha256": "78ccd41ff3a8fbb23b2a425f27d5d317241a6d0ac9aa407ba3876baf00ce5443",
+      "row_count": null,
+      "classification": "superseded",
+      "classification_reason": "Recommendation-bearing Pass 1 output must not control Pass 2.",
+      "producer": "scripts/build_workbook.mjs",
+      "traceability": "tracked producer"
+    },
+    {
+      "path": "outputs/20260909-fall2027-audit/render_html/professor_matches.html",
+      "artifact_types": [
+        "project file"
+      ],
+      "size_bytes": 204531,
+      "sha256": "f9a8ace4d365b9a14234a01b74e595aaf33eb0c05b6c189fcca8a77d7ddc60cb",
+      "row_count": null,
+      "classification": "superseded",
+      "classification_reason": "Recommendation-bearing Pass 1 output must not control Pass 2.",
+      "producer": "scripts/build_workbook.mjs",
+      "traceability": "tracked producer"
+    },
+    {
+      "path": "outputs/20260909-fall2027-audit/render_html/school_summary.html",
+      "artifact_types": [
+        "project file"
+      ],
+      "size_bytes": 128169,
+      "sha256": "b4297f748a4db8b8e5dc8888bcb3d388606fdfb8c044cb84fc6188b294ec9c8a",
+      "row_count": null,
+      "classification": "superseded",
+      "classification_reason": "Recommendation-bearing Pass 1 output must not control Pass 2.",
+      "producer": "scripts/build_workbook.mjs",
+      "traceability": "tracked producer"
+    },
+    {
+      "path": "outputs/20260909-fall2027-audit/render_html/schools_and_programs.html",
+      "artifact_types": [
+        "project file"
+      ],
+      "size_bytes": 276543,
+      "sha256": "1ba96613b85d5fa1105d5f064cda5b0aaa7207007274fd1d9b0980d109be80ee",
+      "row_count": null,
+      "classification": "superseded",
+      "classification_reason": "Recommendation-bearing Pass 1 output must not control Pass 2.",
+      "producer": "scripts/build_workbook.mjs",
+      "traceability": "tracked producer"
+    },
+    {
+      "path": "outputs/20260909-fall2027-audit/render_html/screening_and_exclusions.html",
+      "artifact_types": [
+        "project file"
+      ],
+      "size_bytes": 73306,
+      "sha256": "dcbcfe1d1502616484cf59177259bd6345effadcd9b86c3e915a6f764a69f500",
+      "row_count": null,
+      "classification": "superseded",
+      "classification_reason": "Recommendation-bearing Pass 1 output must not control Pass 2.",
+      "producer": "scripts/build_workbook.mjs",
+      "traceability": "tracked producer"
+    },
+    {
+      "path": "outputs/20260909-fall2027-audit/render_html/sources.html",
+      "artifact_types": [
+        "project file"
+      ],
+      "size_bytes": 109832,
+      "sha256": "466efd6ac8058c03c73b814f305f8c4f73412636f3d111740ce33b20c00639e2",
+      "row_count": null,
+      "classification": "superseded",
+      "classification_reason": "Recommendation-bearing Pass 1 output must not control Pass 2.",
+      "producer": "scripts/build_workbook.mjs",
+      "traceability": "tracked producer"
+    },
+    {
+      "path": "outputs/20260909-fall2027-audit/render_html/this_weekend_outreach_queue.html",
+      "artifact_types": [
+        "project file"
+      ],
+      "size_bytes": 96113,
+      "sha256": "dfaff5f55d150f8245e85ed4fdc11890419de6a3fe7f47ef9465161fe7375c44",
+      "row_count": null,
+      "classification": "superseded",
+      "classification_reason": "Recommendation-bearing Pass 1 output must not control Pass 2.",
+      "producer": "scripts/build_workbook.mjs",
+      "traceability": "tracked producer"
+    },
+    {
+      "path": "outputs/20260909-fall2027-audit/renders/calendar_comparison.png",
+      "artifact_types": [
+        "project file"
+      ],
+      "size_bytes": 122626,
+      "sha256": "8d7cbaff89428e22cf05e344a3bcdcdd22d37456ed3411d9ccd05e08136d8617",
+      "row_count": null,
+      "classification": "superseded",
+      "classification_reason": "Recommendation-bearing Pass 1 output must not control Pass 2.",
+      "producer": "scripts/build_workbook.mjs",
+      "traceability": "tracked producer"
+    },
+    {
+      "path": "outputs/20260909-fall2027-audit/renders/coverage_dashboard.png",
+      "artifact_types": [
+        "project file"
+      ],
+      "size_bytes": 78897,
+      "sha256": "63a117a592763108c95bfc0b375fc424bcf62fb0ef1cd467a966b9114e54550a",
+      "row_count": null,
+      "classification": "superseded",
+      "classification_reason": "Recommendation-bearing Pass 1 output must not control Pass 2.",
+      "producer": "scripts/build_workbook.mjs",
+      "traceability": "tracked producer"
+    },
+    {
+      "path": "outputs/20260909-fall2027-audit/renders/department_and_admin_outreach.png",
+      "artifact_types": [
+        "project file"
+      ],
+      "size_bytes": 122949,
+      "sha256": "a5fa4f4c51553011d5858a06fdb55fa0b5a520c7bf6e5301848f336309882bd4",
+      "row_count": null,
+      "classification": "superseded",
+      "classification_reason": "Recommendation-bearing Pass 1 output must not control Pass 2.",
+      "producer": "scripts/build_workbook.mjs",
+      "traceability": "tracked producer"
+    },
+    {
+      "path": "outputs/20260909-fall2027-audit/renders/methodology.png",
+      "artifact_types": [
+        "project file"
+      ],
+      "size_bytes": 77502,
+      "sha256": "cca7b3fc021e29a950e8c9bd75928bb4faf2191bf18aed84171118677b3ab5e2",
+      "row_count": null,
+      "classification": "superseded",
+      "classification_reason": "Recommendation-bearing Pass 1 output must not control Pass 2.",
+      "producer": "scripts/build_workbook.mjs",
+      "traceability": "tracked producer"
+    },
+    {
+      "path": "outputs/20260909-fall2027-audit/renders/outreach_drafts.png",
+      "artifact_types": [
+        "project file"
+      ],
+      "size_bytes": 456144,
+      "sha256": "d0d3e7c151ebcfda45233badec41902352f33b24f8fec6a2955eb763019e39db",
+      "row_count": null,
+      "classification": "superseded",
+      "classification_reason": "Recommendation-bearing Pass 1 output must not control Pass 2.",
+      "producer": "scripts/build_workbook.mjs",
+      "traceability": "tracked producer"
+    },
+    {
+      "path": "outputs/20260909-fall2027-audit/renders/professor_matches.png",
+      "artifact_types": [
+        "project file"
+      ],
+      "size_bytes": 336111,
+      "sha256": "055fca46fdca153669ff7b004a7410e4df9064e15584a0fe4bf534b50875907e",
+      "row_count": null,
+      "classification": "superseded",
+      "classification_reason": "Recommendation-bearing Pass 1 output must not control Pass 2.",
+      "producer": "scripts/build_workbook.mjs",
+      "traceability": "tracked producer"
+    },
+    {
+      "path": "outputs/20260909-fall2027-audit/renders/qa/calendar_comparison.png",
+      "artifact_types": [
+        "project file"
+      ],
+      "size_bytes": 119717,
+      "sha256": "97e3e5d871595ac1e76bec0cc6b268aafd2eae169fd78a3e192a691bbfc4826c",
+      "row_count": null,
+      "classification": "unverified",
+      "classification_reason": "No tracked producer recreates this QA snapshot.",
+      "producer": "No tracked command writes renders/qa; preserved visual-review snapshot",
+      "traceability": "explicitly non-reproducible"
+    },
+    {
+      "path": "outputs/20260909-fall2027-audit/renders/qa/coverage_dashboard.png",
+      "artifact_types": [
+        "project file"
+      ],
+      "size_bytes": 76148,
+      "sha256": "1db861759d8b1d0e91f746b39dbadfb85812331a126795242592536da2d3f9e8",
+      "row_count": null,
+      "classification": "unverified",
+      "classification_reason": "No tracked producer recreates this QA snapshot.",
+      "producer": "No tracked command writes renders/qa; preserved visual-review snapshot",
+      "traceability": "explicitly non-reproducible"
+    },
+    {
+      "path": "outputs/20260909-fall2027-audit/renders/qa/department_and_admin_outreach.png",
+      "artifact_types": [
+        "project file"
+      ],
+      "size_bytes": 119432,
+      "sha256": "b209739f8d05e355c6830b5554f39e009be0b1950d8461435c20fcb2907e2949",
+      "row_count": null,
+      "classification": "unverified",
+      "classification_reason": "No tracked producer recreates this QA snapshot.",
+      "producer": "No tracked command writes renders/qa; preserved visual-review snapshot",
+      "traceability": "explicitly non-reproducible"
+    },
+    {
+      "path": "outputs/20260909-fall2027-audit/renders/qa/methodology.png",
+      "artifact_types": [
+        "project file"
+      ],
+      "size_bytes": 74976,
+      "sha256": "9da8a8173f72b123cbf6905bf09a85556ac8f92554bcdab6eb24d48960c60822",
+      "row_count": null,
+      "classification": "unverified",
+      "classification_reason": "No tracked producer recreates this QA snapshot.",
+      "producer": "No tracked command writes renders/qa; preserved visual-review snapshot",
+      "traceability": "explicitly non-reproducible"
+    },
+    {
+      "path": "outputs/20260909-fall2027-audit/renders/qa/outreach_drafts.png",
+      "artifact_types": [
+        "project file"
+      ],
+      "size_bytes": 176387,
+      "sha256": "13f5eec6ae9ca79ac75a6b3003dd5de36a47ab244354b1e2fae7211f01d8abe0",
+      "row_count": null,
+      "classification": "unverified",
+      "classification_reason": "No tracked producer recreates this QA snapshot.",
+      "producer": "No tracked command writes renders/qa; preserved visual-review snapshot",
+      "traceability": "explicitly non-reproducible"
+    },
+    {
+      "path": "outputs/20260909-fall2027-audit/renders/qa/professor_matches.png",
+      "artifact_types": [
+        "project file"
+      ],
+      "size_bytes": 144165,
+      "sha256": "80218a8dfe8c03eca041c397afe4a255268c1d01540dceec8bfd49e6512c9c6c",
+      "row_count": null,
+      "classification": "unverified",
+      "classification_reason": "No tracked producer recreates this QA snapshot.",
+      "producer": "No tracked command writes renders/qa; preserved visual-review snapshot",
+      "traceability": "explicitly non-reproducible"
+    },
+    {
+      "path": "outputs/20260909-fall2027-audit/renders/qa/school_summary.png",
+      "artifact_types": [
+        "project file"
+      ],
+      "size_bytes": 163812,
+      "sha256": "1cd8c3b72373dd2665581572846863606d9d0ad7b90d1e58300e71019b7ee172",
+      "row_count": null,
+      "classification": "unverified",
+      "classification_reason": "No tracked producer recreates this QA snapshot.",
+      "producer": "No tracked command writes renders/qa; preserved visual-review snapshot",
+      "traceability": "explicitly non-reproducible"
+    },
+    {
+      "path": "outputs/20260909-fall2027-audit/renders/qa/schools_and_programs.png",
+      "artifact_types": [
+        "project file"
+      ],
+      "size_bytes": 118677,
+      "sha256": "fc9031d72c1a75ed263d328d0a7cbe8838f3583ccdacbe2407c6fdcb803e9a4f",
+      "row_count": null,
+      "classification": "unverified",
+      "classification_reason": "No tracked producer recreates this QA snapshot.",
+      "producer": "No tracked command writes renders/qa; preserved visual-review snapshot",
+      "traceability": "explicitly non-reproducible"
+    },
+    {
+      "path": "outputs/20260909-fall2027-audit/renders/qa/screening_and_exclusions.png",
+      "artifact_types": [
+        "project file"
+      ],
+      "size_bytes": 158359,
+      "sha256": "6fd893e409835ed402244d9b1bdc1a46404d7edd6d6cdd2cc1ccd63a6708a16c",
+      "row_count": null,
+      "classification": "unverified",
+      "classification_reason": "No tracked producer recreates this QA snapshot.",
+      "producer": "No tracked command writes renders/qa; preserved visual-review snapshot",
+      "traceability": "explicitly non-reproducible"
+    },
+    {
+      "path": "outputs/20260909-fall2027-audit/renders/qa/sources.png",
+      "artifact_types": [
+        "project file"
+      ],
+      "size_bytes": 135814,
+      "sha256": "8c92bfa2817d319f87b2767d4d2d18a0ea4e206ee4b5c16319bf5f5a50204c7c",
+      "row_count": null,
+      "classification": "unverified",
+      "classification_reason": "No tracked producer recreates this QA snapshot.",
+      "producer": "No tracked command writes renders/qa; preserved visual-review snapshot",
+      "traceability": "explicitly non-reproducible"
+    },
+    {
+      "path": "outputs/20260909-fall2027-audit/renders/qa/this_weekend_outreach_queue.png",
+      "artifact_types": [
+        "project file"
+      ],
+      "size_bytes": 136921,
+      "sha256": "5efbebbc5041a6c2f653966213f0c03461b22705271614b3f11296a05e04e5d4",
+      "row_count": null,
+      "classification": "unverified",
+      "classification_reason": "No tracked producer recreates this QA snapshot.",
+      "producer": "No tracked command writes renders/qa; preserved visual-review snapshot",
+      "traceability": "explicitly non-reproducible"
+    },
+    {
+      "path": "outputs/20260909-fall2027-audit/renders/school_summary.png",
+      "artifact_types": [
+        "project file"
+      ],
+      "size_bytes": 275242,
+      "sha256": "75486803db12c59c1f70064defcec6f7670743bc391059123e7cb5fe03a17f93",
+      "row_count": null,
+      "classification": "superseded",
+      "classification_reason": "Recommendation-bearing Pass 1 output must not control Pass 2.",
+      "producer": "scripts/build_workbook.mjs",
+      "traceability": "tracked producer"
+    },
+    {
+      "path": "outputs/20260909-fall2027-audit/renders/schools_and_programs.png",
+      "artifact_types": [
+        "project file"
+      ],
+      "size_bytes": 440839,
+      "sha256": "3a2f91731a289ee146fe591698a476ec7397ae192dc8ee3b8305935fdfdd095b",
+      "row_count": null,
+      "classification": "superseded",
+      "classification_reason": "Recommendation-bearing Pass 1 output must not control Pass 2.",
+      "producer": "scripts/build_workbook.mjs",
+      "traceability": "tracked producer"
+    },
+    {
+      "path": "outputs/20260909-fall2027-audit/renders/screening_and_exclusions.png",
+      "artifact_types": [
+        "project file"
+      ],
+      "size_bytes": 162812,
+      "sha256": "a576beb7206b7dacdef9d9a0d3a4d88794ab9ef5043c7d26b90b205d96a50726",
+      "row_count": null,
+      "classification": "superseded",
+      "classification_reason": "Recommendation-bearing Pass 1 output must not control Pass 2.",
+      "producer": "scripts/build_workbook.mjs",
+      "traceability": "tracked producer"
+    },
+    {
+      "path": "outputs/20260909-fall2027-audit/renders/sources.png",
+      "artifact_types": [
+        "project file"
+      ],
+      "size_bytes": 156187,
+      "sha256": "b44a2cdc579434c0dd48e98f4c14ee4e6125d8508a8f8dbd86792777a3ea1d31",
+      "row_count": null,
+      "classification": "superseded",
+      "classification_reason": "Recommendation-bearing Pass 1 output must not control Pass 2.",
+      "producer": "scripts/build_workbook.mjs",
+      "traceability": "tracked producer"
+    },
+    {
+      "path": "outputs/20260909-fall2027-audit/renders/this_weekend_outreach_queue.png",
+      "artifact_types": [
+        "project file"
+      ],
+      "size_bytes": 140474,
+      "sha256": "5c89c404c9fad972d27e2a2d9599b96eea2dd11c7aca16bcd40d45e971715e95",
+      "row_count": null,
+      "classification": "superseded",
+      "classification_reason": "Recommendation-bearing Pass 1 output must not control Pass 2.",
+      "producer": "scripts/build_workbook.mjs",
+      "traceability": "tracked producer"
+    },
+    {
+      "path": "outputs/20260909-fall2027-audit/run_manifest.json",
+      "artifact_types": [
+        "dataset",
+        "manifest"
+      ],
+      "size_bytes": 92653,
+      "sha256": "2dc65a011d66f530e2939714525f198ec704e8ebe71c68ad37172b59abd80cb9",
+      "row_count": null,
+      "classification": "repairable",
+      "classification_reason": "Traceable but does not establish all Pass 2 substantive gates.",
+      "producer": "src/graduate_audit/normalize/integrate.py; src/graduate_audit/finalize.py; src/graduate_audit/verify/final_validation.py",
+      "traceability": "tracked producer"
+    },
+    {
+      "path": "outputs/20260909-fall2027-audit/source_ledger.csv",
+      "artifact_types": [
+        "dataset",
+        "source ledger"
+      ],
+      "size_bytes": 7675944,
+      "sha256": "e024f529b335948ab10b1db50d815161e1a8756f812fa9c6a8086c48d0fedeac",
+      "row_count": 13254,
+      "classification": "reusable",
+      "classification_reason": "Useful baseline evidence/provenance; claims still require Pass 2 checks.",
+      "producer": "src/graduate_audit/normalize/integrate.py; src/graduate_audit/verify/apply_corrections.py",
+      "traceability": "tracked producer"
+    },
+    {
+      "path": "outputs/20260909-fall2027-audit/validation.json",
+      "artifact_types": [
+        "dataset",
+        "validation"
+      ],
+      "size_bytes": 231,
+      "sha256": "b4b1d1eb2e7d2cd7c5663bb255b9de69d9f037b418e7711b56ddf9c5de95cc30",
+      "row_count": null,
+      "classification": "repairable",
+      "classification_reason": "Traceable but does not establish all Pass 2 substantive gates.",
+      "producer": "src/graduate_audit/validation.py; src/graduate_audit/finalize.py",
+      "traceability": "tracked producer"
+    },
+    {
+      "path": "outputs/20260909-fall2027-audit/workbook_formula_error_scan.ndjson",
+      "artifact_types": [
+        "dataset",
+        "validation"
+      ],
+      "size_bytes": 60,
+      "sha256": "acc0111e19cf44d2753fc9ecd164bf1b27fbd65597463a25cf48bd1c65e90146",
+      "row_count": null,
+      "classification": "repairable",
+      "classification_reason": "Traceable but does not establish all Pass 2 substantive gates.",
+      "producer": "scripts/build_workbook.mjs",
+      "traceability": "tracked producer"
+    },
+    {
+      "path": "outputs/20260909-fall2027-audit/workbook_inspection.ndjson",
+      "artifact_types": [
+        "dataset",
+        "validation"
+      ],
+      "size_bytes": 15738,
+      "sha256": "62d50cf0baf02e19446fec469c884602dee44986c5461634750dcc029e8ab6e0",
+      "row_count": null,
+      "classification": "repairable",
+      "classification_reason": "Traceable but does not establish all Pass 2 substantive gates.",
+      "producer": "scripts/build_workbook.mjs",
+      "traceability": "tracked producer"
+    },
+    {
+      "path": "pyproject.toml",
+      "artifact_types": [
+        "contract/configuration"
+      ],
+      "size_bytes": 619,
+      "sha256": "3126f33ae233ccd9974f17a45f4becea84ee7f4fc77dd289f4ae3f7b21856d0d",
+      "row_count": null,
+      "classification": "reusable",
+      "classification_reason": "No Stage 0 defect requires discarding this baseline artifact.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "reports/20260909-fall2027-audit/coverage_report.md",
+      "artifact_types": [
+        "report"
+      ],
+      "size_bytes": 4322,
+      "sha256": "5c00af8f7200e24e5ca6659577b95a96b0c486c14751eece3536610df08c3ad6",
+      "row_count": null,
+      "classification": "superseded",
+      "classification_reason": "Pass 1 decision/report text is preserved only as a baseline.",
+      "producer": "src/graduate_audit/reporting/reports.py",
+      "traceability": "tracked producer"
+    },
+    {
+      "path": "reports/20260909-fall2027-audit/final_shortlist.md",
+      "artifact_types": [
+        "report"
+      ],
+      "size_bytes": 35122,
+      "sha256": "c715604de28deb7844bbc8ac54ed9a63f67749d847098c53a968cb06f1121406",
+      "row_count": null,
+      "classification": "superseded",
+      "classification_reason": "Pass 1 decision/report text is preserved only as a baseline.",
+      "producer": "src/graduate_audit/reporting/reports.py",
+      "traceability": "tracked producer"
+    },
+    {
+      "path": "reports/20260909-fall2027-audit/methodology.md",
+      "artifact_types": [
+        "report"
+      ],
+      "size_bytes": 2812,
+      "sha256": "7c716119edacc1556672a2e052dbd4cf125df89c0c160c04da99025d3e67e20a",
+      "row_count": null,
+      "classification": "superseded",
+      "classification_reason": "Pass 1 decision/report text is preserved only as a baseline.",
+      "producer": "src/graduate_audit/reporting/reports.py",
+      "traceability": "tracked producer"
+    },
+    {
+      "path": "reports/20260909-fall2027-audit/strategic_findings.md",
+      "artifact_types": [
+        "report"
+      ],
+      "size_bytes": 2680,
+      "sha256": "ac838ba017628b7ce5aa0b54c5216fb96ad06cdcbee8234212aa858c3310f65d",
+      "row_count": null,
+      "classification": "superseded",
+      "classification_reason": "Pass 1 decision/report text is preserved only as a baseline.",
+      "producer": "src/graduate_audit/reporting/reports.py",
+      "traceability": "tracked producer"
+    },
+    {
+      "path": "scripts/build_workbook.mjs",
+      "artifact_types": [
+        "script"
+      ],
+      "size_bytes": 31130,
+      "sha256": "36297df8760a492bfff7ced20a78a86cadf4bd711894c87c9132c9d3218e85e9",
+      "row_count": null,
+      "classification": "repairable",
+      "classification_reason": "Contains or consumes a diagnosed Pass 2 contract/gate defect.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "src/graduate_audit/__init__.py",
+      "artifact_types": [
+        "script"
+      ],
+      "size_bytes": 68,
+      "sha256": "dc9e4bfb3189cda083dec6711d5e69c3ed9511b5b6a936c8cc237cb3ca58dafb",
+      "row_count": null,
+      "classification": "reusable",
+      "classification_reason": "No Stage 0 defect requires discarding this baseline artifact.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "src/graduate_audit/__main__.py",
+      "artifact_types": [
+        "script"
+      ],
+      "size_bytes": 53,
+      "sha256": "27a18af7a46b5106a5a373de4654e3a3e762a874e639acd758eed3dccf5edbf0",
+      "row_count": null,
+      "classification": "reusable",
+      "classification_reason": "No Stage 0 defect requires discarding this baseline artifact.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "src/graduate_audit/cli.py",
+      "artifact_types": [
+        "script"
+      ],
+      "size_bytes": 1458,
+      "sha256": "9490269b770ffddaf03edc31e6c2165a259047f8a3136cef3350c0ad851bcd98",
+      "row_count": null,
+      "classification": "repairable",
+      "classification_reason": "Contains or consumes a diagnosed Pass 2 contract/gate defect.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "src/graduate_audit/connected_context.py",
+      "artifact_types": [
+        "script"
+      ],
+      "size_bytes": 4499,
+      "sha256": "458e5c6693c3c59998d0823df1ae290e5885ba9a754035a30ac31ea188ab6227",
+      "row_count": null,
+      "classification": "reusable",
+      "classification_reason": "No Stage 0 defect requires discarding this baseline artifact.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "src/graduate_audit/finalize.py",
+      "artifact_types": [
+        "script"
+      ],
+      "size_bytes": 7711,
+      "sha256": "4bda7efee042f3fcae534760126ef03a599d9b31b1d001dd584b516d9c73d884",
+      "row_count": null,
+      "classification": "repairable",
+      "classification_reason": "Contains or consumes a diagnosed Pass 2 contract/gate defect.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "src/graduate_audit/ingest/canada.py",
+      "artifact_types": [
+        "script"
+      ],
+      "size_bytes": 44971,
+      "sha256": "5e37f183c08e04ee88b4213b67d6cbb3b76b70e80743369742acc9fc4205a423",
+      "row_count": null,
+      "classification": "reusable",
+      "classification_reason": "No Stage 0 defect requires discarding this baseline artifact.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "src/graduate_audit/ingest/europe.py",
+      "artifact_types": [
+        "script"
+      ],
+      "size_bytes": 43729,
+      "sha256": "94bee3a393e905de7a523149d0665e20f0d37a0d1412333d762573fdac8521ac",
+      "row_count": null,
+      "classification": "reusable",
+      "classification_reason": "No Stage 0 defect requires discarding this baseline artifact.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "src/graduate_audit/ingest/us.py",
+      "artifact_types": [
+        "script"
+      ],
+      "size_bytes": 39002,
+      "sha256": "a368573cc00f15f57d272831316c4bdea2b6c29e381651b2f4dee70f4dd9d280",
+      "row_count": null,
+      "classification": "reusable",
+      "classification_reason": "No Stage 0 defect requires discarding this baseline artifact.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "src/graduate_audit/io.py",
+      "artifact_types": [
+        "script"
+      ],
+      "size_bytes": 1517,
+      "sha256": "b31d4bb38e274d7ef4fbf6b27df84104f295f909660ff7d5a106762911ffd4cb",
+      "row_count": null,
+      "classification": "reusable",
+      "classification_reason": "No Stage 0 defect requires discarding this baseline artifact.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "src/graduate_audit/normalize/integrate.py",
+      "artifact_types": [
+        "script"
+      ],
+      "size_bytes": 8438,
+      "sha256": "39c987177e43842584ed0161c969b4e9b483bb3893db9131a1b199b0add4be38",
+      "row_count": null,
+      "classification": "reusable",
+      "classification_reason": "No Stage 0 defect requires discarding this baseline artifact.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "src/graduate_audit/portfolio.py",
+      "artifact_types": [
+        "script"
+      ],
+      "size_bytes": 8105,
+      "sha256": "b3acaea3fb728581179d1a7a5d9242760503cffa43b323c9f8a8cba5e960c1c8",
+      "row_count": null,
+      "classification": "repairable",
+      "classification_reason": "Contains or consumes a diagnosed Pass 2 contract/gate defect.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "src/graduate_audit/progress.py",
+      "artifact_types": [
+        "script"
+      ],
+      "size_bytes": 717,
+      "sha256": "fc29abe89d74b10cc61121548e5c13b460938e9024cea60bfdcbc36f69eef32a",
+      "row_count": null,
+      "classification": "repairable",
+      "classification_reason": "Contains or consumes a diagnosed Pass 2 contract/gate defect.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "src/graduate_audit/reporting/__init__.py",
+      "artifact_types": [
+        "script"
+      ],
+      "size_bytes": 39,
+      "sha256": "5cbfc829eb2fb019dbe9b324ba1a35d9d9237c49d51782e4fc1e687053296745",
+      "row_count": null,
+      "classification": "reusable",
+      "classification_reason": "No Stage 0 defect requires discarding this baseline artifact.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "src/graduate_audit/reporting/outreach.py",
+      "artifact_types": [
+        "script"
+      ],
+      "size_bytes": 11014,
+      "sha256": "5890400142e5e78131ea90d05bfb19661e4fe2c0b369b671b82a6857c4fa8c7a",
+      "row_count": null,
+      "classification": "repairable",
+      "classification_reason": "Contains or consumes a diagnosed Pass 2 contract/gate defect.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "src/graduate_audit/reporting/reports.py",
+      "artifact_types": [
+        "script"
+      ],
+      "size_bytes": 12928,
+      "sha256": "69847c6406f9b34286ab96e53f5e98c1985b585c6a6995a48597a8b01493fc74",
+      "row_count": null,
+      "classification": "repairable",
+      "classification_reason": "Contains or consumes a diagnosed Pass 2 contract/gate defect.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "src/graduate_audit/research_fit/openalex_discovery.py",
+      "artifact_types": [
+        "script"
+      ],
+      "size_bytes": 13403,
+      "sha256": "56d72780c37b768f5272914ebf0397109c9becaaa35819836646fbc4114085fb",
+      "row_count": null,
+      "classification": "repairable",
+      "classification_reason": "Contains or consumes a diagnosed Pass 2 contract/gate defect.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "src/graduate_audit/schema.py",
+      "artifact_types": [
+        "script"
+      ],
+      "size_bytes": 5636,
+      "sha256": "2bd2197254d9815370bc6bd4b45c85c0a3ace472b207f495cdad8e8bdb89124c",
+      "row_count": null,
+      "classification": "repairable",
+      "classification_reason": "Shared contract lacks required Pass 2 evidence/conflict fields or anchors.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "src/graduate_audit/scoring.py",
+      "artifact_types": [
+        "script"
+      ],
+      "size_bytes": 2839,
+      "sha256": "1c38f1a48249926718fbcbcfcce67f8ec79ddf14ff430a78bb5a231f6e630c4e",
+      "row_count": null,
+      "classification": "repairable",
+      "classification_reason": "Contains or consumes a diagnosed Pass 2 contract/gate defect.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "src/graduate_audit/validation.py",
+      "artifact_types": [
+        "script",
+        "validation"
+      ],
+      "size_bytes": 6306,
+      "sha256": "8e20234fb4dfddcb5412b3ffbda23c0dc219a243df9be2395c2ab129753c47af",
+      "row_count": null,
+      "classification": "repairable",
+      "classification_reason": "Contains or consumes a diagnosed Pass 2 contract/gate defect.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "src/graduate_audit/verify/__init__.py",
+      "artifact_types": [
+        "script",
+        "validation"
+      ],
+      "size_bytes": 60,
+      "sha256": "0143ade8b5b85eb7830de01b847eacb18f99ac8ddbf9d469b20745682dea026a",
+      "row_count": null,
+      "classification": "repairable",
+      "classification_reason": "Validation logic is useful but incomplete against Pass 2 gates.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "src/graduate_audit/verify/apply_corrections.py",
+      "artifact_types": [
+        "script",
+        "validation"
+      ],
+      "size_bytes": 27510,
+      "sha256": "610b6f018d6901b0c2c121f939f46c298ae228c603e48f8b1645714e163efec8",
+      "row_count": null,
+      "classification": "repairable",
+      "classification_reason": "Contains or consumes a diagnosed Pass 2 contract/gate defect.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "src/graduate_audit/verify/final_validation.py",
+      "artifact_types": [
+        "script",
+        "validation"
+      ],
+      "size_bytes": 7420,
+      "sha256": "cfef5be4d6550703e2fd603251e22b4b47e31b34a13ff51b5e611e5f5c6ed113",
+      "row_count": null,
+      "classification": "repairable",
+      "classification_reason": "Contains or consumes a diagnosed Pass 2 contract/gate defect.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "state/progress.json",
+      "artifact_types": [
+        "dataset"
+      ],
+      "size_bytes": 1155,
+      "sha256": "5d4cc793453e8b642b1e8f06662a7dc28604d29b13f8d60f512af2d1dbcfaf52",
+      "row_count": null,
+      "classification": "repairable",
+      "classification_reason": "Pass 1 is marked complete despite diagnosed Pass 2 defects.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "tests/test_portfolio.py",
+      "artifact_types": [
+        "script",
+        "validation"
+      ],
+      "size_bytes": 1516,
+      "sha256": "b2ca596d1c356ec0e50592a60605593b2060cefc1e714bca01800f674a6ac310",
+      "row_count": null,
+      "classification": "repairable",
+      "classification_reason": "Existing tests are reusable but omit required hard-gate and resume coverage.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "tests/test_schema.py",
+      "artifact_types": [
+        "script",
+        "validation"
+      ],
+      "size_bytes": 614,
+      "sha256": "bea4d0d135873a59ed07a4906bc6274ff76fc49a7e1ce9443cf191839952b7a7",
+      "row_count": null,
+      "classification": "repairable",
+      "classification_reason": "Existing tests are reusable but omit required hard-gate and resume coverage.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "tests/test_scoring.py",
+      "artifact_types": [
+        "script",
+        "validation"
+      ],
+      "size_bytes": 1442,
+      "sha256": "c979cdde8087bef7b2c772fa6b8b7aed833d35df833de30b58e6d431f47e0ba9",
+      "row_count": null,
+      "classification": "repairable",
+      "classification_reason": "Existing tests are reusable but omit required hard-gate and resume coverage.",
+      "producer": "",
+      "traceability": "not a final output"
+    },
+    {
+      "path": "outputs/20260909-fall2027-audit/graduate_program_audit.xlsx::sheet::COVERAGE DASHBOARD",
+      "artifact_types": [
+        "workbook sheet"
+      ],
+      "size_bytes": 5506,
+      "sha256": "2aed68e63ad1eec5b56307cb49fc816f622d8b8cc050650a760f691edf58281b",
+      "row_count": 18,
+      "classification": "superseded",
+      "classification_reason": "Pass 1 workbook view; layout may be reused but conclusions must be rebuilt.",
+      "producer": "scripts/build_workbook.mjs",
+      "traceability": "tracked producer",
+      "detail": {
+        "sheet_index": 0,
+        "used_range": "A1:H18"
+      }
+    },
+    {
+      "path": "outputs/20260909-fall2027-audit/graduate_program_audit.xlsx::sheet::SCHOOLS & PROGRAMS",
+      "artifact_types": [
+        "workbook sheet"
+      ],
+      "size_bytes": 210803,
+      "sha256": "5000671485a4c42cd14a75996ec0bac099458136915fade229b1fd84b65dbc1d",
+      "row_count": 60,
+      "classification": "superseded",
+      "classification_reason": "Pass 1 workbook view; layout may be reused but conclusions must be rebuilt.",
+      "producer": "scripts/build_workbook.mjs",
+      "traceability": "tracked producer",
+      "detail": {
+        "sheet_index": 1,
+        "used_range": "A1:AP60"
+      }
+    },
+    {
+      "path": "outputs/20260909-fall2027-audit/graduate_program_audit.xlsx::sheet::PROFESSOR MATCHES",
+      "artifact_types": [
+        "workbook sheet"
+      ],
+      "size_bytes": 148287,
+      "sha256": "621606f6e7e5759001fa4e5d49bb339cd31668a27b28c6a7eaa95706832c510f",
+      "row_count": 60,
+      "classification": "superseded",
+      "classification_reason": "Pass 1 workbook view; layout may be reused but conclusions must be rebuilt.",
+      "producer": "scripts/build_workbook.mjs",
+      "traceability": "tracked producer",
+      "detail": {
+        "sheet_index": 2,
+        "used_range": "A1:AE60"
+      }
+    },
+    {
+      "path": "outputs/20260909-fall2027-audit/graduate_program_audit.xlsx::sheet::DEPARTMENT AND ADMIN OUTREACH",
+      "artifact_types": [
+        "workbook sheet"
+      ],
+      "size_bytes": 30928,
+      "sha256": "a0af7f180e2598db8325c9bb5bfefc6e6c210f54ab33f9caff8399c5622d12b3",
+      "row_count": 39,
+      "classification": "superseded",
+      "classification_reason": "Pass 1 workbook view; layout may be reused but conclusions must be rebuilt.",
+      "producer": "scripts/build_workbook.mjs",
+      "traceability": "tracked producer",
+      "detail": {
+        "sheet_index": 3,
+        "used_range": "A1:O39"
+      }
+    },
+    {
+      "path": "outputs/20260909-fall2027-audit/graduate_program_audit.xlsx::sheet::SCHOOL SUMMARY",
+      "artifact_types": [
+        "workbook sheet"
+      ],
+      "size_bytes": 90722,
+      "sha256": "f8cf07a3289850267ad039ae2f03e105b7f6db76099eb3b88c228035477b34d6",
+      "row_count": 56,
+      "classification": "superseded",
+      "classification_reason": "Pass 1 workbook view; layout may be reused but conclusions must be rebuilt.",
+      "producer": "scripts/build_workbook.mjs",
+      "traceability": "tracked producer",
+      "detail": {
+        "sheet_index": 4,
+        "used_range": "A1:S56"
+      }
+    },
+    {
+      "path": "outputs/20260909-fall2027-audit/graduate_program_audit.xlsx::sheet::THIS WEEKEND OUTREACH QUEUE",
+      "artifact_types": [
+        "workbook sheet"
+      ],
+      "size_bytes": 16434,
+      "sha256": "f1f415c1347122731fa12c18b003b503bfa95200ab2da70f1e754446a61533cf",
+      "row_count": 19,
+      "classification": "superseded",
+      "classification_reason": "Pass 1 workbook view; layout may be reused but conclusions must be rebuilt.",
+      "producer": "scripts/build_workbook.mjs",
+      "traceability": "tracked producer",
+      "detail": {
+        "sheet_index": 5,
+        "used_range": "A1:N19"
+      }
+    },
+    {
+      "path": "outputs/20260909-fall2027-audit/graduate_program_audit.xlsx::sheet::OUTREACH DRAFTS",
+      "artifact_types": [
+        "workbook sheet"
+      ],
+      "size_bytes": 21336,
+      "sha256": "c40de7885b586c3a116fa20aab9d2bc99ddb8b8edb6f28157d06ce5a659a2e2f",
+      "row_count": 19,
+      "classification": "superseded",
+      "classification_reason": "Pass 1 workbook view; layout may be reused but conclusions must be rebuilt.",
+      "producer": "scripts/build_workbook.mjs",
+      "traceability": "tracked producer",
+      "detail": {
+        "sheet_index": 6,
+        "used_range": "A1:H19"
+      }
+    },
+    {
+      "path": "outputs/20260909-fall2027-audit/graduate_program_audit.xlsx::sheet::SCREENING AND EXCLUSIONS",
+      "artifact_types": [
+        "workbook sheet"
+      ],
+      "size_bytes": 48840,
+      "sha256": "2ecaf36e72f258841483454eb7c433777fa547d9aa4954e8282ede9a0cf5e89d",
+      "row_count": 54,
+      "classification": "superseded",
+      "classification_reason": "Pass 1 workbook view; layout may be reused but conclusions must be rebuilt.",
+      "producer": "scripts/build_workbook.mjs",
+      "traceability": "tracked producer",
+      "detail": {
+        "sheet_index": 7,
+        "used_range": "A1:K54"
+      }
+    },
+    {
+      "path": "outputs/20260909-fall2027-audit/graduate_program_audit.xlsx::sheet::CALENDAR COMPARISON",
+      "artifact_types": [
+        "workbook sheet"
+      ],
+      "size_bytes": 37514,
+      "sha256": "df0ac045488612631f8a16161828681fc5ff2f80dd3e6ea8b56e7874c5caaff9",
+      "row_count": 59,
+      "classification": "superseded",
+      "classification_reason": "Pass 1 workbook view; layout may be reused but conclusions must be rebuilt.",
+      "producer": "scripts/build_workbook.mjs",
+      "traceability": "tracked producer",
+      "detail": {
+        "sheet_index": 8,
+        "used_range": "A1:G59"
+      }
+    },
+    {
+      "path": "outputs/20260909-fall2027-audit/graduate_program_audit.xlsx::sheet::SOURCES",
+      "artifact_types": [
+        "workbook sheet"
+      ],
+      "size_bytes": 1067274,
+      "sha256": "a068849e0966a1c8b09badb38ae6c7bda106392cd775fe7aa52014d8a3ae6e33",
+      "row_count": 794,
+      "classification": "superseded",
+      "classification_reason": "Pass 1 workbook view; layout may be reused but conclusions must be rebuilt.",
+      "producer": "scripts/build_workbook.mjs",
+      "traceability": "tracked producer",
+      "detail": {
+        "sheet_index": 9,
+        "used_range": "A1:Q794"
+      }
+    },
+    {
+      "path": "outputs/20260909-fall2027-audit/graduate_program_audit.xlsx::sheet::METHODOLOGY",
+      "artifact_types": [
+        "workbook sheet"
+      ],
+      "size_bytes": 4456,
+      "sha256": "59e64b74facad31c0ccc897f747ee9377b343f20b7f54548195d1a4cb4aa54ac",
+      "row_count": 16,
+      "classification": "superseded",
+      "classification_reason": "Pass 1 workbook view; layout may be reused but conclusions must be rebuilt.",
+      "producer": "scripts/build_workbook.mjs",
+      "traceability": "tracked producer",
+      "detail": {
+        "sheet_index": 10,
+        "used_range": "A1:B16"
+      }
+    }
+  ],
+  "baseline_output_checksums": [
+    {
+      "path": "outputs/20260909-fall2027-audit/admin_contacts.csv",
+      "sha256": "c54241a096733e36b4cddeea9312e31c8a5022d1b32c5f9b7a675590433b1346"
+    },
+    {
+      "path": "outputs/20260909-fall2027-audit/calendar_comparison.csv",
+      "sha256": "666e25b70cc1cc2feae2cb32f45a403e2261c23ead95adb06775040d63f3ec31"
+    },
+    {
+      "path": "outputs/20260909-fall2027-audit/exclusion_log.csv",
+      "sha256": "6eb06407dffc4cda9847ea87650d74eff979fa1a9b0d860df3786213553134f6"
+    },
+    {
+      "path": "outputs/20260909-fall2027-audit/final_validation.json",
+      "sha256": "99a9f5a306445249551f04527bc4235f9827ba5500ee7fd75c614408e631de8f"
+    },
+    {
+      "path": "outputs/20260909-fall2027-audit/graduate_program_audit.xlsx",
+      "sha256": "90509c3c4b12528286d8015e5f8618175aebda68d707b95987a4f1211dd2a89d"
+    },
+    {
+      "path": "outputs/20260909-fall2027-audit/institution_universe.csv",
+      "sha256": "683e8cc3dee95b5347c6dc7b7bb45256377a3175b11013db646aeb6eb131b0a2"
+    },
+    {
+      "path": "outputs/20260909-fall2027-audit/outreach_drafts.csv",
+      "sha256": "833db3f4ea18759089a1cdad331205b7d95400405b06f7987b471a5de7776e08"
+    },
+    {
+      "path": "outputs/20260909-fall2027-audit/portfolio.json",
+      "sha256": "fd1bbb0e6e802f824992fcf2f0eae83844720434a77f04757fc31074657b3500"
+    },
+    {
+      "path": "outputs/20260909-fall2027-audit/professor_evidence.csv",
+      "sha256": "a02f68de4e15bd436aaca16826ba0b0e43a0ec629e1530cde67b3620bbbc2dc6"
+    },
+    {
+      "path": "outputs/20260909-fall2027-audit/program_screening.csv",
+      "sha256": "43bb75f33e5cb3b6176880eec833698922070bcff40c462f497fa7a137644896"
+    },
+    {
+      "path": "outputs/20260909-fall2027-audit/render_html/calendar_comparison.html",
+      "sha256": "79e8b5897e9d67eae8b3c85a01032ad787bad7b96f6c2049c896f8e08fc25fd6"
+    },
+    {
+      "path": "outputs/20260909-fall2027-audit/render_html/coverage_dashboard.html",
+      "sha256": "1432ef24d92ac93a6c440de4d9d63d30380d3d4aa58a7fdbc99253a453149aa1"
+    },
+    {
+      "path": "outputs/20260909-fall2027-audit/render_html/department_and_admin_outreach.html",
+      "sha256": "ea58440acd43ff8a94b29efff2e727f112e33a8bad7922b34dde7d9b07c00e1f"
+    },
+    {
+      "path": "outputs/20260909-fall2027-audit/render_html/methodology.html",
+      "sha256": "0609c3af10752588e4e8d7bdadfcb0b4b63e1da2940366d147b4bc17484ec968"
+    },
+    {
+      "path": "outputs/20260909-fall2027-audit/render_html/outreach_drafts.html",
+      "sha256": "78ccd41ff3a8fbb23b2a425f27d5d317241a6d0ac9aa407ba3876baf00ce5443"
+    },
+    {
+      "path": "outputs/20260909-fall2027-audit/render_html/professor_matches.html",
+      "sha256": "f9a8ace4d365b9a14234a01b74e595aaf33eb0c05b6c189fcca8a77d7ddc60cb"
+    },
+    {
+      "path": "outputs/20260909-fall2027-audit/render_html/school_summary.html",
+      "sha256": "b4297f748a4db8b8e5dc8888bcb3d388606fdfb8c044cb84fc6188b294ec9c8a"
+    },
+    {
+      "path": "outputs/20260909-fall2027-audit/render_html/schools_and_programs.html",
+      "sha256": "1ba96613b85d5fa1105d5f064cda5b0aaa7207007274fd1d9b0980d109be80ee"
+    },
+    {
+      "path": "outputs/20260909-fall2027-audit/render_html/screening_and_exclusions.html",
+      "sha256": "dcbcfe1d1502616484cf59177259bd6345effadcd9b86c3e915a6f764a69f500"
+    },
+    {
+      "path": "outputs/20260909-fall2027-audit/render_html/sources.html",
+      "sha256": "466efd6ac8058c03c73b814f305f8c4f73412636f3d111740ce33b20c00639e2"
+    },
+    {
+      "path": "outputs/20260909-fall2027-audit/render_html/this_weekend_outreach_queue.html",
+      "sha256": "dfaff5f55d150f8245e85ed4fdc11890419de6a3fe7f47ef9465161fe7375c44"
+    },
+    {
+      "path": "outputs/20260909-fall2027-audit/renders/calendar_comparison.png",
+      "sha256": "8d7cbaff89428e22cf05e344a3bcdcdd22d37456ed3411d9ccd05e08136d8617"
+    },
+    {
+      "path": "outputs/20260909-fall2027-audit/renders/coverage_dashboard.png",
+      "sha256": "63a117a592763108c95bfc0b375fc424bcf62fb0ef1cd467a966b9114e54550a"
+    },
+    {
+      "path": "outputs/20260909-fall2027-audit/renders/department_and_admin_outreach.png",
+      "sha256": "a5fa4f4c51553011d5858a06fdb55fa0b5a520c7bf6e5301848f336309882bd4"
+    },
+    {
+      "path": "outputs/20260909-fall2027-audit/renders/methodology.png",
+      "sha256": "cca7b3fc021e29a950e8c9bd75928bb4faf2191bf18aed84171118677b3ab5e2"
+    },
+    {
+      "path": "outputs/20260909-fall2027-audit/renders/outreach_drafts.png",
+      "sha256": "d0d3e7c151ebcfda45233badec41902352f33b24f8fec6a2955eb763019e39db"
+    },
+    {
+      "path": "outputs/20260909-fall2027-audit/renders/professor_matches.png",
+      "sha256": "055fca46fdca153669ff7b004a7410e4df9064e15584a0fe4bf534b50875907e"
+    },
+    {
+      "path": "outputs/20260909-fall2027-audit/renders/qa/calendar_comparison.png",
+      "sha256": "97e3e5d871595ac1e76bec0cc6b268aafd2eae169fd78a3e192a691bbfc4826c"
+    },
+    {
+      "path": "outputs/20260909-fall2027-audit/renders/qa/coverage_dashboard.png",
+      "sha256": "1db861759d8b1d0e91f746b39dbadfb85812331a126795242592536da2d3f9e8"
+    },
+    {
+      "path": "outputs/20260909-fall2027-audit/renders/qa/department_and_admin_outreach.png",
+      "sha256": "b209739f8d05e355c6830b5554f39e009be0b1950d8461435c20fcb2907e2949"
+    },
+    {
+      "path": "outputs/20260909-fall2027-audit/renders/qa/methodology.png",
+      "sha256": "9da8a8173f72b123cbf6905bf09a85556ac8f92554bcdab6eb24d48960c60822"
+    },
+    {
+      "path": "outputs/20260909-fall2027-audit/renders/qa/outreach_drafts.png",
+      "sha256": "13f5eec6ae9ca79ac75a6b3003dd5de36a47ab244354b1e2fae7211f01d8abe0"
+    },
+    {
+      "path": "outputs/20260909-fall2027-audit/renders/qa/professor_matches.png",
+      "sha256": "80218a8dfe8c03eca041c397afe4a255268c1d01540dceec8bfd49e6512c9c6c"
+    },
+    {
+      "path": "outputs/20260909-fall2027-audit/renders/qa/school_summary.png",
+      "sha256": "1cd8c3b72373dd2665581572846863606d9d0ad7b90d1e58300e71019b7ee172"
+    },
+    {
+      "path": "outputs/20260909-fall2027-audit/renders/qa/schools_and_programs.png",
+      "sha256": "fc9031d72c1a75ed263d328d0a7cbe8838f3583ccdacbe2407c6fdcb803e9a4f"
+    },
+    {
+      "path": "outputs/20260909-fall2027-audit/renders/qa/screening_and_exclusions.png",
+      "sha256": "6fd893e409835ed402244d9b1bdc1a46404d7edd6d6cdd2cc1ccd63a6708a16c"
+    },
+    {
+      "path": "outputs/20260909-fall2027-audit/renders/qa/sources.png",
+      "sha256": "8c92bfa2817d319f87b2767d4d2d18a0ea4e206ee4b5c16319bf5f5a50204c7c"
+    },
+    {
+      "path": "outputs/20260909-fall2027-audit/renders/qa/this_weekend_outreach_queue.png",
+      "sha256": "5efbebbc5041a6c2f653966213f0c03461b22705271614b3f11296a05e04e5d4"
+    },
+    {
+      "path": "outputs/20260909-fall2027-audit/renders/school_summary.png",
+      "sha256": "75486803db12c59c1f70064defcec6f7670743bc391059123e7cb5fe03a17f93"
+    },
+    {
+      "path": "outputs/20260909-fall2027-audit/renders/schools_and_programs.png",
+      "sha256": "3a2f91731a289ee146fe591698a476ec7397ae192dc8ee3b8305935fdfdd095b"
+    },
+    {
+      "path": "outputs/20260909-fall2027-audit/renders/screening_and_exclusions.png",
+      "sha256": "a576beb7206b7dacdef9d9a0d3a4d88794ab9ef5043c7d26b90b205d96a50726"
+    },
+    {
+      "path": "outputs/20260909-fall2027-audit/renders/sources.png",
+      "sha256": "b44a2cdc579434c0dd48e98f4c14ee4e6125d8508a8f8dbd86792777a3ea1d31"
+    },
+    {
+      "path": "outputs/20260909-fall2027-audit/renders/this_weekend_outreach_queue.png",
+      "sha256": "5c89c404c9fad972d27e2a2d9599b96eea2dd11c7aca16bcd40d45e971715e95"
+    },
+    {
+      "path": "outputs/20260909-fall2027-audit/run_manifest.json",
+      "sha256": "2dc65a011d66f530e2939714525f198ec704e8ebe71c68ad37172b59abd80cb9"
+    },
+    {
+      "path": "outputs/20260909-fall2027-audit/source_ledger.csv",
+      "sha256": "e024f529b335948ab10b1db50d815161e1a8756f812fa9c6a8086c48d0fedeac"
+    },
+    {
+      "path": "outputs/20260909-fall2027-audit/validation.json",
+      "sha256": "b4b1d1eb2e7d2cd7c5663bb255b9de69d9f037b418e7711b56ddf9c5de95cc30"
+    },
+    {
+      "path": "outputs/20260909-fall2027-audit/workbook_formula_error_scan.ndjson",
+      "sha256": "acc0111e19cf44d2753fc9ecd164bf1b27fbd65597463a25cf48bd1c65e90146"
+    },
+    {
+      "path": "outputs/20260909-fall2027-audit/workbook_inspection.ndjson",
+      "sha256": "62d50cf0baf02e19446fec469c884602dee44986c5461634750dcc029e8ab6e0"
+    },
+    {
+      "path": "reports/20260909-fall2027-audit/coverage_report.md",
+      "sha256": "5c00af8f7200e24e5ca6659577b95a96b0c486c14751eece3536610df08c3ad6"
+    },
+    {
+      "path": "reports/20260909-fall2027-audit/final_shortlist.md",
+      "sha256": "c715604de28deb7844bbc8ac54ed9a63f67749d847098c53a968cb06f1121406"
+    },
+    {
+      "path": "reports/20260909-fall2027-audit/methodology.md",
+      "sha256": "7c716119edacc1556672a2e052dbd4cf125df89c0c160c04da99025d3e67e20a"
+    },
+    {
+      "path": "reports/20260909-fall2027-audit/strategic_findings.md",
+      "sha256": "ac838ba017628b7ce5aa0b54c5216fb96ad06cdcbee8234212aa858c3310f65d"
+    }
+  ]
+}
