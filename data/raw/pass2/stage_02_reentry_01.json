@@ -1,0 +1,527 @@
+{
+  "reentry_id": "stage_02_reentry_01",
+  "trigger": "Stage 6 returned to candidate discovery because no hard-gate survivor had a strategically usable plausibility calibration.",
+  "scope_rule": "Add exact, current, high-signal research routes only; do not score, rank, or infer Stage 3 verification outcomes.",
+  "candidates": [
+    {
+      "institution_id": "us:ipeds:240444",
+      "institution_name": "University of Wisconsin-Madison",
+      "country": "United States",
+      "region": "us",
+      "program_name": "Computer Sciences PhD",
+      "degree_type": "PhD",
+      "relevant_degree_route": "Doctoral route accepting bachelor's entrants; exact equivalency requires Stage 3 verification",
+      "research_topic_clusters": ["repair_analysis", "systems_security", "ai_for_se"],
+      "exact_research_fit_signal": "The official traditional graduate-program page names programming languages and compilers, security, systems, and AI as research areas.",
+      "preliminary_international_eligibility": "The graduate admissions page accepts applicants to the traditional PhD route; international credential and English-language details require Stage 3 verification.",
+      "preliminary_funding_signal": "The department states that many traditional MS/PhD admits receive a four-year funding guarantee with tuition remission and stipend; individual coverage must be verified.",
+      "official_program_url": "https://guide.wisc.edu/graduate/computer-sciences/computer-sciences-phd/",
+      "research_topic_clusters_note": "Exact department-level discovery signal only",
+      "seed_adjacency": ["TerraProbe-adjacent", "Evidex-adjacent"],
+      "unresolved_fields": ["Fall 2027 cycle", "international credential equivalency", "individual funding guarantee", "current faculty supervision"],
+      "evidence_confidence": "high",
+      "sources": [
+        {
+          "source_id": "reentry01:wisc:program",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "program route",
+          "title": "Computer Sciences, PhD",
+          "url": "https://guide.wisc.edu/graduate/computer-sciences/computer-sciences-phd/",
+          "evidence_summary": "Official graduate guide identifies the Computer Sciences PhD route.",
+          "limitations": "Fall 2027 cycle details require verification."
+        },
+        {
+          "source_id": "reentry01:wisc:research",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "research fit",
+          "title": "Traditional Graduate Program",
+          "url": "https://www.cs.wisc.edu/grad/programs/traditional/",
+          "evidence_summary": "Department lists AI, programming languages and compilers, security, and systems among research areas.",
+          "limitations": "Faculty-level fit and availability remain unverified."
+        },
+        {
+          "source_id": "reentry01:wisc:funding",
+          "discovery_path": "underrepresented_route_search",
+          "evidence_role": "preliminary funding",
+          "title": "Graduate Funding",
+          "url": "https://www.cs.wisc.edu/grad/programs/funding/",
+          "evidence_summary": "Department describes multi-year guarantees, tuition remission, and stipend support for many traditional admits.",
+          "limitations": "Not represented as a guarantee for every admit."
+        }
+      ]
+    },
+    {
+      "institution_id": "us:ipeds:174066",
+      "institution_name": "University of Minnesota-Twin Cities",
+      "country": "United States",
+      "region": "us",
+      "program_name": "Computer Science PhD",
+      "degree_type": "PhD",
+      "relevant_degree_route": "Doctoral route accepting bachelor's entrants",
+      "research_topic_clusters": ["repair_analysis", "systems_security", "ai_for_se"],
+      "exact_research_fit_signal": "Official research pages identify programming languages, software engineering, formal analysis, testing, verification, security, and automated software engineering.",
+      "preliminary_international_eligibility": "The PhD admissions page states that a master's is not required and accepts a bachelor's degree or equivalent; transcript and language details remain for Stage 3.",
+      "preliminary_funding_signal": "The department states that all admitted CS PhD students receive funding from day one through the doctoral experience, including tuition, stipend, and most health-insurance cost.",
+      "official_program_url": "https://cse.umn.edu/cs/phd-admissions",
+      "seed_adjacency": ["TerraProbe-adjacent", "Evidex-adjacent"],
+      "unresolved_fields": ["Fall 2027 cycle", "international transcript equivalency", "current faculty supervision", "offer-specific net funding"],
+      "evidence_confidence": "high",
+      "sources": [
+        {
+          "source_id": "reentry01:umn:program",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "program and entry route",
+          "title": "PhD Admissions",
+          "url": "https://cse.umn.edu/cs/phd-admissions",
+          "evidence_summary": "Official page identifies the PhD route and says a master's degree is not required.",
+          "limitations": "Cycle-specific requirements require Stage 3 verification."
+        },
+        {
+          "source_id": "reentry01:umn:funding",
+          "discovery_path": "underrepresented_route_search",
+          "evidence_role": "preliminary funding",
+          "title": "Graduate Admissions Overview",
+          "url": "https://cse.umn.edu/cs/graduate-admissions-overview",
+          "evidence_summary": "Department describes guaranteed PhD funding including tuition, stipend, and health-insurance support.",
+          "limitations": "Offer-specific terms and summer support require verification."
+        },
+        {
+          "source_id": "reentry01:umn:research",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "research fit",
+          "title": "Computing Foundations Research",
+          "url": "https://cse.umn.edu/cs/computing-foundations",
+          "evidence_summary": "Official group page includes programming languages, software engineering, formal analysis, verification, testing, and security.",
+          "limitations": "Faculty-level fit remains unverified."
+        }
+      ]
+    },
+    {
+      "institution_id": "us:ipeds:126614",
+      "institution_name": "University of Colorado Boulder",
+      "country": "United States",
+      "region": "us",
+      "program_name": "Computer Science PhD",
+      "degree_type": "PhD",
+      "relevant_degree_route": "Doctoral route accepting bachelor's entrants; exact entry conditions require Stage 3 verification",
+      "research_topic_clusters": ["repair_analysis", "systems_security", "ai_for_se"],
+      "exact_research_fit_signal": "Official CS materials identify programming languages, software engineering, systems, and security among doctoral research areas.",
+      "preliminary_international_eligibility": "The department's graduate FAQ says a master's is not required; international academic and language evidence requires Stage 3 verification.",
+      "preliminary_funding_signal": "The department states that all admitted PhD students receive a TA or RA package with stipend, tuition, fees, and 91% health-insurance coverage, excluding summers.",
+      "official_program_url": "https://www.colorado.edu/cs/academics/graduate-programs/doctor-philosophy",
+      "seed_adjacency": ["TerraProbe-adjacent", "Evidex-adjacent"],
+      "unresolved_fields": ["Fall 2027 cycle", "international credential equivalency", "summer funding", "current faculty supervision"],
+      "evidence_confidence": "high",
+      "sources": [
+        {
+          "source_id": "reentry01:colorado:program",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "program route",
+          "title": "Doctor of Philosophy",
+          "url": "https://www.colorado.edu/cs/academics/graduate-programs/doctor-philosophy",
+          "evidence_summary": "Official department page identifies the Computer Science PhD route.",
+          "limitations": "Cycle-specific admissions require verification."
+        },
+        {
+          "source_id": "reentry01:colorado:funding",
+          "discovery_path": "underrepresented_route_search",
+          "evidence_role": "preliminary funding",
+          "title": "Funding Opportunities",
+          "url": "https://www.colorado.edu/cs/admissions/graduate-admissions/funding-opportunities",
+          "evidence_summary": "Department states all admitted PhD students receive TA or RA support with specified benefits.",
+          "limitations": "Summer support is excluded and offer terms must be verified."
+        },
+        {
+          "source_id": "reentry01:colorado:faq",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "entry route and research breadth",
+          "title": "Graduate Admissions FAQs",
+          "url": "https://www.colorado.edu/cs/graduate-admissions/faqs",
+          "evidence_summary": "Official FAQ states a master's is not required and describes the doctoral commitment.",
+          "limitations": "Exact applicant equivalency remains for Stage 3."
+        }
+      ]
+    },
+    {
+      "institution_id": "us:ipeds:104179",
+      "institution_name": "University of Arizona",
+      "country": "United States",
+      "region": "us",
+      "program_name": "Computer Science PhD",
+      "degree_type": "PhD",
+      "relevant_degree_route": "Doctoral route; bachelor's entry requires Stage 3 verification",
+      "research_topic_clusters": ["repair_analysis", "systems_security"],
+      "exact_research_fit_signal": "The official secure and reliable software research page identifies software testing, debugging, analysis, and reliability work.",
+      "preliminary_international_eligibility": "The prospective-student page identifies the doctoral route; exact bachelor's-entry and international requirements require Stage 3 verification.",
+      "preliminary_funding_signal": "The department states that enrolled doctoral students in good standing are guaranteed multi-year support including stipend, tuition, and health insurance.",
+      "official_program_url": "https://cs.arizona.edu/graduate/prospective-students",
+      "seed_adjacency": ["TerraProbe-adjacent"],
+      "unresolved_fields": ["bachelor's-entry eligibility", "Fall 2027 cycle", "international credential equivalency", "current faculty supervision"],
+      "evidence_confidence": "high",
+      "sources": [
+        {
+          "source_id": "reentry01:arizona:program-funding",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "program and preliminary funding",
+          "title": "Prospective Graduate Students",
+          "url": "https://cs.arizona.edu/graduate/prospective-students",
+          "evidence_summary": "Official page identifies the doctoral route and describes multi-year doctoral funding.",
+          "limitations": "Entry and offer-specific conditions require verification."
+        },
+        {
+          "source_id": "reentry01:arizona:research",
+          "discovery_path": "lab_or_center_signal",
+          "evidence_role": "research fit",
+          "title": "Secure and Reliable Software Systems",
+          "url": "https://www2.cs.arizona.edu/research/secure.html",
+          "evidence_summary": "Official research page identifies software testing, debugging, analysis, security, and reliability work.",
+          "limitations": "Current faculty supervision must be checked in Stage 4."
+        }
+      ]
+    },
+    {
+      "institution_id": "us:ipeds:196088",
+      "institution_name": "University at Buffalo",
+      "country": "United States",
+      "region": "us",
+      "program_name": "Computer Science and Engineering PhD",
+      "degree_type": "PhD",
+      "relevant_degree_route": "Doctoral route accepting bachelor's entrants only by committee recommendation; verify applicant route",
+      "research_topic_clusters": ["repair_analysis", "systems_security", "ai_for_se"],
+      "exact_research_fit_signal": "The official security and cryptography page names software engineering, program analysis and testing, software and systems security, ML security, and trustworthy AI.",
+      "preliminary_international_eligibility": "The admissions page permits direct bachelor's entry only with committee recommendation; international equivalency and applicant fit remain unresolved.",
+      "preliminary_funding_signal": "The school states that fully funded PhD students receive an assistantship with tuition, fees, and stipend, but does not establish that every admit is funded.",
+      "official_program_url": "https://engineering.buffalo.edu/computer-science-engineering/graduate/degrees-and-programs/phd-in-computer-science-and-engineering.html",
+      "seed_adjacency": ["TerraProbe-adjacent", "Evidex-adjacent"],
+      "unresolved_fields": ["committee approval for bachelor's entry", "Fall 2027 cycle", "funding incidence", "current faculty supervision"],
+      "evidence_confidence": "high",
+      "sources": [
+        {
+          "source_id": "reentry01:buffalo:program",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "program route",
+          "title": "PhD in Computer Science and Engineering",
+          "url": "https://engineering.buffalo.edu/computer-science-engineering/graduate/degrees-and-programs/phd-in-computer-science-and-engineering.html",
+          "evidence_summary": "Official school page identifies the CSE PhD.",
+          "limitations": "Cycle-specific admissions require verification."
+        },
+        {
+          "source_id": "reentry01:buffalo:research",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "research fit",
+          "title": "Computer Security and Cryptography",
+          "url": "https://engineering.buffalo.edu/computer-science-engineering/research/research-areas/theory/computer-security-and-cryptography.html",
+          "evidence_summary": "Official research page names program analysis, testing, software security, ML security, and trustworthy AI.",
+          "limitations": "Current supervisor availability remains unverified."
+        },
+        {
+          "source_id": "reentry01:buffalo:funding",
+          "discovery_path": "underrepresented_route_search",
+          "evidence_role": "preliminary funding",
+          "title": "Paid Assistantships",
+          "url": "https://engineering.buffalo.edu/home/academics/grad/new-students/paid-assistantships.html",
+          "evidence_summary": "School describes the package received by fully funded PhD students.",
+          "limitations": "Does not prove that all admits receive funding."
+        }
+      ]
+    },
+    {
+      "institution_id": "us:ipeds:230764",
+      "institution_name": "University of Utah",
+      "country": "United States",
+      "region": "us",
+      "program_name": "Computing PhD",
+      "degree_type": "PhD",
+      "relevant_degree_route": "Doctoral route; bachelor's entry requires Stage 3 verification",
+      "research_topic_clusters": ["repair_analysis", "systems_security", "ai_for_se"],
+      "exact_research_fit_signal": "The official research page names programming languages and software engineering, verification, types and logic, testing, and fuzzing.",
+      "preliminary_international_eligibility": "The School of Computing lists the PhD route; degree equivalency and international requirements require Stage 3 verification.",
+      "preliminary_funding_signal": "Assistantship, tuition coverage, and duration are not established by the bounded discovery evidence and require Stage 3 verification.",
+      "official_program_url": "https://www.cs.utah.edu/graduate/academic-programs/ms-and-phd-programs/",
+      "seed_adjacency": ["TerraProbe-adjacent", "Evidex-adjacent"],
+      "unresolved_fields": ["bachelor's-entry eligibility", "Fall 2027 cycle", "international requirements", "funding", "current faculty supervision"],
+      "evidence_confidence": "medium",
+      "sources": [
+        {
+          "source_id": "reentry01:utah:program",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "program route",
+          "title": "MS and PhD Programs",
+          "url": "https://www.cs.utah.edu/graduate/academic-programs/ms-and-phd-programs/",
+          "evidence_summary": "Official School of Computing page identifies the doctoral program route.",
+          "limitations": "Entry and funding details require Stage 3 verification."
+        },
+        {
+          "source_id": "reentry01:utah:research",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "research fit",
+          "title": "Research Areas",
+          "url": "https://www.cs.utah.edu/research/research-areas/",
+          "evidence_summary": "Official page identifies programming languages, software engineering, verification, testing, and fuzzing research.",
+          "limitations": "Faculty-level fit remains unverified."
+        }
+      ]
+    },
+    {
+      "institution_id": "us:ipeds:110680",
+      "institution_name": "University of California-San Diego",
+      "country": "United States",
+      "region": "us",
+      "program_name": "Computer Science and Engineering PhD",
+      "degree_type": "PhD",
+      "relevant_degree_route": "Doctoral route accepting bachelor's entrants",
+      "research_topic_clusters": ["repair_analysis", "systems_security", "ai_for_se"],
+      "exact_research_fit_signal": "The official doctoral page identifies programming languages, compilers, software engineering, computer systems, and security as research areas.",
+      "preliminary_international_eligibility": "The admissions page says a master's is not required; exact international credential and language rules require Stage 3 verification.",
+      "preliminary_funding_signal": "The department describes first-year stipend and fee coverage for incoming PhD students, with later support typically through GSR or fellowship sources.",
+      "official_program_url": "https://cse.ucsd.edu/graduate/doctoral-programs-computer-science-and-engineering",
+      "seed_adjacency": ["TerraProbe-adjacent", "Evidex-adjacent"],
+      "unresolved_fields": ["Fall 2027 cycle", "international credential equivalency", "multi-year funding continuity", "current faculty supervision"],
+      "evidence_confidence": "high",
+      "sources": [
+        {
+          "source_id": "reentry01:ucsd:program-research",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "program and research fit",
+          "title": "Doctoral Programs in Computer Science and Engineering",
+          "url": "https://cse.ucsd.edu/graduate/doctoral-programs-computer-science-and-engineering",
+          "evidence_summary": "Official page identifies the PhD and relevant research areas.",
+          "limitations": "Current supervisor availability remains unverified."
+        },
+        {
+          "source_id": "reentry01:ucsd:admissions",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "entry route",
+          "title": "Graduate Admissions",
+          "url": "https://cse.ucsd.edu/graduate/admissions",
+          "evidence_summary": "Department states a master's is not required for PhD admission.",
+          "limitations": "Applicant-specific international requirements require verification."
+        },
+        {
+          "source_id": "reentry01:ucsd:funding",
+          "discovery_path": "underrepresented_route_search",
+          "evidence_role": "preliminary funding",
+          "title": "Financial Opportunities",
+          "url": "https://cse.ucsd.edu/graduate/financial-opportunities",
+          "evidence_summary": "Official page describes first-year PhD support and typical later funding sources.",
+          "limitations": "Multi-year and offer-specific terms require verification."
+        }
+      ]
+    },
+    {
+      "institution_id": "us:ipeds:198419",
+      "institution_name": "Duke University",
+      "country": "United States",
+      "region": "us",
+      "program_name": "Computer Science PhD",
+      "degree_type": "PhD",
+      "relevant_degree_route": "Doctoral route; bachelor's entry requires Stage 3 verification",
+      "research_topic_clusters": ["repair_analysis", "systems_security"],
+      "exact_research_fit_signal": "The official programming-languages page names program analysis and formal methods applied to security and privacy.",
+      "preliminary_international_eligibility": "The department lists a CS PhD route; exact bachelor's-entry, international credential, and language rules require Stage 3 verification.",
+      "preliminary_funding_signal": "The department describes full tuition, fees, health insurance, and stipend support for five years.",
+      "official_program_url": "https://cs.duke.edu/graduate/phd",
+      "seed_adjacency": ["TerraProbe-adjacent", "Evidex-adjacent"],
+      "unresolved_fields": ["bachelor's-entry eligibility", "Fall 2027 cycle", "international requirements", "current faculty supervision", "offer-specific funding"],
+      "evidence_confidence": "high",
+      "sources": [
+        {
+          "source_id": "reentry01:duke:program",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "program route",
+          "title": "Computer Science PhD",
+          "url": "https://cs.duke.edu/graduate/phd",
+          "evidence_summary": "Official department page identifies the CS PhD route.",
+          "limitations": "Cycle and applicant-specific requirements require verification."
+        },
+        {
+          "source_id": "reentry01:duke:research",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "research fit",
+          "title": "Programming Languages",
+          "url": "https://cs.duke.edu/research/programming-languages",
+          "evidence_summary": "Official page identifies program analysis, formal methods, security, and privacy research.",
+          "limitations": "Current supervision capacity remains unverified."
+        },
+        {
+          "source_id": "reentry01:duke:funding",
+          "discovery_path": "underrepresented_route_search",
+          "evidence_role": "preliminary funding",
+          "title": "PhD Financial Support",
+          "url": "https://cs.duke.edu/graduate/phd/financial",
+          "evidence_summary": "Department describes five years of tuition, fees, insurance, and stipend support.",
+          "limitations": "Offer-specific terms require verification."
+        }
+      ]
+    },
+    {
+      "institution_id": "us:ipeds:217156",
+      "institution_name": "Brown University",
+      "country": "United States",
+      "region": "us",
+      "program_name": "Computer Science PhD",
+      "degree_type": "PhD",
+      "relevant_degree_route": "Doctoral route; bachelor's entry requires Stage 3 verification",
+      "research_topic_clusters": ["repair_analysis", "systems_security", "ai_for_se"],
+      "exact_research_fit_signal": "Official research pages identify software engineering, programming languages, systems, security, automated correctness, and software supply-chain security.",
+      "preliminary_international_eligibility": "The doctoral program is open to international applicants, but exact credential and language rules require Stage 3 verification.",
+      "preliminary_funding_signal": "The doctoral FAQ states that PhD students, including international students, are funded; exact duration and offer terms require verification.",
+      "official_program_url": "https://cs.brown.edu/degrees/doctoral/",
+      "seed_adjacency": ["TerraProbe-adjacent", "Evidex-adjacent"],
+      "unresolved_fields": ["bachelor's-entry eligibility", "Fall 2027 cycle", "international requirements", "funding duration", "current faculty supervision"],
+      "evidence_confidence": "high",
+      "sources": [
+        {
+          "source_id": "reentry01:brown:program",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "program route",
+          "title": "Doctoral Program",
+          "url": "https://cs.brown.edu/degrees/doctoral/",
+          "evidence_summary": "Official department page identifies the CS doctoral route.",
+          "limitations": "Cycle-specific requirements require verification."
+        },
+        {
+          "source_id": "reentry01:brown:research",
+          "discovery_path": "lab_or_center_signal",
+          "evidence_role": "research fit",
+          "title": "Systems at Brown",
+          "url": "https://systems.cs.brown.edu/",
+          "evidence_summary": "Official research group describes distributed systems, security, correctness, and automation work.",
+          "limitations": "Faculty-level supervision remains unverified."
+        },
+        {
+          "source_id": "reentry01:brown:funding",
+          "discovery_path": "underrepresented_route_search",
+          "evidence_role": "preliminary funding",
+          "title": "Doctoral Program FAQ",
+          "url": "https://cs.brown.edu/degrees/doctoral/faq/",
+          "evidence_summary": "Official FAQ describes PhD funding including for international students.",
+          "limitations": "Duration and offer-specific terms require verification."
+        }
+      ]
+    },
+    {
+      "institution_id": "us:ipeds:234076",
+      "institution_name": "University of Virginia-Main Campus",
+      "country": "United States",
+      "region": "us",
+      "program_name": "Computer Science PhD",
+      "degree_type": "PhD",
+      "relevant_degree_route": "Doctoral route; bachelor's entry requires Stage 3 verification",
+      "research_topic_clusters": ["repair_analysis", "systems_security", "ai_for_se"],
+      "exact_research_fit_signal": "The official department research page identifies security, software engineering, systems, and AI research.",
+      "preliminary_international_eligibility": "The program page identifies the PhD and international application route; exact credential and language requirements require Stage 3 verification.",
+      "preliminary_funding_signal": "The department says PhD students are usually admitted with first-year RA support covering stipend, tuition, fees, and health insurance; this is not treated as a universal guarantee.",
+      "official_program_url": "https://engineering.virginia.edu/department/computer-science/academics/graduate-programs/phd-computer-science",
+      "seed_adjacency": ["TerraProbe-adjacent", "Evidex-adjacent"],
+      "unresolved_fields": ["bachelor's-entry eligibility", "Fall 2027 cycle", "international requirements", "funding continuity", "current faculty supervision"],
+      "evidence_confidence": "high",
+      "sources": [
+        {
+          "source_id": "reentry01:uva:program-funding",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "program and preliminary funding",
+          "title": "PhD in Computer Science",
+          "url": "https://engineering.virginia.edu/department/computer-science/academics/graduate-programs/phd-computer-science",
+          "evidence_summary": "Official page identifies the PhD route and describes usual first-year RA support.",
+          "limitations": "Usual support is not treated as a universal or multi-year guarantee; automated retrieval returned HTTP 403 during re-entry QA."
+        },
+        {
+          "source_id": "reentry01:uva:research",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "research fit",
+          "title": "Computer Science Research",
+          "url": "https://engineering.virginia.edu/department/computer-science/cs-research",
+          "evidence_summary": "Official page identifies security, software engineering, systems, and AI research.",
+          "limitations": "Current faculty supervision remains unverified; automated retrieval returned HTTP 403 during re-entry QA."
+        }
+      ]
+    },
+    {
+      "institution_id": "ca:dli:O18781994282",
+      "institution_name": "Simon Fraser University",
+      "country": "Canada",
+      "region": "canada",
+      "program_name": "Computing Science Master of Science (Thesis)",
+      "degree_type": "Thesis or research master's",
+      "relevant_degree_route": "Thesis or research master's",
+      "research_topic_clusters": ["repair_analysis", "systems_security", "ai_for_se"],
+      "exact_research_fit_signal": "Official SFU research pages identify programming languages and software engineering, formal verification, static program analysis, model checking, security, and systems research.",
+      "preliminary_international_eligibility": "The application page defines the Computing Science graduate route; international degree-equivalency and language conditions require Stage 3 verification.",
+      "preliminary_funding_signal": "The school states a guaranteed minimum funding level of CAD 24,000 per year for two years for thesis MSc students, subject to its published terms.",
+      "official_program_url": "https://www.sfu.ca/fas/study/future-graduates/programs/master-science-thesis.html",
+      "official_institution_url": "https://www.sfu.ca/",
+      "additional_discovery_paths": ["research_masters_or_scholarship_search", "underrepresented_route_search", "recognized_institution_record"],
+      "seed_adjacency": ["TerraProbe-adjacent", "Evidex-adjacent"],
+      "unresolved_fields": ["Fall 2027 cycle", "international degree equivalency", "supervisor match", "offer-specific net funding", "current faculty supervision"],
+      "evidence_confidence": "high",
+      "sources": [
+        {
+          "source_id": "reentry01:sfu:program",
+          "discovery_path": "research_masters_or_scholarship_search",
+          "evidence_role": "program route",
+          "title": "Master of Science (Thesis)",
+          "url": "https://www.sfu.ca/fas/study/future-graduates/programs/master-science-thesis.html",
+          "evidence_summary": "Official page identifies the research-intensive thesis MSc route.",
+          "limitations": "Cycle and applicant-specific entry requirements require verification."
+        },
+        {
+          "source_id": "reentry01:sfu:research",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "research fit",
+          "title": "Computing Science Research Areas",
+          "url": "https://www2.cs.sfu.ca/research/",
+          "evidence_summary": "Official page identifies formal verification, static analysis, model checking, software engineering, security, and systems work.",
+          "limitations": "Faculty-level fit and availability remain unverified."
+        },
+        {
+          "source_id": "reentry01:sfu:funding",
+          "discovery_path": "research_masters_or_scholarship_search",
+          "evidence_role": "preliminary funding",
+          "title": "Financial Support and Scholarships",
+          "url": "https://www.sfu.ca/fas/computing/current-students/graduates/financial-support-scholarships.html",
+          "evidence_summary": "School describes a two-year guaranteed minimum for thesis MSc students.",
+          "limitations": "Published conditions and offer-specific net support require verification."
+        }
+      ]
+    },
+    {
+      "institution_id": "ror:040wg7k59",
+      "institution_name": "Chalmers University of Technology",
+      "country": "Sweden",
+      "region": "europe",
+      "program_name": "Computer Science MSc",
+      "degree_type": "Thesis or research master's",
+      "relevant_degree_route": "Thesis or research master's",
+      "research_topic_clusters": ["repair_analysis", "systems_security", "ai_for_se"],
+      "exact_research_fit_signal": "The current official MSc page identifies security and privacy, programming languages, logic, formal methods, type theory, research-group work, and a research thesis.",
+      "preliminary_international_eligibility": "The official English-language two-year MSc page publishes an international application window; degree-specific entry equivalency requires Stage 3 verification.",
+      "preliminary_funding_signal": "Tuition liability, scholarships, and living-cost adequacy are not established by the bounded discovery record and require Stage 3 verification.",
+      "official_program_url": "https://www.chalmers.se/en/education/find-masters-programme/computer-science-msc/",
+      "additional_discovery_paths": ["research_masters_or_scholarship_search", "underrepresented_route_search"],
+      "seed_adjacency": ["TerraProbe-adjacent", "Evidex-adjacent"],
+      "unresolved_fields": ["degree-specific eligibility", "tuition status", "scholarship funding", "living-cost adequacy", "current faculty supervision"],
+      "evidence_confidence": "high",
+      "sources": [
+        {
+          "source_id": "reentry01:chalmers:program",
+          "discovery_path": "research_masters_or_scholarship_search",
+          "evidence_role": "program route and research fit",
+          "title": "Computer Science MSc",
+          "url": "https://www.chalmers.se/en/education/find-masters-programme/computer-science-msc/",
+          "evidence_summary": "Official current page identifies the two-year English MSc, research specialties, application window, and research thesis.",
+          "limitations": "Applicant-specific eligibility and funding require Stage 3 verification."
+        },
+        {
+          "source_id": "reentry01:chalmers:research",
+          "discovery_path": "lab_or_center_signal",
+          "evidence_role": "research fit",
+          "title": "Logic and Types",
+          "url": "https://www.chalmers.se/en/departments/cse/our-research/computing-science/logic-and-types/",
+          "evidence_summary": "Official research page identifies logic, types, and formal methods work.",
+          "limitations": "Supervisor fit and availability remain unverified."
+        }
+      ]
+    }
+  ]
+}
