@@ -1,0 +1,45 @@
+{
+  "source": "OpenAlex Works API",
+  "base_url": "https://api.openalex.org/works",
+  "retrieved_at": "2026-09-10T03:03:13.689407+00:00",
+  "query_window": {
+    "from": "2022-01-01",
+    "to": "2026-09-09"
+  },
+  "queries": [
+    "large language models software engineering",
+    "LLM code repair testing debugging maintenance",
+    "coding agent evaluation reliability security",
+    "automated program repair program analysis",
+    "configuration repair infrastructure as code Terraform",
+    "static dynamic analysis software reliability",
+    "trustworthy AI evaluation assurance auditing",
+    "LLM factuality grounding claim verification",
+    "agent security AI-generated code security",
+    "secure dependable software systems",
+    "cloud configuration security DevOps security",
+    "security policy verification"
+  ],
+  "per_query_requested": 200,
+  "request_urls": [
+    "https://api.openalex.org/works?search=large+language+models+software+engineering&filter=from_publication_date%3A2022-01-01%2Cto_publication_date%3A2026-09-09&sort=relevance_score%3Adesc&per-page=100&cursor=%2A&select=id%2Cdoi%2Ctitle%2Cpublication_year%2Cpublication_date%2Ccited_by_count%2Cauthorships%2Cprimary_location%2Ctype",
+    "https://api.openalex.org/works?search=large+language+models+software+engineering&filter=from_publication_date%3A2022-01-01%2Cto_publication_date%3A2026-09-09&sort=relevance_score%3Adesc&per-page=100&cursor=IlsyNDIuMjkzOTMsIDk4LjAsIDUsICdodHRwczovL29wZW5hbGV4Lm9yZy9XNDQwMjMyMDQ5NyddIg%3D%3D&select=id%2Cdoi%2Ctitle%2Cpublication_year%2Cpublication_date%2Ccited_by_count%2Cauthorships%2Cprimary_location%2Ctype",
+    "https://api.openalex.org/works?search=coding+agent+evaluation+reliability+security&filter=from_publication_date%3A2022-01-01%2Cto_publication_date%3A2026-09-09&sort=relevance_score%3Adesc&per-page=100&cursor=%2A&select=id%2Cdoi%2Ctitle%2Cpublication_year%2Cpublication_date%2Ccited_by_count%2Cauthorships%2Cprimary_location%2Ctype",
+    "https://api.openalex.org/works?search=coding+agent+evaluation+reliability+security&filter=from_publication_date%3A2022-01-01%2Cto_publication_date%3A2026-09-09&sort=relevance_score%3Adesc&per-page=100&cursor=Ils4Mi4yMDQxOCwgMTAwLjAsIDk2LCAnaHR0cHM6Ly9vcGVuYWxleC5vcmcvVzQ0MDMxMzk2NjknXSI%3D&select=id%2Cdoi%2Ctitle%2Cpublication_year%2Cpublication_date%2Ccited_by_count%2Cauthorships%2Cprimary_location%2Ctype",
+    "https://api.openalex.org/works?search=trustworthy+AI+evaluation+assurance+auditing&filter=from_publication_date%3A2022-01-01%2Cto_publication_date%3A2026-09-09&sort=relevance_score%3Adesc&per-page=100&cursor=%2A&select=id%2Cdoi%2Ctitle%2Cpublication_year%2Cpublication_date%2Ccited_by_count%2Cauthorships%2Cprimary_location%2Ctype",
+    "https://api.openalex.org/works?search=trustworthy+AI+evaluation+assurance+auditing&filter=from_publication_date%3A2022-01-01%2Cto_publication_date%3A2026-09-09&sort=relevance_score%3Adesc&per-page=100&cursor=Ils5OS41NjI5MzUsIDEwMC4wLCA2OSwgJ2h0dHBzOi8vb3BlbmFsZXgub3JnL1c0MjI2MTg2NTYwJ10i&select=id%2Cdoi%2Ctitle%2Cpublication_year%2Cpublication_date%2Ccited_by_count%2Cauthorships%2Cprimary_location%2Ctype"
+  ],
+  "raw_path": "data\\raw\\openalex\\query_results.json",
+  "raw_sha256": "bffe824fe8f4d80d6237da967d1c2d48ecf8f0a285c685353f5099395c759615",
+  "raw_bytes": 15349435,
+  "query_failures": [],
+  "counts": {
+    "query_results": 2400,
+    "institutions_ranked": 1647,
+    "author_institution_pairs": 6923
+  },
+  "limitations": [
+    "Search relevance is a discovery signal, not final research-fit evidence.",
+    "Authorship affiliations are publication-time metadata and require current official verification."
+  ]
+}
