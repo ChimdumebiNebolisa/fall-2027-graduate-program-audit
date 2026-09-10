@@ -4,44 +4,10 @@ import argparse
 import json
 from pathlib import Path
 
+from graduate_audit.hard_gates import evaluate_hard_gates
 from graduate_audit.io import read_csv, write_csv, write_json
-from graduate_audit.schema import PROGRAM_COLUMNS
+from graduate_audit.schema import PASS2_SCHEMA_VERSION, PROGRAM_COLUMNS_V2
 from graduate_audit.scoring import calculate_score
-
-YES = {"yes", "true", "verified", "eligible", "1"}
-CREDIBLE_FUNDING = {
-    "verified", "guaranteed", "normally funded", "normally_funded_not_guaranteed",
-    "guaranteed_all_admitted", "position salary", "position_salary", "full scholarship",
-}
-COMPATIBLE_DEGREES = {
-    "PhD", "Direct-entry PhD", "Integrated or structured doctorate",
-    "Thesis or research master's", "Project-based master's with substantial research",
-}
-
-
-def _yes(value: object) -> bool:
-    normalized = str(value or "").strip().lower()
-    return normalized in YES or normalized.startswith(("yes", "verified;"))
-
-
-def _credible_funding(value: object) -> bool:
-    normalized = str(value or "").strip().lower()
-    return normalized in CREDIBLE_FUNDING or any(
-        token in normalized
-        for token in (
-            "normally funded", "guaranteed", "fully funded", "full-support", "full support",
-            "full tuition and stipend", "tuition and living support", "five-year package",
-            "position salary", "receive a stipend", "receive stipend", "all admitted",
-        )
-    )
-
-
-def _can_supervise(value: object) -> bool:
-    normalized = str(value or "").strip().lower()
-    if normalized.startswith("no") or "cannot supervise" in normalized:
-        return False
-    return _yes(normalized) or "research faculty" in normalized or normalized.startswith("potentially")
-
 
 def _number(value: object) -> int:
     try:
@@ -50,51 +16,26 @@ def _number(value: object) -> int:
         return 0
 
 
-def _recognized_active(institution: dict[str, str]) -> bool:
-    recognition = institution.get("recognition_status", "").lower()
-    source_database = institution.get("source_database", "").lower()
-    active = institution.get("active_status", "").lower()
-    registry_evidence = any(
-        token in recognition or token in source_database
-        for token in ("recognized", "accredited", "official", "ipeds", "cicic", "ircc")
-    )
-    return registry_evidence and any(token in active for token in ("active", "current", "yes"))
-
-
 def score_programs(program_path: Path, institution_path: Path, professor_path: Path) -> list[dict[str, str]]:
     programs = read_csv(program_path)
-    institutions = {row["institution_id"]: row for row in read_csv(institution_path)}
+    institution_ids = {row["institution_id"] for row in read_csv(institution_path)}
     professors = read_csv(professor_path)
-    supervisor_programs = {
-        row.get("program_id", "")
-        for row in professors
-        if _can_supervise(row.get("can_supervise_program"))
-        and any(
-            token in row.get("verification_status", "").lower()
-            for token in ("verified", "complete", "official")
+    if any(row.get("schema_version") != PASS2_SCHEMA_VERSION for row in programs):
+        raise ValueError(
+            "score_programs requires Pass 2 schema 2.0 evidence; migrate legacy rows before rescoring"
         )
-    }
 
     for row in programs:
-        institution = institutions.get(row.get("institution_id", ""), {})
-        degree = row.get("degree_type", "")
-        funding = row.get("funding_status", "").strip().lower()
+        if row.get("institution_id", "") not in institution_ids:
+            raise ValueError(f"program references unknown institution: {row.get('institution_id')}")
         verification = row.get("verification_status", "").strip().lower()
         screening = row.get("screening_decision", "").strip().lower()
+        gates = evaluate_hard_gates(row, professors)
         evidence = {
             **row,
-            "recognized_active_institution": _recognized_active(institution),
-            "relevant_research_program": _number(row.get("research_fit_score")) > 0 and screening not in {"excluded", "screened_out"},
-            "international_student_eligible": _yes(row.get("international_student_eligible")),
-            "bachelor_entry_or_research_masters_route": _yes(row.get("direct_from_bachelors_eligible")),
-            "verified_professor_match": row.get("program_id", "") in supervisor_programs,
-            "credible_funding_or_full_scholarship": (
-                _credible_funding(funding)
-                or (screening == "retained" and _number(row.get("funding_score")) >= 18 and bool(verification))
-            ),
-            "compatible_degree_structure": degree in COMPATIBLE_DEGREES,
+            **gates.gates,
             "position_monitor_only": row.get("recommendation") == "Monitor for 2027 Position",
-            "material_unresolved_gate": row.get("recommendation") == "Outreach Before Decision",
+            "material_unresolved_gate": bool(row.get("unresolved_conflicts")),
             "verification_status": verification,
         }
         result = calculate_score(evidence)
@@ -102,6 +43,8 @@ def score_programs(program_path: Path, institution_path: Path, professor_path: P
         row["overall_score"] = str(result.overall_score)
         if screening == "retained" or not row.get("recommendation"):
             row["recommendation"] = result.recommendation
+        row["distinct_verified_professor_count"] = str(gates.distinct_verified_professor_count)
+        row["hard_gate_failures"] = "|".join(result.gate_failures)
         if result.gate_failures:
             failure_text = ", ".join(result.gate_failures)
             row["notes"] = "; ".join(part for part in [row.get("notes", ""), f"Hard-gate failures: {failure_text}"] if part)
@@ -173,7 +116,7 @@ def main() -> None:
         root / "institution_universe.csv",
         root / "professor_evidence.csv",
     )
-    write_csv(root / "program_screening.csv", programs, PROGRAM_COLUMNS)
+    write_csv(root / "program_screening.csv", programs, PROGRAM_COLUMNS_V2)
     portfolio = select_portfolio(programs)
     write_json(root / "portfolio.json", portfolio)
     print(json.dumps({key: len(value) for key, value in portfolio.items() if isinstance(value, list)}, indent=2))

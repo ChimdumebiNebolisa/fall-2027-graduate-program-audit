@@ -1,0 +1,251 @@
+{
+  "manifest_version": "1.0",
+  "stage": 1,
+  "name": "Repair the executable pipeline and contracts",
+  "status": "complete",
+  "decision": "PASS",
+  "source_commit_before_stage": "f08b77ad3761fd94bee74d12fc669d7973e93b4b",
+  "started_at": "2026-09-10T18:32:19.112775+00:00",
+  "completed_at": "2026-09-10T18:32:22.307116+00:00",
+  "acceptance_assertions": {
+    "initial_run_executed_all_stages": true,
+    "initial_validation_passed": true,
+    "clean_resume_skipped_all_stages": true,
+    "invalid_score_resume_preserved_prior_stages": true,
+    "invalid_score_resume_reran_downstream": true,
+    "final_validation_passed": true,
+    "screening_evidence_scoring_portfolio_report_created": true,
+    "fixture_names_not_hard_coded": true
+  },
+  "fixture_run": {
+    "initial": {
+      "status": "complete",
+      "executed": [
+        "discovery",
+        "screening",
+        "research_fit",
+        "verification",
+        "scoring",
+        "portfolio",
+        "outreach",
+        "reporting"
+      ],
+      "skipped": [],
+      "last_valid_checkpoint": "reporting"
+    },
+    "initial_validation": {
+      "status": "PASS",
+      "schema_version": "2.0",
+      "checked_at": "2026-09-10T18:32:20.348493+00:00",
+      "checkpoints": {
+        "discovery": true,
+        "screening": true,
+        "research_fit": true,
+        "verification": true,
+        "scoring": true,
+        "portfolio": true,
+        "outreach": true,
+        "reporting": true
+      },
+      "failures": [],
+      "last_valid_checkpoint": "reporting"
+    },
+    "clean_resume": {
+      "status": "complete",
+      "executed": [],
+      "skipped": [
+        "discovery",
+        "screening",
+        "research_fit",
+        "verification",
+        "scoring",
+        "portfolio",
+        "outreach",
+        "reporting"
+      ],
+      "last_valid_checkpoint": "reporting"
+    },
+    "invalid_checkpoint_resume": {
+      "status": "complete",
+      "executed": [
+        "scoring",
+        "portfolio",
+        "outreach",
+        "reporting"
+      ],
+      "skipped": [
+        "discovery",
+        "screening",
+        "research_fit",
+        "verification"
+      ],
+      "last_valid_checkpoint": "reporting"
+    },
+    "final_validation": {
+      "status": "PASS",
+      "schema_version": "2.0",
+      "checked_at": "2026-09-10T18:32:21.899929+00:00",
+      "checkpoints": {
+        "discovery": true,
+        "screening": true,
+        "research_fit": true,
+        "verification": true,
+        "scoring": true,
+        "portfolio": true,
+        "outreach": true,
+        "reporting": true
+      },
+      "failures": [],
+      "last_valid_checkpoint": "reporting"
+    },
+    "summary": {
+      "schema_version": "2.0",
+      "generated_at": "2026-09-10T18:32:21.247460+00:00",
+      "counts": {
+        "institutions": 2,
+        "screened_programs": 2,
+        "verified_program_records": 2,
+        "professor_records": 3,
+        "sources": 8,
+        "scored_programs": 2,
+        "core": 1,
+        "reserve": 0,
+        "monitor": 0,
+        "outreach_candidates": 2
+      },
+      "recommendations": {
+        "fixture:alpha:program:phd:computer-science": "Strong Apply",
+        "fixture:beta:program:phd:information-science": "Do Not Apply"
+      },
+      "unresolved_conflicts": {
+        "fixture:beta:program:phd:information-science": "Funding and supervision remain unresolved; Supervision authority unresolved; Funding unresolved"
+      }
+    }
+  },
+  "artifacts": [
+    {
+      "path": "README.md",
+      "sha256": "70a3ccd421cc8e89e6a88beb68ac59976a14c5b9267078fd9dbf9aa972f5f839",
+      "bytes": 2725
+    },
+    {
+      "path": "src/graduate_audit/cli.py",
+      "sha256": "f08d05378990ee884ced11560cf0364149b9bff8c6123e9a48ed9b6cd996483f",
+      "bytes": 3559
+    },
+    {
+      "path": "src/graduate_audit/finalize.py",
+      "sha256": "eb93f8f4c3fcefcf7311d819db01371affd424710225cc38633128d676bfd881",
+      "bytes": 7567
+    },
+    {
+      "path": "src/graduate_audit/hard_gates.py",
+      "sha256": "9b17f6635426035ef9c604e216dd0dc633a24f73a66e7a7b6ed8b446622ec82a",
+      "bytes": 2682
+    },
+    {
+      "path": "src/graduate_audit/pipeline.py",
+      "sha256": "1f294adf6b47ec9bcb687ad1d81bd3bbcc6a59649b46eabffc4dee937cfabaa5",
+      "bytes": 30462
+    },
+    {
+      "path": "src/graduate_audit/portfolio.py",
+      "sha256": "5b27c0167b8c5524c4e2f425615e444e0fbc55b3d3cb08134a5043a54c690872",
+      "bytes": 5424
+    },
+    {
+      "path": "src/graduate_audit/schema.py",
+      "sha256": "7c8c898421522599cb28d7aa4239eb2f95ce57aace9c948314ea62ee1c15a028",
+      "bytes": 6967
+    },
+    {
+      "path": "src/graduate_audit/validation.py",
+      "sha256": "b90d60c7cf8532332d9055a2de348e7bbb1187b175f353766902ab92921255a3",
+      "bytes": 6245
+    },
+    {
+      "path": "tests/test_hard_gates.py",
+      "sha256": "b2f5f3a5a46e35f4238df96cedb1c54ed7e11649052ce350d282d4c4e7fbba12",
+      "bytes": 2299
+    },
+    {
+      "path": "tests/test_pass2_pipeline.py",
+      "sha256": "e6e87e9ecd5d65b9a8f82f1ab3eaa466ee327223c7c0f1759a229a42205dd6df",
+      "bytes": 4561
+    },
+    {
+      "path": "tests/test_portfolio.py",
+      "sha256": "9a4b8df76484e12230e9ea18c990e4734f31c9e768ec4a1a8588e8445b3a9157",
+      "bytes": 2308
+    },
+    {
+      "path": "tests/test_schema.py",
+      "sha256": "dc83ca7dbec60c1068852d23cfb9193afa9355fe7d4bea7c775b1290a95081e3",
+      "bytes": 1354
+    },
+    {
+      "path": "tests/test_validation.py",
+      "sha256": "fe5b2019b105f6e951a80d7523a667a269d630a3446d181fb24353483d133d64",
+      "bytes": 1718
+    },
+    {
+      "path": "reports/pass2/01_pipeline_repair.md",
+      "sha256": "b7bc4938b422a8627df504e024b4337b9d2084cd6326532e4d0e49fbaed68ee1",
+      "bytes": 5198
+    },
+    {
+      "path": "reports/pass2/01_schema_versioning.md",
+      "sha256": "20c90ca518eb3de91a0c11160999b58a937c950c26354914ddf5bddca7a3bbf6",
+      "bytes": 3463
+    },
+    {
+      "path": "scripts/build_stage_01.py",
+      "sha256": "48e3247e0c0fa67e29842f27ac13770569444c509e268778d96dc2d5bd9dfb15",
+      "bytes": 6522
+    },
+    {
+      "path": "state/progress.json",
+      "sha256": "d32dd0df13747bf3eafaa63a2414a9f7c702ced1f32db0564f3a86b03f124027",
+      "bytes": 1690
+    },
+    {
+      "path": "tests/fixtures/pass2_pipeline/input/institutions.csv",
+      "sha256": "7627baa289a81f7202986a936a8cf89a48f9b0d04b3f732cbc20618c80f3512c",
+      "bytes": 373
+    },
+    {
+      "path": "tests/fixtures/pass2_pipeline/input/professor_evidence.csv",
+      "sha256": "ba59d23e6a65ccc2daf4ac5c0a3d55609d620d6bda27022f25861f435945ab92",
+      "bytes": 766
+    },
+    {
+      "path": "tests/fixtures/pass2_pipeline/input/program_candidates.csv",
+      "sha256": "d7685ef6832d686478ad5ade4c154e186cdf9faaaac07933764f0eb1f78ddcf8",
+      "bytes": 1094
+    },
+    {
+      "path": "tests/fixtures/pass2_pipeline/input/program_evidence.csv",
+      "sha256": "9d399b476b601eba3b9477319bd898450e2bc4ca0eea39b09c211850db8d4f47",
+      "bytes": 784
+    },
+    {
+      "path": "tests/fixtures/pass2_pipeline/input/score_components.csv",
+      "sha256": "ce3c05288ed6ef50c1fcb066816fc9fdc08556bd576048aaeaee6e92a079b38e",
+      "bytes": 2019
+    },
+    {
+      "path": "tests/fixtures/pass2_pipeline/input/source_ledger.csv",
+      "sha256": "4405eed2a53e60352a6f26866a0cc4e909210e3ce20bc8f1aa4ca57ba5605b09",
+      "bytes": 2327
+    }
+  ],
+  "blockers": [],
+  "unresolved_coverage": [
+    "The 56 real Pass 1 scored rows remain unmigrated and unrescored.",
+    "Real professor-depth and supervision-authority evidence remains for Stage 3.",
+    "Regional discovery recall gaps remain for Stage 2.",
+    "Admissions, funding, language, and Fall 2027 evidence remains for Stage 4.",
+    "The Pass 1 portfolio and outreach artifacts remain unchanged pending Stages 6-8.",
+    "The synthetic fixture verifies orchestration and contracts, not real-world coverage."
+  ]
+}

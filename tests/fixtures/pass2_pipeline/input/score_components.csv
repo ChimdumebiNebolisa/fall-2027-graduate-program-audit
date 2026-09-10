@@ -1,0 +1,13 @@
+program_id,component,score,max_score,rubric_anchor,evidence_ids,evidence_completeness,score_confidence,unresolved_conflicts
+fixture:alpha:program:phd:computer-science,professor_alignment,28,30,Two verified strong-fit supervisors,src:alpha-professor-ada|src:alpha-professor-ben,complete,high,
+fixture:alpha:program:phd:computer-science,department_program_depth,14,15,Multiple verified aligned faculty,src:alpha-professor-ada|src:alpha-professor-ben,complete,high,
+fixture:alpha:program:phd:computer-science,funding_net_viability,23,25,Verified tuition and stipend package,src:alpha-funding,complete,high,
+fixture:alpha:program:phd:computer-science,eligibility_credential_plausibility,14,15,Published route matches profile,src:alpha-admissions,complete,high,
+fixture:alpha:program:phd:computer-science,degree_admissions_alignment,9,10,Research doctorate and compatible model,src:alpha-program|src:alpha-admissions,complete,high,
+fixture:alpha:program:phd:computer-science,application_economics,4,5,Published fee is manageable,src:alpha-admissions,complete,high,
+fixture:beta:program:phd:information-science,professor_alignment,10,30,Potential match without verified authority,src:beta-professor-casey,partial,low,Supervision authority unresolved
+fixture:beta:program:phd:information-science,department_program_depth,3,15,Only one potential match,src:beta-professor-casey,partial,low,Supervision authority unresolved
+fixture:beta:program:phd:information-science,funding_net_viability,0,25,No verified funding package,,missing,low,Funding unresolved
+fixture:beta:program:phd:information-science,eligibility_credential_plausibility,12,15,Published entry route appears compatible,src:beta-admissions,complete,medium,
+fixture:beta:program:phd:information-science,degree_admissions_alignment,8,10,Research doctorate and compatible model,src:beta-program|src:beta-admissions,complete,medium,
+fixture:beta:program:phd:information-science,application_economics,3,5,Published fee is manageable,src:beta-admissions,complete,medium,

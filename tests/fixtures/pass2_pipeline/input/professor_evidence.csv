@@ -1,0 +1,4 @@
+professor_id,program_id,full_name,can_supervise_program,verification_status,official_faculty_url,evidence_ids,research_themes,unresolved_conflicts
+fixture:alpha:faculty:ada-one,fixture:alpha:program:phd:computer-science,Ada One,verified,verified,https://alpha.example.edu/faculty/ada,src:alpha-professor-ada,software engineering and AI,
+fixture:alpha:faculty:ben-two,fixture:alpha:program:phd:computer-science,Ben Two,verified,verified,https://alpha.example.edu/faculty/ben,src:alpha-professor-ben,intelligent systems,
+fixture:beta:faculty:casey-three,fixture:beta:program:phd:information-science,Casey Three,potentially,incomplete,https://beta.example.edu/faculty/casey,src:beta-professor-casey,intelligent information systems,Supervision authority not established

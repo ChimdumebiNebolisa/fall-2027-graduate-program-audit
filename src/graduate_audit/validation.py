@@ -10,6 +10,22 @@ EXCLUDED_PROGRAM_DECISIONS = {"excluded", "screened_out", "do_not_apply"}
 RETAINED_PROGRAM_DECISIONS = {"retained"}
 
 
+def _explicit_supervision(row: dict[str, str]) -> bool:
+    supervision = row.get("can_supervise_program", "").strip().lower()
+    return supervision in {"yes", "true", "verified"} or supervision.startswith(
+        ("yes -", "yes;", "verified;")
+    )
+
+
+def _verified_supervision(row: dict[str, str]) -> bool:
+    verification = row.get("verification_status", "").strip().lower()
+    return (
+        _explicit_supervision(row)
+        and "verified" in verification
+        and bool(row.get("official_faculty_url", "").strip())
+    )
+
+
 def validate_outputs(output_dir: str | Path) -> dict[str, object]:
     root = Path(output_dir)
     errors: list[str] = []
@@ -48,11 +64,7 @@ def validate_outputs(output_dir: str | Path) -> dict[str, object]:
     professor_programs = {
         row.get("program_id")
         for row in professors
-        if (
-            row.get("can_supervise_program", "").lower() in {"yes", "true", "verified"}
-            or "research faculty" in row.get("can_supervise_program", "").lower()
-            or row.get("can_supervise_program", "").lower().startswith("potentially")
-        )
+        if _verified_supervision(row)
     }
     for row_number, row in enumerate(programs, start=2):
         decision = row.get("screening_decision", "").lower()
@@ -82,11 +94,7 @@ def validate_outputs(output_dir: str | Path) -> dict[str, object]:
             errors.append(f"professor row {row_number} has invalid recruiting status {recruiting}")
         if recruiting == "Confirmed recruiting" and not row.get("recruiting_evidence"):
             errors.append(f"professor row {row_number} is confirmed recruiting without evidence")
-        if (
-            row.get("can_supervise_program", "").lower() in {"yes", "true", "verified"}
-            or "research faculty" in row.get("can_supervise_program", "").lower()
-            or row.get("can_supervise_program", "").lower().startswith("potentially")
-        ):
+        if _explicit_supervision(row):
             if not row.get("official_faculty_url"):
                 errors.append(f"supervisor row {row_number} has no official faculty URL")
             if not row.get("appointment_status"):

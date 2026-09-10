@@ -1,0 +1,3 @@
+institution_id,institution_name,country,region,recognition_status,active_status,official_website,regional_admissions_model,unresolved_conflicts
+fixture:alpha,Alpha Research University,United States,us,recognized,active,https://alpha.example.edu,committee-based,
+fixture:beta,Beta Technical University,Canada,canada,recognized,active,https://beta.example.edu,program-based,

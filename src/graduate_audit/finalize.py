@@ -12,7 +12,7 @@ from graduate_audit.normalize.integrate import integrate
 from graduate_audit.portfolio import score_programs, select_portfolio
 from graduate_audit.reporting.outreach import prepare
 from graduate_audit.reporting.reports import build_reports
-from graduate_audit.schema import PROGRAM_COLUMNS
+from graduate_audit.schema import PROGRAM_COLUMNS_V2
 from graduate_audit.validation import validate_outputs
 
 
@@ -36,7 +36,7 @@ def finalize(repo_root: Path, output_root: Path, report_root: Path) -> dict[str,
             row["final_decision"] = "Do Not Apply"
         elif float(row.get("overall_score") or 0) > 0:
             row["final_decision"] = "Not selected"
-    write_csv(output_root / "program_screening.csv", programs, PROGRAM_COLUMNS)
+    write_csv(output_root / "program_screening.csv", programs, PROGRAM_COLUMNS_V2)
     write_json(output_root / "portfolio.json", portfolio)
 
     calendar_path = repo_root / "data/private/calendar_candidate_summary.csv"

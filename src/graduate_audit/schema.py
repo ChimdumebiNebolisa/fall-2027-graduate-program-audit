@@ -4,6 +4,9 @@ import hashlib
 import re
 from urllib.parse import parse_qsl, urlencode, urlsplit, urlunsplit
 
+LEGACY_SCHEMA_VERSION = "1.0"
+PASS2_SCHEMA_VERSION = "2.0"
+
 INSTITUTION_STATUSES = {
     "indexed",
     "out_of_scope",
@@ -107,6 +110,41 @@ SOURCE_COLUMNS = (
     "claim_type", "exact_claim_supported", "source_title", "publisher", "publication_date",
     "url", "source_type", "official_or_secondary", "date_accessed", "admissions_cycle",
     "confidence", "verification_status", "access_note",
+)
+
+# Pass 2 uses additive schemas so the evidence columns can migrate without
+# rewriting or silently reinterpreting the committed Pass 1 outputs.
+INSTITUTION_COLUMNS_V2 = INSTITUTION_COLUMNS + (
+    "schema_version", "regional_admissions_model", "unresolved_conflicts",
+)
+
+PROGRAM_COLUMNS_V2 = PROGRAM_COLUMNS + (
+    "schema_version", "discovery_paths", "exact_research_fit_signal",
+    "recognized_active_institution", "relevant_research_program",
+    "bachelor_entry_or_research_masters_route", "compatible_degree_structure",
+    "regional_admissions_model", "score_component_evidence",
+    "evidence_completeness", "score_confidence",
+    "distinct_verified_professor_count", "admission_plausibility_rationale",
+    "funding_gate_status", "funding_gate_evidence", "unresolved_conflicts",
+    "hard_gate_failures",
+)
+
+PROFESSOR_COLUMNS_V2 = PROFESSOR_COLUMNS + (
+    "schema_version", "evidence_ids", "unresolved_conflicts",
+)
+
+SOURCE_COLUMNS_V2 = SOURCE_COLUMNS + ("schema_version",)
+
+SCORE_COMPONENT_COLUMNS_V2 = (
+    "schema_version", "program_id", "component", "score", "max_score",
+    "rubric_anchor", "evidence_ids", "evidence_completeness",
+    "score_confidence", "unresolved_conflicts",
+)
+
+OUTREACH_PRIORITY_COLUMNS_V2 = (
+    "schema_version", "program_id", "institution_name", "contact_type",
+    "contact_name", "official_contact", "information_gap",
+    "outreach_status", "evidence_ids",
 )
 
 
