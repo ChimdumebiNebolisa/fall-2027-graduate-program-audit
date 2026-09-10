@@ -1,0 +1,537 @@
+{
+  "trigger": "Stage 6 re-entry 02 returned to candidate discovery because the evidence-calibrated portfolio still had zero justified core applications.",
+  "scope": "A bounded third non-saturation pass for exact, previously unverified research routes; discovery evidence only, with no scoring or retention decision.",
+  "candidates": [
+    {
+      "institution_id": "us:ipeds:126818",
+      "institution_name": "Colorado State University-Fort Collins",
+      "country": "United States",
+      "region": "us",
+      "program_name": "Computer Science PhD",
+      "degree_type": "PhD",
+      "relevant_degree_route": "Traditional research doctorate involving advanced coursework, original research, and a dissertation",
+      "research_topic_clusters": ["repair_analysis", "systems_security", "trustworthy_ai"],
+      "exact_research_fit_signal": "Official program pages identify software engineering, formal software specification, software reliability, languages and compilers, distributed systems, fault tolerance, and security as current areas of study.",
+      "preliminary_international_eligibility": "The department accepts applicants with a bachelor's degree in computer science or a closely related field and publishes international English requirements; transcript preparation and research-readiness fit remain unverified.",
+      "preliminary_funding_signal": "The department offers financial support to many PhD students, but states that funding is limited, highly competitive, and based on academic merit and faculty-research fit.",
+      "official_program_url": "https://graduateschool.colostate.edu/programs/computer-science-phd/",
+      "seed_adjacency": ["TerraProbe-adjacent", "Evidex-adjacent"],
+      "unresolved_fields": ["Fall 2027 cycle", "transcript and prerequisite equivalency", "admission plausibility", "individual funding terms", "current faculty supervision"],
+      "evidence_confidence": "high",
+      "additional_discovery_paths": ["recognized_institution_record", "underrepresented_route_search"],
+      "sources": [
+        {
+          "source_id": "reentry03:csu:program-fit",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "exact doctorate and research fit",
+          "title": "Computer Science (Ph.D.)",
+          "url": "https://graduateschool.colostate.edu/programs/computer-science-phd/",
+          "evidence_summary": "Official Graduate School page identifies the Computer Science PhD and study areas spanning formal specification, software engineering and reliability, systems, languages, and security.",
+          "limitations": "The page does not establish individual admission or advisor capacity."
+        },
+        {
+          "source_id": "reentry03:csu:admission-funding",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "entry route and preliminary funding",
+          "title": "Apply to the Computer Science Graduate Program",
+          "url": "https://compsci.colostate.edu/graduate-application/",
+          "evidence_summary": "Official department page describes bachelor's preparation, PhD research expectations, international English requirements, and limited competitive PhD support.",
+          "limitations": "Support for many students is not a guarantee and Fall 2027 terms are not yet verified."
+        }
+      ]
+    },
+    {
+      "institution_id": "us:ipeds:132903",
+      "institution_name": "University of Central Florida",
+      "country": "United States",
+      "region": "us",
+      "program_name": "Computer Science PhD",
+      "degree_type": "PhD",
+      "relevant_degree_route": "Research doctorate for which outstanding bachelor's graduates are explicitly encouraged to apply directly",
+      "research_topic_clusters": ["repair_analysis", "systems_security", "ai_for_se"],
+      "exact_research_fit_signal": "UCF lists software engineering and systems, computer security and digital forensics, theory and algorithms, networking, and AI among Computer Science PhD faculty research interests.",
+      "preliminary_international_eligibility": "The doctoral admissions page accepts direct applications from outstanding bachelor's graduates and provides requirements for applicants educated outside the United States; course articulation remains case-specific.",
+      "preliminary_funding_signal": "The program lists fellowships, assistantships, and tuition support as possible financial assistance, but provides no department-wide offer guarantee at discovery stage.",
+      "official_program_url": "https://www.ucf.edu/degree/computer-science-phd/",
+      "seed_adjacency": ["TerraProbe-adjacent", "Evidex-adjacent"],
+      "unresolved_fields": ["Fall 2027 cycle", "course articulation", "GRE status for the target cycle", "funding probability and duration", "current faculty supervision"],
+      "evidence_confidence": "high",
+      "additional_discovery_paths": ["recognized_institution_record", "underrepresented_route_search"],
+      "sources": [
+        {
+          "source_id": "reentry03:ucf:program-fit",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "exact doctorate, research fit, and preliminary funding",
+          "title": "Computer Science (PhD) Degree",
+          "url": "https://www.ucf.edu/degree/computer-science-phd/",
+          "evidence_summary": "Official degree page identifies the PhD, research areas including software engineering, systems and security, and possible graduate financial-assistance types.",
+          "limitations": "Possible aid is not an individual award or program-wide funding guarantee."
+        },
+        {
+          "source_id": "reentry03:ucf:admissions",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "bachelor's and international entry route",
+          "title": "2026 Application Deadlines and Requirements — Computer Science PhD",
+          "url": "https://graduate.ucf.edu/application-deadlines-and-requirements/doctoral/2026/",
+          "evidence_summary": "Official Graduate Studies page states that outstanding bachelor's graduates may apply directly and documents international transcript requirements.",
+          "limitations": "This is the 2026 page; Fall 2027 dates and requirements require Stage 3 verification."
+        }
+      ]
+    },
+    {
+      "institution_id": "us:ipeds:145600",
+      "institution_name": "University of Illinois Chicago",
+      "country": "United States",
+      "region": "us",
+      "program_name": "PhD in Computer Science",
+      "degree_type": "PhD",
+      "relevant_degree_route": "Direct PhD route from a bachelor's degree in computer science or a related field, subject to a published final-60-hour GPA standard",
+      "research_topic_clusters": ["repair_analysis", "systems_security", "trustworthy_ai"],
+      "exact_research_fit_signal": "UIC publishes active Software Analysis, Software Engineering, Security and Privacy, and Systems and Networking areas, including labs working on program analysis, formal methods, resilient security, and software assurance.",
+      "preliminary_international_eligibility": "International applicants are accepted, but the catalog publishes a 3.50 GPA for the final 60 semester hours; the applicant's approximately 3.35 cumulative GPA creates an explicit concern whose final-60-hour application is unresolved.",
+      "preliminary_funding_signal": "The department says qualified doctoral applicants are considered for multi-year assistantship or fellowship support; qualification and an individual offer are not established.",
+      "official_program_url": "https://catalog.uic.edu/gcat/colleges-schools/engineering/cs/phd/",
+      "seed_adjacency": ["TerraProbe-adjacent", "Evidex-adjacent"],
+      "unresolved_fields": ["3.50 final-60-hour GPA application", "Fall 2027 cycle", "degree and prerequisite equivalency", "individual funding terms", "current faculty supervision"],
+      "evidence_confidence": "high",
+      "additional_discovery_paths": ["recognized_institution_record", "underrepresented_route_search"],
+      "sources": [
+        {
+          "source_id": "reentry03:uic:program-admission",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "exact doctorate and direct-entry requirements",
+          "title": "PhD in Computer Science",
+          "url": "https://catalog.uic.edu/gcat/colleges-schools/engineering/cs/phd/",
+          "evidence_summary": "Current official catalog documents the direct PhD route, research degree requirements, international testing, and the 3.50 final-60-hour GPA standard.",
+          "limitations": "The applicant's final-60-hour GPA and any exception practice require Stage 3 review."
+        },
+        {
+          "source_id": "reentry03:uic:research",
+          "discovery_path": "lab_or_center_signal",
+          "evidence_role": "current research fit",
+          "title": "Computer Science Research Areas",
+          "url": "https://cs.uic.edu/cs-research/research-areas-2/",
+          "evidence_summary": "Official department index lists current labs and faculty across software analysis, software engineering, security/privacy, and systems/networking.",
+          "limitations": "Area presence does not establish a specific advisor's Fall 2027 capacity."
+        },
+        {
+          "source_id": "reentry03:uic:funding",
+          "discovery_path": "underrepresented_route_search",
+          "evidence_role": "preliminary doctoral funding",
+          "title": "Financial Aid and Funding",
+          "url": "https://cs.uic.edu/graduate/admissions/financial-aid-and-funding/",
+          "evidence_summary": "Official department page describes fellowship, teaching-assistantship, and research-assistantship support for qualified doctoral students.",
+          "limitations": "Qualification, duration, renewal conditions, and offer-specific coverage remain unverified."
+        }
+      ]
+    },
+    {
+      "institution_id": "us:ipeds:155317",
+      "institution_name": "University of Kansas",
+      "country": "United States",
+      "region": "us",
+      "program_name": "Doctor of Philosophy in Computer Science",
+      "degree_type": "PhD",
+      "relevant_degree_route": "Research doctorate allowing applicants with strong academic credentials to enter directly without a master's degree",
+      "research_topic_clusters": ["repair_analysis", "systems_security", "trustworthy_ai"],
+      "exact_research_fit_signal": "KU documents a research-focused Computer Science doctorate plus faculty work in formal methods, verification and synthesis, specification languages, secure software engineering, and systems cybersecurity.",
+      "preliminary_international_eligibility": "The degree page allows direct doctoral admission without an MS for strong applicants; international credential, English, and detailed prerequisite rules remain for Stage 3.",
+      "preliminary_funding_signal": "Official pages describe doctoral participation in funded projects and graduate assistantship mechanisms, but no universal offer or duration guarantee is established.",
+      "official_program_url": "https://degrees.ku.edu/graduate/doctoral/computer-science/",
+      "seed_adjacency": ["TerraProbe-adjacent", "Evidex-adjacent"],
+      "unresolved_fields": ["Fall 2027 cycle", "international credential and English rules", "prerequisite equivalency", "assistantship likelihood and duration", "current faculty supervision"],
+      "evidence_confidence": "high",
+      "additional_discovery_paths": ["recognized_institution_record", "underrepresented_route_search"],
+      "sources": [
+        {
+          "source_id": "reentry03:ku:program",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "exact doctorate and direct-entry route",
+          "title": "Doctor of Philosophy in Computer Science",
+          "url": "https://degrees.ku.edu/graduate/doctoral/computer-science/",
+          "evidence_summary": "Official KU degree page describes independent dissertation research and states that strong applicants may enter without a master's degree.",
+          "limitations": "Detailed international and cycle-specific rules require Stage 3 verification."
+        },
+        {
+          "source_id": "reentry03:ku:fit",
+          "discovery_path": "current_faculty_topic_signal",
+          "evidence_role": "formal methods and security fit",
+          "title": "Cybersecurity",
+          "url": "https://eecs.ku.edu/cybersecurity",
+          "evidence_summary": "Official EECS page identifies current work in formal methods, verification, synthesis, trusted computing, specification languages, and systems security.",
+          "limitations": "Faculty listing does not establish supervision availability or recruiting."
+        },
+        {
+          "source_id": "reentry03:ku:funding",
+          "discovery_path": "underrepresented_route_search",
+          "evidence_role": "preliminary graduate funding",
+          "title": "Graduate Funding",
+          "url": "https://eecs.ku.edu/graduate-funding",
+          "evidence_summary": "Official EECS page documents graduate funding mechanisms and assistantship opportunities.",
+          "limitations": "An assistantship, its coverage, and its duration are not guaranteed at discovery stage."
+        }
+      ]
+    },
+    {
+      "institution_id": "us:ipeds:157085",
+      "institution_name": "University of Kentucky",
+      "country": "United States",
+      "region": "us",
+      "program_name": "Doctoral Degree in Computer Science",
+      "degree_type": "PhD",
+      "relevant_degree_route": "Research doctorate in Computer Science; exact prior-degree and direct-entry conditions require Stage 3 verification",
+      "research_topic_clusters": ["repair_analysis", "systems_security", "ai_for_se"],
+      "exact_research_fit_signal": "Official program and department pages identify software engineering, cybersecurity, networking, systems, AI, machine learning, and theory among the doctorate's research areas.",
+      "preliminary_international_eligibility": "The university publishes international deadlines and routes applicants to Graduate School and program-specific requirements; exact prior-degree, GPA, and course equivalency remain unresolved.",
+      "preliminary_funding_signal": "The department says nearly all PhD students are fully funded through teaching or research assistantships, but individual coverage and renewal terms require verification.",
+      "official_program_url": "https://academics.uky.edu/programs/doctoral/computer-science",
+      "seed_adjacency": ["TerraProbe-adjacent", "Evidex-adjacent"],
+      "unresolved_fields": ["direct bachelor's entry", "Fall 2027 cycle", "GPA and course equivalency", "offer-specific assistantship terms", "current faculty supervision"],
+      "evidence_confidence": "high",
+      "additional_discovery_paths": ["recognized_institution_record", "underrepresented_route_search"],
+      "sources": [
+        {
+          "source_id": "reentry03:uky:program",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "exact doctorate and preliminary international route",
+          "title": "Doctoral Degree in Computer Science",
+          "url": "https://academics.uky.edu/programs/doctoral/computer-science",
+          "evidence_summary": "Official program finder confirms the Computer Science PhD, research emphasis, program-specific admissions routing, and international deadlines for the current displayed cycle.",
+          "limitations": "The page does not resolve direct entry, detailed criteria, or Fall 2027 dates."
+        },
+        {
+          "source_id": "reentry03:uky:fit-funding",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "research fit and preliminary funding",
+          "title": "Graduate Studies Computer Science",
+          "url": "https://cs.engr.uky.edu/academics-1/graduate-studies/computer-science",
+          "evidence_summary": "Official department page lists software engineering, systems, cybersecurity and AI research and says nearly 100 percent of PhD students are fully funded through TA or RA support.",
+          "limitations": "The statement is descriptive, not an individual guarantee; amount, fees, duration, and conditions remain open."
+        }
+      ]
+    },
+    {
+      "institution_id": "us:ipeds:186867",
+      "institution_name": "Stevens Institute of Technology",
+      "country": "United States",
+      "region": "us",
+      "program_name": "PhD in Computer Science",
+      "degree_type": "PhD",
+      "relevant_degree_route": "Research doctorate preferring a master's but allowing exceptionally well-qualified bachelor's applicants",
+      "research_topic_clusters": ["repair_analysis", "systems_security", "trustworthy_ai"],
+      "exact_research_fit_signal": "Stevens identifies programming languages, formal methods, automatic software verification, secure software development, software engineering and reliability, fault tolerance, and systems security as active research topics.",
+      "preliminary_international_eligibility": "The program publishes a bachelor's-level minimum GPA and international English requirements, while noting that bachelor's-only doctoral consideration is reserved for exceptionally well-qualified applicants.",
+      "preliminary_funding_signal": "The program states that all Computer Science doctoral students receive financial support, while also describing assistantships and fellowships as competitive; offer-specific reconciliation is required.",
+      "official_program_url": "https://www.stevens.edu/program/computer-science-doctoral-program",
+      "seed_adjacency": ["TerraProbe-adjacent", "Evidex-adjacent"],
+      "unresolved_fields": ["bachelor's-only competitiveness", "Fall 2027 cycle", "international credential review", "funding coverage and duration", "current faculty supervision"],
+      "evidence_confidence": "high",
+      "additional_discovery_paths": ["recognized_institution_record", "underrepresented_route_search"],
+      "sources": [
+        {
+          "source_id": "reentry03:stevens:program-funding",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "exact doctorate, entry route, and preliminary funding",
+          "title": "Ph.D. in Computer Science",
+          "url": "https://www.stevens.edu/program/computer-science-doctoral-program",
+          "evidence_summary": "Official program page documents the doctorate, bachelor's exception route, research areas, and a statement that Computer Science doctoral students receive support.",
+          "limitations": "Potential tension with competitive-assistantship wording and all offer terms require Stage 3 reconciliation."
+        },
+        {
+          "source_id": "reentry03:stevens:research",
+          "discovery_path": "lab_or_center_signal",
+          "evidence_role": "current software and verification fit",
+          "title": "School of Computing Research",
+          "url": "https://www.stevens.edu/school-computing/research",
+          "evidence_summary": "Official research page lists automatic verification, formal methods, secure development, compilers, reliability, fault tolerance, and software systems work.",
+          "limitations": "Research breadth does not establish an available advisor or a funded opening."
+        }
+      ]
+    },
+    {
+      "institution_id": "us:ipeds:187985",
+      "institution_name": "University of New Mexico-Main Campus",
+      "country": "United States",
+      "region": "us",
+      "program_name": "PhD in Computer Science",
+      "degree_type": "PhD",
+      "relevant_degree_route": "Research-intensive doctorate organized around theoretical foundations, computer systems, and empirical methods",
+      "research_topic_clusters": ["systems_security", "trustworthy_ai", "repair_analysis"],
+      "exact_research_fit_signal": "Official program and lab pages show a research doctorate with active formal verification and synthesis for trustworthy AI-enabled systems, plus programming systems, compilers, cybersecurity, and scalable systems work.",
+      "preliminary_international_eligibility": "The Graduate Studies page accepts international applicants for fall entry and publishes external-credential requirements; exact bachelor's-entry and course-background rules require Stage 3.",
+      "preliminary_funding_signal": "The department has limited competitive TA and RA positions with tuition coverage; it explicitly says not all applicants receive support and that awards depend on need and available funds.",
+      "official_program_url": "https://www.cs.unm.edu/programs-and-degrees/ph.d./index.html",
+      "seed_adjacency": ["TerraProbe-adjacent", "Evidex-adjacent"],
+      "unresolved_fields": ["direct bachelor's entry", "Fall 2027 cycle", "course preparation", "assistantship likelihood and duration", "current faculty supervision"],
+      "evidence_confidence": "high",
+      "additional_discovery_paths": ["recognized_institution_record", "underrepresented_route_search"],
+      "sources": [
+        {
+          "source_id": "reentry03:unm:program",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "exact research doctorate",
+          "title": "Ph.D. Program",
+          "url": "https://www.cs.unm.edu/programs-and-degrees/ph.d./index.html",
+          "evidence_summary": "Official department page describes the research-intensive Computer Science PhD and its three core areas.",
+          "limitations": "Detailed entry requirements and target-cycle status require Stage 3."
+        },
+        {
+          "source_id": "reentry03:unm:fit",
+          "discovery_path": "lab_or_center_signal",
+          "evidence_role": "formal verification and trustworthy-systems fit",
+          "title": "Trustworthy AI-enabled Autonomous Systems Lab",
+          "url": "https://www.cs.unm.edu/~pprabhakar/",
+          "evidence_summary": "Current official lab page describes formal verification and synthesis for safety, security, correctness, reliability, and resilience of AI-enabled systems.",
+          "limitations": "The lab page does not claim a Fall 2027 opening or admission authority."
+        },
+        {
+          "source_id": "reentry03:unm:funding",
+          "discovery_path": "underrepresented_route_search",
+          "evidence_role": "preliminary assistantship funding",
+          "title": "Financial Aid",
+          "url": "https://www.cs.unm.edu/admissions/financial-aid.html",
+          "evidence_summary": "Official department page describes limited competitive TA and RA positions and full tuition payment during appointments.",
+          "limitations": "Not all applicants are supported; award timing, continuation, fees, and individual eligibility remain unresolved."
+        }
+      ]
+    },
+    {
+      "institution_id": "us:ipeds:221759",
+      "institution_name": "The University of Tennessee-Knoxville",
+      "country": "United States",
+      "region": "us",
+      "program_name": "Computer Science PhD",
+      "degree_type": "PhD",
+      "relevant_degree_route": "Research doctorate with dissertation research and optional AI or cybersecurity concentrations",
+      "research_topic_clusters": ["repair_analysis", "systems_security", "ai_for_se"],
+      "exact_research_fit_signal": "Official pages identify a Computer Science PhD with research under faculty direction, cybersecurity and AI concentrations, and advanced software engineering coursework.",
+      "preliminary_international_eligibility": "The exact prior-degree, GPA, English, and international transcript rules are not resolved by the discovery pages and require Stage 3 verification.",
+      "preliminary_funding_signal": "The EECS handbook describes roughly 100 graduate research assistantships with tuition, fees, health insurance, and stipends, but positions are selected by faculty as available and are not a program-wide guarantee.",
+      "official_program_url": "https://tickle.utk.edu/academics/graduate-programs/computer-science-phd/",
+      "seed_adjacency": ["TerraProbe-adjacent", "Evidex-adjacent"],
+      "unresolved_fields": ["direct bachelor's entry", "Fall 2027 cycle", "international and GPA requirements", "assistantship availability and duration", "current faculty supervision"],
+      "evidence_confidence": "high",
+      "additional_discovery_paths": ["recognized_institution_record", "underrepresented_route_search"],
+      "sources": [
+        {
+          "source_id": "reentry03:utk:program",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "exact doctorate and research structure",
+          "title": "Computer Science, PhD",
+          "url": "https://tickle.utk.edu/academics/graduate-programs/computer-science-phd/",
+          "evidence_summary": "Official engineering page confirms the Computer Science PhD, supervised research, cybersecurity and AI concentrations, and advanced software engineering study.",
+          "limitations": "The page does not establish detailed international eligibility or funding."
+        },
+        {
+          "source_id": "reentry03:utk:graduate-programs",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "current program inventory",
+          "title": "Graduate Programs",
+          "url": "https://eecs.utk.edu/graduate/",
+          "evidence_summary": "Official EECS page lists the Computer Science PhD and its AI and cybersecurity concentrations.",
+          "limitations": "Inventory presence is not an eligibility or funding decision."
+        },
+        {
+          "source_id": "reentry03:utk:funding",
+          "discovery_path": "underrepresented_route_search",
+          "evidence_role": "preliminary assistantship funding",
+          "title": "EECS Graduate Handbook",
+          "url": "https://www.eecs.utk.edu/wp-content/uploads/2024/08/EECS-graduate-handbook.pdf",
+          "evidence_summary": "Official handbook describes GRA support including tuition, fees, health insurance, and stipend, with appointments chosen by faculty as positions become available.",
+          "limitations": "A general assistantship mechanism is not an individual offer or guaranteed duration."
+        }
+      ]
+    },
+    {
+      "institution_id": "ca:dli:O19209939282",
+      "institution_name": "Dalhousie University",
+      "country": "Canada",
+      "region": "canada",
+      "program_name": "Master of Computer Science",
+      "degree_type": "Thesis or research master's",
+      "relevant_degree_route": "Research-focused master's requiring a research proposal and thesis-supervisor alignment",
+      "research_topic_clusters": ["systems_security", "repair_analysis", "ai_for_se"],
+      "exact_research_fit_signal": "Dalhousie identifies the Master of Computer Science as a research degree and publishes graduate research in systems, networks, security, distributed systems, cloud computing, and software engineering.",
+      "preliminary_international_eligibility": "Applicants need an equivalent four-year undergraduate degree and strong technical-course performance; the department notes that applicants at or below 3.4 generally need faculty connection or relevant industry experience.",
+      "preliminary_funding_signal": "Master of Computer Science students typically receive support for five to six terms, but all commitments are individual and controlled by the offer or admission letter.",
+      "official_program_url": "https://www.dal.ca/faculty/computerscience/graduate-programs.html",
+      "seed_adjacency": ["TerraProbe-adjacent", "Evidex-adjacent"],
+      "unresolved_fields": ["Fall 2027 cycle", "international degree equivalency", "technical-course GPA interpretation", "supervisor alignment", "individual funding amount and net cost"],
+      "evidence_confidence": "high",
+      "additional_discovery_paths": ["recognized_institution_record", "research_masters_or_scholarship_search", "underrepresented_route_search"],
+      "sources": [
+        {
+          "source_id": "reentry03:dal:mcs",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "exact research master's and topic fit",
+          "title": "Graduate Programs",
+          "url": "https://www.dal.ca/faculty/computerscience/graduate-programs.html",
+          "evidence_summary": "Official faculty page identifies the Master of Computer Science as research-focused and lists systems, networks, security and related research areas.",
+          "limitations": "The overview does not establish admission or individual supervision."
+        },
+        {
+          "source_id": "reentry03:dal:admissions",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "bachelor's and international eligibility",
+          "title": "How to Apply",
+          "url": "https://www.dal.ca/faculty/computerscience/graduate-programs/grad-handbook/how-to-apply.html",
+          "evidence_summary": "Official admissions page documents the four-year degree route, MCS technical preparation, and the caution for applicants at or below a 3.4 GPA.",
+          "limitations": "Credential equivalency and the role of faculty connection remain judgment calls."
+        },
+        {
+          "source_id": "reentry03:dal:funding",
+          "discovery_path": "research_masters_or_scholarship_search",
+          "evidence_role": "preliminary master's funding",
+          "title": "Student Funding",
+          "url": "https://www.dal.ca/faculty/computerscience/graduate-programs/grad-handbook/student-funding.html",
+          "evidence_summary": "Official page says MCS students typically receive five to six terms of support and that commitments are set individually in offer or admission letters.",
+          "limitations": "Typical duration is not a guarantee; amount and net international cost are unresolved."
+        }
+      ]
+    },
+    {
+      "institution_id": "ca:dli:O19348802512",
+      "institution_name": "University of New Brunswick",
+      "country": "Canada",
+      "region": "canada",
+      "program_name": "PhD in Computer Science",
+      "degree_type": "PhD",
+      "relevant_degree_route": "Supervisor-dependent research doctorate that normally requires a research-based master's degree with first-class standing",
+      "research_topic_clusters": ["systems_security", "repair_analysis", "trustworthy_ai"],
+      "exact_research_fit_signal": "UNB publishes active software engineering, security and privacy, cloud computing, systems and architecture research within an independent-original-research doctorate.",
+      "preliminary_international_eligibility": "International applicants are permitted, but the formal route normally requires a research-based master's and confirmed supervisor; this is an explicit likely ineligibility for a bachelor's-only applicant absent a documented exception or transfer path.",
+      "preliminary_funding_signal": "The faculty describes competitive supervisor-initiated GRA, GTA, and GAA support, with international eligibility for many sources but no guarantee from admission alone.",
+      "official_program_url": "https://www.unb.ca/fredericton/cs/grad/phd/index.html",
+      "seed_adjacency": ["TerraProbe-adjacent", "Evidex-adjacent"],
+      "unresolved_fields": ["research-master's prerequisite and exception path", "Fall 2027 cycle", "confirmed supervisor", "international credential equivalency", "individual funding amount and duration"],
+      "evidence_confidence": "high",
+      "additional_discovery_paths": ["recognized_institution_record", "underrepresented_route_search"],
+      "sources": [
+        {
+          "source_id": "reentry03:unb:program",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "exact doctorate and supervision model",
+          "title": "PhD in Computer Science",
+          "url": "https://www.unb.ca/fredericton/cs/grad/phd/index.html",
+          "evidence_summary": "Official program page describes the independent-research doctorate and required faculty supervision.",
+          "limitations": "Program presence does not resolve eligibility for a bachelor's-only applicant."
+        },
+        {
+          "source_id": "reentry03:unb:admissions-fit",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "formal eligibility and current research breadth",
+          "title": "Computer Science Graduate Studies",
+          "url": "https://www.unb.ca/gradstudies/programs/computer-science.html",
+          "evidence_summary": "Official Graduate Studies page documents the research-master's and first-class-standing prerequisite, international English route, supervisor requirement, and current research breadth.",
+          "limitations": "The published prerequisite is adverse for a bachelor's-only applicant and must not be treated as passed."
+        },
+        {
+          "source_id": "reentry03:unb:funding",
+          "discovery_path": "underrepresented_route_search",
+          "evidence_role": "preliminary doctoral funding",
+          "title": "Financial Information for Graduate Students",
+          "url": "https://www.unb.ca/fredericton/cs/grad/financials.html",
+          "evidence_summary": "Official faculty page describes supervisor-initiated assistantship support, international eligibility for many sources, and conditional annual renewal.",
+          "limitations": "Admission does not imply aid; full funding is competitive, contingent, and offer-specific."
+        }
+      ]
+    },
+    {
+      "institution_id": "ror:041nas322",
+      "institution_name": "University of Bonn",
+      "country": "Germany",
+      "region": "europe",
+      "program_name": "Computer Science MSc",
+      "degree_type": "Thesis or research master's",
+      "relevant_degree_route": "English-taught, four-semester, 120-ECTS research-oriented MSc with a research thesis",
+      "research_topic_clusters": ["repair_analysis", "trustworthy_ai", "ai_for_se"],
+      "exact_research_fit_signal": "The official program is closely linked to institute research and requires substantial programming, software engineering or information-systems preparation plus advanced research study and thesis work.",
+      "preliminary_international_eligibility": "A relevant domestic or foreign bachelor's is accepted, but the program specifies C1 English and detailed ECTS prerequisites in mathematics, algorithms, programming/software engineering, and prior research-thesis work.",
+      "preliminary_funding_signal": "No program-level scholarship or living-cost support was established in the reviewed official discovery pages; financial viability remains unproven and must be checked in Stage 3.",
+      "official_program_url": "https://www.uni-bonn.de/en/studying/degree-programs/degree-programs-a-z/computer-science-msc",
+      "seed_adjacency": ["TerraProbe-adjacent", "Evidex-adjacent"],
+      "unresolved_fields": ["ECTS prerequisite mapping", "prior research-thesis equivalency", "C1 English proof", "Fall 2027 cycle", "scholarship and living-cost viability", "thesis supervision fit"],
+      "evidence_confidence": "high",
+      "additional_discovery_paths": ["recognized_institution_record", "research_masters_or_scholarship_search", "underrepresented_route_search"],
+      "sources": [
+        {
+          "source_id": "reentry03:bonn:program",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "exact research master's and prerequisites",
+          "title": "Computer Science MSc",
+          "url": "https://www.uni-bonn.de/en/studying/degree-programs/degree-programs-a-z/computer-science-msc",
+          "evidence_summary": "Official degree page documents the English MSc, four-semester structure, research thesis, and detailed subject prerequisites.",
+          "limitations": "Applicant ECTS mapping and admission ranking require Stage 3 verification."
+        },
+        {
+          "source_id": "reentry03:bonn:application",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "international application and selection model",
+          "title": "Application for the Master's Program",
+          "url": "https://www.informatik.uni-bonn.de/en/studies/master-programs/master-program-application",
+          "evidence_summary": "Official institute page describes the international application process, competitive selection rounds, and academic ranking criteria.",
+          "limitations": "The page does not establish scholarship support or the applicant's rank."
+        }
+      ]
+    },
+    {
+      "institution_id": "ror:020hwjq30",
+      "institution_name": "Aalto University",
+      "country": "Finland",
+      "region": "europe",
+      "program_name": "Computer, Communication and Information Sciences MSc - Software Engineering",
+      "degree_type": "Thesis or research master's",
+      "relevant_degree_route": "Two-year, 120-ECTS Master of Science (Technology) with a Software Engineering major and master's thesis",
+      "research_topic_clusters": ["repair_analysis", "ai_for_se", "systems_security"],
+      "exact_research_fit_signal": "Aalto's Software Engineering major covers system and service design, software processes, quality assurance, decision-making under uncertainty, software testing, modelling, and large-scale software systems, culminating in thesis research.",
+      "preliminary_international_eligibility": "The program accepts applicants with a relevant bachelor's and publishes 2027 academic evaluation criteria; exact transcript quality, course relevance, and ranking remain unresolved.",
+      "preliminary_funding_signal": "Non-EU/EEA tuition is EUR 17,000 annually; a very limited competitive Excellence Scholarship may waive full tuition but does not cover living costs, so the route is not financially viable without an award and separate living support.",
+      "official_program_url": "https://www.aalto.fi/en/study-options/software-engineering-master-of-science-technology",
+      "seed_adjacency": ["TerraProbe-adjacent", "Evidex-adjacent"],
+      "unresolved_fields": ["2027 academic ranking", "course and degree equivalency", "English proof", "tuition-waiver competitiveness", "living-cost funding", "thesis supervision fit"],
+      "evidence_confidence": "high",
+      "additional_discovery_paths": ["recognized_institution_record", "research_masters_or_scholarship_search", "underrepresented_route_search"],
+      "sources": [
+        {
+          "source_id": "reentry03:aalto:program",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "exact research master's, fit, and 2027 criteria",
+          "title": "Software Engineering, Master of Science (Technology)",
+          "url": "https://www.aalto.fi/en/study-options/software-engineering-master-of-science-technology",
+          "evidence_summary": "Official study-option page documents the two-year Software Engineering MSc, relevant bachelor's route, thesis-bearing structure, software quality and testing focus, and 2027 evaluation criteria.",
+          "limitations": "Competitive ranking and applicant-specific equivalency remain unresolved."
+        },
+        {
+          "source_id": "reentry03:aalto:funding",
+          "discovery_path": "research_masters_or_scholarship_search",
+          "evidence_role": "tuition and preliminary scholarship",
+          "title": "Scholarships and Tuition Fees",
+          "url": "https://www.aalto.fi/en/admission-services/scholarships-and-tuition-fees",
+          "evidence_summary": "Official page states the EUR 17,000 technology master's tuition and describes a very limited competitive full tuition waiver that excludes living costs.",
+          "limitations": "The award is not guaranteed, programs may award none, and living costs remain entirely uncovered."
+        },
+        {
+          "source_id": "reentry03:aalto:cycle",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "Fall 2027 application cycle",
+          "title": "Apply to Master's Programmes",
+          "url": "https://www.aalto.fi/en/admission-services/apply-to-masters-programmes",
+          "evidence_summary": "Official admissions page publishes the December 2026 to January 2027 application window for autumn 2027 entry.",
+          "limitations": "Document-level and study-option-specific requirements still require Stage 3 verification."
+        }
+      ]
+    }
+  ],
+  "false_negative_audits": [
+    {
+      "institution_id": "us:ipeds:145600",
+      "exclusion_reason_category": "single_bounded_registry_signal_without_independent_topic_signal",
+      "original_supporting_evidence": "UIC's mechanical IPEDS rows were not promoted because the initial bounded pass lacked a joined exact doctorate and independent current software-analysis/security signal; current official program, research, and funding pages contradict that omission."
+    },
+    {
+      "institution_id": "ror:041nas322",
+      "exclusion_reason_category": "outside_bounded_positive_seed_screen",
+      "original_supporting_evidence": "Bonn was absent from the original bounded candidate set despite a current English research-oriented Computer Science MSc with explicit research-thesis and software-engineering preparation requirements."
+    }
+  ]
+}

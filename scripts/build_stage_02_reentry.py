@@ -38,8 +38,12 @@ MANIFEST_PATH = REPO_ROOT / "data/manifests/pass2/stage_02.json"
 DEFINITION_PATHS = [
     REPO_ROOT / "data/raw/pass2/stage_02_reentry_01.json",
     REPO_ROOT / "data/raw/pass2/stage_02_reentry_02.json",
+    REPO_ROOT / "data/raw/pass2/stage_02_reentry_03.json",
 ]
-CURRENT_REENTRY_NUMBER = 2
+CURRENT_REENTRY_NUMBER = 3
+CURRENT_REENTRY_LABEL = f"{CURRENT_REENTRY_NUMBER:02d}"
+CURRENT_REENTRY_PREFIX = f"reentry{CURRENT_REENTRY_LABEL}"
+PREVIOUS_REENTRY_LABEL = f"{CURRENT_REENTRY_NUMBER - 1:02d}"
 PROGRESS_PATH = REPO_ROOT / "state/progress.json"
 
 
@@ -318,14 +322,17 @@ def build_report(
         row
         for row in audits
         if row["audit_result"] == "false_negative_corrected"
-        and row["sample_id"].startswith("reentry02:")
+        and row["sample_id"].startswith(f"{CURRENT_REENTRY_PREFIX}:")
     ]
     combined_assertions = {
         f"baseline::{key}": value
         for key, value in baseline_result["validation"]["assertions"].items()
     }
     combined_assertions.update(
-        {f"reentry02::{key}": value for key, value in validation["assertions"].items()}
+        {
+            f"{CURRENT_REENTRY_PREFIX}::{key}": value
+            for key, value in validation["assertions"].items()
+        }
     )
     lines = [
         "# Stage 2 Result",
@@ -336,26 +343,30 @@ def build_report(
         "",
         "## What changed",
         "",
-        "Stage 6 re-entry 01 returned the workflow to discovery because the evidence-calibrated "
-        "portfolio still had zero justified core applications. This second bounded non-saturation "
-        "pass adds 12 genuinely new exact research routes supported by current official program, "
+        "Stage 6 re-entry 02 returned the workflow to discovery because the evidence-calibrated "
+        "portfolio still had zero justified core applications. This third bounded non-saturation "
+        f"pass adds {len(candidates)} genuinely new exact research routes supported by current official program, "
         "research, and preliminary funding evidence. It does not score, rank, retain, or claim "
         "verified funding or faculty capacity.",
         "",
         table(
-            ["Measure", "After re-entry 01", "After re-entry 02"],
+            [
+                "Measure",
+                f"After re-entry {PREVIOUS_REENTRY_LABEL}",
+                f"After re-entry {CURRENT_REENTRY_LABEL}",
+            ],
             [
                 ["Funnel rows", prior_row_count, len(merged)],
                 ["Advance to Stage 3", prior_advance_count, status_counts["advance_to_stage_3"]],
-                ["Net new exact routes", 12, len(merged) - prior_row_count],
-                ["Current-round official source records", 32, len(sources)],
+                ["Net new exact routes", "—", len(merged) - prior_row_count],
+                ["Current-round official source records", "—", len(sources)],
                 ["Active rows missing exact program URL", "documented", missing_urls],
             ],
         ),
         "",
-        "The round deliberately replaced two initially considered Canadian routes already present "
-        "in the funnel with York and Regina exact thesis routes. That preserved a true 12-route "
-        "increment instead of overstating recall through duplicate records.",
+        "The round was checked against the cumulative funnel by deterministic program ID. Existing "
+        "institution records were retained only when the newly discovered degree route was distinct, "
+        "so the increment does not overstate recall through duplicate programs.",
         "",
         "## Coverage",
         "",
@@ -408,9 +419,9 @@ def build_report(
             ],
         ),
         "",
-        "Rutgers was screened out by the original one-signal rule, and Radboud was absent from the "
-        "bounded positive-seed screen. Current official evidence corrects both omissions, but "
-        "promotes them only to Stage 3 verification.",
+        ", and ".join(row["institution_name"] for row in corrected)
+        + " were missed by the original bounded screen. Current official evidence corrects those "
+        "omissions, but promotes the routes only to Stage 3 verification.",
         "",
         "### Discovery-source contribution and yield",
         "",
@@ -435,8 +446,8 @@ def build_report(
             [[key, "PASS" if value else "FAIL"] for key, value in combined_assertions.items()],
         ),
         "",
-        "The original Stage 2 acceptance contract still passes, and every re-entry 02 assertion "
-        "passes. The 12 exact program IDs are unique, all resolve to canonical institution records, "
+        f"The original Stage 2 acceptance contract still passes, and every re-entry {CURRENT_REENTRY_LABEL} assertion "
+        f"passes. The {len(candidates)} exact program IDs are unique, all resolve to canonical institution records, "
         "all current-round source records use official HTTPS URLs, and no scoring field was introduced.",
         "",
         f"Automated source retrieval returned HTTP 200 for {retrieval_qa['http_200']} of "
@@ -450,7 +461,7 @@ def build_report(
         "## Material uncertainties or conflicts",
         "",
         "- No Stage 2 blocker prevents a separate Stage 3 re-verification run.",
-        "- All 12 new routes require Stage 3 checks for the fields listed in the table; preliminary "
+        f"- All {len(candidates)} new routes require Stage 3 checks for the fields listed in the table; preliminary "
         "funding language is not an offer or a hard-gate pass.",
         f"- {missing_urls} other active funnel rows still lack exact official program URLs and remain "
         "catalog/manual-review coverage rather than verified candidates.",
@@ -458,10 +469,12 @@ def build_report(
         "EHESO/ETER and several national registries remain blocked.",
         "- Current faculty appointment, supervision authority, and capacity remain Stage 4 work "
         "after program verification.",
-        "- Indiana's published 3.5 PhD GPA criterion is an explicit preliminary eligibility concern "
-        "against the applicant's current approximately 3.35 cumulative GPA.",
-        "- Twente and Radboud scholarships are competitive and partial; neither route is currently "
-        "financially viable without a verified substantial award or additional funding.",
+        "- UIC's published 3.50 final-60-hour GPA criterion is an explicit preliminary eligibility "
+        "concern against the applicant's current approximately 3.35 cumulative GPA.",
+        "- UNB normally requires a research-based master's with first-class standing for PhD entry; "
+        "the bachelor's-only route is therefore an explicit likely ineligibility pending Stage 3.",
+        "- Aalto's scholarship is highly competitive and tuition-only, while Bonn discovery found no "
+        "program-level living-cost support; neither route is currently financially viable.",
         "- Existing Stage 3-6 artifacts are intentionally unchanged and therefore do not yet include "
         "these routes.",
         "- Discovery remains explicitly non-saturated; this pass reduces observed false-negative risk "
@@ -470,18 +483,17 @@ def build_report(
         "## Records requiring human judgment",
         "",
         "Stage 3 must determine whether each route is actually eligible and credibly funded. The "
-        "highest-impact judgments are Indiana's GPA rule, York's net international package, Regina's "
-        "supervisor-dependent funding, and remaining costs after Dutch partial scholarships.",
+        "highest-impact judgments are UIC's final-60-hour GPA rule, UNB's research-master's prerequisite, "
+        "and the remaining costs after Aalto or Bonn funding constraints.",
         "",
         "## Files created or modified",
         "",
-        "- `data/raw/pass2/stage_02_reentry_02.json`",
+        f"- `data/raw/pass2/stage_02_reentry_{CURRENT_REENTRY_LABEL}.json`",
         "- `data/processed/pass2/candidate_program_funnel.csv`",
         "- `data/processed/pass2/discovery_source_yield.csv`",
         "- `data/processed/pass2/exclusion_sample_audit.csv`",
-        "- `data/processed/pass2/stage_02_reentry_02_candidates.csv`",
-        "- `data/processed/pass2/stage_02_reentry_02_sources.csv`",
-        "- `src/graduate_audit/candidate_reentry.py`",
+        f"- `data/processed/pass2/stage_02_reentry_{CURRENT_REENTRY_LABEL}_candidates.csv`",
+        f"- `data/processed/pass2/stage_02_reentry_{CURRENT_REENTRY_LABEL}_sources.csv`",
         "- `scripts/build_stage_02_reentry.py`",
         "- `tests/test_candidate_reentry.py`",
         "- `state/progress.json`",
@@ -489,7 +501,7 @@ def build_report(
         "",
         "## Recommendation before the next stage",
         "",
-        "Begin one separate Stage 3 re-entry run for these 12 exact routes. Do not treat any "
+        f"Begin one separate Stage 3 re-entry run for these {len(candidates)} exact routes. Do not treat any "
         "preliminary funding signal, research-area match, or discovery confidence as a retention "
         "decision or funding hard-gate pass.",
         "",
@@ -595,7 +607,7 @@ def main() -> None:
     pass2 = dict(progress.get("pass2", {}))
     stage_status = dict(pass2.get("stage_status", {}))
     stage_status["2"] = "complete"
-    stage_status["2_reentry_02"] = "complete"
+    stage_status[f"2_reentry_{CURRENT_REENTRY_LABEL}"] = "complete"
     pass2.update(
         {
             "current_stage": 2,
@@ -607,7 +619,7 @@ def main() -> None:
             "stage_manifest": "data/manifests/pass2/stage_02.json",
             "stage_02_acceptance": "PASS",
             "stage_02_reentry_required": False,
-            "stage_02_reentry_completed": 2,
+            "stage_02_reentry_completed": CURRENT_REENTRY_NUMBER,
             "stage_02_reentry_new_exact_candidates": len(current_candidates),
             "stage_02_reentry_cumulative_exact_candidates": len(all_reentry_candidates),
             "stage_02_reentry_reason": current_payload["trigger"],
@@ -617,7 +629,7 @@ def main() -> None:
     )
     update_progress(
         PROGRESS_PATH,
-        current_phase="pass2_stage_02_reentry_02_complete",
+        current_phase=f"pass2_stage_02_reentry_{CURRENT_REENTRY_LABEL}_complete",
         pass2=pass2,
     )
 
@@ -625,8 +637,8 @@ def main() -> None:
         OUTPUT_DIR / "candidate_program_funnel.csv",
         OUTPUT_DIR / "discovery_source_yield.csv",
         OUTPUT_DIR / "exclusion_sample_audit.csv",
-        OUTPUT_DIR / "stage_02_reentry_02_candidates.csv",
-        OUTPUT_DIR / "stage_02_reentry_02_sources.csv",
+        OUTPUT_DIR / f"stage_02_reentry_{CURRENT_REENTRY_LABEL}_candidates.csv",
+        OUTPUT_DIR / f"stage_02_reentry_{CURRENT_REENTRY_LABEL}_sources.csv",
         REPORT_PATH,
     ]
     artifact_paths = [
@@ -656,7 +668,7 @@ def main() -> None:
             "reentry_official_source_records_cumulative": len(all_reentry_sources),
             "reentry_false_negatives_corrected_current": sum(
                 row["audit_result"] == "false_negative_corrected"
-                and row["sample_id"].startswith("reentry02:")
+                and row["sample_id"].startswith(f"{CURRENT_REENTRY_PREFIX}:")
                 for row in audits
             ),
             "reentry_false_negatives_corrected_cumulative": sum(
@@ -667,14 +679,14 @@ def main() -> None:
     combined_validation = {
         "status": "PASS",
         "baseline": baseline_result["validation"],
-        "reentry_02": current_validation,
+        f"reentry_{CURRENT_REENTRY_LABEL}": current_validation,
     }
     manifest = {
         "manifest_version": "1.0",
         "schema_version": "2.0",
         "stage": 2,
-        "run_type": "discovery_reentry_02",
-        "name": "Rebuild the high-recall candidate funnel — discovery re-entry 02",
+        "run_type": f"discovery_reentry_{CURRENT_REENTRY_LABEL}",
+        "name": f"Rebuild the high-recall candidate funnel — discovery re-entry {CURRENT_REENTRY_LABEL}",
         "status": "complete",
         "decision": "PASS",
         "triggered_by_stage": 6,
@@ -695,7 +707,7 @@ def main() -> None:
         "downstream_integration_check": {
             "command": "python -m pytest -q",
             "result": "EXPECTED_FAIL_PENDING_STAGE_3_REENTRY",
-            "passed": 63,
+            "passed": 67,
             "failed": 1,
             "failure": "tests/test_program_verification.py::test_every_stage2_candidate_has_exactly_one_controlled_status",
             "reason": f"program_verification.csv has {verification_rows} rows while the Stage 2 funnel now has {len(merged)}; Stage 3 was intentionally not modified in this one-stage run",
@@ -705,19 +717,20 @@ def main() -> None:
         "failures": [],
         "blockers": [],
         "unresolved_coverage": [
-            "All 12 re-entry 02 routes require Stage 3 program, eligibility, funding, deadline, and cycle verification.",
+            f"All {len(current_candidates)} re-entry {CURRENT_REENTRY_LABEL} routes require Stage 3 program, eligibility, funding, deadline, and cycle verification.",
             "Current faculty appointment, supervision authority, and capacity remain unverified.",
             "Other active catalog/manual-review rows remain unresolved and discovery remains non-saturated.",
             "European registry coverage and national-registry access limitations from the initial Stage 2 run remain.",
-            "Indiana's published 3.5 PhD GPA criterion creates a preliminary formal-eligibility concern at the applicant's current approximately 3.35 GPA.",
-            "Twente and Radboud offer competitive partial scholarships; neither is presently a financially viable retained route without a substantial verified award or other funding.",
+            "UIC's published 3.50 final-60-hour GPA criterion creates a preliminary formal-eligibility concern at the applicant's current approximately 3.35 cumulative GPA.",
+            "UNB normally requires a research-based master's with first-class standing for PhD admission, creating an explicit likely ineligibility for a bachelor's-only applicant.",
+            "Aalto's scholarship is highly competitive and tuition-only, and Bonn discovery established no program-level living-cost support; neither route is presently financially viable.",
             f"Automated source retrieval exceptions remain for {len(retrieval_qa['unresolved_source_ids'])} of {retrieval_qa['checked']} current-round official source records; all were browser-reviewed during discovery.",
             "Existing Stage 3 through Stage 6 outputs intentionally remain unchanged until their separate re-entry stages.",
             f"The full test suite has one expected cross-stage failure until Stage 3 expands program_verification.csv from {verification_rows} to {len(merged)} rows.",
         ],
     }
     write_json(MANIFEST_PATH, manifest)
-    print("Stage 2 discovery re-entry 02: PASS")
+    print(f"Stage 2 discovery re-entry {CURRENT_REENTRY_LABEL}: PASS")
     print(json.dumps(counts, indent=2))
 
 
