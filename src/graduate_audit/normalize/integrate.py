@@ -131,7 +131,7 @@ def integrate(output_dir: str | Path) -> dict[str, object]:
 
     manifest = {
         "run_id": destination.name,
-        "current_date": datetime.now(timezone.utc).date().isoformat(),
+        "current_date": datetime.now().astimezone().date().isoformat(),
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "region_definitions": {
             "us": "50 states, District of Columbia, and IPEDS other US jurisdictions",

@@ -1,15 +1,25 @@
 {
   "project": "fall-2027-graduate-program-audit",
-  "current_phase": "universe",
+  "current_phase": "deep_review",
   "phases": {
     "foundation": "complete",
-    "universe": "in_progress"
+    "universe": "complete",
+    "deep_review": "in_progress"
   },
   "regions": {
-    "us": "pending",
-    "canada": "pending",
-    "europe": "pending"
+    "us": "complete",
+    "canada": "complete",
+    "europe": "complete"
   },
-  "counts": {},
-  "known_failures": []
+  "counts": {
+    "institutions_indexed": 5833,
+    "program_rows_screened": 1837,
+    "institution_or_program_exclusions": 5063,
+    "source_claims": 12916
+  },
+  "known_failures": [
+    "Europe ROR API fallback exposed 3,628 unique records of 4,462 reported filtered records (81.31%); bulk download timed out.",
+    "EHESO/ETER API returned HTTP 401; four European national-registry pages were blocked.",
+    "Canada retains 50 explicitly unresolved indexed institutions and 9 blocked/insufficient program pages."
+  ]
 }
