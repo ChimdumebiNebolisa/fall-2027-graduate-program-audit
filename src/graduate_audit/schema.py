@@ -176,6 +176,46 @@ EXCLUSION_SAMPLE_AUDIT_COLUMNS_V2 = (
     "audit_rationale", "funnel_program_id", "sample_status", "audit_date",
 )
 
+PROGRAM_VERIFICATION_COLUMNS_V2 = (
+    "schema_version", "candidate_program_id", "verified_program_id",
+    "institution_id", "institution_name", "country", "region",
+    "candidate_funnel_status", "verification_status", "status_reason",
+    "exact_degree_program_name", "degree_type", "research_requirement",
+    "department", "current_program_status", "bachelors_entry_eligibility",
+    "international_student_eligibility", "language_of_instruction",
+    "english_requirement_and_waiver", "minimum_gpa",
+    "minimum_gpa_application", "prerequisite_coursework", "admissions_model",
+    "faculty_contact_expectation", "fall_2027_deadline",
+    "deadline_cycle_label", "application_fee", "fee_currency",
+    "fee_waiver_rules", "simultaneous_application_rules",
+    "separate_fees_required", "tuition", "mandatory_fees", "funding_model",
+    "funding_status", "funding_duration", "funding_conditions",
+    "funding_international_eligibility", "stipend_amount", "stipend_currency",
+    "tuition_coverage", "mandatory_fee_coverage", "health_insurance_coverage",
+    "summer_coverage", "named_scholarships", "scholarship_deadlines",
+    "largest_unresolved_question", "relevant_route_gate", "eligibility_gate",
+    "funding_gate", "degree_structure_gate", "same_university_dominance_gate",
+    "faculty_review_ready", "application_positioning", "official_program_url",
+    "program_source_ids", "admissions_source_ids", "funding_source_ids",
+    "evidence_confidence", "source_record_paths", "verified_at",
+)
+
+PROGRAM_SOURCE_COLUMNS_V2 = (
+    "schema_version", "stage3_source_id", "candidate_program_id",
+    "institution_id", "institution_name", "claim_categories",
+    "exact_claim_supported", "source_title", "publisher", "url",
+    "source_path", "source_type", "official_or_secondary", "date_accessed",
+    "admissions_cycle", "confidence", "verification_status",
+    "original_source_id", "access_note",
+)
+
+PROGRAM_EXCLUSION_COLUMNS_V2 = (
+    "schema_version", "candidate_program_id", "institution_id",
+    "institution_name", "country", "region", "program_name", "degree_type",
+    "exclusion_category", "evidence_backed_reason", "largest_unresolved_question",
+    "source_ids", "source_urls", "source_record_paths", "excluded_at",
+)
+
 
 def slugify(value: str) -> str:
     value = value.strip().lower()
