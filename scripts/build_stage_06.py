@@ -27,7 +27,7 @@ OUTPUT_DIR = REPO_ROOT / "data/processed/pass2"
 PORTFOLIO_PATH = OUTPUT_DIR / "portfolio.json"
 REPORT_PATH = REPO_ROOT / "reports/pass2/06_portfolio_pressure_test.md"
 MANIFEST_PATH = REPO_ROOT / "data/manifests/pass2/stage_06.json"
-LATEST_REENTRY_PATH = OUTPUT_DIR / "stage_03_reentry_02_verification.csv"
+LATEST_REENTRY_PATH = OUTPUT_DIR / "stage_03_reentry_03_verification.csv"
 
 
 def now() -> str:
@@ -125,7 +125,7 @@ def validate(
 
     assertions = {
         "all_scored_programs_receive_one_disposition": bool(scores) and len(entries) == len(scores) and {row["program_id"] for row in entries} == set(score_by_program),
-        "latest_reentry_02_receives_dispositions_and_pressure_tests": (
+        "latest_reentry_03_receives_dispositions_and_pressure_tests": (
             len(latest_reentry_ids) == len(latest_entries) == 8
             and {row["program_id"] for row in latest_entries} == latest_reentry_ids
             and all(len(row["pressure_test_answers"]) == len(PRESSURE_QUESTIONS) for row in latest_entries)
@@ -305,8 +305,8 @@ def write_report(portfolio: dict[str, object], assertions: dict[str, bool], coun
         "## Unresolved coverage",
         "",
         (
-            f"- Stage 6 re-entry 02 pressure-tested all {counts['latest_reentry_programs']} newly scored routes: "
-            f"{counts['latest_reentry_monitor']} remains monitor-only and {counts['latest_reentry_do_not_apply']} "
+            f"- Stage 6 re-entry 03 pressure-tested all {counts['latest_reentry_programs']} newly scored routes: "
+            f"{counts['latest_reentry_monitor']} remain monitor-only and {counts['latest_reentry_do_not_apply']} "
             "remain do-not-apply because at least one hard gate fails."
         ),
         f"- All {counts['monitor']} monitor programs have only one verified strong professor and need either a verified second match or persuasive availability confirmation.",
@@ -350,6 +350,7 @@ def main() -> int:
     stage_status["6"] = "complete" if status == "PASS" else "failed"
     stage_status["6_reentry_01"] = "complete" if status == "PASS" else "failed"
     stage_status["6_reentry_02"] = "complete" if status == "PASS" else "failed"
+    stage_status["6_reentry_03"] = "complete" if status == "PASS" else "failed"
     pass2.update({
         "current_stage": 6,
         "last_completed_stage": 6 if status == "PASS" else 5,
@@ -365,14 +366,14 @@ def main() -> int:
         "stage_06_portfolio_decision": portfolio["decision"],
         "stage_06_core_count": counts["core"],
         "stage_06_monitor_count": counts["monitor"],
-        "stage_06_reentry_completed": 2 if status == "PASS" else 1,
+        "stage_06_reentry_completed": 3 if status == "PASS" else 2,
         "stage_06_reentry_scored_programs": counts["scored_programs"],
         "stage_06_reentry_latest_programs": counts["latest_reentry_programs"],
         "stage_06_reentry_required": False,
     })
     update_progress(
         progress_path,
-        current_phase="pass2_stage_06_complete" if status == "PASS" else "pass2_stage_06_failed",
+        current_phase="pass2_stage_06_reentry_03_complete" if status == "PASS" else "pass2_stage_06_reentry_03_failed",
         pass2=pass2,
     )
 
@@ -388,7 +389,7 @@ def main() -> int:
     ]
     unresolved = [
         "No program has evidence adequate for a strategic Competitive, Plausible, Reach, or Lottery calibration; the core remains empty and candidate discovery must resume.",
-        f"Stage 6 re-entry 02 leaves {counts['latest_reentry_monitor']} of {counts['latest_reentry_programs']} newly scored routes on monitor and {counts['latest_reentry_do_not_apply']} as do-not-apply.",
+        f"Stage 6 re-entry 03 leaves {counts['latest_reentry_monitor']} of {counts['latest_reentry_programs']} newly scored routes on monitor and {counts['latest_reentry_do_not_apply']} as do-not-apply.",
         f"All {counts['monitor']} monitor programs are single-professor dependencies.",
         f"{counts['do_not_apply']} programs fail one or more hard gates.",
         f"Applicant preference among the {counts['monitor']} monitor opportunities is not directly verified.",
@@ -398,8 +399,8 @@ def main() -> int:
         "manifest_version": "1.0",
         "schema_version": "2.0",
         "stage": 6,
-        "run_type": "portfolio_reentry_02",
-        "name": "Construct and pressure-test the application portfolio",
+        "run_type": "portfolio_reentry_03",
+        "name": "Construct and pressure-test the application portfolio — re-entry 03",
         "status": "complete" if status == "PASS" else "failed",
         "decision": status,
         "portfolio_decision": portfolio["decision"],
