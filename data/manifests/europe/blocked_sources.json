@@ -1,0 +1,42 @@
+{
+  "access_date": "2026-09-09",
+  "sources": [
+    {
+      "name": "EHESO/ETER HEI API",
+      "url": "https://observatory.eter-project.com/api/v1/layer",
+      "status": "blocked",
+      "http_status": 401,
+      "impact": "No ETER identifiers or institution-level degree/doctoral-award fields could be cross-walked."
+    },
+    {
+      "name": "Danish Ministry of Higher Education and Science",
+      "url": "https://ufm.dk/en/education/higher-education/danish-universities",
+      "status": "blocked",
+      "error": "404 Client Error: Not Found for url: https://ufm.dk/en/education/higher-education/danish-universities"
+    },
+    {
+      "name": "AIKA Higher Education Institution List",
+      "url": "https://eplatforma.aika.lv/index.php?r=site%2Fhei-list",
+      "status": "blocked",
+      "error": "404 Client Error: Not Found for url: https://eplatforma.aika.lv/index.php?r=site%2Fhei-list"
+    },
+    {
+      "name": "Ministry of Research and Higher Education",
+      "url": "https://mesr.gouvernement.lu/en/enseignementsuperieur.html",
+      "status": "blocked",
+      "error": "404 Client Error: Not Found for url: https://mesr.gouvernement.lu/en/enseignementsuperieur.html"
+    },
+    {
+      "name": "Malta Further and Higher Education Authority",
+      "url": "https://mfhea.mt/higher-education-licensees/",
+      "status": "blocked",
+      "error": "403 Client Error: Forbidden for url: https://mfhea.mt/higher-education-licensees/"
+    },
+    {
+      "name": "DPhil in Computer Science",
+      "url": "https://www.ox.ac.uk/admissions/graduate/courses/dphil-computer-science",
+      "status": "blocked",
+      "error": "403 Client Error: Forbidden for url: https://www.ox.ac.uk/admissions/graduate/courses/dphil-computer-science"
+    }
+  ]
+}

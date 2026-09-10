@@ -1,0 +1,481 @@
+[
+  {
+    "seed": {
+      "institution": "University of Oxford",
+      "country": "United Kingdom",
+      "name": "DPhil in Computer Science",
+      "degree_type": "PhD",
+      "department": "Department of Computer Science",
+      "url": "https://www.ox.ac.uk/admissions/graduate/courses/dphil-computer-science",
+      "direct_from_bachelors": "Yes; four-year relevant bachelor's route is explicitly listed",
+      "language": "English (primarily English-speaking jurisdiction)",
+      "funding_model": "University scholarships and studentships; deep verification pending",
+      "admissions_model": "Program application",
+      "language_url": ""
+    },
+    "program_page": {
+      "url": "https://www.ox.ac.uk/admissions/graduate/courses/dphil-computer-science",
+      "ok": false,
+      "checked_at": "2026-09-09T00:00:00Z",
+      "error": "403 Client Error: Forbidden for url: https://www.ox.ac.uk/admissions/graduate/courses/dphil-computer-science"
+    },
+    "language_page": null,
+    "method": "bounded official-page positive-signal screen"
+  },
+  {
+    "seed": {
+      "institution": "University of Cambridge",
+      "country": "United Kingdom",
+      "name": "PhD in Computer Science",
+      "degree_type": "PhD",
+      "department": "Department of Computer Science and Technology",
+      "url": "https://www.cst.cam.ac.uk/admissions/phd",
+      "direct_from_bachelors": "Yes; master's is described as desirable rather than mandatory",
+      "language": "English (primarily English-speaking jurisdiction)",
+      "funding_model": "University/department funding competitions; deep verification pending",
+      "admissions_model": "Program application with proposed supervisor",
+      "language_url": ""
+    },
+    "program_page": {
+      "url": "https://www.cst.cam.ac.uk/admissions/phd",
+      "final_url": "https://www.cst.cam.ac.uk/admissions/phd",
+      "status_code": 200,
+      "ok": true,
+      "checked_at": "2026-09-09T00:00:00Z",
+      "content_sha256": "3c30e8172636912642d1158f7f2179c8101b61a9d64295dfb6e9a4a8558003e9",
+      "title": "PhD in Computer Science | Department of Computer Science and Technology",
+      "excerpt": "PhD in Computer Science | Department of Computer Science and Technology skip to content Study at Cambridge About the University Research at Cambridge Search site Home Study at Cambridge Undergraduate Undergraduate courses Applying Events and open days Fees and finance Postgraduate Postgraduate courses How to apply Postgraduate events Fees and funding International students Continuing education Executive and professional education Courses in education About the University How the University and Colleges work Term dates and calendars History Map Visiting the University Annual reports Equality and diversity News A global university Events Public engagement Jobs Give to Cambridge Research at Cambridge For staff For Cambridge students For alumni For our researchers Business and enterprise Colleges & departments Email & phone search Give to Cambridge Libraries Museums & collections Home Admissions Department of Computer Science and Technology Sign in with Raven Home The department About People People overview Faculty Research staff PhD students Professional services staff Fellows Affiliated lecturers Overview of Professional Services Staff Visitors News Seminars Seminars overview Weekly ",
+      "signals": {
+        "doctoral": true,
+        "research": true,
+        "computer_science": true,
+        "english": true
+      }
+    },
+    "language_page": null,
+    "method": "bounded official-page positive-signal screen"
+  },
+  {
+    "seed": {
+      "institution": "University College London",
+      "country": "United Kingdom",
+      "name": "Computer Science MPhil/PhD",
+      "degree_type": "Integrated or structured doctorate",
+      "department": "Department of Computer Science",
+      "url": "https://www.ucl.ac.uk/study/prospective-students/graduate/courses/computer-science-mphilphd",
+      "direct_from_bachelors": "Potentially; country-specific equivalency requires deep verification",
+      "language": "English (primarily English-speaking jurisdiction)",
+      "funding_model": "Scholarship and project funding; no universal guarantee verified",
+      "admissions_model": "Program application; identify proposed supervisor",
+      "language_url": ""
+    },
+    "program_page": {
+      "url": "https://www.ucl.ac.uk/study/prospective-students/graduate/courses/computer-science-mphilphd",
+      "final_url": "https://www.ucl.ac.uk/study/prospective-students/graduate/courses/computer-science-mphilphd",
+      "status_code": 200,
+      "ok": true,
+      "checked_at": "2026-09-09T00:00:00Z",
+      "content_sha256": "9804b60ccf88e184d5cf32ab383bf7cdb46789c851d87318bb43644ce3d11974",
+      "title": "Computer Science MPhil/PhD | Study at UCL",
+      "excerpt": "Computer Science MPhil/PhD | Study at UCL Skip to main content Navigate back to homepage Search Term (optional) Submit search Main navigation Home Study Study Study Study at UCL Prospective students Current students Languages and international education Accommodation Careers Doctoral School Immigration and visas Student finances Support and wellbeing Close sub menu modal Research and innovation Research and innovation Research and innovation Research and innovation Strategy and impact Our people Research environment Funding and support Collaborate and innovate Research news Close sub menu modal Engage Engage Engage Engage with UCL Alumni Industry and business Policy and political engagement Global engagement Health at UCL Access and widening participation Public art and community engagement Employers and recruiters Give to UCL Close sub menu modal About About About About UCL Who we are Faculties Governance President and Provost Strategy UCL's Bicentenary Close sub menu modal Courses Breadcrumb trail Study at UCL Prospective students Graduate degrees Courses Computer Science MPhil/PhD Course starts: Multiple start dates available. | Location: London, Bloomsbury Computer Science MPhi",
+      "signals": {
+        "doctoral": true,
+        "research": true,
+        "computer_science": true,
+        "english": true
+      }
+    },
+    "language_page": null,
+    "method": "bounded official-page positive-signal screen"
+  },
+  {
+    "seed": {
+      "institution": "Imperial College London",
+      "country": "United Kingdom",
+      "name": "PhD in Computing",
+      "degree_type": "PhD",
+      "department": "Department of Computing",
+      "url": "https://www.imperial.ac.uk/computing/prospective-students/phd/",
+      "direct_from_bachelors": "Potentially; detailed credential equivalency requires deep verification",
+      "language": "English (primarily English-speaking jurisdiction)",
+      "funding_model": "Department advertises funded studentships; award not automatic",
+      "admissions_model": "Program application",
+      "language_url": ""
+    },
+    "program_page": {
+      "url": "https://www.imperial.ac.uk/computing/prospective-students/phd/",
+      "final_url": "https://www.imperial.ac.uk/computing/prospective-students/phd/",
+      "status_code": 200,
+      "ok": true,
+      "checked_at": "2026-09-09T00:00:00Z",
+      "content_sha256": "98275e970635d6bba5f8c837270df74471fc0bc3774ba49e65bfc3e48ae0691c",
+      "title": "PhD | Faculty of Engineering | Imperial College London",
+      "excerpt": "PhD | Faculty of Engineering | Imperial College London Skip to main content View accessibility support page Search Search Menu Study Research Faculties News Events About Get involved Giving Shop Imperial Search Search Website navigation Close Key links This section Skip to section navigation Global site navigation Study Course search Subjects Apply Fees and funding Student life Visit Help centre Request info International students Lifelong Learning Summer schools Research Faculties Faculty of Engineering Faculty of Medicine Faculty of Natural Sciences Imperial Business School Administrative and support services News News Imperial Stories Imperial Magazine Events What's on Great Exhibition Road Festival Imperial Lates Graduation About President Provost and Deputy President Council Imperial Strategy League tables and rankings Imperial Global Sustainable Imperial School of Convergence Science Governance Campuses Our academics Jobs at Imperial Get involved Giving Schools outreach Imperial Global Summer School Societal engagement Volunteering and outreach Women at Imperial Giving Shop Imperial User links navigation For staff Current students Imperial for business For schools Alumni Depa",
+      "signals": {
+        "doctoral": true,
+        "research": true,
+        "computer_science": true,
+        "english": false
+      }
+    },
+    "language_page": null,
+    "method": "bounded official-page positive-signal screen"
+  },
+  {
+    "seed": {
+      "institution": "ETH Zurich",
+      "country": "Switzerland",
+      "name": "Direct Doctorate in Computer Science",
+      "degree_type": "Direct-entry PhD",
+      "department": "Department of Computer Science",
+      "url": "https://inf.ethz.ch/doctorate/direct-doctorate-computer-science.html",
+      "direct_from_bachelors": "Yes; explicitly for applicants with a bachelor's in computer science or related field",
+      "language": "English completion supported by official doctorate language policy",
+      "funding_model": "Study scholarship followed by salaried doctoral employment; conditions pending deep verification",
+      "admissions_model": "Program application",
+      "language_url": "https://ethz.ch/students/en/doctorate/doctoral-thesis-examination.html"
+    },
+    "program_page": {
+      "url": "https://inf.ethz.ch/doctorate/direct-doctorate-computer-science.html",
+      "final_url": "https://inf.ethz.ch/doctorate/direct-doctorate-computer-science.html",
+      "status_code": 200,
+      "ok": true,
+      "checked_at": "2026-09-09T00:00:00Z",
+      "content_sha256": "c8368dca29f2a2de48a51f67cf176f8dd8a1a993c05faaaf0b03157229f480c6",
+      "title": "Direct Doctorate in Computer Science – Department of Computer Science | ETH Zurich",
+      "excerpt": "Direct Doctorate in Computer Science – Department of Computer Science | ETH Zurich Homepage Navigation Search Content Footer Contact Sitemap Department of Computer Science Services Student portal Alumni association Staffnet Contact Login Search Search en EN DE Departments ETH Zurich D-INFK Language Selection en English Deutsch You are here Homepage Doctorate Direct Doctorate in CS Direct Doctorate in Computer Science Group meeting between postdoc Dr Matthias Miller, Professor Menna El-Assady, doctoral student Robin Chan, and doctoral student Sinie van der Ben. Image: Monika Estermann / ETH Zurich Our goal is to educate students to become researchers and future leaders in computer science. The Direct Doctorate in Computer Science comprises course and research work. It allows exceptionally well-qualified students holding a Bachelor's degree to join the doctorate programme at the Department of Computer Science. The programme is tailored to the needs of students aiming at a career in research and interested in pursuing a doctoral degree at ETH Zurich. The Direct Doctorate enables students to explore a wide range of areas in computer science and to become acquainted with the different g",
+      "signals": {
+        "doctoral": true,
+        "research": true,
+        "computer_science": true,
+        "english": true
+      }
+    },
+    "language_page": {
+      "url": "https://ethz.ch/students/en/doctorate/doctoral-thesis-examination.html",
+      "final_url": "https://ethz.ch/students/en/doctorate/doctoral-thesis-examination.html",
+      "status_code": 200,
+      "ok": true,
+      "checked_at": "2026-09-09T00:00:00Z",
+      "content_sha256": "818e5c606c3b2189819e5d0aa6d646da1a7d823d19b58040057ea39c7e55eb05",
+      "title": "Doctoral thesis – Student portal | ETH Zurich",
+      "excerpt": "Doctoral thesis – Student portal | ETH Zurich Homepage Navigation Search Content Footer Contact Sitemap Student portal Services Alumni Association Staffnet Login Search Search en EN DE Departments ETH Zurich Student portal Language Selection en English Deutsch You are here Homepage Doctorate Doctoral thesis Doctoral thesis Formal aspects to consider before you start to write your doctoral thesis. The Download doctoral thesis title page (PDF, 121 KB) must comply with the requirements of Appendix 2 of the Rector’s Implementation Provisions for the Ordinance on Doctoral Studies. The doctoral thesis must include an abstract in one official Swiss language and in English, plus a CV. For data security reasons, the CV may be omitted from the electronic version. You can find the required elements of the doctoral thesis on \"Appendix 2 – Design of the doctoral thesis\", p. 16 in the Rector’s Implementation Provisions for the ETH Zurich Ordinance on the Doctorate. Make sure your quotes and references are correct when using paragraphs, images, charts, etc. from other works, whether word-for-word or giving the gist of them. See also “ETH Zurich Citation Guidelines \". For copyright reasons, paragr",
+      "signals": {
+        "doctoral": true,
+        "research": true,
+        "computer_science": true,
+        "english": true
+      }
+    },
+    "method": "bounded official-page positive-signal screen"
+  },
+  {
+    "seed": {
+      "institution": "ETH Zurich",
+      "country": "Switzerland",
+      "name": "Doctoral Study Programme in Computer Science",
+      "degree_type": "PhD requiring a master's",
+      "department": "Department of Computer Science",
+      "url": "https://inf.ethz.ch/doctorate/doctoral-study-program.html",
+      "direct_from_bachelors": "No; official page requires a master's",
+      "language": "English completion supported by official doctorate language policy",
+      "funding_model": "Normally salaried research-assistant employment",
+      "admissions_model": "Supervisor/position dependent",
+      "language_url": "https://ethz.ch/students/en/doctorate/doctoral-thesis-examination.html"
+    },
+    "program_page": {
+      "url": "https://inf.ethz.ch/doctorate/doctoral-study-program.html",
+      "final_url": "https://inf.ethz.ch/doctorate/doctoral-study-program.html",
+      "status_code": 200,
+      "ok": true,
+      "checked_at": "2026-09-09T00:00:00Z",
+      "content_sha256": "44a1e3c5209b8d6ca54acde96115500e2e05a687a121bb3c50c57a81be3100c4",
+      "title": "Doctoral Study Programme – Department of Computer Science | ETH Zurich",
+      "excerpt": "Doctoral Study Programme – Department of Computer Science | ETH Zurich Homepage Navigation Search Content Footer Contact Sitemap Department of Computer Science Services Student portal Alumni association Staffnet Contact Login Search Search en EN DE Departments ETH Zurich D-INFK Language Selection en English Deutsch You are here Homepage Doctorate Doctoral Study Programme Doctoral Study Programme Professor Stelian Coros discusses a project with his doctoral student Yinwei Du. Image: Monika Estermann / ETH Zurich The Computer Science Department’s goal is to educate students to become mature researchers and future leaders in the field of computer science. Doctoral students are part of a body of bright, talented and highly motivated scientists collaborating in research groups. Admission is highly competitive due to a large number of candidates and very few openings. The rewarding work experience is complemented by a competitive salary that comfortably covers the living expenses in Switzerland. Typically, the completion of a doctoral degree takes 4-5 years. Helpful information Doctorate at ETH Zurich New international students General information about entering Switzerland Doctoral stud",
+      "signals": {
+        "doctoral": true,
+        "research": true,
+        "computer_science": true,
+        "english": true
+      }
+    },
+    "language_page": {
+      "url": "https://ethz.ch/students/en/doctorate/doctoral-thesis-examination.html",
+      "final_url": "https://ethz.ch/students/en/doctorate/doctoral-thesis-examination.html",
+      "status_code": 200,
+      "ok": true,
+      "checked_at": "2026-09-09T00:00:00Z",
+      "content_sha256": "818e5c606c3b2189819e5d0aa6d646da1a7d823d19b58040057ea39c7e55eb05",
+      "title": "Doctoral thesis – Student portal | ETH Zurich",
+      "excerpt": "Doctoral thesis – Student portal | ETH Zurich Homepage Navigation Search Content Footer Contact Sitemap Student portal Services Alumni Association Staffnet Login Search Search en EN DE Departments ETH Zurich Student portal Language Selection en English Deutsch You are here Homepage Doctorate Doctoral thesis Doctoral thesis Formal aspects to consider before you start to write your doctoral thesis. The Download doctoral thesis title page (PDF, 121 KB) must comply with the requirements of Appendix 2 of the Rector’s Implementation Provisions for the Ordinance on Doctoral Studies. The doctoral thesis must include an abstract in one official Swiss language and in English, plus a CV. For data security reasons, the CV may be omitted from the electronic version. You can find the required elements of the doctoral thesis on \"Appendix 2 – Design of the doctoral thesis\", p. 16 in the Rector’s Implementation Provisions for the ETH Zurich Ordinance on the Doctorate. Make sure your quotes and references are correct when using paragraphs, images, charts, etc. from other works, whether word-for-word or giving the gist of them. See also “ETH Zurich Citation Guidelines \". For copyright reasons, paragr",
+      "signals": {
+        "doctoral": true,
+        "research": true,
+        "computer_science": true,
+        "english": true
+      }
+    },
+    "method": "bounded official-page positive-signal screen"
+  },
+  {
+    "seed": {
+      "institution": "Saarland University",
+      "country": "Germany",
+      "name": "Saarbrücken Graduate School of Computer Science",
+      "degree_type": "Integrated or structured doctorate",
+      "department": "Department of Computer Science",
+      "url": "https://www.uni-saarland.de/en/future/computerscience.html",
+      "direct_from_bachelors": "Yes; official page describes a bachelor's-entry route",
+      "language": "English evidence on official program page",
+      "funding_model": "Bachelor's-entry scholarship stated; later funding needs deep verification",
+      "admissions_model": "Graduate-school application",
+      "language_url": ""
+    },
+    "program_page": {
+      "url": "https://www.uni-saarland.de/en/future/computerscience.html",
+      "final_url": "https://www.uni-saarland.de/en/future/computerscience.html",
+      "status_code": 200,
+      "ok": true,
+      "checked_at": "2026-09-09T00:00:00Z",
+      "content_sha256": "6a66b52797b9116dba543dfff03f660f1cdfaed03f65b91e04b895077bb33f15",
+      "title": "Code your own future: Studying Computer Science at Saarland University | Universität des Saarlandes",
+      "excerpt": "Code your own future: Studying Computer Science at Saarland University | Universität des Saarlandes Skip to content Skip to search Skip to footer Information for Prospective students New students Current students School students Press & media Businesses Alumni University staff Quick links Academic programmes Applying & enrolling Study organisation Moodle University sports Lifelong learning Job vacancies Intranet (SharePoint) Faculties All faculties Faculty HW Faculty M Faculty MI Faculty NT Faculty P Faculty R de en Code your own future: Studying Computer Science at Saarland University AI Search © Universität des Saarlandes Code your own future: Studying Computer Science at Saarland University Your gateway to an exciting future in tech Outstanding career prospects in cutting-edge technologies. The demand for graduates with a Master's in computer science has never been higher. With its strong research focus on computer science and as a key partner in the Saarland Informatics Campus (SIC), Saarland University is both an innovative environment in which to study and a great launchpad for your career. Through close collaboration with the Max Planck Institute for Informatics (MPI-INF), t",
+      "signals": {
+        "doctoral": true,
+        "research": true,
+        "computer_science": true,
+        "english": true
+      }
+    },
+    "language_page": null,
+    "method": "bounded official-page positive-signal screen"
+  },
+  {
+    "seed": {
+      "institution": "KU Leuven",
+      "country": "Belgium",
+      "name": "Doctoral Programme in Computer Science",
+      "degree_type": "PhD requiring a master's",
+      "department": "Department of Computer Science",
+      "url": "https://www.kuleuven.be/english/apply/application-instructions/instructions-doctoral",
+      "direct_from_bachelors": "No; official instructions require a relevant master's or equivalent",
+      "language": "English mastery explicitly required",
+      "funding_model": "Advertised PhD positions are financed; proposal route may require separate funding",
+      "admissions_model": "Vacancy or supervisor-initiated application",
+      "language_url": ""
+    },
+    "program_page": {
+      "url": "https://www.kuleuven.be/english/apply/application-instructions/instructions-doctoral",
+      "final_url": "https://www.kuleuven.be/english/apply/application-instructions/instructions-doctoral",
+      "status_code": 200,
+      "ok": true,
+      "checked_at": "2026-09-09T00:00:00Z",
+      "content_sha256": "467b6cf1b799631e3ef0023988087ec8ddd68ca524c533337906563f417ddf3d",
+      "title": "Application instructions for doctoral programmes — Applications",
+      "excerpt": "Application instructions for doctoral programmes — Applications KU Leuven Home Applications Home Application instructions Requested documents Language requirements Degree verification Registration Contact More Home Application instructions Application instructions for doctoral programmes Application instructions for doctoral programmes Interested in pursuing a doctoral programme at KU Leuven? This page will go over the necessary steps you need to take to start or continue your academic career at KU Leuven. https://www.kuleuven.be/english/apply/application-instructions/instructions-doctoral https://www.kuleuven.be/english/apply/++resource++plone-logo.svg Application instructions for doctoral programmes Interested in pursuing a doctoral programme at KU Leuven? This page will go over the necessary steps you need to take to start or continue your academic career at KU Leuven. Starting a doctoral programme at KU Leuven Interested in pursuing a doctoral programme at KU Leuven? This page will go over the necessary steps you need to take to start or continue your academic career at KU Leuven. Step-by-step guide This guide explains the different steps to apply for a doctoral programme at KU",
+      "signals": {
+        "doctoral": true,
+        "research": true,
+        "computer_science": false,
+        "english": true
+      }
+    },
+    "language_page": null,
+    "method": "bounded official-page positive-signal screen"
+  },
+  {
+    "seed": {
+      "institution": "Aalto University",
+      "country": "Finland",
+      "name": "Doctoral Programme in Science — Computer Science",
+      "degree_type": "PhD requiring a master's",
+      "department": "School of Science",
+      "url": "https://www.aalto.fi/en/study-options/aalto-doctoral-programme-in-science-0",
+      "direct_from_bachelors": "No; relevant master's or equivalent required",
+      "language": "English is an official language of instruction and degree completion",
+      "funding_model": "Salaried position, project funding, or grant; applicant provides funding plan",
+      "admissions_model": "Program application with supervising professor",
+      "language_url": ""
+    },
+    "program_page": {
+      "url": "https://www.aalto.fi/en/study-options/aalto-doctoral-programme-in-science-0",
+      "final_url": "https://www.aalto.fi/en/study-options/aalto-doctoral-programme-in-science-0",
+      "status_code": 200,
+      "ok": true,
+      "checked_at": "2026-09-09T00:00:00Z",
+      "content_sha256": "db6c144a4e984b0876bd68d3b0c0bddcdfbdf177003f04ee016289a3e8536169",
+      "title": "Aalto Doctoral Programme in Science | Aalto University",
+      "excerpt": "Aalto Doctoral Programme in Science | Aalto University Skip to main content Sign of Change Sign of Change Donate Apply to Aalto Valitse sivuston kieli / Välj webbplatsens språk / Select site language EN FI Suomeksi SV Svenska EN English Search Log in Menu Close menu Student Guide For personnel Aalto community members please log in to see internal content Admissions and studies Apply to Aalto Find a study programme How to apply Scholarships and tuition fees Bachelor's admissions (programmes in Finnish and Swedish) Bachelor’s admissions (programmes in English) Master's admissions Doctoral admissions Campus life Events for applicants Chat with students Subscribe to newsletter Contact admission services Founder School: from students to founders Lifewide Learning Exchange students Research and art About our research and art Tenure track career system Doctoral education Research and learning infrastructures Research portal research.aalto.fi Rankings Schools and departments Schools School of Arts, Design and Architecture School of Business School of Chemical Engineering School of Electrical Engineering School of Engineering School of Science Departments Accounting & Business Law Applied P",
+      "signals": {
+        "doctoral": true,
+        "research": true,
+        "computer_science": true,
+        "english": true
+      }
+    },
+    "language_page": null,
+    "method": "bounded official-page positive-signal screen"
+  },
+  {
+    "seed": {
+      "institution": "University of Helsinki",
+      "country": "Finland",
+      "name": "Doctoral Programme in Science — Computer Science",
+      "degree_type": "PhD requiring a master's",
+      "department": "Faculty of Science",
+      "url": "https://www.helsinki.fi/en/admissions-and-education/apply-doctoral-programmes/doctoral-programmes/doctoral-programme-science/admissions-doctoral-studies",
+      "direct_from_bachelors": "No; second-cycle degree required",
+      "language": "All doctoral programmes can be completed in English",
+      "funding_model": "Study right does not itself imply funding",
+      "admissions_model": "Program application with coordinating academic",
+      "language_url": "https://www.helsinki.fi/en/admissions-and-education/apply-doctoral-programmes"
+    },
+    "program_page": {
+      "url": "https://www.helsinki.fi/en/admissions-and-education/apply-doctoral-programmes/doctoral-programmes/doctoral-programme-science/admissions-doctoral-studies",
+      "final_url": "https://www.helsinki.fi/en/admissions-and-education/apply-doctoral-programmes/doctoral-programmes/doctoral-programme-science/admissions-doctoral-studies",
+      "status_code": 200,
+      "ok": true,
+      "checked_at": "2026-09-09T00:00:00Z",
+      "content_sha256": "e6fa81b6e671037be9044706adfb251e2dec96a75e4924a48e4b4501bc9ce934",
+      "title": "Admissions to doctoral studies | University of Helsinki",
+      "excerpt": "Admissions to doctoral studies | University of Helsinki Skip to main content News News News and press releases War in Ukraine Think Corner Events calendar Public examinations Unitube videos Press and media services Newsletters University on social media Close menu Admissions and education Admissions and education Search for programmes and courses Apply to bachelor's and master's programmes Apply to doctoral programmes For international students Open university Apply for exchange and visiting studies Continuous learning Education Apply to supplementary studies Admission Services and Study Guidance Close menu Research Research Explore our research, our research units, services for researchers and our top-notch research infrastructures. Top research areas and researchers Find a researcher Research units and infrastructures Doctoral school Research integrity Services for researchers Close menu Innovations and cooperation Innovations and cooperation Innovations, services and collaboration opportunities for researchers, businesses, alumni and donors. For decision-makers Innovations and entrepreneurship Support us For alumni Business collaboration and partnership International cooperation",
+      "signals": {
+        "doctoral": true,
+        "research": true,
+        "computer_science": true,
+        "english": false
+      }
+    },
+    "language_page": {
+      "url": "https://www.helsinki.fi/en/admissions-and-education/apply-doctoral-programmes",
+      "final_url": "https://www.helsinki.fi/en/admissions-and-education/apply-doctoral-programmes",
+      "status_code": 200,
+      "ok": true,
+      "checked_at": "2026-09-09T00:00:00Z",
+      "content_sha256": "716384a27facecf30c7711d0eed01286d50ede904108ebbafb77b645cfc0b1ad",
+      "title": "Apply to doctoral programmes | University of Helsinki",
+      "excerpt": "Apply to doctoral programmes | University of Helsinki Skip to main content News News News and press releases War in Ukraine Think Corner Events calendar Public examinations Unitube videos Press and media services Newsletters University on social media Close menu Admissions and education Admissions and education Search for programmes and courses Apply to bachelor's and master's programmes Apply to doctoral programmes For international students Open university Apply for exchange and visiting studies Continuous learning Education Apply to supplementary studies Admission Services and Study Guidance Close menu Research Research Explore our research, our research units, services for researchers and our top-notch research infrastructures. Top research areas and researchers Find a researcher Research units and infrastructures Doctoral school Research integrity Services for researchers Close menu Innovations and cooperation Innovations and cooperation Innovations, services and collaboration opportunities for researchers, businesses, alumni and donors. For decision-makers Innovations and entrepreneurship Support us For alumni Business collaboration and partnership International cooperation C",
+      "signals": {
+        "doctoral": true,
+        "research": true,
+        "computer_science": false,
+        "english": true
+      }
+    },
+    "method": "bounded official-page positive-signal screen"
+  },
+  {
+    "seed": {
+      "institution": "KTH Royal Institute of Technology",
+      "country": "Sweden",
+      "name": "Doctoral Programme in Computer Science",
+      "degree_type": "PhD requiring a master's",
+      "department": "School of Electrical Engineering and Computer Science",
+      "url": "https://intra.kth.se/en/eecs/forskarutbildning/doctoral-programmes/computer-science-1.817607",
+      "direct_from_bachelors": "No; second-cycle qualification required",
+      "language": "English is standard in KTH research environments",
+      "funding_model": "Position-funded; most doctoral students are employees",
+      "admissions_model": "Apply to an advertised doctoral position",
+      "language_url": "https://www.kth.se/en/sci/sci-arbetsmapp-dold/doktorandwebben/faq"
+    },
+    "program_page": {
+      "url": "https://intra.kth.se/en/eecs/forskarutbildning/doctoral-programmes/computer-science-1.817607",
+      "final_url": "https://intra.kth.se/en/eecs/forskarutbildning/doctoral-programmes/computer-science-1.817607",
+      "status_code": 200,
+      "ok": true,
+      "checked_at": "2026-09-09T00:00:00Z",
+      "content_sha256": "1a9a1c0cadfe20f2631a9c533bb0a84bcbb7569c0463d6f2249b50e74ed7094f",
+      "title": "Doctoral programme in Computer Science |  EECS internal pages",
+      "excerpt": "Doctoral programme in Computer Science | EECS internal pages Skip to main content My employment My employment close Support and service Support and service close Education Education close Research Research close Organisation and regulations Organisation and regulations close Close My employment Close Support and service Close Education Close Research Close Organisation and regulations Close Main menu Close My employment Main menu Close Support and service Main menu Close Education Main menu Close Research Main menu Close Organisation and regulations Search Search the KTH Intranet Search Search in kth.se Search the Student web Svenska Menu KTH Intranet EECS Doctoral education support Doctoral programmes Doctoral programmes Close Doctoral education support Doctoral programmes Doctoral education support Doctoral programmes Computer Science Doctoral programme at the School of Electrical Engineering and Computer Science (EECS) News On 3 November 2022, all doctoral students and supervisors within the doctoral programme received an email with the subject \"PhD student and supervisor expectations\" containing information about a survey. Those within the programme who did not receive this ema",
+      "signals": {
+        "doctoral": true,
+        "research": true,
+        "computer_science": true,
+        "english": false
+      }
+    },
+    "language_page": {
+      "url": "https://www.kth.se/en/sci/sci-arbetsmapp-dold/doktorandwebben/faq",
+      "final_url": "https://www.kth.se/en/sci/sci-arbetsmapp-dold/doktorandwebben/faq",
+      "status_code": 200,
+      "ok": true,
+      "checked_at": "2026-09-09T00:00:00Z",
+      "content_sha256": "9c2ef1886a7b030019a4cf8fec9948ca0271f55dffc1baa2e02f0cc2ec7fea0e",
+      "title": "FAQ |  KTH",
+      "excerpt": "FAQ | KTH Skip to main content Studies Studies close Research Research close Collaboration Collaboration close About KTH About KTH close Library Library close Close Studies Close Research Close Collaboration Close About KTH Close Library Close Main menu Close Studies Main menu Close Research Main menu Close Collaboration Main menu Close About KTH Main menu Close Library Search Search the KTH website Search Search the Student web Search the Intranet Svenska Menu KTH SCI SCI arbetsmapp (dold i menyn) PhD Student Portal FAQ FAQ Close PhD Student Portal FAQ PhD Student Portal FAQ FAQ As a doctoral student at KTH, you are both a student and an employee, with access to a wide range of resources and support throughout your doctoral education. Here you can find answers to frequently asked questions on topics such as supervision, funding, courses, work environment, and the public defence of your thesis. The doctoral period is a time of intensive development – both academically and personally. At the same time, doctoral education involves managing practical matters related to employment, studies, supervision, and life at KTH. This FAQ brings together answers to the most common questions for ",
+      "signals": {
+        "doctoral": true,
+        "research": true,
+        "computer_science": false,
+        "english": true
+      }
+    },
+    "method": "bounded official-page positive-signal screen"
+  },
+  {
+    "seed": {
+      "institution": "Technical University of Denmark",
+      "country": "Denmark",
+      "name": "PhD Programme — DTU Compute",
+      "degree_type": "PhD requiring a master's",
+      "department": "Department of Applied Mathematics and Computer Science",
+      "url": "https://www.dtu.dk/english/education/phd/intro",
+      "direct_from_bachelors": "No; standard route requires master's-equivalent preparation",
+      "language": "English delivery plausible; explicit completion-language evidence unresolved",
+      "funding_model": "Position-funded vacancies predominate",
+      "admissions_model": "Apply to advertised vacancy",
+      "language_url": ""
+    },
+    "program_page": {
+      "url": "https://www.dtu.dk/english/education/phd/intro",
+      "final_url": "https://www.dtu.dk/english/education/phd/intro",
+      "status_code": 200,
+      "ok": true,
+      "checked_at": "2026-09-09T00:00:00Z",
+      "content_sha256": "a8988ec42375bc047d586f0f4867c277f47ee46b9667aaeb6e3b79115faae639",
+      "title": "About the PhD programme at DTU",
+      "excerpt": "About the PhD programme at DTU Go to primary content (press enter) Education Continuing Education Research Innovation Collaboration About DTU News Contact Danish English Search All search results People Contents Publications News Contact Danish English Explore Frontpage Education PhD Intro Share on back Intro Organization Salary and employment Why should you choose DTU? Industrial PhD Guest PhD Applicant Career Rules Contact About the PhD programme at DTU At DTU you can get a research education equal to the world’s very best within the natural and the technical sciences including several societally relevant engineering disciplines such as digitalization, sustainable energy technologies, and life science. As a PhD student you will carry out independent scientific research including a written dissertation and a public defense of your PhD work. Learning to conduct research The PhD study is a learning process where you as a PhD student learn to conduct research by working closely with your academic supervisor. The supervisor and PhD student work together as a team in order to achieve the best results. The PhD programme consists of: an independent scientific project course work correspo",
+      "signals": {
+        "doctoral": true,
+        "research": true,
+        "computer_science": false,
+        "english": true
+      }
+    },
+    "language_page": null,
+    "method": "bounded official-page positive-signal screen"
+  },
+  {
+    "seed": {
+      "institution": "University of Tartu",
+      "country": "Estonia",
+      "name": "PhD in Information Technology — Computer Science",
+      "degree_type": "PhD requiring a master's",
+      "department": "Institute of Computer Science",
+      "url": "https://ut.ee/en/curriculum/computer-science",
+      "direct_from_bachelors": "No; master's-equivalent eligibility requires deep verification",
+      "language": "English proficiency requirement shown on official curriculum page",
+      "funding_model": "Position/study-place funding requires vacancy-level verification",
+      "admissions_model": "Program or position application",
+      "language_url": ""
+    },
+    "program_page": {
+      "url": "https://ut.ee/en/curriculum/computer-science",
+      "final_url": "https://ut.ee/en/curriculum/computer-science",
+      "status_code": 200,
+      "ok": true,
+      "checked_at": "2026-09-09T00:00:00Z",
+      "content_sha256": "8c1ae637a538c4c06a30baf850ac250ff4484f2e5035402ddbf3b807479e0d9e",
+      "title": "Computer Science | University of Tartu",
+      "excerpt": "Computer Science | University of Tartu Skip to main content To front page Quick links Intranet SIS1 SIS2 Moodle Gift shop University of Tartu Library University of Tartu Style Guide Quick links Intranet SIS1 SIS2 Moodle Gift shop University of Tartu Library University of Tartu Style Guide All UT contacts Accessibility Est Eng Search Type in the keyword(s) Close Back General contacts Rector's Office Faculty of Arts and Humanities Dean's Office, Faculty of Arts and Humanities https://humanitaarteadused.ut.ee Staff contacts +372 737 5341 [email protected] Jakobi 2, r 116-121, 51005 Tartu linn, Tartu linn, Tartumaa Institute of History and Archaeology https://ajalugu-arheoloogia.ut.ee Staff contacts +372 737 5651 [email protected] Jakobi 2, 51005 Tartu linn, Tartu linn, Tartumaa Institute of Estonian and General Linguistics https://keel.ut.ee Staff contacts +372 737 5221 Jakobi 2, IV korrus, 51005 Tartu linn, Tartu linn, Tartumaa Institute of Philosophy and Semiotics https://filsem.ut.ee Staff contacts +372 737 5314 Jakobi 2, III korrus, ruumid 302-337, 51005 Tartu linn, Tartu linn, Tartumaa Institute of Cultural Research https://kultuuriteadused.ut.ee/et Staff contacts +372 737 5223 [",
+      "signals": {
+        "doctoral": true,
+        "research": true,
+        "computer_science": true,
+        "english": true
+      }
+    },
+    "language_page": null,
+    "method": "bounded official-page positive-signal screen"
+  }
+]
