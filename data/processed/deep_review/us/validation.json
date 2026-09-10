@@ -1,0 +1,43 @@
+{
+  "status": "PASS",
+  "validated_at": "2026-09-10T04:09:24.210875+00:00",
+  "data_access_date": "2026-09-09",
+  "errors": [],
+  "warnings": [
+    "Carnegie Mellon University: administrative email not confidently verified; use official contact page",
+    "George Mason University: administrative email not confidently verified; use official contact page",
+    "Pennsylvania State University-Main Campus: administrative email not confidently verified; use official contact page",
+    "Washington University in St Louis: administrative email not confidently verified; use official contact page"
+  ],
+  "counts": {
+    "programs": 25,
+    "professors": 25,
+    "sources": 113,
+    "admin_contacts": 25,
+    "exclusion_or_downgrade": 11,
+    "retained": 14,
+    "downgraded": 10,
+    "excluded": 1,
+    "cycle_labeled_fall_2027_deadlines": 12,
+    "recruiting_confirmed": 1,
+    "recruiting_unknown": 24
+  },
+  "checks": {
+    "exact_shared_headers": true,
+    "one_program_per_reviewed_institution": true,
+    "professor_coverage": true,
+    "source_coverage": true,
+    "non_retained_reason_and_log": true,
+    "deadline_cycle_guard": true,
+    "recruiting_evidence_guard": true,
+    "score_bounds_and_arithmetic": true
+  },
+  "known_limitations": [
+    "Faculty depth is intentionally limited to one strongest verified current match per program; single-professor dependency is flagged in every program row.",
+    "Blank fall_2027_deadline values are deliberate where the current official page gave a recurring/latest deadline without an explicit Fall 2027 cycle label.",
+    "Funding language is transcribed conservatively; assistantship availability and 'typically/most/generally' are not treated as universal guarantees.",
+    "No recruiting inference was made from publications, grants, current students, or lab activity. Only RIT has a direct current opening statement, whose start cycle remains to be reconfirmed.",
+    "The five lower-priority second-tranche suggestions (Lehigh, UTSA, Colorado School of Mines, University of Houston, Michigan Tech) were deferred rather than represented as reviewed.",
+    "No email, calendar, or external-system mutations were performed."
+  ]
+}

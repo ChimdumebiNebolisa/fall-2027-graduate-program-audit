@@ -1,0 +1,70 @@
+{
+  "region": "us",
+  "phase": "finalist_deep_review",
+  "generated_at": "2026-09-10T04:09:24.241430+00:00",
+  "data_access_date": "2026-09-09",
+  "status": "PASS",
+  "scope": {
+    "initial_institutions_reviewed": 20,
+    "priority_second_tranche_reviewed": [
+      "Vanderbilt University",
+      "University of Notre Dame",
+      "Washington University in St Louis",
+      "Case Western Reserve University",
+      "Rochester Institute of Technology"
+    ],
+    "deferred_second_tranche": [
+      "Lehigh University",
+      "University of Texas at San Antonio",
+      "Colorado School of Mines",
+      "University of Houston",
+      "Michigan Technological University"
+    ]
+  },
+  "counts": {
+    "programs": 25,
+    "professors": 25,
+    "sources": 113,
+    "admin_contacts": 25,
+    "exclusion_or_downgrade": 11,
+    "retained": 14,
+    "downgraded": 10,
+    "excluded": 1,
+    "cycle_labeled_fall_2027_deadlines": 12,
+    "recruiting_confirmed": 1,
+    "recruiting_unknown": 24
+  },
+  "files": [
+    {
+      "path": "data/processed/deep_review/us/deep_programs.csv",
+      "sha256": "a7f762c0c5c29ad34c91101ba3e51238dbd4dff18bab3787abc9711e013b8eac",
+      "bytes": 63589
+    },
+    {
+      "path": "data/processed/deep_review/us/professors.csv",
+      "sha256": "7b66984227d659dfb88725ace5d94f941c5faed634a86ffaec61c342bb787322",
+      "bytes": 35744
+    },
+    {
+      "path": "data/processed/deep_review/us/sources.csv",
+      "sha256": "883593b8b27b343676347e731338ddb353136b0d08d4e43691f2b83bba7ae815",
+      "bytes": 50445
+    },
+    {
+      "path": "data/processed/deep_review/us/admin_contacts.csv",
+      "sha256": "b16e247651a28110ca97bb0f7dba22b486ae1bc49de77e1fd6c5a62cc33828b2",
+      "bytes": 13455
+    },
+    {
+      "path": "data/processed/deep_review/us/exclusion_or_downgrade.csv",
+      "sha256": "b12e8e1f573a52254478418c177a983ebd48b40d3fa6d0ebf93f09dfeee3e067",
+      "bytes": 6060
+    },
+    {
+      "path": "data/processed/deep_review/us/validation.json",
+      "sha256": "0d12b8de21edfbb1990d2df37924690af4d416a4ce729db1fb77a659a36aef9f",
+      "bytes": 2229
+    }
+  ],
+  "source_policy": "Official institution pages for program/admissions/funding/faculty claims; scholarly publisher or university-hosted paper for recent work. Search snippets were discovery only."
+}
