@@ -9,7 +9,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Callable
 
-from .hard_gates import VERIFIED_FUNDING_VALUES, evaluate_hard_gates
+from .hard_gates import evaluate_hard_gates
 from .io import read_csv, read_json, write_csv, write_json
 from .portfolio import select_portfolio
 from .schema import (
@@ -416,7 +416,9 @@ class AuditPipeline:
             raise PipelineError("source IDs must be populated and unique")
 
         for evidence in evidence_rows:
-            if evidence.get("funding_gate_status", "").lower() in VERIFIED_FUNDING_VALUES:
+            if evidence.get("funding_gate_status", "").lower() in {
+                "verified", "verified_full_scholarship", "guaranteed_full_funding"
+            }:
                 references = _split_refs(evidence.get("funding_gate_evidence"))
                 official_verified = [
                     source_by_id.get(reference, {})
@@ -495,6 +497,7 @@ class AuditPipeline:
         programs = read_csv(self.work_dir / "evidence" / "program_evidence.csv")
         professors = read_csv(self.work_dir / "evidence" / "professor_evidence.csv")
         components = read_csv(self.work_dir / "evidence" / "score_components.csv")
+        sources = read_csv(self.work_dir / "evidence" / "source_ledger.csv")
         components_by_program: dict[str, list[dict[str, str]]] = defaultdict(list)
         for component in components:
             components_by_program[component["program_id"]].append(component)
@@ -528,7 +531,7 @@ class AuditPipeline:
                     "score_confidence": component.get("score_confidence", ""),
                 }
 
-            gate_result = evaluate_hard_gates(row, professors)
+            gate_result = evaluate_hard_gates(row, professors, sources)
             if gate_result.distinct_verified_professor_count < 2 and _number(
                 row.get("faculty_depth_score")
             ) > 5:

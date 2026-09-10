@@ -16,10 +16,16 @@ def _number(value: object) -> int:
         return 0
 
 
-def score_programs(program_path: Path, institution_path: Path, professor_path: Path) -> list[dict[str, str]]:
+def score_programs(
+    program_path: Path,
+    institution_path: Path,
+    professor_path: Path,
+    source_path: Path | None = None,
+) -> list[dict[str, str]]:
     programs = read_csv(program_path)
     institution_ids = {row["institution_id"] for row in read_csv(institution_path)}
     professors = read_csv(professor_path)
+    sources = read_csv(source_path) if source_path and source_path.exists() else []
     if any(row.get("schema_version") != PASS2_SCHEMA_VERSION for row in programs):
         raise ValueError(
             "score_programs requires Pass 2 schema 2.0 evidence; migrate legacy rows before rescoring"
@@ -30,7 +36,7 @@ def score_programs(program_path: Path, institution_path: Path, professor_path: P
             raise ValueError(f"program references unknown institution: {row.get('institution_id')}")
         verification = row.get("verification_status", "").strip().lower()
         screening = row.get("screening_decision", "").strip().lower()
-        gates = evaluate_hard_gates(row, professors)
+        gates = evaluate_hard_gates(row, professors, sources)
         evidence = {
             **row,
             **gates.gates,
@@ -115,6 +121,7 @@ def main() -> None:
         root / "program_screening.csv",
         root / "institution_universe.csv",
         root / "professor_evidence.csv",
+        root / "source_ledger.csv",
     )
     write_csv(root / "program_screening.csv", programs, PROGRAM_COLUMNS_V2)
     portfolio = select_portfolio(programs)

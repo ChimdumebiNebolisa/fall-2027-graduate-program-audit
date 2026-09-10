@@ -1,0 +1,269 @@
+{
+  "manifest_version": "1.0",
+  "schema_version": "2.0",
+  "stage": 5,
+  "name": "Evidence-based scoring and admission calibration",
+  "status": "complete",
+  "decision": "PASS",
+  "source_commit_before_stage": "6ee3a6021ec200a23dee00bb89f6f9f67bff0d31",
+  "started_at": "2026-09-10T20:10:22.668209+00:00",
+  "completed_at": "2026-09-10T20:10:23.428465+00:00",
+  "inputs": [
+    {
+      "path": "data/manifests/pass2/stage_04.json",
+      "sha256": "3c74ca6684e8a79f1eb2e3ed00933512e3fd4f28158500d425b340a18a90ef53",
+      "bytes": 9174,
+      "modified_at": "2026-09-10T19:51:06.755842+00:00",
+      "row_count": null
+    },
+    {
+      "path": "config/applicant_profile.yaml",
+      "sha256": "295715c90ad3ad7dd49c5de7af8e7ff2c0d7224ca5525299e5cd8d84a46fce0f",
+      "bytes": 664,
+      "modified_at": "2026-09-10T02:57:42.908352+00:00",
+      "row_count": null
+    },
+    {
+      "path": "config/scoring_rubric.yaml",
+      "sha256": "5de132d002e842a9dd220bc4303bde1cc1fd8f2b3d60e331150a28fa254551f2",
+      "bytes": 6006,
+      "modified_at": "2026-09-10T19:56:04.775550+00:00",
+      "row_count": null
+    },
+    {
+      "path": "data/processed/pass2/program_verification.csv",
+      "sha256": "d8b5263582025b7d8b97f4939cf40b25f2f5dde2761368f61cc06a4107b79485",
+      "bytes": 4052289,
+      "modified_at": "2026-09-10T19:28:15.223067+00:00",
+      "row_count": 1965
+    },
+    {
+      "path": "data/processed/pass2/program_sources.csv",
+      "sha256": "6256d6c0e2594e27b26751878960cbc36c1fd100e455cb7ae74f943135bf0bc9",
+      "bytes": 1361040,
+      "modified_at": "2026-09-10T19:28:15.435838+00:00",
+      "row_count": 2077
+    },
+    {
+      "path": "data/processed/pass2/professor_candidates_evaluated.csv",
+      "sha256": "a6ef079d541698c921dbd94ecf29accce578a288b349aaed3a610263ac756837",
+      "bytes": 457492,
+      "modified_at": "2026-09-10T19:51:06.219279+00:00",
+      "row_count": 225
+    },
+    {
+      "path": "data/processed/pass2/professor_matches_retained.csv",
+      "sha256": "a97f70b79b431dd68e029d23c635c27806e614769eb9822dbfab707fe81bbd9d",
+      "bytes": 41852,
+      "modified_at": "2026-09-10T19:51:06.228411+00:00",
+      "row_count": 25
+    },
+    {
+      "path": "data/processed/pass2/professor_sources.csv",
+      "sha256": "523fed787a26d6560ec4f73bc618bf1eeb5e7485bd9f5eeeb7dd471247232616",
+      "bytes": 106874,
+      "modified_at": "2026-09-10T19:51:06.241557+00:00",
+      "row_count": 170
+    },
+    {
+      "path": "src/graduate_audit/evidence_scoring.py",
+      "sha256": "4acbd21cf032780794f742b78912f56518ed2ee9ef5786b4c3036381eec4ac76",
+      "bytes": 23241,
+      "modified_at": "2026-09-10T20:05:58.429124+00:00",
+      "row_count": null
+    },
+    {
+      "path": "src/graduate_audit/schema.py",
+      "sha256": "834e7c90cfe896b206b11c6d74b6b30bcb78af0e605a028a679381b35a9b5b84",
+      "bytes": 14838,
+      "modified_at": "2026-09-10T19:56:15.643552+00:00",
+      "row_count": null
+    }
+  ],
+  "outputs": [
+    {
+      "path": "data/processed/pass2/program_scores.csv",
+      "sha256": "6307419d0d1b4ffc76c9a42559e1f84a04b191b933d720968728805dc833984f",
+      "bytes": 63304,
+      "modified_at": "2026-09-10T20:10:22.950844+00:00",
+      "row_count": 45
+    },
+    {
+      "path": "data/processed/pass2/score_evidence.csv",
+      "sha256": "c332f9afe463f9776c63f1cfd8ebe3b15c24f863fa608cd5933348baba7fafc9",
+      "bytes": 135957,
+      "modified_at": "2026-09-10T20:10:22.960316+00:00",
+      "row_count": 270
+    },
+    {
+      "path": "reports/pass2/05_scoring_and_calibration.md",
+      "sha256": "73bcf48dbc04294d20f886065b6332203c41468b2bfd765ed4b72e29a07994c2",
+      "bytes": 5447,
+      "modified_at": "2026-09-10T20:10:23.423084+00:00",
+      "row_count": null
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "config/scoring_rubric.yaml",
+      "sha256": "5de132d002e842a9dd220bc4303bde1cc1fd8f2b3d60e331150a28fa254551f2",
+      "bytes": 6006,
+      "modified_at": "2026-09-10T19:56:04.775550+00:00",
+      "row_count": null
+    },
+    {
+      "path": "src/graduate_audit/evidence_scoring.py",
+      "sha256": "4acbd21cf032780794f742b78912f56518ed2ee9ef5786b4c3036381eec4ac76",
+      "bytes": 23241,
+      "modified_at": "2026-09-10T20:05:58.429124+00:00",
+      "row_count": null
+    },
+    {
+      "path": "src/graduate_audit/hard_gates.py",
+      "sha256": "40800c50a8919da47e0ce8d058cf16eb620ccff535a6ee268ab910e5d1389ab2",
+      "bytes": 2707,
+      "modified_at": "2026-09-10T20:05:58.434548+00:00",
+      "row_count": null
+    },
+    {
+      "path": "src/graduate_audit/pipeline.py",
+      "sha256": "2d45a968932adf93b6da8b327f7edc704ddb88345493953e622b304b7253fc03",
+      "bytes": 30598,
+      "modified_at": "2026-09-10T20:05:58.488841+00:00",
+      "row_count": null
+    },
+    {
+      "path": "src/graduate_audit/portfolio.py",
+      "sha256": "ae4704ef6042794194c936a5ddc20a98b6aa1035533c4eff767dcae5ed70ce35",
+      "bytes": 5605,
+      "modified_at": "2026-09-10T20:06:34.695044+00:00",
+      "row_count": null
+    },
+    {
+      "path": "src/graduate_audit/finalize.py",
+      "sha256": "8c7676b19629d1fb5c11221e2a685b9bedd889e2714e4bf815c9ec6a27e00134",
+      "bytes": 7610,
+      "modified_at": "2026-09-10T20:06:34.697564+00:00",
+      "row_count": null
+    },
+    {
+      "path": "src/graduate_audit/schema.py",
+      "sha256": "834e7c90cfe896b206b11c6d74b6b30bcb78af0e605a028a679381b35a9b5b84",
+      "bytes": 14838,
+      "modified_at": "2026-09-10T19:56:15.643552+00:00",
+      "row_count": null
+    },
+    {
+      "path": "src/graduate_audit/verify/apply_corrections.py",
+      "sha256": "98751e3394a325d6b02c064c56eac38653f74d1ab73443ae7769fec3e9fddd1e",
+      "bytes": 26146,
+      "modified_at": "2026-09-10T19:59:10.236433+00:00",
+      "row_count": null
+    },
+    {
+      "path": "evidence/deep_review/us/build_deep_review.py",
+      "sha256": "89bd8762e3e20c4b74ed025a772011a2683a97f619462236aa0a2b5e67a012fc",
+      "bytes": 131754,
+      "modified_at": "2026-09-10T19:59:39.879074+00:00",
+      "row_count": null
+    },
+    {
+      "path": "scripts/build_stage_05.py",
+      "sha256": "5841491d29f4f3337d75490013c51d45e6af536fe607c5a07f74f0ca3b4eda8f",
+      "bytes": 22976,
+      "modified_at": "2026-09-10T20:09:42.434843+00:00",
+      "row_count": null
+    },
+    {
+      "path": "tests/test_evidence_scoring.py",
+      "sha256": "f1ebfc6ca95a0944570ca0b40b260a4fd3cf0cf43a737f64464199ad5c1946cd",
+      "bytes": 5839,
+      "modified_at": "2026-09-10T20:09:50.765530+00:00",
+      "row_count": null
+    },
+    {
+      "path": "tests/test_hard_gates.py",
+      "sha256": "0469f323d40b1c538813e87e58dd8c0c0244ded84b78d667e86db1bcbd7ebcf8",
+      "bytes": 2826,
+      "modified_at": "2026-09-10T20:06:18.229148+00:00",
+      "row_count": null
+    },
+    {
+      "path": "state/progress.json",
+      "sha256": "ee76049d61f03f77b31b346a3388e40388bd589636294ad41dcbf243a982ee38",
+      "bytes": 2167,
+      "modified_at": "2026-09-10T20:10:23.426819+00:00",
+      "row_count": null
+    },
+    {
+      "path": "data/processed/pass2/program_scores.csv",
+      "sha256": "6307419d0d1b4ffc76c9a42559e1f84a04b191b933d720968728805dc833984f",
+      "bytes": 63304,
+      "modified_at": "2026-09-10T20:10:22.950844+00:00",
+      "row_count": 45
+    },
+    {
+      "path": "data/processed/pass2/score_evidence.csv",
+      "sha256": "c332f9afe463f9776c63f1cfd8ebe3b15c24f863fa608cd5933348baba7fafc9",
+      "bytes": 135957,
+      "modified_at": "2026-09-10T20:10:22.960316+00:00",
+      "row_count": 270
+    },
+    {
+      "path": "reports/pass2/05_scoring_and_calibration.md",
+      "sha256": "73bcf48dbc04294d20f886065b6332203c41468b2bfd765ed4b72e29a07994c2",
+      "bytes": 5447,
+      "modified_at": "2026-09-10T20:10:23.423084+00:00",
+      "row_count": null
+    }
+  ],
+  "validation": {
+    "status": "PASS",
+    "assertions": {
+      "entire_serious_program_pool_recalculated": true,
+      "exactly_six_components_per_program": true,
+      "program_rows_reference_exact_component_evidence": true,
+      "component_evidence_has_required_audit_metadata": true,
+      "component_scores_use_rubric_anchors": true,
+      "rubric_avoids_unexplained_one_point_bands": true,
+      "overall_scores_are_component_sums": true,
+      "positive_components_have_resolving_evidence": true,
+      "funding_gate_is_recomputed_from_direct_sources": true,
+      "funding_gate_ignores_labels_recommendations_and_scores": true,
+      "one_professor_depth_cap_enforced": true,
+      "duplicate_professors_do_not_inflate_depth": true,
+      "missing_or_unverifiable_evidence_reduces_confidence": true,
+      "minimum_gpa_alone_never_creates_plausible": true,
+      "no_admission_percentages_emitted": true,
+      "coursework_only_without_exceptional_funding_fails": true,
+      "only_hard_gate_survivors_receive_ranks": true,
+      "tied_totals_share_dense_rank": true,
+      "required_output_schemas_exact": true,
+      "no_institution_specific_score_constants": true
+    },
+    "generating_process": "graduate_audit.evidence_scoring:v1",
+    "institution_specific_score_constant_hits": []
+  },
+  "counts": {
+    "serious_programs_scored": 45,
+    "score_evidence_rows": 270,
+    "hard_gate_survivors": 7,
+    "funding_gate_pass": 7,
+    "professor_gate_pass": 25,
+    "eligibility_gate_pass": 43,
+    "zero_depth_programs": 20,
+    "single_professor_dependencies": 25,
+    "insufficient_admission_evidence": 43,
+    "eligibility_concerns": 2,
+    "institution_score_constant_hits": 0
+  },
+  "failures": [],
+  "blockers": [],
+  "unresolved_coverage": [
+    "38 programs lack direct verified funding evidence strong enough for the hard gate.",
+    "20 programs lack a fully verified strong professor match.",
+    "20 programs have zero verified faculty depth and 25 are single-professor dependencies.",
+    "43 programs lack official cohort/selectivity evidence for strategic admission calibration.",
+    "Offer-specific net cost and coverage details remain incomplete where recorded in score evidence."
+  ]
+}

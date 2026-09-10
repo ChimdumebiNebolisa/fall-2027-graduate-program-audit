@@ -1,43 +1,127 @@
-weights:
-  professor_alignment: 30
-  department_program_depth: 15
-  funding_net_viability: 25
-  eligibility_credential_plausibility: 15
-  degree_admissions_alignment: 10
-  application_economics: 5
-hard_gates:
-  - recognized_active_institution
-  - relevant_research_program
-  - international_student_eligible
-  - bachelor_entry_or_research_masters_route
-  - verified_professor_match
-  - credible_funding_or_full_scholarship
-  - compatible_degree_structure
-recommendations:
-  strong_apply:
-    minimum_score: 85
-    requires_verified_funding: true
-    material_blockers_allowed: 0
-  likely_apply:
-    minimum_score: 75
-    requires_credible_funding: true
-    material_blockers_allowed: 0
-  deprioritize:
-    minimum_score: 65
-portfolio:
-  core_target_min: 18
-  core_target_max: 20
-  reserve_target_min: 6
-  reserve_target_max: 10
-  maximum_reach_assessments_in_core: 5
-  normally_one_program_per_university: true
-  never_pad_to_quota: true
-outreach_weights:
-  information_value: 25
-  research_match: 20
-  admission_supervisor_impact: 15
-  funding_supervisor_impact: 15
-  resolvable_uncertainty: 10
-  contact_appropriateness: 10
-  timing: 5
+schema_version: "2.0"
+framework:
+  total_points: 100
+  generating_process: graduate_audit.evidence_scoring:v1
+  precision_rule: Scores use only the listed anchors. Tied totals share a dense rank; no tie is broken by prestige or an unexplained point.
 
+components:
+  professor_alignment:
+    weight: 30
+    evidence_required: Verified current appointment, exact-program supervision authority, strong specific overlap, and at least one recent work URL and year.
+    anchors:
+      - key: three_or_more_verified_strong
+        score: 30
+        criterion: At least three distinct verified strong matches.
+      - key: two_verified_strong
+        score: 25
+        criterion: Exactly two distinct verified strong matches.
+      - key: one_verified_strong
+        score: 20
+        criterion: Exactly one distinct verified strong match.
+      - key: no_verified_strong
+        score: 0
+        criterion: No candidate clears every professor-evidence gate.
+
+  department_program_depth:
+    weight: 15
+    evidence_required: Distinct verified strong professors, deduplicated by professor_id at university level.
+    anchors:
+      - key: three_or_more_distinct
+        score: 15
+        criterion: Three or more distinct verified strong matches.
+      - key: two_distinct
+        score: 10
+        criterion: Exactly two distinct verified strong matches.
+      - key: one_distinct
+        score: 5
+        criterion: Exactly one distinct verified strong match; single-professor dependency is true.
+      - key: none
+        score: 0
+        criterion: No distinct verified strong match.
+
+  funding_net_viability:
+    weight: 25
+    evidence_required: Current verified official funding sources tied to the exact program; a recommendation, retained label, or prior funding score is never evidence.
+    anchors:
+      - key: verified_comprehensive_support
+        score: 25
+        criterion: Direct funding hard gate passes and tuition, living support, duration, and material net-cost coverage are sufficiently documented.
+      - key: verified_support_with_cost_gaps
+        score: 20
+        criterion: Direct funding hard gate passes, but fees, health, summer, duration, or net amount retains a material gap.
+      - key: documented_but_not_gate_credible
+        score: 10
+        criterion: Official funding evidence exists, but support is selected, typical, conditional without a program-wide commitment, or otherwise insufficient for the hard gate.
+      - key: no_verified_material_support
+        score: 0
+        criterion: No verified official material funding evidence is available.
+
+  eligibility_credential_alignment:
+    weight: 15
+    evidence_required: Official entry requirements plus the verified applicant record; published minimums remain separate from strategic plausibility.
+    anchors:
+      - key: verified_alignment
+        score: 15
+        criterion: Formal eligibility is verified and no material credential-equivalency question is recorded.
+      - key: verified_with_material_question
+        score: 10
+        criterion: The route appears formally available, but GPA interpretation, credential equivalency, prerequisites, or direct-entry treatment needs confirmation.
+      - key: resolvable_eligibility_question
+        score: 5
+        criterion: A material formal-eligibility question remains unresolved.
+      - key: ineligible_or_unverified
+        score: 0
+        criterion: The applicant is ineligible or no official eligibility evidence supports a positive score.
+
+  degree_admissions_alignment:
+    weight: 10
+    evidence_required: Verified research degree structure, bachelor-entry or research-master's route, and documented admissions model.
+    anchors:
+      - key: verified_compatible_route
+        score: 10
+        criterion: Exact research route and degree structure are compatible with the applicant's current degree.
+      - key: compatible_but_supervisor_or_entry_question
+        score: 5
+        criterion: The research structure is compatible, but direct entry or supervisor-gated admission remains material.
+      - key: incompatible_or_coursework_only
+        score: 0
+        criterion: Structure is incompatible, unverified, or coursework-only without an exceptional verified full scholarship and research route.
+
+  application_economics:
+    weight: 5
+    evidence_required: Official application fee and waiver evidence for the applicable applicant/cycle.
+    anchors:
+      - key: no_fee_or_verified_waiver
+        score: 5
+        criterion: No application fee or a clearly applicable waiver is verified.
+      - key: moderate_fee_or_possible_waiver
+        score: 3
+        criterion: Fee is at most 100 in the stated currency or a plausible but non-guaranteed waiver path exists.
+      - key: high_or_unverified_cost
+        score: 0
+        criterion: Fee exceeds 100, a broad waiver is unavailable, or the applicable fee is unverified.
+
+hard_gates:
+  funding:
+    rule: At least one exact-program funding source must be official, verified, explicitly funding-related, and support a credible program-wide package or full scholarship.
+    forbidden_inputs:
+      - screening_decision
+      - recommendation
+      - overall_score
+      - funding_score
+  professor:
+    rule: At least one distinct Stage 4 retained match must have verified supervision authority and recent-work evidence.
+  coursework_only:
+    rule: A coursework-only or professional program cannot pass unless an exceptional verified full scholarship and a substantial research route are both documented.
+
+admission_calibration:
+  allowed_categories:
+    - Clearly ineligible
+    - Eligibility concern
+    - Plausible
+    - Plausible to reach
+    - Reach
+    - Insufficient evidence
+  probability_output: forbidden
+  minimum_gpa_rule: Matching a published minimum cannot by itself produce Plausible, Plausible to reach, or Reach.
+  insufficient_evidence_rule: Use Insufficient evidence when official cohort/selectivity evidence or equivalent strategic calibration evidence is absent.

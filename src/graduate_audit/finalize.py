@@ -22,6 +22,7 @@ def finalize(repo_root: Path, output_root: Path, report_root: Path) -> dict[str,
         output_root / "program_screening.csv",
         output_root / "institution_universe.csv",
         output_root / "professor_evidence.csv",
+        output_root / "source_ledger.csv",
     )
     portfolio = select_portfolio(programs)
     portfolio_decisions = {

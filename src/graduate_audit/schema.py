@@ -261,6 +261,33 @@ PROFESSOR_SOURCE_COLUMNS_V2 = (
     "confidence", "verification_status", "source_record_path", "access_note",
 )
 
+PROGRAM_SCORE_COLUMNS_V2 = (
+    "schema_version", "evidence_rank", "score_band", "program_id",
+    "institution_id", "institution_name", "country", "region", "program_name",
+    "degree_type", "official_program_url", "stage3_verification_status",
+    "professor_alignment_score", "department_program_depth_score",
+    "funding_net_viability_score", "eligibility_credential_alignment_score",
+    "degree_admissions_alignment_score", "application_economics_score",
+    "overall_score", "component_score_pattern", "funding_hard_gate",
+    "professor_hard_gate", "eligibility_hard_gate", "degree_structure_hard_gate",
+    "coursework_exception_gate", "all_hard_gates_pass", "hard_gate_failures",
+    "distinct_verified_strong_matches", "faculty_depth_points",
+    "single_professor_dependency", "funding_status", "application_fee",
+    "fee_currency", "admission_plausibility", "admission_plausibility_rationale",
+    "published_minimum_gpa", "applicant_cumulative_gpa",
+    "applicant_recent_two_year_gpa", "admission_probability",
+    "evidence_completeness", "score_confidence", "unresolved_conflicts",
+    "ranking_status", "score_evidence_ids", "generated_by", "scored_at",
+)
+
+SCORE_EVIDENCE_COLUMNS_V2 = (
+    "schema_version", "score_evidence_id", "program_id", "institution_id",
+    "institution_name", "component", "component_score", "max_score",
+    "rubric_anchor", "rubric_anchor_description", "supporting_evidence_ids",
+    "evidence_completeness", "score_confidence", "uncertainty_or_conflict",
+    "reviewer_or_generating_process", "verification_status", "calculated_at",
+)
+
 
 def slugify(value: str) -> str:
     value = value.strip().lower()

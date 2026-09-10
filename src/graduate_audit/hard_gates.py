@@ -3,13 +3,10 @@ from __future__ import annotations
 from dataclasses import dataclass
 from typing import Iterable, Mapping
 
+from graduate_audit.evidence_scoring import funding_hard_gate_from_evidence
+
 TRUE_VALUES = {True, 1, "1", "true", "yes", "verified", "eligible"}
 VERIFIED_SUPERVISION_VALUES = {"true", "yes", "verified"}
-VERIFIED_FUNDING_VALUES = {
-    "verified",
-    "verified_full_scholarship",
-    "guaranteed_full_funding",
-}
 
 
 def _truthy(value: object) -> bool:
@@ -43,6 +40,7 @@ class HardGateResult:
 def evaluate_hard_gates(
     program: Mapping[str, object],
     professors: Iterable[Mapping[str, object]],
+    sources: Iterable[Mapping[str, object]] = (),
 ) -> HardGateResult:
     program_id = str(program.get("program_id", ""))
     professor_keys = {
@@ -51,8 +49,11 @@ def evaluate_hard_gates(
         if str(row.get("program_id", "")) == program_id
         if (key := _verified_professor_key(row)) is not None
     }
-    funding_status = str(program.get("funding_gate_status", "")).strip().lower()
-    funding_evidence = str(program.get("funding_gate_evidence", "")).strip()
+    source_by_id = {
+        str(row.get("stage3_source_id") or row.get("source_id") or ""): row
+        for row in sources
+        if str(row.get("stage3_source_id") or row.get("source_id") or "")
+    }
     gates = {
         "recognized_active_institution": _truthy(program.get("recognized_active_institution")),
         "relevant_research_program": _truthy(program.get("relevant_research_program")),
@@ -61,9 +62,7 @@ def evaluate_hard_gates(
             program.get("bachelor_entry_or_research_masters_route")
         ),
         "verified_professor_match": bool(professor_keys),
-        "credible_funding_or_full_scholarship": (
-            funding_status in VERIFIED_FUNDING_VALUES and bool(funding_evidence)
-        ),
+        "credible_funding_or_full_scholarship": funding_hard_gate_from_evidence(program, source_by_id),
         "compatible_degree_structure": _truthy(program.get("compatible_degree_structure")),
     }
     failures = tuple(name for name, passed in gates.items() if not passed)

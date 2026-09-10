@@ -30,6 +30,19 @@ def verified_professor(**overrides):
     return row
 
 
+def verified_funding_source(**overrides):
+    row = {
+        "source_id": "src:funding",
+        "program_id": "program:alpha",
+        "claim_type": "funding",
+        "exact_claim_supported": "Guaranteed full tuition and stipend for admitted students",
+        "official_or_secondary": "official",
+        "verification_status": "verified",
+    }
+    row.update(overrides)
+    return row
+
+
 def test_funding_gate_requires_explicit_verified_evidence():
     result = evaluate_hard_gates(
         viable_program(
@@ -40,6 +53,7 @@ def test_funding_gate_requires_explicit_verified_evidence():
             verification_status="verified",
         ),
         [verified_professor()],
+        [verified_funding_source()],
     )
 
     assert result.gates["credible_funding_or_full_scholarship"] is False
@@ -50,6 +64,7 @@ def test_potential_supervisor_does_not_satisfy_verified_gate():
     result = evaluate_hard_gates(
         viable_program(),
         [verified_professor(can_supervise_program="potentially", verification_status="incomplete")],
+        [verified_funding_source()],
     )
 
     assert result.distinct_verified_professor_count == 0
@@ -65,7 +80,11 @@ def test_verified_professor_count_is_distinct():
         evidence_ids="src:professor-two",
     )
 
-    result = evaluate_hard_gates(viable_program(), [duplicate, dict(duplicate), second])
+    result = evaluate_hard_gates(
+        viable_program(),
+        [duplicate, dict(duplicate), second],
+        [verified_funding_source()],
+    )
 
     assert result.distinct_verified_professor_count == 2
     assert not result.failures

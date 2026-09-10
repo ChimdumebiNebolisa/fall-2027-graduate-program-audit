@@ -38,8 +38,6 @@ PROGRAM_CORRECTIONS: dict[str, dict[str, str]] = {
         "fall_2027_deadline": "January 15 early / March 1 final (recurring annual rule)",
         "deadline_cycle_status": "Official pages state recurring Fall deadlines but do not label calendar year 2027.",
         "screening_decision": "downgraded",
-        "recommendation": "Outreach Before Decision",
-        "eligibility_score": "5",
         "biggest_risk": "Direct entry from an external bachelor's is not explicitly confirmed; four-year funding is also shorter than the stated five-year path.",
         "unresolved_question": "Will Calgary admit an external bachelor's holder directly, cover year five, and state the net amount after tuition and fees?",
     },
@@ -50,8 +48,6 @@ PROGRAM_CORRECTIONS: dict[str, dict[str, str]] = {
     "us:ipeds:163286:program:phd:computer-science-phd": {
         "screening_decision": "downgrade",
         "funding_status": "All PhD students are funded through TA/RA subject to progress, but the official FAQ explicitly says no funding guarantee is provided in the admission offer.",
-        "funding_score": "10",
-        "recommendation": "Outreach Before Decision",
         "biggest_risk": "The admission offer does not guarantee funding even though current PhD students are generally funded.",
         "unresolved_question": "Would a Fall 2027 offer include a written multi-year tuition, stipend, health, fee, and summer commitment?",
     },
@@ -83,9 +79,6 @@ PROGRAM_CORRECTIONS: dict[str, dict[str, str]] = {
         "minimum_gpa_policy": "The Graduate College minimum is 3.0 over the last two undergraduate years; 3.40 is a program recommendation, not a hard minimum.",
         "screening_decision": "retained",
         "exclusion_reason": "",
-        "eligibility_score": "11",
-        "admission_plausibility": "Reach",
-        "recommendation": "Likely Apply",
         "biggest_risk": "The program recommends a 3.40 cumulative GPA; the applicant's recent-two-year performance clears the formal 3.0 minimum, but the cumulative GPA is below that recommendation.",
         "unresolved_question": "How will the committee weigh the stronger recent-two-year record against the 3.35 cumulative GPA and 3.40 recommendation?",
         "notes": "Independent exclusion sampling corrected the earlier false hard-GPA exclusion; faculty fit and funding remain strong, with offer-specific terms to confirm.",
@@ -94,19 +87,15 @@ PROGRAM_CORRECTIONS: dict[str, dict[str, str]] = {
         "funding_model": "Four-year comprehensive package for each fall PhD admit who requests aid; later support transitions toward adviser-funded RA work.",
         "funding_status": "Current official policy promises tuition, individual health insurance, and stipend for four years to every fall PhD admit requesting aid; fees, summers, year five, and adviser transition remain unresolved.",
         "phd_funding": "Four-year tuition, individual health insurance, and stipend package for fall PhD admits requesting aid; conditions and later adviser funding apply.",
-        "funding_score": "21",
         "screening_decision": "retained",
         "exclusion_reason": "",
-        "recommendation": "Likely Apply",
         "biggest_risk": "The package excludes student fees and does not settle summer funding, year five, or the transition to adviser-funded RA support.",
         "unresolved_question": "What are the summer, student-fee, year-five, and adviser-transition terms in a Fall 2027 offer?",
-        "notes": "Independent exclusion sampling found a newer department-wide four-year package; the program was rescored and restored to the application portfolio.",
+        "notes": "Independent exclusion sampling found a newer department-wide four-year package; scoring is delegated to the evidence-derived Stage 5 process.",
     },
     "ror:041kmwe10:program:phd:phd-in-computing": {
         "direct_from_bachelors_eligible": "No — applicants with only a bachelor's are not normally considered; the department expects a distinction-level master's.",
         "screening_decision": "excluded",
-        "eligibility_score": "0",
-        "recommendation": "Do Not Apply",
         "exclusion_reason": "Bachelor-only applicants are not normally considered; a master's is expected for the immediate route.",
         "biggest_risk": "Imperial says bachelor-only applicants are not normally considered for this route.",
         "unresolved_question": "Would Imperial confirm an exceptional bachelor-only route in writing, or should an MSc come first?",
@@ -128,16 +117,6 @@ PROGRAM_CORRECTIONS: dict[str, dict[str, str]] = {
 }
 
 
-def _recalculate(row: dict[str, str]) -> None:
-    fields = (
-        "professor_fit_score", "faculty_depth_score", "funding_score",
-        "eligibility_score", "degree_admissions_score", "application_economics_score",
-    )
-    if all(str(row.get(field, "")).strip() for field in fields):
-        row["research_fit_score"] = str(int(row["professor_fit_score"]) + int(row["faculty_depth_score"]))
-        row["overall_score"] = str(sum(int(row[field]) for field in fields))
-
-
 def apply_program_corrections(repo_root: Path) -> int:
     changed = 0
     for region in ("canada", "us", "europe"):
@@ -147,7 +126,6 @@ def apply_program_corrections(repo_root: Path) -> int:
             correction = PROGRAM_CORRECTIONS.get(row.get("program_id", ""))
             if correction:
                 row.update(correction)
-                _recalculate(row)
                 changed += 1
         write_csv(path, rows, PROGRAM_COLUMNS)
     return changed

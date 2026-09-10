@@ -704,47 +704,15 @@ PROGRAMS = [
 ]
 
 
-# professor alignment / department depth / funding / eligibility / degree model /
-# application economics.  The maxima are the committed 30/15/25/15/10/5 rubric.
-# These scores are evidence summaries, not admission-probability estimates.
-SCORES = {
-    "Carnegie Mellon University": (30, 13, 25, 14, 10, 5),
-    "University of Illinois Urbana-Champaign": (29, 13, 24, 5, 10, 2),
-    "Georgia Institute of Technology-Main Campus": (28, 12, 12, 14, 10, 1),
-    "The University of Texas at Austin": (30, 13, 21, 14, 10, 1),
-    "University of California-Irvine": (29, 12, 19, 14, 10, 0),
-    "Virginia Polytechnic Institute and State University": (29, 12, 23, 14, 10, 3),
-    "George Mason University": (26, 9, 8, 14, 10, 2),
-    "North Carolina State University at Raleigh": (28, 11, 10, 14, 10, 1),
-    "Pennsylvania State University-Main Campus": (27, 10, 11, 14, 10, 2),
-    "Oregon State University": (29, 10, 9, 14, 10, 1),
-    "University of Massachusetts-Amherst": (30, 12, 23, 14, 10, 2),
-    "University of Maryland-College Park": (29, 12, 22, 14, 10, 2),
-    "University of Michigan-Ann Arbor": (30, 13, 25, 12, 10, 1),
-    "William & Mary": (30, 11, 22, 14, 10, 3),
-    "University of California-Davis": (29, 11, 9, 14, 10, 0),
-    "Purdue University-Main Campus": (27, 12, 8, 14, 10, 2),
-    "Northeastern University": (28, 12, 24, 14, 10, 3),
-    "Iowa State University": (30, 11, 20, 14, 10, 5),
-    "University of Nebraska-Lincoln": (29, 9, 8, 10, 10, 2),
-    "The University of Texas at Dallas": (27, 10, 8, 9, 10, 2),
-    "Vanderbilt University": (29, 12, 24, 14, 10, 5),
-    "University of Notre Dame": (30, 11, 22, 14, 10, 3),
-    "Washington University in St Louis": (30, 12, 24, 14, 10, 5),
-    "Case Western Reserve University": (29, 11, 8, 14, 10, 3),
-    "Rochester Institute of Technology": (30, 13, 18, 14, 10, 2),
-}
-
+# This legacy evidence builder deliberately emits no scores. Pass 2 Stage 5
+# calculates every component from the committed evidence ledgers and rubric.
 for _program in PROGRAMS:
-    _professor, _depth, _funding, _eligibility, _degree, _economics = SCORES[_program["institution_name"]]
-    _program["professor_fit_score"] = str(_professor)
-    _program["faculty_depth_score"] = str(_depth)
-    _program["research_fit_score"] = str(_professor + _depth)
-    _program["funding_score"] = str(_funding)
-    _program["eligibility_score"] = str(_eligibility)
-    _program["degree_admissions_score"] = str(_degree)
-    _program["application_economics_score"] = str(_economics)
-    _program["overall_score"] = str(_professor + _depth + _funding + _eligibility + _degree + _economics)
+    for _field in (
+        "professor_fit_score", "faculty_depth_score", "research_fit_score",
+        "funding_score", "eligibility_score", "degree_admissions_score",
+        "application_economics_score", "overall_score",
+    ):
+        _program[_field] = ""
 
 # UIUC's official catalog says exceptions to 3.40 are rare, not impossible.
 next(row for row in PROGRAMS if row["institution_name"] == "University of Illinois Urbana-Champaign")["admission_plausibility"] = "Eligibility concern"
@@ -1131,14 +1099,6 @@ def validate(sources: list[dict[str, str]], contacts: list[dict[str, str]], excl
     professors_by_program = Counter(r["program_id"] for r in PROFESSORS)
     sources_by_program = Counter(r["program_id"] for r in sources)
     exclusions_by_program = Counter(r["program_id"] for r in exclusions)
-    score_maxima = {
-        "professor_fit_score": 30,
-        "faculty_depth_score": 15,
-        "funding_score": 25,
-        "eligibility_score": 15,
-        "degree_admissions_score": 10,
-        "application_economics_score": 5,
-    }
     for row in PROGRAMS:
         missing = [c for c in ("official_program_url", "direct_from_bachelors_eligible", "international_student_eligible", "funding_status", "application_fee", "deadline_cycle_status", "admission_plausibility", "recommendation", "verification_status") if not row[c]]
         if missing:
@@ -1160,23 +1120,6 @@ def validate(sources: list[dict[str, str]], contacts: list[dict[str, str]], excl
             errors.append(f"{row['institution_name']}: no professor evidence")
         if sources_by_program[row["program_id"]] < 3:
             errors.append(f"{row['institution_name']}: fewer than three source records")
-        components: dict[str, int] = {}
-        for field, maximum in score_maxima.items():
-            try:
-                value = int(row[field])
-            except (TypeError, ValueError):
-                errors.append(f"{row['institution_name']}: {field} is not an integer")
-                continue
-            if not 0 <= value <= maximum:
-                errors.append(f"{row['institution_name']}: {field}={value} outside 0..{maximum}")
-            components[field] = value
-        if len(components) == len(score_maxima):
-            expected_research = components["professor_fit_score"] + components["faculty_depth_score"]
-            expected_overall = sum(components.values())
-            if int(row["research_fit_score"]) != expected_research:
-                errors.append(f"{row['institution_name']}: research_fit_score arithmetic mismatch")
-            if int(row["overall_score"]) != expected_overall:
-                errors.append(f"{row['institution_name']}: overall_score arithmetic mismatch")
     for row in PROFESSORS:
         if row["recruiting_status"] not in RECRUITING_STATUSES:
             errors.append(f"{row['full_name']}: invalid recruiting status")
