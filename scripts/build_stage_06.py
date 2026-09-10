@@ -27,6 +27,7 @@ OUTPUT_DIR = REPO_ROOT / "data/processed/pass2"
 PORTFOLIO_PATH = OUTPUT_DIR / "portfolio.json"
 REPORT_PATH = REPO_ROOT / "reports/pass2/06_portfolio_pressure_test.md"
 MANIFEST_PATH = REPO_ROOT / "data/manifests/pass2/stage_06.json"
+LATEST_REENTRY_PATH = OUTPUT_DIR / "stage_03_reentry_02_verification.csv"
 
 
 def now() -> str:
@@ -81,6 +82,12 @@ def validate(
     core = portfolio["core"]
     institution_ids = {row["institution_id"] for row in scores}
     score_by_program = {row["program_id"]: row for row in scores}
+    latest_reentry_ids = {
+        row["candidate_program_id"]
+        for row in read_csv(LATEST_REENTRY_PATH)
+        if row["faculty_review_ready"] == "yes"
+    }
+    latest_entries = [row for row in entries if row["program_id"] in latest_reentry_ids]
     known_evidence_ids = {row["score_evidence_id"] for row in evidence}
     entries_by_institution: dict[str, list[dict[str, object]]] = defaultdict(list)
     for row in entries:
@@ -118,6 +125,11 @@ def validate(
 
     assertions = {
         "all_scored_programs_receive_one_disposition": bool(scores) and len(entries) == len(scores) and {row["program_id"] for row in entries} == set(score_by_program),
+        "latest_reentry_02_receives_dispositions_and_pressure_tests": (
+            len(latest_reentry_ids) == len(latest_entries) == 8
+            and {row["program_id"] for row in latest_entries} == latest_reentry_ids
+            and all(len(row["pressure_test_answers"]) == len(PRESSURE_QUESTIONS) for row in latest_entries)
+        ),
         "every_university_has_exactly_one_primary_program": set(entries_by_institution) == institution_ids and len(primaries) == len(institution_ids) and all(sum(bool(row["is_primary_program"]) for row in rows) == 1 for rows in entries_by_institution.values()),
         "primary_program_selection_uses_evidence_not_prestige": primary_is_best_evidence_row,
         "every_program_answers_all_ten_pressure_questions": all(
@@ -187,6 +199,19 @@ def validate(
         "pressure_test_answers": sum(len(row["pressure_test_answers"]) for row in entries),
         "lottery_in_core": len(lottery_core),
         "stretch_in_core": len(stretch_core),
+        "latest_reentry_programs": len(latest_reentry_ids),
+        "latest_reentry_monitor": sum(
+            row["program_id"] in latest_reentry_ids and row["portfolio_status"] == "monitor"
+            for row in entries
+        ),
+        "latest_reentry_do_not_apply": sum(
+            row["program_id"] in latest_reentry_ids and row["portfolio_status"] == "do_not_apply"
+            for row in entries
+        ),
+        "latest_reentry_pressure_test_answers": sum(
+            len(row["pressure_test_answers"])
+            for row in latest_entries
+        ),
     }
     return assertions, counts
 
@@ -279,6 +304,11 @@ def write_report(portfolio: dict[str, object], assertions: dict[str, bool], coun
         "",
         "## Unresolved coverage",
         "",
+        (
+            f"- Stage 6 re-entry 02 pressure-tested all {counts['latest_reentry_programs']} newly scored routes: "
+            f"{counts['latest_reentry_monitor']} remains monitor-only and {counts['latest_reentry_do_not_apply']} "
+            "remain do-not-apply because at least one hard gate fails."
+        ),
         f"- All {counts['monitor']} monitor programs have only one verified strong professor and need either a verified second match or persuasive availability confirmation.",
         f"- All {counts['monitor']} monitor programs lack evidence adequate for a strategic Competitive/Plausible/Reach calibration.",
         f"- {counts['do_not_apply']} programs fail at least one hard gate and remain do-not-apply until direct official evidence resolves every failure.",
@@ -297,6 +327,7 @@ def input_paths() -> list[Path]:
         OUTPUT_DIR / "program_scores.csv",
         OUTPUT_DIR / "score_evidence.csv",
         OUTPUT_DIR / "program_verification.csv",
+        LATEST_REENTRY_PATH,
     ]
 
 
@@ -318,6 +349,7 @@ def main() -> int:
     stage_status = dict(pass2.get("stage_status", {}))
     stage_status["6"] = "complete" if status == "PASS" else "failed"
     stage_status["6_reentry_01"] = "complete" if status == "PASS" else "failed"
+    stage_status["6_reentry_02"] = "complete" if status == "PASS" else "failed"
     pass2.update({
         "current_stage": 6,
         "last_completed_stage": 6 if status == "PASS" else 5,
@@ -333,8 +365,10 @@ def main() -> int:
         "stage_06_portfolio_decision": portfolio["decision"],
         "stage_06_core_count": counts["core"],
         "stage_06_monitor_count": counts["monitor"],
-        "stage_06_reentry_completed": 1 if status == "PASS" else 0,
+        "stage_06_reentry_completed": 2 if status == "PASS" else 1,
         "stage_06_reentry_scored_programs": counts["scored_programs"],
+        "stage_06_reentry_latest_programs": counts["latest_reentry_programs"],
+        "stage_06_reentry_required": False,
     })
     update_progress(
         progress_path,
@@ -354,6 +388,7 @@ def main() -> int:
     ]
     unresolved = [
         "No program has evidence adequate for a strategic Competitive, Plausible, Reach, or Lottery calibration; the core remains empty and candidate discovery must resume.",
+        f"Stage 6 re-entry 02 leaves {counts['latest_reentry_monitor']} of {counts['latest_reentry_programs']} newly scored routes on monitor and {counts['latest_reentry_do_not_apply']} as do-not-apply.",
         f"All {counts['monitor']} monitor programs are single-professor dependencies.",
         f"{counts['do_not_apply']} programs fail one or more hard gates.",
         f"Applicant preference among the {counts['monitor']} monitor opportunities is not directly verified.",
@@ -363,7 +398,7 @@ def main() -> int:
         "manifest_version": "1.0",
         "schema_version": "2.0",
         "stage": 6,
-        "run_type": "portfolio_reentry_01",
+        "run_type": "portfolio_reentry_02",
         "name": "Construct and pressure-test the application portfolio",
         "status": "complete" if status == "PASS" else "failed",
         "decision": status,
