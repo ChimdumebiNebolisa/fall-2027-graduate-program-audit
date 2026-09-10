@@ -1,0 +1,9 @@
+{
+  "dataset": "IRCC Designated Learning Institutions list",
+  "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/study-permit/prepare/designated-learning-institutions-list.html",
+  "page_modified": "2026-09-01",
+  "access_date": "2026-09-09",
+  "http_status": 200,
+  "sha256": "1fbc9150e8ac1aed47a673aca16af5e4a0163d0c59e940679db144fa38e4dfa1",
+  "campus_row_count": 1441
+}

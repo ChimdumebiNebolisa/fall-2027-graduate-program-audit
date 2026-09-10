@@ -1,0 +1,68 @@
+{
+  "access_date": "2026-09-09",
+  "sources": [
+    {
+      "institution": "University of Alberta",
+      "program": "MSc in Computing Science (thesis)",
+      "url": "https://www.ualberta.ca/en/computing-science/graduate-studies/programs-and-admissions/index.html",
+      "status": "blocked",
+      "error": "request failed: https://www.ualberta.ca/en/computing-science/graduate-studies/programs-and-admissions/index.html: 403 Client Error: Forbidden for url: https://www.ualberta.ca/en/computing-science/graduate-studies/programs-and-admissions/index.html"
+    },
+    {
+      "institution": "Simon Fraser University",
+      "program": "MSc in Computing Science",
+      "url": "https://www.sfu.ca/fas/computing/future-students/graduate-students/programs/msc.html",
+      "status": "blocked",
+      "error": "request failed: https://www.sfu.ca/fas/computing/future-students/graduate-students/programs/msc.html: 404 Client Error: Not Found for url: https://www.sfu.ca/fas/computing/future-students/graduate-students/programs/msc.html"
+    },
+    {
+      "institution": "University of Northern British Columbia",
+      "program": "MSc in Computer Science",
+      "url": "https://www.unbc.ca/calendar/graduate/computer-science",
+      "status": "blocked",
+      "error": "request failed: https://www.unbc.ca/calendar/graduate/computer-science: 404 Client Error: Not Found for url: https://www.unbc.ca/calendar/graduate/computer-science"
+    },
+    {
+      "institution": "University of Winnipeg",
+      "program": "MSc in Applied Computer Science and Society",
+      "url": "https://www.uwinnipeg.ca/graduate-studies/graduate-programs/applied-computer-science.html",
+      "status": "blocked",
+      "error": "request failed: https://www.uwinnipeg.ca/graduate-studies/graduate-programs/applied-computer-science.html: 403 Client Error: Forbidden for url: https://www.uwinnipeg.ca/graduate-studies/graduate-programs/applied-computer-science.html"
+    },
+    {
+      "institution": "University of Prince Edward Island",
+      "program": "MSc in Mathematical and Computational Sciences",
+      "url": "https://www.upei.ca/programs/master-science-mathematical-and-computational-sciences",
+      "status": "insufficient page signals",
+      "error": "Required degree/research terms were not both present in the opened content"
+    },
+    {
+      "institution": "McGill University",
+      "program": "MSc in Computer Science (thesis)",
+      "url": "https://coursecatalogue.mcgill.ca/en/graduate/science/computer-science/computer-science-thesis-msc/computer-science-thesis-msc.pdf",
+      "status": "insufficient page signals",
+      "error": "Required degree/research terms were not both present in the opened content"
+    },
+    {
+      "institution": "Université du Québec à Chicoutimi",
+      "program": "Maîtrise en informatique",
+      "url": "https://programmes.uqac.ca/1641",
+      "status": "insufficient page signals",
+      "error": "Required degree/research terms were not both present in the opened content"
+    },
+    {
+      "institution": "Université du Québec à Montréal",
+      "program": "Maîtrise en informatique",
+      "url": "https://etudier.uqam.ca/programme?code=2014",
+      "status": "insufficient page signals",
+      "error": "Required degree/research terms were not both present in the opened content"
+    },
+    {
+      "institution": "École Polytechnique de Montréal",
+      "program": "Maîtrise recherche en génie informatique",
+      "url": "https://www.polymtl.ca/programmes/programmes/maitrise-recherche-en-genie-informatique",
+      "status": "insufficient page signals",
+      "error": "Required degree/research terms were not both present in the opened content"
+    }
+  ]
+}

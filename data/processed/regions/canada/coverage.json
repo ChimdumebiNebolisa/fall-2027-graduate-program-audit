@@ -1,0 +1,255 @@
+{
+  "generated_at": "2026-09-09T00:00:00Z",
+  "scope": "All Canadian provinces and territories represented in the IRCC public-graduate-DLI flag",
+  "ircc_all_campus_rows": 1441,
+  "ircc_public_graduate_campus_rows": 156,
+  "institution_count_after_dli_deduplication": 98,
+  "duplicate_campus_rows_collapsed": 58,
+  "province_counts": {
+    "Alberta": 7,
+    "British Columbia": 10,
+    "Manitoba": 4,
+    "New Brunswick": 4,
+    "Newfoundland and Labrador": 1,
+    "Nova Scotia": 11,
+    "Ontario": 26,
+    "Prince Edward Island": 1,
+    "Quebec": 26,
+    "Saskatchewan": 7,
+    "Yukon": 1
+  },
+  "status_counts": {
+    "indexed": 50,
+    "no_relevant_graduate_field": 18,
+    "preliminary_fit": 30
+  },
+  "verified_program_candidate_count": 30,
+  "mechanical_exclusion_count": 18,
+  "source_claim_count": 244,
+  "cicic_exact_or_fuzzy_match_count": 86,
+  "cicic_unresolved_count": 12,
+  "ror_match_count": 75,
+  "ror_unresolved_count": 23,
+  "blocked_or_insufficient_program_page_count": 9,
+  "unresolved_cicic_matches": [
+    {
+      "institution": "Olds College",
+      "province": "Alberta",
+      "dli_number": "O18713227822",
+      "best_score": 0.643
+    },
+    {
+      "institution": "British Columbia Institute of Technology",
+      "province": "British Columbia",
+      "dli_number": "O19330128542",
+      "best_score": 0.694
+    },
+    {
+      "institution": "Nova Scotia Community College",
+      "province": "Nova Scotia",
+      "dli_number": "O19091820452",
+      "best_score": 0.456
+    },
+    {
+      "institution": "Canadian Forces College",
+      "province": "Ontario",
+      "dli_number": "O19994256968",
+      "best_score": 0.697
+    },
+    {
+      "institution": "Seneca College",
+      "province": "Ontario",
+      "dli_number": "O19395536013",
+      "best_score": 0.621
+    },
+    {
+      "institution": "Sheridan College",
+      "province": "Ontario",
+      "dli_number": "O19385946782",
+      "best_score": 0.581
+    },
+    {
+      "institution": "The Michener Institute for Applied Health Sciences",
+      "province": "Ontario",
+      "dli_number": "O19395677373",
+      "best_score": 0.519
+    },
+    {
+      "institution": "Conservatoire de musique de Gatineau",
+      "province": "Quebec",
+      "dli_number": "O19359010871",
+      "best_score": 0.718
+    },
+    {
+      "institution": "Conservatoire de musique de Rimouski",
+      "province": "Quebec",
+      "dli_number": "O19359010910",
+      "best_score": 0.692
+    },
+    {
+      "institution": "Conservatoire de musique de Trois-Rivières",
+      "province": "Quebec",
+      "dli_number": "O19359010924",
+      "best_score": 0.684
+    },
+    {
+      "institution": "Conservatoire de musique de Val-d'Or",
+      "province": "Quebec",
+      "dli_number": "O19359010937",
+      "best_score": 0.692
+    },
+    {
+      "institution": "Saskatchewan Polytechnic",
+      "province": "Saskatchewan",
+      "dli_number": "O19425521849",
+      "best_score": 0.493
+    }
+  ],
+  "unresolved_ror_matches": [
+    {
+      "institution": "British Columbia Institute of Technology",
+      "province": "British Columbia",
+      "dli_number": "O19330128542",
+      "best_score": 0.7
+    },
+    {
+      "institution": "Emily Carr University of Art and Design",
+      "province": "British Columbia",
+      "dli_number": "O19361259712",
+      "best_score": 0.646
+    },
+    {
+      "institution": "Simon Fraser University",
+      "province": "British Columbia",
+      "dli_number": "O18781994282",
+      "best_score": 0.762
+    },
+    {
+      "institution": "Thompson Rivers University",
+      "province": "British Columbia",
+      "dli_number": "O19395299610",
+      "best_score": 0.711
+    },
+    {
+      "institution": "University of the Fraser Valley",
+      "province": "British Columbia",
+      "dli_number": "O19395299642",
+      "best_score": 0.75
+    },
+    {
+      "institution": "Vancouver Island University",
+      "province": "British Columbia",
+      "dli_number": "O19395299688",
+      "best_score": 0.723
+    },
+    {
+      "institution": "Mount Saint Vincent University",
+      "province": "Nova Scotia",
+      "dli_number": "O19301947442",
+      "best_score": 0.706
+    },
+    {
+      "institution": "St. Francis Xavier University",
+      "province": "Nova Scotia",
+      "dli_number": "O19391556899",
+      "best_score": 0.667
+    },
+    {
+      "institution": "Laurentian University",
+      "province": "Ontario",
+      "dli_number": "O19304259382",
+      "best_score": 0.811
+    },
+    {
+      "institution": "Nipissing University",
+      "province": "Ontario",
+      "dli_number": "O19395535971",
+      "best_score": 0.757
+    },
+    {
+      "institution": "University of Windsor",
+      "province": "Ontario",
+      "dli_number": "O19358946722",
+      "best_score": 0.791
+    },
+    {
+      "institution": "University of Ottawa",
+      "province": "Ontario",
+      "dli_number": "O19397188593",
+      "best_score": 0.81
+    },
+    {
+      "institution": "Conservatoire de musique de Gatineau",
+      "province": "Quebec",
+      "dli_number": "O19359010871",
+      "best_score": 0.719
+    },
+    {
+      "institution": "Conservatoire de musique de Montréal",
+      "province": "Quebec",
+      "dli_number": "O19359010884",
+      "best_score": 0.652
+    },
+    {
+      "institution": "Conservatoire de musique de Rimouski",
+      "province": "Quebec",
+      "dli_number": "O19359010910",
+      "best_score": 0.652
+    },
+    {
+      "institution": "Conservatoire de musique de Trois-Rivières",
+      "province": "Quebec",
+      "dli_number": "O19359010924",
+      "best_score": 0.684
+    },
+    {
+      "institution": "Conservatoire de musique de Val-d'Or",
+      "province": "Quebec",
+      "dli_number": "O19359010937",
+      "best_score": 0.652
+    },
+    {
+      "institution": "Faculté de théologie évangélique",
+      "province": "Quebec",
+      "dli_number": "O253199102048",
+      "best_score": 0.635
+    },
+    {
+      "institution": "Université du Québec à Chicoutimi",
+      "province": "Quebec",
+      "dli_number": "O19359011122",
+      "best_score": 0.844
+    },
+    {
+      "institution": "College of Emmanuel and St Chad",
+      "province": "Saskatchewan",
+      "dli_number": "O122051172047",
+      "best_score": 0.622
+    },
+    {
+      "institution": "Lutheran Theological Seminary",
+      "province": "Saskatchewan",
+      "dli_number": "O213779356297",
+      "best_score": 0.627
+    },
+    {
+      "institution": "Saskatchewan Polytechnic",
+      "province": "Saskatchewan",
+      "dli_number": "O19425521849",
+      "best_score": 0.667
+    },
+    {
+      "institution": "St. Andrew’s College",
+      "province": "Saskatchewan",
+      "dli_number": "O212421811707",
+      "best_score": 0.765
+    }
+  ],
+  "limitations": [
+    "The universe is intentionally limited to current public DLIs that IRCC flags as offering master's/doctorate degree programs; private and non-DLI graduate institutions are outside this international-applicant universe.",
+    "DLI campus rows are collapsed to one institution-level row per DLI number; affiliated colleges sharing a DLI remain alternate names rather than separate application targets.",
+    "The program screen is a bounded official-page positive-signal pass, not deep faculty, funding, admissions, or Fall 2027 verification.",
+    "An indexed status is unresolved, not a negative finding. Only narrow specialty institutions receive a no-relevant-field exclusion, and those exclusions remain manually reviewable.",
+    "ROR identifiers are preserved only when name matching is unambiguous; ROR is not used as an accreditation authority."
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "dataset": "CICIC Directory of Educational Institutions in Canada",
+  "url": "https://www.cicic.ca/869/results.canada?t=1&search=",
+  "directory_scope_url": "https://www.cicic.ca/871/read_more_information_about_the_directory_of_educational_institutions_in_canada.canada",
+  "access_date": "2026-09-09",
+  "page_count": 8,
+  "institution_count": 230,
+  "page_sha256": [
+    "e6ca2fa53fcef99f7c0580a4b426b349677dbccd220a2f7d175909e22abd3714",
+    "04aa254ae972381a28266a839c4113f1f8a2332d74f0ecf592f202b8290f526b",
+    "989daec84c0dd4bb3f915bfb1c7528c184882fe720313c370d86920ac3eb8c06",
+    "77936a6a946d84043e1e5d8b403619a2ddd53b7ea24075f61a88e920767c9348",
+    "e96f6b86ed8529c8889fa36fb4e53e5adaaf437b5d5a38eba0fe30cd5bd9b2f0",
+    "ac40a943b498cf27e8babaa7f513cc4a8954230adc977bd6d48000fc553974ad",
+    "c791e9e21998632b2d4c1dca51f40acde8596ca80d2285c1c1f6c99c372f51e1",
+    "7d60c8c0651c23d7bbb203c6dfa3a2bee4a78aee54ca878773459273093835de"
+  ],
+  "note": "CICIC states that the live directory contains only currently recognized, authorized, registered and/or licensed institutions."
+}

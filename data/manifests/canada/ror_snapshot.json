@@ -1,0 +1,10 @@
+{
+  "dataset": "Research Organization Registry API v2",
+  "url": "https://api.ror.org/v2/organizations",
+  "documentation": "https://ror.readme.io/docs/rest-api",
+  "access_date": "2026-09-09",
+  "reported_count": 402,
+  "retrieved_count": 402,
+  "filter": "country.country_code:CA,types:education,status:active",
+  "note": "ROR supplies persistent cross-reference identifiers and official-domain metadata; it is not used as an accreditation authority."
+}
