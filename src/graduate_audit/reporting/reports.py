@@ -59,7 +59,7 @@ def build_reports(output_dir: str | Path, reports_dir: str | Path) -> None:
 
     coverage = f"""# Coverage Report — Fall 2027 Graduate Program Audit
 
-Evidence date: {manifest.get('current_date', 'not recorded')}  
+Evidence date: {manifest.get('evidence_date', manifest.get('current_date', 'not recorded'))}
 Validation: {validation.get('status', 'not yet run')}
 
 ## Coverage funnel

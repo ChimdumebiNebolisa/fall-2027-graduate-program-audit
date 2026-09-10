@@ -20,6 +20,9 @@
       "Imperial immediate route excluded": true,
       "HMU false negative restored": true
     },
-    "first_wave_contacts": 15
+    "first_wave_contacts": 15,
+    "workbook_bytes": 206871,
+    "workbook_renders": 11,
+    "formula_error_matches": 0
   }
 }

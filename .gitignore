@@ -21,6 +21,7 @@ data/raw/**
 .browser-data/
 browser-data/
 playwright-report/
+.playwright-cli/
 test-results/
 *.tmp
 *.temp
@@ -46,4 +47,3 @@ node_modules/
 
 # Office lock files
 ~$*.xlsx
-

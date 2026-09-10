@@ -1,6 +1,6 @@
 # Coverage Report — Fall 2027 Graduate Program Audit
 
-Evidence date: 2026-09-09  
+Evidence date: 2026-09-09
 Validation: PASS
 
 ## Coverage funnel

@@ -120,6 +120,11 @@ def validate(repo_root: Path, output_root: Path, require_workbook: bool) -> dict
 
     result = {"status": "PASS" if not errors else "FAIL", "errors": errors, "checks": checks}
     write_json(output_root / "final_validation.json", result)
+    manifest_path = output_root / "run_manifest.json"
+    if manifest_path.exists():
+        manifest = _read_json(manifest_path)
+        manifest["final_validation_results"] = result
+        write_json(manifest_path, manifest)
     return result
 
 

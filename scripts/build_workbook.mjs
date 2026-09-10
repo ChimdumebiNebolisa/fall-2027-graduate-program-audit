@@ -1,6 +1,10 @@
 import fs from "node:fs/promises";
 import path from "node:path";
-import { SpreadsheetFile, Workbook } from "@oai/artifact-tool";
+import { pathToFileURL } from "node:url";
+
+const artifactToolPath = process.env.CODEX_ARTIFACT_TOOL_PATH;
+if (!artifactToolPath) throw new Error("CODEX_ARTIFACT_TOOL_PATH must point to artifact_tool.mjs");
+const { SpreadsheetFile, Workbook } = await import(pathToFileURL(artifactToolPath).href);
 
 const COLORS = {
   navy: "#17365D",
@@ -87,7 +91,7 @@ function addTableSheet(workbook, { name, title, subtitle, headers, rows, tableIn
   }
   for (const scoreHeader of scoreHeaders) {
     const index = headers.indexOf(scoreHeader);
-    if (index >= 0 && rows.length) sheet.getRangeByIndexes(4, index, rows.length, 1).conditionalFormats.add("colorScale", { minColor: "#F8696B", midColor: "#FFEB84", maxColor: "#63BE7B" });
+    if (index >= 0 && rows.length) sheet.getRangeByIndexes(4, index, rows.length, 1).conditionalFormats.add("colorScale", { colors: ["#F8696B", "#FFEB84", "#63BE7B"], thresholds: ["min", { type: "percentile", value: 50 }, "max"] });
   }
   return sheet;
 }
@@ -100,7 +104,9 @@ async function main() {
   const outputRoot = path.resolve(process.argv[2] ?? "outputs/20260909-fall2027-audit");
   const workbookPath = path.resolve(process.argv[3] ?? path.join(outputRoot, "graduate_program_audit.xlsx"));
   const renderRoot = path.join(outputRoot, "renders");
+  const htmlRenderRoot = path.join(outputRoot, "render_html");
   await fs.mkdir(renderRoot, { recursive: true });
+  await fs.mkdir(htmlRenderRoot, { recursive: true });
   const [programs, professors, exclusions, sources, admins, calendar, drafts] = await Promise.all([
     csvRows(path.join(outputRoot, "program_screening.csv")),
     csvRows(path.join(outputRoot, "professor_evidence.csv")),
@@ -116,6 +122,7 @@ async function main() {
   const reviewed = programs.filter(row => !["", "mechanical", "preliminary"].includes((row.verification_status ?? "").toLowerCase()) && Number(row.overall_score || 0) > 0);
   const retained = programs.filter(row => (row.screening_decision ?? "").toLowerCase() === "retained");
   const recommended = drafts.filter(row => (row.contact_type ?? "").toLowerCase() === "professor");
+  const usableAdmins = admins.filter(row => (row["Official Email"] ?? row.official_email ?? "") || (row["Question to Resolve"] ?? row.question_to_resolve ?? ""));
   const workbook = Workbook.create();
   let tableIndex = 1;
 
@@ -126,7 +133,7 @@ async function main() {
   dashboard.getRange("A1").values = [["Fall 2027 Graduate Program Discovery & Fit Audit"]];
   dashboard.getRange("A1").format = { fill: COLORS.navy, font: { name: "Arial", size: 14, bold: true, color: COLORS.white }, rowHeight: 28, verticalAlignment: "center" };
   dashboard.getRange("A2:H2").merge();
-  dashboard.getRange("A2").values = [[`Evidence date ${manifest.current_date}; validation ${validation.status}. Mechanical screens and deep reviews are counted separately.`]];
+  dashboard.getRange("A2").values = [[`Evidence date ${manifest.evidence_date ?? manifest.current_date}; validation ${validation.status}. Mechanical screens and deep reviews are counted separately.`]];
   dashboard.getRange("A2").format = { fill: COLORS.paleBlue, font: { name: "Arial", size: 10, color: COLORS.darkGray }, rowHeight: 24 };
   const counts = manifest.counts ?? {};
   const metrics = [
@@ -156,7 +163,7 @@ async function main() {
   dashboard.getRange(`G4:H${4 + topReasons.length}`).values = [["Top exclusion reason", "Count"], ...topReasons];
   dashboard.getRange("G4:H4").format = { fill: COLORS.blue, font: { name: "Arial", bold: true, color: COLORS.white } };
   dashboard.getRange("A18:H18").merge();
-  dashboard.getRange("A18").values = [[`Datasets: IPEDS 2024/25 provisional; IRCC/CICIC accessed ${manifest.current_date}; ROR v2.10. Europe ROR API fallback coverage: 81.31%.`]];
+  dashboard.getRange("A18").values = [[`Datasets: IPEDS 2024/25 provisional; IRCC/CICIC accessed ${manifest.evidence_date ?? manifest.current_date}; ROR v2.10. Europe ROR API fallback coverage: 81.31%.`]];
   dashboard.getRange("A18").format = { fill: COLORS.gray, font: { name: "Arial", size: 10, italic: true }, wrapText: true, rowHeight: 34 };
   dashboard.freezePanes.freezeRows(2);
   dashboard.getRange("A:H").format.font = { name: "Arial", size: 10 };
@@ -179,7 +186,7 @@ async function main() {
   addTableSheet(workbook,{name:"PROFESSOR MATCHES",title:"Professor Matches",subtitle:"Current appointments and supervision authority are checked; recruiting remains unknown unless a current explicit statement/opening exists.",headers:professorHeaders,rows:project(professors,professorMap),tableIndex:tableIndex++,validations:{"Already Contacted?":["Yes","No"],"Response Status":["Not sent","Sent","Replied","No reply","Closed"]}});
 
   const adminHeaders = ["Priority","University","Program","Department","Contact Name","Contact Role","Official Email","Question to Resolve","Why It Matters","Already Contacted?","Date Contacted","Response","Follow-Up Date","Outcome","Notes"];
-  addTableSheet(workbook,{name:"DEPARTMENT AND ADMIN OUTREACH",title:"Department & Admin Outreach",subtitle:"Administrative questions are kept separate from professor research/supervision questions.",headers:adminHeaders,rows:admins.map(r=>Object.fromEntries(adminHeaders.map(h=>[h,r[h]??r[h.toLowerCase().replaceAll(" ","_")]??""]))),tableIndex:tableIndex++,validations:{"Already Contacted?":["Yes","No"]}});
+  addTableSheet(workbook,{name:"DEPARTMENT AND ADMIN OUTREACH",title:"Department & Admin Outreach",subtitle:"Administrative questions are kept separate from professor research/supervision questions.",headers:adminHeaders,rows:usableAdmins.map(r=>Object.fromEntries(adminHeaders.map(h=>[h,r[h]??r[h.toLowerCase().replaceAll(" ","_")]??""]))),tableIndex:tableIndex++,validations:{"Already Contacted?":["Yes","No"]}});
 
   const bestByInstitution = new Map();
   for (const row of reviewed) { const prior=bestByInstitution.get(row.institution_id); if (!prior || Number(row.overall_score||0)>Number(prior.overall_score||0)) bestByInstitution.set(row.institution_id,row); }
@@ -193,7 +200,7 @@ async function main() {
   const queue=[];
   for (const draft of drafts) {
     const professor = professors.find(row => row.official_email === draft.recipient_email);
-    const admin = admins.find(row => (row["Official Email"] ?? row.official_email) === draft.recipient_email);
+    const admin = usableAdmins.find(row => (row["Official Email"] ?? row.official_email) === draft.recipient_email);
     queue.push({
       "Rank": numberValue(draft.rank), "Person": draft.recipient, "University": draft.university,
       "Program": draft.program, "Professor or Admin": draft.contact_type,
@@ -242,17 +249,36 @@ async function main() {
   addTableSheet(workbook,{name:"METHODOLOGY",title:"Methodology",subtitle:"Decision rules and evidence limitations for interpreting the audit.",headers:["Topic","Method"],rows:methodRows,tableIndex:tableIndex++});
 
   workbook.recalculate();
-  const inspection = await workbook.inspect({kind:"sheet,table,formula",maxChars:12000,tableMaxRows:4,tableMaxCols:8,tableMaxCellChars:80});
+  const inspection = await workbook.inspect({kind:"sheet,table,formula,drawing",maxChars:16000,tableMaxRows:4,tableMaxCols:8,tableMaxCellChars:80});
   await fs.writeFile(path.join(outputRoot,"workbook_inspection.ndjson"),inspection.ndjson||"","utf8");
-  const errorScan = await workbook.inspect({kind:"match",search:"#REF!|#DIV/0!|#VALUE!|#NAME\\?|#N/A",options:{useRegex:true,maxResults:500},maxChars:12000});
+  const errorScan = await workbook.inspect({kind:"match",searchTerm:"#REF!|#DIV/0!|#VALUE!|#NAME\\?|#N/A",options:{useRegex:true,maxResults:500},maxChars:12000});
   await fs.writeFile(path.join(outputRoot,"workbook_formula_error_scan.ndjson"),errorScan.ndjson||"","utf8");
-  for (const name of ["COVERAGE DASHBOARD","SCHOOLS & PROGRAMS","PROFESSOR MATCHES","DEPARTMENT AND ADMIN OUTREACH","SCHOOL SUMMARY","THIS WEEKEND OUTREACH QUEUE","OUTREACH DRAFTS","SCREENING AND EXCLUSIONS","CALENDAR COMPARISON","SOURCES","METHODOLOGY"]) {
-    const blob = await workbook.render({sheetName:name,autoCrop:"all",scale:0.65,format:"png"});
-    await fs.writeFile(path.join(renderRoot,`${name.toLowerCase().replaceAll(" ","_").replaceAll("&","and")}.png`),new Uint8Array(await blob.arrayBuffer()));
-  }
   const xlsx = await SpreadsheetFile.exportXlsx(workbook);
   await xlsx.save(workbookPath);
-  console.log(JSON.stringify({workbookPath,sheets:11,reviewedPrograms:reviewed.length,professors:professors.length,renderRoot},null,2));
+  const renderRanges = new Map([
+    ["SCHOOLS & PROGRAMS", "A1:AP18"],
+    ["PROFESSOR MATCHES", "A1:AE18"], ["DEPARTMENT AND ADMIN OUTREACH", "A1:O18"],
+    ["SCHOOL SUMMARY", "A1:S18"], ["THIS WEEKEND OUTREACH QUEUE", "A1:N19"],
+    ["OUTREACH DRAFTS", "A1:H19"], ["SCREENING AND EXCLUSIONS", "A1:K18"],
+    ["CALENDAR COMPARISON", "A1:G18"], ["SOURCES", "A1:Q18"], ["METHODOLOGY", "A1:B16"],
+    ["COVERAGE DASHBOARD", "A1:H18"],
+  ]);
+  const sheetOrder = ["COVERAGE DASHBOARD","SCHOOLS & PROGRAMS","PROFESSOR MATCHES","DEPARTMENT AND ADMIN OUTREACH","SCHOOL SUMMARY","THIS WEEKEND OUTREACH QUEUE","OUTREACH DRAFTS","SCREENING AND EXCLUSIONS","CALENDAR COMPARISON","SOURCES","METHODOLOGY"];
+  for (const [name, range] of renderRanges) {
+    const baseName = name.toLowerCase().replaceAll(" ","_").replaceAll("&","and");
+    const tableHtml = workbook.toHTML(sheetOrder.indexOf(name), range, { formulas: true });
+    const pageHtml = `<!doctype html><meta charset="utf-8"><title>${name}</title><style>body{margin:16px;background:#eef2f6;font-family:Arial,sans-serif;zoom:.55}table{background:white;box-shadow:0 2px 12px #9aa7b4}td{vertical-align:top}</style>${tableHtml}`;
+    await fs.writeFile(path.join(htmlRenderRoot, `${baseName}.html`), pageHtml, "utf8");
+  }
+  console.log(JSON.stringify({workbookPath,sheets:11,reviewedPrograms:reviewed.length,professors:professors.length,htmlRenderRoot},null,2));
 }
 
-main().catch(error=>{console.error(error);process.exit(1);});
+const renderKeepAlive = setInterval(() => {}, 1000);
+try {
+  await main();
+} catch (error) {
+  console.error(error);
+  process.exit(1);
+} finally {
+  clearInterval(renderKeepAlive);
+}

@@ -4,6 +4,7 @@ import argparse
 from collections import Counter
 from datetime import datetime
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 from graduate_audit.connected_context import CALENDAR_COLUMNS, compare
 from graduate_audit.io import read_csv, read_json, write_csv, write_json
@@ -68,7 +69,9 @@ def finalize(repo_root: Path, output_root: Path, report_root: Path) -> dict[str,
         for row in professors
         if row.get("full_name", "").strip()
     }
-    manifest["current_date"] = datetime.now().astimezone().date().isoformat()
+    manifest["current_date"] = datetime.now(ZoneInfo("America/Chicago")).date().isoformat()
+    source_dates = sorted(row.get("date_accessed", "") for row in sources if row.get("date_accessed", ""))
+    manifest["evidence_date"] = source_dates[-1] if source_dates else manifest["current_date"]
     manifest["counts"].update({
         "institutions_indexed": len(institutions),
         "institutions_screened": len(institutions),
@@ -101,6 +104,18 @@ def finalize(repo_root: Path, output_root: Path, report_root: Path) -> dict[str,
         "Mechanical screens do not exhaustively crawl every official catalogue; absence of a positive signal is not a universal no-program finding.",
         "Fall 2027 pages, funding awards, and employment vacancies not yet published remain explicitly unresolved.",
     ]
+    blocked_websites: list[dict[str, str]] = []
+    for blocked_path in sorted((repo_root / "data/manifests").glob("*/blocked_sources.json")):
+        payload = read_json(blocked_path)
+        for source in payload.get("sources", []):
+            blocked_websites.append({
+                "name": source.get("name") or source.get("institution") or "Official source",
+                "program": source.get("program", ""),
+                "url": source.get("url", ""),
+                "status": source.get("status", "blocked"),
+                "impact": source.get("impact") or source.get("error", ""),
+            })
+    manifest["blocked_websites"] = blocked_websites
     manifest["validation_results"] = validation
     manifest["scripts_executed"] = list(dict.fromkeys(manifest.get("scripts_executed", []) + [
         "graduate_audit.connected_context",
@@ -108,6 +123,8 @@ def finalize(repo_root: Path, output_root: Path, report_root: Path) -> dict[str,
         "graduate_audit.reporting.outreach",
         "graduate_audit.validation",
         "graduate_audit.reporting.reports",
+        "graduate_audit.verify.apply_corrections",
+        "graduate_audit.verify.final_validation",
         "scripts/build_workbook.mjs",
     ]))
     write_json(output_root / "run_manifest.json", manifest)

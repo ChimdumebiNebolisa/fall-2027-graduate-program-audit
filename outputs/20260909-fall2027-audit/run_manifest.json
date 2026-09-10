@@ -1,7 +1,7 @@
 {
   "run_id": "20260909-fall2027-audit",
-  "current_date": "2026-09-09",
-  "generated_at": "2026-09-10T04:52:48.336082+00:00",
+  "current_date": "2026-09-10",
+  "generated_at": "2026-09-10T05:21:11.172096+00:00",
   "region_definitions": {
     "us": "50 states, District of Columbia, and IPEDS other US jurisdictions",
     "canada": "all provinces and territories",
@@ -1338,6 +1338,8 @@
     "graduate_audit.reporting.outreach",
     "graduate_audit.validation",
     "graduate_audit.reporting.reports",
+    "graduate_audit.verify.apply_corrections",
+    "graduate_audit.verify.final_validation",
     "scripts/build_workbook.mjs"
   ],
   "known_failures": [
@@ -1345,7 +1347,113 @@
     "EHESO/ETER API returned HTTP 401 and four national-registry pages were blocked.",
     "Canada retains 50 explicitly unresolved indexed institutions; unresolved records are not treated as evidence of no program."
   ],
-  "blocked_websites": [],
+  "blocked_websites": [
+    {
+      "name": "University of Alberta",
+      "program": "MSc in Computing Science (thesis)",
+      "url": "https://www.ualberta.ca/en/computing-science/graduate-studies/programs-and-admissions/index.html",
+      "status": "blocked",
+      "impact": "request failed: https://www.ualberta.ca/en/computing-science/graduate-studies/programs-and-admissions/index.html: 403 Client Error: Forbidden for url: https://www.ualberta.ca/en/computing-science/graduate-studies/programs-and-admissions/index.html"
+    },
+    {
+      "name": "Simon Fraser University",
+      "program": "MSc in Computing Science",
+      "url": "https://www.sfu.ca/fas/computing/future-students/graduate-students/programs/msc.html",
+      "status": "blocked",
+      "impact": "request failed: https://www.sfu.ca/fas/computing/future-students/graduate-students/programs/msc.html: 404 Client Error: Not Found for url: https://www.sfu.ca/fas/computing/future-students/graduate-students/programs/msc.html"
+    },
+    {
+      "name": "University of Northern British Columbia",
+      "program": "MSc in Computer Science",
+      "url": "https://www.unbc.ca/calendar/graduate/computer-science",
+      "status": "blocked",
+      "impact": "request failed: https://www.unbc.ca/calendar/graduate/computer-science: 404 Client Error: Not Found for url: https://www.unbc.ca/calendar/graduate/computer-science"
+    },
+    {
+      "name": "University of Winnipeg",
+      "program": "MSc in Applied Computer Science and Society",
+      "url": "https://www.uwinnipeg.ca/graduate-studies/graduate-programs/applied-computer-science.html",
+      "status": "blocked",
+      "impact": "request failed: https://www.uwinnipeg.ca/graduate-studies/graduate-programs/applied-computer-science.html: 403 Client Error: Forbidden for url: https://www.uwinnipeg.ca/graduate-studies/graduate-programs/applied-computer-science.html"
+    },
+    {
+      "name": "University of Prince Edward Island",
+      "program": "MSc in Mathematical and Computational Sciences",
+      "url": "https://www.upei.ca/programs/master-science-mathematical-and-computational-sciences",
+      "status": "insufficient page signals",
+      "impact": "Required degree/research terms were not both present in the opened content"
+    },
+    {
+      "name": "McGill University",
+      "program": "MSc in Computer Science (thesis)",
+      "url": "https://coursecatalogue.mcgill.ca/en/graduate/science/computer-science/computer-science-thesis-msc/computer-science-thesis-msc.pdf",
+      "status": "insufficient page signals",
+      "impact": "Required degree/research terms were not both present in the opened content"
+    },
+    {
+      "name": "Université du Québec à Chicoutimi",
+      "program": "Maîtrise en informatique",
+      "url": "https://programmes.uqac.ca/1641",
+      "status": "insufficient page signals",
+      "impact": "Required degree/research terms were not both present in the opened content"
+    },
+    {
+      "name": "Université du Québec à Montréal",
+      "program": "Maîtrise en informatique",
+      "url": "https://etudier.uqam.ca/programme?code=2014",
+      "status": "insufficient page signals",
+      "impact": "Required degree/research terms were not both present in the opened content"
+    },
+    {
+      "name": "École Polytechnique de Montréal",
+      "program": "Maîtrise recherche en génie informatique",
+      "url": "https://www.polymtl.ca/programmes/programmes/maitrise-recherche-en-genie-informatique",
+      "status": "insufficient page signals",
+      "impact": "Required degree/research terms were not both present in the opened content"
+    },
+    {
+      "name": "EHESO/ETER HEI API",
+      "program": "",
+      "url": "https://observatory.eter-project.com/api/v1/layer",
+      "status": "blocked",
+      "impact": "No ETER identifiers or institution-level degree/doctoral-award fields could be cross-walked."
+    },
+    {
+      "name": "Danish Ministry of Higher Education and Science",
+      "program": "",
+      "url": "https://ufm.dk/en/education/higher-education/danish-universities",
+      "status": "blocked",
+      "impact": "404 Client Error: Not Found for url: https://ufm.dk/en/education/higher-education/danish-universities"
+    },
+    {
+      "name": "AIKA Higher Education Institution List",
+      "program": "",
+      "url": "https://eplatforma.aika.lv/index.php?r=site%2Fhei-list",
+      "status": "blocked",
+      "impact": "404 Client Error: Not Found for url: https://eplatforma.aika.lv/index.php?r=site%2Fhei-list"
+    },
+    {
+      "name": "Ministry of Research and Higher Education",
+      "program": "",
+      "url": "https://mesr.gouvernement.lu/en/enseignementsuperieur.html",
+      "status": "blocked",
+      "impact": "404 Client Error: Not Found for url: https://mesr.gouvernement.lu/en/enseignementsuperieur.html"
+    },
+    {
+      "name": "Malta Further and Higher Education Authority",
+      "program": "",
+      "url": "https://mfhea.mt/higher-education-licensees/",
+      "status": "blocked",
+      "impact": "403 Client Error: Forbidden for url: https://mfhea.mt/higher-education-licensees/"
+    },
+    {
+      "name": "DPhil in Computer Science",
+      "program": "",
+      "url": "https://www.ox.ac.uk/admissions/graduate/courses/dphil-computer-science",
+      "status": "blocked",
+      "impact": "403 Client Error: Forbidden for url: https://www.ox.ac.uk/admissions/graduate/courses/dphil-computer-science"
+    }
+  ],
   "unresolved_coverage_gaps": [
     "European registry coverage is broad but incomplete because the ROR bulk archive and EHESO were unavailable.",
     "Mechanical screens do not exhaustively crawl every official catalogue; absence of a positive signal is not a universal no-program finding.",
@@ -1362,6 +1470,35 @@
       "professors": 56,
       "sources": 13254,
       "outreach_drafts": 15
+    }
+  },
+  "evidence_date": "2026-09-09",
+  "final_validation_results": {
+    "status": "PASS",
+    "errors": [],
+    "checks": {
+      "core_finalists_second_source_checked": 20,
+      "exclusion_sample_regions": [
+        "canada",
+        "europe",
+        "us"
+      ],
+      "independent_review_corrections": {
+        "Vanderbilt final deadline": true,
+        "Virginia Tech standing policy": true,
+        "Saskatchewan cycle label": true,
+        "RIT GRE": true,
+        "UCI recurring deadline": true,
+        "UIUC restored": true,
+        "NC State restored": true,
+        "Maryland reserve": true,
+        "Imperial immediate route excluded": true,
+        "HMU false negative restored": true
+      },
+      "first_wave_contacts": 15,
+      "workbook_bytes": 206871,
+      "workbook_renders": 11,
+      "formula_error_matches": 0
     }
   }
 }
