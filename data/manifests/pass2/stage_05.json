@@ -2,20 +2,20 @@
   "manifest_version": "1.0",
   "schema_version": "2.0",
   "stage": 5,
-  "run_type": "scoring_reentry_02",
-  "name": "Evidence-based scoring and admission calibration",
+  "run_type": "scoring_reentry_03",
+  "name": "Evidence-based scoring and admission calibration — re-entry 03",
   "status": "complete",
   "decision": "PASS",
-  "source_commit_before_stage": "6292c2ae6cc501e1a531be401ebbbccd788c6e5c",
+  "source_commit_before_stage": "e72193b6e5389220583e59e0b3282dc5d0d5f52d",
   "triggered_by_stage": 4,
-  "started_at": "2026-09-10T22:52:08.271845+00:00",
-  "completed_at": "2026-09-10T22:52:09.194620+00:00",
+  "started_at": "2026-09-10T23:47:24.663833+00:00",
+  "completed_at": "2026-09-10T23:47:25.593004+00:00",
   "inputs": [
     {
       "path": "data/manifests/pass2/stage_04.json",
-      "sha256": "ae056874bf1b2f5247a3ec70eeaa7cc7ad0473d28fb83c05a955885c98d7e7ab",
-      "bytes": 10947,
-      "modified_at": "2026-09-10T22:47:48.333692+00:00",
+      "sha256": "d1101b37433c23f7b2e1a0189d217aafd44be2708ae7d61adfe43763d356176a",
+      "bytes": 11492,
+      "modified_at": "2026-09-10T23:43:29.793022+00:00",
       "row_count": null
     },
     {
@@ -34,45 +34,45 @@
     },
     {
       "path": "data/processed/pass2/program_verification.csv",
-      "sha256": "e52551eec5ae1c6398b9ba5e393ec0a67ffdfd056fff1c0f6e1946488b008b33",
-      "bytes": 4136629,
-      "modified_at": "2026-09-10T22:25:50.963737+00:00",
-      "row_count": 1989
+      "sha256": "f4ba2b2c1d2b48dcc992460ca7f7d649fdecb2046dd49a5550c5512a9eea4d39",
+      "bytes": 4173846,
+      "modified_at": "2026-09-10T23:29:39.961829+00:00",
+      "row_count": 2001
     },
     {
-      "path": "data/processed/pass2/stage_03_reentry_02_verification.csv",
-      "sha256": "82fac7758950d722341229237d1978d019f14d539cbeaec542b3848d6d47b9da",
-      "bytes": 48150,
-      "modified_at": "2026-09-10T22:25:51.189025+00:00",
+      "path": "data/processed/pass2/stage_03_reentry_03_verification.csv",
+      "sha256": "e428124294e12825b188540ad885577c4bcdc777862301d21be69cae9cc75b46",
+      "bytes": 38423,
+      "modified_at": "2026-09-10T23:29:40.217778+00:00",
       "row_count": 12
     },
     {
       "path": "data/processed/pass2/program_sources.csv",
-      "sha256": "fb8d858cff6cc230937bd653fe4786a83854c8f77df34ea9caa9940af9b29e8a",
-      "bytes": 1417805,
-      "modified_at": "2026-09-10T22:25:51.065880+00:00",
-      "row_count": 2172
+      "sha256": "82117b00a6122c7ab5b8bb68a1a09c84ba6fc431809f9e530fedb29c3181e952",
+      "bytes": 1440532,
+      "modified_at": "2026-09-10T23:29:40.082991+00:00",
+      "row_count": 2212
     },
     {
       "path": "data/processed/pass2/professor_candidates_evaluated.csv",
-      "sha256": "5b5d9ca250145082233c63c28da60ce701af51e23f5ab6a78e21371c1a6db205",
-      "bytes": 645984,
-      "modified_at": "2026-09-10T22:47:47.768333+00:00",
-      "row_count": 315
+      "sha256": "232c6c512f100bec26ee9d3c7f1672fc2e74628c357988c116ce7cb47fbbb8ac",
+      "bytes": 729565,
+      "modified_at": "2026-09-10T23:43:29.227081+00:00",
+      "row_count": 355
     },
     {
       "path": "data/processed/pass2/professor_matches_retained.csv",
-      "sha256": "40ba54463ae377e831179d15756a47a7ba4a70a238564764ccecd297c4a5b75e",
-      "bytes": 77553,
-      "modified_at": "2026-09-10T22:47:47.775118+00:00",
-      "row_count": 42
+      "sha256": "8abbff9da70d45c061aca38006a8e076043f4691a16b4542ab0f7344a435576b",
+      "bytes": 95240,
+      "modified_at": "2026-09-10T23:43:29.236713+00:00",
+      "row_count": 50
     },
     {
       "path": "data/processed/pass2/professor_sources.csv",
-      "sha256": "490969f0661c0dd6bf9cec6e20ecf3b598cb95d190ac326e1fae793b20353797",
-      "bytes": 159495,
-      "modified_at": "2026-09-10T22:47:47.786652+00:00",
-      "row_count": 253
+      "sha256": "d1a84f84abb15bc99893509040a563981dd70a3230492a37a7882e633ce1b66c",
+      "bytes": 182461,
+      "modified_at": "2026-09-10T23:43:29.249521+00:00",
+      "row_count": 289
     },
     {
       "path": "src/graduate_audit/evidence_scoring.py",
@@ -92,23 +92,23 @@
   "outputs": [
     {
       "path": "data/processed/pass2/program_scores.csv",
-      "sha256": "a20daa76071613e5fe848c5984138c0dc5065cfd1e552e598d09cdc959c8ccc6",
-      "bytes": 89091,
-      "modified_at": "2026-09-10T22:52:08.586203+00:00",
-      "row_count": 63
+      "sha256": "c5fa2e3f7997f58f020b499feadb20903536cd8b34a9b756beec4ab0d58aa1aa",
+      "bytes": 100463,
+      "modified_at": "2026-09-10T23:47:24.970571+00:00",
+      "row_count": 71
     },
     {
       "path": "data/processed/pass2/score_evidence.csv",
-      "sha256": "a53dd6e1b167716ddcacb89d6351b25459f99478430fc6a81685c3f12f6908ac",
-      "bytes": 196633,
-      "modified_at": "2026-09-10T22:52:08.600320+00:00",
-      "row_count": 378
+      "sha256": "fe47608af1407720025b317f470642836aadee080a942a551a6263c75cb90327",
+      "bytes": 221682,
+      "modified_at": "2026-09-10T23:47:24.985221+00:00",
+      "row_count": 426
     },
     {
       "path": "reports/pass2/05_scoring_and_calibration.md",
-      "sha256": "20532a22ae97ffe6950e2f45a65d70055afc2d09136821b911205347540063ee",
-      "bytes": 7726,
-      "modified_at": "2026-09-10T22:52:09.190249+00:00",
+      "sha256": "064d5aa3057f876dba3f3e834863b4e3705235baff0173ed5a7deff2825cad35",
+      "bytes": 8270,
+      "modified_at": "2026-09-10T23:47:25.587503+00:00",
       "row_count": null
     }
   ],
@@ -178,16 +178,16 @@
     },
     {
       "path": "scripts/build_stage_05.py",
-      "sha256": "627946fdae759a5c48e370b2ce4e9bdecb15cfa41c25d658f8a5de2444ee5c06",
-      "bytes": 25903,
-      "modified_at": "2026-09-10T22:51:24.718502+00:00",
+      "sha256": "eb39010dbed35992f7fa649445bdd4a9c983ba8281cd93fb33afdf5151b21484",
+      "bytes": 26002,
+      "modified_at": "2026-09-10T23:47:19.711535+00:00",
       "row_count": null
     },
     {
       "path": "tests/test_evidence_scoring.py",
-      "sha256": "42f86ddd68b8373072628893b2a7b244493d6813fa29fccc136d6f290c29f801",
-      "bytes": 9190,
-      "modified_at": "2026-09-10T22:51:35.002831+00:00",
+      "sha256": "c71718832f9b1cf17ba82f9de4166361b61fd9427b9975a3225d48050afc4dcf",
+      "bytes": 10227,
+      "modified_at": "2026-09-10T23:45:47.033407+00:00",
       "row_count": null
     },
     {
@@ -199,30 +199,30 @@
     },
     {
       "path": "state/progress.json",
-      "sha256": "2119ca723afa4162ea542d542206cc19ca570fecd753fac7fa064888148dcba0",
-      "bytes": 3800,
-      "modified_at": "2026-09-10T22:52:09.193620+00:00",
+      "sha256": "ec58e956ec7f8bf89ed9ab05cd8260690fe8075cbcf16bf4ccf1e143a91097f9",
+      "bytes": 4024,
+      "modified_at": "2026-09-10T23:47:25.591000+00:00",
       "row_count": null
     },
     {
       "path": "data/processed/pass2/program_scores.csv",
-      "sha256": "a20daa76071613e5fe848c5984138c0dc5065cfd1e552e598d09cdc959c8ccc6",
-      "bytes": 89091,
-      "modified_at": "2026-09-10T22:52:08.586203+00:00",
-      "row_count": 63
+      "sha256": "c5fa2e3f7997f58f020b499feadb20903536cd8b34a9b756beec4ab0d58aa1aa",
+      "bytes": 100463,
+      "modified_at": "2026-09-10T23:47:24.970571+00:00",
+      "row_count": 71
     },
     {
       "path": "data/processed/pass2/score_evidence.csv",
-      "sha256": "a53dd6e1b167716ddcacb89d6351b25459f99478430fc6a81685c3f12f6908ac",
-      "bytes": 196633,
-      "modified_at": "2026-09-10T22:52:08.600320+00:00",
-      "row_count": 378
+      "sha256": "fe47608af1407720025b317f470642836aadee080a942a551a6263c75cb90327",
+      "bytes": 221682,
+      "modified_at": "2026-09-10T23:47:24.985221+00:00",
+      "row_count": 426
     },
     {
       "path": "reports/pass2/05_scoring_and_calibration.md",
-      "sha256": "20532a22ae97ffe6950e2f45a65d70055afc2d09136821b911205347540063ee",
-      "bytes": 7726,
-      "modified_at": "2026-09-10T22:52:09.190249+00:00",
+      "sha256": "064d5aa3057f876dba3f3e834863b4e3705235baff0173ed5a7deff2825cad35",
+      "bytes": 8270,
+      "modified_at": "2026-09-10T23:47:25.587503+00:00",
       "row_count": null
     }
   ],
@@ -230,7 +230,7 @@
     "status": "PASS",
     "assertions": {
       "entire_serious_program_pool_recalculated": true,
-      "latest_reentry_02_fully_recalculated": true,
+      "latest_reentry_03_fully_recalculated": true,
       "exactly_six_components_per_program": true,
       "program_rows_reference_exact_component_evidence": true,
       "component_evidence_has_required_audit_metadata": true,
@@ -255,31 +255,31 @@
     "institution_specific_score_constant_hits": []
   },
   "counts": {
-    "serious_programs_scored": 63,
-    "score_evidence_rows": 378,
-    "hard_gate_survivors": 14,
-    "funding_gate_pass": 23,
-    "professor_gate_pass": 42,
-    "eligibility_gate_pass": 60,
+    "serious_programs_scored": 71,
+    "score_evidence_rows": 426,
+    "hard_gate_survivors": 16,
+    "funding_gate_pass": 25,
+    "professor_gate_pass": 50,
+    "eligibility_gate_pass": 67,
     "zero_depth_programs": 21,
-    "single_professor_dependencies": 42,
-    "insufficient_admission_evidence": 60,
-    "eligibility_concerns": 3,
+    "single_professor_dependencies": 50,
+    "insufficient_admission_evidence": 67,
+    "eligibility_concerns": 4,
     "institution_score_constant_hits": 0,
     "latest_reentry_programs": 8,
-    "latest_reentry_hard_gate_survivors": 1,
-    "latest_reentry_funding_gate_pass": 1,
+    "latest_reentry_hard_gate_survivors": 2,
+    "latest_reentry_funding_gate_pass": 2,
     "latest_reentry_professor_gate_pass": 8
   },
   "failures": [],
   "blockers": [],
   "unresolved_coverage": [
-    "40 programs lack direct verified funding evidence strong enough for the hard gate.",
+    "46 programs lack direct verified funding evidence strong enough for the hard gate.",
     "21 programs lack a fully verified strong professor match.",
-    "21 programs have zero verified faculty depth and 42 are single-professor dependencies.",
-    "60 programs lack official cohort/selectivity evidence for strategic admission calibration.",
+    "21 programs have zero verified faculty depth and 50 are single-professor dependencies.",
+    "67 programs lack official cohort/selectivity evidence for strategic admission calibration.",
     "Offer-specific net cost and coverage details remain incomplete where recorded in score evidence.",
-    "Stage 5 re-entry 02 produced 1 hard-gate survivor from 8 newly scored routes; the others fail at least the direct funding gate.",
-    "The existing Stage 6 portfolio covers the prior score pool and must be rebuilt against the 63 current score rows."
+    "Stage 5 re-entry 03 produced 2 hard-gate survivors from 8 newly scored routes; the others fail at least one hard gate.",
+    "The existing Stage 6 portfolio covers the prior score pool and must be rebuilt against the 71 current score rows."
   ]
 }
