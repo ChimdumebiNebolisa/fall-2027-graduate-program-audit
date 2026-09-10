@@ -28,6 +28,15 @@ OUTPUT_SCORE_FIELDS = {
     "application_economics": "application_economics_score",
 }
 CONFIDENCE_ORDER = {"low": 0, "medium": 1, "high": 2}
+VERIFIED_OFFICIAL_SOURCE_STATUSES = {
+    "verified",
+    "official page checked",
+    "opened/current",
+    "opened; cycle limits recorded",
+    "opened official page",
+    "accessible or indexed official page",
+    "official current guide checked",
+}
 
 
 @dataclass(frozen=True)
@@ -117,10 +126,15 @@ def _official_verified_funding_sources(
             for part in str(source.get("claim_categories") or source.get("claim_type") or "").split("|")
         }
         source_program_id = str(source.get("candidate_program_id") or source.get("program_id") or "")
+        verification_status = str(source.get("verification_status", "")).strip().casefold()
+        source_verified = (
+            verification_status in VERIFIED_OFFICIAL_SOURCE_STATUSES
+            or verification_status.startswith("official indexed page content checked")
+        )
         if (
             "funding" in categories
             and str(source.get("official_or_secondary", "")).casefold() == "official"
-            and str(source.get("verification_status", "")).casefold() == "verified"
+            and source_verified
             and source_program_id == program_id
         ):
             valid.append(source)
@@ -134,23 +148,28 @@ def funding_hard_gate_from_evidence(
     sources = _official_verified_funding_sources(program, sources_by_id)
     if not sources:
         return False
-    claims = " ".join(str(source.get("exact_claim_supported", "")) for source in sources).casefold()
     weak_markers = (
         "most doctoral", "most phds", "most phd", "typically", "selected",
         "may be offered", "may offer", "possible unfunded", "no funding guarantee",
         "lack of funding guarantee", "generally available", "competitive and cycle-specific",
         "does not provide a current", "availability is competitive", "non-guaranteed",
-        "non guaranteed",
+        "non guaranteed", "many ", "not all admits", "not promise it to all", "usually",
+        "later funding patterns", "later funding is not", "later support expected",
     )
-    if any(marker in claims for marker in weak_markers):
-        return False
     credible_markers = (
         "guaranteed", "guarantee", "five-year package", "five-year funding model",
-        "full tuition/health doctoral funding", "all full-time", "100% of admitted",
-        "minimum is", "minimum guaranteed", "take-home after tuition", "fully funded",
-        "full support", "support commitment",
+        "five years of full", "full tuition/health doctoral funding", "all full-time",
+        "all phd students", "all cs phd admits", "all admitted phd students",
+        "100% of admitted", "minimum is", "minimum guaranteed", "minimum funding",
+        "take-home after tuition", "fully funded", "full support", "support commitment",
+        "multi-year assistantship funding", "phd students receive support",
     )
-    return any(marker in claims for marker in credible_markers)
+    return any(
+        not any(marker in claim for marker in weak_markers)
+        and any(marker in claim for marker in credible_markers)
+        for source in sources
+        if (claim := str(source.get("exact_claim_supported", "")).casefold())
+    )
 
 
 def coursework_exception_gate_from_evidence(

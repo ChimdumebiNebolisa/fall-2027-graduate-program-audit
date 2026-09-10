@@ -206,7 +206,7 @@ def build() -> dict[str, object]:
     }
     constant_hits = _institution_score_constant_hits()
     assertions = {
-        "entire_serious_program_pool_recalculated": len(scores) == len(programs) == 45 and {row["program_id"] for row in scores} == {row["candidate_program_id"] for row in programs},
+        "entire_serious_program_pool_recalculated": bool(programs) and len(scores) == len(programs) and {row["program_id"] for row in scores} == {row["candidate_program_id"] for row in programs},
         "exactly_six_components_per_program": len(score_evidence) == len(scores) * 6 and all({row["component"] for row in evidence_by_program[pid]} == set(COMPONENT_ORDER) for pid in evidence_by_program),
         "program_rows_reference_exact_component_evidence": all(
             set(split_ids(row["score_evidence_ids"]))
@@ -346,6 +346,7 @@ def write_report(result: dict[str, object]) -> None:
         f"- {counts['zero_depth_programs']} programs have zero verified faculty-depth points; {counts['single_professor_dependencies']} have only one verified strong match and remain capped at 5 points.",
         f"- {counts['insufficient_admission_evidence']} programs lack official cohort/selectivity evidence for strategic admission calibration.",
         "- Offer-specific net funding, fees, health insurance, summers, and duration remain incomplete where identified in the component evidence.",
+        "- The existing Stage 6 portfolio still covers the pre-re-entry 45-program pool; Stage 6 must be rebuilt against these 55 scores.",
         "- Stage 6 must pressure-test only hard-gate survivors for a core portfolio; diagnostic totals cannot override a failed gate.",
         "",
     ]
@@ -379,9 +380,10 @@ def main() -> int:
     pass2 = dict(progress.get("pass2", {}))
     stage_status = dict(pass2.get("stage_status", {}))
     stage_status["5"] = "complete" if result["status"] == "PASS" else "failed"
+    stage_status["5_reentry_01"] = "complete" if result["status"] == "PASS" else "failed"
     pass2.update({
         "current_stage": 5,
-        "last_completed_stage": 5 if result["status"] == "PASS" else 4,
+        "last_completed_stage": max(int(pass2.get("last_completed_stage", 0)), 5) if result["status"] == "PASS" else 4,
         "stage_status": stage_status,
         "next_stage": 6,
         "next_stage_authorized": result["status"] == "PASS",
@@ -389,6 +391,8 @@ def main() -> int:
         "authorization_mode": "agent_stage_gate_per_user_instruction",
         "stage_05_acceptance": result["status"],
         "stage_05_hard_gate_survivors": result["counts"]["hard_gate_survivors"],
+        "stage_05_reentry_completed": 1 if result["status"] == "PASS" else 0,
+        "stage_05_reentry_serious_programs": result["counts"]["serious_programs_scored"],
     })
     update_progress(
         progress_path,
@@ -403,6 +407,7 @@ def main() -> int:
         f"{counts['zero_depth_programs']} programs have zero verified faculty depth and {counts['single_professor_dependencies']} are single-professor dependencies.",
         f"{counts['insufficient_admission_evidence']} programs lack official cohort/selectivity evidence for strategic admission calibration.",
         "Offer-specific net cost and coverage details remain incomplete where recorded in score evidence.",
+        "The existing Stage 6 portfolio covers the pre-re-entry 45-program pool and must be rebuilt against the 55 current score rows.",
     ]
     outputs = [SCORES_PATH, EVIDENCE_PATH, REPORT_PATH]
     artifacts = [
@@ -425,10 +430,12 @@ def main() -> int:
         "manifest_version": "1.0",
         "schema_version": "2.0",
         "stage": 5,
+        "run_type": "scoring_reentry_01",
         "name": "Evidence-based scoring and admission calibration",
         "status": "complete" if result["status"] == "PASS" else "failed",
         "decision": result["status"],
         "source_commit_before_stage": source_commit,
+        "triggered_by_stage": 4,
         "started_at": started_at,
         "completed_at": now(),
         "inputs": [file_record(path) for path in input_paths()],

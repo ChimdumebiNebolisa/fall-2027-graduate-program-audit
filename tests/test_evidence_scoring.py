@@ -3,6 +3,8 @@ from __future__ import annotations
 from collections import defaultdict
 from pathlib import Path
 
+import pytest
+
 from graduate_audit.evidence_scoring import (
     COMPONENT_ORDER,
     calibrate_admission,
@@ -69,11 +71,58 @@ def test_funding_gate_requires_direct_official_verified_evidence():
     for field, value in (
         ("official_or_secondary", "Secondary"),
         ("verification_status", "Incomplete"),
+        ("verification_status", "Discovery evidence only"),
+        ("verification_status", "Official program page checked; deep review pending"),
         ("claim_categories", "admissions"),
+        ("candidate_program_id", "fixture:other-program"),
     ):
         changed_sources = {key: dict(row) for key, row in sources.items()}
         changed_sources["stage3src:funding"][field] = value
         assert not funding_hard_gate_from_evidence(program, changed_sources)
+
+
+@pytest.mark.parametrize(
+    "status",
+    [
+        "Verified",
+        "official page checked",
+        "opened/current",
+        "opened; cycle limits recorded",
+        "accessible or indexed official page",
+        "Official indexed page content checked; automated direct retrieval returned HTTP 403",
+    ],
+)
+def test_funding_gate_accepts_stage_three_verified_official_statuses(status):
+    program, sources = _funding_fixture()
+    sources["stage3src:funding"]["verification_status"] = status
+    assert funding_hard_gate_from_evidence(program, sources)
+
+
+def test_weak_funding_source_does_not_override_independent_verified_guarantee():
+    program, sources = _funding_fixture()
+    program["funding_source_ids"] += "|stage3src:weak"
+    sources["stage3src:weak"] = {
+        **sources["stage3src:funding"],
+        "stage3_source_id": "stage3src:weak",
+        "exact_claim_supported": "A competitive award may be offered to selected students.",
+    }
+    assert funding_hard_gate_from_evidence(program, sources)
+
+
+def test_first_year_only_support_does_not_pass_funding_gate():
+    program, sources = _funding_fixture()
+    sources["stage3src:funding"]["exact_claim_supported"] = (
+        "All incoming PhD students receive first-year support; later funding patterns are advisor-dependent."
+    )
+    assert not funding_hard_gate_from_evidence(program, sources)
+
+
+def test_non_universal_guarantee_does_not_pass_funding_gate():
+    program, sources = _funding_fixture()
+    sources["stage3src:funding"]["exact_claim_supported"] = (
+        "Many admitted students receive a four-year guarantee, but the page does not promise it to all admits."
+    )
+    assert not funding_hard_gate_from_evidence(program, sources)
 
 
 def test_coursework_only_program_needs_research_and_exceptional_full_scholarship():
@@ -95,11 +144,18 @@ def test_minimum_gpa_match_alone_does_not_create_plausible_assessment():
 
 
 def test_stage_five_outputs_cover_all_programs_and_enforce_depth_deduplication():
+    programs = [
+        row
+        for row in read_csv(REPO_ROOT / "data/processed/pass2/program_verification.csv")
+        if row["faculty_review_ready"] == "yes"
+    ]
     scores = read_csv(REPO_ROOT / "data/processed/pass2/program_scores.csv")
     evidence = read_csv(REPO_ROOT / "data/processed/pass2/score_evidence.csv")
     retained = read_csv(REPO_ROOT / "data/processed/pass2/professor_matches_retained.csv")
-    assert len(scores) == 45
-    assert len(evidence) == 270
+    expected_program_ids = {row["candidate_program_id"] for row in programs}
+    assert {row["program_id"] for row in scores} == expected_program_ids
+    assert len(scores) == len(programs)
+    assert len(evidence) == len(programs) * len(COMPONENT_ORDER)
     evidence_by_program = defaultdict(list)
     retained_by_program = defaultdict(list)
     for row in evidence:
