@@ -21,15 +21,26 @@ COMPATIBLE_DEGREES = {
 
 def _yes(value: object) -> bool:
     normalized = str(value or "").strip().lower()
-    return normalized in YES or normalized.startswith(("yes;", "yes —", "yes -", "verified;"))
+    return normalized in YES or normalized.startswith(("yes", "verified;"))
 
 
 def _credible_funding(value: object) -> bool:
     normalized = str(value or "").strip().lower()
     return normalized in CREDIBLE_FUNDING or any(
         token in normalized
-        for token in ("normally funded", "guaranteed", "full tuition and stipend", "position salary")
+        for token in (
+            "normally funded", "guaranteed", "fully funded", "full-support", "full support",
+            "full tuition and stipend", "tuition and living support", "five-year package",
+            "position salary", "receive a stipend", "receive stipend", "all admitted",
+        )
     )
+
+
+def _can_supervise(value: object) -> bool:
+    normalized = str(value or "").strip().lower()
+    if normalized.startswith("no") or "cannot supervise" in normalized:
+        return False
+    return _yes(normalized) or "research faculty" in normalized or normalized.startswith("potentially")
 
 
 def _number(value: object) -> int:
@@ -57,7 +68,7 @@ def score_programs(program_path: Path, institution_path: Path, professor_path: P
     supervisor_programs = {
         row.get("program_id", "")
         for row in professors
-        if _yes(row.get("can_supervise_program"))
+        if _can_supervise(row.get("can_supervise_program"))
         and any(
             token in row.get("verification_status", "").lower()
             for token in ("verified", "complete", "official")
@@ -74,9 +85,13 @@ def score_programs(program_path: Path, institution_path: Path, professor_path: P
             **row,
             "recognized_active_institution": _recognized_active(institution),
             "relevant_research_program": _number(row.get("research_fit_score")) > 0 and screening not in {"excluded", "screened_out"},
+            "international_student_eligible": _yes(row.get("international_student_eligible")),
             "bachelor_entry_or_research_masters_route": _yes(row.get("direct_from_bachelors_eligible")),
             "verified_professor_match": row.get("program_id", "") in supervisor_programs,
-            "credible_funding_or_full_scholarship": _credible_funding(funding),
+            "credible_funding_or_full_scholarship": (
+                _credible_funding(funding)
+                or (screening == "retained" and _number(row.get("funding_score")) >= 18 and bool(verification))
+            ),
             "compatible_degree_structure": degree in COMPATIBLE_DEGREES,
             "position_monitor_only": row.get("recommendation") == "Monitor for 2027 Position",
             "material_unresolved_gate": row.get("recommendation") == "Outreach Before Decision",
@@ -85,7 +100,7 @@ def score_programs(program_path: Path, institution_path: Path, professor_path: P
         result = calculate_score(evidence)
         row["research_fit_score"] = str(result.research_fit_score)
         row["overall_score"] = str(result.overall_score)
-        if not row.get("recommendation") or row["recommendation"] in {"Strong Apply", "Likely Apply", "Deprioritize", "Do Not Apply"}:
+        if screening == "retained" or not row.get("recommendation"):
             row["recommendation"] = result.recommendation
         if result.gate_failures:
             failure_text = ", ".join(result.gate_failures)
@@ -166,4 +181,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

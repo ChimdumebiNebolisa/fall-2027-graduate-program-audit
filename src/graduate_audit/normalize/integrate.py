@@ -99,7 +99,15 @@ def integrate(output_dir: str | Path) -> dict[str, object]:
 
     institutions, duplicate_institutions = _dedupe(institutions_raw, "institution_id")
     programs, duplicate_programs = _dedupe(programs_raw, "program_id")
-    professors, duplicate_professors = _dedupe(professors_raw, "professor_id")
+    professor_records: dict[tuple[str, str], dict[str, str]] = {}
+    duplicate_professors: list[str] = []
+    for row in professors_raw:
+        composite = (row.get("professor_id", "").strip(), row.get("program_id", "").strip())
+        if composite in professor_records:
+            duplicate_professors.append("|".join(composite))
+        else:
+            professor_records[composite] = row
+    professors = list(professor_records.values())
 
     program_decisions: dict[str, set[str]] = {}
     for row in programs:

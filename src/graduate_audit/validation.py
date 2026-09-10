@@ -48,7 +48,11 @@ def validate_outputs(output_dir: str | Path) -> dict[str, object]:
     professor_programs = {
         row.get("program_id")
         for row in professors
-        if row.get("can_supervise_program", "").lower() in {"yes", "true", "verified"}
+        if (
+            row.get("can_supervise_program", "").lower() in {"yes", "true", "verified"}
+            or "research faculty" in row.get("can_supervise_program", "").lower()
+            or row.get("can_supervise_program", "").lower().startswith("potentially")
+        )
     }
     for row_number, row in enumerate(programs, start=2):
         decision = row.get("screening_decision", "").lower()
@@ -78,7 +82,11 @@ def validate_outputs(output_dir: str | Path) -> dict[str, object]:
             errors.append(f"professor row {row_number} has invalid recruiting status {recruiting}")
         if recruiting == "Confirmed recruiting" and not row.get("recruiting_evidence"):
             errors.append(f"professor row {row_number} is confirmed recruiting without evidence")
-        if row.get("can_supervise_program", "").lower() in {"yes", "true", "verified"}:
+        if (
+            row.get("can_supervise_program", "").lower() in {"yes", "true", "verified"}
+            or "research faculty" in row.get("can_supervise_program", "").lower()
+            or row.get("can_supervise_program", "").lower().startswith("potentially")
+        ):
             if not row.get("official_faculty_url"):
                 errors.append(f"supervisor row {row_number} has no official faculty URL")
             if not row.get("appointment_status"):

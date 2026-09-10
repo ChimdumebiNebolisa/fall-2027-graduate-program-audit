@@ -59,7 +59,7 @@ def calculate_score(row: Mapping[str, object]) -> ScoreResult:
         recommendation = "Outreach Before Decision"
     elif str(row.get("verification_status", "")).lower() in {"blocked", "contradictory", "incomplete"}:
         recommendation = "Investigate Further"
-    elif overall >= 85 and str(row.get("funding_status", "")).lower() in {"verified", "guaranteed", "normally funded", "position salary"}:
+    elif overall >= 85 and _truthy(row.get("credible_funding_or_full_scholarship")):
         recommendation = "Strong Apply"
     elif overall >= 75:
         recommendation = "Likely Apply"
@@ -67,4 +67,3 @@ def calculate_score(row: Mapping[str, object]) -> ScoreResult:
         recommendation = "Deprioritize"
 
     return ScoreResult(research_fit, overall, recommendation, gate_failures)
-
