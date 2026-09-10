@@ -55,7 +55,16 @@ def _replace_with_deep_review(
     if not deep_rows:
         return base_rows
     deep_keys = {row.get(key, "").strip() for row in deep_rows if row.get(key, "").strip()}
-    return [row for row in base_rows if row.get(key, "").strip() not in deep_keys] + deep_rows
+    deep_program_names = {
+        (row.get("institution_id", "").strip(), row.get("program_name", "").strip().casefold())
+        for row in deep_rows
+        if row.get("institution_id", "").strip() and row.get("program_name", "").strip()
+    }
+    return [
+        row for row in base_rows
+        if row.get(key, "").strip() not in deep_keys
+        and (row.get("institution_id", "").strip(), row.get("program_name", "").strip().casefold()) not in deep_program_names
+    ] + deep_rows
 
 
 def _dedupe(rows: list[dict[str, str]], key: str) -> tuple[list[dict[str, str]], list[str]]:
