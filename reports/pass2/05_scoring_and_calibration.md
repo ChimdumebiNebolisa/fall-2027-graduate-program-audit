@@ -1,21 +1,21 @@
 # Pass 2 Stage 5 — Evidence-based scoring and admission calibration
 
-Generated: 2026-09-11T00:43:24.076358+00:00
+Generated: 2026-09-11T01:42:02.938691+00:00
 
 Decision: **PASS**
 
 ## Outcome
 
-All 80 serious Stage 4 programs were recalculated from six recorded evidence components (480 component rows). Only 17 programs clear the direct funding, verified-professor, eligibility, degree-structure, and coursework-exception gates. Gated-out rows retain diagnostic component totals but receive no evidence rank.
+All 83 serious Stage 4 programs were recalculated from six recorded evidence components (498 component rows). Only 18 programs clear the direct funding, verified-professor, eligibility, degree-structure, and coursework-exception gates. Gated-out rows retain diagnostic component totals but receive no evidence rank.
 
 ## Hard-gate result
 
 | Gate | Programs passing | Programs failing |
 | --- | --- | --- |
-| Direct verified funding | 26 | 54 |
-| Verified strong professor | 59 | 21 |
-| Formal eligibility | 75 | 5 |
-| All hard gates | 17 | 63 |
+| Direct verified funding | 27 | 56 |
+| Verified strong professor | 62 | 21 |
+| Formal eligibility | 78 | 5 |
+| All hard gates | 18 | 65 |
 
 The funding gate is recomputed from exact-program source IDs whose source rows are official, verified, and explicitly funding-related. It never reads the Stage 3 retained/conditional label, a recommendation, total score, or funding score.
 
@@ -33,6 +33,7 @@ The funding gate is recomputed from exact-program source IDs whose source rows a
 | 3 | Duke University | Computer Science PhD | 70 | professor_alignment:20/30/department_program_depth:5/15/funding_net_viability:25/25/eligibility_credential_alignment:10/15/degree_admissions_alignment:10/10/application_economics:0/5 | Insufficient evidence |
 | 3 | Northeastern University | Computer Science PhD | 70 | professor_alignment:20/30/department_program_depth:5/15/funding_net_viability:20/25/eligibility_credential_alignment:15/15/degree_admissions_alignment:10/10/application_economics:0/5 | Insufficient evidence |
 | 3 | University of Kentucky | Doctoral Degree in Computer Science | 70 | professor_alignment:20/30/department_program_depth:5/15/funding_net_viability:20/25/eligibility_credential_alignment:15/15/degree_admissions_alignment:10/10/application_economics:0/5 | Insufficient evidence |
+| 4 | University of Alabama at Birmingham | Ph.D. in Computer Science | 68 | professor_alignment:20/30/department_program_depth:5/15/funding_net_viability:20/25/eligibility_credential_alignment:10/15/degree_admissions_alignment:10/10/application_economics:3/5 | Insufficient evidence |
 | 4 | University of Illinois Chicago | PhD in Computer Science | 68 | professor_alignment:20/30/department_program_depth:5/15/funding_net_viability:20/25/eligibility_credential_alignment:10/15/degree_admissions_alignment:10/10/application_economics:3/5 | Insufficient evidence |
 | 4 | University of Illinois Urbana-Champaign | Computer Science PhD | 68 | professor_alignment:20/30/department_program_depth:5/15/funding_net_viability:20/25/eligibility_credential_alignment:10/15/degree_admissions_alignment:10/10/application_economics:3/5 | Insufficient evidence |
 | 4 | University of Michigan-Ann Arbor | Computer Science and Engineering PhD | 68 | professor_alignment:20/30/department_program_depth:5/15/funding_net_viability:20/25/eligibility_credential_alignment:10/15/degree_admissions_alignment:10/10/application_economics:3/5 | Insufficient evidence |
@@ -45,14 +46,14 @@ Tied totals share the same dense rank. Prestige and institution identity are not
 
 ## Admission calibration
 
-75 rows are `Insufficient evidence`; 5 carry an `Eligibility concern`. The source ledger contains formal requirements but no official cohort/selectivity evidence adequate for a strategic Plausible/Reach category. Published GPA minimums remain in a separate field and never create plausibility. No admission percentage is emitted.
+78 rows are `Insufficient evidence`; 5 carry an `Eligibility concern`. The source ledger contains formal requirements but no official cohort/selectivity evidence adequate for a strategic Plausible/Reach category. Published GPA minimums remain in a separate field and never create plausibility. No admission percentage is emitted.
 
 ## Acceptance checks
 
 | Assertion | Result |
 | --- | --- |
 | entire_serious_program_pool_recalculated | PASS |
-| latest_reentry_04_fully_recalculated | PASS |
+| latest_reentry_05_fully_recalculated | PASS |
 | exactly_six_components_per_program | PASS |
 | program_rows_reference_exact_component_evidence | PASS |
 | component_evidence_has_required_audit_metadata | PASS |
@@ -73,8 +74,8 @@ Tied totals share the same dense rank. Prestige and institution identity are not
 | required_output_schemas_exact | PASS |
 | no_institution_specific_score_constants | PASS |
 
-- Stage-specific verification: `python -m pytest tests/test_evidence_scoring.py -q` — 20 passed.
-- Full-suite boundary: `python -m pytest -q` — 73 passed; the two failures are the expected Stage 6 portfolio-coverage gaps for the nine new score rows.
+- Stage-specific verification: `python -m pytest tests/test_evidence_scoring.py -q` — 21 passed.
+- Full-suite boundary: `python -m pytest -q` — 77 passed; the two failures are the expected Stage 6 portfolio-coverage gaps for the three new score rows.
 
 ## Blockers
 
@@ -82,11 +83,11 @@ None prevented Stage 5 completion.
 
 ## Unresolved coverage
 
-- Stage 5 re-entry 04 recalculated 9 newly eligible routes. All 9 pass the professor gate. The direct funding gate passes for 1, and 1 clear every hard gate.
-- 54 programs lack direct source evidence strong enough for the funding hard gate.
+- Stage 5 re-entry 05 recalculated 3 newly eligible routes. All 3 pass the professor gate. The direct funding gate passes for 1, and 1 clear every hard gate.
+- 56 programs lack direct source evidence strong enough for the funding hard gate.
 - 21 programs lack a fully verified strong professor with exact-route supervision authority.
-- 21 programs have zero verified faculty-depth points; 59 have only one verified strong match and remain capped at 5 points.
-- 75 programs lack official cohort/selectivity evidence for strategic admission calibration.
+- 21 programs have zero verified faculty-depth points; 62 have only one verified strong match and remain capped at 5 points.
+- 78 programs lack official cohort/selectivity evidence for strategic admission calibration.
 - Offer-specific net funding, fees, health insurance, summers, and duration remain incomplete where identified in the component evidence.
-- The existing Stage 6 portfolio still covers the prior score pool; Stage 6 must be rebuilt against these 80 scores.
+- The existing Stage 6 portfolio still covers the prior score pool; Stage 6 must be rebuilt against these 83 scores.
 - Stage 6 must pressure-test only hard-gate survivors for a core portfolio; diagnostic totals cannot override a failed gate.
