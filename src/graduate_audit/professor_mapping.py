@@ -704,4 +704,94 @@ FACULTY_ROSTERS: dict[str, FacultyRoster] = {
             _c("Qing Charles Cao", "networked systems; cybersecurity; dependable computing"),
         ),
     ),
+    "University of Rochester": FacultyRoster(
+        "Department of Computer Science",
+        "https://www.cs.rochester.edu/people/faculty/index.html",
+        (
+            _c("Chen Ding", "compilers; program analysis; software performance; memory systems"),
+            _c("Michael L. Scott", "concurrent programming; distributed systems; programming languages"),
+            _c("Daniel Gildea", "natural language processing; trustworthy language systems; evaluation"),
+            _c("Henry Kautz", "knowledge representation; trustworthy AI; automated reasoning"),
+        ),
+    ),
+    "University of Maryland-Baltimore County": FacultyRoster(
+        "Department of Computer Science and Electrical Engineering",
+        "https://www.csee.umbc.edu/people/tenure-track-faculty/",
+        (
+            _c("Tim Finin", "knowledge representation; semantic web; trustworthy data systems"),
+            _c("Karuna Joshi", "cloud security; data governance; policy-based systems"),
+            _c("Naghmeh Karimi", "hardware and software security; trustworthy computing; verification"),
+            _c("Roberto Yus", "privacy; data management; mobile and pervasive systems"),
+        ),
+    ),
+    "University of California-Riverside": FacultyRoster(
+        "Department of Computer Science and Engineering",
+        "https://www1.cs.ucr.edu/people/faculty",
+        (
+            _c("Manu Sridharan", "program analysis; software engineering; programming languages"),
+            _c("Rajiv Gupta", "dynamic program analysis; compilers; debugging; software reliability"),
+            _c("Zhijia Zhao", "programming systems; compilers; performance; reliable software"),
+            _c("Heng Yin", "systems security; program analysis; malware and vulnerability analysis"),
+        ),
+    ),
+    "University of Houston": FacultyRoster(
+        "Department of Computer Science",
+        "https://www.uh.edu/nsm/computer-science/people/faculty/",
+        (
+            _c("Amin Alipour", "software testing; program analysis; empirical software engineering"),
+            _c("Weidong Shi", "software and systems security; trustworthy computing"),
+            _c("Rakesh Verma", "cybersecurity; trustworthy AI; language and security analytics"),
+            _c("Omprakash Gnawali", "networked systems; dependable software systems; IoT"),
+        ),
+    ),
+    "The University of Texas at Arlington": FacultyRoster(
+        "Department of Computer Science and Engineering",
+        "https://www.uta.edu/academics/schools-colleges/engineering/academics/departments/cse/faculty-directory",
+        (
+            _c("Allison Sullivan", "formal methods; software correctness; program verification"),
+            _c("Jiang Ming", "software security; program analysis; vulnerability detection"),
+            _c("Matthew Wright", "computer security; privacy; trustworthy systems"),
+            _c("Hong Jiang", "distributed systems; storage systems; reliable computing"),
+        ),
+    ),
+    "The University of Texas at San Antonio": FacultyRoster(
+        "Department of Computer Science",
+        "https://sciences.utsa.edu/computer-science/faculty/",
+        (
+            _c("Jianwei Niu", "software engineering; privacy; requirements; program analysis"),
+            _c("Rocky Slavin", "software security; program analysis; mobile privacy"),
+            _c("Mitra Bokaei Hosseini", "requirements engineering; privacy; trustworthy software"),
+            _c("Murtuza Jadliwala", "systems security; privacy; dependable mobile systems"),
+        ),
+    ),
+    "University of Iowa": FacultyRoster(
+        "Department of Computer Science",
+        "https://cs.uiowa.edu/people/faculty",
+        (
+            _c("Katherine Kosaian", "formal verification; proof assistants; automated reasoning"),
+            _c("J. Garrett Morris", "programming languages; type systems; formal logic"),
+            _c("Taylor Olson", "programming languages; formal methods; software correctness"),
+            _c("Rishab Nithyanand", "security; privacy; measurement; trustworthy online systems"),
+        ),
+    ),
+    "Clemson University": FacultyRoster(
+        "School of Computing",
+        "https://www.clemson.edu/cecas/departments/computing/people/",
+        (
+            _c("Mert Pese", "software and automotive security; reverse engineering; trustworthy systems"),
+            _c("Long Cheng", "cybersecurity; cloud and edge systems; privacy"),
+            _c("Jacob Sorber", "embedded systems; dependable computing; sensing systems"),
+            _c("Carlos Toxtli-Hernández", "human-centered software; collaborative systems; developer experience"),
+        ),
+    ),
+    "University of Manitoba": FacultyRoster(
+        "Department of Computer Science",
+        "https://umanitoba.ca/science/directory/computer-science",
+        (
+            _c("Tristan Miller", "natural language processing; automated reasoning; trustworthy AI"),
+            _c("Mengjun Hu", "cybersecurity; data systems; trustworthy machine learning"),
+            _c("Jimmy Zhu", "machine learning; software systems; reliable data analysis"),
+            _c("Shaiful Chowdhury", "software systems; artificial intelligence; data-driven computing"),
+        ),
+    ),
 }
