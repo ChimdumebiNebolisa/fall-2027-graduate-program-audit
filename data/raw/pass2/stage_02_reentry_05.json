@@ -1,0 +1,537 @@
+{
+  "trigger": "Stage 6 re-entry 04 returned to candidate discovery because the evidence-calibrated portfolio still had zero justified core applications.",
+  "scope": "A bounded fifth non-saturation pass for exact, previously unverified research routes; discovery evidence only, with no scoring or retention decision.",
+  "candidates": [
+    {
+      "institution_id": "us:ipeds:100858",
+      "institution_name": "Auburn University",
+      "country": "United States",
+      "region": "us",
+      "program_name": "PhD in Computer Science and Software Engineering",
+      "degree_type": "PhD",
+      "relevant_degree_route": "Research doctorate entered after a relevant bachelor's or master's degree and completed through advanced study and dissertation research",
+      "research_topic_clusters": ["repair_analysis", "systems_security", "ai_for_se"],
+      "exact_research_fit_signal": "The department lists software engineering, programming languages and environments, cyber security and privacy, distributed systems, and artificial intelligence among its active research areas.",
+      "preliminary_international_eligibility": "The program accepts applicants with a bachelor's or master's degree; applicant-specific prerequisite, GPA, English, and target-cycle requirements remain for Stage 3.",
+      "preliminary_funding_signal": "Qualifying graduate assistantships can carry stipends and tuition support, and competitive presidential fellowships include a stipend and tuition, but no program-wide award is promised.",
+      "official_program_url": "https://www.eng.auburn.edu/program/phd-computer-science-software-engineering.html",
+      "seed_adjacency": ["TerraProbe-adjacent", "Evidex-adjacent"],
+      "unresolved_fields": ["Fall 2027 cycle", "prerequisite and GPA review", "English requirement", "assistantship probability and renewal", "current faculty supervision"],
+      "evidence_confidence": "high",
+      "additional_discovery_paths": ["recognized_institution_record", "underrepresented_route_search"],
+      "sources": [
+        {
+          "source_id": "reentry05:auburn:program",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "exact doctorate and degree structure",
+          "title": "PhD in Computer Science and Software Engineering",
+          "url": "https://www.eng.auburn.edu/program/phd-computer-science-software-engineering.html",
+          "evidence_summary": "Official program page confirms the doctorate, bachelor's and master's entry routes, four-year study structure, and dissertation requirement.",
+          "limitations": "Degree structure does not establish admission, advisor capacity, or funding."
+        },
+        {
+          "source_id": "reentry05:auburn:research",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "current research-area fit",
+          "title": "Computer Science and Software Engineering Research",
+          "url": "https://eng.auburn.edu/csse/research/",
+          "evidence_summary": "Official department page lists software engineering, programming languages, security and privacy, distributed systems, and AI research.",
+          "limitations": "Area-level fit does not establish an available supervisor."
+        },
+        {
+          "source_id": "reentry05:auburn:funding",
+          "discovery_path": "underrepresented_route_search",
+          "evidence_role": "preliminary assistantship and fellowship mechanisms",
+          "title": "Tuition and Funding",
+          "url": "https://graduate.auburn.edu/admissions/tuition-funding/index.php",
+          "evidence_summary": "Official Graduate School page documents tuition support for qualifying assistantships and competitive presidential fellowships with stipend and tuition.",
+          "limitations": "Neither mechanism is a program-wide guarantee or an individual offer."
+        }
+      ]
+    },
+    {
+      "institution_id": "us:ipeds:176080",
+      "institution_name": "Mississippi State University",
+      "country": "United States",
+      "region": "us",
+      "program_name": "PhD in Computer Science",
+      "degree_type": "PhD",
+      "relevant_degree_route": "Direct-bachelor's research doctorate requiring a major professor, original research, dissertation, and defense",
+      "research_topic_clusters": ["repair_analysis", "systems_security", "trustworthy_ai"],
+      "exact_research_fit_signal": "The department identifies software engineering, systems and security, and artificial intelligence as graduate research areas and requires sustained dissertation research.",
+      "preliminary_international_eligibility": "A master's is not required and a relevant bachelor's can support entry; equivalency, English, prerequisite, and target-cycle requirements remain unverified.",
+      "preliminary_funding_signal": "Teaching assistantships publish stipend and tuition-waiver support and research assistantships are selected by faculty, but awards are competitive rather than universal.",
+      "official_program_url": "https://www.cse.msstate.edu/grad/phd-cs/",
+      "seed_adjacency": ["TerraProbe-adjacent", "Evidex-adjacent"],
+      "unresolved_fields": ["Fall 2027 cycle", "degree and prerequisite equivalency", "English requirement", "assistantship award and duration", "major-professor availability"],
+      "evidence_confidence": "high",
+      "additional_discovery_paths": ["recognized_institution_record", "underrepresented_route_search"],
+      "sources": [
+        {
+          "source_id": "reentry05:msstate:program",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "exact doctorate and direct-entry structure",
+          "title": "Ph.D. in Computer Science",
+          "url": "https://www.cse.msstate.edu/grad/phd-cs/",
+          "evidence_summary": "Official department page confirms direct entry after a bachelor's, no required prior master's, research milestones, and dissertation expectations.",
+          "limitations": "Program availability does not establish admission or a major professor."
+        },
+        {
+          "source_id": "reentry05:msstate:graduate",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "research-area and graduate-route fit",
+          "title": "Graduate Programs",
+          "url": "https://www.cse.msstate.edu/grad/",
+          "evidence_summary": "Official page identifies software engineering, systems and security, and AI as graduate research areas.",
+          "limitations": "Research-area coverage does not establish current advisor capacity."
+        },
+        {
+          "source_id": "reentry05:msstate:assistantships",
+          "discovery_path": "underrepresented_route_search",
+          "evidence_role": "preliminary assistantship support",
+          "title": "Assistantships",
+          "url": "https://www.cse.msstate.edu/assistantships/",
+          "evidence_summary": "Official department page describes teaching-assistant stipend and tuition-waiver support and faculty-selected research assistantships.",
+          "limitations": "Assistantships are competitive and coverage, fees, renewal, and duration remain unverified."
+        }
+      ]
+    },
+    {
+      "institution_id": "us:ipeds:106397",
+      "institution_name": "University of Arkansas",
+      "country": "United States",
+      "region": "us",
+      "program_name": "Ph.D. in Computer Science",
+      "degree_type": "PhD",
+      "relevant_degree_route": "Research doctorate open after a qualifying computer-science bachelor's and culminating in original dissertation research",
+      "research_topic_clusters": ["repair_analysis", "systems_security", "ai_for_se"],
+      "exact_research_fit_signal": "The joint electrical-engineering and computer-science department offers research in computing systems, software, cybersecurity, and AI-adjacent areas with a dissertation route.",
+      "preliminary_international_eligibility": "The catalog accepts a qualifying computer-science bachelor's and publishes a 3.0 GPA floor; GRE, English, prerequisite, and foreign-equivalency application remain unresolved.",
+      "preliminary_funding_signal": "The college publishes doctoral fellowships and graduate assistantships, including a Computer Science PhD monthly rate, but awards and tuition coverage are competitive and offer-specific.",
+      "official_program_url": "https://catalog.uark.edu/graduatecatalog/programsofstudy/computerscienceandcomputerengineeringcsce/",
+      "seed_adjacency": ["TerraProbe-adjacent", "Evidex-adjacent"],
+      "unresolved_fields": ["Fall 2027 cycle", "GRE policy", "prerequisite and degree equivalency", "English requirement", "assistantship or fellowship award", "current faculty supervision"],
+      "evidence_confidence": "high",
+      "additional_discovery_paths": ["recognized_institution_record", "underrepresented_route_search"],
+      "sources": [
+        {
+          "source_id": "reentry05:uark:catalog",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "exact doctorate, entry route, and dissertation",
+          "title": "Computer Science and Computer Engineering Graduate Programs",
+          "url": "https://catalog.uark.edu/graduatecatalog/programsofstudy/computerscienceandcomputerengineeringcsce/",
+          "evidence_summary": "Official catalog confirms the Computer Science PhD, qualifying bachelor's entry, minimum GPA, doctoral research, and dissertation requirements.",
+          "limitations": "Catalog requirements must be checked against the target cycle and applicant transcript."
+        },
+        {
+          "source_id": "reentry05:uark:graduate",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "departmental graduate and research context",
+          "title": "Electrical Engineering and Computer Science Graduate Programs",
+          "url": "https://engineering.uark.edu/electrical-engineering-computer-science/graduate.php",
+          "evidence_summary": "Official department page confirms its graduate research environment and admissions route.",
+          "limitations": "Department-level context does not establish individual supervisor availability."
+        },
+        {
+          "source_id": "reentry05:uark:funding",
+          "discovery_path": "underrepresented_route_search",
+          "evidence_role": "preliminary fellowship and assistantship support",
+          "title": "Tuition and Aid",
+          "url": "https://engineering.uark.edu/tuition-and-aid/",
+          "evidence_summary": "Official college page publishes doctoral fellowships and assistantship mechanisms, including a Computer Science PhD monthly assistantship rate.",
+          "limitations": "Published mechanisms and rates are not an award, complete net-cost calculation, or renewal commitment."
+        }
+      ]
+    },
+    {
+      "institution_id": "us:ipeds:100663",
+      "institution_name": "University of Alabama at Birmingham",
+      "country": "United States",
+      "region": "us",
+      "program_name": "Ph.D. in Computer Science",
+      "degree_type": "PhD",
+      "relevant_degree_route": "Direct-bachelor's research doctorate requiring advanced coursework, original research, dissertation, and defense",
+      "research_topic_clusters": ["repair_analysis", "systems_security", "trustworthy_ai"],
+      "exact_research_fit_signal": "The program covers software engineering, programming languages and formal verification, security, cloud and distributed computing, and AI, with current doctoral opportunities in type systems and verification.",
+      "preliminary_international_eligibility": "A relevant bachelor's supports direct entry and the department describes a typical 3.5 major GPA; the applicant's major GPA, prerequisites, English treatment, and target-cycle requirements remain unverified.",
+      "preliminary_funding_signal": "The department says a majority of admitted doctoral students receive RA or TA offers and describes full financial aid for RAs, but support is not universal and must be confirmed in an offer.",
+      "official_program_url": "https://www.uab.edu/cas/computerscience/graduate-programs/doctoral-program",
+      "seed_adjacency": ["TerraProbe-adjacent", "Evidex-adjacent"],
+      "unresolved_fields": ["Fall 2027 cycle", "major GPA calculation", "prerequisite mapping", "English requirement", "offer-specific funding and renewal", "current faculty supervision"],
+      "evidence_confidence": "high",
+      "additional_discovery_paths": ["recognized_institution_record", "underrepresented_route_search"],
+      "sources": [
+        {
+          "source_id": "reentry05:uab:program",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "exact doctorate and direct-entry research structure",
+          "title": "Doctoral Program",
+          "url": "https://www.uab.edu/cas/computerscience/graduate-programs/doctoral-program",
+          "evidence_summary": "Official department page confirms bachelor's entry, doctoral research, dissertation, and program duration.",
+          "limitations": "The route does not establish individual admission or funding."
+        },
+        {
+          "source_id": "reentry05:uab:opportunities",
+          "discovery_path": "current_faculty_topic_signal",
+          "evidence_role": "current programming-languages and verification fit",
+          "title": "Doctoral Student Opportunities",
+          "url": "https://www.uab.edu/cas/computerscience/graduate-programs/doctoral-program/doctoral-student-opportunities",
+          "evidence_summary": "Official page lists current doctoral opportunities in programming languages, formal verification, and type systems.",
+          "limitations": "A recruiting notice may close and does not establish admission or program-wide funding."
+        },
+        {
+          "source_id": "reentry05:uab:funding",
+          "discovery_path": "underrepresented_route_search",
+          "evidence_role": "preliminary doctoral assistantship support",
+          "title": "Financial Aid",
+          "url": "https://www.uab.edu/cas/computerscience/graduate-programs/financial-aid",
+          "evidence_summary": "Official department page says most admitted doctoral students are offered RA or TA support and describes RA financial-aid coverage.",
+          "limitations": "Most is not all; stipend, fees, duration, and renewal remain offer-specific."
+        }
+      ]
+    },
+    {
+      "institution_id": "ca:dli:O19359011007",
+      "institution_name": "Concordia University",
+      "country": "Canada",
+      "region": "canada",
+      "program_name": "Software Engineering (MASc)",
+      "degree_type": "Thesis or research master's",
+      "relevant_degree_route": "Research-intensive 45-credit MASc with a 29-credit thesis in software engineering",
+      "research_topic_clusters": ["repair_analysis", "systems_security", "ai_for_se"],
+      "exact_research_fit_signal": "The thesis MASc supports software systems research in areas including software quality, security, cloud and distributed systems, and intelligent software engineering.",
+      "preliminary_international_eligibility": "Applicants may hold a high-standing bachelor's in software engineering, computer science, or a related area; transcript-level equivalency and English requirements remain unverified.",
+      "preliminary_funding_signal": "The program says funding is generally available and most students receive awards, teaching assistantships, or research assistantships, but no individual package is guaranteed.",
+      "official_program_url": "https://www.concordia.ca/academics/graduate/software-engineering-masc.html",
+      "seed_adjacency": ["TerraProbe-adjacent", "Evidex-adjacent"],
+      "unresolved_fields": ["Fall 2027 cycle", "degree and GPA equivalency", "English requirement", "supervisor requirement and capacity", "offer-specific funding and net cost"],
+      "evidence_confidence": "high",
+      "additional_discovery_paths": ["recognized_institution_record", "research_masters_or_scholarship_search"],
+      "sources": [
+        {
+          "source_id": "reentry05:concordia:program",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "exact thesis MASc, admission, and preliminary funding",
+          "title": "Software Engineering (MASc)",
+          "url": "https://www.concordia.ca/academics/graduate/software-engineering-masc.html",
+          "evidence_summary": "Official program page confirms the 45-credit research MASc, 29-credit thesis, eligible prior degrees, and generally available award or assistantship mechanisms.",
+          "limitations": "General availability and support for most students are not an individual offer."
+        },
+        {
+          "source_id": "reentry05:concordia:research",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "department research-area fit",
+          "title": "Computer Science and Software Engineering Research",
+          "url": "https://www.concordia.ca/ginacody/computer-science-software-eng/research.html",
+          "evidence_summary": "Official department page maps current software-engineering, security, systems, and AI research areas relevant to the seeds.",
+          "limitations": "Area-level fit does not establish thesis supervision or capacity."
+        }
+      ]
+    },
+    {
+      "institution_id": "ca:dli:O19395535729",
+      "institution_name": "McMaster University",
+      "country": "Canada",
+      "region": "canada",
+      "program_name": "Software Engineering (MASc)",
+      "degree_type": "Thesis or research master's",
+      "relevant_degree_route": "Two-year research MASc with a supervised thesis in software engineering",
+      "research_topic_clusters": ["repair_analysis", "systems_security", "trustworthy_ai"],
+      "exact_research_fit_signal": "The program names software quality, software security, software theory, and dependable systems as research directions and culminates in a thesis.",
+      "preliminary_international_eligibility": "An honours bachelor's in engineering, science, or an equivalent field with at least B+ standing can support application; equivalency, prerequisites, and English treatment remain for Stage 3.",
+      "preliminary_funding_signal": "The department's application FAQ says full-time MASc and MSc students receive funding for 20 months, subject to research fit, available support, admission, and offer terms.",
+      "official_program_url": "https://www.eng.mcmaster.ca/cas/degree-options/software-engineering-masc/",
+      "seed_adjacency": ["TerraProbe-adjacent", "Evidex-adjacent"],
+      "unresolved_fields": ["Fall 2027 cycle", "B+ and degree equivalency", "English requirement", "supervisor match", "20-month package amount, fees, and net cost"],
+      "evidence_confidence": "high",
+      "additional_discovery_paths": ["recognized_institution_record", "research_masters_or_scholarship_search"],
+      "sources": [
+        {
+          "source_id": "reentry05:mcmaster:program",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "exact thesis MASc, entry criteria, and fit",
+          "title": "Software Engineering — MASc",
+          "url": "https://www.eng.mcmaster.ca/cas/degree-options/software-engineering-masc/",
+          "evidence_summary": "Official program page confirms the two-year thesis MASc, B+ entry expectation, and research in software quality, security, and theory.",
+          "limitations": "Meeting the stated threshold does not establish admission or supervisor capacity."
+        },
+        {
+          "source_id": "reentry05:mcmaster:funding",
+          "discovery_path": "research_masters_or_scholarship_search",
+          "evidence_role": "preliminary research-master's funding duration",
+          "title": "Graduate Computing and Software Application FAQ",
+          "url": "https://www.eng.mcmaster.ca/app/uploads/2024/03/Application_FAQ_Graduate_Computing-and-Software.pdf",
+          "evidence_summary": "Official department FAQ describes 20 months of funding for full-time MASc and MSc students and the role of research fit and available funding.",
+          "limitations": "The source does not establish the applicant's package, full net cost, or Fall 2027 terms."
+        }
+      ]
+    },
+    {
+      "institution_id": "ca:dli:O18886830282",
+      "institution_name": "University of Calgary",
+      "country": "Canada",
+      "region": "canada",
+      "program_name": "MSc Thesis-based in Computer Science — Software Engineering Specialization",
+      "degree_type": "Thesis or research master's",
+      "relevant_degree_route": "Thesis-based Computer Science MSc with an explicit Software Engineering specialization",
+      "research_topic_clusters": ["repair_analysis", "systems_security", "ai_for_se"],
+      "exact_research_fit_signal": "The specialization creates a distinct software-engineering research route within the thesis MSc and supports research on software construction, quality, analysis, and systems.",
+      "preliminary_international_eligibility": "The calendar lists a four-year computer-science bachelor's, 3.0 GPA over the last two years, and three years of software-industry experience; each condition requires applicant-specific verification.",
+      "preliminary_funding_signal": "The department publishes a CAD 24,000 annual minimum for MSc thesis students for two years and an international differential-fee award, but the complete package and net cost remain unverified.",
+      "official_program_url": "https://calendar.ucalgary.ca/programs/CPSCSEMSCT/admissions-cMwRI",
+      "seed_adjacency": ["TerraProbe-adjacent", "Evidex-adjacent"],
+      "unresolved_fields": ["Fall 2027 cycle", "software-industry experience interpretation", "last-two-years GPA", "degree and English equivalency", "supervisor match", "funding components and net cost"],
+      "evidence_confidence": "high",
+      "additional_discovery_paths": ["recognized_institution_record", "research_masters_or_scholarship_search", "underrepresented_route_search"],
+      "sources": [
+        {
+          "source_id": "reentry05:calgary:calendar",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "exact specialization and admission criteria",
+          "title": "Computer Science MSc Thesis-based — Software Engineering Specialization",
+          "url": "https://calendar.ucalgary.ca/programs/CPSCSEMSCT/admissions-cMwRI",
+          "evidence_summary": "Official calendar confirms the distinct thesis-based Software Engineering specialization and publishes degree, GPA, and experience requirements.",
+          "limitations": "Applicant-specific equivalency and the meaning of the experience condition remain unresolved."
+        },
+        {
+          "source_id": "reentry05:calgary:admission-funding",
+          "discovery_path": "research_masters_or_scholarship_search",
+          "evidence_role": "supervision and preliminary guaranteed funding",
+          "title": "Computer Science Graduate Admission Requirements",
+          "url": "https://science.ucalgary.ca/computer-science/future-students/graduate/admission-requirements",
+          "evidence_summary": "Official department page describes competitive thesis admission, supervisor considerations, a two-year MSc minimum funding level, and international differential-fee support.",
+          "limitations": "The page does not establish the applicant's supervisor, deductions, fees, or living-cost sufficiency."
+        }
+      ]
+    },
+    {
+      "institution_id": "ca:dli:O19425660270",
+      "institution_name": "University of Regina",
+      "country": "Canada",
+      "region": "canada",
+      "program_name": "Master of Applied Science in Software Systems Engineering",
+      "degree_type": "Thesis or research master's",
+      "relevant_degree_route": "Research-based software-systems MASc requiring supervised thesis research",
+      "research_topic_clusters": ["systems_security", "repair_analysis", "trustworthy_ai"],
+      "exact_research_fit_signal": "The program identifies software systems, cloud and mobile computing, security, AI, and related engineering topics and requires a substantial supervised thesis.",
+      "preliminary_international_eligibility": "The program accepts relevant engineering or computing preparation, but degree equivalency, GPA, prerequisites, English, and supervisor conditions require Stage 3 verification.",
+      "preliminary_funding_signal": "The university lists teaching assistantships, research grants, and scholarships as possible support mechanisms, without a universal program-level guarantee.",
+      "official_program_url": "https://www.uregina.ca/academics/programs/engineering/masters-phd-software-systems-engineering.html",
+      "seed_adjacency": ["TerraProbe-adjacent", "Evidex-adjacent"],
+      "unresolved_fields": ["Fall 2027 cycle", "degree and prerequisite equivalency", "English requirement", "supervisor availability", "funding award, duration, and net cost"],
+      "evidence_confidence": "high",
+      "additional_discovery_paths": ["recognized_institution_record", "research_masters_or_scholarship_search"],
+      "sources": [
+        {
+          "source_id": "reentry05:regina:program",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "exact MASc, topic fit, and support mechanisms",
+          "title": "Software Systems Engineering Graduate Programs",
+          "url": "https://www.uregina.ca/academics/programs/engineering/masters-phd-software-systems-engineering.html",
+          "evidence_summary": "Official program page confirms the MASc and current software systems, cloud, security, and AI research context and lists possible assistantship, grant, and scholarship support.",
+          "limitations": "Support mechanisms are not an individual award and faculty capacity is not established."
+        },
+        {
+          "source_id": "reentry05:regina:calendar",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "research-thesis requirements",
+          "title": "Software Systems Engineering Graduate Calendar",
+          "url": "https://www.uregina.ca/graduate-studies-research/graduate-calendar/all-programs/engg-sse.html",
+          "evidence_summary": "Official graduate calendar confirms the research-oriented MASc and its supervised thesis-credit requirement.",
+          "limitations": "Calendar structure does not resolve admission, supervision, or funding."
+        }
+      ]
+    },
+    {
+      "institution_id": "ror:01c1w6d29",
+      "institution_name": "University of Bamberg",
+      "country": "Germany",
+      "region": "europe",
+      "program_name": "M.Sc. International Software Systems Science",
+      "degree_type": "Thesis or research master's",
+      "relevant_degree_route": "English-taught 120-ECTS research-oriented software-systems master's with a final thesis",
+      "research_topic_clusters": ["repair_analysis", "systems_security", "trustworthy_ai"],
+      "exact_research_fit_signal": "The curriculum emphasizes software engineering, programming languages, formal analysis, privacy and security, distributed systems, and research preparation through projects and thesis work.",
+      "preliminary_international_eligibility": "A relevant three-year bachelor's can qualify, but German-grade conversion, 115 subject ECTS, detailed mathematics/programming/systems coverage, B2 English, and possible GRE or GATE conditions need mapping.",
+      "preliminary_funding_signal": "The university states the program has no tuition, but semester charges, living costs, and a viable scholarship or employment path remain unresolved.",
+      "official_program_url": "https://www.uni-bamberg.de/en/ma-isosysc/",
+      "seed_adjacency": ["TerraProbe-adjacent", "Evidex-adjacent"],
+      "unresolved_fields": ["Fall 2027 cycle", "German grade conversion", "115-ECTS curriculum mapping", "GRE or GATE applicability", "English evidence", "living-cost funding", "thesis supervision"],
+      "evidence_confidence": "high",
+      "additional_discovery_paths": ["recognized_institution_record", "research_masters_or_scholarship_search", "underrepresented_route_search"],
+      "sources": [
+        {
+          "source_id": "reentry05:bamberg:program",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "exact English research master's",
+          "title": "M.Sc. International Software Systems Science",
+          "url": "https://www.uni-bamberg.de/en/ma-isosysc/",
+          "evidence_summary": "Official program page confirms the English 120-ECTS software-systems master's, research orientation, and thesis pathway.",
+          "limitations": "Program presence does not establish applicant eligibility or living-cost funding."
+        },
+        {
+          "source_id": "reentry05:bamberg:admission",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "international eligibility detail",
+          "title": "International Software Systems Science Admission",
+          "url": "https://www.uni-bamberg.de/en/ma-isosysc/admission/",
+          "evidence_summary": "Official page publishes grade, subject-ECTS, mathematics, programming, systems, English, and conditional GRE or GATE requirements.",
+          "limitations": "The applicant's transcript and grade must be converted and mapped course by course."
+        },
+        {
+          "source_id": "reentry05:bamberg:reasons",
+          "discovery_path": "research_masters_or_scholarship_search",
+          "evidence_role": "research projects and no-tuition signal",
+          "title": "Good Reasons for International Software Systems Science",
+          "url": "https://www.uni-bamberg.de/en/ma-isosysc/good-reasons/",
+          "evidence_summary": "Official page identifies research-project access and no tuition as program features.",
+          "limitations": "No tuition is not funding for living costs, semester charges, or relocation."
+        }
+      ]
+    },
+    {
+      "institution_id": "ror:05n911h24",
+      "institution_name": "Technische Universität Darmstadt",
+      "country": "Germany",
+      "region": "europe",
+      "program_name": "M.Sc. Computer Science",
+      "degree_type": "Thesis or research master's",
+      "relevant_degree_route": "English-taught 120-credit research-oriented Computer Science master's with an independent thesis",
+      "research_topic_clusters": ["systems_security", "repair_analysis", "trustworthy_ai"],
+      "exact_research_fit_signal": "The program offers specialization across distributed computing, software and systems, security, AI, and formal foundations and culminates in independent master's research.",
+      "preliminary_international_eligibility": "A relevant 180-ECTS bachelor's and approximately 60 credits of equivalent computer-science competencies are expected; curriculum equivalency, English C1 evidence, and any entrance examination remain unresolved.",
+      "preliminary_funding_signal": "No program-level living-cost funding commitment was established; semester charges, living costs, scholarships, and employment feasibility require Stage 3 verification.",
+      "official_program_url": "https://www.informatik.tu-darmstadt.de/studium_fb20/im_studium/studiengaenge_liste/computer_science_msc.en.jsp",
+      "seed_adjacency": ["TerraProbe-adjacent", "Evidex-adjacent"],
+      "unresolved_fields": ["Fall 2027 cycle", "60-credit competency mapping", "English C1 evidence", "possible entrance examination", "living-cost funding", "thesis supervision"],
+      "evidence_confidence": "high",
+      "additional_discovery_paths": ["recognized_institution_record", "research_masters_or_scholarship_search", "underrepresented_route_search"],
+      "sources": [
+        {
+          "source_id": "reentry05:darmstadt:program",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "exact English research master's and fit",
+          "title": "M.Sc. Computer Science",
+          "url": "https://www.informatik.tu-darmstadt.de/studium_fb20/im_studium/studiengaenge_liste/computer_science_msc.en.jsp",
+          "evidence_summary": "Official department page confirms the English 120-credit research-oriented degree, specialization areas, and master's thesis.",
+          "limitations": "Degree structure does not establish eligibility, funding, or thesis supervision."
+        },
+        {
+          "source_id": "reentry05:darmstadt:international",
+          "discovery_path": "research_masters_or_scholarship_search",
+          "evidence_role": "international application and English evidence",
+          "title": "International Application and Admission",
+          "url": "https://www.tu-darmstadt.de/studieren/studieninteressierte/internationale_studieninteressierte/bewerbung_und_zulassung_international/index.en.jsp",
+          "evidence_summary": "Official university page documents international application procedures and English-language evidence routes.",
+          "limitations": "General international guidance does not complete program-specific curriculum equivalency or funding review."
+        }
+      ]
+    },
+    {
+      "institution_id": "ror:03bnmw459",
+      "institution_name": "University of Potsdam",
+      "country": "Germany",
+      "region": "europe",
+      "program_name": "M.Sc. Computer Science",
+      "degree_type": "Thesis or research master's",
+      "relevant_degree_route": "English-taught 120-credit Computer Science master's delivered by the joint Digital Engineering Faculty with a final research thesis",
+      "research_topic_clusters": ["repair_analysis", "systems_security", "trustworthy_ai"],
+      "exact_research_fit_signal": "The program includes a Systems track with software engineering and quality, security, data and AI options and is embedded in the University of Potsdam–HPI research environment.",
+      "preliminary_international_eligibility": "A relevant computer-science bachelor's and program-specific academic and English evidence are required; ECTS mapping, grade conversion, language proof, and selection remain unresolved.",
+      "preliminary_funding_signal": "The consecutive master's has no tuition, but semester fees, living costs, and scholarship or employment support are not yet established for the applicant.",
+      "official_program_url": "https://www.uni-potsdam.de/en/studium/what-to-study/master/computer-science",
+      "seed_adjacency": ["TerraProbe-adjacent", "Evidex-adjacent"],
+      "unresolved_fields": ["Fall 2027 cycle", "ECTS and grade mapping", "English evidence", "selection outcome", "living-cost funding", "thesis supervision"],
+      "evidence_confidence": "high",
+      "additional_discovery_paths": ["recognized_institution_record", "research_masters_or_scholarship_search", "underrepresented_route_search"],
+      "sources": [
+        {
+          "source_id": "reentry05:potsdam:program",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "exact English research master's and fit",
+          "title": "Computer Science M.Sc.",
+          "url": "https://www.uni-potsdam.de/en/studium/what-to-study/master/computer-science",
+          "evidence_summary": "Official university page confirms the English 120-credit master's, joint Digital Engineering Faculty, research tracks, software-engineering outcomes, and thesis route.",
+          "limitations": "Program content does not establish admission, supervision, or living-cost support."
+        },
+        {
+          "source_id": "reentry05:potsdam:hpi",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "joint-faculty curriculum and systems fit",
+          "title": "Computer Science M.Sc.",
+          "url": "https://hpi.de/en/studies/computer-science-msc/",
+          "evidence_summary": "Official HPI page documents the current joint master's and its Systems, Data, and Foundations research tracks.",
+          "limitations": "Track availability does not establish a thesis advisor or admission."
+        },
+        {
+          "source_id": "reentry05:potsdam:costs",
+          "discovery_path": "research_masters_or_scholarship_search",
+          "evidence_role": "no-tuition and cost constraint",
+          "title": "Costs at a Glance",
+          "url": "https://www.uni-potsdam.de/en/studium/studying/financing-funding-housing/costs-at-a-glance",
+          "evidence_summary": "Official university page states that consecutive master's programs do not charge tuition and identifies semester and living-cost obligations.",
+          "limitations": "No scholarship, employment, or sufficient living-cost funding path is established."
+        }
+      ]
+    },
+    {
+      "institution_id": "ror:01qrts582",
+      "institution_name": "Rheinland-Pfälzische Technische Universität Kaiserslautern-Landau",
+      "country": "Germany",
+      "region": "europe",
+      "program_name": "M.Sc. Computer Science",
+      "degree_type": "Thesis or research master's",
+      "relevant_degree_route": "English-taught 120-ECTS consecutive Computer Science master's preparing students for independent research and including a 30-ECTS thesis",
+      "research_topic_clusters": ["repair_analysis", "systems_security", "trustworthy_ai"],
+      "exact_research_fit_signal": "The degree permits concentration in software engineering, programming foundations, distributed systems, security, and AI and explicitly prepares students for independent computer-science research.",
+      "preliminary_international_eligibility": "A substantially equivalent computer-science bachelor's is expected; curriculum equivalency, grade conversion, English evidence, document evaluation, and target-cycle terms remain unresolved.",
+      "preliminary_funding_signal": "The English master's is listed without tuition, while university fees and living costs remain; no program-wide scholarship or living-cost guarantee was established.",
+      "official_program_url": "https://rptu.de/studienangebot/22777/Computer_Science-Computer_Science-master",
+      "seed_adjacency": ["TerraProbe-adjacent", "Evidex-adjacent"],
+      "unresolved_fields": ["Fall 2027 cycle", "computer-science curriculum equivalency", "grade conversion", "English evidence", "certificate evaluation and fees", "living-cost funding", "thesis supervision"],
+      "evidence_confidence": "high",
+      "additional_discovery_paths": ["recognized_institution_record", "research_masters_or_scholarship_search", "underrepresented_route_search"],
+      "sources": [
+        {
+          "source_id": "reentry05:rptu:program",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "exact English master's and independent-research route",
+          "title": "M.Sc. Computer Science",
+          "url": "https://rptu.de/studienangebot/22777/Computer_Science-Computer_Science-master",
+          "evidence_summary": "Official program listing confirms the English, four-semester, 120-ECTS Computer Science master's and preparation for independent research.",
+          "limitations": "The listing does not establish applicant eligibility, supervision, or funding."
+        },
+        {
+          "source_id": "reentry05:rptu:regulations",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "research study and thesis structure",
+          "title": "Computer Science Master's Examination Regulations",
+          "url": "https://www.cs.rptu.de/en/studium/studierende/ordnungen/mpo/MasterFPO_2016_07_29_en.pdf",
+          "evidence_summary": "Official regulations document the research-study structure and 30-credit master's thesis for Computer Science pathways.",
+          "limitations": "Regulations do not establish current admission or financial support."
+        },
+        {
+          "source_id": "reentry05:rptu:international",
+          "discovery_path": "research_masters_or_scholarship_search",
+          "evidence_role": "international application route",
+          "title": "Prospective Master Students",
+          "url": "https://rptu.de/en/international/master/prospective-students",
+          "evidence_summary": "Official university page confirms the international application pathway for English-taught master's programs at Kaiserslautern.",
+          "limitations": "General guidance does not resolve program equivalency, costs, or scholarship support."
+        }
+      ]
+    }
+  ],
+  "false_negative_audits": [
+    {
+      "institution_id": "us:ipeds:100663",
+      "exclusion_reason_category": "registry_only_signals_not_promoted_to_exact_program_review",
+      "original_supporting_evidence": "UAB appeared only through mechanical IPEDS signals, although current official pages establish a direct-entry Computer Science PhD, seed-relevant programming-languages and verification work, and majority-but-not-universal doctoral assistantship support."
+    },
+    {
+      "institution_id": "ror:01c1w6d29",
+      "exclusion_reason_category": "outside_bounded_positive_seed_screen",
+      "original_supporting_evidence": "Bamberg's exact English International Software Systems Science MSc was absent from the bounded funnel despite official evidence of a research-oriented software-systems curriculum, detailed international eligibility rules, research projects, and no tuition."
+    }
+  ]
+}

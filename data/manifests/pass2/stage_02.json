@@ -2,20 +2,20 @@
   "manifest_version": "1.0",
   "schema_version": "2.0",
   "stage": 2,
-  "run_type": "discovery_reentry_04",
-  "name": "Rebuild the high-recall candidate funnel — discovery re-entry 04",
+  "run_type": "discovery_reentry_05",
+  "name": "Rebuild the high-recall candidate funnel — discovery re-entry 05",
   "status": "complete",
   "decision": "PASS",
   "triggered_by_stage": 6,
-  "source_commit_before_stage": "39364e672e13a95b70fb9942029f210d8844186a",
-  "started_at": "2026-09-11T00:08:44.437837+00:00",
-  "completed_at": "2026-09-11T00:08:50.308267+00:00",
+  "source_commit_before_stage": "1d9cd5d2fc8e2403e7dfc12dcfa12c30f548d3c0",
+  "started_at": "2026-09-11T01:01:17.816269+00:00",
+  "completed_at": "2026-09-11T01:01:29.982710+00:00",
   "inputs": [
     {
       "path": "data/manifests/pass2/stage_06.json",
-      "sha256": "b3b77b368dea3a7be2a74fc03d5976ea6c47f46178112cb8efe390e5d0bc1066",
-      "bytes": 7021,
-      "modified_at": "2026-09-10T23:50:10.123248+00:00",
+      "sha256": "cdac999d4d99d12fb266b47b56c15a4c6771d11b8a9ad004857855e100c388ac",
+      "bytes": 7262,
+      "modified_at": "2026-09-11T00:47:53.691080+00:00",
       "row_count": null
     },
     {
@@ -47,6 +47,13 @@
       "row_count": null
     },
     {
+      "path": "data/raw/pass2/stage_02_reentry_05.json",
+      "sha256": "be6d90c6454584e0929e003d7e9fbbdcaac681dba8979a6b38198c9208e67ffe",
+      "bytes": 41638,
+      "modified_at": "2026-09-11T01:00:11.453037+00:00",
+      "row_count": null
+    },
+    {
       "path": "data/processed/regions/us/institution_universe.csv",
       "sha256": "8dd1467f5177cdc93457dc49858166e78267911c93064ffcf19d27d13a6d3168",
       "bytes": 1727819,
@@ -71,44 +78,44 @@
   "outputs": [
     {
       "path": "data/processed/pass2/candidate_program_funnel.csv",
-      "sha256": "23707b5a308314827804779ec253d72fd9bfe012111e58154d79c06bc53710c9",
-      "bytes": 2368446,
-      "modified_at": "2026-09-11T00:08:50.273649+00:00",
-      "row_count": 2013
+      "sha256": "6e3ecc31792c735cd282ac9860959c1984118b681245bc953f3f1cdf37634013",
+      "bytes": 2388092,
+      "modified_at": "2026-09-11T01:01:29.945445+00:00",
+      "row_count": 2025
     },
     {
       "path": "data/processed/pass2/discovery_source_yield.csv",
-      "sha256": "d2b9ee7cd9c2dcd7914ef2ad8b842d9f555478e7171142be696a30bd6aa0d0be",
-      "bytes": 4889,
-      "modified_at": "2026-09-11T00:08:50.280173+00:00",
+      "sha256": "aef960d85c3d99333f87507f417fbb4a2269aebb44f5f6c773433345910927cc",
+      "bytes": 5640,
+      "modified_at": "2026-09-11T01:01:29.951523+00:00",
       "row_count": 9
     },
     {
       "path": "data/processed/pass2/exclusion_sample_audit.csv",
-      "sha256": "763be5ecc5fa787aecdbe519b6ecf97c182f17c30ec4e4dc44ce1aede11f1762",
-      "bytes": 34110,
-      "modified_at": "2026-09-11T00:08:50.287708+00:00",
-      "row_count": 41
+      "sha256": "45a0df1ca6e7682de55c3c4963df4f8a5c0e49327d1a0f2d1fa92eb23fe77427",
+      "bytes": 36236,
+      "modified_at": "2026-09-11T01:01:29.957724+00:00",
+      "row_count": 43
     },
     {
-      "path": "data/processed/pass2/stage_02_reentry_04_candidates.csv",
-      "sha256": "d6fe4a712030462e8c4910b18ddc6283fca1df0ba807b0aaad602087ac5b7b04",
-      "bytes": 20980,
-      "modified_at": "2026-09-11T00:08:48.571655+00:00",
+      "path": "data/processed/pass2/stage_02_reentry_05_candidates.csv",
+      "sha256": "8d77320b7e53e9ce6ba9c949e84917a4306055f518e6aa0c3dab49ebcd5f0735",
+      "bytes": 21215,
+      "modified_at": "2026-09-11T01:01:22.275733+00:00",
       "row_count": 12
     },
     {
-      "path": "data/processed/pass2/stage_02_reentry_04_sources.csv",
-      "sha256": "f18dd625e8b970308e4b6c0968e0f60b6723e8d3c18c7d4ef42c95152f087588",
-      "bytes": 14701,
-      "modified_at": "2026-09-11T00:08:48.581298+00:00",
-      "row_count": 27
+      "path": "data/processed/pass2/stage_02_reentry_05_sources.csv",
+      "sha256": "57004d7a69d9c96782e7649133afc717970bf3afaf78a7f8b404558bf273e8f9",
+      "bytes": 16488,
+      "modified_at": "2026-09-11T01:01:22.283313+00:00",
+      "row_count": 31
     },
     {
       "path": "reports/pass2/02_candidate_funnel.md",
-      "sha256": "423d7fa50594b04e0373fcfc0821382f56d9b6e7b28c10a36fad04f57ffe3937",
-      "bytes": 11887,
-      "modified_at": "2026-09-11T00:08:50.295741+00:00",
+      "sha256": "d1a158c3eca936ca63af96ecf622a5c02c3c73a1bdae82809c2a780b5e0d9253",
+      "bytes": 12449,
+      "modified_at": "2026-09-11T01:01:29.968471+00:00",
       "row_count": null
     }
   ],
@@ -142,6 +149,13 @@
       "row_count": null
     },
     {
+      "path": "data/raw/pass2/stage_02_reentry_05.json",
+      "sha256": "be6d90c6454584e0929e003d7e9fbbdcaac681dba8979a6b38198c9208e67ffe",
+      "bytes": 41638,
+      "modified_at": "2026-09-11T01:00:11.453037+00:00",
+      "row_count": null
+    },
+    {
       "path": "src/graduate_audit/candidate_reentry.py",
       "sha256": "908a93f0c5a2a0f2b46d66add18012ef7022e6962974515b84841910e5254d86",
       "bytes": 13796,
@@ -150,65 +164,65 @@
     },
     {
       "path": "scripts/build_stage_02_reentry.py",
-      "sha256": "26ec81b9d77484356259dd7b6456de254f1b39126568caa5202fb7e9726106e0",
-      "bytes": 33410,
-      "modified_at": "2026-09-11T00:08:34.390266+00:00",
+      "sha256": "39e287c66068c95acd730e2c305b56c4295d19b1dc4e168785c70cd24fb3d9b3",
+      "bytes": 33919,
+      "modified_at": "2026-09-11T01:00:39.294622+00:00",
       "row_count": null
     },
     {
       "path": "tests/test_candidate_reentry.py",
-      "sha256": "c685e5cd8b15c57ecdff9c21de705cfdceaae1ba60862c11d9fc14e10dfdfa96",
-      "bytes": 3838,
-      "modified_at": "2026-09-11T00:01:05.410932+00:00",
+      "sha256": "b2f96e04667421c9fe01986a2639563d29505c933572378f835f460c0846e1ce",
+      "bytes": 3845,
+      "modified_at": "2026-09-11T01:00:39.301149+00:00",
       "row_count": null
     },
     {
       "path": "state/progress.json",
-      "sha256": "c1bde63311ff4507e1a770433608db02745b6673f7063a5b3a77dbccb99c05f0",
-      "bytes": 4094,
-      "modified_at": "2026-09-11T00:08:50.301259+00:00",
+      "sha256": "d729aa2a9930c545fa1f15b41ff64eca0367818d841dce6cbf458e15d408762b",
+      "bytes": 4269,
+      "modified_at": "2026-09-11T01:01:29.974265+00:00",
       "row_count": null
     },
     {
       "path": "data/processed/pass2/candidate_program_funnel.csv",
-      "sha256": "23707b5a308314827804779ec253d72fd9bfe012111e58154d79c06bc53710c9",
-      "bytes": 2368446,
-      "modified_at": "2026-09-11T00:08:50.273649+00:00",
-      "row_count": 2013
+      "sha256": "6e3ecc31792c735cd282ac9860959c1984118b681245bc953f3f1cdf37634013",
+      "bytes": 2388092,
+      "modified_at": "2026-09-11T01:01:29.945445+00:00",
+      "row_count": 2025
     },
     {
       "path": "data/processed/pass2/discovery_source_yield.csv",
-      "sha256": "d2b9ee7cd9c2dcd7914ef2ad8b842d9f555478e7171142be696a30bd6aa0d0be",
-      "bytes": 4889,
-      "modified_at": "2026-09-11T00:08:50.280173+00:00",
+      "sha256": "aef960d85c3d99333f87507f417fbb4a2269aebb44f5f6c773433345910927cc",
+      "bytes": 5640,
+      "modified_at": "2026-09-11T01:01:29.951523+00:00",
       "row_count": 9
     },
     {
       "path": "data/processed/pass2/exclusion_sample_audit.csv",
-      "sha256": "763be5ecc5fa787aecdbe519b6ecf97c182f17c30ec4e4dc44ce1aede11f1762",
-      "bytes": 34110,
-      "modified_at": "2026-09-11T00:08:50.287708+00:00",
-      "row_count": 41
+      "sha256": "45a0df1ca6e7682de55c3c4963df4f8a5c0e49327d1a0f2d1fa92eb23fe77427",
+      "bytes": 36236,
+      "modified_at": "2026-09-11T01:01:29.957724+00:00",
+      "row_count": 43
     },
     {
-      "path": "data/processed/pass2/stage_02_reentry_04_candidates.csv",
-      "sha256": "d6fe4a712030462e8c4910b18ddc6283fca1df0ba807b0aaad602087ac5b7b04",
-      "bytes": 20980,
-      "modified_at": "2026-09-11T00:08:48.571655+00:00",
+      "path": "data/processed/pass2/stage_02_reentry_05_candidates.csv",
+      "sha256": "8d77320b7e53e9ce6ba9c949e84917a4306055f518e6aa0c3dab49ebcd5f0735",
+      "bytes": 21215,
+      "modified_at": "2026-09-11T01:01:22.275733+00:00",
       "row_count": 12
     },
     {
-      "path": "data/processed/pass2/stage_02_reentry_04_sources.csv",
-      "sha256": "f18dd625e8b970308e4b6c0968e0f60b6723e8d3c18c7d4ef42c95152f087588",
-      "bytes": 14701,
-      "modified_at": "2026-09-11T00:08:48.581298+00:00",
-      "row_count": 27
+      "path": "data/processed/pass2/stage_02_reentry_05_sources.csv",
+      "sha256": "57004d7a69d9c96782e7649133afc717970bf3afaf78a7f8b404558bf273e8f9",
+      "bytes": 16488,
+      "modified_at": "2026-09-11T01:01:22.283313+00:00",
+      "row_count": 31
     },
     {
       "path": "reports/pass2/02_candidate_funnel.md",
-      "sha256": "423d7fa50594b04e0373fcfc0821382f56d9b6e7b28c10a36fad04f57ffe3937",
-      "bytes": 11887,
-      "modified_at": "2026-09-11T00:08:50.295741+00:00",
+      "sha256": "d1a158c3eca936ca63af96ecf622a5c02c3c73a1bdae82809c2a780b5e0d9253",
+      "bytes": 12449,
+      "modified_at": "2026-09-11T01:01:29.968471+00:00",
       "row_count": null
     }
   ],
@@ -261,7 +275,7 @@
       "missing_url_without_flag": [],
       "screened_without_reason": []
     },
-    "reentry_04": {
+    "reentry_05": {
       "status": "PASS",
       "assertions": {
         "bounded_reentry_has_exact_routes": true,
@@ -286,28 +300,28 @@
   "downstream_integration_check": {
     "command": "python -m pytest -q",
     "result": "EXPECTED_FAIL_PENDING_STAGE_3_REENTRY",
-    "passed": 71,
+    "passed": 75,
     "failed": 1,
     "failure": "tests/test_program_verification.py::test_every_stage2_candidate_has_exactly_one_controlled_status",
-    "reason": "program_verification.csv has 2001 rows while the Stage 2 funnel now has 2013; Stage 3 was intentionally not modified in this one-stage run"
+    "reason": "program_verification.csv has 2013 rows while the Stage 2 funnel now has 2025; Stage 3 was intentionally not modified in this one-stage run"
   },
   "source_retrieval_qa": {
-    "checked": 27,
-    "http_200": 27,
+    "checked": 31,
+    "http_200": 31,
     "other_status_counts": {
-      "200": 27
+      "200": 31
     },
     "unresolved_source_ids": [],
     "disposition": "all_retrievable"
   },
   "counts": {
-    "candidate_rows": 2013,
-    "candidate_institutions": 820,
-    "advance_to_stage_3": 131,
+    "candidate_rows": 2025,
+    "candidate_institutions": 824,
+    "advance_to_stage_3": 143,
     "catalog_verification_required": 253,
     "manual_secondary_review": 11,
     "screened_out": 1618,
-    "official_program_url_present": 141,
+    "official_program_url_present": 153,
     "official_program_url_unresolved": 1872,
     "calendar_rows": 55,
     "calendar_in_scope_matched": 53,
@@ -325,28 +339,29 @@
     "openalex_faculty_non_educational_filtered": 2514,
     "openalex_faculty_affiliation_name_corrections": 166,
     "exclusion_audit_unresolved": 13,
-    "exclusion_audit_sample_rows": 41,
+    "exclusion_audit_sample_rows": 43,
     "exclusion_audit_confirmed": 16,
     "exclusion_audit_reopened": 4,
     "exclusion_audit_strata": 5,
     "reentry_exact_candidates_current": 12,
-    "reentry_exact_candidates_cumulative": 48,
-    "reentry_official_source_records_current": 27,
-    "reentry_official_source_records_cumulative": 128,
+    "reentry_exact_candidates_cumulative": 60,
+    "reentry_official_source_records_current": 31,
+    "reentry_official_source_records_cumulative": 159,
     "reentry_false_negatives_corrected_current": 2,
-    "reentry_false_negatives_corrected_cumulative": 8
+    "reentry_false_negatives_corrected_cumulative": 10
   },
   "failures": [],
   "blockers": [],
   "unresolved_coverage": [
-    "All 12 re-entry 04 routes require Stage 3 program, eligibility, funding, deadline, and cycle verification.",
+    "All 12 re-entry 05 routes require Stage 3 program, eligibility, funding, deadline, and cycle verification.",
     "Current faculty appointment, supervision authority, and capacity remain unverified.",
     "Other active catalog/manual-review rows remain unresolved and discovery remains non-saturated.",
     "European registry coverage and national-registry access limitations from the initial Stage 2 run remain.",
-    "UCR's desirable last-two-year GPA and UTA's 3.2 last-two-years expectation require an official transcript calculation rather than inference from cumulative GPA.",
-    "UT San Antonio and Manitoba publish strong support signals, but offer-specific coverage, renewal, fees, and net living costs remain unverified.",
-    "UNBC remains supervisor- and capacity-dependent, while Zurich and TU Wien currently lack an established living-cost funding path for this applicant.",
+    "UAB's typical major-GPA signal and Calgary's last-two-years GPA and industry-experience conditions require applicant-specific review.",
+    "The four U.S. doctorates publish assistantship or fellowship mechanisms, but none establishes an applicant-specific award, complete coverage, or renewal.",
+    "Canadian research-master's support ranges from positive or minimum-funding language to listed mechanisms only; every route still needs offer and net-cost verification.",
+    "The four German routes require curriculum and language mapping and currently lack an established living-cost funding path for this applicant.",
     "Existing Stage 3 through Stage 6 outputs intentionally remain unchanged until their separate re-entry stages.",
-    "The full test suite has one expected cross-stage failure until Stage 3 expands program_verification.csv from 2001 to 2013 rows."
+    "The full test suite has one expected cross-stage failure until Stage 3 expands program_verification.csv from 2013 to 2025 rows."
   ]
 }

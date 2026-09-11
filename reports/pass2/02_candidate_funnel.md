@@ -6,14 +6,14 @@ Pass
 
 ## What changed
 
-Stage 6 re-entry 03 returned the workflow to discovery because the evidence-calibrated portfolio still had zero justified core applications. This fourth bounded non-saturation pass adds 12 genuinely new exact research routes supported by current official program, research, and preliminary funding evidence. It does not score, rank, retain, or claim verified funding or faculty capacity.
+Stage 6 re-entry 04 returned the workflow to discovery because the evidence-calibrated portfolio still had zero justified core applications. This fifth bounded non-saturation pass adds 12 genuinely new exact research routes supported by current official program, research, and preliminary funding evidence. It does not score, rank, retain, or claim verified funding or faculty capacity.
 
-| Measure | After re-entry 03 | After re-entry 04 |
+| Measure | After re-entry 04 | After re-entry 05 |
 | --- | --- | --- |
-| Funnel rows | 2001 | 2013 |
-| Advance to Stage 3 | 119 | 131 |
+| Funnel rows | 2013 | 2025 |
+| Advance to Stage 3 | 131 | 143 |
 | Net new exact routes | — | 12 |
-| Current-round official source records | — | 27 |
+| Current-round official source records | — | 31 |
 | Active rows missing exact program URL | documented | 264 |
 
 The round was checked against the cumulative funnel by deterministic program ID. Existing institution records were retained only when the newly discovered degree route was distinct, so the increment does not overstate recall through duplicate programs.
@@ -22,36 +22,36 @@ The round was checked against the cumulative funnel by deterministic program ID.
 
 | Current-round region | Exact routes |
 | --- | --- |
-| canada | 2 |
-| europe | 2 |
-| us | 8 |
+| canada | 4 |
+| europe | 4 |
+| us | 4 |
 
 | Current-round degree route | Exact routes |
 | --- | --- |
-| PhD | 9 |
-| Thesis or research master's | 3 |
+| PhD | 4 |
+| Thesis or research master's | 8 |
 
 | Region | Institution | Exact route | Degree | Confidence | Still unresolved |
 | --- | --- | --- | --- | --- | --- |
-| us | University of Rochester | [PhD Program in Computer Science](https://www.cs.rochester.edu/graduate/phd-program.html) | PhD | high | Fall 2027 cycle/admission plausibility/English waiver application/offer-specific funding duration and fees/current faculty supervision |
-| us | University of Maryland-Baltimore County | [PhD in Computer Science](https://www.csee.umbc.edu/graduate/computer-science-m-s-ph-d/) | PhD | high | Fall 2027 cycle/prerequisite equivalency/GRE performance/assistantship probability and renewal/current faculty supervision |
-| us | University of California-Riverside | [PhD in Computer Science](https://www1.cs.ucr.edu/graduate/programs/computer-science-phd) | PhD | high | Fall 2027 cycle/last-two-year GPA calculation/course equivalency/funding package probability and duration/current faculty supervision |
-| us | University of Houston | [PhD in Computer Science](https://www.uh.edu/nsm/computer-science/graduate/phd/index.php) | PhD | high | Fall 2027 cycle/prerequisite mapping/admission calibration/offer-specific stipend and renewal/current faculty supervision |
-| us | The University of Texas at Arlington | [Doctoral Degree in Computer Science/Computer Engineering](https://www.uta.edu/academics/schools-colleges/engineering/academics/departments/cse/phd) | PhD | high | Fall 2027 cycle/last-two-year GPA calculation/English waiver or testing/assistantship award and coverage/current faculty supervision |
-| us | The University of Texas at San Antonio | [PhD in Computer Science](https://future.utsa.edu/programs/doctoral/computer-science/) | PhD | high | applicant-specific admission calibration/foreign equivalency despite expected U.S. bachelor's/assistantship renewal conditions/fee and living-cost residuals/current faculty supervision |
-| us | University of Iowa | [PhD in Computer Science](https://cs.uiowa.edu/graduate/phd-computer-science) | PhD | medium | Fall 2027 cycle/formal entry requirements/English waiver or testing/initial assistantship probability and renewal/current faculty supervision |
-| us | Clemson University | [Computer Science PhD](https://www.clemson.edu/cecas/departments/computing/academics/graduates/degrees/phd-cs.html) | PhD | high | Fall 2027 cycle/prerequisite equivalency/English waiver or testing/assistantship probability and net cost/current faculty supervision |
-| canada | University of Northern British Columbia | [MSc in Computer Science - Thesis Option](https://www.unbc.ca/calendar/graduate/computer-science-msc-program) | Thesis or research master's | medium | Fall 2027 cycle/specific research fit/supervisor commitment/award or assistantship amount and duration/net international cost |
-| canada | University of Manitoba | [PhD in Computer Science](https://umanitoba.ca/graduate-studies/admissions/programs-of-study/computer-science-phd) | PhD | high | rare direct-bachelor's exception/Fall 2027 cycle/degree and grade equivalency/confirmed supervisor/funding source, renewal, and net international cost |
-| europe | University of Zurich | [MSc in Informatics - Software Systems](https://www.uzh.ch/en/studies/programs/master/software_systems.html) | Thesis or research master's | high | Fall 2027 cycle/GRE thresholds and timing/curriculum and ECTS mapping/external scholarship viability/thesis supervision fit |
-| europe | TU Wien | [Master's Programme Logic and Artificial Intelligence](https://www.tuwien.at/en/studies/studies/master-programmes/informatics/logic-and-artificial-intelligence) | Thesis or research master's | high | Fall 2027 cycle/ECTS and curriculum mapping/supplementary-exam load/scholarship and living-cost viability/thesis supervision fit |
+| us | Auburn University | [PhD in Computer Science and Software Engineering](https://www.eng.auburn.edu/program/phd-computer-science-software-engineering.html) | PhD | high | Fall 2027 cycle/prerequisite and GPA review/English requirement/assistantship probability and renewal/current faculty supervision |
+| us | Mississippi State University | [PhD in Computer Science](https://www.cse.msstate.edu/grad/phd-cs/) | PhD | high | Fall 2027 cycle/degree and prerequisite equivalency/English requirement/assistantship award and duration/major-professor availability |
+| us | University of Arkansas | [Ph.D. in Computer Science](https://catalog.uark.edu/graduatecatalog/programsofstudy/computerscienceandcomputerengineeringcsce/) | PhD | high | Fall 2027 cycle/GRE policy/prerequisite and degree equivalency/English requirement/assistantship or fellowship award/current faculty supervision |
+| us | University of Alabama at Birmingham | [Ph.D. in Computer Science](https://www.uab.edu/cas/computerscience/graduate-programs/doctoral-program) | PhD | high | Fall 2027 cycle/major GPA calculation/prerequisite mapping/English requirement/offer-specific funding and renewal/current faculty supervision |
+| canada | Concordia University | [Software Engineering (MASc)](https://www.concordia.ca/academics/graduate/software-engineering-masc.html) | Thesis or research master's | high | Fall 2027 cycle/degree and GPA equivalency/English requirement/supervisor requirement and capacity/offer-specific funding and net cost |
+| canada | McMaster University | [Software Engineering (MASc)](https://www.eng.mcmaster.ca/cas/degree-options/software-engineering-masc/) | Thesis or research master's | high | Fall 2027 cycle/B+ and degree equivalency/English requirement/supervisor match/20-month package amount, fees, and net cost |
+| canada | University of Calgary | [MSc Thesis-based in Computer Science — Software Engineering Specialization](https://calendar.ucalgary.ca/programs/CPSCSEMSCT/admissions-cMwRI) | Thesis or research master's | high | Fall 2027 cycle/software-industry experience interpretation/last-two-years GPA/degree and English equivalency/supervisor match/funding components and net cost |
+| canada | University of Regina | [Master of Applied Science in Software Systems Engineering](https://www.uregina.ca/academics/programs/engineering/masters-phd-software-systems-engineering.html) | Thesis or research master's | high | Fall 2027 cycle/degree and prerequisite equivalency/English requirement/supervisor availability/funding award, duration, and net cost |
+| europe | University of Bamberg | [M.Sc. International Software Systems Science](https://www.uni-bamberg.de/en/ma-isosysc/) | Thesis or research master's | high | Fall 2027 cycle/German grade conversion/115-ECTS curriculum mapping/GRE or GATE applicability/English evidence/living-cost funding/thesis supervision |
+| europe | Technische Universität Darmstadt | [M.Sc. Computer Science](https://www.informatik.tu-darmstadt.de/studium_fb20/im_studium/studiengaenge_liste/computer_science_msc.en.jsp) | Thesis or research master's | high | Fall 2027 cycle/60-credit competency mapping/English C1 evidence/possible entrance examination/living-cost funding/thesis supervision |
+| europe | University of Potsdam | [M.Sc. Computer Science](https://www.uni-potsdam.de/en/studium/what-to-study/master/computer-science) | Thesis or research master's | high | Fall 2027 cycle/ECTS and grade mapping/English evidence/selection outcome/living-cost funding/thesis supervision |
+| europe | Rheinland-Pfälzische Technische Universität Kaiserslautern-Landau | [M.Sc. Computer Science](https://rptu.de/studienangebot/22777/Computer_Science-Computer_Science-master) | Thesis or research master's | high | Fall 2027 cycle/computer-science curriculum equivalency/grade conversion/English evidence/certificate evaluation and fees/living-cost funding/thesis supervision |
 
 | Cumulative priority route bucket | Active rows |
 | --- | --- |
 | doctoral_bachelors_entry | 48 |
 | research_masters | 35 |
 | structured_or_masters_required_doctorate | 13 |
-| unresolved_or_exceptional_route | 299 |
+| unresolved_or_exceptional_route | 311 |
 
 All three regions and the required doctoral and research-master route families remain represented. Inclusion was driven by exact fit and official-route evidence, not a global top-N or prestige cutoff.
 
@@ -59,24 +59,24 @@ All three regions and the required doctoral and research-master route families r
 
 | Institution | Original stratum | Audit result | Correction |
 | --- | --- | --- | --- |
-| The University of Texas at San Antonio | single_bounded_registry_signal_without_independent_topic_signal | false_negative_corrected | us:ipeds:229027:program:phd:phd-in-computer-science |
-| University of Manitoba | outside_bounded_positive_seed_screen | false_negative_corrected | ca:dli:O19091528512:program:phd:phd-in-computer-science |
+| University of Alabama at Birmingham | registry_only_signals_not_promoted_to_exact_program_review | false_negative_corrected | us:ipeds:100663:program:phd:ph-d-in-computer-science |
+| University of Bamberg | outside_bounded_positive_seed_screen | false_negative_corrected | ror:01c1w6d29:program:thesis-or-research-master-s:m-sc-international-software-systems-science |
 
-The University of Texas at San Antonio, and University of Manitoba were missed by the original bounded screen. Current official evidence corrects those omissions, but promotes the routes only to Stage 3 verification.
+University of Alabama at Birmingham, and University of Bamberg were missed by the original bounded screen. Current official evidence corrects those omissions, but promotes the routes only to Stage 3 verification.
 
 ### Discovery-source contribution and yield
 
 | Path | Examined | Contributed | Advanced | Active yield |
 | --- | --- | --- | --- | --- |
-| recognized_institution_record | 5833 | 2002 | 120 | 0.192 |
-| official_program_or_department_signal | 1913 | 140 | 130 | 0.929 |
+| recognized_institution_record | 5833 | 2014 | 132 | 0.197 |
+| official_program_or_department_signal | 1933 | 152 | 142 | 0.934 |
 | recent_paper_signal | 1647 | 903 | 72 | 0.360 |
-| current_faculty_topic_signal | 6926 | 54 | 14 | 0.259 |
+| current_faculty_topic_signal | 6927 | 55 | 15 | 0.273 |
 | lab_or_center_signal | 70 | 69 | 69 | 1.000 |
 | calendar_prior_list | 55 | 204 | 21 | 0.270 |
 | first_audit_program | 56 | 55 | 55 | 1.000 |
-| research_masters_or_scholarship_search | 1852 | 93 | 90 | 0.968 |
-| underrepresented_route_search | 1863 | 164 | 79 | 0.982 |
+| research_masters_or_scholarship_search | 1858 | 101 | 98 | 0.970 |
+| underrepresented_route_search | 1867 | 173 | 88 | 0.983 |
 
 ## Validation performed
 
@@ -98,27 +98,27 @@ The University of Texas at San Antonio, and University of Manitoba were missed b
 | baseline::no_global_top_n_cutoff | PASS |
 | baseline::no_university_scoring_fields | PASS |
 | baseline::false_negative_saturation_or_limitation_documented | PASS |
-| reentry04::bounded_reentry_has_exact_routes | PASS |
-| reentry04::reentry_covers_all_regions | PASS |
-| reentry04::research_masters_reentry_present | PASS |
-| reentry04::doctoral_reentry_present | PASS |
-| reentry04::all_candidates_advance_only_to_stage_3 | PASS |
-| reentry04::all_candidates_have_exact_official_program_urls | PASS |
-| reentry04::all_candidates_have_official_institution_urls | PASS |
-| reentry04::all_candidates_have_fit_and_preliminary_route_fields | PASS |
-| reentry04::all_candidate_source_ids_resolve | PASS |
-| reentry04::all_sources_are_official_https | PASS |
-| reentry04::program_ids_unique_after_merge | PASS |
-| reentry04::all_reentry_candidates_present_after_merge | PASS |
-| reentry04::known_seed_adjacency_retained | PASS |
-| reentry04::confirmed_false_negatives_reaudited | PASS |
-| reentry04::no_scoring_fields_introduced | PASS |
+| reentry05::bounded_reentry_has_exact_routes | PASS |
+| reentry05::reentry_covers_all_regions | PASS |
+| reentry05::research_masters_reentry_present | PASS |
+| reentry05::doctoral_reentry_present | PASS |
+| reentry05::all_candidates_advance_only_to_stage_3 | PASS |
+| reentry05::all_candidates_have_exact_official_program_urls | PASS |
+| reentry05::all_candidates_have_official_institution_urls | PASS |
+| reentry05::all_candidates_have_fit_and_preliminary_route_fields | PASS |
+| reentry05::all_candidate_source_ids_resolve | PASS |
+| reentry05::all_sources_are_official_https | PASS |
+| reentry05::program_ids_unique_after_merge | PASS |
+| reentry05::all_reentry_candidates_present_after_merge | PASS |
+| reentry05::known_seed_adjacency_retained | PASS |
+| reentry05::confirmed_false_negatives_reaudited | PASS |
+| reentry05::no_scoring_fields_introduced | PASS |
 
-The original Stage 2 acceptance contract still passes, and every re-entry 04 assertion passes. The 12 exact program IDs are unique, all resolve to canonical institution records, all current-round source records use official HTTPS URLs, and no scoring field was introduced.
+The original Stage 2 acceptance contract still passes, and every re-entry 05 assertion passes. The 12 exact program IDs are unique, all resolve to canonical institution records, all current-round source records use official HTTPS URLs, and no scoring field was introduced.
 
-Automated source retrieval returned HTTP 200 for 27 of 27 current-round official records. Non-200 or connection exceptions are preserved in the manifest and do not erase browser-reviewed evidence.
+Automated source retrieval returned HTTP 200 for 31 of 31 current-round official records. Non-200 or connection exceptions are preserved in the manifest and do not erase browser-reviewed evidence.
 
-The cross-stage control is expected to fail until the next separate Stage 3 re-entry: program verification has 2001 rows while the expanded funnel has 2013. This is the only permitted downstream mismatch; Stage 3 artifacts were not changed here.
+The cross-stage control is expected to fail until the next separate Stage 3 re-entry: program verification has 2013 rows while the expanded funnel has 2025. This is the only permitted downstream mismatch; Stage 3 artifacts were not changed here.
 
 ## Material uncertainties or conflicts
 
@@ -127,24 +127,25 @@ The cross-stage control is expected to fail until the next separate Stage 3 re-e
 - 264 other active funnel rows still lack exact official program URLs and remain catalog/manual-review coverage rather than verified candidates.
 - European registry coverage remains 3,628 of 4,462 reported filtered ROR records; EHESO/ETER and several national registries remain blocked.
 - Current faculty appointment, supervision authority, and capacity remain Stage 4 work after program verification.
-- UCR's desirable last-two-year GPA and UTA's 3.2 last-two-years expectation require an official transcript calculation rather than inference from the cumulative GPA.
-- UT San Antonio and Manitoba publish unusually strong funding signals, but offer-specific coverage, renewal, fees, and net living costs still require Stage 3 verification.
-- UNBC remains supervisor- and capacity-dependent, while Zurich and TU Wien have no established living-cost funding path for this applicant.
+- UAB's typical major-GPA signal and Calgary's last-two-years GPA and industry-experience conditions require transcript and requirement-level review rather than inference from cumulative GPA.
+- Auburn, Mississippi State, Arkansas, and UAB publish assistantship or fellowship mechanisms, but none establishes an applicant-specific award, complete coverage, or renewal.
+- Concordia and McMaster publish positive research-master's support signals and Calgary publishes a minimum level, while Regina lists mechanisms only; all require offer and net-cost verification.
+- The four German routes are research-relevant, but curriculum equivalency, language evidence, semester charges, and a viable living-cost funding path remain unresolved.
 - Existing Stage 3-6 artifacts are intentionally unchanged and therefore do not yet include these routes.
 - Discovery remains explicitly non-saturated; this pass reduces observed false-negative risk but does not establish exhaustive global coverage.
 
 ## Records requiring human judgment
 
-Stage 3 must determine whether each route is actually eligible and credibly funded. The highest-impact judgments are the UCR and UTA recent-coursework GPA calculations, whether the UT San Antonio and Manitoba packages clear the full net-cost gate, and whether UNBC, Zurich, or TU Wien has a viable supervision and funding path.
+Stage 3 must determine whether each route is actually eligible and credibly funded. The highest-impact judgments are the UAB major-GPA calculation, Calgary's experience requirement, whether Canadian funding signals clear the full net-cost gate, and whether any German route has both transcript equivalency and a viable living-cost funding path.
 
 ## Files created or modified
 
-- `data/raw/pass2/stage_02_reentry_04.json`
+- `data/raw/pass2/stage_02_reentry_05.json`
 - `data/processed/pass2/candidate_program_funnel.csv`
 - `data/processed/pass2/discovery_source_yield.csv`
 - `data/processed/pass2/exclusion_sample_audit.csv`
-- `data/processed/pass2/stage_02_reentry_04_candidates.csv`
-- `data/processed/pass2/stage_02_reentry_04_sources.csv`
+- `data/processed/pass2/stage_02_reentry_05_candidates.csv`
+- `data/processed/pass2/stage_02_reentry_05_sources.csv`
 - `scripts/build_stage_02_reentry.py`
 - `tests/test_candidate_reentry.py`
 - `state/progress.json`
