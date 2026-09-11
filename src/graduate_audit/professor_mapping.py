@@ -1264,6 +1264,56 @@ FACULTY_ROSTERS: dict[str, FacultyRoster] = {
             _c("Shaun Wallace", "human-AI interaction; information retrieval; interactive systems"),
         ),
     ),
+    "University of Nebraska at Omaha": FacultyRoster(
+        "College of Information Science & Technology, Department of Computer Science",
+        "https://www.unomaha.edu/college-of-information-science-and-technology/computer-science/about/faculty-staff.php",
+        (
+            _c("Harvey Siy", "software engineering; software evolution; mining software repositories"),
+            _c("Victor Winter", "programming languages; program transformation; dependable software"),
+            _c("Yuliya Lierler", "automated reasoning; logic programming; artificial intelligence"),
+            _c("Mahadevan Subramaniam", "software engineering; distributed systems; dependable computing"),
+        ),
+    ),
+    "University of Colorado Colorado Springs": FacultyRoster(
+        "College of Engineering and Applied Science, Department of Computer Science",
+        "https://eas.uccs.edu/departments/computer-science/directory/faculty",
+        (
+            _c("Shouhuai Xu", "cybersecurity dynamics; systems security; threat modeling"),
+            _c("Yanyan Zhuang", "mobile and systems security; privacy; software security"),
+            _c("Gedare Bloom", "embedded systems security; real-time systems; secure computing"),
+            _c("Philip Brown", "cybersecurity; networked systems; resilient infrastructure"),
+        ),
+    ),
+    "University of Massachusetts-Lowell": FacultyRoster(
+        "Kennedy College of Sciences, Miner School of Computer & Information Sciences",
+        "https://www.uml.edu/sciences/computer-science/people/faculty.aspx",
+        (
+            _c("Paul Downen", "programming languages; logic; compilation; formal methods"),
+            _c("Xinwen Fu", "computer security; privacy; system and software security"),
+            _c("Yimin (Ian) Chen", "security; privacy; trustworthy systems"),
+            _c("Sashank Narain", "systems security; privacy; network measurement"),
+        ),
+    ),
+    "University of Louisville": FacultyRoster(
+        "J.B. Speed School of Engineering, Department of Computer Science and Engineering",
+        "https://engineering.louisville.edu/cybercenter/homepage/faculty/",
+        (
+            _c("Wei Zhang", "hardware and systems security; compilers; real-time systems"),
+            _c("Adrian P. Lauf", "cybersecurity; autonomous systems; Internet of Things"),
+            _c("Adel S. Elmaghraby", "cybersecurity; multimedia; intelligent systems"),
+            _c("Olfa Nasraoui", "data mining; trustworthy artificial intelligence; machine learning"),
+        ),
+    ),
+    "Clarkson University": FacultyRoster(
+        "Coulter School of Engineering & Applied Sciences, Department of Computer Science",
+        "https://www.clarkson.edu/academics/schools-colleges/arts-sciences/departments/computer-science/faculty-staff",
+        (
+            _c("Daqing Hou", "software engineering; program analysis; cybersecurity; compilers"),
+            _c("Jeanna Matthews", "systems accountability; security; cloud and distributed systems"),
+            _c("Christopher Lynch", "automated reasoning; formal methods; protocol analysis"),
+            _c("Alexis Maciel", "software systems; computer science education; applied computing"),
+        ),
+    ),
 }
 
 
