@@ -246,6 +246,26 @@ def test_reentry_17_has_the_intended_regional_and_route_mix():
     assert len(payload["false_negative_audits"]) == 2
 
 
+def test_reentry_18_has_the_intended_regional_and_route_mix():
+    payload = _payload(18)
+    candidates, sources = build_reentry_rows(
+        payload["candidates"],
+        _institutions(),
+        "data/raw/pass2/stage_02_reentry_18.json",
+        reentry_id="stage_02_reentry_18",
+    )
+
+    assert len(candidates) == 12
+    assert sum(row["region"] == "us" for row in candidates) == 6
+    assert sum(row["region"] == "canada" for row in candidates) == 3
+    assert sum(row["region"] == "europe" for row in candidates) == 3
+    assert sum(row["degree_type"] == "PhD" for row in candidates) == 6
+    assert sum(row["degree_type"] == "Thesis or research master's" for row in candidates) == 6
+    assert len(sources) >= 24
+    assert {row["accessed_date"] for row in sources} == {"2026-09-11"}
+    assert len(payload["false_negative_audits"]) == 2
+
+
 def test_reentry_validation_rejects_a_route_already_in_the_prior_funnel(tmp_path):
     from graduate_audit.candidate_funnel import build_candidate_funnel
 
