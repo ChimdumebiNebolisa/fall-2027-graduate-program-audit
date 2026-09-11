@@ -155,9 +155,11 @@ def funding_hard_gate_from_evidence(
         "does not provide a current", "availability is competitive", "non-guaranteed",
         "non guaranteed", "many ", "not all admits", "not promise it to all", "usually",
         "later funding patterns", "later funding is not", "later support expected",
+        "not a guarantee", "distinction between", "nearly all", "majority",
+        "not every", "not universal", "without a universal guarantee", "one-to-five-year",
     )
     credible_markers = (
-        "guaranteed", "guarantee", "five-year package", "five-year funding model",
+        "guaranteed", "funding guarantee", "five-year package",
         "five years of full", "full tuition/health doctoral funding", "all full-time",
         "all phd students", "all cs phd admits", "all admitted phd students",
         "100% of admitted", "minimum is", "minimum guaranteed", "minimum funding",

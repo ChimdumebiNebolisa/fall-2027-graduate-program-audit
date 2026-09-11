@@ -125,6 +125,20 @@ def test_non_universal_guarantee_does_not_pass_funding_gate():
     assert not funding_hard_gate_from_evidence(program, sources)
 
 
+def test_noncommittal_funding_language_does_not_pass_funding_gate():
+    program, sources = _funding_fixture()
+    noncommittal_claims = (
+        "Graduate Employee support mechanisms and the distinction between five-year eligibility and a guarantee.",
+        "A five-year funding model describes eligible appointments with stipend and tuition waiver.",
+        "Nearly all CS PhD students are described as fully funded through TA or RA support.",
+        "Not every PhD student is funded; offer-specific one-to-five-year packages may be offered.",
+        "A majority of admitted doctoral students receive support without a universal guarantee.",
+    )
+    for claim in noncommittal_claims:
+        sources["stage3src:funding"]["exact_claim_supported"] = claim
+        assert not funding_hard_gate_from_evidence(program, sources)
+
+
 def test_coursework_only_program_needs_research_and_exceptional_full_scholarship():
     program, sources = _funding_fixture()
     program["degree_type"] = "Coursework or professional master's"
@@ -330,6 +344,26 @@ def test_stage_five_reentry_09_scores_every_new_faculty_ready_route():
     assert all(row["professor_hard_gate"] == "true" for row in scored_latest)
 
 
+def test_stage_five_reentry_10_scores_every_new_faculty_ready_route():
+    latest_ids = {
+        row["candidate_program_id"]
+        for row in read_csv(REPO_ROOT / "data/processed/pass2/stage_03_reentry_10_verification.csv")
+        if row["faculty_review_ready"] == "yes"
+    }
+    scores = read_csv(REPO_ROOT / "data/processed/pass2/program_scores.csv")
+    evidence = read_csv(REPO_ROOT / "data/processed/pass2/score_evidence.csv")
+    scored_latest = [row for row in scores if row["program_id"] in latest_ids]
+    evidence_by_program = defaultdict(list)
+    for row in evidence:
+        if row["program_id"] in latest_ids:
+            evidence_by_program[row["program_id"]].append(row)
+    assert len(latest_ids) == len(scored_latest) == 5
+    assert {row["program_id"] for row in scored_latest} == latest_ids
+    assert set(evidence_by_program) == latest_ids
+    assert all(len(rows) == len(COMPONENT_ORDER) for rows in evidence_by_program.values())
+    assert all(row["professor_hard_gate"] == "true" for row in scored_latest)
+
+
 def test_missing_gate_evidence_reduces_confidence_and_blocks_rank():
     scores = read_csv(REPO_ROOT / "data/processed/pass2/program_scores.csv")
     incomplete = [
@@ -339,6 +373,26 @@ def test_missing_gate_evidence_reduces_confidence_and_blocks_rank():
     assert incomplete
     assert all(row["score_confidence"] == "low" for row in incomplete)
     assert all(not row["evidence_rank"] for row in incomplete)
+
+
+def test_current_nonuniversal_funding_records_remain_gated_out():
+    programs = {
+        row["candidate_program_id"]: row
+        for row in read_csv(REPO_ROOT / "data/processed/pass2/program_verification.csv")
+        if row["faculty_review_ready"] == "yes"
+    }
+    scores = read_csv(REPO_ROOT / "data/processed/pass2/program_scores.csv")
+    nonuniversal_markers = (
+        "not guaranteed",
+        "not an unconditional guarantee",
+        "not all phd students",
+        "majority of admitted",
+        "eligibility is not a guarantee",
+    )
+    for score in scores:
+        funding_status = programs[score["program_id"]]["funding_status"].casefold()
+        if any(marker in funding_status for marker in nonuniversal_markers):
+            assert score["funding_hard_gate"] == "false"
 
 
 def test_no_probability_and_no_institution_specific_score_constants():
