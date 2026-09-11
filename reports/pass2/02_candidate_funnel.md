@@ -6,14 +6,14 @@ Pass
 
 ## What changed
 
-Stage 6 re-entry 08 returned the workflow to discovery because the evidence-calibrated portfolio still had zero justified core applications. This bounded non-saturation pass adds 12 genuinely new exact research routes supported by current official program, research, and preliminary funding evidence. It does not score, rank, retain, or claim verified funding or faculty capacity.
+Stage 6 re-entry 09 returned the workflow to discovery because the evidence-calibrated portfolio still had zero justified core applications. This bounded non-saturation pass adds 12 genuinely new exact research routes supported by current official program, research, and preliminary funding evidence. It does not score, rank, retain, or claim verified funding or faculty capacity.
 
-| Measure | After re-entry 08 | After re-entry 09 |
+| Measure | After re-entry 09 | After re-entry 10 |
 | --- | --- | --- |
-| Funnel rows | 2061 | 2073 |
-| Advance to Stage 3 | 179 | 191 |
+| Funnel rows | 2073 | 2085 |
+| Advance to Stage 3 | 191 | 203 |
 | Net new exact routes | — | 12 |
-| Current-round official source records | — | 25 |
+| Current-round official source records | — | 24 |
 | Active rows missing exact program URL | documented | 264 |
 
 The round was checked against the cumulative funnel by deterministic program ID. Existing institution records were retained only when the newly discovered degree route was distinct, so the increment does not overstate recall through duplicate programs.
@@ -22,36 +22,36 @@ The round was checked against the cumulative funnel by deterministic program ID.
 
 | Current-round region | Exact routes |
 | --- | --- |
-| canada | 1 |
+| canada | 3 |
 | europe | 4 |
-| us | 7 |
+| us | 5 |
 
 | Current-round degree route | Exact routes |
 | --- | --- |
-| PhD | 7 |
-| Thesis or research master's | 5 |
+| PhD | 6 |
+| Thesis or research master's | 6 |
 
 | Region | Institution | Exact route | Degree | Confidence | Still unresolved |
 | --- | --- | --- | --- | --- | --- |
-| us | Emory University | [PhD in Computer Science and Informatics](https://computerscience.emory.edu/graduate-phd/index.html) | PhD | high | Fall 2027 cycle/degree and prerequisite equivalency/English evidence/support duration and renewal/fees and benefits/current supervisor capacity |
-| us | Northwestern University | [PhD in Computer Science](https://www.mccormick.northwestern.edu/computer-science/academics/graduate/phd/) | PhD | high | Fall 2027 cycle/academic preparation and English evidence/five-year guarantee conditions/summer and fee coverage/advisor matching/current supervisor capacity |
-| us | University of Pittsburgh-Pittsburgh Campus | [PhD in Computer Science](https://intranet.cs.pitt.edu/grad/) | PhD | medium | Fall 2027 cycle/degree preparation and English evidence/first-two-year support terms/later advisor funding/fees and insurance/current supervisor capacity |
-| us | Brandeis University | [Computer Science PhD](https://www.brandeis.edu/computer-science/_pdfs/computer-science-phd-handbook.pdf) | PhD | medium | Fall 2027 cycle/degree and prerequisite equivalency/English evidence/program-specific five-year package/advisor consent and continuation/fees and net cost |
-| us | Michigan State University | [Computer Science PhD](https://engineering.msu.edu/academics/majors-degrees/computer-science-phd) | PhD | high | Fall 2027 cycle/background-course mapping/English waiver or evidence/assistantship selection/tuition, fees, and insurance/current supervisor capacity |
-| us | Syracuse University | [Doctor of Philosophy in Computer/Information Science and Engineering](https://ecs.syracuse.edu/academics/electrical-engineering-and-computer-science/programs/computer-information-science-engineering-doctoral-program) | PhD | high | Fall 2027 cycle/degree and prerequisite equivalency/English evidence/fellowship or assistantship selection/tuition and fee coverage/current supervisor capacity |
-| us | Johns Hopkins University | [PhD in Computer Science](https://www.cs.jhu.edu/academic-programs/graduate-studies/phd-program/) | PhD | high | Fall 2027 cycle/degree preparation and English evidence/support duration/good-standing and advisor conditions/fees and insurance/current supervisor capacity |
-| canada | St. Francis Xavier University | [Master of Science in Computer Science](https://www.stfx.ca/programs-courses/programs/master-science-computer-science) | Thesis or research master's | high | Fall 2027 cycle/degree and course equivalency/English evidence/willing supervisor/international funding package/fees and living-cost shortfall |
-| europe | KTH Royal Institute of Technology | [MSc Computer Science](https://www.kth.se/en/studies/master/computer-science) | Thesis or research master's | high | transcript-to-ECTS prerequisite mapping/English evidence/2027 selection/scholarship rank and award/tuition liability/living-cost funding |
-| europe | University of Helsinki | [Master's Programme in Computer Science](https://www.helsinki.fi/en/degree-programmes/computer-science-masters-programme) | Thesis or research master's | high | 2027 application call/degree and subject equivalency/English evidence/tuition-waiver selection/remaining tuition/living-cost funding |
-| europe | University of Copenhagen | [MSc in Computer Science](https://www.ku.dk/studies/masters/computer-science) | Thesis or research master's | high | 2027 application cycle/degree and course equivalency/English evidence/admission selection/government scholarship award and value/remaining tuition and living costs |
-| europe | University of Tartu | [Master's in Computer Science](https://ut.ee/en/curriculum/computer-science) | Thesis or research master's | high | Fall 2027 cycle/degree and computing-background equivalency/English evidence/tuition reduction or scholarship/DIGILINK selection/remaining tuition and living costs |
+| us | University of Oregon | [PhD in Computer Science](https://scds.uoregon.edu/cs/graduate-programs/cs-phd) | PhD | high | Fall 2027 cycle/transcript and prerequisite mapping/English evidence/assistantship award and duration/fees and insurance/current supervisor capacity |
+| us | University of Georgia | [Doctor of Philosophy in Computer Science](https://www.cs.uga.edu/doctor-philosophy-computer-science) | PhD | high | Fall 2027 cycle/transcript preparation/English evidence/assistantship selection/tuition, fees, and insurance/current supervisor capacity |
+| us | Georgia State University | [Computer Science PhD](https://graduate.gsu.edu/program/computer-science-phd/) | PhD | high | Fall 2027 cycle/foundation-course assessment/English evidence/assistantship selection and renewal/fee and insurance coverage/current supervisor capacity |
+| us | University of South Carolina-Columbia | [Doctor of Philosophy in Computer Science](https://cse.sc.edu/graduate/phd) | PhD | high | Fall 2027 cycle/degree and prerequisite mapping/English evidence/assistantship award and renewal/net tuition and fees/current supervisor capacity |
+| us | University of Nevada-Reno | [Ph.D. in Computer Science and Engineering](https://www.unr.edu/cse/graduate-program) | PhD | high | Fall 2027 cycle/direct-entry transcript standard/English evidence/assistantship sponsorship and renewal/remaining fees/current supervisor capacity |
+| canada | University of Prince Edward Island | [Master of Science in Mathematical and Computational Sciences](https://www.upei.ca/programs/master-science-mathematical-and-computational-sciences) | Thesis or research master's | high | Fall 2027 cycle/four-year degree equivalency/course and English requirements/willing supervisor/funding package and international tuition/net cost |
+| canada | University of Winnipeg | [MSc in Applied Computer Science and Society — Thesis-Based](https://acs.uwinnipeg.ca/graduate_thesis_based) | Thesis or research master's | high | Fall 2027 cycle/four-year degree equivalency/course and English requirements/willing supervisor/scholarship selection/international tuition and net cost |
+| canada | Queen’s University | [PhD in Computing](https://www.cs.queensu.ca/graduate/phd/) | PhD | high | direct-entry eligibility without MSc/Fall 2027 cycle/English evidence/supervisor alignment/funding renewal and net cost/current supervisor capacity |
+| europe | Uppsala University | [Master's Programme in Computer Science](https://www.uu.se/en/study/programme/masters-programme-computer-science) | Thesis or research master's | high | Fall 2027 cycle/90-credit CS and 30-credit mathematics mapping/English evidence/tuition liability/scholarship selection/living-cost plan |
+| europe | Lund University | [Master's Programme in Machine Learning, Systems and Control](https://www.lunduniversity.lu.se/lubas/i-uoh-lu-TAMSR) | Thesis or research master's | high | Fall 2027 cycle/prerequisite course mapping/English evidence/tuition liability/scholarship selection/living-cost plan |
+| europe | University of Luxembourg | [Master in Information and Computer Sciences](https://www.uni.lu/fstm-en/study-programs/master-in-information-and-computer-sciences/) | Thesis or research master's | high | Fall 2027 cycle/bachelor and course equivalency/English evidence/scholarship selection/tuition and living costs/research-supervisor fit |
+| europe | Technical University of Denmark | [MSc Eng in Computer Science and Engineering](https://www.dtu.dk/english/education/graduate/msc-programmes/computer-science-and-engineering) | Thesis or research master's | high | Fall 2027 cycle/75-ECTS prerequisite mapping/English evidence/tuition-waiver selection/living-cost plan/thesis-supervisor fit |
 
 | Cumulative priority route bucket | Active rows |
 | --- | --- |
 | doctoral_bachelors_entry | 48 |
 | research_masters | 35 |
 | structured_or_masters_required_doctorate | 13 |
-| unresolved_or_exceptional_route | 359 |
+| unresolved_or_exceptional_route | 371 |
 
 All three regions and the required doctoral and research-master route families remain represented. Inclusion was driven by exact fit and official-route evidence, not a global top-N or prestige cutoff.
 
@@ -59,24 +59,24 @@ All three regions and the required doctoral and research-master route families r
 
 | Institution | Original stratum | Audit result | Correction |
 | --- | --- | --- | --- |
-| St. Francis Xavier University | outside_bounded_positive_seed_screen | false_negative_corrected | ca:dli:O19391556899:program:thesis-or-research-master-s:master-of-science-in-computer-science |
-| KTH Royal Institute of Technology | doctoral_route_recorded_research_masters_route_missed | false_negative_corrected | ror:026vcq606:program:thesis-or-research-master-s:msc-computer-science |
+| University of Prince Edward Island | outside_bounded_positive_seed_screen | false_negative_corrected | ca:dli:O19220071452:program:thesis-or-research-master-s:master-of-science-in-mathematical-and-computational-sciences |
+| University of Luxembourg | doctoral_route_recorded_research_masters_route_missed | false_negative_corrected | ror:036x5ad56:program:thesis-or-research-master-s:master-in-information-and-computer-sciences |
 
-St. Francis Xavier University and KTH Royal Institute of Technology were missed by the original bounded screen. Current official evidence corrects those omissions, but promotes the routes only to Stage 3 verification.
+University of Prince Edward Island and University of Luxembourg were missed by the original bounded screen. Current official evidence corrects those omissions, but promotes the routes only to Stage 3 verification.
 
 ### Discovery-source contribution and yield
 
 | Path | Examined | Contributed | Advanced | Active yield |
 | --- | --- | --- | --- | --- |
-| recognized_institution_record | 5833 | 2062 | 180 | 0.215 |
-| official_program_or_department_signal | 1997 | 200 | 190 | 0.950 |
+| recognized_institution_record | 5833 | 2068 | 186 | 0.218 |
+| official_program_or_department_signal | 2009 | 212 | 202 | 0.953 |
 | recent_paper_signal | 1647 | 903 | 72 | 0.360 |
 | current_faculty_topic_signal | 6928 | 59 | 19 | 0.322 |
 | lab_or_center_signal | 78 | 77 | 77 | 1.000 |
 | calendar_prior_list | 55 | 204 | 21 | 0.270 |
 | first_audit_program | 56 | 55 | 55 | 1.000 |
-| research_masters_or_scholarship_search | 1890 | 137 | 134 | 0.978 |
-| underrepresented_route_search | 1871 | 200 | 115 | 0.985 |
+| research_masters_or_scholarship_search | 1902 | 149 | 146 | 0.980 |
+| underrepresented_route_search | 1871 | 206 | 121 | 0.985 |
 
 ## Validation performed
 
@@ -98,28 +98,28 @@ St. Francis Xavier University and KTH Royal Institute of Technology were missed 
 | baseline::no_global_top_n_cutoff | PASS |
 | baseline::no_university_scoring_fields | PASS |
 | baseline::false_negative_saturation_or_limitation_documented | PASS |
-| reentry09::bounded_reentry_has_exact_routes | PASS |
-| reentry09::reentry_covers_all_regions | PASS |
-| reentry09::research_masters_reentry_present | PASS |
-| reentry09::doctoral_reentry_present | PASS |
-| reentry09::all_candidates_advance_only_to_stage_3 | PASS |
-| reentry09::all_candidates_have_exact_official_program_urls | PASS |
-| reentry09::all_candidates_have_official_institution_urls | PASS |
-| reentry09::all_candidates_have_fit_and_preliminary_route_fields | PASS |
-| reentry09::all_candidate_source_ids_resolve | PASS |
-| reentry09::all_sources_are_official_https | PASS |
-| reentry09::program_ids_unique_after_merge | PASS |
-| reentry09::all_reentry_routes_are_net_new | PASS |
-| reentry09::all_reentry_candidates_present_after_merge | PASS |
-| reentry09::known_seed_adjacency_retained | PASS |
-| reentry09::confirmed_false_negatives_reaudited | PASS |
-| reentry09::no_scoring_fields_introduced | PASS |
+| reentry10::bounded_reentry_has_exact_routes | PASS |
+| reentry10::reentry_covers_all_regions | PASS |
+| reentry10::research_masters_reentry_present | PASS |
+| reentry10::doctoral_reentry_present | PASS |
+| reentry10::all_candidates_advance_only_to_stage_3 | PASS |
+| reentry10::all_candidates_have_exact_official_program_urls | PASS |
+| reentry10::all_candidates_have_official_institution_urls | PASS |
+| reentry10::all_candidates_have_fit_and_preliminary_route_fields | PASS |
+| reentry10::all_candidate_source_ids_resolve | PASS |
+| reentry10::all_sources_are_official_https | PASS |
+| reentry10::program_ids_unique_after_merge | PASS |
+| reentry10::all_reentry_routes_are_net_new | PASS |
+| reentry10::all_reentry_candidates_present_after_merge | PASS |
+| reentry10::known_seed_adjacency_retained | PASS |
+| reentry10::confirmed_false_negatives_reaudited | PASS |
+| reentry10::no_scoring_fields_introduced | PASS |
 
-The original Stage 2 acceptance contract still passes, and every re-entry 09 assertion passes. The 12 exact program IDs are unique, all resolve to canonical institution records, all current-round source records use official HTTPS URLs, and no scoring field was introduced.
+The original Stage 2 acceptance contract still passes, and every re-entry 10 assertion passes. The 12 exact program IDs are unique, all resolve to canonical institution records, all current-round source records use official HTTPS URLs, and no scoring field was introduced.
 
-Automated source retrieval returned HTTP 200 for 19 of 25 current-round official records. Non-200 or connection exceptions are preserved in the manifest and do not erase browser-reviewed evidence.
+Automated source retrieval returned HTTP 200 for 21 of 24 current-round official records. Non-200 or connection exceptions are preserved in the manifest and do not erase browser-reviewed evidence.
 
-The cross-stage control is expected to fail until the next separate Stage 3 re-entry: program verification has 2061 rows while the expanded funnel has 2073. This is the only permitted downstream mismatch; Stage 3 artifacts were not changed here.
+The cross-stage control is expected to fail until the next separate Stage 3 re-entry: program verification has 2073 rows while the expanded funnel has 2085. This is the only permitted downstream mismatch; Stage 3 artifacts were not changed here.
 
 ## Material uncertainties or conflicts
 
@@ -128,24 +128,24 @@ The cross-stage control is expected to fail until the next separate Stage 3 re-e
 - 264 other active funnel rows still lack exact official program URLs and remain catalog/manual-review coverage rather than verified candidates.
 - European registry coverage remains 3,628 of 4,462 reported filtered ROR records; EHESO/ETER and several national registries remain blocked.
 - Current faculty appointment, supervision authority, and capacity remain Stage 4 work after program verification.
-- Emory, Northwestern, Pitt, Brandeis, Michigan State, Syracuse, and Johns Hopkins require transcript-level entry and offer-level support review; their signals range from departmental support statements to competitive or advisor-dependent mechanisms.
-- St. Francis Xavier requires degree-equivalency, willing-supervisor, international-package, and net-cost verification even though most accepted MSc students are described as receiving support.
-- KTH, Helsinki, Copenhagen, and Tartu require course and language mapping plus a viable tuition and living-cost plan; their scholarships or reductions are partial, limited, or highly competitive.
+- Oregon, Georgia, Georgia State, South Carolina, and Nevada-Reno require transcript-level entry and offer-level assistantship review; the recorded mechanisms are competitive, limited, or appointment-dependent.
+- UPEI and Winnipeg require degree-equivalency, willing-supervisor, international-package, and net-cost verification; Queen's normally requires an MSc, making direct PhD eligibility unresolved.
+- Uppsala, Lund, Luxembourg, and DTU require course and language mapping plus a viable tuition and living-cost plan; their scholarships or waivers are limited or highly competitive.
 - Existing Stage 3-6 artifacts are intentionally unchanged and therefore do not yet include these routes.
 - Discovery remains explicitly non-saturated; this pass reduces observed false-negative risk but does not establish exhaustive global coverage.
 
 ## Records requiring human judgment
 
-Stage 3 must determine whether each route is actually eligible and credibly funded. The highest-impact judgments are the U.S. transcript and funding conditions, whether the St. Francis Xavier MSc package clears international net cost, and whether the European routes combine transcript equivalency with viable living-cost funding.
+Stage 3 must determine whether each route is actually eligible and credibly funded. The highest-impact judgments are the U.S. transcript and assistantship conditions, whether the UPEI and Winnipeg MSc routes clear supervisor and international net-cost gates, whether Queen's permits the applicant's direct doctoral entry, and whether the European routes combine transcript equivalency with viable living-cost funding.
 
 ## Files created or modified
 
-- `data/raw/pass2/stage_02_reentry_09.json`
+- `data/raw/pass2/stage_02_reentry_10.json`
 - `data/processed/pass2/candidate_program_funnel.csv`
 - `data/processed/pass2/discovery_source_yield.csv`
 - `data/processed/pass2/exclusion_sample_audit.csv`
-- `data/processed/pass2/stage_02_reentry_09_candidates.csv`
-- `data/processed/pass2/stage_02_reentry_09_sources.csv`
+- `data/processed/pass2/stage_02_reentry_10_candidates.csv`
+- `data/processed/pass2/stage_02_reentry_10_sources.csv`
 - `scripts/build_stage_02_reentry.py`
 - `tests/test_candidate_reentry.py`
 - `state/progress.json`
