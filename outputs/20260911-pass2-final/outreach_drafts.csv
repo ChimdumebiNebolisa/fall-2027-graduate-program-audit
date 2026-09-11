@@ -1,0 +1,121 @@
+﻿schema_version,draft_id,priority_rank,wave,program_id,institution_name,program_name,contact_type,recipient_name,recipient_email,subject,personalization_anchor,personalization_source_url,verified_applicant_background,question,draft_body,contact_history_checked,contact_history_status,recipient_verified,contact_appropriate,factual_reference_verified,one_clear_question,no_internal_notes_or_placeholders,natural_grammar,required_signoff,manual_read_through,draft_ready,send_status,evidence_ids,generated_by,reviewed_at
+2.0,draft:75d13e4ed8625c8e,1,first_wave,ca:dli:O19395164223:program:thesis-or-research-master-s:msc-in-applied-modelling-and-quantitative-methods-thesis-stream,Trent University,MSc in Applied Modelling and Quantitative Methods — Thesis Stream,professor,Omar Alam,omaralam@trentu.ca,Fall 2027 MSc inquiry - model validation,Streamlining CPS Validation: Using Interoperable UML Tools for Seamless Model Exchange,https://omaralam.org/publications/,"I am Chimdumebi Mitchell Nebolisa, an undergraduate studying computer science at East Texas A&M University graduating in May 2027. My Evidex research examines evidence-based claim verification and evaluation.",Would you be open to supervising a funded Fall 2027 master's student on the thesis track who studies evidence-grounded validation of software or cyber-physical models?,"Dear Professor Alam,
+
+I am Chimdumebi Mitchell Nebolisa, an undergraduate studying computer science at East Texas A&M University graduating in May 2027. My Evidex research examines evidence-based claim verification and evaluation.
+
+I was interested in your recent work titled ""Streamlining CPS Validation: Using Interoperable UML Tools for Seamless Model Exchange"". Your focus on model exchange and conflict detection connects to my interest in producing traceable evidence for validation decisions.
+
+Would you be open to supervising a funded Fall 2027 master's student on the thesis track who studies evidence-grounded validation of software or cyber-physical models?
+
+yours sincerely,
+Chimdumebi Mitchell Nebolisa",yes,no,yes,yes,yes,yes,yes,yes,yes,yes,yes,not_sent,stage4src:1da8dcb27dc4dddb|stage4src:33c4256c9965b295|stage4src:7ec76d10ff353b52|stage4src:59ae971a679f7fba|stage4src:0b94763c5993f19b|scoreev:d51edc6f63b442fb|scoreev:44ad52928ee09adb|scoreev:12c10ad8408e95a6|scoreev:ced0c8d7b9ff9e20|scoreev:795fdd1ca1c384b9|scoreev:af46689919e85766,graduate_audit.outreach_drafting:v1,2026-09-11T16:45:05.957485+00:00
+2.0,draft:bf5a46650c55dd83,2,first_wave,us:ipeds:174066:program:phd:computer-science-phd,University of Minnesota-Twin Cities,PhD in Computer Science,professor,Kangjie Lu,kjlu@umn.edu,Fall 2027 PhD inquiry - secure software,"Secure foundational software, open-source ecosystems, and AI systems",https://cse.umn.edu/cs/news/meet-faculty-kangjie-lu,"I am Chimdumebi Mitchell Nebolisa, an undergraduate studying computer science at East Texas A&M University graduating in May 2027. TerraProbe, my research on LLM-based Terraform repair, has been accepted as a full paper at ICTAI 2026.","Do you expect to have funded capacity to advise new PhD students in Fall 2027 working on secure software, patch analysis, or reliable AI-assisted development?","Dear Professor Lu,
+
+I am Chimdumebi Mitchell Nebolisa, an undergraduate studying computer science at East Texas A&M University graduating in May 2027. TerraProbe, my research on LLM-based Terraform repair, has been accepted as a full paper at ICTAI 2026.
+
+I was interested in your recent work titled ""Secure foundational software, open-source ecosystems, and AI systems"". I am interested in extending evidence-backed repair methods toward cloud and open-source security, especially where generated patches need rigorous validation.
+
+Do you expect to have funded capacity to advise new PhD students in Fall 2027 working on secure software, patch analysis, or reliable AI-assisted development?
+
+yours sincerely,
+Chimdumebi Mitchell Nebolisa",yes,no,yes,yes,yes,yes,yes,yes,yes,yes,yes,not_sent,stage4src:bfef67e7b45c554c|stage4src:6d713874b2961713|stage4src:38178c0d43953b2f|scoreev:faff589cf6316cb2|scoreev:ad359c07b323b8ac|scoreev:00a27b07062a147d|scoreev:e7dd568fbac3446b|scoreev:713c727286b2612e|scoreev:af0bac5c06d7eca9,graduate_audit.outreach_drafting:v1,2026-09-11T16:45:05.957485+00:00
+2.0,draft:678c0551b2ede4a0,3,first_wave,ca:dli:O19332746152:program:thesis-or-research-master-s:master-of-applied-science-in-electrical-and-computer-engineering,University of Toronto,Master of Applied Science in Electrical and Computer Engineering,professor,David Lie,lie@eecg.toronto.edu,Fall 2027 MASc inquiry - LLM-assisted verification,RFC2TLA+: Extracting and Verifying Formal Models from RFC Documents using Continuous LLM Feedback,https://security.csl.toronto.edu/publications/,"I am Chimdumebi Mitchell Nebolisa, an undergraduate studying computer science at East Texas A&M University graduating in May 2027. TerraProbe, my research on LLM-based Terraform repair, has been accepted as a full paper at ICTAI 2026.",Would you be open to supervising a funded Fall 2027 MASc student studying verification methods for AI-assisted software or infrastructure repair?,"Dear Professor Lie,
+
+I am Chimdumebi Mitchell Nebolisa, an undergraduate studying computer science at East Texas A&M University graduating in May 2027. TerraProbe, my research on LLM-based Terraform repair, has been accepted as a full paper at ICTAI 2026.
+
+I was interested in your recent work titled ""RFC2TLA+: Extracting and Verifying Formal Models from RFC Documents using Continuous LLM Feedback"". The combination of LLM feedback and formal verification is closely related to my interest in making AI-generated infrastructure repairs checkable rather than merely plausible.
+
+Would you be open to supervising a funded Fall 2027 MASc student studying verification methods for AI-assisted software or infrastructure repair?
+
+yours sincerely,
+Chimdumebi Mitchell Nebolisa",yes,no,yes,yes,yes,yes,yes,yes,yes,yes,yes,not_sent,stage4src:2f79f3cba9358856|stage4src:527b1382f68e34c0|stage4src:cf9f0015bf4e597e|stage4src:cbf272f8aea46b9c|stage4src:f0c2fcf47d2951a1|stage4src:7017d60719d53869|stage4src:8dc876784f89e9b1|scoreev:3dc3dcbf535d8890|scoreev:e6ccc19d0f5dd587|scoreev:6956e681c681d639|scoreev:0d999569f9cb4ce2|scoreev:6456a89234cc205f|scoreev:762941f7cef70f0b,graduate_audit.outreach_drafting:v1,2026-09-11T16:45:05.957485+00:00
+2.0,draft:c59add4628bc4389,4,first_wave,us:ipeds:230764:program:phd:computing-phd,University of Utah,Computing PhD,professor,John Regehr,regehr@cs.utah.edu,Fall 2027 PhD inquiry - software verification,First-Class Verification Dialects for MLIR,https://users.cs.utah.edu/~regehr/papers/pldi25.pdf,"I am Chimdumebi Mitchell Nebolisa, an undergraduate studying computer science at East Texas A&M University graduating in May 2027. TerraProbe, my research on LLM-based Terraform repair, has been accepted as a full paper at ICTAI 2026.",Do you expect to have funded capacity to advise new PhD students in Fall 2027 working on verification or testing methods relevant to automated software repair?,"Dear Professor Regehr,
+
+I am Chimdumebi Mitchell Nebolisa, an undergraduate studying computer science at East Texas A&M University graduating in May 2027. TerraProbe, my research on LLM-based Terraform repair, has been accepted as a full paper at ICTAI 2026.
+
+I was interested in your recent work titled ""First-Class Verification Dialects for MLIR"". I am interested in how verification and test-case reduction can produce compact, reproducible evidence that an automated repair is correct.
+
+Do you expect to have funded capacity to advise new PhD students in Fall 2027 working on verification or testing methods relevant to automated software repair?
+
+yours sincerely,
+Chimdumebi Mitchell Nebolisa",yes,no,yes,yes,yes,yes,yes,yes,yes,yes,yes,not_sent,stage4src:6e3182f0ab7070ac|stage4src:5f1ae3138a3ce3ab|stage4src:a254ad4d4bb45e55|stage4src:bd409d9203c351d9|scoreev:11ada9dc6bdcc746|scoreev:ae16fddc7329eee2|scoreev:170d71b2f4c6d059|scoreev:97aff0fe70fc4e18|scoreev:793a6fca38603e9a|scoreev:3f6310daeb2d5695,graduate_audit.outreach_drafting:v1,2026-09-11T16:45:05.957485+00:00
+2.0,draft:f620bb90976ed57d,5,first_wave,ca:dli:O19305471522:program:thesis-or-research-master-s:master-of-applied-science-in-electrical-and-computer-engineering,University of Waterloo,Master of Applied Science in Electrical and Computer Engineering,professor,Patrick Lam,p23lam@uwaterloo.ca,Fall 2027 MASc inquiry - static analysis,Static analysis and verification for more-reliable Rust code,https://uwaterloo.ca/engineering/news/researchers-awarded-29-million-federal-funding,"I am Chimdumebi Mitchell Nebolisa, an undergraduate studying computer science at East Texas A&M University graduating in May 2027. TerraProbe, my research on LLM-based Terraform repair, has been accepted as a full paper at ICTAI 2026.",Do you expect to have funded capacity for a Fall 2027 MASc student working on static analysis or verification for infrastructure and software repair?,"Dear Professor Lam,
+
+I am Chimdumebi Mitchell Nebolisa, an undergraduate studying computer science at East Texas A&M University graduating in May 2027. TerraProbe, my research on LLM-based Terraform repair, has been accepted as a full paper at ICTAI 2026.
+
+I was interested in your recent work titled ""Static analysis and verification for more-reliable Rust code"". Your direction in static analysis and verification aligns with my goal of validating infrastructure-as-code repairs with reproducible correctness evidence.
+
+Do you expect to have funded capacity for a Fall 2027 MASc student working on static analysis or verification for infrastructure and software repair?
+
+yours sincerely,
+Chimdumebi Mitchell Nebolisa",yes,no,yes,yes,yes,yes,yes,yes,yes,yes,yes,not_sent,stage4src:fa4ad620b982c6a0|stage4src:f0d67f8b9eb6b846|stage4src:2980fbc95562267f|stage4src:7058eecc0fbfdf89|scoreev:d9f710f7bb03913c|scoreev:4e0a1e29c4413217|scoreev:de41ace2a1f45cbf|scoreev:be502912d30765f9|scoreev:0da8813d89520768|scoreev:ae57099b79774275,graduate_audit.outreach_drafting:v1,2026-09-11T16:45:05.957485+00:00
+2.0,draft:a10833e47394daa6,6,first_wave,ca:dli:O19361109242:program:thesis-or-research-master-s:computer-science-msc-thesis-option,York University,Master of Science in Computer Science — Thesis Option,professor,Zhen Ming (Jack) Jiang,zmjiang@yorku.ca,Fall 2027 MSc inquiry - reliable coding agents,An Experience Report on LLM-Based Agentic Translation from Android to iOS: Pitfalls and Insights,https://www.eecs.yorku.ca/~wangsong/publication.html,"I am Chimdumebi Mitchell Nebolisa, an undergraduate studying computer science at East Texas A&M University graduating in May 2027. My research includes TerraProbe, an ICTAI 2026 full paper on LLM-based Terraform repair, and Evidex, which examines evidence-based claim verification and evaluation.",Do you expect to have funded capacity for a Fall 2027 MSc thesis student studying reliable AI-assisted software engineering?,"Dear Professor Jiang,
+
+I am Chimdumebi Mitchell Nebolisa, an undergraduate studying computer science at East Texas A&M University graduating in May 2027. My research includes TerraProbe, an ICTAI 2026 full paper on LLM-based Terraform repair, and Evidex, which examines evidence-based claim verification and evaluation.
+
+I was interested in your recent work titled ""An Experience Report on LLM-Based Agentic Translation from Android to iOS: Pitfalls and Insights"". I am especially interested in empirical methods for finding failure modes in coding agents and evaluating whether generated changes are correct and reproducible.
+
+Do you expect to have funded capacity for a Fall 2027 MSc thesis student studying reliable AI-assisted software engineering?
+
+yours sincerely,
+Chimdumebi Mitchell Nebolisa",yes,no,yes,yes,yes,yes,yes,yes,yes,yes,yes,not_sent,stage4src:762fe65b0db7ced9|stage4src:1ed8742d5638462f|stage4src:4914cb0788170408|stage4src:61a3e62efe67bac6|stage4src:d57104edab934c4c|stage4src:7fdab7b528c4640e|scoreev:2502f7f775d5e08f|scoreev:a8452913d903ccbe|scoreev:8f412a399cbecbd5|scoreev:925add8623ffbb97|scoreev:2942c749bd5e197f|scoreev:e652f3e4a7330e68,graduate_audit.outreach_drafting:v1,2026-09-11T16:45:05.957485+00:00
+2.0,draft:2ada73da70c42cdb,7,first_wave,us:ipeds:217156:program:phd:computer-science-phd,Brown University,Computer Science PhD,professor,Malte Schwarzkopf,malte@cs.brown.edu,Fall 2027 PhD inquiry - practical static analysis,Paralegal: Practical Static Analysis for Privacy Bugs,https://cs.brown.edu/people/malte/pub/papers/2025-osdi-paralegal.pdf,"I am Chimdumebi Mitchell Nebolisa, an undergraduate studying computer science at East Texas A&M University graduating in May 2027. My research includes TerraProbe, an ICTAI 2026 full paper on LLM-based Terraform repair, and Evidex, which examines evidence-based claim verification and evaluation.",Do you expect to have capacity to advise new PhD students in Fall 2027 working on practical analysis for secure or privacy-preserving AI-assisted systems?,"Dear Professor Schwarzkopf,
+
+I am Chimdumebi Mitchell Nebolisa, an undergraduate studying computer science at East Texas A&M University graduating in May 2027. My research includes TerraProbe, an ICTAI 2026 full paper on LLM-based Terraform repair, and Evidex, which examines evidence-based claim verification and evaluation.
+
+I was interested in your recent work titled ""Paralegal: Practical Static Analysis for Privacy Bugs"". Privacy-by-construction and practical static analysis connect to my interest in evidence-backed checks for AI-generated software and infrastructure changes.
+
+Do you expect to have capacity to advise new PhD students in Fall 2027 working on practical analysis for secure or privacy-preserving AI-assisted systems?
+
+yours sincerely,
+Chimdumebi Mitchell Nebolisa",yes,no,yes,yes,yes,yes,yes,yes,yes,yes,yes,not_sent,stage4src:9e225068ee1ec511|stage4src:969d640b524af6a4|stage4src:747fad1b188cf77c|stage4src:7055bd19ee25acbb|scoreev:89d2f56e8b5e6d94|scoreev:2b1b80e203161ecd|scoreev:1a3bd657d9af619f|scoreev:8caa371a93b5107f|scoreev:250be9863712bd66|scoreev:db017526795ebc91,graduate_audit.outreach_drafting:v1,2026-09-11T16:45:05.957485+00:00
+2.0,draft:9cf7e4f5fd05534f,8,first_wave,us:ipeds:126614:program:phd:computer-science-phd,University of Colorado Boulder,Doctor of Philosophy in Computer Science,professor,Sriram Sankaranarayanan,srirams@colorado.edu,Fall 2027 PhD inquiry - repair verification,Semantic Foundations for the Static Analysis of Program Revisions,https://plv.colorado.edu/,"I am Chimdumebi Mitchell Nebolisa, an undergraduate studying computer science at East Texas A&M University graduating in May 2027. TerraProbe, my research on LLM-based Terraform repair, has been accepted as a full paper at ICTAI 2026.",Do you expect to have funded capacity to advise new PhD students in Fall 2027 working on verification or synthesis for reliable software repair?,"Dear Professor Sankaranarayanan,
+
+I am Chimdumebi Mitchell Nebolisa, an undergraduate studying computer science at East Texas A&M University graduating in May 2027. TerraProbe, my research on LLM-based Terraform repair, has been accepted as a full paper at ICTAI 2026.
+
+I was interested in your recent work titled ""Semantic Foundations for the Static Analysis of Program Revisions"". I am interested in using formal and static analyses to establish whether an automatically generated repair preserves intended behavior across program revisions.
+
+Do you expect to have funded capacity to advise new PhD students in Fall 2027 working on verification or synthesis for reliable software repair?
+
+yours sincerely,
+Chimdumebi Mitchell Nebolisa",yes,no,yes,yes,yes,yes,yes,yes,yes,yes,yes,not_sent,stage4src:fb70dd2f96a45a49|stage4src:3f80d0f9af176c3d|stage4src:f22dc4db1f8965d8|stage4src:8efd87e87d2e7938|scoreev:da5e0aa456a9e1ab|scoreev:710571d75f264f42|scoreev:ab00a68a0d8ae87d|scoreev:aebe49df5bc30a06|scoreev:289a64c9957561af|scoreev:8f9873866bc8c297,graduate_audit.outreach_drafting:v1,2026-09-11T16:45:05.957485+00:00
+2.0,draft:7daf27b70f06841b,9,first_wave,us:ipeds:198419:program:phd:computer-science-phd,Duke University,Computer Science PhD,professor,Danfeng Zhang,dz132@duke.edu,Fall 2027 PhD inquiry - verification and repair,Agora: Trust Less and Open More in Verification for Confidential Computing,https://users.cs.duke.edu/~dz132/publication.html,"I am Chimdumebi Mitchell Nebolisa, an undergraduate studying computer science at East Texas A&M University graduating in May 2027. TerraProbe, my research on LLM-based Terraform repair, has been accepted as a full paper at ICTAI 2026.",Do you expect to have funded capacity to advise new PhD students in Fall 2027 working on verification or automated repair for secure systems?,"Dear Professor Zhang,
+
+I am Chimdumebi Mitchell Nebolisa, an undergraduate studying computer science at East Texas A&M University graduating in May 2027. TerraProbe, my research on LLM-based Terraform repair, has been accepted as a full paper at ICTAI 2026.
+
+I was interested in your recent work titled ""Agora: Trust Less and Open More in Verification for Confidential Computing"". Your work on verification for confidential computing connects to my interest in producing checkable assurance for automatically generated software fixes.
+
+Do you expect to have funded capacity to advise new PhD students in Fall 2027 working on verification or automated repair for secure systems?
+
+yours sincerely,
+Chimdumebi Mitchell Nebolisa",yes,no,yes,yes,yes,yes,yes,yes,yes,yes,yes,not_sent,stage4src:c9714bc3917a04e9|stage4src:26867b0af61ed868|stage4src:7b372d51adb28395|stage4src:2d62e921825ffe92|scoreev:5b2a282b2675d9ff|scoreev:39bba6386dfe6b57|scoreev:a7baa9e742d3734a|scoreev:ab79d0db05698db8|scoreev:b1652c0a9a133885|scoreev:cc9883903e78a13c,graduate_audit.outreach_drafting:v1,2026-09-11T16:45:05.957485+00:00
+2.0,draft:73f4d5b3844a1b66,10,first_wave,us:ipeds:162928:program:phd:phd-in-computer-science,Johns Hopkins University,Doctor of Philosophy in Computer Science,professor,Yinzhi Cao,yinzhi.cao@jhu.edu,Fall 2027 PhD inquiry - vulnerability discovery,Follow My Flow: Unveiling Client-Side Prototype Pollution Gadgets from One Million Real-World Websites,https://www.cs.jhu.edu/news/yinzhi-cao-receives-multiple-awards-at-ieee-security-and-privacy-2025/,"I am Chimdumebi Mitchell Nebolisa, an undergraduate studying computer science at East Texas A&M University graduating in May 2027. My research includes TerraProbe, an ICTAI 2026 full paper on LLM-based Terraform repair, and Evidex, which examines evidence-based claim verification and evaluation.",Do you expect to have funded capacity to advise new PhD students in Fall 2027 working on automated vulnerability discovery or security evaluation of AI-assisted systems?,"Dear Professor Cao,
+
+I am Chimdumebi Mitchell Nebolisa, an undergraduate studying computer science at East Texas A&M University graduating in May 2027. My research includes TerraProbe, an ICTAI 2026 full paper on LLM-based Terraform repair, and Evidex, which examines evidence-based claim verification and evaluation.
+
+I was interested in your recent work titled ""Follow My Flow: Unveiling Client-Side Prototype Pollution Gadgets from One Million Real-World Websites"". I am interested in combining automated vulnerability discovery with reproducible evaluation of AI-assisted fixes, particularly for security-critical software.
+
+Do you expect to have funded capacity to advise new PhD students in Fall 2027 working on automated vulnerability discovery or security evaluation of AI-assisted systems?
+
+yours sincerely,
+Chimdumebi Mitchell Nebolisa",yes,no,yes,yes,yes,yes,yes,yes,yes,yes,yes,not_sent,stage4src:e68581d9a551c930|stage4src:76e8accbcdd305f0|stage4src:d03292b0df21ae8d|stage4src:ff6314d1c754440b|stage4src:a787eb29feb9ae9e|stage4src:eaed3ac28d9d5a8e|scoreev:792f0c7f509e96e7|scoreev:92d8805952a6e1f2|scoreev:27651915e285a2e2|scoreev:0f7c58cd337b5282|scoreev:910ce2aacd7d0334|scoreev:0949d2beb60bd09d,graduate_audit.outreach_drafting:v1,2026-09-11T16:45:05.957485+00:00
+2.0,draft:5c1070d904f610fd,11,first_wave,us:ipeds:213543:program:phd:phd-in-computer-science,Lehigh University,PhD in Computer Science,professor,Lichao Sun,lis221@lehigh.edu,Fall 2027 PhD inquiry - trustworthy LLM evaluation,Finding harmony in the age of artificial intelligence,https://engineering.lehigh.edu/research/resolve/volume-1-2025/lichao-sun-finding-harmony-age-artificial-intelligence,"I am Chimdumebi Mitchell Nebolisa, an undergraduate studying computer science at East Texas A&M University graduating in May 2027. My Evidex research examines evidence-based claim verification and evaluation.",Do you expect to have funded capacity to advise new PhD students in Fall 2027 working on trustworthy evaluation of generative AI or LLM-based systems?,"Dear Professor Sun,
+
+I am Chimdumebi Mitchell Nebolisa, an undergraduate studying computer science at East Texas A&M University graduating in May 2027. My Evidex research examines evidence-based claim verification and evaluation.
+
+I was interested in your recent work titled ""Finding harmony in the age of artificial intelligence"". Your focus on safety, privacy, and security in generative AI connects to my interest in evaluations grounded in verifiable evidence.
+
+Do you expect to have funded capacity to advise new PhD students in Fall 2027 working on trustworthy evaluation of generative AI or LLM-based systems?
+
+yours sincerely,
+Chimdumebi Mitchell Nebolisa",yes,no,yes,yes,yes,yes,yes,yes,yes,yes,yes,not_sent,stage4src:78a6b2fd6db7e97c|stage4src:b86678f7852231ce|stage4src:81c8558ce445f17a|stage4src:b3a854e934ed9e89|stage4src:17b1e8f23da8c09a|scoreev:4cdc4ccaa91a5d57|scoreev:42e7e09c859057e9|scoreev:227f18ec671b29de|scoreev:0309726c6ce7b1da|scoreev:be8f55a607426a05|scoreev:7e12469ba65d8eb5,graduate_audit.outreach_drafting:v1,2026-09-11T16:45:05.957485+00:00
+2.0,draft:9e1f9d1b78fd31a5,12,first_wave,us:ipeds:185828:program:phd:ph-d-computer-science,New Jersey Institute of Technology,Ph.D. Computer Science,professor,Martin Kellogg,martin.kellogg@njit.edu,Fall 2027 PhD inquiry - automated repair,Repairing Leaks in Resource Wrappers,https://researchwith.njit.edu/en/persons/martin-kellogg/,"I am Chimdumebi Mitchell Nebolisa, an undergraduate studying computer science at East Texas A&M University graduating in May 2027. TerraProbe, my research on LLM-based Terraform repair, has been accepted as a full paper at ICTAI 2026.","Do you expect to have funded capacity for a Fall 2027 PhD student working on static analysis, specification inference, or automated software repair?","Dear Professor Kellogg,
+
+I am Chimdumebi Mitchell Nebolisa, an undergraduate studying computer science at East Texas A&M University graduating in May 2027. TerraProbe, my research on LLM-based Terraform repair, has been accepted as a full paper at ICTAI 2026.
+
+I was interested in your recent work titled ""Repairing Leaks in Resource Wrappers"". Resource-leak repair and lightweight checking closely match my interest in making automated infrastructure repairs both practical and verifiably correct.
+
+Do you expect to have funded capacity for a Fall 2027 PhD student working on static analysis, specification inference, or automated software repair?
+
+yours sincerely,
+Chimdumebi Mitchell Nebolisa",yes,no,yes,yes,yes,yes,yes,yes,yes,yes,yes,not_sent,stage4src:f34cc7e67c765a1c|stage4src:12bf1c9850e95a53|stage4src:de6cb977a917fdcc|stage4src:69f2aa34f113c9ec|stage4src:3516fcc0b50b211e|stage4src:d7e92b0510142238|scoreev:ea13d6e743f2080c|scoreev:bb8bce2063680cdb|scoreev:f0a12e1b38ac1875|scoreev:8e7255448a5d95f8|scoreev:e2dcd1bb8ea795ef|scoreev:452b743e40db4b4a,graduate_audit.outreach_drafting:v1,2026-09-11T16:45:05.957485+00:00

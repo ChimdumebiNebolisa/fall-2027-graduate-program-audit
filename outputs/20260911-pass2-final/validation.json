@@ -1,0 +1,147 @@
+{
+  "schema_version": "2.0",
+  "generated_at": "2026-09-11T17:32:46.191792+00:00",
+  "assertions": {
+    "all_16_core_programs_have_five_domain_rechecks": true,
+    "no_core_claim_recheck_is_missing_a_source": true,
+    "all_confirmed_recruiting_claims_rechecked": true,
+    "recruiting_claims_preserve_exact_degree_scope": true,
+    "exclusion_sample_spans_all_regions": true,
+    "exclusion_sample_spans_major_reasons": true,
+    "all_scores_recalculate_exactly": true,
+    "all_distinct_professor_counts_recalculate_exactly": true,
+    "every_core_deadline_is_explicitly_cycle_labeled_or_caveated": true,
+    "core_programs_are_current_or_explicitly_current_in_evidence": true,
+    "core_is_within_working_range": true,
+    "active_portfolio_uses_one_program_per_university": true,
+    "active_portfolio_clears_all_hard_gates": true,
+    "stage_8_drafts_are_the_only_ready_drafts": true
+  },
+  "categories": [
+    {
+      "category": "structural validation",
+      "status": "PASS",
+      "coverage": "80 core-domain rows; 166 score recalculations; 3596 sources",
+      "limitations": "Workbook validation is recorded separately after export."
+    },
+    {
+      "category": "evidence-completeness validation",
+      "status": "PASS_WITH_DISCLOSED_GAPS",
+      "coverage": "primary source recorded for 80/80 core-domain checks",
+      "limitations": "48 checks have one authoritative URL in the ledger."
+    },
+    {
+      "category": "substantive second-source verification",
+      "status": "PARTIAL",
+      "coverage": "32/80 core-domain checks have two distinct authoritative URLs",
+      "limitations": "No second distinct authoritative URL was present in the ledger for 48/80 checks; live accessibility: {'request_error': 4, 'not_checked': 16, 'reachable': 54, 'http_error': 6}."
+    },
+    {
+      "category": "portfolio-rule validation",
+      "status": "PASS",
+      "coverage": "16 core + 6 reserve; 22 unique institutions",
+      "limitations": "Fee known numerically for 13/22 active programs."
+    },
+    {
+      "category": "outreach-quality validation",
+      "status": "PASS_WITH_REPLY_DEPENDENCIES",
+      "coverage": "12 first-wave drafts; 28 confirmed recruiting claims rechecked",
+      "limitations": "Live source accessibility for recruiting claims: {'reachable': 25, 'request_error': 2, 'http_error': 1}; capacity still requires replies."
+    },
+    {
+      "category": "visual workbook validation",
+      "status": "PASS",
+      "coverage": "11/11 sheets rendered and visually inspected; 11 sheets exported",
+      "limitations": "Visual inspection checks layout/readability; substantive correctness is covered by the other validation categories."
+    }
+  ],
+  "portfolio_economics": {
+    "active_programs": 22,
+    "core_programs": 16,
+    "reserve_programs": 6,
+    "unique_institutions": 22,
+    "degree_types": {
+      "PhD": 18,
+      "Thesis or research master's": 4
+    },
+    "regions": {
+      "us": 18,
+      "canada": 4
+    },
+    "known_fee_programs": 13,
+    "unknown_or_non_numeric_fee_programs": 9,
+    "known_fee_totals_by_currency": {
+      "USD": 820.0,
+      "CAD": 265.0
+    },
+    "single_program_per_university": true,
+    "all_hard_gates_pass": true
+  },
+  "core_recheck_statuses": {
+    "verified_two_source": 32,
+    "verified_single_source": 48
+  },
+  "core_live_access": {
+    "request_error": 4,
+    "not_checked": 16,
+    "reachable": 54,
+    "http_error": 6
+  },
+  "recruiting_live_access": {
+    "reachable": 25,
+    "request_error": 2,
+    "http_error": 1
+  },
+  "exclusion_sample_by_region": {
+    "canada": 15,
+    "europe": 32,
+    "us": 22
+  },
+  "exclusion_sample_reason_count": 11,
+  "workbook_qa": {
+    "schema_version": "2.0",
+    "generated_at": "2026-09-11T17:25:55.890Z",
+    "workbook_path": "outputs/20260911-pass2-final/graduate_program_audit_pass2_20260911.xlsx",
+    "sheet_count": 11,
+    "sheets": [
+      "Coverage Dashboard",
+      "School Summary",
+      "Schools & Programs",
+      "Professor Outreach",
+      "Department Admin Outreach",
+      "This Weekend Outreach Queue",
+      "Second-Wave Outreach",
+      "Screening & Exclusions",
+      "Sources",
+      "Outreach Drafts",
+      "Methodology"
+    ],
+    "all_required_sheets": true,
+    "table_count": 11,
+    "filters_present_on_all_data_sheets": true,
+    "frozen_panes_present_on_all_sheets": true,
+    "dropdown_sheets": [
+      "Schools & Programs",
+      "Professor Outreach",
+      "Department Admin Outreach",
+      "This Weekend Outreach Queue",
+      "Second-Wave Outreach",
+      "Screening & Exclusions",
+      "Outreach Drafts"
+    ],
+    "hyperlink_formula_count": 3847,
+    "professor_outreach_rows": 22,
+    "professor_outreach_distinct_ids": 22,
+    "no_professor_double_count": true,
+    "first_wave_rows": 12,
+    "first_wave_ready_rows": 12,
+    "second_wave_rows": 11,
+    "second_wave_ready_rows": 0,
+    "rendered_sheet_count": 11,
+    "html_preview_count": 11,
+    "visually_inspected_sheet_count": 11,
+    "formula_errors": [],
+    "substantive_validation_note": "Formula cleanliness is not treated as substantive proof; independent source, score, professor, portfolio, outreach, and cycle checks are stored separately.",
+    "visual_review_confirmed_at": "2026-09-11T17:27:29.983Z"
+  }
+}

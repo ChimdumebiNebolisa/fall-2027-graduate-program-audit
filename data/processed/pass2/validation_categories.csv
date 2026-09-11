@@ -1,0 +1,7 @@
+﻿category,status,coverage,limitations
+structural validation,PASS,80 core-domain rows; 166 score recalculations; 3596 sources,Workbook validation is recorded separately after export.
+evidence-completeness validation,PASS_WITH_DISCLOSED_GAPS,primary source recorded for 80/80 core-domain checks,48 checks have one authoritative URL in the ledger.
+substantive second-source verification,PARTIAL,32/80 core-domain checks have two distinct authoritative URLs,"No second distinct authoritative URL was present in the ledger for 48/80 checks; live accessibility: {'request_error': 4, 'not_checked': 16, 'reachable': 54, 'http_error': 6}."
+portfolio-rule validation,PASS,16 core + 6 reserve; 22 unique institutions,Fee known numerically for 13/22 active programs.
+outreach-quality validation,PASS_WITH_REPLY_DEPENDENCIES,12 first-wave drafts; 28 confirmed recruiting claims rechecked,"Live source accessibility for recruiting claims: {'reachable': 25, 'request_error': 2, 'http_error': 1}; capacity still requires replies."
+visual workbook validation,PASS,11/11 sheets rendered and visually inspected; 11 sheets exported,Visual inspection checks layout/readability; substantive correctness is covered by the other validation categories.

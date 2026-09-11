@@ -1,0 +1,167 @@
+﻿program_id,institution_name,recorded_distinct_professors,independent_distinct_professors,difference,status
+us:ipeds:179867:program:phd:computer-science-phd,Washington University in St Louis,1,1,0,pass
+us:ipeds:213543:program:phd:phd-in-computer-science,Lehigh University,1,1,0,pass
+us:ipeds:104179:program:phd:computer-science-phd,University of Arizona,1,1,0,pass
+us:ipeds:126614:program:phd:computer-science-phd,University of Colorado Boulder,1,1,0,pass
+us:ipeds:166629:program:phd:computer-science-phd,University of Massachusetts-Amherst,1,1,0,pass
+us:ipeds:174066:program:phd:computer-science-phd,University of Minnesota-Twin Cities,1,1,0,pass
+us:ipeds:233921:program:phd:computer-science-phd,Virginia Polytechnic Institute and State University,1,1,0,pass
+us:ipeds:211440:program:phd:software-engineering-phd,Carnegie Mellon University,1,1,0,pass
+us:ipeds:198419:program:phd:computer-science-phd,Duke University,1,1,0,pass
+us:ipeds:185828:program:phd:ph-d-computer-science,New Jersey Institute of Technology,1,1,0,pass
+us:ipeds:167358:program:phd:computer-science-phd,Northeastern University,1,1,0,pass
+us:ipeds:162928:program:phd:phd-in-computer-science,Johns Hopkins University,1,1,0,pass
+us:ipeds:147767:program:phd:phd-in-computer-science,Northwestern University,1,1,0,pass
+us:ipeds:145600:program:phd:phd-in-computer-science,University of Illinois Chicago,1,1,0,pass
+us:ipeds:170976:program:phd:computer-science-and-engineering-phd,University of Michigan-Ann Arbor,1,1,0,pass
+us:ipeds:230764:program:phd:computing-phd,University of Utah,1,1,0,pass
+us:ipeds:217156:program:phd:computer-science-phd,Brown University,1,1,0,pass
+us:ipeds:232982:program:phd:computer-science-ph-d,Old Dominion University,1,1,0,pass
+ca:dli:O19395164223:program:thesis-or-research-master-s:msc-in-applied-modelling-and-quantitative-methods-thesis-stream,Trent University,1,1,0,pass
+ca:dli:O19332746152:program:thesis-or-research-master-s:master-of-applied-science-in-electrical-and-computer-engineering,University of Toronto,1,1,0,pass
+ca:dli:O19305471522:program:thesis-or-research-master-s:master-of-applied-science-in-electrical-and-computer-engineering,University of Waterloo,1,1,0,pass
+ca:dli:O19361109242:program:thesis-or-research-master-s:computer-science-msc-thesis-option,York University,1,1,0,pass
+us:ipeds:153603:program:phd:computer-science-phd,Iowa State University,1,1,0,pass
+us:ipeds:227757:program:phd:ph-d-in-computer-science,Rice University,1,1,0,pass
+us:ipeds:152080:program:phd:computer-science-and-engineering-phd,University of Notre Dame,1,1,0,pass
+us:ipeds:223232:program:phd:ph-d-in-computer-science,Baylor University,1,1,0,pass
+us:ipeds:164988:program:phd:computer-science-phd,Boston University,1,1,0,pass
+us:ipeds:201645:program:phd:computer-science-phd,Case Western Reserve University,1,1,0,pass
+us:ipeds:126818:program:phd:computer-science-phd,Colorado State University-Fort Collins,1,1,0,pass
+ca:dli:O19359011007:program:thesis-or-research-master-s:software-engineering-masc,Concordia University,1,1,0,pass
+us:ipeds:199193:program:phd:computer-science-phd,North Carolina State University at Raleigh,1,1,0,pass
+us:ipeds:204796:program:phd:computer-science-and-engineering-phd,Ohio State University-Main Campus,1,1,0,pass
+us:ipeds:214777:program:phd:computer-science-and-engineering-phd,Pennsylvania State University-Main Campus,1,1,0,pass
+us:ipeds:243780:program:phd:computer-science-phd,Purdue University-Main Campus,1,1,0,pass
+us:ipeds:221759:program:phd:computer-science-phd,The University of Tennessee-Knoxville,1,1,0,pass
+us:ipeds:228778:program:phd:computer-science-phd,The University of Texas at Austin,1,1,0,pass
+us:ipeds:196060:program:phd:doctor-of-philosophy-in-computer-science,University at Albany,1,1,0,pass
+us:ipeds:132903:program:phd:computer-science-phd,University of Central Florida,1,1,0,pass
+us:ipeds:225511:program:phd:phd-in-computer-science,University of Houston,1,1,0,pass
+us:ipeds:163268:program:phd:phd-in-computer-science,University of Maryland-Baltimore County,1,1,0,pass
+us:ipeds:163286:program:phd:computer-science-phd,University of Maryland-College Park,1,1,0,pass
+us:ipeds:187985:program:phd:phd-in-computer-science,University of New Mexico-Main Campus,1,1,0,pass
+us:ipeds:195030:program:phd:phd-program-in-computer-science,University of Rochester,1,1,0,pass
+us:ipeds:231624:program:phd:computer-science-phd,William & Mary,1,1,0,pass
+us:ipeds:131520:program:phd:computer-science-ph-d,Howard University,1,1,0,pass
+ca:dli:O19359011033:program:thesis-or-research-master-s:electrical-engineering-thesis-m-sc,McGill University,1,1,0,pass
+us:ipeds:209807:program:phd:doctoral-degree-in-computer-science-ph-d,Portland State University,1,1,0,pass
+us:ipeds:194824:program:phd:ph-d-in-computer-science,Rensselaer Polytechnic Institute,1,1,0,pass
+us:ipeds:228246:program:phd:ph-d-in-computer-science,Southern Methodist University,1,1,0,pass
+us:ipeds:228723:program:phd:doctor-of-philosophy-in-computer-science,Texas A&M University-College Station,1,1,0,pass
+us:ipeds:110644:program:phd:computer-science-phd,University of California-Davis,1,1,0,pass
+us:ipeds:157085:program:phd:doctoral-degree-in-computer-science,University of Kentucky,1,1,0,pass
+ca:dli:O19280533442:program:thesis-or-research-master-s:master-of-applied-science-in-electrical-and-computer-engineering,University of Victoria,1,1,0,pass
+us:ipeds:221999:program:phd:computer-science-phd,Vanderbilt University,1,1,0,pass
+us:ipeds:165015:program:phd:computer-science-phd,Brandeis University,1,1,0,pass
+ca:dli:O19359011007:program:thesis-or-research-master-s:cybersecurity-engineering-masc,Concordia University,1,1,0,pass
+us:ipeds:212054:program:phd:phd-in-computer-science,Drexel University,1,1,0,pass
+us:ipeds:139658:program:phd:phd-in-computer-science-and-informatics,Emory University,1,1,0,pass
+us:ipeds:131469:program:phd:phd-in-computer-science,George Washington University,1,1,0,pass
+us:ipeds:171128:program:phd:computer-science-phd,Michigan Technological University,1,1,0,pass
+us:ipeds:187967:program:phd:doctor-of-philosophy-in-computer-science,New Mexico Institute of Mining and Technology,1,1,0,pass
+us:ipeds:200332:program:phd:ph-d-in-software-and-security-engineering,North Dakota State University-Main Campus,1,1,0,pass
+us:ipeds:207388:program:phd:doctor-of-philosophy-in-computer-science,Oklahoma State University-Main Campus,1,1,0,pass
+us:ipeds:195003:program:phd:computing-and-information-sciences-phd,Rochester Institute of Technology,1,1,0,pass
+us:ipeds:186380:program:phd:computer-science-phd,Rutgers University-New Brunswick,1,1,0,pass
+us:ipeds:196097:program:phd:computer-science-phd,Stony Brook University,1,1,0,pass
+us:ipeds:221847:program:phd:computer-science-phd,Tennessee Technological University,1,1,0,pass
+us:ipeds:228769:program:phd:doctoral-degree-in-computer-science-computer-engineering,The University of Texas at Arlington,1,1,0,pass
+us:ipeds:228787:program:phd:computer-science-phd,The University of Texas at Dallas,1,1,0,pass
+us:ipeds:228796:program:phd:doctor-of-philosophy-in-computer-science,The University of Texas at El Paso,1,1,0,pass
+us:ipeds:100663:program:phd:ph-d-in-computer-science,University of Alabama at Birmingham,1,1,0,pass
+us:ipeds:100706:program:phd:computer-science-ph-d,University of Alabama in Huntsville,1,1,0,pass
+us:ipeds:201885:program:phd:ph-d-in-computer-science-and-engineering,University of Cincinnati-Main Campus,1,1,0,pass
+us:ipeds:126580:program:phd:cybersecurity-phd,University of Colorado Colorado Springs,1,1,0,pass
+us:ipeds:130943:program:phd:computer-science-phd,University of Delaware,1,1,0,pass
+ror:04jr1s763:program:thesis-or-research-master-s:msc-in-software-science-and-technology,University of Florence,1,1,0,pass
+us:ipeds:139959:program:phd:doctor-of-philosophy-in-computer-science,University of Georgia,1,1,0,pass
+us:ipeds:142285:program:phd:computer-science-ph-d,University of Idaho,1,1,0,pass
+us:ipeds:145637:program:phd:computer-science-phd,University of Illinois Urbana-Champaign,1,1,0,pass
+us:ipeds:155317:program:phd:doctor-of-philosophy-in-computer-science,University of Kansas,1,1,0,pass
+us:ipeds:166513:program:phd:doctor-of-philosophy-ph-d-in-computer-science,University of Massachusetts-Lowell,1,1,0,pass
+us:ipeds:182290:program:phd:ph-d-in-computer-science-and-engineering,University of Nevada-Reno,1,1,0,pass
+us:ipeds:199139:program:phd:computing-and-information-systems-phd-software-and-information-systems-track,University of North Carolina at Charlotte,1,1,0,pass
+us:ipeds:209551:program:phd:phd-in-computer-science,University of Oregon,1,1,0,pass
+us:ipeds:215293:program:phd:phd-in-computer-science,University of Pittsburgh-Pittsburgh Campus,1,1,0,pass
+us:ipeds:218663:program:phd:doctor-of-philosophy-in-computer-science,University of South Carolina-Columbia,1,1,0,pass
+us:ipeds:240727:program:phd:phd-in-computer-science,University of Wyoming,1,1,0,pass
+us:ipeds:234030:program:phd:doctor-of-philosophy-in-computer-science,Virginia Commonwealth University,1,1,0,pass
+us:ipeds:236939:program:phd:doctor-of-philosophy-in-computer-science,Washington State University,1,1,0,pass
+us:ipeds:168421:program:phd:phd-in-computer-science,Worcester Polytechnic Institute,1,1,0,pass
+ca:dli:O19394569014:program:thesis-or-research-master-s:computer-science-msc-thesis-stream,Brock University,1,1,0,pass
+ca:dli:O19332687812:program:thesis-or-research-master-s:electrical-and-computer-engineering-masc-software-engineering-concentration,Carleton University,1,1,0,pass
+us:ipeds:190044:program:phd:phd-in-computer-science,Clarkson University,1,1,0,pass
+us:ipeds:217882:program:phd:computer-science-phd,Clemson University,1,1,0,pass
+us:ipeds:139940:program:phd:computer-science-phd,Georgia State University,1,1,0,pass
+us:ipeds:145725:program:phd:computer-science-ph-d,Illinois Institute of Technology,1,1,0,pass
+us:ipeds:155399:program:phd:doctor-of-philosophy-in-computer-science,Kansas State University,1,1,0,pass
+us:ipeds:159391:program:phd:ph-d-in-computer-science-and-engineering,Louisiana State University and Agricultural & Mechanical College,1,1,0,pass
+ca:dli:O19395535729:program:thesis-or-research-master-s:software-engineering-masc,McMaster University,1,1,0,pass
+us:ipeds:180461:program:phd:computer-science-phd,Montana State University,1,1,0,pass
+ca:dli:O18781994282:program:thesis-or-research-master-s:master-of-applied-science-in-engineering-science,Simon Fraser University,1,1,0,pass
+ca:dli:O18781994282:program:thesis-or-research-master-s:computing-science-master-of-science-thesis,Simon Fraser University,1,1,0,pass
+us:ipeds:216339:program:phd:computer-and-information-science-phd,Temple University,1,1,0,pass
+us:ipeds:229027:program:phd:phd-in-computer-science,The University of Texas at San Antonio,1,1,0,pass
+us:ipeds:110653:program:phd:software-engineering-phd,University of California-Irvine,1,1,0,pass
+us:ipeds:110671:program:phd:phd-in-computer-science,University of California-Riverside,1,1,0,pass
+us:ipeds:110680:program:phd:computer-science-and-engineering-phd,University of California-San Diego,1,1,0,pass
+us:ipeds:110705:program:phd:computer-science-phd,University of California-Santa Barbara,1,1,0,pass
+us:ipeds:129020:program:phd:computer-science-and-engineering-phd,University of Connecticut,1,1,0,pass
+ror:01tm6cn81:program:thesis-or-research-master-s:software-engineering-and-management-master-s-programme,University of Gothenburg,1,1,0,pass
+ca:dli:O19305391192:program:phd:phd-in-computer-science,University of Guelph,1,1,0,pass
+us:ipeds:153658:program:phd:phd-in-computer-science,University of Iowa,1,1,0,pass
+us:ipeds:160658:program:phd:phd-in-applied-computing-and-information-sciences,University of Louisiana at Lafayette,1,1,0,pass
+us:ipeds:157289:program:phd:doctor-of-philosophy-in-computer-science-and-engineering,University of Louisville,1,1,0,pass
+us:ipeds:178396:program:phd:phd-in-computer-science,University of Missouri-Columbia,1,1,0,pass
+us:ipeds:181394:program:phd:computing-information-science-ph-d,University of Nebraska at Omaha,1,1,0,pass
+us:ipeds:183044:program:phd:computer-science-ph-d,University of New Hampshire-Main Campus,1,1,0,pass
+us:ipeds:217484:program:phd:computer-science-ph-d,University of Rhode Island,1,1,0,pass
+us:ipeds:240444:program:phd:computer-sciences-phd,University of Wisconsin-Madison,1,1,0,pass
+us:ipeds:240453:program:phd:computer-science-phd,University of Wisconsin-Milwaukee,1,1,0,pass
+us:ipeds:238032:program:phd:ph-d-in-computer-science-and-information-science,West Virginia University,1,1,0,pass
+ca:dli:O19359011070:program:thesis-or-research-master-s:research-master-s-in-computer-engineering-software-engineering-option,École Polytechnique de Montréal,1,1,0,pass
+us:ipeds:142115:program:phd:computing-phd-computer-science-or-cybersecurity-emphasis,Boise State University,1,1,0,pass
+us:ipeds:133951:program:phd:doctor-of-philosophy-in-computer-science,Florida International University,1,1,0,pass
+us:ipeds:232186:program:phd:computer-science-phd,George Mason University,1,1,0,pass
+us:ipeds:209542:program:phd:computer-science-phd,Oregon State University,1,1,0,pass
+us:ipeds:137351:program:phd:ph-d-in-computer-science-and-engineering,University of South Florida,1,1,0,pass
+ror:05trd4x28:program:thesis-or-research-master-s:master-s-degree-in-computer-science,University of Trento,1,1,0,pass
+us:ipeds:207971:program:phd:computer-science-ph-d,University of Tulsa,1,1,0,pass
+us:ipeds:133669:program:phd:doctor-of-philosophy-with-major-in-computer-science,Florida Atlantic University,1,1,0,pass
+ca:dli:O19315945002:program:thesis-or-research-master-s:software-engineering-masc,Ontario Tech University,1,1,0,pass
+ca:dli:O19021279692:program:thesis-or-research-master-s:msc-in-applied-science-computing-science-research-field,Saint Mary’s University,1,1,0,pass
+ca:dli:O19391556899:program:thesis-or-research-master-s:master-of-science-in-computer-science,St. Francis Xavier University,1,1,0,pass
+ca:dli:O19330231062:program:thesis-or-research-master-s:master-of-applied-science-in-electrical-and-computer-engineering,University of British Columbia,1,1,0,pass
+ror:03ad39j10:program:thesis-or-research-master-s:master-s-degree-in-computer-science,University of Pisa,1,1,0,pass
+ror:0005w8d69:program:thesis-or-research-master-s:master-of-science-in-computer-science,Università di Camerino,1,1,0,pass
+ca:dli:O19375892122:program:thesis-or-research-master-s:master-of-engineering-science-mesc-in-electrical-and-computer-engineering,Western University,1,1,0,pass
+us:ipeds:149222:program:phd:computer-science-doctor-of-philosophy,Southern Illinois University-Carbondale,1,1,0,pass
+us:ipeds:186867:program:phd:phd-in-computer-science,Stevens Institute of Technology,1,1,0,pass
+us:ipeds:156125:program:phd:phd-in-electrical-engineering-and-computer-science,Wichita State University,1,1,0,pass
+us:ipeds:139755:program:phd:computer-science-phd,Georgia Institute of Technology-Main Campus,1,1,0,pass
+ca:dli:O19330231062:program:thesis-or-research-master-s:msc-in-computer-science-research,University of British Columbia,0,0,0,pass
+ca:dli:O19091528512:program:phd:phd-in-computer-science,University of Manitoba,1,1,0,pass
+ca:dli:O19332746152:program:direct-entry-phd:phd-in-computer-science-phd-u,University of Toronto,0,0,0,pass
+ca:dli:O19361109242:program:thesis-or-research-master-s:masc-in-electrical-and-computer-engineering,York University,1,1,0,pass
+us:ipeds:181464:program:phd:computer-science-phd,University of Nebraska-Lincoln,1,1,0,pass
+ca:dli:O19376023352:program:thesis-or-research-master-s:msc-in-computing-research-pattern,Queen’s University,0,0,0,pass
+ca:dli:O18886830282:program:thesis-or-research-master-s:msc-in-computer-science-thesis,University of Calgary,0,0,0,pass
+ca:dli:O19305471522:program:thesis-or-research-master-s:mmath-in-computer-science-thesis,University of Waterloo,0,0,0,pass
+ca:dli:O19330231062:program:integrated-or-structured-doctorate:phd-track-via-msc,University of British Columbia,0,0,0,pass
+ror:05a28rw58:program:direct-entry-phd:direct-doctorate-in-computer-science,ETH Zurich,0,0,0,pass
+us:ipeds:234076:program:phd:computer-science-phd,University of Virginia-Main Campus,0,0,0,pass
+ca:dli:O19305471522:program:direct-entry-phd:phd-in-computer-science-direct-from-bachelor-s-exception,University of Waterloo,0,0,0,pass
+ca:dli:O19359011007:program:thesis-or-research-master-s:master-of-computer-science-thesis,Concordia University,0,0,0,pass
+ca:dli:O19359011033:program:thesis-or-research-master-s:msc-in-computer-science-thesis,McGill University,0,0,0,pass
+ca:dli:O18886830282:program:direct-entry-phd:phd-in-computer-science-without-completed-msc,University of Calgary,0,0,0,pass
+ror:01nrxwf90:program:phd:phd-informatics,University of Edinburgh,0,0,0,pass
+ca:dli:O19425660421:program:thesis-or-research-master-s:msc-in-computer-science-thesis,University of Saskatchewan,0,0,0,pass
+ca:dli:O19280533442:program:thesis-or-research-master-s:msc-in-computer-science-thesis,University of Victoria,0,0,0,pass
+ror:029pk6x14:program:thesis-or-research-master-s:erasmus-mundus-joint-master-in-engineering-of-data-intensive-intelligent-software-systems-ediss,Åbo Akademi University,0,0,0,pass
+ror:02tyrky19:program:phd:phd-in-computer-science-and-statistics,Trinity College Dublin,0,0,0,pass
+ror:01jdpyv68:program:integrated-or-structured-doctorate:saarbr-cken-graduate-school-of-computer-science,Saarland University,0,0,0,pass
+ror:02jx3x895:program:integrated-or-structured-doctorate:computer-science-mphil-phd,University College London,0,0,0,pass
+ca:dli:O19257171832:program:thesis-or-research-master-s:msc-in-computing-science-thesis,University of Alberta,0,0,0,pass
+ror:013meh722:program:phd:phd-in-computer-science,University of Cambridge,0,0,0,pass
+ror:052gg0110:program:phd:dphil-in-computer-science,University of Oxford,0,0,0,pass
