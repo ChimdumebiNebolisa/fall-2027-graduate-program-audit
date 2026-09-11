@@ -1214,6 +1214,56 @@ FACULTY_ROSTERS: dict[str, FacultyRoster] = {
             _c("Sajal Saha", "artificial intelligence; data analytics; intelligent systems"),
         ),
     ),
+    "University of Alabama in Huntsville": FacultyRoster(
+        "College of Science, Department of Computer Science",
+        "https://www.uah.edu/science/departments/computer-science/faculty-staff",
+        (
+            _c("Chaity Banerjee", "artificial intelligence; data science; cybersecurity; trustworthy computing"),
+            _c("Jingshu Chen", "digital forensics; cybersecurity; security analysis"),
+            _c("Tathagata Mukherjee", "cybersecurity; machine learning; systems security"),
+            _c("Vineetha Menon", "machine learning; artificial intelligence; cybersecurity; data analytics"),
+        ),
+    ),
+    "The University of Texas at El Paso": FacultyRoster(
+        "College of Engineering, Department of Computer Science",
+        "https://www.utep.edu/cs/people/",
+        (
+            _c("Eric Freudenthal", "software assurance; systems security; vulnerability analysis"),
+            _c("Marcelo Frias", "formal methods; software verification; program analysis"),
+            _c("Ann Q. Gates", "software engineering; software processes; trustworthy systems"),
+            _c("Christopher Kiekintveld", "artificial intelligence; security; game theory; decision making"),
+        ),
+    ),
+    "Old Dominion University": FacultyRoster(
+        "College of Sciences, Department of Computer Science",
+        "https://faculty.pages.cs.odu.edu/",
+        (
+            _c("Mohammad GhasemiGol", "generative AI; AI red teaming; agentic systems; cybersecurity"),
+            _c("Mahmoud Nazzal", "large language models; adversarial machine learning; software engineering"),
+            _c("Rui Ning", "trustworthy AI; privacy; cyber-physical systems; security"),
+            _c("Andrey Chernikov", "formal methods; parallel systems; verification; algorithms"),
+        ),
+    ),
+    "Temple University": FacultyRoster(
+        "College of Science and Technology, Department of Computer and Information Sciences",
+        "https://cis.temple.edu/people/faculty/?s=cs",
+        (
+            _c("Yan Wang", "systems security; mobile security; trustworthy machine learning"),
+            _c("Eduard Dragut", "natural language processing; information retrieval; web data"),
+            _c("Anduo Wang", "networked systems; cybersecurity; formal reasoning"),
+            _c("Slobodan Vucetic", "artificial intelligence; machine learning; trustworthy data science"),
+        ),
+    ),
+    "University of Rhode Island": FacultyRoster(
+        "College of Arts and Sciences, Department of Computer Science and Statistics",
+        "https://web.uri.edu/cs/people/",
+        (
+            _c("Sarah Brown", "sociotechnical AI; algorithmic fairness; machine learning evaluation"),
+            _c("Alina Jade Barnett", "interpretable machine learning; data science; trustworthy AI"),
+            _c("Noah Daniels", "FAIR data; scientific metadata; reproducible computing"),
+            _c("Shaun Wallace", "human-AI interaction; information retrieval; interactive systems"),
+        ),
+    ),
 }
 
 
