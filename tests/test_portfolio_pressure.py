@@ -205,6 +205,25 @@ def test_stage_six_reentry_05_disposes_and_pressure_tests_every_new_route():
     assert {row["portfolio_status"] for row in entries} == {"monitor", "do_not_apply"}
 
 
+def test_stage_six_reentry_06_disposes_and_pressure_tests_every_new_route():
+    latest_ids = {
+        row["candidate_program_id"]
+        for row in read_csv(REPO_ROOT / "data/processed/pass2/stage_03_reentry_06_verification.csv")
+        if row["faculty_review_ready"] == "yes"
+    }
+    portfolio = read_json(REPO_ROOT / "data/processed/pass2/portfolio.json")
+    entries = [
+        row
+        for key in ("core", "reserve", "monitor", "do_not_apply", "not_retained_alternates")
+        for row in portfolio[key]
+        if row["program_id"] in latest_ids
+    ]
+    assert len(latest_ids) == len(entries) == 6
+    assert {row["program_id"] for row in entries} == latest_ids
+    assert all(len(row["pressure_test_answers"]) == len(PRESSURE_QUESTIONS) for row in entries)
+    assert {row["portfolio_status"] for row in entries} == {"do_not_apply"}
+
+
 def test_stage_six_manifest_passes_every_acceptance_assertion():
     manifest = read_json(REPO_ROOT / "data/manifests/pass2/stage_06.json")
     scores = read_csv(REPO_ROOT / "data/processed/pass2/program_scores.csv")
