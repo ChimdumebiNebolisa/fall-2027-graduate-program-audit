@@ -1,6 +1,6 @@
 # Stage 4 Result
 
-Generated: 2026-09-11T09:01:50.388362+00:00
+Generated: 2026-09-11T09:59:07.362893+00:00
 
 ## Decision
 
@@ -8,25 +8,25 @@ Generated: 2026-09-11T09:01:50.388362+00:00
 
 ## What changed
 
-All 120 faculty-review-ready programs were searched against a current official faculty roster or department research-area listing. Exactly five plausible candidates were evaluated for each program (600 program-candidate evaluations; 573 distinct people after university-level deduplication).
+All 126 faculty-review-ready programs were searched against a current official faculty roster or department research-area listing. Exactly five plausible candidates were evaluated for each program (630 program-candidate evaluations; 603 distinct people after university-level deduplication).
 
-The defensible retained set contains 99 program-match rows representing 99 distinct professors. Each program has one fully verified strong match in 99 programs; the other 21 programs have no match that clears every evidence gate. One-match programs receive 5 depth points and zero-match programs receive 0. No individual professor score exists in the Stage 4 outputs.
+The defensible retained set contains 105 program-match rows representing 105 distinct professors. Each program has one fully verified strong match in 105 programs; the other 21 programs have no match that clears every evidence gate. One-match programs receive 5 depth points and zero-match programs receive 0. No individual professor score exists in the Stage 4 outputs.
 
 ## Coverage
 
 | Region | Serious programs | Retained match rows |
 | --- | --- | --- |
-| us | 81 | 80 |
-| canada | 27 | 14 |
+| us | 86 | 85 |
+| canada | 28 | 15 |
 | europe | 12 | 5 |
-| Total | 120 | 99 |
+| Total | 126 | 105 |
 
 ## Department-depth result
 
 | Verified strong matches per program | Programs | Depth points | Single-professor dependency |
 | --- | --- | --- | --- |
 | 0 | 21 | 0 | false |
-| 1 | 99 | 5 | true |
+| 1 | 105 | 5 | true |
 | 2 | 0 | 10 | false |
 | 3+ | 0 | 15 | false |
 
@@ -36,6 +36,7 @@ University-level counts use `professor_id`, so the same person attached to multi
 
 | Region | Institution | Program | Professor | Depth | Recruiting status |
 | --- | --- | --- | --- | --- | --- |
+| canada | Brock University | Computer Science MSc — Thesis Stream | Robson De Grande | 5 | Confirmed recruiting |
 | canada | Carleton University | Master of Applied Science in Electrical and Computer Engineering | Yvan Labiche | 5 | Evidence suggests possible recruiting |
 | canada | Concordia University | Cybersecurity Engineering (MASc) | Mourad Debbabi | 5 | Confirmed recruiting |
 | canada | Concordia University | Master of Applied Science in Software Engineering | Shin Hwei Tan | 5 | Confirmed recruiting |
@@ -72,12 +73,15 @@ University-level counts use `professor_id`, so the same person attached to multi
 | us | Georgia State University | Doctor of Philosophy in Computer Science | Wei (Lisa) Li | 5 | Recruiting status unknown |
 | us | Iowa State University | Computer Science PhD | Myra Cohen | 5 | Recruiting status unknown |
 | us | Johns Hopkins University | Doctor of Philosophy in Computer Science | Yinzhi Cao | 5 | Recruiting status unknown |
+| us | Kansas State University | Doctor of Philosophy in Computer Science | Robby | 5 | Recruiting status unknown |
+| us | Louisiana State University and Agricultural & Mechanical College | Ph.D. in Computer Science and Engineering | Elias Bou-Harb | 5 | Recruiting status unknown |
 | us | Montana State University | Computer Science PhD | Charlie Murphy | 5 | Confirmed recruiting |
 | us | North Carolina State University at Raleigh | Computer Science PhD | Kathryn Stolee | 5 | Recruiting status unknown |
 | us | North Dakota State University-Main Campus | Doctor of Philosophy in Software and Security Engineering | Muhammad Zubair Malik | 5 | Recruiting status unknown |
 | us | Northeastern University | Computer Science PhD | Jonathan Bell | 5 | Recruiting status unknown |
 | us | Northwestern University | Doctor of Philosophy in Computer Science | Robby Findler | 5 | Recruiting status unknown |
 | us | Ohio State University-Main Campus | Doctor of Philosophy in Computer Science and Engineering | Zhiqiang Lin | 5 | Confirmed recruiting |
+| us | Oklahoma State University-Main Campus | Doctor of Philosophy in Computer Science | Cong Pu | 5 | Confirmed recruiting |
 | us | Oregon State University | Computer Science PhD | Manish Motwani | 5 | Recruiting status unknown |
 | us | Pennsylvania State University-Main Campus | Computer Science and Engineering PhD | Gang Tan | 5 | Recruiting status unknown |
 | us | Purdue University-Main Campus | Computer Science PhD | Lin Tan | 5 | Recruiting status unknown |
@@ -105,6 +109,7 @@ University-level counts use `professor_id`, so the same person attached to multi
 | us | University of Delaware | Ph.D. in Computer Science | Stephen F. Siegel | 5 | Confirmed recruiting |
 | us | University of Georgia | Doctor of Philosophy in Computer Science | Le Guan | 5 | Recruiting status unknown |
 | us | University of Houston | Ph.D. in Computer Science | Ali Shokri | 5 | Recruiting status unknown |
+| us | University of Idaho | Computer Science, Ph.D. | Jia Song | 5 | Recruiting status unknown |
 | us | University of Illinois Chicago | PhD in Computer Science | Mark Grechanik | 5 | Recruiting status unknown |
 | us | University of Illinois Urbana-Champaign | Computer Science PhD | Lingming Zhang | 5 | Recruiting status unknown |
 | us | University of Iowa | Ph.D. in Computer Science | Cesare Tinelli | 5 | Recruiting status unknown |
@@ -134,13 +139,14 @@ University-level counts use `professor_id`, so the same person attached to multi
 | us | Virginia Polytechnic Institute and State University | Computer Science PhD | Na Meng | 5 | Recruiting status unknown |
 | us | Washington State University | Doctor of Philosophy in Computer Science | Thomas Gilray | 5 | Recruiting status unknown |
 | us | Washington University in St Louis | Computer Science PhD | Umar Iqbal | 5 | Recruiting status unknown |
+| us | West Virginia University | Computer Science, Ph.D. | Katerina Goseva-Popstojanova | 5 | Recruiting status unknown |
 | us | William & Mary | Computer Science PhD | Denys Poshyvanyk | 5 | Recruiting status unknown |
 
 ## Good-faith fewer-than-three record
 
 For every program, four additional current-roster candidates were evaluated. They remain in `professor_candidates_evaluated.csv` as plausible, unscored candidates. None was promoted merely from department membership, biography keywords, publication-time affiliation, or fame. A candidate was retained only when the evidence simultaneously established a current appointment, authority to supervise the exact program, specific strong research overlap, and at least one recent work/project with URL and year.
 
-Recent-work metadata was available for 175 of 600 candidate evaluations. Discovery-only OpenAlex records never establish appointment, supervision, or recruiting.
+Recent-work metadata was available for 181 of 630 candidate evaluations. Discovery-only OpenAlex records never establish appointment, supervision, or recruiting.
 
 ## Recruiting and contact controls
 
@@ -166,22 +172,22 @@ Recruiting is `Confirmed recruiting` only when the retained evidence explicitly 
 | official_roster_source_per_program | PASS |
 | required_output_schemas_exact | PASS |
 
-- Stage-specific verification: `python -m pytest tests/test_professor_mapping.py -q` — 19 passed.
-- Full-suite boundary: `python -m pytest -q` — 109 passed; the sole failure is the expected Stage 5 coverage gap for nine routes.
+- Stage-specific verification: `python -m pytest tests/test_professor_mapping.py -q` — 22 passed.
+- Full-suite boundary: `python -m pytest -q` — 116 passed; the sole failure is the expected Stage 5 coverage gap for six routes.
 
 ## Material uncertainties or conflicts
 
 - Blockers: none prevented Stage 4 completion.
 
-- Stage 4 re-entry 11 evaluated 9 newly eligible routes and retained 9 fully verified strong lead matches; 0 new routes remain without a retained match. Across all eleven re-entry batches, 74 of 75 routes have a retained match.
+- Stage 4 re-entry 12 evaluated 6 newly eligible routes and retained 6 fully verified strong lead matches; 0 new routes remain without a retained match. Across all twelve re-entry batches, 80 of 81 routes have a retained match.
 - UVA's strongest bounded fit has a current courtesy Computer Science appointment, but exact Computer Science PhD supervision authority was not verified; the candidate remains unscored and unretained.
-- 99 of 120 programs have only one fully verified strong match and remain single-professor dependencies.
+- 105 of 126 programs have only one fully verified strong match and remain single-professor dependencies.
 - 21 programs have no candidate that clears every current-appointment, supervision-authority, strong-fit, and recent-work gate; their faculty depth is 0.
-- 501 plausible program-candidate evaluations were not retained because exact-route supervision authority and/or candidate-specific recent-work evidence remains incomplete.
+- 525 plausible program-candidate evaluations were not retained because exact-route supervision authority and/or candidate-specific recent-work evidence remains incomplete.
 - Official email remains unlocated for 7 retained professors and most unretained candidates; no address is guessed.
 - Recruiting status remains unknown unless a current direct statement/opening was already verified; publication activity and open labs are not used as recruiting proxies.
 - Faculty appointments, supervision rules, and recruiting statements are time-sensitive and require a refresh immediately before outreach or application submission.
-- Stage 5 scoring still covers the prior 111-program roster. Its nine-route coverage gap is intentionally unresolved at this stage boundary and must be rebuilt in Stage 5 re-entry 11.
+- Stage 5 scoring still covers the prior 120-program roster. Its six-route coverage gap is intentionally unresolved at this stage boundary and must be rebuilt in Stage 5 re-entry 12.
 - Stage 5 may use only the 5-point faculty-depth values supported here; it may not resurrect the inflated Pass 1 depth scores.
 
 ## Records requiring human judgment
@@ -195,11 +201,11 @@ Recruiting is `Confirmed recruiting` only when the retained evidence explicitly 
 - `data/processed/pass2/professor_candidates_evaluated.csv`
 - `data/processed/pass2/professor_matches_retained.csv`
 - `data/processed/pass2/professor_sources.csv`
-- `data/raw/pass2/stage_04_reentry_11.json`
+- `data/raw/pass2/stage_04_reentry_12.json`
 - `reports/pass2/04_professor_mapping.md`
 - `data/manifests/pass2/stage_04.json`
 - `state/progress.json`
 
 ## Recommendation before the next stage
 
-Proceed to Stage 5 only with the rebuilt Stage 4 depth values. Keep the nine new routes out of scored outputs until Stage 5 re-entry 11 regenerates and validates complete scoring coverage.
+Proceed to Stage 5 only with the rebuilt Stage 4 depth values. Keep the six new routes out of scored outputs until Stage 5 re-entry 12 regenerates and validates complete scoring coverage.

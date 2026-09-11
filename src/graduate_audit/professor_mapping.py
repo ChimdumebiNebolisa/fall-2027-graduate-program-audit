@@ -1154,6 +1154,66 @@ FACULTY_ROSTERS: dict[str, FacultyRoster] = {
             _c("Diletta Cacciagrano", "concurrency; formal semantics; process calculi"),
         ),
     ),
+    "University of Idaho": FacultyRoster(
+        "College of Engineering, Department of Computer Science and Cybersecurity",
+        "https://www.uidaho.edu/engineering/academics/computer-science",
+        (
+            _c("Frederick T. Sheldon", "cybersecurity; critical infrastructure; cyber-physical systems; software assurance"),
+            _c("Xiaogang Ma", "data systems; semantics; scientific cyberinfrastructure; reproducibility"),
+            _c("Terence Soule", "evolutionary computation; machine learning; resilient systems"),
+            _c("Min Xian", "computer vision; machine learning; data-driven systems"),
+        ),
+    ),
+    "Kansas State University": FacultyRoster(
+        "Carl R. Ice College of Engineering, Department of Computer Science",
+        "https://www.cs.ksu.edu/about/people/faculty/",
+        (
+            _c("John Hatcliff", "formal methods; high-assurance systems; model-based engineering; verification"),
+            _c("Eugene Vasserman", "cybersecurity; cyber-physical systems; usable security; dependable systems"),
+            _c("Arslan Munir", "embedded systems; trustworthy computing; cyber-physical systems; AI assurance"),
+            _c("Pascal Hitzler", "knowledge representation; neuro-symbolic AI; explainable reasoning"),
+        ),
+    ),
+    "Oklahoma State University-Main Campus": FacultyRoster(
+        "College of Arts and Sciences, Department of Computer Science",
+        "https://cas.okstate.edu/computer_science/about_us/faculty_staff",
+        (
+            _c("Sharmin Jahan", "cybersecurity; trustworthy AI; security education"),
+            _c("Anirudh Paranjothi", "vehicular networks; intrusion detection; fog computing; cyber-physical security"),
+            _c("Atriya Sen", "explainable AI; reasoning; knowledge-guided machine learning"),
+            _c("H B Acharya", "systems security; networked systems; software and data security"),
+        ),
+    ),
+    "West Virginia University": FacultyRoster(
+        "Lane Department of Computer Science and Electrical Engineering",
+        "https://directory.statler.wvu.edu/tenure-track-faculty",
+        (
+            _c("Donald Adjeroh", "data analytics; machine learning; dependable data systems"),
+            _c("K. Subramani", "algorithms; formal reasoning; theoretical computer science"),
+            _c("Piotr Wojciechowski", "distributed systems; algorithms; concurrent computing"),
+            _c("Gianfranco Doretto", "computer vision; machine learning; trustworthy perception systems"),
+        ),
+    ),
+    "Louisiana State University and Agricultural & Mechanical College": FacultyRoster(
+        "College of Engineering, Division of Computer Science and Engineering",
+        "https://www.lsu.edu/eng/cse/people/faculty/index.php",
+        (
+            _c("Aisha Ali-Gombe", "systems security; network forensics; malware analysis; cyber operations"),
+            _c("Umar Farooq", "program analysis; compilers; mobile systems; software reliability"),
+            _c("Nash Mahmoud", "software engineering; software evolution; program comprehension"),
+            _c("Felipe Fronchetti", "software engineering; human-robot interaction; empirical methods"),
+        ),
+    ),
+    "Brock University": FacultyRoster(
+        "Faculty of Mathematics and Science, Department of Computer Science",
+        "https://brocku.ca/mathematics-science/computer-science/faculty-staff/",
+        (
+            _c("Naser Ezzati-Jivan", "software analytics; trace analysis; observability; machine learning"),
+            _c("Michael Winter", "formal methods; relational methods; program specification and verification"),
+            _c("Rahnuma Nishat", "algorithms; graph theory; computational methods"),
+            _c("Sajal Saha", "artificial intelligence; data analytics; intelligent systems"),
+        ),
+    ),
 }
 
 
