@@ -1,0 +1,424 @@
+schema_version: "2.1"
+as_of_date: 2026-09-11
+portfolio_rules:
+  target_count: 15
+  fee_total_before_confirmed_waivers_usd: 1105
+  fee_total_after_confirmed_waivers_usd: 1010
+  confirmed_waiver_savings_usd: 95
+
+recommended:
+  - program_id: us:ipeds:213543:program:phd:phd-in-computer-science
+    overall_rank: 1
+    recommendation_tier: Strongest Realistic Options
+    funding_classification: Guaranteed full funding
+    funding_summary: All Rossin College PhD students are fully funded through an assistantship or fellowship that generally includes tuition and a stipend.
+    relative_admission_position: Strongest Realistic Option
+    admission_rationale: The 2.75 minimum is cleared; the 3.5 major-GPA preference makes the 3.35 cumulative record imperfect, but the above-3.5 recent record, accepted research paper, and exact trustworthy-AI fit materially strengthen the file.
+    program_research_fit: Strong
+    biggest_positive: Full funding, a $50 fee, and direct trustworthy-generative-AI and security alignment.
+    biggest_risk: The preferred 3.5 major GPA and a small funded cohort keep admission competitive.
+    unresolved_question: Offer-level summer, insurance, mandatory-fee, and duration terms remain to be checked after admission.
+    recommended_decision: Apply
+    application_fee: 50
+    fee_waiver: No general waiver confirmed.
+    deadline: 2026-12-15
+    deadline_cycle: Fall 2027 financial-aid deadline
+    funding_url: https://engineering.lehigh.edu/academics/graduate/phd/phd-computer-science
+    admissions_url: https://engineering.lehigh.edu/academics/graduate/phd/phd-computer-science
+
+  - program_id: us:ipeds:232982:program:phd:computer-science-ph-d
+    overall_rank: 2
+    recommendation_tier: Strongest Realistic Options
+    funding_classification: Standard full funding
+    funding_summary: Newly admitted PhD students are guaranteed an RA, TA, or combined appointment; the page states a first-year $20,000 stipend and full tuition waiver, with summer RA funding expected.
+    relative_admission_position: Strongest Realistic Option
+    admission_rationale: Direct bachelor entry, no separate numeric department floor, a CS degree, and a strong research-to-security match make this one of the least structurally adverse funded options.
+    program_research_fit: Strong
+    biggest_positive: Guaranteed entering funding and strong software-security and LLM-evaluation overlap.
+    biggest_risk: The published dollar amount is modest and renewal, fees, insurance, and summer terms are not fully specified.
+    unresolved_question: Confirm the written renewal, fee, insurance, and summer terms if admitted.
+    recommended_decision: Apply
+    application_fee: 50
+    fee_waiver: No applicable waiver confirmed.
+    deadline: April 15, 2027
+    deadline_cycle: Recurring international fall deadline; Fall 2027 label not yet explicit
+    funding_url: https://www.odu.edu/academics/programs/doctoral/computer-science
+    admissions_url: https://www.odu.edu/computer-science/academics/graduate/phd/admissions
+
+  - program_id: us:ipeds:216339:program:phd:computer-and-information-science-phd
+    overall_rank: 3
+    recommendation_tier: Strongest Realistic Options
+    funding_classification: Standard full funding
+    funding_summary: Admitted PhD students receive an RA or TA with tuition and stipend, and the department says it typically admits only when funding is available.
+    relative_admission_position: Strongest Realistic Option
+    admission_rationale: The 3.0 graduate floor and 3.25 assistantship benchmark are cleared by a 3.35 cumulative GPA; research experience and direct generative-AI-for-programming fit improve the case beyond minimum eligibility.
+    program_research_fit: Strong
+    biggest_positive: Funded-admit norm, a $60 fee, and unusually direct LLM-for-programming evaluation fit.
+    biggest_risk: Admission requires acceptance by faculty in an open track and funding duration beyond the initial appointment is not published.
+    unresolved_question: Confirm multi-year, summer, health, and residual-fee terms in the offer.
+    recommended_decision: Apply
+    application_fee: 60
+    fee_waiver: Departmental fee waivers are not offered; limited university waivers do not clearly apply.
+    deadline: January 15, 2027
+    deadline_cycle: Current recurring Fall deadline; 2027 applications open July 15, 2026
+    funding_url: https://cis.temple.edu/academics/graduate/phd_faq/
+    admissions_url: https://www.temple.edu/academics/degree-programs/computer-information-science-phd-st-cis-phd/admissions
+
+  - program_id: us:ipeds:229027:program:phd:phd-in-computer-science
+    overall_rank: 4
+    recommendation_tier: Strongest Realistic Options
+    funding_classification: Standard full funding
+    funding_summary: The program states that full-time admitted Computer Science PhD students receive GTA or GRA support with stipend, tuition and fee coverage, and insurance.
+    relative_admission_position: Strongest Realistic Option
+    admission_rationale: The CS bachelor route is explicit, no higher program GPA floor was found, and the accepted paper plus direct software-analysis match support a strong relative position.
+    program_research_fit: Strong
+    biggest_positive: Explicit Fall 2027 cycle, funded-admit norm, and excellent software-analysis and bug-diagnosis fit.
+    biggest_risk: The $90 international fee cannot normally be waived and renewal duration is not explicit.
+    unresolved_question: Verify renewal duration and summer support in the written offer.
+    recommended_decision: Apply
+    application_fee: 90
+    fee_waiver: No graduate fee waiver; only McNair waivers are recognized.
+    deadline: 2027-02-01
+    deadline_cycle: Fall 2027
+    funding_url: https://future.utsa.edu/programs/doctoral/computer-science/
+    admissions_url: https://future.utsa.edu/graduate/admissions/
+
+  - program_id: us:ipeds:223232:program:phd:ph-d-in-computer-science
+    overall_rank: 5
+    recommendation_tier: Strongest Realistic Options
+    funding_classification: Standard full funding
+    funding_summary: Current official material says nearly all incoming PhD students receive full tuition remission, health coverage, and a multi-year research or teaching assistantship.
+    relative_admission_position: Strongest Realistic Option
+    admission_rationale: The program is research-focused, the file has an accepted paper and improving grades, and the software-testing and secure-analysis fit is specific rather than generic.
+    program_research_fit: Strong
+    biggest_positive: Low $50 fee, multi-year package norm, and evidence-driven software-testing alignment.
+    biggest_risk: The package is described as nearly universal rather than guaranteed to every admit.
+    unresolved_question: Confirm the exact duration, summer, and mandatory-fee terms in any offer.
+    recommended_decision: Apply
+    application_fee: 50
+    fee_waiver: The $50 application fee cannot be waived.
+    deadline: February 15, 2027
+    deadline_cycle: Recurring Fall financial-aid deadline; cycle year not separately labeled
+    funding_url: https://www.ecs.baylor.edu/students-academics/degree-programs/graduate/phd-cs
+    admissions_url: https://www.ecs.baylor.edu/departments/computer-science/graduate-application-requirements
+
+  - program_id: us:ipeds:185828:program:phd:ph-d-computer-science
+    overall_rank: 6
+    recommendation_tier: Competitive Options
+    funding_classification: Highly credible standard funding
+    funding_summary: Nearly all enrolled Computer Science PhD students are fully supported as RAs or TAs, but the department explicitly says support is competitive and not every admitted student receives it.
+    relative_admission_position: Competitive
+    admission_rationale: Mitch clears formal bachelor-entry eligibility and has an exceptionally close verification and program-analysis fit, but the department expects a superior CS background and funding competition raises the bar.
+    program_research_fit: Exceptional
+    biggest_positive: One of the closest program-analysis and software-verification matches in the corpus.
+    biggest_risk: Funding is highly credible but not universal; an admission without full support would be unacceptable.
+    unresolved_question: Apply only on the understanding that an unfunded offer will be declined.
+    recommended_decision: Apply; accept only with full written funding
+    application_fee: 75
+    fee_waiver: A financial-hardship request may be sent to the CS PhD program; approval is not confirmed.
+    deadline: December 15, 2026
+    deadline_cycle: Recurring Fall funding-consideration deadline
+    funding_url: https://cs.njit.edu/admission-requirements-and-financial-support-phd-computer-science-program
+    admissions_url: https://www.njit.edu/academics/degree/phd-computer-science
+
+  - program_id: us:ipeds:233921:program:phd:computer-science-phd
+    overall_rank: 7
+    recommendation_tier: Competitive Options
+    funding_classification: Guaranteed full funding
+    funding_summary: Beginning with Fall 2026, every admitted PhD student receives a five-year offer covering fall and spring; summers are excluded and some fees remain the student's responsibility.
+    relative_admission_position: Competitive
+    admission_rationale: Mitch clears the 3.0 minimum and has near-direct AI-for-build-repair research fit, but the program attracts a strong national pool and funded cohort space is limited.
+    program_research_fit: Exceptional
+    biggest_positive: Five-year funding commitment and near-direct LLM-assisted build-conflict research alignment.
+    biggest_risk: Summers are excluded from the guarantee and some fees remain.
+    unresolved_question: Plan for summer RA, internship, or savings rather than assuming summer coverage.
+    recommended_decision: Apply
+    application_fee: 75
+    fee_waiver: No applicable international waiver confirmed.
+    deadline: 2026-12-01
+    deadline_cycle: Fall 2027
+    funding_url: https://students.cs.vt.edu/Graduate/Funding.html
+    admissions_url: https://website.cs.vt.edu/academic/graduate/future-grads/doctorate.html
+
+  - program_id: us:ipeds:195030:program:phd:phd-program-in-computer-science
+    overall_rank: 8
+    recommendation_tier: Competitive Options
+    funding_classification: Standard full funding
+    funding_summary: PhD students in good academic standing receive tuition, health insurance, and a stipend; the typical completion time is four to six years.
+    relative_admission_position: Competitive
+    admission_rationale: Bachelor entry is explicit and the systems-security and program-transformation fit is strong, but the department calls admission selective and competitive and gives no GPA-based reason to treat it as safe.
+    program_research_fit: Strong
+    biggest_positive: Full support, a $70 fee, and strong secure-software and compiler-transformation overlap.
+    biggest_risk: No maximum funding duration or current stipend is published.
+    unresolved_question: Confirm maximum duration and summer treatment in the offer.
+    recommended_decision: Apply
+    application_fee: 70
+    fee_waiver: A limited number of partial waivers exist; none is confirmed.
+    deadline: 2027-01-05
+    deadline_cycle: Fall 2027 PhD deadline
+    funding_url: https://www.cs.rochester.edu/graduate/phd-program.html
+    admissions_url: https://www.cs.rochester.edu/graduate/how-to-apply.html
+
+  - program_id: us:ipeds:212054:program:phd:phd-in-computer-science
+    overall_rank: 9
+    recommendation_tier: Competitive Options
+    funding_classification: Standard full funding
+    funding_summary: The doctoral admissions page states that all Computer Science and Information Science PhD students are fully supported with an RA, TA, or combined assistantship carrying tuition remission and a stipend.
+    relative_admission_position: Competitive
+    admission_rationale: Formal eligibility is clear and the LLM-assisted software architecture fit is direct; absent cohort evidence, a strong research record supports competitiveness but not a realistic-label upgrade.
+    program_research_fit: Strong
+    biggest_positive: All-student support language and current LLM-assisted software-engineering work.
+    biggest_risk: Duration, insurance, fee coverage, and summer terms are not stated.
+    unresolved_question: Confirm package duration and residual costs in the offer.
+    recommended_decision: Apply
+    application_fee: 65
+    fee_waiver: No applicable graduate waiver confirmed.
+    deadline: December 15, 2026 priority; February 15, 2027 final
+    deadline_cycle: Latest published doctoral cycle; Fall 2027 label not explicit
+    funding_url: https://drexel.edu/cci/admissions/doctoral/
+    admissions_url: https://drexel.edu/cci/admissions/doctoral/
+
+  - program_id: us:ipeds:104179:program:phd:computer-science-phd
+    overall_rank: 10
+    recommendation_tier: Competitive Options
+    funding_classification: Standard full funding
+    funding_summary: The current prospective-student page says doctoral students making satisfactory progress receive multi-year assistantship funding with tuition waivers and health insurance; another department page describes only the first year as guaranteed.
+    relative_admission_position: Competitive
+    admission_rationale: Mitch clears the 3.0 minimum and has specific verification and program-analysis alignment, but the internal funding-language inconsistency and national applicant pool argue against calling it a strongest realistic option.
+    program_research_fit: Strong
+    biggest_positive: Strong formal-analysis fit and current program-wide multi-year funding language.
+    biggest_risk: Official pages conflict on whether support beyond year one is guaranteed.
+    unresolved_question: Require the written offer to state duration before accepting.
+    recommended_decision: Apply
+    application_fee: 90
+    fee_waiver: No applicable waiver confirmed.
+    deadline: January 15, 2027
+    deadline_cycle: Recurring Fall deadline; cycle year not separately labeled
+    funding_url: https://cs.arizona.edu/graduate/prospective-students
+    admissions_url: https://cs.arizona.edu/graduate/prospective-students
+
+  - program_id: us:ipeds:230764:program:phd:computing-phd
+    overall_rank: 11
+    recommendation_tier: Competitive Options
+    funding_classification: Standard full funding
+    funding_summary: Computing PhD students receive financial support while in the program and making good progress; current rates include fall and spring pay, possible summer RA support, tuition benefit, and health insurance.
+    relative_admission_position: Competitive
+    admission_rationale: The accepted paper and compiler-testing and verification fit are strong, but the program describes rigorous competition for limited positions and does not publish a GPA basis for a stronger label.
+    program_research_fit: Exceptional
+    biggest_positive: Exceptional compiler-testing and verification alignment with credible in-program support.
+    biggest_risk: Summer pay is advisor-dependent and differential tuition can remain.
+    unresolved_question: Confirm the displayed deadline year and offer-specific differential-fee treatment.
+    recommended_decision: Apply by December 15, 2026 unless the program publishes a different Fall 2027 date
+    application_fee: 65
+    fee_waiver: No applicable waiver confirmed.
+    deadline: December 15, 2026 planning date
+    deadline_cycle: Official page displays an inconsistent year; use the earlier planning date and confirm
+    funding_url: https://www.cs.utah.edu/graduate/prospective-students/admissions/graduate-financial-support-and-costs/
+    admissions_url: https://www.cs.utah.edu/graduate/academic-programs/graduate-academic-program-overview/
+
+  - program_id: us:ipeds:199193:program:phd:computer-science-phd
+    overall_rank: 12
+    recommendation_tier: High Reaches
+    funding_classification: Guaranteed full funding
+    funding_summary: Every fall PhD admit who requests aid receives a four-year package with tuition, individual health insurance, and stipend; student fees and most summers are excluded.
+    relative_admission_position: High Reach
+    admission_rationale: Mitch is formally eligible and has a strong AI-for-SE match, but the program's national strength and fully funded cohort make the 3.35 cumulative GPA a meaningful competitive disadvantage.
+    program_research_fit: Strong
+    biggest_positive: Explicit universal four-year package and direct developer-AI evaluation fit.
+    biggest_risk: High reach, $95 fee, four-year limit, student fees, and summer gaps.
+    unresolved_question: Budget for fees and summers and verify year-five support before acceptance.
+    recommended_decision: Apply if the high-reach budget permits
+    application_fee: 95
+    fee_waiver: Exceptional waivers may exist; none is confirmed.
+    deadline: December 15, 2026
+    deadline_cycle: Recurring Fall priority date; Fall 2027 label not explicit
+    funding_url: https://csc.ncsu.edu/academics/graduate/financial-aid-and-cost/
+    admissions_url: https://csc.ncsu.edu/academics/graduate/phd/
+
+  - program_id: us:ipeds:221999:program:phd:computer-science-phd
+    overall_rank: 13
+    recommendation_tier: High Reaches
+    funding_classification: Standard full funding
+    funding_summary: Computer Science PhD students receive a competitive stipend, full tuition waiver, and health insurance through RA or TA appointments.
+    relative_admission_position: High Reach
+    admission_rationale: Direct trustworthy-computing fit and an accepted paper justify the attempt, but this is a selective funded cohort and a 3.35 cumulative GPA remains a disadvantage.
+    program_research_fit: Strong
+    biggest_positive: Strong dependable-software fit and a confirmed $95 waiver for applicants currently enrolled at a U.S. school who complete by December 1.
+    biggest_risk: High reach and funding duration is not stated on the public page.
+    unresolved_question: None before applying; review duration and summer terms if admitted.
+    recommended_decision: Apply by December 1 to secure the fee waiver
+    application_fee: 95
+    fee_waiver: Confirmed automatic Fall 2027 waiver when completed by December 1 for applicants enrolled at a U.S. school.
+    deadline: 2026-12-01
+    deadline_cycle: Fall 2027 waiver deadline; final deadline December 15, 2026
+    funding_url: https://computing.vanderbilt.edu/csphd/
+    admissions_url: https://computing.vanderbilt.edu/csphd/
+
+  - program_id: us:ipeds:164988:program:phd:computer-science-phd
+    overall_rank: 14
+    recommendation_tier: High Reaches
+    funding_classification: Guaranteed full funding
+    funding_summary: Charles River Campus PhD students in good standing are guaranteed five years of 12-month stipend support, full tuition and required fees, and a health-insurance credit; international students are included.
+    relative_admission_position: High Reach
+    admission_rationale: The accepted paper and formal-verification fit justify a reach application, but the nationally competitive cohort and 3.35 cumulative GPA do not support a realistic label.
+    program_research_fit: Strong
+    biggest_positive: One of the clearest five-year, international-inclusive packages in the audit.
+    biggest_risk: High reach, $95 fee, and Boston living costs.
+    unresolved_question: None before applying; compare the offer stipend with actual Boston living costs.
+    recommended_decision: Apply if the high-reach budget permits
+    application_fee: 95
+    fee_waiver: A program waiver route exists, but no waiver is confirmed for this applicant.
+    deadline: 2026-12-01
+    deadline_cycle: Fall 2027
+    funding_url: https://www.bu.edu/cas/admissions/phd-mfa/fellowship-aid/aid-for-phd-students/
+    admissions_url: https://www.bu.edu/cs/phd-program/admissions/
+
+  - program_id: us:ipeds:211440:program:phd:software-engineering-phd
+    overall_rank: 15
+    recommendation_tier: Extreme Reaches
+    funding_classification: Guaranteed full funding
+    funding_summary: The Software Engineering PhD advertises guaranteed research and teaching assistantships covering tuition and living expenses.
+    relative_admission_position: Extreme Reach
+    admission_rationale: The research fit is exceptional and the program explicitly values industry experience, but CMU's Software Engineering PhD is an exceptionally selective small-cohort program; the 3.35 cumulative GPA makes it an extreme reach despite the paper.
+    program_research_fit: Exceptional
+    biggest_positive: The strongest direct AI-for-software-engineering and automated-repair fit in the portfolio.
+    biggest_risk: Extreme selectivity and an $80 early application fee.
+    unresolved_question: None before applying; request a hardship waiver in the application if needed.
+    recommended_decision: Apply only as the single extreme-reach bet
+    application_fee: 80
+    fee_waiver: Financial-hardship waiver is available in the application but not confirmed; early fee is $80.
+    deadline: 2026-11-18
+    deadline_cycle: Fall 2027 early-fee deadline; final deadline December 9, 2026
+    funding_url: https://se-phd.isri.cmu.edu/Prospective%20Students/index.html
+    admissions_url: https://www.cs.cmu.edu/education/graduate-admissions
+
+conditional:
+  - program_id: us:ipeds:145600:program:phd:phd-in-computer-science
+    funding_classification: Guaranteed five-year academic-year funding
+    relative_admission_position: Eligibility Concern
+    question: Does Mitch's exact final-60-semester-hour GPA meet UIC's 3.50 requirement, and will the Fall 2027 fee reduction recur?
+    recipient_type: Graduate admissions/program admissions
+    official_contact: csgrad@uic.edu
+    why: A transcript calculation determines formal eligibility; the 2027 fee policy changes the application cost by $80.
+    current_decision: Do not apply until the final-60 GPA is calculated and the cycle fee is published.
+    evidence_url: https://cs.uic.edu/graduate/admissions/phd/
+
+  - program_id: us:ipeds:231624:program:phd:computer-science-phd
+    funding_classification: Conditional funding
+    relative_admission_position: Competitive
+    question: Does every Fall 2027 Computer Science PhD admit receive a multi-year stipend and full tuition waiver, or can admission be offered without support?
+    recipient_type: Graduate program administrator
+    official_contact: gradinfo@cs.wm.edu
+    why: Current school-wide language says support may be included, which conflicts with the earlier all-admitted claim.
+    current_decision: Do not spend the fee until the funded-admit rule and duration are confirmed.
+    evidence_url: https://cdsp.wm.edu/admissions/graduate/
+
+  - program_id: us:ipeds:194824:program:phd:ph-d-in-computer-science
+    funding_classification: Conditional funding
+    relative_admission_position: High Reach
+    question: Is full tuition-and-stipend support guaranteed to every Fall 2027 Computer Science PhD admit for the full degree?
+    recipient_type: Computer Science graduate program
+    official_contact: Computer Science graduate admissions
+    why: The page describes support for most students and a duration guarantee without proving that every admit starts funded.
+    current_decision: Do not apply until universal or standard funded-admit treatment is confirmed.
+    evidence_url: https://compsci.rpi.edu/programs/phd-computer-science
+
+  - program_id: ca:dli:O19395535729:program:thesis-or-research-master-s:software-engineering-masc
+    funding_classification: Supervisor-dependent conditional funding
+    relative_admission_position: Competitive
+    question: What two-year package would a willing supervisor guarantee after international tuition and supplementary fees?
+    recipient_type: Potential supervisor or program graduate administrator
+    official_contact: Computing and Software graduate admissions
+    why: The MASc is research-based and funded in principle, but net international viability depends on the supervisor package.
+    current_decision: Do not apply without a supervisor-level funding commitment.
+    evidence_url: https://www.eng.mcmaster.ca/app/uploads/2024/03/Application_FAQ_Graduate_Computing-and-Software.pdf
+
+  - program_id: ca:dli:O18781994282:program:thesis-or-research-master-s:master-of-applied-science-in-engineering-science
+    funding_classification: Supervisor-dependent conditional funding
+    relative_admission_position: Competitive
+    question: What minimum two-year funding and tuition offset will a willing supervisor commit for an international MASc student?
+    recipient_type: Potential supervisor
+    official_contact: Engineering Science graduate program
+    why: Admission and support are supervisor-led, and published sources do not establish the net amount after international tuition.
+    current_decision: Do not apply until one supervisor confirms a viable package.
+    evidence_url: https://www.sfu.ca/fas/study/future-graduates/programs/master-applied-science.html
+
+  - program_id: ca:dli:O18886830282:program:direct-entry-phd:phd-in-computer-science-without-completed-msc
+    funding_classification: Duration-mismatch conditional funding
+    relative_admission_position: Competitive
+    question: Will the department extend its four-year guaranteed minimum through the expected fifth year for a direct-from-bachelor PhD student?
+    recipient_type: Computer Science graduate admissions
+    official_contact: Department graduate admissions
+    why: The published funding duration is one year shorter than the expected direct-entry path.
+    current_decision: Do not apply until the fifth-year funding plan is documented.
+    evidence_url: https://science.ucalgary.ca/computer-science/future-students/graduate/admission-requirements
+
+  - program_id: ca:dli:O19395164223:program:thesis-or-research-master-s:msc-in-applied-modelling-and-quantitative-methods-thesis-stream
+    funding_classification: Net-cost conditional funding
+    relative_admission_position: Competitive
+    question: What guaranteed two-year amount remains after international tuition and fees for this thesis-stream MSc?
+    recipient_type: Graduate program administrator
+    official_contact: Graduate Studies funding office
+    why: A package is published, but the international tuition offset is limited and net viability is unresolved.
+    current_decision: Do not apply until the guaranteed net amount is confirmed.
+    evidence_url: https://www.trentu.ca/graduatestudies/funding-tuition/funding
+
+  - program_id: us:ipeds:209807:program:phd:doctoral-degree-in-computer-science-ph-d
+    funding_classification: First-year-only conditional funding
+    relative_admission_position: Competitive
+    question: Will a Fall 2027 offer guarantee renewable support after year one, including adequate insurance and summer coverage?
+    recipient_type: Computer Science graduate program
+    official_contact: Computer Science graduate admissions
+    why: The current evidence supports an initial package but not a financially viable multi-year PhD commitment.
+    current_decision: Do not apply until renewal terms are documented.
+    evidence_url: https://web.cs.pdx.edu/phd-doctoral-degree-in-cs/
+
+funding_contradiction_resolution:
+  pass:
+    - us:ipeds:227757:program:phd:ph-d-in-computer-science
+    - us:ipeds:223232:program:phd:ph-d-in-computer-science
+    - us:ipeds:164988:program:phd:computer-science-phd
+    - us:ipeds:199193:program:phd:computer-science-phd
+    - us:ipeds:195030:program:phd:phd-program-in-computer-science
+    - us:ipeds:221999:program:phd:computer-science-phd
+    - us:ipeds:212054:program:phd:phd-in-computer-science
+    - us:ipeds:139658:program:phd:phd-in-computer-science-and-informatics
+    - us:ipeds:130943:program:phd:computer-science-phd
+    - us:ipeds:145637:program:phd:computer-science-phd
+    - us:ipeds:234030:program:phd:doctor-of-philosophy-in-computer-science
+    - us:ipeds:216339:program:phd:computer-and-information-science-phd
+    - us:ipeds:229027:program:phd:phd-in-computer-science
+    - us:ipeds:110680:program:phd:computer-science-and-engineering-phd
+    - us:ipeds:137351:program:phd:ph-d-in-computer-science-and-engineering
+    - us:ipeds:186867:program:phd:phd-in-computer-science
+    - ca:dli:O19091528512:program:phd:phd-in-computer-science
+  conditional:
+    - us:ipeds:231624:program:phd:computer-science-phd
+    - us:ipeds:194824:program:phd:ph-d-in-computer-science
+    - us:ipeds:171128:program:phd:computer-science-phd
+    - us:ipeds:201885:program:phd:ph-d-in-computer-science-and-engineering
+    - ror:04jr1s763:program:thesis-or-research-master-s:msc-in-software-science-and-technology
+    - us:ipeds:190044:program:phd:phd-in-computer-science
+    - ca:dli:O19395535729:program:thesis-or-research-master-s:software-engineering-masc
+    - ca:dli:O18781994282:program:thesis-or-research-master-s:master-of-applied-science-in-engineering-science
+    - us:ipeds:157289:program:phd:doctor-of-philosophy-in-computer-science-and-engineering
+    - us:ipeds:142115:program:phd:computing-phd-computer-science-or-cybersecurity-emphasis
+    - us:ipeds:133951:program:phd:doctor-of-philosophy-in-computer-science
+    - ror:05trd4x28:program:thesis-or-research-master-s:master-s-degree-in-computer-science
+    - us:ipeds:207971:program:phd:computer-science-ph-d
+    - us:ipeds:133669:program:phd:doctor-of-philosophy-with-major-in-computer-science
+    - ca:dli:O19315945002:program:thesis-or-research-master-s:software-engineering-masc
+    - ca:dli:O19021279692:program:thesis-or-research-master-s:msc-in-applied-science-computing-science-research-field
+    - ca:dli:O19391556899:program:thesis-or-research-master-s:master-of-science-in-computer-science
+    - ca:dli:O19330231062:program:thesis-or-research-master-s:master-of-applied-science-in-electrical-and-computer-engineering
+    - ror:03ad39j10:program:thesis-or-research-master-s:master-s-degree-in-computer-science
+    - ror:0005w8d69:program:thesis-or-research-master-s:master-of-science-in-computer-science
+    - ca:dli:O19375892122:program:thesis-or-research-master-s:master-of-engineering-science-mesc-in-electrical-and-computer-engineering
+    - us:ipeds:149222:program:phd:computer-science-doctor-of-philosophy
+    - us:ipeds:156125:program:phd:phd-in-electrical-engineering-and-computer-science
+    - ca:dli:O19361109242:program:thesis-or-research-master-s:masc-in-electrical-and-computer-engineering
+    - ror:05a28rw58:program:direct-entry-phd:direct-doctorate-in-computer-science
+    - us:ipeds:234076:program:phd:computer-science-phd
+    - ror:029pk6x14:program:thesis-or-research-master-s:erasmus-mundus-joint-master-in-engineering-of-data-intensive-intelligent-software-systems-ediss
+    - ca:dli:O19395164223:program:thesis-or-research-master-s:msc-in-applied-modelling-and-quantitative-methods-thesis-stream
+    - ca:dli:O18886830282:program:direct-entry-phd:phd-in-computer-science-without-completed-msc

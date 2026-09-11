@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "errors": [],
+  "recommended_count": 15,
+  "tier_counts": {
+    "Strongest Realistic Options": 5,
+    "Competitive Options": 6,
+    "High Reaches": 3,
+    "Extreme Reaches": 1
+  },
+  "funding_contradictions_reviewed": 46,
+  "stage3_pass_to_stage5_fail": 44,
+  "stage3_inquiry_to_stage5_pass": 2,
+  "conditional_count": 8,
+  "fully_funded_program_count": 14,
+  "previous_selections_removed": 15,
+  "previously_excluded_restored": 8,
+  "fee_total_before_confirmed_waivers_usd": 1105,
+  "fee_total_after_confirmed_waivers_usd": 1010,
+  "core_claim_review": "Each recommended row includes current official program, funding, admissions, and fit URLs; claim text was compared with source content rather than URL status."
+}
