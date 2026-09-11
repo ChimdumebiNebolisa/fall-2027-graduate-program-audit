@@ -492,6 +492,28 @@ def test_stage_five_reentry_16_scores_every_new_faculty_ready_route():
     assert all(row["professor_hard_gate"] == "true" for row in scored_latest)
 
 
+def test_stage_five_reentry_17_scores_every_new_faculty_ready_route():
+    latest_ids = {
+        row["candidate_program_id"]
+        for row in read_csv(REPO_ROOT / "data/processed/pass2/stage_03_reentry_17_verification.csv")
+        if row["faculty_review_ready"] == "yes"
+    }
+    scores = read_csv(REPO_ROOT / "data/processed/pass2/program_scores.csv")
+    evidence = read_csv(REPO_ROOT / "data/processed/pass2/score_evidence.csv")
+    scored_latest = [row for row in scores if row["program_id"] in latest_ids]
+    evidence_by_program = defaultdict(list)
+    for row in evidence:
+        if row["program_id"] in latest_ids:
+            evidence_by_program[row["program_id"]].append(row)
+    assert len(latest_ids) == len(scored_latest) == 9
+    assert {row["program_id"] for row in scored_latest} == latest_ids
+    assert set(evidence_by_program) == latest_ids
+    assert all(len(rows) == len(COMPONENT_ORDER) for rows in evidence_by_program.values())
+    professor_gate_failures = [row for row in scored_latest if row["professor_hard_gate"] != "true"]
+    assert len(professor_gate_failures) == 1
+    assert professor_gate_failures[0]["institution_name"] == "Åbo Akademi University"
+
+
 def test_missing_gate_evidence_reduces_confidence_and_blocks_rank():
     scores = read_csv(REPO_ROOT / "data/processed/pass2/program_scores.csv")
     incomplete = [
