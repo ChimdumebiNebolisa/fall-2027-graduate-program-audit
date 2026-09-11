@@ -1,0 +1,520 @@
+{
+  "trigger": "Stage 6 re-entry 08 returned to candidate discovery because the evidence-calibrated portfolio still had zero justified core applications.",
+  "scope": "A bounded ninth non-saturation pass for exact, previously unverified research routes across the United States, Canada, and Europe; discovery evidence only, with no scoring, retention, eligibility, funding, or faculty-capacity decision.",
+  "candidates": [
+    {
+      "institution_id": "us:ipeds:139658",
+      "institution_name": "Emory University",
+      "country": "United States",
+      "region": "us",
+      "program_name": "PhD in Computer Science and Informatics",
+      "degree_type": "PhD",
+      "relevant_degree_route": "Research doctorate with rotations, qualifying examination, original faculty-advised research, thesis proposal, and defense",
+      "research_topic_clusters": ["systems_security", "ai_for_se", "distributed_systems"],
+      "exact_research_fit_signal": "The program explicitly includes large-scale data systems, information retrieval, privacy and security, machine learning, natural-language processing, HCI, and high-performance computing.",
+      "preliminary_international_eligibility": "The program accepts doctoral applications through the Laney Graduate School; degree equivalency, English evidence, prerequisites, and the Fall 2027 cycle require Stage 3 review.",
+      "preliminary_funding_signal": "The current applicant page states that admitted CSI PhD students receive full tuition and a competitive stipend, with possible additional summer support and teaching assistantships; duration, fees, benefits, and Fall 2027 terms remain unverified.",
+      "official_program_url": "https://computerscience.emory.edu/graduate-phd/index.html",
+      "official_institution_url": "https://www.emory.edu",
+      "seed_adjacency": ["TerraProbe-adjacent", "Evidex-adjacent"],
+      "unresolved_fields": ["Fall 2027 cycle", "degree and prerequisite equivalency", "English evidence", "support duration and renewal", "fees and benefits", "current supervisor capacity"],
+      "evidence_confidence": "high",
+      "additional_discovery_paths": ["recognized_institution_record", "underrepresented_route_search"],
+      "sources": [
+        {
+          "source_id": "reentry09:emory-csi:program",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "exact doctorate and research fit",
+          "title": "Computer Science and Informatics PhD Overview",
+          "url": "https://computerscience.emory.edu/graduate-phd/index.html",
+          "accessed_date": "2026-09-11",
+          "evidence_summary": "Official department page confirms the CSI doctorate, research rotations, thesis sequence, and relevant systems, security, information-retrieval, and machine-learning research.",
+          "limitations": "Research breadth does not establish applicant admission or a current advisor opening."
+        },
+        {
+          "source_id": "reentry09:emory-csi:admissions-funding",
+          "discovery_path": "research_masters_or_scholarship_search",
+          "evidence_role": "current application and preliminary support signal",
+          "title": "CSI PhD Applicants",
+          "url": "https://computerscience.emory.edu/graduate-phd/admissions/index.html",
+          "accessed_date": "2026-09-11",
+          "evidence_summary": "Official applicant page describes the doctoral application and states that admitted students receive full tuition and competitive stipend support.",
+          "limitations": "The published Fall 2026 terms are not an applicant-specific offer and must be refreshed for Fall 2027."
+        }
+      ]
+    },
+    {
+      "institution_id": "us:ipeds:147767",
+      "institution_name": "Northwestern University",
+      "country": "United States",
+      "region": "us",
+      "program_name": "PhD in Computer Science",
+      "degree_type": "PhD",
+      "relevant_degree_route": "Full-time computer science research doctorate organized around faculty mentorship, original research, milestones, and dissertation",
+      "research_topic_clusters": ["software_quality", "distributed_systems", "ai_for_se"],
+      "exact_research_fit_signal": "The department's doctoral route spans systems and networking, software engineering, programming languages, security and privacy, machine learning, and human-computer interaction.",
+      "preliminary_international_eligibility": "International applicants can apply to the full-time PhD, but degree equivalency, preparation, English evidence, and Fall 2027 requirements remain for Stage 3.",
+      "preliminary_funding_signal": "The department currently describes guaranteed support through the fifth year using first-year fellowship, research assistantship, teaching assistantship, or external support; good-standing, summer, fee, and renewal details require verification.",
+      "official_program_url": "https://www.mccormick.northwestern.edu/computer-science/academics/graduate/phd/",
+      "official_institution_url": "https://www.northwestern.edu",
+      "seed_adjacency": ["TerraProbe-adjacent", "Evidex-adjacent"],
+      "unresolved_fields": ["Fall 2027 cycle", "academic preparation and English evidence", "five-year guarantee conditions", "summer and fee coverage", "advisor matching", "current supervisor capacity"],
+      "evidence_confidence": "high",
+      "additional_discovery_paths": ["recognized_institution_record", "current_faculty_topic_signal"],
+      "sources": [
+        {
+          "source_id": "reentry09:northwestern-cs:program",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "exact Computer Science doctorate and research structure",
+          "title": "PhD in Computer Science",
+          "url": "https://www.mccormick.northwestern.edu/computer-science/academics/graduate/phd/",
+          "accessed_date": "2026-09-11",
+          "evidence_summary": "Official department page confirms the PhD and its research-centered training across major computer-science areas.",
+          "limitations": "The page does not establish applicant-specific admission or advisor capacity."
+        },
+        {
+          "source_id": "reentry09:northwestern-cs:funding",
+          "discovery_path": "research_masters_or_scholarship_search",
+          "evidence_role": "doctoral funding duration and mechanisms",
+          "title": "PhD Student Resources",
+          "url": "https://www.mccormick.northwestern.edu/computer-science/resources/student/phd.html",
+          "accessed_date": "2026-09-11",
+          "evidence_summary": "Official resource page describes support through the fifth year and the fellowship, research, teaching, and external mechanisms used to fund students.",
+          "limitations": "Stage 3 must confirm the guarantee's exact good-standing, summer, fee, and insurance conditions for a new admit."
+        }
+      ]
+    },
+    {
+      "institution_id": "us:ipeds:215293",
+      "institution_name": "University of Pittsburgh-Pittsburgh Campus",
+      "country": "United States",
+      "region": "us",
+      "program_name": "PhD in Computer Science",
+      "degree_type": "PhD",
+      "relevant_degree_route": "Computer science research doctorate with advanced coursework, research milestones, faculty supervision, and dissertation",
+      "research_topic_clusters": ["software_quality", "systems_security", "distributed_systems"],
+      "exact_research_fit_signal": "The department supports research across software systems, security, distributed and networked systems, data, artificial intelligence, and related computer-science areas.",
+      "preliminary_international_eligibility": "The School of Computing and Information accepts international graduate applicants, but degree preparation, English evidence, program prerequisites, and Fall 2027 terms require Stage 3 review.",
+      "preliminary_funding_signal": "Official department and catalog material states that sponsored research supports many graduate students and that PhD admits receive support typically for the first two years, with later support usually advisor-based; this is not a universal full-duration guarantee.",
+      "official_program_url": "https://intranet.cs.pitt.edu/grad/",
+      "official_institution_url": "https://www.pitt.edu",
+      "seed_adjacency": ["TerraProbe-adjacent", "Evidex-adjacent"],
+      "unresolved_fields": ["Fall 2027 cycle", "degree preparation and English evidence", "first-two-year support terms", "later advisor funding", "fees and insurance", "current supervisor capacity"],
+      "evidence_confidence": "medium",
+      "additional_discovery_paths": ["recognized_institution_record", "underrepresented_route_search"],
+      "sources": [
+        {
+          "source_id": "reentry09:pitt-cs:graduate",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "exact graduate research route and assistantship signal",
+          "title": "Computer Science Graduate Programs",
+          "url": "https://intranet.cs.pitt.edu/grad/",
+          "accessed_date": "2026-09-11",
+          "evidence_summary": "Official department page identifies the Computer Science PhD, broad faculty research, and research assistantships supporting many graduate students.",
+          "limitations": "Support for many students is not a commitment to every admitted doctoral student."
+        },
+        {
+          "source_id": "reentry09:pitt-cs:admissions",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "international graduate application boundary",
+          "title": "Graduate Admissions FAQs",
+          "url": "https://www.sci.pitt.edu/admissions/graduate-admissions-faqs",
+          "accessed_date": "2026-09-11",
+          "evidence_summary": "Official school FAQ provides the controlled graduate application route and international applicant requirements.",
+          "limitations": "The FAQ does not establish program admission, advisor availability, or a funding package."
+        }
+      ]
+    },
+    {
+      "institution_id": "us:ipeds:165015",
+      "institution_name": "Brandeis University",
+      "country": "United States",
+      "region": "us",
+      "program_name": "Computer Science PhD",
+      "degree_type": "PhD",
+      "relevant_degree_route": "Research doctorate requiring close faculty advising, original computer-science research, and dissertation work",
+      "research_topic_clusters": ["ai_for_se", "software_quality", "formal_verification"],
+      "exact_research_fit_signal": "The doctoral handbook establishes individualized faculty-advised research, with departmental strengths that include artificial intelligence, language and information, and foundational computer science.",
+      "preliminary_international_eligibility": "The university lists an in-person Computer Science PhD and considers international students for doctoral aid; degree equivalency, prerequisites, English evidence, and Fall 2027 terms remain unresolved.",
+      "preliminary_funding_signal": "Brandeis states that most doctoral students are funded for five years with fellowship, full tuition, and health-insurance benefits, while the CS handbook describes named fellowships and advisor matching; program-specific package and continuation conditions require verification.",
+      "official_program_url": "https://www.brandeis.edu/computer-science/_pdfs/computer-science-phd-handbook.pdf",
+      "official_institution_url": "https://www.brandeis.edu",
+      "seed_adjacency": ["TerraProbe-adjacent", "Evidex-adjacent"],
+      "unresolved_fields": ["Fall 2027 cycle", "degree and prerequisite equivalency", "English evidence", "program-specific five-year package", "advisor consent and continuation", "fees and net cost"],
+      "evidence_confidence": "medium",
+      "additional_discovery_paths": ["recognized_institution_record", "current_faculty_topic_signal"],
+      "sources": [
+        {
+          "source_id": "reentry09:brandeis-cs:handbook",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "exact doctoral research and advisor structure",
+          "title": "Computer Science PhD Handbook",
+          "url": "https://www.brandeis.edu/computer-science/_pdfs/computer-science-phd-handbook.pdf",
+          "accessed_date": "2026-09-11",
+          "evidence_summary": "Official handbook confirms the Computer Science PhD, faculty-advised research, advisor-consent requirement, and named fellowship mechanisms.",
+          "limitations": "The handbook is not a Fall 2027 funding offer and advisor consent remains applicant-specific."
+        },
+        {
+          "source_id": "reentry09:brandeis-cs:funding",
+          "discovery_path": "research_masters_or_scholarship_search",
+          "evidence_role": "central doctoral funding boundary",
+          "title": "Aid for Doctoral Students",
+          "url": "https://www.brandeis.edu/gsas/financing/doctoral/index.html",
+          "accessed_date": "2026-09-11",
+          "evidence_summary": "Official GSAS page says most doctoral students receive five years of funding including fellowship, full tuition, and health-insurance benefits, and international students are considered.",
+          "limitations": "The statement applies to most doctoral students and does not prove the exact Computer Science package."
+        }
+      ]
+    },
+    {
+      "institution_id": "us:ipeds:171100",
+      "institution_name": "Michigan State University",
+      "country": "United States",
+      "region": "us",
+      "program_name": "Computer Science PhD",
+      "degree_type": "PhD",
+      "relevant_degree_route": "Doctoral route in computer science and engineering with advanced study, independent research, and dissertation",
+      "research_topic_clusters": ["software_quality", "formal_verification", "distributed_systems"],
+      "exact_research_fit_signal": "The program names component-based software engineering, formal methods, high-assurance software, model-based development, adaptive middleware, distributed systems, security, and machine learning.",
+      "preliminary_international_eligibility": "International applicants may apply and must document English proficiency unless waived; background courses, degree equivalency, and the Fall 2027 cycle require transcript-level review.",
+      "preliminary_funding_signal": "Outstanding applicants are automatically considered for teaching and research assistantships and fellowships, and offers with support are issued separately; no universal award is published.",
+      "official_program_url": "https://engineering.msu.edu/academics/majors-degrees/computer-science-phd",
+      "official_institution_url": "https://www.msu.edu",
+      "seed_adjacency": ["TerraProbe-adjacent", "Evidex-adjacent"],
+      "unresolved_fields": ["Fall 2027 cycle", "background-course mapping", "English waiver or evidence", "assistantship selection", "tuition, fees, and insurance", "current supervisor capacity"],
+      "evidence_confidence": "high",
+      "additional_discovery_paths": ["recognized_institution_record", "lab_or_center_signal"],
+      "sources": [
+        {
+          "source_id": "reentry09:msu-cs:program",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "exact doctorate, research fit, and application boundary",
+          "title": "Computer Science PhD",
+          "url": "https://engineering.msu.edu/academics/majors-degrees/computer-science-phd",
+          "accessed_date": "2026-09-11",
+          "evidence_summary": "Official program page confirms the PhD, relevant software and distributed-systems areas, international application requirements, and automatic consideration of strong applicants for support.",
+          "limitations": "Automatic consideration is not an assistantship or fellowship award."
+        },
+        {
+          "source_id": "reentry09:msu-cs:research",
+          "discovery_path": "lab_or_center_signal",
+          "evidence_role": "current departmental research breadth",
+          "title": "Computer Science and Engineering Research",
+          "url": "https://engineering.msu.edu/departments/cse/research",
+          "accessed_date": "2026-09-11",
+          "evidence_summary": "Official department page lists active software engineering, formal methods, distributed systems, machine learning, and security research groups and labs.",
+          "limitations": "An active group does not establish recruitment, supervision authority, or funding."
+        }
+      ]
+    },
+    {
+      "institution_id": "us:ipeds:196413",
+      "institution_name": "Syracuse University",
+      "country": "United States",
+      "region": "us",
+      "program_name": "Doctor of Philosophy in Computer/Information Science and Engineering",
+      "degree_type": "PhD",
+      "relevant_degree_route": "Research doctorate in computer and information science and engineering requiring advanced study and original dissertation research",
+      "research_topic_clusters": ["distributed_systems", "systems_security", "ai_for_se"],
+      "exact_research_fit_signal": "The program is research-oriented and sits within a department covering software, systems, cybersecurity, artificial intelligence, data, networking, and next-generation computing.",
+      "preliminary_international_eligibility": "International applicants may use the doctoral application route, but degree preparation, English evidence, faculty alignment, and Fall 2027 deadlines require Stage 3 verification.",
+      "preliminary_funding_signal": "The program flags an early deadline for fellowship consideration and the Graduate School describes fellowships and graduate, teaching, or research assistantships as department-controlled possibilities; no universal package was found.",
+      "official_program_url": "https://ecs.syracuse.edu/academics/electrical-engineering-and-computer-science/programs/computer-information-science-engineering-doctoral-program",
+      "official_institution_url": "https://www.syracuse.edu",
+      "seed_adjacency": ["TerraProbe-adjacent", "Evidex-adjacent"],
+      "unresolved_fields": ["Fall 2027 cycle", "degree and prerequisite equivalency", "English evidence", "fellowship or assistantship selection", "tuition and fee coverage", "current supervisor capacity"],
+      "evidence_confidence": "high",
+      "additional_discovery_paths": ["recognized_institution_record", "underrepresented_route_search"],
+      "sources": [
+        {
+          "source_id": "reentry09:syracuse-cise:program",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "exact doctoral route and research boundary",
+          "title": "Doctor of Philosophy in Computer/Information Science and Engineering",
+          "url": "https://ecs.syracuse.edu/academics/electrical-engineering-and-computer-science/programs/computer-information-science-engineering-doctoral-program",
+          "accessed_date": "2026-09-11",
+          "evidence_summary": "Official college page confirms the research doctorate and its fellowship-consideration application timing.",
+          "limitations": "Fellowship consideration is not an award, and the target Fall 2027 cycle is not yet verified."
+        },
+        {
+          "source_id": "reentry09:syracuse-cise:funding",
+          "discovery_path": "research_masters_or_scholarship_search",
+          "evidence_role": "graduate funding mechanisms and departmental boundary",
+          "title": "Financial Support",
+          "url": "https://graduateschool.syr.edu/prospective-students/financial-support/",
+          "accessed_date": "2026-09-11",
+          "evidence_summary": "Official Graduate School page identifies fellowships, graduate, teaching, and research assistantships while directing applicants to the admitting department for availability.",
+          "limitations": "No CISE-specific guarantee, award value, or duration is established."
+        }
+      ]
+    },
+    {
+      "institution_id": "us:ipeds:162928",
+      "institution_name": "Johns Hopkins University",
+      "country": "United States",
+      "region": "us",
+      "program_name": "PhD in Computer Science",
+      "degree_type": "PhD",
+      "relevant_degree_route": "Full-time computer science doctorate centered on faculty matching, independent research, and dissertation",
+      "research_topic_clusters": ["systems_security", "distributed_systems", "ai_for_se"],
+      "exact_research_fit_signal": "The department publishes research areas in systems and networking, information security, programming languages, natural-language processing, machine learning, data science, and HCI.",
+      "preliminary_international_eligibility": "The department accepts Fall-only PhD applications; degree preparation, English evidence, document equivalency, and the Fall 2027 cycle remain for Stage 3.",
+      "preliminary_funding_signal": "The department states that all students receive support including an annual stipend through fellowships or assistantships, while Whiting says most full-time PhD programs fund at least five years; exact duration, standing, and package terms require reconciliation.",
+      "official_program_url": "https://www.cs.jhu.edu/academic-programs/graduate-studies/phd-program/",
+      "official_institution_url": "https://www.jhu.edu",
+      "seed_adjacency": ["TerraProbe-adjacent", "Evidex-adjacent"],
+      "unresolved_fields": ["Fall 2027 cycle", "degree preparation and English evidence", "support duration", "good-standing and advisor conditions", "fees and insurance", "current supervisor capacity"],
+      "evidence_confidence": "high",
+      "additional_discovery_paths": ["recognized_institution_record", "current_faculty_topic_signal"],
+      "sources": [
+        {
+          "source_id": "reentry09:jhu-cs:program",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "exact doctorate, advisor matching, and departmental support signal",
+          "title": "Computer Science PhD Program",
+          "url": "https://www.cs.jhu.edu/academic-programs/graduate-studies/phd-program/",
+          "accessed_date": "2026-09-11",
+          "evidence_summary": "Official department page confirms the PhD, independent research, faculty matching, Fall-only admission, and support for all students through stipend-bearing mechanisms.",
+          "limitations": "The page does not state the complete duration and renewal conditions of every package."
+        },
+        {
+          "source_id": "reentry09:jhu-cs:funding",
+          "discovery_path": "research_masters_or_scholarship_search",
+          "evidence_role": "school-level doctoral funding duration and package",
+          "title": "Financial Assistance and Support",
+          "url": "https://engineering.jhu.edu/education/graduate-studies/graduate-financial-aid/financial-assistance-and-support/",
+          "accessed_date": "2026-09-11",
+          "evidence_summary": "Official Whiting page says most full-time PhD programs provide at least five years of support that may include stipend, full tuition, and health insurance.",
+          "limitations": "The school-level statement allows program exceptions and requires confirmation against the CS offer terms."
+        }
+      ]
+    },
+    {
+      "institution_id": "ca:dli:O19391556899",
+      "institution_name": "St. Francis Xavier University",
+      "country": "Canada",
+      "region": "canada",
+      "program_name": "Master of Science in Computer Science",
+      "degree_type": "Thesis or research master's",
+      "relevant_degree_route": "Thesis-based computer science master's requiring a supervisor, graduate coursework, original research, and thesis defense",
+      "research_topic_clusters": ["software_quality", "systems_security", "ai_for_se"],
+      "exact_research_fit_signal": "The department supports thesis research across software engineering, data and artificial intelligence, security, networks, systems, and related computing areas.",
+      "preliminary_international_eligibility": "Applicants need relevant preparation and must identify a willing supervisor; international degree equivalency, English evidence, supervisor acceptance, and the Fall 2027 cycle require Stage 3 review.",
+      "preliminary_funding_signal": "The program says most accepted MSc students receive a package covering tuition and some living expenses, but the amount, international applicability, duration, fees, and remaining shortfall are not established.",
+      "official_program_url": "https://www.stfx.ca/programs-courses/programs/master-science-computer-science",
+      "official_institution_url": "https://www.stfx.ca",
+      "seed_adjacency": ["TerraProbe-adjacent", "Evidex-adjacent"],
+      "unresolved_fields": ["Fall 2027 cycle", "degree and course equivalency", "English evidence", "willing supervisor", "international funding package", "fees and living-cost shortfall"],
+      "evidence_confidence": "high",
+      "additional_discovery_paths": ["recognized_institution_record", "underrepresented_route_search"],
+      "sources": [
+        {
+          "source_id": "reentry09:stfx-cs:program",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "exact thesis MSc, supervisor requirement, and preliminary package",
+          "title": "Master of Science in Computer Science",
+          "url": "https://www.stfx.ca/programs-courses/programs/master-science-computer-science",
+          "accessed_date": "2026-09-11",
+          "evidence_summary": "Official program page confirms the thesis MSc, supervisor requirement, research structure, international application route, and that most accepted students receive tuition plus partial living support.",
+          "limitations": "Most is not all, and the page does not establish applicant-specific funding or total net cost."
+        },
+        {
+          "source_id": "reentry09:stfx-cs:department",
+          "discovery_path": "lab_or_center_signal",
+          "evidence_role": "current departmental research environment",
+          "title": "Computer Science Department",
+          "url": "https://www.stfx.ca/department/computer-science",
+          "accessed_date": "2026-09-11",
+          "evidence_summary": "Official department page confirms the current computer-science academic and research setting supporting the MSc route.",
+          "limitations": "Department activity does not establish a particular supervisor's capacity or willingness."
+        }
+      ]
+    },
+    {
+      "institution_id": "ror:026vcq606",
+      "institution_name": "KTH Royal Institute of Technology",
+      "country": "Sweden",
+      "region": "europe",
+      "program_name": "MSc Computer Science",
+      "degree_type": "Thesis or research master's",
+      "relevant_degree_route": "English two-year 120-ECTS computer science master's with research methodology, research-connected specializations, and a master's degree project",
+      "research_topic_clusters": ["software_quality", "formal_verification", "systems_security"],
+      "exact_research_fit_signal": "The Software Technology specialization covers software engineering, automated testing, compilers, programming languages, and reliable and secure large-scale software; the theoretical track includes formal methods.",
+      "preliminary_international_eligibility": "A recognized bachelor's plus specified mathematics and computer-science credits and English proficiency are required; exact transcript mapping and selection remain for Stage 3.",
+      "preliminary_funding_signal": "The competitive KTH Scholarship can cover full tuition for fee-paying master's students but excludes living costs; the published 2025 award rate was eight percent of scholarship applicants.",
+      "official_program_url": "https://www.kth.se/en/studies/master/computer-science",
+      "official_institution_url": "https://www.kth.se",
+      "seed_adjacency": ["TerraProbe-adjacent", "Evidex-adjacent"],
+      "unresolved_fields": ["transcript-to-ECTS prerequisite mapping", "English evidence", "2027 selection", "scholarship rank and award", "tuition liability", "living-cost funding"],
+      "evidence_confidence": "high",
+      "additional_discovery_paths": ["recognized_institution_record", "underrepresented_route_search"],
+      "sources": [
+        {
+          "source_id": "reentry09:kth-cs:program",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "exact English MSc and research-connected software route",
+          "title": "MSc Computer Science",
+          "url": "https://www.kth.se/en/studies/master/computer-science",
+          "accessed_date": "2026-09-11",
+          "evidence_summary": "Official page confirms the Fall 2027 English 120-ECTS MSc, software technology and formal-methods pathways, research methodology, and final research or design project.",
+          "limitations": "Program fit does not establish admission or scholarship selection."
+        },
+        {
+          "source_id": "reentry09:kth-cs:admission",
+          "discovery_path": "underrepresented_route_search",
+          "evidence_role": "specific prerequisites, selection, and observed admission statistic",
+          "title": "Entry Requirements for Computer Science",
+          "url": "https://www.kth.se/en/studies/2.23106/master/computer-science/entry-requirements-computer-science-1.419975",
+          "accessed_date": "2026-09-11",
+          "evidence_summary": "Official page specifies bachelor, mathematics, computing, and English requirements and reports 63 admissions among 762 eligible applicants for 2026.",
+          "limitations": "The historical eligible-applicant rate is not an applicant-specific probability or a Fall 2027 guarantee."
+        },
+        {
+          "source_id": "reentry09:kth-cs:scholarship",
+          "discovery_path": "research_masters_or_scholarship_search",
+          "evidence_role": "competitive tuition scholarship boundary",
+          "title": "KTH Scholarship",
+          "url": "https://www.kth.se/en/studies/2.25746/kth-scholarship-1.72827",
+          "accessed_date": "2026-09-11",
+          "evidence_summary": "Official scholarship page describes a full-tuition award for eligible fee-paying master's students and reports an eight-percent 2025 selection rate.",
+          "limitations": "The award is highly competitive and does not cover living expenses."
+        }
+      ]
+    },
+    {
+      "institution_id": "ror:040af2s02",
+      "institution_name": "University of Helsinki",
+      "country": "Finland",
+      "region": "europe",
+      "program_name": "Master's Programme in Computer Science",
+      "degree_type": "Thesis or research master's",
+      "relevant_degree_route": "English two-year 120-ECTS computer science master's with advanced study, research-group contact, and master's thesis",
+      "research_topic_clusters": ["software_quality", "distributed_systems", "ai_for_se"],
+      "exact_research_fit_signal": "The program covers software, algorithms, networking, distributed systems, data, and artificial intelligence and is embedded in an active research department.",
+      "preliminary_international_eligibility": "Applicants need an applicable bachelor's degree and sufficient relevant studies; degree and course equivalency, English proof, and the 2027 application call require Stage 3 review.",
+      "preliminary_funding_signal": "The university offers a very limited number of 50- or 100-percent tuition waivers to fee-liable students; most awards are 50 percent and students must fund living costs independently.",
+      "official_program_url": "https://www.helsinki.fi/en/degree-programmes/computer-science-masters-programme",
+      "official_institution_url": "https://www.helsinki.fi/",
+      "seed_adjacency": ["TerraProbe-adjacent", "Evidex-adjacent"],
+      "unresolved_fields": ["2027 application call", "degree and subject equivalency", "English evidence", "tuition-waiver selection", "remaining tuition", "living-cost funding"],
+      "evidence_confidence": "high",
+      "additional_discovery_paths": ["recognized_institution_record", "research_masters_or_scholarship_search"],
+      "sources": [
+        {
+          "source_id": "reentry09:helsinki-cs:program",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "exact English Computer Science master's",
+          "title": "Master's Programme in Computer Science",
+          "url": "https://www.helsinki.fi/en/degree-programmes/computer-science-masters-programme",
+          "accessed_date": "2026-09-11",
+          "evidence_summary": "Official program page confirms the two-year English master's, relevant computer-science curriculum, research setting, tuition, and thesis route.",
+          "limitations": "Applicant-specific prerequisite mapping and the 2027 call remain unverified."
+        },
+        {
+          "source_id": "reentry09:helsinki-cs:scholarship",
+          "discovery_path": "research_masters_or_scholarship_search",
+          "evidence_role": "tuition-waiver and living-cost boundary",
+          "title": "Tuition Fees and Scholarship Programme",
+          "url": "https://www.helsinki.fi/en/admissions-and-education/apply-bachelors-and-masters-programmes/tuition-fees-and-scholarship-programme",
+          "accessed_date": "2026-09-11",
+          "evidence_summary": "Official admissions page describes limited 50- and 100-percent tuition waivers for fee-liable master's students.",
+          "limitations": "Awards are very limited, most are partial, and living expenses are not covered."
+        }
+      ]
+    },
+    {
+      "institution_id": "ror:035b05819",
+      "institution_name": "University of Copenhagen",
+      "country": "Denmark",
+      "region": "europe",
+      "program_name": "MSc in Computer Science",
+      "degree_type": "Thesis or research master's",
+      "relevant_degree_route": "Two-year computer science master's with advanced coursework, software and systems options, and a research thesis",
+      "research_topic_clusters": ["software_quality", "systems_security", "distributed_systems"],
+      "exact_research_fit_signal": "The program includes software engineering, programming languages, security, algorithms, data, and systems study culminating in a master's thesis.",
+      "preliminary_international_eligibility": "International applicants may apply with a qualifying computer-science or closely related bachelor's; course-level equivalency, English proof, selection, and 2027 terms require Stage 3 review.",
+      "preliminary_funding_signal": "A limited number of non-EU admits are automatically considered for Danish Government Scholarships that may cover full or partial tuition and possibly basic living costs; availability and value are not guaranteed.",
+      "official_program_url": "https://www.ku.dk/studies/masters/computer-science",
+      "official_institution_url": "https://www.ku.dk",
+      "seed_adjacency": ["TerraProbe-adjacent", "Evidex-adjacent"],
+      "unresolved_fields": ["2027 application cycle", "degree and course equivalency", "English evidence", "admission selection", "government scholarship award and value", "remaining tuition and living costs"],
+      "evidence_confidence": "high",
+      "additional_discovery_paths": ["recognized_institution_record", "underrepresented_route_search"],
+      "sources": [
+        {
+          "source_id": "reentry09:copenhagen-cs:program",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "exact MSc, thesis, prerequisites, and published intake context",
+          "title": "MSc in Computer Science",
+          "url": "https://www.ku.dk/studies/masters/computer-science",
+          "accessed_date": "2026-09-11",
+          "evidence_summary": "Official program page confirms the computer-science MSc, thesis route, academic requirements, relevant software and systems content, and published applicant and admission context.",
+          "limitations": "Published cohort statistics do not establish an applicant-specific probability, and 2027 terms remain unverified."
+        },
+        {
+          "source_id": "reentry09:copenhagen-cs:scholarship",
+          "discovery_path": "research_masters_or_scholarship_search",
+          "evidence_role": "limited government-scholarship mechanism",
+          "title": "Scholarships for International Master's Students",
+          "url": "https://www.ku.dk/studies/masters/application-and-admission/scholarships",
+          "accessed_date": "2026-09-11",
+          "evidence_summary": "Official admissions page describes automatic consideration of eligible non-EU admits for a limited number of Danish Government Scholarships.",
+          "limitations": "Coverage may be full or partial tuition and may or may not include basic living support; no award is assured."
+        }
+      ]
+    },
+    {
+      "institution_id": "ror:03z77qz90",
+      "institution_name": "University of Tartu",
+      "country": "Estonia",
+      "region": "europe",
+      "program_name": "Master's in Computer Science",
+      "degree_type": "Thesis or research master's",
+      "relevant_degree_route": "English two-year 120-ECTS computer science master's with specialization, research preparation, and master's thesis",
+      "research_topic_clusters": ["software_quality", "systems_security", "ai_for_se"],
+      "exact_research_fit_signal": "The curriculum supports software engineering, distributed systems, security, data science, artificial intelligence, and research-based thesis work.",
+      "preliminary_international_eligibility": "Applicants need a bachelor's degree and sufficient computing background; degree and subject equivalency, English evidence, selection, and Fall 2027 terms require Stage 3 review.",
+      "preliminary_funding_signal": "The program publishes tuition reductions and competitive scholarship or second-year DIGILINK support routes, but no program-wide full tuition and living-cost package is established.",
+      "official_program_url": "https://ut.ee/en/curriculum/computer-science",
+      "official_institution_url": "https://ut.ee",
+      "seed_adjacency": ["TerraProbe-adjacent", "Evidex-adjacent"],
+      "unresolved_fields": ["Fall 2027 cycle", "degree and computing-background equivalency", "English evidence", "tuition reduction or scholarship", "DIGILINK selection", "remaining tuition and living costs"],
+      "evidence_confidence": "high",
+      "additional_discovery_paths": ["recognized_institution_record", "research_masters_or_scholarship_search"],
+      "sources": [
+        {
+          "source_id": "reentry09:tartu-cs:program",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "exact English master's, research thesis, admission, and tuition context",
+          "title": "Computer Science Master's Programme",
+          "url": "https://ut.ee/en/curriculum/computer-science",
+          "accessed_date": "2026-09-11",
+          "evidence_summary": "Official program page confirms the English two-year 120-ECTS master's, 63-place intake, relevant computing curriculum, tuition, scholarship mechanisms, and thesis.",
+          "limitations": "Published places and support options do not establish admission or adequate funding."
+        },
+        {
+          "source_id": "reentry09:tartu-cs:institute",
+          "discovery_path": "research_masters_or_scholarship_search",
+          "evidence_role": "departmental curriculum and scholarship detail",
+          "title": "Computer Science MSc",
+          "url": "https://cs.ut.ee/en/content/computer-science-msc",
+          "accessed_date": "2026-09-11",
+          "evidence_summary": "Official institute page describes the current master's structure, research areas, thesis preparation, and competitive financial-support opportunities.",
+          "limitations": "Scholarship and DIGILINK mechanisms are selective and do not prove full net-cost coverage."
+        }
+      ]
+    }
+  ],
+  "false_negative_audits": [
+    {
+      "institution_id": "ca:dli:O19391556899",
+      "exclusion_reason_category": "outside_bounded_positive_seed_screen",
+      "original_supporting_evidence": "St. Francis Xavier remained absent from the funnel despite a current thesis-based Computer Science MSc, required supervisor route, and an official statement that most accepted students receive tuition plus partial living support."
+    },
+    {
+      "institution_id": "ror:026vcq606",
+      "exclusion_reason_category": "doctoral_route_recorded_research_masters_route_missed",
+      "original_supporting_evidence": "KTH was represented only by a doctoral route despite a current Fall 2027 English Computer Science MSc with software technology, automated testing, reliable and secure software, a research project, published selection statistics, and a competitive tuition scholarship."
+    }
+  ]
+}

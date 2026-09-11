@@ -258,6 +258,7 @@ def validate_reentry(
     merged: list[dict[str, str]],
     audits: list[dict[str, str]],
     reentry_prefix: str = "reentry01",
+    prior_program_ids: set[str] | None = None,
 ) -> dict[str, object]:
     merged_by_id = {row["program_id"]: row for row in merged}
     source_ids = {row["source_id"] for row in sources}
@@ -295,6 +296,9 @@ def validate_reentry(
             for row in sources
         ),
         "program_ids_unique_after_merge": len(merged_by_id) == len(merged),
+        "all_reentry_routes_are_net_new": not (
+            {row["program_id"] for row in candidates} & (prior_program_ids or set())
+        ),
         "all_reentry_candidates_present_after_merge": all(
             row["program_id"] in merged_by_id for row in candidates
         ),

@@ -44,8 +44,9 @@ DEFINITION_PATHS = [
     REPO_ROOT / "data/raw/pass2/stage_02_reentry_06.json",
     REPO_ROOT / "data/raw/pass2/stage_02_reentry_07.json",
     REPO_ROOT / "data/raw/pass2/stage_02_reentry_08.json",
+    REPO_ROOT / "data/raw/pass2/stage_02_reentry_09.json",
 ]
-CURRENT_REENTRY_NUMBER = 8
+CURRENT_REENTRY_NUMBER = 9
 CURRENT_REENTRY_LABEL = f"{CURRENT_REENTRY_NUMBER:02d}"
 CURRENT_REENTRY_PREFIX = f"reentry{CURRENT_REENTRY_LABEL}"
 PREVIOUS_REENTRY_LABEL = f"{CURRENT_REENTRY_NUMBER - 1:02d}"
@@ -474,12 +475,13 @@ def build_report(
         "EHESO/ETER and several national registries remain blocked.",
         "- Current faculty appointment, supervision authority, and capacity remain Stage 4 work "
         "after program verification.",
-        "- Cincinnati, VCU, Missouri S&T, and UNT require transcript-level entry review; their doctoral support "
-        "signals range from a published first-year package to competitive, advisor-dependent assistantships.",
-        "- Memorial, Guelph, Toronto Metropolitan, and Polytechnique Montréal require degree-equivalency, "
-        "supervisor, international-package, and net-cost verification even where a funding mechanism is published.",
-        "- Oulu, Stuttgart, Antwerp, and Groningen require curriculum and language mapping plus a viable "
-        "tuition and living-cost plan; waivers and scholarships are partial, restricted, or highly competitive.",
+        "- Emory, Northwestern, Pitt, Brandeis, Michigan State, Syracuse, and Johns Hopkins require "
+        "transcript-level entry and offer-level support review; their signals range from departmental support "
+        "statements to competitive or advisor-dependent mechanisms.",
+        "- St. Francis Xavier requires degree-equivalency, willing-supervisor, international-package, and "
+        "net-cost verification even though most accepted MSc students are described as receiving support.",
+        "- KTH, Helsinki, Copenhagen, and Tartu require course and language mapping plus a viable tuition and "
+        "living-cost plan; their scholarships or reductions are partial, limited, or highly competitive.",
         "- Existing Stage 3-6 artifacts are intentionally unchanged and therefore do not yet include "
         "these routes.",
         "- Discovery remains explicitly non-saturated; this pass reduces observed false-negative risk "
@@ -488,8 +490,8 @@ def build_report(
         "## Records requiring human judgment",
         "",
         "Stage 3 must determine whether each route is actually eligible and credibly funded. The "
-        "highest-impact judgments are the U.S. transcript and funding conditions, whether any Canadian MASc "
-        "package clears international net cost, and whether the European routes "
+        "highest-impact judgments are the U.S. transcript and funding conditions, whether the St. Francis "
+        "Xavier MSc package clears international net cost, and whether the European routes "
         "combine transcript equivalency with viable living-cost funding.",
         "",
         "## Files created or modified",
@@ -556,6 +558,7 @@ def main() -> None:
             prior_advance_count = sum(
                 row["funnel_status"] == "advance_to_stage_3" for row in merged
             )
+        prior_program_ids = {row["program_id"] for row in merged}
         merged = merge_candidate_rows(merged, candidates)
         yields = augment_source_yield(
             yields, candidates, sources, reentry_label=f"{round_number:02d}"
@@ -567,7 +570,12 @@ def main() -> None:
             audit_targets=audit_targets(payload),
         )
         validation = validate_reentry(
-            candidates, sources, merged, audits, reentry_prefix=prefix
+            candidates,
+            sources,
+            merged,
+            audits,
+            reentry_prefix=prefix,
+            prior_program_ids=prior_program_ids,
         )
         if validation["status"] != "PASS":
             raise RuntimeError(
@@ -713,7 +721,7 @@ def main() -> None:
         "downstream_integration_check": {
             "command": "python -m pytest -q",
             "result": "EXPECTED_FAIL_PENDING_STAGE_3_REENTRY",
-            "passed": 87,
+            "passed": 93,
             "failed": 1,
             "failure": "tests/test_program_verification.py::test_every_stage2_candidate_has_exactly_one_controlled_status",
             "reason": f"program_verification.csv has {verification_rows} rows while the Stage 2 funnel now has {len(merged)}; Stage 3 was intentionally not modified in this one-stage run",
@@ -727,9 +735,9 @@ def main() -> None:
             "Current faculty appointment, supervision authority, and capacity remain unverified.",
             "Other active catalog/manual-review rows remain unresolved and discovery remains non-saturated.",
             "European registry coverage and national-registry access limitations from the initial Stage 2 run remain.",
-            "Cincinnati, VCU, Missouri S&T, and UNT require transcript-level entry review; only preliminary doctoral support mechanisms are recorded at this stage.",
-            "The four Canadian routes require degree-equivalency, supervisor, international-package, and net-cost verification.",
-            "Oulu, Stuttgart, Antwerp, and Groningen require curriculum and language mapping plus a viable tuition and living-cost plan; waiver and scholarship routes are limited or competitive.",
+            "The seven U.S. doctoral routes require transcript-level entry and offer-level support review; only preliminary support mechanisms are recorded at this stage.",
+            "The St. Francis Xavier MSc requires degree-equivalency, willing-supervisor, international-package, and net-cost verification.",
+            "KTH, Helsinki, Copenhagen, and Tartu require course and language mapping plus a viable tuition and living-cost plan; scholarship and tuition-reduction routes are limited or competitive.",
             *(
                 [
                     f"Automated source retrieval exceptions remain for {len(retrieval_qa['unresolved_source_ids'])} of {retrieval_qa['checked']} current-round official source records; all were browser-reviewed during discovery."
