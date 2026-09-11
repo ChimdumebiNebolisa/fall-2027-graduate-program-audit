@@ -924,4 +924,44 @@ FACULTY_ROSTERS: dict[str, FacultyRoster] = {
             _c("Daniel Strüber", "model-driven engineering; software evolution; program transformation"),
         ),
     ),
+    "University of Cincinnati-Main Campus": FacultyRoster(
+        "Department of Computer Science",
+        "https://www.ceas.uc.edu/academics/departments/computer-science/computer-science-people.html",
+        (
+            _c("Chong Yu", "secure software; federated learning; networked systems; AI-enabled software"),
+            _c("Tianyu Jiang", "natural language processing; trustworthy language models; software intelligence"),
+            _c("Swastik Brahma", "networked systems; human-in-the-loop systems; dependable computing"),
+            _c("Boyang Wang", "binary analysis; embedded-system security; privacy; applied cryptography"),
+        ),
+    ),
+    "Virginia Commonwealth University": FacultyRoster(
+        "Department of Computer Science",
+        "https://egr.vcu.edu/departments/computer-science/research/research-clusters/",
+        (
+            _c("Rodrigo Spinola", "software engineering; software evolution; human-centered software"),
+            _c("Thomas Gyeera", "software engineering; computer systems; AI and data science"),
+            _c("Luke Gusukuma", "software engineering; human-centered computing; developer tools"),
+            _c("Irfan Ahmed", "digital forensics; malware analysis; cyber-physical systems security"),
+        ),
+    ),
+    "University of Guelph": FacultyRoster(
+        "School of Computer Science",
+        "https://www.uoguelph.ca/computing/future/graduate-studies",
+        (
+            _c("Ali Dehghantanha", "cybersecurity; threat intelligence; AI-assisted security analysis"),
+            _c("Rozita Dara", "privacy; trustworthy artificial intelligence; data governance"),
+            _c("Xiaodong Lin", "cybersecurity; privacy; secure systems and communications"),
+            _c("John Akinyemi", "software engineering; information retrieval; knowledge graphs; graph databases"),
+        ),
+    ),
+    "École Polytechnique de Montréal": FacultyRoster(
+        "Department of Computer Engineering and Software Engineering",
+        "https://www.polymtl.ca/gigl/en/research/areas-research",
+        (
+            _c("Mohammad Hamdaqa", "software engineering; cloud software; software architecture; developer tools"),
+            _c("Foutse Khomh", "software quality; machine-learning systems; software analytics; trustworthy AI"),
+            _c("Heng Li", "software engineering; software performance; trace analysis; software analytics"),
+            _c("Zohreh Sharafi", "software engineering; program comprehension; human factors; developer studies"),
+        ),
+    ),
 }
