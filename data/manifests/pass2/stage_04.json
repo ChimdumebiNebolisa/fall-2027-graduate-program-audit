@@ -2,28 +2,28 @@
   "manifest_version": "1.0",
   "schema_version": "2.0",
   "stage": 4,
-  "run_type": "faculty_reentry_15",
-  "name": "Deep professor and department fit mapping — re-entry 15",
+  "run_type": "faculty_reentry_16",
+  "name": "Deep professor and department fit mapping — re-entry 16",
   "status": "complete",
   "decision": "PASS",
-  "source_commit_before_stage": "226d4148ffc4fbf03510da68463a7a0d9e7f7ae3",
+  "source_commit_before_stage": "f835d367c89e21c85d40f6b463b4337d0c43c834",
   "triggered_by_stage": 3,
-  "started_at": "2026-09-11T13:11:46.830124+00:00",
-  "completed_at": "2026-09-11T13:11:47.562267+00:00",
+  "started_at": "2026-09-11T14:15:19.482368+00:00",
+  "completed_at": "2026-09-11T14:15:20.245705+00:00",
   "inputs": [
     {
       "path": "data/manifests/pass2/stage_03.json",
-      "sha256": "7cf435ecbcd771542a6988ebe0e9135fcb246497a4be446d37e1490ccb114cba",
-      "bytes": 31282,
-      "modified_at": "2026-09-11T12:54:09.327171+00:00",
+      "sha256": "22f1de760c7d2a80b1f5769d3e66cbf3d7cd30803ff7129acf4234c0b6b0566f",
+      "bytes": 32921,
+      "modified_at": "2026-09-11T13:57:02.088886+00:00",
       "row_count": null
     },
     {
       "path": "data/processed/pass2/program_verification.csv",
-      "sha256": "17048fdd435242d9e7dc78fa98ea244a45edca421ae035ae5eb0cf9b6ad2ef49",
-      "bytes": 4691557,
-      "modified_at": "2026-09-11T12:54:05.825546+00:00",
-      "row_count": 2145
+      "sha256": "98eefe4c5c7daf62aff0f3d6aa3757308fe8180f1734e7ec743ed2a7d7fd0c8b",
+      "bytes": 4733175,
+      "modified_at": "2026-09-11T13:56:58.781270+00:00",
+      "row_count": 2157
     },
     {
       "path": "data/processed/openalex_faculty_signals.csv",
@@ -138,10 +138,17 @@
       "row_count": null
     },
     {
+      "path": "data/raw/pass2/stage_04_reentry_16.json",
+      "sha256": "cf2d71e05df067e4489e8ba71eda8b9a7d4541d7723ef39538c5a6ef7148822b",
+      "bytes": 45524,
+      "modified_at": "2026-09-11T14:12:59.670034+00:00",
+      "row_count": null
+    },
+    {
       "path": "src/graduate_audit/professor_mapping.py",
-      "sha256": "823ba14db03de40b346dcadeafda3342a842778f7c4733c69d16d3433efdba2e",
-      "bytes": 80451,
-      "modified_at": "2026-09-11T13:04:44.578713+00:00",
+      "sha256": "0ec2bd9c79e17ce490f16de1fce19c26ba547dbbbe2ebf845f4433a174a5bb10",
+      "bytes": 85395,
+      "modified_at": "2026-09-11T14:15:12.444617+00:00",
       "row_count": null
     },
     {
@@ -197,39 +204,39 @@
   "outputs": [
     {
       "path": "data/processed/pass2/professor_candidates_evaluated.csv",
-      "sha256": "fbead0d88e6edef011f267a02bacf46e408cec115c98882bc5c0d3da4a999fed",
-      "bytes": 1563977,
-      "modified_at": "2026-09-11T13:11:47.365646+00:00",
-      "row_count": 715
+      "sha256": "4e9d198ddb87399f1e245771c114a4b3fa8fdcad9f4b729d7933b90f1a7b427e",
+      "bytes": 1661173,
+      "modified_at": "2026-09-11T14:15:20.043204+00:00",
+      "row_count": 755
     },
     {
       "path": "data/processed/pass2/professor_matches_retained.csv",
-      "sha256": "9c810075e8f09a796f49f952cff29f7c95df5b1f0705eb711617d26f495f9a8f",
-      "bytes": 282411,
-      "modified_at": "2026-09-11T13:11:47.382317+00:00",
-      "row_count": 122
+      "sha256": "dffc4d27e1f7f3ea479c683941996c393bfd2d31c299f0181138cd67e397ee63",
+      "bytes": 303677,
+      "modified_at": "2026-09-11T14:15:20.062777+00:00",
+      "row_count": 130
     },
     {
       "path": "data/processed/pass2/professor_sources.csv",
-      "sha256": "0409015e2e295935ac76968397db419f67a61731b58c104b38aa82728c94b5ad",
-      "bytes": 466180,
-      "modified_at": "2026-09-11T13:11:47.412660+00:00",
-      "row_count": 711
+      "sha256": "f1961f6019276a3d83c8caaa38ec4ff2932195217527048f515c41ef3c1a5696",
+      "bytes": 491131,
+      "modified_at": "2026-09-11T14:15:20.095247+00:00",
+      "row_count": 747
     },
     {
       "path": "reports/pass2/04_professor_mapping.md",
-      "sha256": "daf50eebb1f89309920d83e07008f30a4f5638be1e87b118d5bd9afebc943c71",
-      "bytes": 21573,
-      "modified_at": "2026-09-11T13:11:47.554952+00:00",
+      "sha256": "115a8a20117315c3a89dbb081afe4360c0c262d5066dc992df36d346e64f0049",
+      "bytes": 22648,
+      "modified_at": "2026-09-11T14:15:20.239289+00:00",
       "row_count": null
     }
   ],
   "artifacts": [
     {
       "path": "src/graduate_audit/professor_mapping.py",
-      "sha256": "823ba14db03de40b346dcadeafda3342a842778f7c4733c69d16d3433efdba2e",
-      "bytes": 80451,
-      "modified_at": "2026-09-11T13:04:44.578713+00:00",
+      "sha256": "0ec2bd9c79e17ce490f16de1fce19c26ba547dbbbe2ebf845f4433a174a5bb10",
+      "bytes": 85395,
+      "modified_at": "2026-09-11T14:15:12.444617+00:00",
       "row_count": null
     },
     {
@@ -241,16 +248,16 @@
     },
     {
       "path": "scripts/build_stage_04.py",
-      "sha256": "95df6ef8b79c02a804c7d8fb0772a0658255dc7390f49d62b647672bc3611d1f",
-      "bytes": 46783,
-      "modified_at": "2026-09-11T13:09:54.437343+00:00",
+      "sha256": "34eee26307494ec29253f938f63dd4a268b51696605fae87e9c446b54f9e17f3",
+      "bytes": 46932,
+      "modified_at": "2026-09-11T14:14:04.605919+00:00",
       "row_count": null
     },
     {
       "path": "tests/test_professor_mapping.py",
-      "sha256": "ad4d90dcebbe171581cfde98f68e40a202273716c5c6bc3cf02f317ab802d300",
-      "bytes": 25627,
-      "modified_at": "2026-09-11T13:04:44.596694+00:00",
+      "sha256": "0c90eb79f74b088ef930829b875447e860c151ecee4fe2a5dd6fa60b63f5852e",
+      "bytes": 27464,
+      "modified_at": "2026-09-11T14:13:41.957843+00:00",
       "row_count": null
     },
     {
@@ -359,38 +366,45 @@
       "row_count": null
     },
     {
+      "path": "data/raw/pass2/stage_04_reentry_16.json",
+      "sha256": "cf2d71e05df067e4489e8ba71eda8b9a7d4541d7723ef39538c5a6ef7148822b",
+      "bytes": 45524,
+      "modified_at": "2026-09-11T14:12:59.670034+00:00",
+      "row_count": null
+    },
+    {
       "path": "state/progress.json",
-      "sha256": "8463d2a7c19fb7afd334efe281dad577c311380f64418822d78bdc1a9d93c321",
-      "bytes": 6132,
-      "modified_at": "2026-09-11T13:11:47.559984+00:00",
+      "sha256": "0fbfaedc8b9209a5758147c0534b429d456712e1823481578cca3f9ac482f7cd",
+      "bytes": 6308,
+      "modified_at": "2026-09-11T14:15:20.243684+00:00",
       "row_count": null
     },
     {
       "path": "data/processed/pass2/professor_candidates_evaluated.csv",
-      "sha256": "fbead0d88e6edef011f267a02bacf46e408cec115c98882bc5c0d3da4a999fed",
-      "bytes": 1563977,
-      "modified_at": "2026-09-11T13:11:47.365646+00:00",
-      "row_count": 715
+      "sha256": "4e9d198ddb87399f1e245771c114a4b3fa8fdcad9f4b729d7933b90f1a7b427e",
+      "bytes": 1661173,
+      "modified_at": "2026-09-11T14:15:20.043204+00:00",
+      "row_count": 755
     },
     {
       "path": "data/processed/pass2/professor_matches_retained.csv",
-      "sha256": "9c810075e8f09a796f49f952cff29f7c95df5b1f0705eb711617d26f495f9a8f",
-      "bytes": 282411,
-      "modified_at": "2026-09-11T13:11:47.382317+00:00",
-      "row_count": 122
+      "sha256": "dffc4d27e1f7f3ea479c683941996c393bfd2d31c299f0181138cd67e397ee63",
+      "bytes": 303677,
+      "modified_at": "2026-09-11T14:15:20.062777+00:00",
+      "row_count": 130
     },
     {
       "path": "data/processed/pass2/professor_sources.csv",
-      "sha256": "0409015e2e295935ac76968397db419f67a61731b58c104b38aa82728c94b5ad",
-      "bytes": 466180,
-      "modified_at": "2026-09-11T13:11:47.412660+00:00",
-      "row_count": 711
+      "sha256": "f1961f6019276a3d83c8caaa38ec4ff2932195217527048f515c41ef3c1a5696",
+      "bytes": 491131,
+      "modified_at": "2026-09-11T14:15:20.095247+00:00",
+      "row_count": 747
     },
     {
       "path": "reports/pass2/04_professor_mapping.md",
-      "sha256": "daf50eebb1f89309920d83e07008f30a4f5638be1e87b118d5bd9afebc943c71",
-      "bytes": 21573,
-      "modified_at": "2026-09-11T13:11:47.554952+00:00",
+      "sha256": "115a8a20117315c3a89dbb081afe4360c0c262d5066dc992df36d346e64f0049",
+      "bytes": 22648,
+      "modified_at": "2026-09-11T14:15:20.239289+00:00",
       "row_count": null
     }
   ],
@@ -422,49 +436,49 @@
     "individual_professor_scoring": "absent",
     "stage_specific_tests": {
       "command": "python -m pytest tests/test_professor_mapping.py -q",
-      "result": "28 passed"
+      "result": "30 passed"
     },
     "full_suite_boundary": {
       "command": "python -m pytest -q",
-      "result": "135 passed, 1 expected downstream Stage 5 coverage failure",
+      "result": "141 passed, 1 expected downstream Stage 5 coverage failure",
       "unresolved_stages": [
         5
       ]
     }
   },
   "counts": {
-    "serious_programs": 143,
-    "institutions": 136,
-    "candidate_evaluations": 715,
-    "distinct_candidate_professors": 688,
-    "retained_match_rows": 122,
-    "distinct_retained_professors": 122,
+    "serious_programs": 151,
+    "institutions": 143,
+    "candidate_evaluations": 755,
+    "distinct_candidate_professors": 725,
+    "retained_match_rows": 130,
+    "distinct_retained_professors": 130,
     "retained_matches_without_official_email": 7,
     "programs_with_zero_strong_matches": 21,
-    "programs_with_one_strong_match": 122,
+    "programs_with_one_strong_match": 130,
     "programs_with_two_strong_matches": 0,
     "programs_with_three_strong_matches": 0,
-    "candidate_rows_with_recent_work": 200,
-    "source_rows": 711,
-    "official_source_rows": 579,
-    "secondary_discovery_source_rows": 132,
-    "reentry_programs": 98,
-    "reentry_retained_match_rows": 97,
+    "candidate_rows_with_recent_work": 210,
+    "source_rows": 747,
+    "official_source_rows": 613,
+    "secondary_discovery_source_rows": 134,
+    "reentry_programs": 106,
+    "reentry_retained_match_rows": 105,
     "reentry_zero_match_programs": 1,
-    "latest_reentry_programs": 7,
-    "latest_reentry_retained_match_rows": 7,
+    "latest_reentry_programs": 8,
+    "latest_reentry_retained_match_rows": 8,
     "latest_reentry_zero_match_programs": 0
   },
   "failures": [],
   "blockers": [],
   "unresolved_coverage": [
-    "122 serious programs remain single-professor dependencies with one verified strong match and 5 faculty-depth points.",
+    "130 serious programs remain single-professor dependencies with one verified strong match and 5 faculty-depth points.",
     "21 serious programs have no match clearing every evidence gate and receive 0 faculty-depth points.",
-    "The 593 unretained longlist evaluations still need exact-route supervision-authority and/or candidate-specific current-work verification before they could become strong matches.",
+    "The 625 unretained longlist evaluations still need exact-route supervision-authority and/or candidate-specific current-work verification before they could become strong matches.",
     "Official email remains unlocated for 7 retained professors and most unretained candidates; no address is guessed.",
     "Recruiting remains unknown unless supported by a current explicit statement; research activity is not recruiting evidence.",
     "Faculty appointment and recruiting evidence must be refreshed before outreach or submission.",
     "The strongest bounded UVA fit has a courtesy Computer Science appointment, but exact Computer Science PhD supervision authority remains unresolved and no UVA match was retained.",
-    "Stage 5 scoring still covers the prior 136-program roster; all seven new routes remain intentionally absent until Stage 5 re-entry 15 is executed."
+    "Stage 5 scoring still covers the prior 143-program roster; all eight new routes remain intentionally absent until Stage 5 re-entry 16 is executed."
   ]
 }

@@ -1384,6 +1384,76 @@ FACULTY_ROSTERS: dict[str, FacultyRoster] = {
             _c("Alexis Maciel", "software systems; computer science education; applied computing"),
         ),
     ),
+    "Florida Atlantic University": FacultyRoster(
+        "College of Engineering and Computer Science, Department of Electrical Engineering and Computer Science",
+        "https://www.fau.edu/engineering/eecs/research/research-interests/",
+        (
+            _c("Shihong Huang", "software architecture; empirical software engineering; software quality"),
+            _c("George Sklivanitis", "software-defined networking; smart infrastructure; wireless systems"),
+            _c("Mehrdad Nojoumian", "security; privacy; cryptography; trustworthy systems"),
+            _c("Xingquan Zhu", "machine learning; data mining; security analytics; trustworthy AI"),
+        ),
+    ),
+    "New Mexico Institute of Mining and Technology": FacultyRoster(
+        "Department of Computer Science and Engineering",
+        "https://www.cs.nmt.edu/faculty/",
+        (
+            _c("Subhasish Mazumdar", "distributed systems; databases; data management"),
+            _c("Jun Zheng", "computer networks; wireless systems; network security"),
+            _c("Hamdy Soliman", "cybersecurity; machine learning; dependable systems"),
+            _c("Huixin Zhan", "software systems; data science; machine learning"),
+        ),
+    ),
+    "Southern Illinois University-Carbondale": FacultyRoster(
+        "College of Engineering, Computing, Technology, and Mathematics, School of Computing",
+        "https://soc.siu.edu/our-people/",
+        (
+            _c("Ahmed Imteaj", "distributed machine learning; edge computing; trustworthy AI"),
+            _c("Abdur Rahman Bin Shahid", "cybersecurity; machine learning; dependable computing"),
+            _c("Ansuman Bhattacharya", "distributed systems; algorithms; networked computing"),
+            _c("Zhong Chen", "software systems; data management; artificial intelligence"),
+        ),
+    ),
+    "Wichita State University": FacultyRoster(
+        "College of Engineering, School of Computing",
+        "https://www.wichita.edu/profiles/academics/engineering/SoC/index.php",
+        (
+            _c("Souvika Sarkar", "software engineering; trustworthy AI; program analysis"),
+            _c("Zhiyong Shan", "software engineering; software architecture; dependable systems"),
+            _c("Rajiv Bagai", "computer security; algorithms; formal reasoning"),
+            _c("Lokesh Das", "cybersecurity; machine learning; secure systems"),
+        ),
+    ),
+    "Michigan Technological University": FacultyRoster(
+        "College of Computing, Department of Computer Science",
+        "https://www.mtu.edu/cs/department/people/",
+        (
+            _c("Yunlong Xing", "automated program repair; software testing; program analysis"),
+            _c("Ali Ebnenasir", "formal methods; dependable systems; software verification"),
+            _c("Charles Wallace", "software engineering; applied formal methods; trustworthy systems"),
+            _c("Leo Ureel", "software engineering; AI-assisted programming; program comprehension"),
+        ),
+    ),
+    "University of Tulsa": FacultyRoster(
+        "College of Engineering and Computer Science, Tandy School of Computer Science",
+        "https://utulsa.edu/departments/computer-science/",
+        (
+            _c("Yi Qian", "network security; wireless systems; cyber-physical infrastructure"),
+            _c("Mauricio Papa", "critical-infrastructure security; industrial control systems; cyber-physical systems"),
+            _c("Sujeet Shenoi", "digital forensics; critical-infrastructure security; cyber operations"),
+            _c("Tyler Moore", "cybersecurity economics; measurement; dependable systems"),
+        ),
+    ),
+    "Western University": FacultyRoster(
+        "Faculty of Engineering, Department of Electrical and Computer Engineering",
+        "https://www.eng.uwo.ca/electrical/people/faculty/index.html",
+        (
+            _c("Atrisha Sarkar", "multiagent systems; autonomous systems; software and societal systems"),
+            _c("Katarina Grolinger", "cloud computing; data analytics; software engineering"),
+            _c("Xianbin Wang", "wireless systems; network security; intelligent communications"),
+            _c("Arash Reyhani-Masoleh", "hardware security; cryptography; dependable computing"),
+        ),
+    ),
 }
 
 
@@ -1398,6 +1468,16 @@ PROGRAM_FACULTY_ROSTERS: dict[str, FacultyRoster] = {
             _c("Lingyu Wang", "network security; attack graphs; SDN and NFV security"),
             _c("Suryadipta Majumdar", "cloud security; threat detection; security automation"),
             _c("Jeremy Clark", "applied cryptography; blockchain; secure voting systems"),
+        ),
+    ),
+    "ca:dli:O19361109242:program:thesis-or-research-master-s:masc-in-electrical-and-computer-engineering": FacultyRoster(
+        "Department of Electrical Engineering and Computer Science",
+        "https://lassonde.yorku.ca/eecs/academics/graduate/graduate-faculty/",
+        (
+            _c("Zhen Ming (Jack) Jiang", "software performance; mining repositories; distributed-system debugging"),
+            _c("Song Wang", "AI for software engineering; testing; static analysis"),
+            _c("Marin Litoiu", "cloud systems; adaptive systems; performance engineering"),
+            _c("Alvine Boaye Belle", "software assurance; assurance arguments; requirements debt"),
         ),
     ),
 }

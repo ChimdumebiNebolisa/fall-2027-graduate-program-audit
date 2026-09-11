@@ -1,6 +1,6 @@
 {
   "project": "fall-2027-graduate-program-audit",
-  "current_phase": "pass2_stage_03_reentry_16_complete",
+  "current_phase": "pass2_stage_04_reentry_16_complete",
   "phases": {
     "foundation": "complete",
     "universe": "complete",
@@ -32,7 +32,7 @@
     "Canada retains 50 explicitly unresolved indexed institutions and 9 blocked/insufficient program pages."
   ],
   "pass2": {
-    "current_stage": 3,
+    "current_stage": 4,
     "last_completed_stage": 6,
     "stage_status": {
       "0": "complete",
@@ -118,12 +118,13 @@
       "5_reentry_15": "complete",
       "6_reentry_15": "complete",
       "2_reentry_16": "complete",
-      "3_reentry_16": "complete"
+      "3_reentry_16": "complete",
+      "4_reentry_16": "complete"
     },
-    "next_stage": 4,
+    "next_stage": 5,
     "next_stage_authorized": true,
     "baseline_commit": "d2e770b2d5dafe25537481f7b83663471e7060fc",
-    "stage_manifest": "data/manifests/pass2/stage_03.json",
+    "stage_manifest": "data/manifests/pass2/stage_04.json",
     "open_issue_count": 17,
     "critical_issue_count": 6,
     "high_issue_count": 9,
@@ -133,8 +134,8 @@
     "stage_03_acceptance": "PASS",
     "stage_03_faculty_review_ready": 151,
     "stage_04_acceptance": "PASS",
-    "stage_04_serious_programs": 143,
-    "stage_04_distinct_retained_professors": 122,
+    "stage_04_serious_programs": 151,
+    "stage_04_distinct_retained_professors": 130,
     "stage_05_acceptance": "PASS",
     "stage_05_hard_gate_survivors": 20,
     "stage_06_acceptance": "PASS",
@@ -148,23 +149,23 @@
     "stage_02_reentry_new_exact_candidates": 12,
     "stage_03_reentry_completed": 16,
     "stage_03_reentry_faculty_review_ready": 8,
-    "stage_04_reentry_completed": 15,
-    "stage_04_reentry_programs": 7,
+    "stage_04_reentry_completed": 16,
+    "stage_04_reentry_programs": 8,
     "stage_05_reentry_completed": 15,
     "stage_05_reentry_serious_programs": 143,
     "stage_06_reentry_completed": 15,
     "stage_06_reentry_scored_programs": 143,
     "stage_02_reentry_cumulative_exact_candidates": 192,
     "stage_03_reentry_required": false,
-    "stage_04_reentry_required": true,
+    "stage_04_reentry_required": false,
     "stage_04_reentry_source_stage": 3,
-    "stage_04_reentry_cumulative_programs": 98,
-    "stage_05_reentry_required": false,
+    "stage_04_reentry_cumulative_programs": 106,
+    "stage_05_reentry_required": true,
     "stage_05_reentry_source_stage": 4,
-    "stage_05_reentry_latest_programs": 7,
+    "stage_05_reentry_latest_programs": 8,
     "stage_06_reentry_required": false,
     "stage_06_reentry_source_stage": 5,
     "stage_06_reentry_latest_programs": 7
   },
-  "updated_at": "2026-09-11T13:57:00.032739+00:00"
+  "updated_at": "2026-09-11T14:15:20.241843+00:00"
 }
