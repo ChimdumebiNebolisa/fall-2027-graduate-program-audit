@@ -155,7 +155,7 @@ def funding_hard_gate_from_evidence(
         "does not provide a current", "availability is competitive", "non-guaranteed",
         "non guaranteed", "many ", "not all admits", "not promise it to all", "usually",
         "later funding patterns", "later funding is not", "later support expected",
-        "not a guarantee", "distinction between", "nearly all", "majority",
+        "not a guarantee", "not guaranteed", "lack of guaranteed", "distinction between", "nearly all", "majority",
         "not every", "not universal", "without a universal guarantee", "one-to-five-year",
     )
     credible_markers = (

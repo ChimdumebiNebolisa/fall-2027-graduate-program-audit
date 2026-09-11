@@ -139,6 +139,14 @@ def test_noncommittal_funding_language_does_not_pass_funding_gate():
         assert not funding_hard_gate_from_evidence(program, sources)
 
 
+def test_lack_of_guaranteed_support_does_not_pass_funding_gate():
+    program, sources = _funding_fixture()
+    sources["stage3src:funding"]["exact_claim_supported"] = (
+        "Assistantships are controlled by advisers, and the page records a lack of guaranteed support."
+    )
+    assert not funding_hard_gate_from_evidence(program, sources)
+
+
 def test_coursework_only_program_needs_research_and_exceptional_full_scholarship():
     program, sources = _funding_fixture()
     program["degree_type"] = "Coursework or professional master's"
@@ -408,6 +416,26 @@ def test_stage_five_reentry_13_scores_every_new_faculty_ready_route():
     latest_ids = {
         row["candidate_program_id"]
         for row in read_csv(REPO_ROOT / "data/processed/pass2/stage_03_reentry_13_verification.csv")
+        if row["faculty_review_ready"] == "yes"
+    }
+    scores = read_csv(REPO_ROOT / "data/processed/pass2/program_scores.csv")
+    evidence = read_csv(REPO_ROOT / "data/processed/pass2/score_evidence.csv")
+    scored_latest = [row for row in scores if row["program_id"] in latest_ids]
+    evidence_by_program = defaultdict(list)
+    for row in evidence:
+        if row["program_id"] in latest_ids:
+            evidence_by_program[row["program_id"]].append(row)
+    assert len(latest_ids) == len(scored_latest) == 5
+    assert {row["program_id"] for row in scored_latest} == latest_ids
+    assert set(evidence_by_program) == latest_ids
+    assert all(len(rows) == len(COMPONENT_ORDER) for rows in evidence_by_program.values())
+    assert all(row["professor_hard_gate"] == "true" for row in scored_latest)
+
+
+def test_stage_five_reentry_14_scores_every_new_faculty_ready_route():
+    latest_ids = {
+        row["candidate_program_id"]
+        for row in read_csv(REPO_ROOT / "data/processed/pass2/stage_03_reentry_14_verification.csv")
         if row["faculty_review_ready"] == "yes"
     }
     scores = read_csv(REPO_ROOT / "data/processed/pass2/program_scores.csv")
