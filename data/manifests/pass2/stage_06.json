@@ -2,66 +2,66 @@
   "manifest_version": "1.0",
   "schema_version": "2.0",
   "stage": 6,
-  "run_type": "portfolio_reentry_13",
-  "name": "Construct and pressure-test the application portfolio — re-entry 13",
+  "run_type": "portfolio_reentry_14",
+  "name": "Construct and pressure-test the application portfolio — re-entry 14",
   "status": "complete",
   "decision": "PASS",
   "portfolio_decision": "RETURN_TO_CANDIDATE_DISCOVERY",
   "next_action": "RETURN_TO_STAGE_2_CANDIDATE_DISCOVERY",
-  "source_commit_before_stage": "19f30852665ddc372997f692d340720e0134aa55",
+  "source_commit_before_stage": "838bfb44bb1c26f8857b2190fd3f842886b83362",
   "triggered_by_stage": 5,
-  "started_at": "2026-09-11T11:15:01.481895+00:00",
-  "completed_at": "2026-09-11T11:15:01.799974+00:00",
+  "started_at": "2026-09-11T12:19:40.792865+00:00",
+  "completed_at": "2026-09-11T12:19:41.102215+00:00",
   "inputs": [
     {
       "path": "data/manifests/pass2/stage_05.json",
-      "sha256": "834a5814eb1de1cbcc3b97389306a8c65d373d5fbd709b289aff86c25724dffa",
+      "sha256": "725dff5cf4980add717f61b82e3446159cc68528c28d2e40b29b47c34b2b55af",
       "bytes": 11455,
-      "modified_at": "2026-09-11T11:09:12.939707+00:00",
+      "modified_at": "2026-09-11T12:14:41.170497+00:00",
       "row_count": null
     },
     {
       "path": "data/processed/pass2/program_scores.csv",
-      "sha256": "9c0214c0d7446836f41498c145e5f60e5ff38fc4767029c4e8a236741922345a",
-      "bytes": 190786,
-      "modified_at": "2026-09-11T11:09:11.818661+00:00",
-      "row_count": 131
+      "sha256": "4a67ee338c478fca9dcf0474884d9d29c77faffdb3ce6661a31a7e370309c3d8",
+      "bytes": 198540,
+      "modified_at": "2026-09-11T12:14:40.051220+00:00",
+      "row_count": 136
     },
     {
       "path": "data/processed/pass2/score_evidence.csv",
-      "sha256": "c2611e58f8bedec0c8d97c35499c0b8b9b9047c794fbf51952dc98397c36f7fe",
-      "bytes": 424303,
-      "modified_at": "2026-09-11T11:09:11.844824+00:00",
-      "row_count": 786
+      "sha256": "f68203aec01ba1e7127fe358b91db326002df25609500d68bf98cc98c566b1c7",
+      "bytes": 441496,
+      "modified_at": "2026-09-11T12:14:40.077997+00:00",
+      "row_count": 816
     },
     {
       "path": "data/processed/pass2/program_verification.csv",
-      "sha256": "f107d7599253277c74b1a4a3ead71ab7430ccf97a242ae865ef71fd5b1d10636",
-      "bytes": 4613093,
-      "modified_at": "2026-09-11T10:47:36.020374+00:00",
-      "row_count": 2121
+      "sha256": "f9bb1b5c81f3228e1a7e2138741c4460662367cf8de304e82d0ca58a52b319ef",
+      "bytes": 4652602,
+      "modified_at": "2026-09-11T11:51:13.143160+00:00",
+      "row_count": 2133
     },
     {
-      "path": "data/processed/pass2/stage_03_reentry_13_verification.csv",
-      "sha256": "2faa0cdba3fa7a150b71cb18fb19ddef4c3afd7aca87d2011eceedd2eaa1a22b",
-      "bytes": 48678,
-      "modified_at": "2026-09-11T10:47:36.437380+00:00",
+      "path": "data/processed/pass2/stage_03_reentry_14_verification.csv",
+      "sha256": "4fc65de218b9fe9ed8e412d07af7459711ff3f84749bf6071c3ed70dd836983c",
+      "bytes": 40715,
+      "modified_at": "2026-09-11T11:51:13.613704+00:00",
       "row_count": 12
     }
   ],
   "outputs": [
     {
       "path": "data/processed/pass2/portfolio.json",
-      "sha256": "99fdcca8964fe4d5673bd2776fabeffe2fda2a067c6043ddabeed65ba94cfd9b",
-      "bytes": 861476,
-      "modified_at": "2026-09-11T11:15:01.781895+00:00",
+      "sha256": "68a45412f2be16a33f21d8c1b25bc7adfae53e6dcc726e64500deb7affe3acd7",
+      "bytes": 894442,
+      "modified_at": "2026-09-11T12:19:41.084608+00:00",
       "row_count": null
     },
     {
       "path": "reports/pass2/06_portfolio_pressure_test.md",
-      "sha256": "0f1424f0bab228518c075d6207fe1028c2321ea92b92737f8051e4eda1dfe058",
-      "bytes": 17693,
-      "modified_at": "2026-09-11T11:15:01.795407+00:00",
+      "sha256": "ecfdb9d887635d4d7d4f2cc99f1a033ca8181f00f50e2b02a8773a33233b8756",
+      "bytes": 18143,
+      "modified_at": "2026-09-11T12:19:41.096696+00:00",
       "row_count": null
     }
   ],
@@ -82,16 +82,16 @@
     },
     {
       "path": "scripts/build_stage_06.py",
-      "sha256": "c9ca208b068d42246474053581cf2bb3d2723ca388147bdf822a7b4f3227d93e",
-      "bytes": 24100,
-      "modified_at": "2026-09-11T11:13:05.188747+00:00",
+      "sha256": "e9db0a1a4f2dea9ac19a8e10373d6e3e083a36575ceddd2c2d6476d020984a42",
+      "bytes": 24180,
+      "modified_at": "2026-09-11T12:19:34.604862+00:00",
       "row_count": null
     },
     {
       "path": "tests/test_portfolio_pressure.py",
-      "sha256": "fd74897531f41933ca1049f1f8393dc10956403c3f08b401c1cbbc3fe9b0e9a3",
-      "bytes": 17106,
-      "modified_at": "2026-09-11T11:12:32.835674+00:00",
+      "sha256": "a4edaa1a1e0ec58d112802587313f4319c5c4dac33b32ff58853570a4e2aaf33",
+      "bytes": 18035,
+      "modified_at": "2026-09-11T12:19:34.614435+00:00",
       "row_count": null
     },
     {
@@ -103,23 +103,23 @@
     },
     {
       "path": "state/progress.json",
-      "sha256": "4bd3c4705f655c3eb4e02dfb60a44ef964f58524185b8367a8473fcbc1f9cd16",
-      "bytes": 5846,
-      "modified_at": "2026-09-11T11:15:01.798888+00:00",
+      "sha256": "6cdb37b3dc24c8b89008eeae046a0cd2751bebb3518a9df26f850ca9bf3c5ac7",
+      "bytes": 6021,
+      "modified_at": "2026-09-11T12:19:41.100427+00:00",
       "row_count": null
     },
     {
       "path": "data/processed/pass2/portfolio.json",
-      "sha256": "99fdcca8964fe4d5673bd2776fabeffe2fda2a067c6043ddabeed65ba94cfd9b",
-      "bytes": 861476,
-      "modified_at": "2026-09-11T11:15:01.781895+00:00",
+      "sha256": "68a45412f2be16a33f21d8c1b25bc7adfae53e6dcc726e64500deb7affe3acd7",
+      "bytes": 894442,
+      "modified_at": "2026-09-11T12:19:41.084608+00:00",
       "row_count": null
     },
     {
       "path": "reports/pass2/06_portfolio_pressure_test.md",
-      "sha256": "0f1424f0bab228518c075d6207fe1028c2321ea92b92737f8051e4eda1dfe058",
-      "bytes": 17693,
-      "modified_at": "2026-09-11T11:15:01.795407+00:00",
+      "sha256": "ecfdb9d887635d4d7d4f2cc99f1a033ca8181f00f50e2b02a8773a33233b8756",
+      "bytes": 18143,
+      "modified_at": "2026-09-11T12:19:41.096696+00:00",
       "row_count": null
     }
   ],
@@ -127,7 +127,7 @@
     "status": "PASS",
     "assertions": {
       "all_scored_programs_receive_one_disposition": true,
-      "latest_reentry_13_receives_dispositions_and_pressure_tests": true,
+      "latest_reentry_14_receives_dispositions_and_pressure_tests": true,
       "every_university_has_exactly_one_primary_program": true,
       "primary_program_selection_uses_evidence_not_prestige": true,
       "every_program_answers_all_ten_pressure_questions": true,
@@ -149,39 +149,39 @@
     },
     "stage_specific_tests": {
       "command": "python -m pytest tests/test_portfolio_pressure.py -q",
-      "result": "21 passed"
+      "result": "22 passed"
     },
     "full_suite": {
       "command": "python -m pytest -q",
-      "result": "125 passed"
+      "result": "132 passed"
     }
   },
   "counts": {
-    "scored_programs": 131,
-    "universities": 124,
-    "primary_programs": 124,
+    "scored_programs": 136,
+    "universities": 129,
+    "primary_programs": 129,
     "core": 0,
     "reserve": 0,
     "monitor": 19,
-    "do_not_apply": 112,
+    "do_not_apply": 117,
     "not_retained_alternates": 0,
     "active_selections": 19,
     "hard_gate_survivors": 19,
-    "pressure_test_answers": 1310,
+    "pressure_test_answers": 1360,
     "lottery_in_core": 0,
     "stretch_in_core": 0,
     "latest_reentry_programs": 5,
-    "latest_reentry_monitor": 1,
-    "latest_reentry_do_not_apply": 4,
+    "latest_reentry_monitor": 0,
+    "latest_reentry_do_not_apply": 5,
     "latest_reentry_pressure_test_answers": 50
   },
   "failures": [],
   "blockers": [],
   "unresolved_coverage": [
     "No program has evidence adequate for a strategic Competitive, Plausible, Reach, or Lottery calibration; the core remains empty and candidate discovery must resume.",
-    "Stage 6 re-entry 13 leaves 1 of 5 newly scored routes on monitor and 4 as do-not-apply.",
+    "Stage 6 re-entry 14 leaves 0 of 5 newly scored routes on monitor and 5 as do-not-apply.",
     "All 19 monitor programs are single-professor dependencies.",
-    "112 programs fail one or more hard gates.",
+    "117 programs fail one or more hard gates.",
     "Applicant preference among the 19 monitor opportunities is not directly verified.",
     "Offer-specific net funding and application-cost details remain incomplete where recorded."
   ]
