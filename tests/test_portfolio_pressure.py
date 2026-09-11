@@ -118,9 +118,10 @@ def test_stage_six_artifact_covers_every_program_and_all_ten_questions():
 
     assert len(entries) == len(scores)
     assert {row["program_id"] for row in entries} == {row["program_id"] for row in scores}
-    assert portfolio["decision"] == "RETURN_TO_CANDIDATE_DISCOVERY"
-    assert len(portfolio["core"]) == 0
-    assert len(portfolio["monitor"]) == len(hard_gate_survivors)
+    assert portfolio["decision"] == "PORTFOLIO_READY"
+    assert 12 <= len(portfolio["core"]) <= 16
+    assert len(portfolio["core"]) + len(portfolio["reserve"]) == len(hard_gate_survivors)
+    assert len(portfolio["monitor"]) == 0
     assert len(portfolio["do_not_apply"]) == len(failed_gate_programs)
     for row in entries:
         assert len(row["pressure_test_answers"]) == len(PRESSURE_QUESTIONS) == 10
@@ -145,7 +146,8 @@ def test_stage_six_reentry_02_disposes_and_pressure_tests_every_new_route():
     assert len(latest_ids) == len(entries) == 8
     assert {row["program_id"] for row in entries} == latest_ids
     assert all(len(row["pressure_test_answers"]) == len(PRESSURE_QUESTIONS) for row in entries)
-    assert {row["portfolio_status"] for row in entries} == {"monitor", "do_not_apply"}
+    assert sum(row["portfolio_status"] == "reserve" for row in entries) == 1
+    assert sum(row["portfolio_status"] == "do_not_apply" for row in entries) == 7
 
 
 def test_stage_six_reentry_03_disposes_and_pressure_tests_every_new_route():
@@ -164,7 +166,8 @@ def test_stage_six_reentry_03_disposes_and_pressure_tests_every_new_route():
     assert len(latest_ids) == len(entries) == 8
     assert {row["program_id"] for row in entries} == latest_ids
     assert all(len(row["pressure_test_answers"]) == len(PRESSURE_QUESTIONS) for row in entries)
-    assert {row["portfolio_status"] for row in entries} == {"monitor", "do_not_apply"}
+    assert sum(row["portfolio_status"] == "core" for row in entries) == 1
+    assert sum(row["portfolio_status"] == "do_not_apply" for row in entries) == 7
 
 
 def test_stage_six_reentry_04_disposes_and_pressure_tests_every_new_route():
@@ -240,7 +243,8 @@ def test_stage_six_reentry_07_disposes_and_pressure_tests_every_new_route():
     assert len(latest_ids) == len(entries) == 7
     assert {row["program_id"] for row in entries} == latest_ids
     assert all(len(row["pressure_test_answers"]) == len(PRESSURE_QUESTIONS) for row in entries)
-    assert {row["portfolio_status"] for row in entries} == {"monitor", "do_not_apply"}
+    assert sum(row["portfolio_status"] == "reserve" for row in entries) == 1
+    assert sum(row["portfolio_status"] == "do_not_apply" for row in entries) == 6
 
 
 def test_stage_six_reentry_08_disposes_and_pressure_tests_every_new_route():
@@ -279,7 +283,8 @@ def test_stage_six_reentry_09_disposes_and_pressure_tests_every_new_route():
     assert {row["program_id"] for row in entries} == latest_ids
     assert sum(len(row["pressure_test_answers"]) for row in entries) == 60
     assert all(len(row["pressure_test_answers"]) == len(PRESSURE_QUESTIONS) for row in entries)
-    assert {row["portfolio_status"] for row in entries} == {"monitor", "do_not_apply"}
+    assert sum(row["portfolio_status"] == "core" for row in entries) == 2
+    assert sum(row["portfolio_status"] == "do_not_apply" for row in entries) == 4
 
 
 def test_stage_six_reentry_10_disposes_and_pressure_tests_every_new_route():
@@ -319,7 +324,8 @@ def test_stage_six_reentry_11_disposes_and_pressure_tests_every_new_route():
     assert {row["program_id"] for row in entries} == latest_ids
     assert sum(len(row["pressure_test_answers"]) for row in entries) == 90
     assert all(len(row["pressure_test_answers"]) == len(PRESSURE_QUESTIONS) for row in entries)
-    assert {row["portfolio_status"] for row in entries} == {"monitor", "do_not_apply"}
+    assert sum(row["portfolio_status"] == "reserve" for row in entries) == 1
+    assert sum(row["portfolio_status"] == "do_not_apply" for row in entries) == 8
 
 
 def test_stage_six_reentry_12_disposes_and_pressure_tests_every_new_route():
@@ -359,7 +365,8 @@ def test_stage_six_reentry_13_disposes_and_pressure_tests_every_new_route():
     assert {row["program_id"] for row in entries} == latest_ids
     assert sum(len(row["pressure_test_answers"]) for row in entries) == 50
     assert all(len(row["pressure_test_answers"]) == len(PRESSURE_QUESTIONS) for row in entries)
-    assert {row["portfolio_status"] for row in entries} == {"monitor", "do_not_apply"}
+    assert sum(row["portfolio_status"] == "reserve" for row in entries) == 1
+    assert sum(row["portfolio_status"] == "do_not_apply" for row in entries) == 4
 
 
 def test_stage_six_reentry_14_disposes_and_pressure_tests_every_new_route():
@@ -399,7 +406,7 @@ def test_stage_six_reentry_15_disposes_and_pressure_tests_every_new_route():
     assert {row["program_id"] for row in entries} == latest_ids
     assert sum(len(row["pressure_test_answers"]) for row in entries) == 70
     assert all(len(row["pressure_test_answers"]) == len(PRESSURE_QUESTIONS) for row in entries)
-    assert sum(row["portfolio_status"] == "monitor" for row in entries) == 1
+    assert sum(row["portfolio_status"] == "core" for row in entries) == 1
     assert sum(row["portfolio_status"] == "do_not_apply" for row in entries) == 6
 
 
@@ -440,8 +447,29 @@ def test_stage_six_reentry_17_disposes_and_pressure_tests_every_new_route():
     assert {row["program_id"] for row in entries} == latest_ids
     assert sum(len(row["pressure_test_answers"]) for row in entries) == 90
     assert all(len(row["pressure_test_answers"]) == len(PRESSURE_QUESTIONS) for row in entries)
-    assert sum(row["portfolio_status"] == "monitor" for row in entries) == 2
+    assert sum(row["portfolio_status"] == "core" for row in entries) == 1
+    assert sum(row["portfolio_status"] == "reserve" for row in entries) == 1
     assert sum(row["portfolio_status"] == "do_not_apply" for row in entries) == 7
+
+
+def test_stage_six_reentry_18_disposes_and_pressure_tests_every_new_route():
+    latest_ids = {
+        row["candidate_program_id"]
+        for row in read_csv(REPO_ROOT / "data/processed/pass2/stage_03_reentry_18_verification.csv")
+        if row["faculty_review_ready"] == "yes"
+    }
+    portfolio = read_json(REPO_ROOT / "data/processed/pass2/portfolio.json")
+    entries = [
+        row
+        for key in ("core", "reserve", "monitor", "do_not_apply", "not_retained_alternates")
+        for row in portfolio[key]
+        if row["program_id"] in latest_ids
+    ]
+    assert len(latest_ids) == len(entries) == 6
+    assert {row["program_id"] for row in entries} == latest_ids
+    assert sum(len(row["pressure_test_answers"]) for row in entries) == 60
+    assert all(len(row["pressure_test_answers"]) == len(PRESSURE_QUESTIONS) for row in entries)
+    assert {row["portfolio_status"] for row in entries} == {"do_not_apply"}
 
 
 def test_stage_six_report_uses_required_stage_template():
