@@ -280,8 +280,18 @@ FACULTY_ROSTERS: dict[str, FacultyRoster] = {
         (
             _c("Nikolaos Tsantalis", "software refactoring; program analysis; software evolution"),
             _c("Abdelwahab Hamou-Lhadj", "software diagnostics; log analysis; software reliability"),
-            _c("Juergen Rilling", "program comprehension; software maintenance; mining repositories"),
-            _c("Joey Paquet", "software engineering; programming languages; software design"),
+            _c("Zhijie Wang", "AI for software engineering; software quality; human factors"),
+            _c("Yann-Gaël Guéhéneuc", "program comprehension; software quality; empirical software engineering"),
+        ),
+    ),
+    "McMaster University": FacultyRoster(
+        "Department of Computing and Software",
+        "https://www.eng.mcmaster.ca/cas/research/software-and-its-engineering/",
+        (
+            _c("Spencer Smith", "software quality; requirements; research software engineering"),
+            _c("Istvan David", "model-driven engineering; software testing; digital twins"),
+            _c("Mark Lawford", "formal methods; software certification; safety-critical systems"),
+            _c("Sébastien Mosser", "software architecture; DevOps; microservices; modelling"),
         ),
     ),
     "McGill University": FacultyRoster(
@@ -322,6 +332,16 @@ FACULTY_ROSTERS: dict[str, FacultyRoster] = {
             _c("Alex Summers", "program verification; separation logic; software correctness"),
             _c("Ivan Beschastnikh", "distributed systems; software reliability; program analysis"),
             _c("Margo Seltzer", "systems; data provenance; reproducible computing"),
+        ),
+    ),
+    "University of Alabama at Birmingham": FacultyRoster(
+        "Department of Computer Science",
+        "https://www.uab.edu/cas/computerscience/people/faculty-directory",
+        (
+            _c("Emily (Shuya) Feng", "AI security; data privacy; responsible AI; model security"),
+            _c("Yuliang Zheng", "cybersecurity; digital privacy; modern cryptography"),
+            _c("Chengcui Zhang", "data mining; multimedia forensics; machine learning"),
+            _c("Baocheng Geng", "distributed systems; Internet of Things; explainable AI"),
         ),
     ),
     "University of Calgary": FacultyRoster(
