@@ -154,6 +154,18 @@ OUTREACH_PRIORITY_COLUMNS_V2 = (
     "verification_status",
 )
 
+OUTREACH_DRAFT_COLUMNS_V2 = (
+    "schema_version", "draft_id", "priority_rank", "wave", "program_id",
+    "institution_name", "program_name", "contact_type", "recipient_name",
+    "recipient_email", "subject", "personalization_anchor",
+    "personalization_source_url", "verified_applicant_background", "question",
+    "draft_body", "contact_history_checked", "contact_history_status",
+    "recipient_verified", "contact_appropriate", "factual_reference_verified",
+    "one_clear_question", "no_internal_notes_or_placeholders", "natural_grammar",
+    "required_signoff", "manual_read_through", "draft_ready", "send_status",
+    "evidence_ids", "generated_by", "reviewed_at",
+)
+
 CANDIDATE_FUNNEL_COLUMNS_V2 = (
     "schema_version", "program_id", "institution_id", "institution_name",
     "country", "region", "regional_admissions_model", "program_name",

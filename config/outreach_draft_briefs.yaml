@@ -1,0 +1,63 @@
+schema_version: "2.0"
+generating_process: graduate_audit.outreach_drafting:v1
+briefs:
+  Omar Alam:
+    subject: Fall 2027 MSc inquiry - model validation
+    background: evidex
+    connection: Your focus on model exchange and conflict detection connects to my interest in producing traceable evidence for validation decisions.
+    question: Would you be open to supervising a funded Fall 2027 master's student on the thesis track who studies evidence-grounded validation of software or cyber-physical models?
+  Kangjie Lu:
+    subject: Fall 2027 PhD inquiry - secure software
+    background: terraprobe
+    connection: I am interested in extending evidence-backed repair methods toward cloud and open-source security, especially where generated patches need rigorous validation.
+    question: Do you expect to have funded capacity to advise new PhD students in Fall 2027 working on secure software, patch analysis, or reliable AI-assisted development?
+  David Lie:
+    subject: Fall 2027 MASc inquiry - LLM-assisted verification
+    background: terraprobe
+    connection: The combination of LLM feedback and formal verification is closely related to my interest in making AI-generated infrastructure repairs checkable rather than merely plausible.
+    question: Would you be open to supervising a funded Fall 2027 MASc student studying verification methods for AI-assisted software or infrastructure repair?
+  John Regehr:
+    subject: Fall 2027 PhD inquiry - software verification
+    background: terraprobe
+    connection: I am interested in how verification and test-case reduction can produce compact, reproducible evidence that an automated repair is correct.
+    question: Do you expect to have funded capacity to advise new PhD students in Fall 2027 working on verification or testing methods relevant to automated software repair?
+  Patrick Lam:
+    subject: Fall 2027 MASc inquiry - static analysis
+    background: terraprobe
+    connection: Your direction in static analysis and verification aligns with my goal of validating infrastructure-as-code repairs with reproducible correctness evidence.
+    question: Do you expect to have funded capacity for a Fall 2027 MASc student working on static analysis or verification for infrastructure and software repair?
+  Zhen Ming (Jack) Jiang:
+    subject: Fall 2027 MSc inquiry - reliable coding agents
+    background: both
+    connection: I am especially interested in empirical methods for finding failure modes in coding agents and evaluating whether generated changes are correct and reproducible.
+    question: Do you expect to have funded capacity for a Fall 2027 MSc thesis student studying reliable AI-assisted software engineering?
+  Malte Schwarzkopf:
+    subject: Fall 2027 PhD inquiry - practical static analysis
+    background: both
+    connection: Privacy-by-construction and practical static analysis connect to my interest in evidence-backed checks for AI-generated software and infrastructure changes.
+    question: Do you expect to have capacity to advise new PhD students in Fall 2027 working on practical analysis for secure or privacy-preserving AI-assisted systems?
+  Sriram Sankaranarayanan:
+    subject: Fall 2027 PhD inquiry - repair verification
+    background: terraprobe
+    connection: I am interested in using formal and static analyses to establish whether an automatically generated repair preserves intended behavior across program revisions.
+    question: Do you expect to have funded capacity to advise new PhD students in Fall 2027 working on verification or synthesis for reliable software repair?
+  Danfeng Zhang:
+    subject: Fall 2027 PhD inquiry - verification and repair
+    background: terraprobe
+    connection: Your work on verification for confidential computing connects to my interest in producing checkable assurance for automatically generated software fixes.
+    question: Do you expect to have funded capacity to advise new PhD students in Fall 2027 working on verification or automated repair for secure systems?
+  Yinzhi Cao:
+    subject: Fall 2027 PhD inquiry - vulnerability discovery
+    background: both
+    connection: I am interested in combining automated vulnerability discovery with reproducible evaluation of AI-assisted fixes, particularly for security-critical software.
+    question: Do you expect to have funded capacity to advise new PhD students in Fall 2027 working on automated vulnerability discovery or security evaluation of AI-assisted systems?
+  Lichao Sun:
+    subject: Fall 2027 PhD inquiry - trustworthy LLM evaluation
+    background: evidex
+    connection: Your focus on safety, privacy, and security in generative AI connects to my interest in evaluations grounded in verifiable evidence.
+    question: Do you expect to have funded capacity to advise new PhD students in Fall 2027 working on trustworthy evaluation of generative AI or LLM-based systems?
+  Martin Kellogg:
+    subject: Fall 2027 PhD inquiry - automated repair
+    background: terraprobe
+    connection: Resource-leak repair and lightweight checking closely match my interest in making automated infrastructure repairs both practical and verifiably correct.
+    question: Do you expect to have funded capacity for a Fall 2027 PhD student working on static analysis, specification inference, or automated software repair?
