@@ -39,8 +39,9 @@ DEFINITION_PATHS = [
     REPO_ROOT / "data/raw/pass2/stage_02_reentry_01.json",
     REPO_ROOT / "data/raw/pass2/stage_02_reentry_02.json",
     REPO_ROOT / "data/raw/pass2/stage_02_reentry_03.json",
+    REPO_ROOT / "data/raw/pass2/stage_02_reentry_04.json",
 ]
-CURRENT_REENTRY_NUMBER = 3
+CURRENT_REENTRY_NUMBER = 4
 CURRENT_REENTRY_LABEL = f"{CURRENT_REENTRY_NUMBER:02d}"
 CURRENT_REENTRY_PREFIX = f"reentry{CURRENT_REENTRY_LABEL}"
 PREVIOUS_REENTRY_LABEL = f"{CURRENT_REENTRY_NUMBER - 1:02d}"
@@ -343,8 +344,8 @@ def build_report(
         "",
         "## What changed",
         "",
-        "Stage 6 re-entry 02 returned the workflow to discovery because the evidence-calibrated "
-        "portfolio still had zero justified core applications. This third bounded non-saturation "
+        "Stage 6 re-entry 03 returned the workflow to discovery because the evidence-calibrated "
+        "portfolio still had zero justified core applications. This fourth bounded non-saturation "
         f"pass adds {len(candidates)} genuinely new exact research routes supported by current official program, "
         "research, and preliminary funding evidence. It does not score, rank, retain, or claim "
         "verified funding or faculty capacity.",
@@ -469,12 +470,12 @@ def build_report(
         "EHESO/ETER and several national registries remain blocked.",
         "- Current faculty appointment, supervision authority, and capacity remain Stage 4 work "
         "after program verification.",
-        "- UIC's published 3.50 final-60-hour GPA criterion is an explicit preliminary eligibility "
-        "concern against the applicant's current approximately 3.35 cumulative GPA.",
-        "- UNB normally requires a research-based master's with first-class standing for PhD entry; "
-        "the bachelor's-only route is therefore an explicit likely ineligibility pending Stage 3.",
-        "- Aalto's scholarship is highly competitive and tuition-only, while Bonn discovery found no "
-        "program-level living-cost support; neither route is currently financially viable.",
+        "- UCR's desirable last-two-year GPA and UTA's 3.2 last-two-years expectation require an "
+        "official transcript calculation rather than inference from the cumulative GPA.",
+        "- UT San Antonio and Manitoba publish unusually strong funding signals, but offer-specific "
+        "coverage, renewal, fees, and net living costs still require Stage 3 verification.",
+        "- UNBC remains supervisor- and capacity-dependent, while Zurich and TU Wien have no "
+        "established living-cost funding path for this applicant.",
         "- Existing Stage 3-6 artifacts are intentionally unchanged and therefore do not yet include "
         "these routes.",
         "- Discovery remains explicitly non-saturated; this pass reduces observed false-negative risk "
@@ -483,8 +484,9 @@ def build_report(
         "## Records requiring human judgment",
         "",
         "Stage 3 must determine whether each route is actually eligible and credibly funded. The "
-        "highest-impact judgments are UIC's final-60-hour GPA rule, UNB's research-master's prerequisite, "
-        "and the remaining costs after Aalto or Bonn funding constraints.",
+        "highest-impact judgments are the UCR and UTA recent-coursework GPA calculations, whether the "
+        "UT San Antonio and Manitoba packages clear the full net-cost gate, and whether UNBC, Zurich, "
+        "or TU Wien has a viable supervision and funding path.",
         "",
         "## Files created or modified",
         "",
@@ -707,7 +709,7 @@ def main() -> None:
         "downstream_integration_check": {
             "command": "python -m pytest -q",
             "result": "EXPECTED_FAIL_PENDING_STAGE_3_REENTRY",
-            "passed": 67,
+            "passed": 71,
             "failed": 1,
             "failure": "tests/test_program_verification.py::test_every_stage2_candidate_has_exactly_one_controlled_status",
             "reason": f"program_verification.csv has {verification_rows} rows while the Stage 2 funnel now has {len(merged)}; Stage 3 was intentionally not modified in this one-stage run",
@@ -721,10 +723,16 @@ def main() -> None:
             "Current faculty appointment, supervision authority, and capacity remain unverified.",
             "Other active catalog/manual-review rows remain unresolved and discovery remains non-saturated.",
             "European registry coverage and national-registry access limitations from the initial Stage 2 run remain.",
-            "UIC's published 3.50 final-60-hour GPA criterion creates a preliminary formal-eligibility concern at the applicant's current approximately 3.35 cumulative GPA.",
-            "UNB normally requires a research-based master's with first-class standing for PhD admission, creating an explicit likely ineligibility for a bachelor's-only applicant.",
-            "Aalto's scholarship is highly competitive and tuition-only, and Bonn discovery established no program-level living-cost support; neither route is presently financially viable.",
-            f"Automated source retrieval exceptions remain for {len(retrieval_qa['unresolved_source_ids'])} of {retrieval_qa['checked']} current-round official source records; all were browser-reviewed during discovery.",
+            "UCR's desirable last-two-year GPA and UTA's 3.2 last-two-years expectation require an official transcript calculation rather than inference from cumulative GPA.",
+            "UT San Antonio and Manitoba publish strong support signals, but offer-specific coverage, renewal, fees, and net living costs remain unverified.",
+            "UNBC remains supervisor- and capacity-dependent, while Zurich and TU Wien currently lack an established living-cost funding path for this applicant.",
+            *(
+                [
+                    f"Automated source retrieval exceptions remain for {len(retrieval_qa['unresolved_source_ids'])} of {retrieval_qa['checked']} current-round official source records; all were browser-reviewed during discovery."
+                ]
+                if retrieval_qa["unresolved_source_ids"]
+                else []
+            ),
             "Existing Stage 3 through Stage 6 outputs intentionally remain unchanged until their separate re-entry stages.",
             f"The full test suite has one expected cross-stage failure until Stage 3 expands program_verification.csv from {verification_rows} to {len(merged)} rows.",
         ],

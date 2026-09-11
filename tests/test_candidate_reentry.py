@@ -42,7 +42,7 @@ def _audit_targets(payload):
 
 
 def test_reentry_definitions_build_exact_auditable_routes():
-    for round_number in (1, 2, 3):
+    for round_number in (1, 2, 3, 4):
         payload = _payload(round_number)
         reentry_id = f"stage_02_reentry_{round_number:02d}"
         candidates, sources = build_reentry_rows(
@@ -69,7 +69,7 @@ def test_reentry_merge_is_idempotent_and_reaudits_confirmed_omissions(tmp_path):
     merged = read_csv(tmp_path / "candidate_program_funnel.csv")
     yields = read_csv(tmp_path / "discovery_source_yield.csv")
     audits = read_csv(tmp_path / "exclusion_sample_audit.csv")
-    for round_number in (1, 2, 3):
+    for round_number in (1, 2, 3, 4):
         payload = _payload(round_number)
         prefix = f"reentry{round_number:02d}"
         candidates, sources = build_reentry_rows(
@@ -101,6 +101,6 @@ def test_reentry_merge_is_idempotent_and_reaudits_confirmed_omissions(tmp_path):
         )["status"] == "PASS"
         merged = first
 
-    assert len(merged) == baseline["counts"]["candidate_rows"] + 36
+    assert len(merged) == baseline["counts"]["candidate_rows"] + 48
     assert all(int(row["candidate_rows_contributed"]) >= 0 for row in yields)
-    assert sum(row["audit_result"] == "false_negative_corrected" for row in audits) == 6
+    assert sum(row["audit_result"] == "false_negative_corrected" for row in audits) == 8

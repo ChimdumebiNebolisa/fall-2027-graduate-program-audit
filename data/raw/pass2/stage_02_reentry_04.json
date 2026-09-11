@@ -1,0 +1,501 @@
+{
+  "trigger": "Stage 6 re-entry 03 returned to candidate discovery because the evidence-calibrated portfolio still had zero justified core applications.",
+  "scope": "A bounded fourth non-saturation pass for exact, previously unverified research routes; discovery evidence only, with no scoring or retention decision.",
+  "candidates": [
+    {
+      "institution_id": "us:ipeds:195030",
+      "institution_name": "University of Rochester",
+      "country": "United States",
+      "region": "us",
+      "program_name": "PhD Program in Computer Science",
+      "degree_type": "PhD",
+      "relevant_degree_route": "Direct-entry research doctorate accepting applicants with either a bachelor's or master's degree",
+      "research_topic_clusters": ["repair_analysis", "systems_security", "trustworthy_ai"],
+      "exact_research_fit_signal": "The official doctorate has systems and artificial-intelligence focus areas and requires an original body of research; its application asks applicants to describe research experience and faculty or lab alignment.",
+      "preliminary_international_eligibility": "Applicants may hold either a bachelor's or master's degree, and the department publishes English-language testing and waiver routes; the applicant's U.S. bachelor's may support a waiver, but target-cycle treatment remains unverified.",
+      "preliminary_funding_signal": "The department states that PhD students in good academic standing receive tuition, a stipend, and health insurance.",
+      "official_program_url": "https://www.cs.rochester.edu/graduate/phd-program.html",
+      "seed_adjacency": ["TerraProbe-adjacent", "Evidex-adjacent"],
+      "unresolved_fields": ["Fall 2027 cycle", "admission plausibility", "English waiver application", "offer-specific funding duration and fees", "current faculty supervision"],
+      "evidence_confidence": "high",
+      "additional_discovery_paths": ["recognized_institution_record", "underrepresented_route_search"],
+      "sources": [
+        {
+          "source_id": "reentry04:rochester:program",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "exact doctorate and research structure",
+          "title": "PhD Program in Computer Science",
+          "url": "https://www.cs.rochester.edu/graduate/phd-program.html",
+          "evidence_summary": "Official department page confirms the research doctorate, systems and AI focus areas, original-research culmination, and bachelor's or master's entry route.",
+          "limitations": "Program presence and broad research areas do not establish individual admission or advisor capacity."
+        },
+        {
+          "source_id": "reentry04:rochester:admission-funding",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "competitive admission, international route, and preliminary funding",
+          "title": "Applying to Graduate Programs",
+          "url": "https://www.cs.rochester.edu/u/www/graduate/how-to-apply.html",
+          "evidence_summary": "Official page describes selective competitive review, research-focused application materials, English testing and waivers, and tuition, stipend, and health insurance for PhD students in good standing.",
+          "limitations": "The displayed deadline is for 2026 and funding details remain subject to an individual offer."
+        }
+      ]
+    },
+    {
+      "institution_id": "us:ipeds:163268",
+      "institution_name": "University of Maryland-Baltimore County",
+      "country": "United States",
+      "region": "us",
+      "program_name": "PhD in Computer Science",
+      "degree_type": "PhD",
+      "relevant_degree_route": "Research doctorate with coursework, dissertation research, a portfolio, preliminary examination, and dissertation defense",
+      "research_topic_clusters": ["systems_security", "repair_analysis", "trustworthy_ai"],
+      "exact_research_fit_signal": "UMBC lists systems, distributed and cloud computing, system security, code and malware analysis, privacy, machine learning, semantic representations, and reasoning under uncertainty as current graduate research areas.",
+      "preliminary_international_eligibility": "The department publishes computer-science and mathematics prerequisites, requires the GRE for PhD applicants, and waives English testing for graduates of U.S. universities; transcript-level prerequisite coverage remains unverified.",
+      "preliminary_funding_signal": "The department supports some graduate students through teaching and research assistantships and says strong newly admitted students may be considered, but it makes no universal guarantee.",
+      "official_program_url": "https://www.csee.umbc.edu/graduate/computer-science-m-s-ph-d/",
+      "seed_adjacency": ["TerraProbe-adjacent", "Evidex-adjacent"],
+      "unresolved_fields": ["Fall 2027 cycle", "prerequisite equivalency", "GRE performance", "assistantship probability and renewal", "current faculty supervision"],
+      "evidence_confidence": "high",
+      "additional_discovery_paths": ["recognized_institution_record", "underrepresented_route_search"],
+      "sources": [
+        {
+          "source_id": "reentry04:umbc:program-fit",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "exact doctorate, entry prerequisites, and research fit",
+          "title": "Computer Science (M.S., M.P.S. and Ph.D.)",
+          "url": "https://www.csee.umbc.edu/graduate/computer-science-m-s-ph-d/",
+          "evidence_summary": "Official department page confirms the PhD and publishes systems, security, code analysis, AI, and prerequisite evidence relevant to both portfolio seeds.",
+          "limitations": "Published prerequisites must be mapped course by course and the page does not guarantee support."
+        },
+        {
+          "source_id": "reentry04:umbc:funding",
+          "discovery_path": "underrepresented_route_search",
+          "evidence_role": "preliminary doctoral funding",
+          "title": "Graduate Programs",
+          "url": "https://www.csee.umbc.edu/graduate/",
+          "evidence_summary": "Official department page states that some graduate students receive TA, RA, or grader support and that strong newly admitted students may be considered for research assistantships.",
+          "limitations": "Support for some students is not a guarantee; coverage, duration, and renewal remain offer-specific."
+        }
+      ]
+    },
+    {
+      "institution_id": "us:ipeds:110671",
+      "institution_name": "University of California-Riverside",
+      "country": "United States",
+      "region": "us",
+      "program_name": "PhD in Computer Science",
+      "degree_type": "PhD",
+      "relevant_degree_route": "Research doctorate open to applicants with substantial mathematics and computer-science preparation",
+      "research_topic_clusters": ["repair_analysis", "systems_security", "trustworthy_ai"],
+      "exact_research_fit_signal": "The program evaluates research experience and faculty-interest alignment and recommends preparation in software engineering, operating systems, security, distributed systems, artificial intelligence, machine learning, and programming languages.",
+      "preliminary_international_eligibility": "International applicants are accepted; a 3.2 GPA in the last two years is described as desirable, while applicants need substantial mathematics and computer-science preparation.",
+      "preliminary_funding_signal": "PhD applicants are automatically considered for merit funding by the fellowship deadline, but the department explicitly says not all PhD applicants receive a package.",
+      "official_program_url": "https://www1.cs.ucr.edu/graduate/programs/computer-science-phd",
+      "seed_adjacency": ["TerraProbe-adjacent", "Evidex-adjacent"],
+      "unresolved_fields": ["Fall 2027 cycle", "last-two-year GPA calculation", "course equivalency", "funding package probability and duration", "current faculty supervision"],
+      "evidence_confidence": "high",
+      "additional_discovery_paths": ["recognized_institution_record", "underrepresented_route_search"],
+      "sources": [
+        {
+          "source_id": "reentry04:ucr:program",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "exact research doctorate",
+          "title": "PhD in Computer Science",
+          "url": "https://www1.cs.ucr.edu/graduate/programs/computer-science-phd",
+          "evidence_summary": "Official program page confirms the research-oriented Computer Science PhD, independent dissertation research, and doctoral milestones.",
+          "limitations": "Degree structure does not establish applicant admission or a funding package."
+        },
+        {
+          "source_id": "reentry04:ucr:admission-fit",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "international entry, selectivity, and research fit",
+          "title": "International Graduate Applicants",
+          "url": "https://www1.cs.ucr.edu/graduate/admissions/international-applicants",
+          "evidence_summary": "Official department page documents international admission, holistic criteria, desirable last-two-year GPA, research and faculty alignment, and relevant computing preparation.",
+          "limitations": "A desirable threshold is not a guaranteed admit boundary and target-cycle terms may change."
+        },
+        {
+          "source_id": "reentry04:ucr:funding",
+          "discovery_path": "underrepresented_route_search",
+          "evidence_role": "preliminary doctoral funding",
+          "title": "Financial Support",
+          "url": "https://www1.cs.ucr.edu/graduate/financial-support",
+          "evidence_summary": "Official department page describes multi-year PhD packages that may include stipend, tuition or fee coverage, and GSR or TA employment.",
+          "limitations": "Packages are merit-based and limited; an individual award and renewal terms are not established."
+        }
+      ]
+    },
+    {
+      "institution_id": "us:ipeds:225511",
+      "institution_name": "University of Houston",
+      "country": "United States",
+      "region": "us",
+      "program_name": "PhD in Computer Science",
+      "degree_type": "PhD",
+      "relevant_degree_route": "Research doctorate requiring original dissertation research and early research-advisor selection",
+      "research_topic_clusters": ["repair_analysis", "systems_security", "ai_for_se"],
+      "exact_research_fit_signal": "The department publishes computing and software systems, security, distributed systems, natural-language processing, AI, and data-mining research and asks PhD applicants to identify research areas and faculty fit.",
+      "preliminary_international_eligibility": "The department accepts international applicants, publishes a 3.0 competitive example profile and English-score routes, and gives additional consideration to prior research experience for PhD applicants.",
+      "preliminary_funding_signal": "The department says PhD students are typically admitted with an assistantship, tuition fellowship, and nonresident tuition waiver, but terms are controlled by the offer letter.",
+      "official_program_url": "https://www.uh.edu/nsm/computer-science/graduate/phd/index.php",
+      "seed_adjacency": ["TerraProbe-adjacent", "Evidex-adjacent"],
+      "unresolved_fields": ["Fall 2027 cycle", "prerequisite mapping", "admission calibration", "offer-specific stipend and renewal", "current faculty supervision"],
+      "evidence_confidence": "high",
+      "additional_discovery_paths": ["recognized_institution_record", "underrepresented_route_search"],
+      "sources": [
+        {
+          "source_id": "reentry04:houston:program-admission",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "exact doctorate and applicant evaluation",
+          "title": "Doctoral Degree Program and Graduate Admissions",
+          "url": "https://www.uh.edu/nsm/computer-science/graduate/phd/index.php",
+          "evidence_summary": "Official page confirms an original-research doctorate, early advisor selection, and doctoral research competency expectations.",
+          "limitations": "Program requirements do not establish admission or advisor capacity."
+        },
+        {
+          "source_id": "reentry04:houston:funding-fit",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "preliminary funding and research-directed admission",
+          "title": "Finances and Funding",
+          "url": "https://www.uh.edu/nsm/computer-science/graduate/admissions/funding/",
+          "evidence_summary": "Official department page says PhD students are typically admitted with assistantship, tuition fellowship, and nonresident waiver support.",
+          "limitations": "Typical support is not universal and precise coverage is offer-specific."
+        }
+      ]
+    },
+    {
+      "institution_id": "us:ipeds:228769",
+      "institution_name": "The University of Texas at Arlington",
+      "country": "United States",
+      "region": "us",
+      "program_name": "Doctoral Degree in Computer Science/Computer Engineering",
+      "degree_type": "PhD",
+      "relevant_degree_route": "Research doctorate admitting applicants with an undergraduate CS, computer-engineering, or closely related degree",
+      "research_topic_clusters": ["repair_analysis", "systems_security", "trustworthy_ai"],
+      "exact_research_fit_signal": "UTA identifies software engineering, computer security, AI, high-performance computing, and independent dissertation research and explicitly evaluates research experience and publications.",
+      "preliminary_international_eligibility": "The program publishes a 3.0 overall and 3.2 last-two-years GPA expectation plus international English thresholds; applicant-specific calculation remains unverified.",
+      "preliminary_funding_signal": "The department selects financial-aid candidates early, and university policy provides tuition support to qualifying doctoral GTAs and GRAs; no universal assistantship is promised.",
+      "official_program_url": "https://www.uta.edu/academics/schools-colleges/engineering/academics/departments/cse/phd",
+      "seed_adjacency": ["TerraProbe-adjacent", "Evidex-adjacent"],
+      "unresolved_fields": ["Fall 2027 cycle", "last-two-year GPA calculation", "English waiver or testing", "assistantship award and coverage", "current faculty supervision"],
+      "evidence_confidence": "high",
+      "additional_discovery_paths": ["recognized_institution_record", "underrepresented_route_search"],
+      "sources": [
+        {
+          "source_id": "reentry04:uta:program-admission",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "exact doctorate, admission factors, and research fit",
+          "title": "Doctoral Degree in Computer Science/Computer Engineering",
+          "url": "https://www.uta.edu/academics/schools-colleges/engineering/academics/departments/cse/phd",
+          "evidence_summary": "Official department page confirms the research doctorate, bachelor's entry, GPA expectations, English rules, research criteria, and early financial-aid review.",
+          "limitations": "Meeting published criteria does not establish admission or funding."
+        },
+        {
+          "source_id": "reentry04:uta:fit-funding",
+          "discovery_path": "underrepresented_route_search",
+          "evidence_role": "research areas and preliminary tuition support",
+          "title": "Ph.D. in Computer Science",
+          "url": "https://www.uta.edu/academics/programs/computer-science-phd?level=phd&program=compsciphd",
+          "evidence_summary": "Official program page identifies software engineering, security, AI, research activity, and available assistantship or fellowship mechanisms.",
+          "limitations": "Availability language is not an individual award or duration commitment."
+        }
+      ]
+    },
+    {
+      "institution_id": "us:ipeds:229027",
+      "institution_name": "The University of Texas at San Antonio",
+      "country": "United States",
+      "region": "us",
+      "program_name": "PhD in Computer Science",
+      "degree_type": "PhD",
+      "relevant_degree_route": "Direct-entry research doctorate accepting a bachelor's degree or equivalent foreign training",
+      "research_topic_clusters": ["systems_security", "repair_analysis", "trustworthy_ai"],
+      "exact_research_fit_signal": "The doctorate sits in the College of AI, Cyber and Computing and is supported by active research in artificial intelligence, cybersecurity, computing, and data science.",
+      "preliminary_international_eligibility": "The official Fall 2027 page accepts an accredited U.S. bachelor's or equivalent foreign training and publishes a common international deadline.",
+      "preliminary_funding_signal": "The program states that all full-time admitted PhD students receive a GTA or GRA appointment with tuition waiver, stipend, and health insurance; current published support starts at USD 24,000.",
+      "official_program_url": "https://future.utsa.edu/programs/doctoral/computer-science/",
+      "seed_adjacency": ["TerraProbe-adjacent", "Evidex-adjacent"],
+      "unresolved_fields": ["applicant-specific admission calibration", "foreign equivalency despite expected U.S. bachelor's", "assistantship renewal conditions", "fee and living-cost residuals", "current faculty supervision"],
+      "evidence_confidence": "high",
+      "additional_discovery_paths": ["recognized_institution_record", "underrepresented_route_search"],
+      "sources": [
+        {
+          "source_id": "reentry04:utsa:program-funding",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "exact doctorate, Fall 2027 entry, and comprehensive support",
+          "title": "PhD in Computer Science",
+          "url": "https://future.utsa.edu/programs/doctoral/computer-science/",
+          "evidence_summary": "Official program page confirms bachelor's entry, the Fall 2027 deadline, and full-time admitted PhD support through GTA or GRA appointment, tuition waiver, stipend, and health insurance.",
+          "limitations": "The page does not resolve admission likelihood, net living costs, or renewal conditions."
+        },
+        {
+          "source_id": "reentry04:utsa:doctoral-funding",
+          "discovery_path": "underrepresented_route_search",
+          "evidence_role": "published doctoral package detail",
+          "title": "Doctoral Funding",
+          "url": "https://graduateschool.utsa.edu/tuition-funding/assistantships/doctoral-funding.html",
+          "evidence_summary": "Official Graduate School table publishes Computer Science GRA and GTA stipend, tuition and fees, health-insurance, and total-package figures.",
+          "limitations": "Published package values may change before enrollment and do not establish offer renewal."
+        }
+      ]
+    },
+    {
+      "institution_id": "us:ipeds:153658",
+      "institution_name": "University of Iowa",
+      "country": "United States",
+      "region": "us",
+      "program_name": "PhD in Computer Science",
+      "degree_type": "PhD",
+      "relevant_degree_route": "Terminal research doctorate involving close work with a faculty advisor",
+      "research_topic_clusters": ["repair_analysis", "systems_security", "trustworthy_ai"],
+      "exact_research_fit_signal": "The department publishes formal methods and programming languages, systems, algorithms, and AI as current research areas and describes the PhD as preparation for research and development.",
+      "preliminary_international_eligibility": "The official graduate inventory confirms the research doctorate; applicant-specific degree, GPA, English, and application requirements need Stage 3 verification.",
+      "preliminary_funding_signal": "Most departmental graduate support comes from teaching or research assistantships, with doctoral departmental support limited to four years and renewed subject to performance and funding availability.",
+      "official_program_url": "https://cs.uiowa.edu/graduate/phd-computer-science",
+      "seed_adjacency": ["TerraProbe-adjacent", "Evidex-adjacent"],
+      "unresolved_fields": ["Fall 2027 cycle", "formal entry requirements", "English waiver or testing", "initial assistantship probability and renewal", "current faculty supervision"],
+      "evidence_confidence": "medium",
+      "additional_discovery_paths": ["recognized_institution_record", "underrepresented_route_search"],
+      "sources": [
+        {
+          "source_id": "reentry04:iowa:program-fit",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "exact doctorate and research inventory",
+          "title": "Graduate Programs",
+          "url": "https://cs.uiowa.edu/graduate/phd-computer-science",
+          "evidence_summary": "Official degree page confirms the research-oriented PhD, original dissertation, faculty-advisor model, and research publication expectations.",
+          "limitations": "The overview does not state detailed applicant eligibility or admission calibration."
+        },
+        {
+          "source_id": "reentry04:iowa:funding",
+          "discovery_path": "underrepresented_route_search",
+          "evidence_role": "preliminary assistantship funding",
+          "title": "Graduate Funding",
+          "url": "https://cs.uiowa.edu/graduate/funding",
+          "evidence_summary": "Official department page describes TA and RA funding, four-year doctoral support limits, and annual renewal conditions.",
+          "limitations": "The page does not promise an assistantship to every admitted PhD student."
+        }
+      ]
+    },
+    {
+      "institution_id": "us:ipeds:217882",
+      "institution_name": "Clemson University",
+      "country": "United States",
+      "region": "us",
+      "program_name": "Computer Science PhD",
+      "degree_type": "PhD",
+      "relevant_degree_route": "Research doctorate with a defined bachelor's-entry curriculum and original dissertation research",
+      "research_topic_clusters": ["repair_analysis", "systems_security", "ai_for_se"],
+      "exact_research_fit_signal": "Clemson publishes PhD core areas in software engineering and networks, systems and security, plus current research in software engineering, cloud computing, cybersecurity, AI, and distributed computing.",
+      "preliminary_international_eligibility": "The program explicitly defines a bachelor's-entry route and publishes international English testing; preparation deficiencies may require extra coursework.",
+      "preliminary_funding_signal": "All qualified PhD applicants are considered for competitive assistantships carrying reduced tuition and a stipend, but funding availability is not guaranteed.",
+      "official_program_url": "https://www.clemson.edu/cecas/departments/computing/academics/graduates/degrees/phd-cs.html",
+      "seed_adjacency": ["TerraProbe-adjacent", "Evidex-adjacent"],
+      "unresolved_fields": ["Fall 2027 cycle", "prerequisite equivalency", "English waiver or testing", "assistantship probability and net cost", "current faculty supervision"],
+      "evidence_confidence": "high",
+      "additional_discovery_paths": ["recognized_institution_record", "underrepresented_route_search"],
+      "sources": [
+        {
+          "source_id": "reentry04:clemson:program-fit",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "exact doctorate, bachelor's route, and research fit",
+          "title": "Computer Science Ph.D.",
+          "url": "https://www.clemson.edu/cecas/departments/computing/academics/graduates/degrees/phd-cs.html",
+          "evidence_summary": "Official program page confirms bachelor's entry, original research, and software-engineering plus systems-and-security core areas.",
+          "limitations": "Research-area presence does not establish advisor capacity or admission."
+        },
+        {
+          "source_id": "reentry04:clemson:funding",
+          "discovery_path": "underrepresented_route_search",
+          "evidence_role": "preliminary doctoral assistantship",
+          "title": "School of Computing Graduate Admissions FAQ",
+          "url": "https://www.clemson.edu/cecas/departments/computing/academics/graduates/faq.html",
+          "evidence_summary": "Official FAQ documents competitive assistantship consideration for qualified domestic and international PhD applicants, reduced tuition, and a stipend.",
+          "limitations": "Assistantships depend on merit and available funds and are not guaranteed."
+        }
+      ]
+    },
+    {
+      "institution_id": "ca:dli:O19283889692",
+      "institution_name": "University of Northern British Columbia",
+      "country": "Canada",
+      "region": "canada",
+      "program_name": "MSc in Computer Science - Thesis Option",
+      "degree_type": "Thesis or research master's",
+      "relevant_degree_route": "Two-year research master's requiring an original research program, thesis, defense, and faculty supervisor",
+      "research_topic_clusters": ["systems_security", "repair_analysis", "trustworthy_ai"],
+      "exact_research_fit_signal": "The thesis option is explicitly designed for research and further academic study and includes original research under a supervisory committee; exact current faculty topic fit remains to be established.",
+      "preliminary_international_eligibility": "International applications are accepted, but the program is highly competitive, capacity-constrained, and contingent on securing a faculty supervisor.",
+      "preliminary_funding_signal": "Qualified graduate students may receive teaching assistantships and research-intensive entrants can be considered for merit entrance awards; no program-wide full-funding guarantee was found.",
+      "official_program_url": "https://www.unbc.ca/calendar/graduate/computer-science-msc-program",
+      "seed_adjacency": ["TerraProbe-adjacent", "Evidex-adjacent"],
+      "unresolved_fields": ["Fall 2027 cycle", "specific research fit", "supervisor commitment", "award or assistantship amount and duration", "net international cost"],
+      "evidence_confidence": "medium",
+      "additional_discovery_paths": ["recognized_institution_record", "research_masters_or_scholarship_search", "underrepresented_route_search"],
+      "sources": [
+        {
+          "source_id": "reentry04:unbc:program-admission",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "exact thesis route and supervisor-dependent entry",
+          "title": "Computer Science (MSc Program)",
+          "url": "https://www.unbc.ca/calendar/graduate/computer-science-msc-program",
+          "evidence_summary": "Official calendar confirms the two-year thesis option, original-research purpose, thesis and defense, and mandatory faculty-supervisor condition.",
+          "limitations": "The route is capacity-constrained and no specific supervisor or topic match is established."
+        },
+        {
+          "source_id": "reentry04:unbc:funding",
+          "discovery_path": "research_masters_or_scholarship_search",
+          "evidence_role": "preliminary entrance awards and assistantships",
+          "title": "Entrance Scholarship Programs",
+          "url": "https://www.unbc.ca/graduate-administration/gradready/entrance-scholarship-programs",
+          "evidence_summary": "Official page describes automatic merit consideration for research-intensive graduate entrance awards aligned with university priorities.",
+          "limitations": "Award values, competitiveness, and full net-cost coverage remain unresolved."
+        }
+      ]
+    },
+    {
+      "institution_id": "ca:dli:O19091528512",
+      "institution_name": "University of Manitoba",
+      "country": "Canada",
+      "region": "canada",
+      "program_name": "PhD in Computer Science",
+      "degree_type": "PhD",
+      "relevant_degree_route": "Research doctorate normally requiring an MSc, with rare direct admission from an exceptional honours bachelor's or equivalent",
+      "research_topic_clusters": ["systems_security", "repair_analysis", "trustworthy_ai"],
+      "exact_research_fit_signal": "The official program publishes security and privacy, data-driven software engineering, distributed algorithms, autonomous agents, and an intensive research thesis.",
+      "preliminary_international_eligibility": "The normal route requires a master's, but university regulations allow rare direct admission from an outstanding honours bachelor's or equivalent; supervisor support is mandatory, so the applicant's route is exceptional and unresolved.",
+      "preliminary_funding_signal": "The department states that newly admitted PhD students receive a minimum CAD 23,000 per year for the first four years, contingent on satisfactory progress.",
+      "official_program_url": "https://umanitoba.ca/graduate-studies/admissions/programs-of-study/computer-science-phd",
+      "seed_adjacency": ["TerraProbe-adjacent", "Evidex-adjacent"],
+      "unresolved_fields": ["rare direct-bachelor's exception", "Fall 2027 cycle", "degree and grade equivalency", "confirmed supervisor", "funding source, renewal, and net international cost"],
+      "evidence_confidence": "high",
+      "additional_discovery_paths": ["recognized_institution_record", "research_masters_or_scholarship_search", "underrepresented_route_search"],
+      "sources": [
+        {
+          "source_id": "reentry04:manitoba:program-fit",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "exact doctorate, normal entry rule, and research fit",
+          "title": "Computer Science (PhD)",
+          "url": "https://umanitoba.ca/graduate-studies/admissions/programs-of-study/computer-science-phd",
+          "evidence_summary": "Official program page confirms the research doctorate, master's-normal entry rule, supervisor-support requirement, and security, software-engineering, distributed-algorithm, and autonomous-agent study.",
+          "limitations": "The page does not establish that this bachelor's-only applicant qualifies for the rare direct-entry exception."
+        },
+        {
+          "source_id": "reentry04:manitoba:direct-entry",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "rare direct admission from bachelor's",
+          "title": "Doctor of Philosophy General Regulations",
+          "url": "https://catalog.umanitoba.ca/graduate-studies/academic-guide/doctor-philosophy-general-regulations/",
+          "evidence_summary": "Official regulations allow direct PhD admission from an honours bachelor's or equivalent only for applicants with an outstanding academic background and special departmental recommendation.",
+          "limitations": "The exception is rare and the applicant has not been determined to meet its high academic threshold."
+        },
+        {
+          "source_id": "reentry04:manitoba:funding",
+          "discovery_path": "research_masters_or_scholarship_search",
+          "evidence_role": "published doctoral funding floor",
+          "title": "Computer Science Financial Aid and Awards",
+          "url": "https://umanitoba.ca/science/student-experience/financial-aid-awards/computer-science",
+          "evidence_summary": "Official department page states a CAD 23,000 annual minimum for newly admitted PhD students during the first four years, contingent on progress.",
+          "limitations": "Funding composition, taxable status, fees, and net living-cost sufficiency require verification."
+        }
+      ]
+    },
+    {
+      "institution_id": "ror:02crff812",
+      "institution_name": "University of Zurich",
+      "country": "Switzerland",
+      "region": "europe",
+      "program_name": "MSc in Informatics - Software Systems",
+      "degree_type": "Thesis or research master's",
+      "relevant_degree_route": "English-taught 120-ECTS Informatics MSc with a 90-ECTS Software Systems major and 30-ECTS master's thesis",
+      "research_topic_clusters": ["repair_analysis", "systems_security", "ai_for_se"],
+      "exact_research_fit_signal": "Software Systems focuses on systematic development and maintenance of complex software systems and includes independent academic work, a master's project, and a 30-ECTS thesis supervised by informatics faculty.",
+      "preliminary_international_eligibility": "Applicants from outside the EU, EFTA, and UK must submit a GRE, and curriculum review may impose up to 60 ECTS of additional requirements; exact course mapping is unresolved.",
+      "preliminary_funding_signal": "UZH states that it has no dedicated scholarship pool for international master's students and cannot provide its student financial support to entrants without a Swiss bachelor's, making external funding essential.",
+      "official_program_url": "https://www.uzh.ch/en/studies/programs/master/software_systems.html",
+      "seed_adjacency": ["TerraProbe-adjacent", "Evidex-adjacent"],
+      "unresolved_fields": ["Fall 2027 cycle", "GRE thresholds and timing", "curriculum and ECTS mapping", "external scholarship viability", "thesis supervision fit"],
+      "evidence_confidence": "high",
+      "additional_discovery_paths": ["recognized_institution_record", "research_masters_or_scholarship_search", "underrepresented_route_search"],
+      "sources": [
+        {
+          "source_id": "reentry04:uzh:program-admission",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "exact software-systems route and international admission",
+          "title": "Software Systems and Master's Admission in Informatics",
+          "url": "https://www.uzh.ch/en/studies/programs/master/software_systems.html",
+          "evidence_summary": "Official program page confirms the Software Systems MSc route and its systematic complex-software focus.",
+          "limitations": "The overview does not establish the applicant's curriculum classification or admission."
+        },
+        {
+          "source_id": "reentry04:uzh:funding",
+          "discovery_path": "research_masters_or_scholarship_search",
+          "evidence_role": "international master's funding constraint",
+          "title": "FAQs for Degree-Seeking International Students",
+          "url": "https://www.int.uzh.ch/en/in/degree-seeking-students/faq_international_ma.html",
+          "evidence_summary": "Official international-student FAQ states that UZH has no dedicated scholarship pool for international master's students.",
+          "limitations": "External scholarships and applicant resources were not established at discovery stage."
+        },
+        {
+          "source_id": "reentry04:uzh:thesis",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "research-thesis structure",
+          "title": "Master's Studies in Informatics",
+          "url": "https://www.ifi.uzh.ch/en/studies/msc.html",
+          "evidence_summary": "Official department page documents the 90-ECTS major, 30-ECTS MSc thesis, and Software Systems specialization.",
+          "limitations": "Thesis structure does not establish a supervisor match or funding."
+        }
+      ]
+    },
+    {
+      "institution_id": "ror:04d836q62",
+      "institution_name": "TU Wien",
+      "country": "Austria",
+      "region": "europe",
+      "program_name": "Master's Programme Logic and Artificial Intelligence",
+      "degree_type": "Thesis or research master's",
+      "relevant_degree_route": "English-taught 120-ECTS master's combining formal methods and AI with a final research thesis",
+      "research_topic_clusters": ["trustworthy_ai", "repair_analysis", "systems_security"],
+      "exact_research_fit_signal": "The program combines logic, algorithms, symbolic AI, machine learning, and safe and trustworthy systems, with a final-semester master's thesis and pathways into formal systems engineering and cybersecurity.",
+      "preliminary_international_eligibility": "A relevant bachelor's from an accredited international institution is accepted when at least 120 ECTS in mathematics and computer science cover detailed theory, mathematics, algorithms, data structures, and programming requirements; up to 30 ECTS of supplements may be imposed.",
+      "preliminary_funding_signal": "Nigerian and other non-EU nationals normally pay EUR 726.72 per semester plus the student-union fee; no program-level living-cost scholarship was established.",
+      "official_program_url": "https://www.tuwien.at/en/studies/studies/master-programmes/informatics/logic-and-artificial-intelligence",
+      "seed_adjacency": ["TerraProbe-adjacent", "Evidex-adjacent"],
+      "unresolved_fields": ["Fall 2027 cycle", "ECTS and curriculum mapping", "supplementary-exam load", "scholarship and living-cost viability", "thesis supervision fit"],
+      "evidence_confidence": "high",
+      "additional_discovery_paths": ["recognized_institution_record", "research_masters_or_scholarship_search", "underrepresented_route_search"],
+      "sources": [
+        {
+          "source_id": "reentry04:tuwien:program-admission",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "exact research master's, fit, and international eligibility",
+          "title": "Logic and Artificial Intelligence",
+          "url": "https://www.tuwien.at/en/studies/studies/master-programmes/informatics/logic-and-artificial-intelligence",
+          "evidence_summary": "Official program page documents the English 120-ECTS degree, formal methods, trustworthy systems, AI, thesis, and detailed prior-study requirements.",
+          "limitations": "Applicant ECTS mapping and the scale of any supplementary requirements remain unresolved."
+        },
+        {
+          "source_id": "reentry04:tuwien:tuition",
+          "discovery_path": "research_masters_or_scholarship_search",
+          "evidence_role": "international tuition and funding constraint",
+          "title": "Tuition Fee",
+          "url": "https://www.tuwien.at/en/studies/admission/students-union-fee-and-tuition-fee/tuition-fee",
+          "evidence_summary": "Official page publishes the EUR 726.72 per-semester rate for most non-EU nationals plus the mandatory student-union fee.",
+          "limitations": "Living costs and a viable scholarship source were not established."
+        }
+      ]
+    }
+  ],
+  "false_negative_audits": [
+    {
+      "institution_id": "us:ipeds:229027",
+      "exclusion_reason_category": "single_bounded_registry_signal_without_independent_topic_signal",
+      "original_supporting_evidence": "UT San Antonio's mechanical registry row was not promoted in the bounded baseline, although current official pages establish a bachelor's-entry Computer Science PhD, Fall 2027 cycle, relevant AI and security context, and a comprehensive doctoral support package."
+    },
+    {
+      "institution_id": "ca:dli:O19091528512",
+      "exclusion_reason_category": "outside_bounded_positive_seed_screen",
+      "original_supporting_evidence": "Manitoba's exact doctorate was absent from the original set despite current software-engineering and security fit, a rare direct-bachelor's exception, and a published four-year minimum doctoral funding policy."
+    }
+  ]
+}
