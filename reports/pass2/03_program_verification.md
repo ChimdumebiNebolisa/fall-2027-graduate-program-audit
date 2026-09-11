@@ -1,43 +1,47 @@
-# Pass 2 Stage 3 — Program structure, eligibility, and funding verification
+# Stage 3 Result
 
-Generated: 2026-09-11T04:39:45.859672+00:00
+Generated: 2026-09-11T05:59:47.646449+00:00
 
-Decision: **PASS — verification re-entry 08 complete**
+## Decision
 
-## Outcome
+Pass — program structure, eligibility, and funding verification re-entry 09 is complete.
 
-All 2,061 Stage 2 candidates now have exactly one controlled retained, conditional, monitor, or excluded status with an evidence-backed reason. The 12 latest Stage 2 re-entry routes were re-verified from official program, admissions, funding, fee, and deadline sources. No score or admission recommendation was created.
+## What changed
+
+All 2,073 Stage 2 candidates now have exactly one controlled retained, conditional, monitor, or excluded status with an evidence-backed reason. The 12 re-entry 09 routes were verified against official program, admissions, funding, fee, and deadline sources. No score or admission recommendation was created.
+
+## Coverage
 
 | Status | All candidates | New routes |
 | --- | --- | --- |
-| Retained | 38 | 2 |
-| Conditional | 62 | 2 |
-| Monitor | 334 | 8 |
+| Retained | 41 | 3 |
+| Conditional | 65 | 3 |
+| Monitor | 340 | 6 |
 | Excluded | 1627 | 0 |
-| Faculty-review ready | 100 | 4 |
+| Faculty-review ready | 106 | 6 |
 
-## Stage 2 re-entry routes
+### Stage 2 re-entry 09 routes
 
 | Institution | Program | Status | Eligibility gate | Funding gate | Largest unresolved question |
 | --- | --- | --- | --- | --- | --- |
-| University of Cincinnati-Main Campus | [Doctor of Philosophy in Computer Science and Engineering](https://www.ceas.uc.edu/academics/departments/electrical-computer-engineering/degrees-programs/computer-science-engineering-phd.html) | retained | pass | pass | Will a Fall 2027 offer extend assistantship, tuition, insurance, fee, and summer support beyond the explicitly published first year? |
-| Virginia Commonwealth University | [Doctor of Philosophy in Computer Science](https://bulletin.vcu.edu/graduate/school-engineering/computer-science/computer-science-phd/) | retained | pass | pass | Which advisor will support the application, and what duration, summer, stipend, and insurance terms will the Fall 2027 assistantship letter contain? |
-| Missouri University of Science and Technology | [Doctor of Philosophy in Computer Science](https://cs.mst.edu/graduate-degrees/phd/) | monitor | resolvable_question | resolvable_inquiry | Will the department approve direct bachelor's-to-PhD entry and will a named advisor provide renewable GRA funding from the first term? |
-| University of North Texas | [Doctor of Philosophy in Computer Science and Engineering](https://www.unt.edu/academics/programs/computer-science-and-engineering-phd.html) | monitor | resolvable_question | resolvable_inquiry | Will CSE admit a 3.35-GPA applicant below its published PhD benchmark and issue an assistantship that closes the international tuition and fee gap? |
-| Memorial University of Newfoundland | [Doctor of Philosophy in Computer Science](https://www.mun.ca/computerscience/graduate-students/graduate-programs/phd/) | monitor | unmet | pass | The entry gate is presently unmet: can the applicant first complete an eligible research master's or identify a formally approved exceptional pathway? |
-| University of Guelph | [Doctor of Philosophy in Computer Science](https://www.uoguelph.ca/programs/phd-computer-science) | conditional | resolvable_question | pass | Will Guelph formally accept this bachelor's-only record into the renamed PhD route and confirm whether one or two advisors are required under the current calendar? |
-| Toronto Metropolitan University | [Doctor of Philosophy in Computer Science](https://www.torontomu.ca/graduate/programs/computer-science/) | monitor | unmet | unverified | The current entry gate is unmet and no international base package is published; what prior research master's and guaranteed funding would be required? |
-| École Polytechnique de Montréal | [Master of Applied Science in Computer Engineering — Software Engineering Option](https://www.polymtl.ca/gigl/en/programs-offered/graduate-studies) | conditional | pass | resolvable_inquiry | Will an eligible software-engineering supervisor accept the applicant and provide renewable funding that covers international tuition, insurance, and living costs? |
-| University of Oulu | [Master of Science in Software Engineering and Information Systems](https://www.oulu.fi/en/apply/masters-software-engineering-and-information-systems) | monitor | pass | unverified | What credible external or project funding could cover the remaining tuition and full two-year living costs? |
-| University of Stuttgart | [Master of Science in Computer Science](https://www.uni-stuttgart.de/en/study/study-programs/Computer-Science-M.Sc-00007./) | monitor | pass | unverified | Can the applicant secure a scholarship covering four semesters of tuition, semester fees, health insurance, and living costs? |
-| University of Antwerp | [Master of Computer Science: Software Engineering](https://www.uantwerpen.be/en/study/programmes/all-programmes/master-software-engineering/programme-info/) | monitor | resolvable_question | unverified | Will the admissions board accept the foreign transcript without a preparatory requirement, and can any award cover both tuition and living costs? |
-| University of Groningen | [Master of Science in Computing Science — Software Engineering and Distributed Systems track](https://www.rug.nl/masters/computing-science/?lang=en) | monitor | pass | unverified | Is the applicant eligible and competitive for a full two-year scholarship rather than only a small contribution against EUR 24,900 annual tuition and living costs? |
+| Emory University | [Doctor of Philosophy in Computer Science and Informatics](https://computerscience.emory.edu/graduate-phd/index.html) | retained | pass | pass | What are the Fall 2027 stipend, insurance, mandatory-fee, summer-support, and English-test terms in the actual offer? |
+| Northwestern University | [Doctor of Philosophy in Computer Science](https://www.mccormick.northwestern.edu/computer-science/academics/graduate/phd/) | retained | pass | pass | What stipend, summer, health-insurance, and mandatory-fee terms will accompany the five-year Fall 2027 guarantee? |
+| University of Pittsburgh-Pittsburgh Campus | [Doctor of Philosophy in Computer Science](https://intranet.cs.pitt.edu/grad/) | conditional | pass | resolvable_inquiry | Will a Fall 2027 CS PhD admission offer guarantee full tuition, adequate stipend, insurance, fees, and summer support for a stated duration? |
+| Brandeis University | [Doctor of Philosophy in Computer Science](https://www.brandeis.edu/gsas/programs/computer_science.html) | conditional | pass | resolvable_inquiry | Does every admitted Fall 2027 CS PhD student receive the five-year tuition, stipend, and health package, including summer and fees? |
+| Michigan State University | [Doctor of Philosophy in Computer Science](https://engineering.msu.edu/academics/majors-degrees/computer-science-phd) | monitor | resolvable_question | unverified | Does the transcript meet every prerequisite, and will a Fall 2027 offer include renewable full tuition, stipend, insurance, fees, and summer funding? |
+| Syracuse University | [Doctor of Philosophy in Computer/Information Science and Engineering](https://ecs.syracuse.edu/academics/electrical-engineering-and-computer-science/programs/computer-information-science-engineering-doctoral-program) | monitor | pass | unverified | Will a Fall 2027 offer include renewable full tuition, adequate stipend, insurance, fees, and separate summer support? |
+| Johns Hopkins University | [Doctor of Philosophy in Computer Science](https://www.cs.jhu.edu/academic-programs/graduate-studies/phd-program/) | retained | pass | pass | What maximum duration, fee, summer, and Fall 2027 stipend terms govern the good-standing funding guarantee? |
+| St. Francis Xavier University | [Master of Science in Computer Science](https://www.stfx.ca/programs-courses/programs/master-science-computer-science) | conditional | resolvable_question | pass | Will a willing supervisor support the application, and will the specific package cover tuition plus adequate living, fees, insurance, and summer costs for two years? |
+| KTH Royal Institute of Technology | [Master of Science in Computer Science](https://www.kth.se/en/studies/master/computer-science) | monitor | resolvable_question | unverified | Does the transcript satisfy every ECTS prerequisite, and can the applicant secure a scholarship that covers both tuition and the full two-year living cost? |
+| University of Helsinki | [Master's Programme in Computer Science](https://www.helsinki.fi/en/degree-programmes/computer-science-masters-programme) | monitor | resolvable_question | unverified | Will admissions accept the relevant-study mapping, and can the applicant secure full tuition plus independent living, health, fee, and summer funding? |
+| University of Copenhagen | [Master of Science in Computer Science](https://www.ku.dk/studies/masters/computer-science) | monitor | resolvable_question | unverified | Does the transcript satisfy each ECTS category, and will any scholarship cover the full tuition and living cost for the two-year degree? |
+| University of Tartu | [Master of Science in Engineering (Computer Science)](https://ut.ee/en/curriculum/computer-science) | monitor | pass | unverified | Can the applicant secure a renewable combination that covers EUR 14,400 tuition plus living, health, fees, and summer costs for two years? |
 
 Retained means an exact research route, formal applicant eligibility, and a credible officially sourced funding route are present. It does not mean admission is likely or that an eventual offer will contain adequate net funding.
 
-Cincinnati and VCU are retained. Conditional rows are positioned only as `Outreach Before Decision`: Guelph and Polytechnique Montreal require applicant- or offer-specific confirmation. Missouri S&T, North Texas, Memorial, Toronto Metropolitan, Oulu, Stuttgart, Antwerp, and Groningen remain monitors because a formal eligibility or living-cost funding gate is unresolved or unmet.
+Emory, Northwestern, and Johns Hopkins are retained. Conditional rows are positioned only as `Outreach Before Decision`: Pittsburgh and Brandeis require offer-specific funding confirmation, while StFX requires a willing supervisor. Michigan State, Syracuse, KTH, Helsinki, Copenhagen, and Tartu remain monitors because formal eligibility and/or a credible full-cost funding route is unresolved.
 
-## Acceptance checks
+## Validation performed
 
 | Assertion | Result |
 | --- | --- |
@@ -56,18 +60,31 @@ Cincinnati and VCU are retained. Conditional rows are positioned only as `Outrea
 | exclusions_match_status | PASS |
 | no_score_or_recommendation_fields | PASS |
 
-## Blockers
+## Material uncertainties or conflicts
 
-None prevented Stage 3 completion.
-
-## Unresolved coverage
-
-- Guelph, Oulu, Antwerp, and Groningen publish Fall 2027 cycle dates; other deadlines are recurring or latest-cycle evidence and remain labeled for reconfirmation.
+- Fall 2027 dates are explicit for Syracuse, KTH, and Helsinki; other dates are recurring or latest-cycle evidence and remain labeled for reconfirmation.
 - Simultaneous-application and separate-fee rules remain unverified wherever the official source did not publish an exact rule.
-- Official pages were checked individually during evidence capture; repeatable bulk retrieval status is not part of this Stage 3 acceptance gate.
-- Offer-specific stipend, mandatory-fee, health-insurance, and summer coverage remain explicit unknowns wherever the official page did not publish them.
-- Oulu's published support is partial tuition relief, while Stuttgart, Antwerp, and Groningen publish competitive or limited awards rather than program-level living-cost funding.
-- Missouri S&T, North Texas, Memorial, and Toronto Metropolitan require applicant-specific eligibility or funding confirmation before they can advance.
-- 10 new routes remain conditional or monitor and must not be treated as funded recommendations.
-- Stage 4 may evaluate current faculty only for the 4 new retained/conditional routes; monitor routes do not pass the faculty-review gate.
-- Full-suite verification is recorded in the Stage 3 manifest; remaining failures are limited to expected downstream Stage 4 and Stage 5 re-entry coverage.
+- Offer-specific stipend, mandatory-fee, health-insurance, and summer coverage remain explicit unknowns wherever official pages did not publish them.
+- KTH, Helsinki, Copenhagen, and Tartu publish competitive or partial awards that do not establish full tuition and living-cost support.
+
+## Records requiring human judgment
+
+- 9 new routes remain conditional or monitor and must not be treated as funded recommendations.
+- Stage 4 may evaluate current faculty only for the 6 new retained/conditional routes; monitor routes do not pass the faculty-review gate.
+- Pittsburgh and Brandeis need offer-level funding confirmation; StFX needs documented supervisor willingness and package sufficiency.
+- Michigan State and the four European monitors need transcript or full-cost funding resolution as recorded in their largest unresolved question.
+
+## Files created or modified
+
+- `data/raw/pass2/stage_03_reentry_09.json`
+- `data/processed/pass2/program_verification.csv`
+- `data/processed/pass2/program_sources.csv`
+- `data/processed/pass2/program_exclusions.csv`
+- `data/processed/pass2/stage_03_reentry_09_verification.csv`
+- `data/processed/pass2/stage_03_reentry_09_sources.csv`
+- `data/manifests/pass2/stage_03.json`
+- `state/progress.json`
+
+## Recommendation before the next stage
+
+Proceed to Stage 4 only for retained and conditional rows marked faculty-review ready. Keep all monitor rows outside faculty review, and preserve every offer-, transcript-, and deadline-specific unknown until independent evidence resolves it.
