@@ -1024,4 +1024,54 @@ FACULTY_ROSTERS: dict[str, FacultyRoster] = {
             _c("Man Lin", "software systems; data management; computer science education"),
         ),
     ),
+    "University of Oregon": FacultyRoster(
+        "Department of Computer Science",
+        "https://cas.uoregon.edu/directory/computer-science-faculty",
+        (
+            _c("Reza Rejaie", "distributed systems; network measurement; dependable networked systems"),
+            _c("Ram Durairajan", "networked systems; Internet measurement; resilient infrastructure"),
+            _c("Yingjiu Li", "cybersecurity; privacy; applied cryptography; trustworthy systems"),
+            _c("Jun Li", "network security; Internet measurement; dependable systems"),
+        ),
+    ),
+    "University of Georgia": FacultyRoster(
+        "School of Computing",
+        "https://www.cs.uga.edu/faculty-directory",
+        (
+            _c("Kyu Hyung Lee", "systems security; malware analysis; software security"),
+            _c("Roberto Perdisci", "network security; malware analysis; threat detection"),
+            _c("In Kee Kim", "cloud computing; distributed systems; systems reliability"),
+            _c("Shelby H. Funk", "real-time systems; distributed systems; dependable computing"),
+        ),
+    ),
+    "Georgia State University": FacultyRoster(
+        "Department of Computer Science",
+        "https://csds.gsu.edu/directory/",
+        (
+            _c("Zhipeng Cai", "privacy and security; networking; trustworthy machine learning"),
+            _c("Ashwin Ashok", "networked sensing; mobile systems; dependable computing"),
+            _c("Esra Akbas", "data mining; graph learning; trustworthy data analysis"),
+            _c("Yingshu Li", "distributed computing; wireless networks; privacy and security"),
+        ),
+    ),
+    "University of South Carolina-Columbia": FacultyRoster(
+        "Department of Computer Science and Engineering",
+        "https://www.cse.sc.edu/isl/people",
+        (
+            _c("Csilla Farkas", "data security; privacy; provenance; information assurance"),
+            _c("Biplav Srivastava", "trustworthy artificial intelligence; planning; responsible systems"),
+            _c("Stephen A. Fenner", "algorithms; cryptography; theoretical computer science"),
+            _c("Peng Fu", "programming languages; formal methods; software verification"),
+        ),
+    ),
+    "University of Nevada-Reno": FacultyRoster(
+        "Department of Computer Science and Engineering",
+        "https://www.unr.edu/cse/people",
+        (
+            _c("Fred Harris, Jr.", "software systems; data infrastructure; scientific computing"),
+            _c("Lei Yang", "data and software systems; networked systems; computing infrastructure"),
+            _c("Shamik Sengupta", "cybersecurity; wireless networks; dependable systems"),
+            _c("Niusen Chen", "cybersecurity; network systems; trustworthy computing"),
+        ),
+    ),
 }
