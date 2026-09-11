@@ -1,7 +1,7 @@
 {
   "schema_version": "2.0",
   "portfolio_version": "pass2-stage6-v1",
-  "generated_at": "2026-09-11T13:21:45.467912+00:00",
+  "generated_at": "2026-09-11T14:27:17.089371+00:00",
   "generated_by": "graduate_audit.portfolio_pressure:v1",
   "decision": "RETURN_TO_CANDIDATE_DISCOVERY",
   "policy": {
@@ -42,28 +42,28 @@
       }
     },
     "all_program_dispositions": {
-      "total": 143,
+      "total": 151,
       "by_degree_type": {
         "Direct-entry PhD": 4,
         "Integrated or structured doctorate": 3,
         "MASc": 2,
-        "PhD": 108,
-        "Thesis or research master's": 26
+        "PhD": 114,
+        "Thesis or research master's": 28
       },
       "by_region": {
-        "canada": 29,
+        "canada": 31,
         "europe": 12,
-        "us": 102
+        "us": 108
       },
       "by_funding_type": {
         "no verified material support": 10,
-        "official evidence below hard-gate standard": 103,
+        "official evidence below hard-gate standard": 111,
         "verified comprehensive support": 6,
         "verified support with material cost gaps": 24
       },
       "by_plausibility_category": {
-        "Eligibility concern": 15,
-        "Insufficient evidence": 128
+        "Eligibility concern": 21,
+        "Insufficient evidence": 130
       }
     }
   },
@@ -6940,6 +6940,294 @@
             "scoreev:c19f3b50b224c1ac",
             "scoreev:d3dd92e0eab0a593",
             "scoreev:99d3cb82ec31b0ae"
+          ]
+        }
+      ]
+    },
+    {
+      "institution_id": "us:ipeds:171128",
+      "institution_name": "Michigan Technological University",
+      "program_id": "us:ipeds:171128:program:phd:computer-science-phd",
+      "program_name": "Computer Science, PhD",
+      "degree_type": "PhD",
+      "region": "us",
+      "official_program_url": "https://www.mtu.edu/gradschool/programs/degrees/computer-science/",
+      "portfolio_status": "do_not_apply",
+      "is_primary_program": true,
+      "second_program_rule_verified": false,
+      "overall_score": 58,
+      "evidence_rank": "",
+      "funding_type": "official evidence below hard-gate standard",
+      "admission_plausibility": "Insufficient evidence",
+      "all_hard_gates_pass": false,
+      "hard_gate_failures": [
+        "funding"
+      ],
+      "distinct_verified_strong_matches": 1,
+      "application_fee": "10 for international applicants on the current admissions page",
+      "fee_currency": "USD",
+      "simultaneous_application_rules": "Not published",
+      "selection_rationale": "Failed hard gates: funding.",
+      "unresolved_conflicts": "Will the actual assistantship offer provide renewable academic-year and summer support after fees and insurance? | Single-professor dependency. | Official funding evidence exists but does not prove a credible program-wide package or full scholarship. | Applicable waiver or final Fall 2027 cost is not guaranteed.",
+      "score_evidence_ids": [
+        "scoreev:be332bcc02731825",
+        "scoreev:4fb7c751cfc18753",
+        "scoreev:2d12e2c206aa0068",
+        "scoreev:8ccb116eff891e9c",
+        "scoreev:1e98b91a184a3ec5",
+        "scoreev:99db2109e61d80bc"
+      ],
+      "pressure_test_answers": [
+        {
+          "question_number": 1,
+          "question": "Is there at least one genuinely relevant research program?",
+          "assessment": "pass",
+          "answer": "Yes—the exact research route and compatible degree structure are verified.",
+          "evidence_ids": [
+            "scoreev:1e98b91a184a3ec5"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question": "Are there current, verified professor matches?",
+          "assessment": "pass",
+          "answer": "Yes—at least one current professor clears the appointment, supervision-authority, fit, and recent-work gates.",
+          "evidence_ids": [
+            "scoreev:be332bcc02731825"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question": "Is the department deeper than a single professor, or is that dependency worth the risk?",
+          "assessment": "risk",
+          "answer": "No—only one verified strong professor is recorded. The dependency is not worth application commitment until current availability or a second match is verified.",
+          "evidence_ids": [
+            "scoreev:4fb7c751cfc18753",
+            "scoreev:be332bcc02731825"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question": "Is funding credible for this applicant and degree type?",
+          "assessment": "fail",
+          "answer": "No—direct official evidence does not establish a credible package for this program and degree type.",
+          "evidence_ids": [
+            "scoreev:2d12e2c206aa0068"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question": "Is the applicant formally eligible?",
+          "assessment": "pass",
+          "answer": "Yes—formal eligibility clears the verified gate.",
+          "evidence_ids": [
+            "scoreev:8ccb116eff891e9c"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question": "What evidence supports the strategic plausibility category?",
+          "assessment": "unresolved",
+          "answer": "Category: Insufficient evidence. Published minimums and formal eligibility do not calibrate admission chances; no official cohort/selectivity evidence is recorded.",
+          "evidence_ids": [
+            "scoreev:8ccb116eff891e9c",
+            "scoreev:1e98b91a184a3ec5"
+          ]
+        },
+        {
+          "question_number": 7,
+          "question": "Would the applicant prefer this opportunity over another already retained?",
+          "assessment": "fail",
+          "answer": "No—a program that fails a hard gate should not displace a hard-gate-clearing option.",
+          "evidence_ids": [
+            "scoreev:be332bcc02731825",
+            "scoreev:4fb7c751cfc18753",
+            "scoreev:2d12e2c206aa0068",
+            "scoreev:8ccb116eff891e9c",
+            "scoreev:1e98b91a184a3ec5",
+            "scoreev:99db2109e61d80bc"
+          ]
+        },
+        {
+          "question_number": 8,
+          "question": "Is the application fee and effort justified?",
+          "assessment": "fail",
+          "answer": "No—the application fee and effort are not justified while a hard gate fails.",
+          "evidence_ids": [
+            "scoreev:99db2109e61d80bc",
+            "scoreev:2d12e2c206aa0068"
+          ]
+        },
+        {
+          "question_number": 9,
+          "question": "Could one professor or administrator reply materially change the decision?",
+          "assessment": "yes",
+          "answer": "Yes—a verified-fit professor confirming supervision availability or an additional current supervisor; a program administrator supplying direct program-wide funding terms; the program supplying official cohort/selectivity or applicant-profile context could materially change the disposition.",
+          "evidence_ids": [
+            "scoreev:be332bcc02731825",
+            "scoreev:4fb7c751cfc18753",
+            "scoreev:2d12e2c206aa0068",
+            "scoreev:8ccb116eff891e9c",
+            "scoreev:1e98b91a184a3ec5",
+            "scoreev:99db2109e61d80bc"
+          ]
+        },
+        {
+          "question_number": 10,
+          "question": "What new evidence would cause the recommendation to change?",
+          "assessment": "actionable",
+          "answer": "Direct official evidence must resolve every failed hard gate (funding) before reconsideration.",
+          "evidence_ids": [
+            "scoreev:be332bcc02731825",
+            "scoreev:4fb7c751cfc18753",
+            "scoreev:2d12e2c206aa0068",
+            "scoreev:8ccb116eff891e9c",
+            "scoreev:1e98b91a184a3ec5",
+            "scoreev:99db2109e61d80bc"
+          ]
+        }
+      ]
+    },
+    {
+      "institution_id": "us:ipeds:187967",
+      "institution_name": "New Mexico Institute of Mining and Technology",
+      "program_id": "us:ipeds:187967:program:phd:doctor-of-philosophy-in-computer-science",
+      "program_name": "Doctor of Philosophy in Computer Science",
+      "degree_type": "PhD",
+      "region": "us",
+      "official_program_url": "https://www.nmt.edu/academics/compsci/graduate.php",
+      "portfolio_status": "do_not_apply",
+      "is_primary_program": true,
+      "second_program_rule_verified": false,
+      "overall_score": 58,
+      "evidence_rank": "",
+      "funding_type": "official evidence below hard-gate standard",
+      "admission_plausibility": "Insufficient evidence",
+      "all_hard_gates_pass": false,
+      "hard_gate_failures": [
+        "funding"
+      ],
+      "distinct_verified_strong_matches": 1,
+      "application_fee": "60",
+      "fee_currency": "USD",
+      "simultaneous_application_rules": "Not published",
+      "selection_rationale": "Failed hard gates: funding.",
+      "unresolved_conflicts": "Will NMT issue a renewable 0.5 FTE appointment whose stipend and tuition remission also cover fees, insurance, and summer needs? | Single-professor dependency. | Official funding evidence exists but does not prove a credible program-wide package or full scholarship. | Applicable waiver or final Fall 2027 cost is not guaranteed.",
+      "score_evidence_ids": [
+        "scoreev:f4635d0109d421fe",
+        "scoreev:a2b0eb8bd3650eab",
+        "scoreev:bcc75a913e2f968b",
+        "scoreev:e6d2e3dedbfa41a3",
+        "scoreev:beebcde05d8ec57b",
+        "scoreev:ef20a8783f6c2dc7"
+      ],
+      "pressure_test_answers": [
+        {
+          "question_number": 1,
+          "question": "Is there at least one genuinely relevant research program?",
+          "assessment": "pass",
+          "answer": "Yes—the exact research route and compatible degree structure are verified.",
+          "evidence_ids": [
+            "scoreev:beebcde05d8ec57b"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question": "Are there current, verified professor matches?",
+          "assessment": "pass",
+          "answer": "Yes—at least one current professor clears the appointment, supervision-authority, fit, and recent-work gates.",
+          "evidence_ids": [
+            "scoreev:f4635d0109d421fe"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question": "Is the department deeper than a single professor, or is that dependency worth the risk?",
+          "assessment": "risk",
+          "answer": "No—only one verified strong professor is recorded. The dependency is not worth application commitment until current availability or a second match is verified.",
+          "evidence_ids": [
+            "scoreev:a2b0eb8bd3650eab",
+            "scoreev:f4635d0109d421fe"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question": "Is funding credible for this applicant and degree type?",
+          "assessment": "fail",
+          "answer": "No—direct official evidence does not establish a credible package for this program and degree type.",
+          "evidence_ids": [
+            "scoreev:bcc75a913e2f968b"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question": "Is the applicant formally eligible?",
+          "assessment": "pass",
+          "answer": "Yes—formal eligibility clears the verified gate.",
+          "evidence_ids": [
+            "scoreev:e6d2e3dedbfa41a3"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question": "What evidence supports the strategic plausibility category?",
+          "assessment": "unresolved",
+          "answer": "Category: Insufficient evidence. Published minimums and formal eligibility do not calibrate admission chances; no official cohort/selectivity evidence is recorded.",
+          "evidence_ids": [
+            "scoreev:e6d2e3dedbfa41a3",
+            "scoreev:beebcde05d8ec57b"
+          ]
+        },
+        {
+          "question_number": 7,
+          "question": "Would the applicant prefer this opportunity over another already retained?",
+          "assessment": "fail",
+          "answer": "No—a program that fails a hard gate should not displace a hard-gate-clearing option.",
+          "evidence_ids": [
+            "scoreev:f4635d0109d421fe",
+            "scoreev:a2b0eb8bd3650eab",
+            "scoreev:bcc75a913e2f968b",
+            "scoreev:e6d2e3dedbfa41a3",
+            "scoreev:beebcde05d8ec57b",
+            "scoreev:ef20a8783f6c2dc7"
+          ]
+        },
+        {
+          "question_number": 8,
+          "question": "Is the application fee and effort justified?",
+          "assessment": "fail",
+          "answer": "No—the application fee and effort are not justified while a hard gate fails.",
+          "evidence_ids": [
+            "scoreev:ef20a8783f6c2dc7",
+            "scoreev:bcc75a913e2f968b"
+          ]
+        },
+        {
+          "question_number": 9,
+          "question": "Could one professor or administrator reply materially change the decision?",
+          "assessment": "yes",
+          "answer": "Yes—a verified-fit professor confirming supervision availability or an additional current supervisor; a program administrator supplying direct program-wide funding terms; the program supplying official cohort/selectivity or applicant-profile context could materially change the disposition.",
+          "evidence_ids": [
+            "scoreev:f4635d0109d421fe",
+            "scoreev:a2b0eb8bd3650eab",
+            "scoreev:bcc75a913e2f968b",
+            "scoreev:e6d2e3dedbfa41a3",
+            "scoreev:beebcde05d8ec57b",
+            "scoreev:ef20a8783f6c2dc7"
+          ]
+        },
+        {
+          "question_number": 10,
+          "question": "What new evidence would cause the recommendation to change?",
+          "assessment": "actionable",
+          "answer": "Direct official evidence must resolve every failed hard gate (funding) before reconsideration.",
+          "evidence_ids": [
+            "scoreev:f4635d0109d421fe",
+            "scoreev:a2b0eb8bd3650eab",
+            "scoreev:bcc75a913e2f968b",
+            "scoreev:e6d2e3dedbfa41a3",
+            "scoreev:beebcde05d8ec57b",
+            "scoreev:ef20a8783f6c2dc7"
           ]
         }
       ]
@@ -16309,6 +16597,296 @@
       ]
     },
     {
+      "institution_id": "us:ipeds:207971",
+      "institution_name": "University of Tulsa",
+      "program_id": "us:ipeds:207971:program:phd:computer-science-ph-d",
+      "program_name": "Computer Science, Ph.D.",
+      "degree_type": "PhD",
+      "region": "us",
+      "official_program_url": "https://utulsa.edu/programs/computer-science/",
+      "portfolio_status": "do_not_apply",
+      "is_primary_program": true,
+      "second_program_rule_verified": false,
+      "overall_score": 53,
+      "evidence_rank": "",
+      "funding_type": "official evidence below hard-gate standard",
+      "admission_plausibility": "Eligibility concern",
+      "all_hard_gates_pass": false,
+      "hard_gate_failures": [
+        "funding",
+        "eligibility"
+      ],
+      "distinct_verified_strong_matches": 1,
+      "application_fee": "60",
+      "fee_currency": "USD",
+      "simultaneous_application_rules": "Not published",
+      "selection_rationale": "Failed hard gates: funding, eligibility.",
+      "unresolved_conflicts": "Will Tandy confirm direct bachelor's eligibility and the applicant's exact prerequisite fit for the CS PhD? | Single-professor dependency. | Official funding evidence exists but does not prove a credible program-wide package or full scholarship. | Applicable waiver or final Fall 2027 cost is not guaranteed.",
+      "score_evidence_ids": [
+        "scoreev:7cbc0dd94959748e",
+        "scoreev:c29da124ac78e4ef",
+        "scoreev:e1f7b797c461b2c2",
+        "scoreev:5b75f7d5081201b5",
+        "scoreev:e9166981b933b612",
+        "scoreev:7293093ebc3de67a"
+      ],
+      "pressure_test_answers": [
+        {
+          "question_number": 1,
+          "question": "Is there at least one genuinely relevant research program?",
+          "assessment": "pass",
+          "answer": "Yes—the exact research route and compatible degree structure are verified.",
+          "evidence_ids": [
+            "scoreev:e9166981b933b612"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question": "Are there current, verified professor matches?",
+          "assessment": "pass",
+          "answer": "Yes—at least one current professor clears the appointment, supervision-authority, fit, and recent-work gates.",
+          "evidence_ids": [
+            "scoreev:7cbc0dd94959748e"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question": "Is the department deeper than a single professor, or is that dependency worth the risk?",
+          "assessment": "risk",
+          "answer": "No—only one verified strong professor is recorded. The dependency is not worth application commitment until current availability or a second match is verified.",
+          "evidence_ids": [
+            "scoreev:c29da124ac78e4ef",
+            "scoreev:7cbc0dd94959748e"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question": "Is funding credible for this applicant and degree type?",
+          "assessment": "fail",
+          "answer": "No—direct official evidence does not establish a credible package for this program and degree type.",
+          "evidence_ids": [
+            "scoreev:e1f7b797c461b2c2"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question": "Is the applicant formally eligible?",
+          "assessment": "fail",
+          "answer": "No—formal eligibility is unresolved or fails the verified gate.",
+          "evidence_ids": [
+            "scoreev:5b75f7d5081201b5"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question": "What evidence supports the strategic plausibility category?",
+          "assessment": "fail",
+          "answer": "Category: Eligibility concern. Will Tandy confirm direct bachelor's eligibility and the applicant's exact prerequisite fit for the CS PhD?",
+          "evidence_ids": [
+            "scoreev:5b75f7d5081201b5",
+            "scoreev:e9166981b933b612"
+          ]
+        },
+        {
+          "question_number": 7,
+          "question": "Would the applicant prefer this opportunity over another already retained?",
+          "assessment": "fail",
+          "answer": "No—a program that fails a hard gate should not displace a hard-gate-clearing option.",
+          "evidence_ids": [
+            "scoreev:7cbc0dd94959748e",
+            "scoreev:c29da124ac78e4ef",
+            "scoreev:e1f7b797c461b2c2",
+            "scoreev:5b75f7d5081201b5",
+            "scoreev:e9166981b933b612",
+            "scoreev:7293093ebc3de67a"
+          ]
+        },
+        {
+          "question_number": 8,
+          "question": "Is the application fee and effort justified?",
+          "assessment": "fail",
+          "answer": "No—the application fee and effort are not justified while a hard gate fails.",
+          "evidence_ids": [
+            "scoreev:7293093ebc3de67a",
+            "scoreev:e1f7b797c461b2c2"
+          ]
+        },
+        {
+          "question_number": 9,
+          "question": "Could one professor or administrator reply materially change the decision?",
+          "assessment": "yes",
+          "answer": "Yes—a verified-fit professor confirming supervision availability or an additional current supervisor; a program administrator supplying direct program-wide funding terms; admissions confirming formal eligibility could materially change the disposition.",
+          "evidence_ids": [
+            "scoreev:7cbc0dd94959748e",
+            "scoreev:c29da124ac78e4ef",
+            "scoreev:e1f7b797c461b2c2",
+            "scoreev:5b75f7d5081201b5",
+            "scoreev:e9166981b933b612",
+            "scoreev:7293093ebc3de67a"
+          ]
+        },
+        {
+          "question_number": 10,
+          "question": "What new evidence would cause the recommendation to change?",
+          "assessment": "actionable",
+          "answer": "Direct official evidence must resolve every failed hard gate (funding, eligibility) before reconsideration.",
+          "evidence_ids": [
+            "scoreev:7cbc0dd94959748e",
+            "scoreev:c29da124ac78e4ef",
+            "scoreev:e1f7b797c461b2c2",
+            "scoreev:5b75f7d5081201b5",
+            "scoreev:e9166981b933b612",
+            "scoreev:7293093ebc3de67a"
+          ]
+        }
+      ]
+    },
+    {
+      "institution_id": "us:ipeds:133669",
+      "institution_name": "Florida Atlantic University",
+      "program_id": "us:ipeds:133669:program:phd:doctor-of-philosophy-with-major-in-computer-science",
+      "program_name": "Doctor of Philosophy with Major in Computer Science",
+      "degree_type": "PhD",
+      "region": "us",
+      "official_program_url": "https://www.fau.edu/engineering/eecs/graduate/phd/computer-science/",
+      "portfolio_status": "do_not_apply",
+      "is_primary_program": true,
+      "second_program_rule_verified": false,
+      "overall_score": 50,
+      "evidence_rank": "",
+      "funding_type": "official evidence below hard-gate standard",
+      "admission_plausibility": "Eligibility concern",
+      "all_hard_gates_pass": false,
+      "hard_gate_failures": [
+        "funding",
+        "eligibility"
+      ],
+      "distinct_verified_strong_matches": 1,
+      "application_fee": "Not verified on the official pages checked",
+      "fee_currency": "USD",
+      "simultaneous_application_rules": "Not published",
+      "selection_rationale": "Failed hard gates: funding, eligibility.",
+      "unresolved_conflicts": "Does FAU permit this international applicant with a U.S. computer science bachelor's but no master's to enter the direct BS-to-PhD route? | Single-professor dependency. | Official funding evidence exists but does not prove a credible program-wide package or full scholarship. | Fee is high or the applicable Fall 2027 amount/waiver remains unverified.",
+      "score_evidence_ids": [
+        "scoreev:6fa79d81dad94ab9",
+        "scoreev:4bd8dfca0c2ddb2e",
+        "scoreev:9c921b66d2d14014",
+        "scoreev:181ee6432e1f954a",
+        "scoreev:f31dc64ddd715b8e",
+        "scoreev:04a58d91a119202d"
+      ],
+      "pressure_test_answers": [
+        {
+          "question_number": 1,
+          "question": "Is there at least one genuinely relevant research program?",
+          "assessment": "pass",
+          "answer": "Yes—the exact research route and compatible degree structure are verified.",
+          "evidence_ids": [
+            "scoreev:f31dc64ddd715b8e"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question": "Are there current, verified professor matches?",
+          "assessment": "pass",
+          "answer": "Yes—at least one current professor clears the appointment, supervision-authority, fit, and recent-work gates.",
+          "evidence_ids": [
+            "scoreev:6fa79d81dad94ab9"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question": "Is the department deeper than a single professor, or is that dependency worth the risk?",
+          "assessment": "risk",
+          "answer": "No—only one verified strong professor is recorded. The dependency is not worth application commitment until current availability or a second match is verified.",
+          "evidence_ids": [
+            "scoreev:4bd8dfca0c2ddb2e",
+            "scoreev:6fa79d81dad94ab9"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question": "Is funding credible for this applicant and degree type?",
+          "assessment": "fail",
+          "answer": "No—direct official evidence does not establish a credible package for this program and degree type.",
+          "evidence_ids": [
+            "scoreev:9c921b66d2d14014"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question": "Is the applicant formally eligible?",
+          "assessment": "fail",
+          "answer": "No—formal eligibility is unresolved or fails the verified gate.",
+          "evidence_ids": [
+            "scoreev:181ee6432e1f954a"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question": "What evidence supports the strategic plausibility category?",
+          "assessment": "fail",
+          "answer": "Category: Eligibility concern. Does FAU permit this international applicant with a U.S. computer science bachelor's but no master's to enter the direct BS-to-PhD route?",
+          "evidence_ids": [
+            "scoreev:181ee6432e1f954a",
+            "scoreev:f31dc64ddd715b8e"
+          ]
+        },
+        {
+          "question_number": 7,
+          "question": "Would the applicant prefer this opportunity over another already retained?",
+          "assessment": "fail",
+          "answer": "No—a program that fails a hard gate should not displace a hard-gate-clearing option.",
+          "evidence_ids": [
+            "scoreev:6fa79d81dad94ab9",
+            "scoreev:4bd8dfca0c2ddb2e",
+            "scoreev:9c921b66d2d14014",
+            "scoreev:181ee6432e1f954a",
+            "scoreev:f31dc64ddd715b8e",
+            "scoreev:04a58d91a119202d"
+          ]
+        },
+        {
+          "question_number": 8,
+          "question": "Is the application fee and effort justified?",
+          "assessment": "fail",
+          "answer": "No—the application fee and effort are not justified while a hard gate fails.",
+          "evidence_ids": [
+            "scoreev:04a58d91a119202d",
+            "scoreev:9c921b66d2d14014"
+          ]
+        },
+        {
+          "question_number": 9,
+          "question": "Could one professor or administrator reply materially change the decision?",
+          "assessment": "yes",
+          "answer": "Yes—a verified-fit professor confirming supervision availability or an additional current supervisor; a program administrator supplying direct program-wide funding terms; admissions confirming formal eligibility could materially change the disposition.",
+          "evidence_ids": [
+            "scoreev:6fa79d81dad94ab9",
+            "scoreev:4bd8dfca0c2ddb2e",
+            "scoreev:9c921b66d2d14014",
+            "scoreev:181ee6432e1f954a",
+            "scoreev:f31dc64ddd715b8e",
+            "scoreev:04a58d91a119202d"
+          ]
+        },
+        {
+          "question_number": 10,
+          "question": "What new evidence would cause the recommendation to change?",
+          "assessment": "actionable",
+          "answer": "Direct official evidence must resolve every failed hard gate (funding, eligibility) before reconsideration.",
+          "evidence_ids": [
+            "scoreev:6fa79d81dad94ab9",
+            "scoreev:4bd8dfca0c2ddb2e",
+            "scoreev:9c921b66d2d14014",
+            "scoreev:181ee6432e1f954a",
+            "scoreev:f31dc64ddd715b8e",
+            "scoreev:04a58d91a119202d"
+          ]
+        }
+      ]
+    },
+    {
       "institution_id": "ca:dli:O19315945002",
       "institution_name": "Ontario Tech University",
       "program_id": "ca:dli:O19315945002:program:thesis-or-research-master-s:software-engineering-masc",
@@ -17034,6 +17612,296 @@
       ]
     },
     {
+      "institution_id": "ca:dli:O19375892122",
+      "institution_name": "Western University",
+      "program_id": "ca:dli:O19375892122:program:thesis-or-research-master-s:master-of-engineering-science-mesc-in-electrical-and-computer-engineering",
+      "program_name": "Master of Engineering Science (MESc) in Electrical and Computer Engineering",
+      "degree_type": "Thesis or research master's",
+      "region": "canada",
+      "official_program_url": "https://www.eng.uwo.ca/graduate/future-students/Graduate-Degree-Programs/electrical-computer.html",
+      "portfolio_status": "do_not_apply",
+      "is_primary_program": true,
+      "second_program_rule_verified": false,
+      "overall_score": 50,
+      "evidence_rank": "",
+      "funding_type": "official evidence below hard-gate standard",
+      "admission_plausibility": "Eligibility concern",
+      "all_hard_gates_pass": false,
+      "hard_gate_failures": [
+        "funding",
+        "eligibility"
+      ],
+      "distinct_verified_strong_matches": 1,
+      "application_fee": "Not verified for this program",
+      "fee_currency": "CAD",
+      "simultaneous_application_rules": "Not published",
+      "selection_rationale": "Failed hard gates: funding, eligibility.",
+      "unresolved_conflicts": "Will ECE accept the applicant's computer science bachelor's as similar preparation and identify a fundable supervisor? | Single-professor dependency. | Official funding evidence exists but does not prove a credible program-wide package or full scholarship. | Fee is high or the applicable Fall 2027 amount/waiver remains unverified.",
+      "score_evidence_ids": [
+        "scoreev:0adb95ec016e397a",
+        "scoreev:add6667ec0da745b",
+        "scoreev:58c503537c0a88f4",
+        "scoreev:40b63d2b4cb88781",
+        "scoreev:3ea87947f080d736",
+        "scoreev:9d2f9ead090a54b6"
+      ],
+      "pressure_test_answers": [
+        {
+          "question_number": 1,
+          "question": "Is there at least one genuinely relevant research program?",
+          "assessment": "pass",
+          "answer": "Yes—the exact research route and compatible degree structure are verified.",
+          "evidence_ids": [
+            "scoreev:3ea87947f080d736"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question": "Are there current, verified professor matches?",
+          "assessment": "pass",
+          "answer": "Yes—at least one current professor clears the appointment, supervision-authority, fit, and recent-work gates.",
+          "evidence_ids": [
+            "scoreev:0adb95ec016e397a"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question": "Is the department deeper than a single professor, or is that dependency worth the risk?",
+          "assessment": "risk",
+          "answer": "No—only one verified strong professor is recorded. The dependency is not worth application commitment until current availability or a second match is verified.",
+          "evidence_ids": [
+            "scoreev:add6667ec0da745b",
+            "scoreev:0adb95ec016e397a"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question": "Is funding credible for this applicant and degree type?",
+          "assessment": "fail",
+          "answer": "No—direct official evidence does not establish a credible package for this program and degree type.",
+          "evidence_ids": [
+            "scoreev:58c503537c0a88f4"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question": "Is the applicant formally eligible?",
+          "assessment": "fail",
+          "answer": "No—formal eligibility is unresolved or fails the verified gate.",
+          "evidence_ids": [
+            "scoreev:40b63d2b4cb88781"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question": "What evidence supports the strategic plausibility category?",
+          "assessment": "fail",
+          "answer": "Category: Eligibility concern. Will ECE accept the applicant's computer science bachelor's as similar preparation and identify a fundable supervisor?",
+          "evidence_ids": [
+            "scoreev:40b63d2b4cb88781",
+            "scoreev:3ea87947f080d736"
+          ]
+        },
+        {
+          "question_number": 7,
+          "question": "Would the applicant prefer this opportunity over another already retained?",
+          "assessment": "fail",
+          "answer": "No—a program that fails a hard gate should not displace a hard-gate-clearing option.",
+          "evidence_ids": [
+            "scoreev:0adb95ec016e397a",
+            "scoreev:add6667ec0da745b",
+            "scoreev:58c503537c0a88f4",
+            "scoreev:40b63d2b4cb88781",
+            "scoreev:3ea87947f080d736",
+            "scoreev:9d2f9ead090a54b6"
+          ]
+        },
+        {
+          "question_number": 8,
+          "question": "Is the application fee and effort justified?",
+          "assessment": "fail",
+          "answer": "No—the application fee and effort are not justified while a hard gate fails.",
+          "evidence_ids": [
+            "scoreev:9d2f9ead090a54b6",
+            "scoreev:58c503537c0a88f4"
+          ]
+        },
+        {
+          "question_number": 9,
+          "question": "Could one professor or administrator reply materially change the decision?",
+          "assessment": "yes",
+          "answer": "Yes—a verified-fit professor confirming supervision availability or an additional current supervisor; a program administrator supplying direct program-wide funding terms; admissions confirming formal eligibility could materially change the disposition.",
+          "evidence_ids": [
+            "scoreev:0adb95ec016e397a",
+            "scoreev:add6667ec0da745b",
+            "scoreev:58c503537c0a88f4",
+            "scoreev:40b63d2b4cb88781",
+            "scoreev:3ea87947f080d736",
+            "scoreev:9d2f9ead090a54b6"
+          ]
+        },
+        {
+          "question_number": 10,
+          "question": "What new evidence would cause the recommendation to change?",
+          "assessment": "actionable",
+          "answer": "Direct official evidence must resolve every failed hard gate (funding, eligibility) before reconsideration.",
+          "evidence_ids": [
+            "scoreev:0adb95ec016e397a",
+            "scoreev:add6667ec0da745b",
+            "scoreev:58c503537c0a88f4",
+            "scoreev:40b63d2b4cb88781",
+            "scoreev:3ea87947f080d736",
+            "scoreev:9d2f9ead090a54b6"
+          ]
+        }
+      ]
+    },
+    {
+      "institution_id": "us:ipeds:149222",
+      "institution_name": "Southern Illinois University-Carbondale",
+      "program_id": "us:ipeds:149222:program:phd:computer-science-doctor-of-philosophy",
+      "program_name": "Computer Science, Doctor of Philosophy",
+      "degree_type": "PhD",
+      "region": "us",
+      "official_program_url": "https://academics.siu.edu/computing-and-technology/computer-science/doctoral/",
+      "portfolio_status": "do_not_apply",
+      "is_primary_program": true,
+      "second_program_rule_verified": false,
+      "overall_score": 48,
+      "evidence_rank": "",
+      "funding_type": "official evidence below hard-gate standard",
+      "admission_plausibility": "Eligibility concern",
+      "all_hard_gates_pass": false,
+      "hard_gate_failures": [
+        "funding",
+        "eligibility"
+      ],
+      "distinct_verified_strong_matches": 1,
+      "application_fee": "65",
+      "fee_currency": "USD",
+      "simultaneous_application_rules": "Not published",
+      "selection_rationale": "Failed hard gates: funding, eligibility.",
+      "unresolved_conflicts": "Will SIU classify this 3.35-GPA bachelor's applicant as exceptional and admit them directly without a master's? | Single-professor dependency. | Official funding evidence exists but does not prove a credible program-wide package or full scholarship. | Applicable waiver or final Fall 2027 cost is not guaranteed.",
+      "score_evidence_ids": [
+        "scoreev:7c55224011de707e",
+        "scoreev:07f73ee13f4158cf",
+        "scoreev:17744c9a84fbfd7f",
+        "scoreev:d568c717f3a5c0ce",
+        "scoreev:e08fe274c3179231",
+        "scoreev:0e0f4ba9462521ba"
+      ],
+      "pressure_test_answers": [
+        {
+          "question_number": 1,
+          "question": "Is there at least one genuinely relevant research program?",
+          "assessment": "pass",
+          "answer": "Yes—the exact research route and compatible degree structure are verified.",
+          "evidence_ids": [
+            "scoreev:e08fe274c3179231"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question": "Are there current, verified professor matches?",
+          "assessment": "pass",
+          "answer": "Yes—at least one current professor clears the appointment, supervision-authority, fit, and recent-work gates.",
+          "evidence_ids": [
+            "scoreev:7c55224011de707e"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question": "Is the department deeper than a single professor, or is that dependency worth the risk?",
+          "assessment": "risk",
+          "answer": "No—only one verified strong professor is recorded. The dependency is not worth application commitment until current availability or a second match is verified.",
+          "evidence_ids": [
+            "scoreev:07f73ee13f4158cf",
+            "scoreev:7c55224011de707e"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question": "Is funding credible for this applicant and degree type?",
+          "assessment": "fail",
+          "answer": "No—direct official evidence does not establish a credible package for this program and degree type.",
+          "evidence_ids": [
+            "scoreev:17744c9a84fbfd7f"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question": "Is the applicant formally eligible?",
+          "assessment": "fail",
+          "answer": "No—formal eligibility is unresolved or fails the verified gate.",
+          "evidence_ids": [
+            "scoreev:d568c717f3a5c0ce"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question": "What evidence supports the strategic plausibility category?",
+          "assessment": "fail",
+          "answer": "Category: Eligibility concern. Will SIU classify this 3.35-GPA bachelor's applicant as exceptional and admit them directly without a master's?",
+          "evidence_ids": [
+            "scoreev:d568c717f3a5c0ce",
+            "scoreev:e08fe274c3179231"
+          ]
+        },
+        {
+          "question_number": 7,
+          "question": "Would the applicant prefer this opportunity over another already retained?",
+          "assessment": "fail",
+          "answer": "No—a program that fails a hard gate should not displace a hard-gate-clearing option.",
+          "evidence_ids": [
+            "scoreev:7c55224011de707e",
+            "scoreev:07f73ee13f4158cf",
+            "scoreev:17744c9a84fbfd7f",
+            "scoreev:d568c717f3a5c0ce",
+            "scoreev:e08fe274c3179231",
+            "scoreev:0e0f4ba9462521ba"
+          ]
+        },
+        {
+          "question_number": 8,
+          "question": "Is the application fee and effort justified?",
+          "assessment": "fail",
+          "answer": "No—the application fee and effort are not justified while a hard gate fails.",
+          "evidence_ids": [
+            "scoreev:0e0f4ba9462521ba",
+            "scoreev:17744c9a84fbfd7f"
+          ]
+        },
+        {
+          "question_number": 9,
+          "question": "Could one professor or administrator reply materially change the decision?",
+          "assessment": "yes",
+          "answer": "Yes—a verified-fit professor confirming supervision availability or an additional current supervisor; a program administrator supplying direct program-wide funding terms; admissions confirming formal eligibility could materially change the disposition.",
+          "evidence_ids": [
+            "scoreev:7c55224011de707e",
+            "scoreev:07f73ee13f4158cf",
+            "scoreev:17744c9a84fbfd7f",
+            "scoreev:d568c717f3a5c0ce",
+            "scoreev:e08fe274c3179231",
+            "scoreev:0e0f4ba9462521ba"
+          ]
+        },
+        {
+          "question_number": 10,
+          "question": "What new evidence would cause the recommendation to change?",
+          "assessment": "actionable",
+          "answer": "Direct official evidence must resolve every failed hard gate (funding, eligibility) before reconsideration.",
+          "evidence_ids": [
+            "scoreev:7c55224011de707e",
+            "scoreev:07f73ee13f4158cf",
+            "scoreev:17744c9a84fbfd7f",
+            "scoreev:d568c717f3a5c0ce",
+            "scoreev:e08fe274c3179231",
+            "scoreev:0e0f4ba9462521ba"
+          ]
+        }
+      ]
+    },
+    {
       "institution_id": "us:ipeds:186867",
       "institution_name": "Stevens Institute of Technology",
       "program_id": "us:ipeds:186867:program:phd:phd-in-computer-science",
@@ -17174,6 +18042,151 @@
             "scoreev:c891eb9f669e86a4",
             "scoreev:e52234e24cf5030f",
             "scoreev:a1d45969323ec4ff"
+          ]
+        }
+      ]
+    },
+    {
+      "institution_id": "us:ipeds:156125",
+      "institution_name": "Wichita State University",
+      "program_id": "us:ipeds:156125:program:phd:phd-in-electrical-engineering-and-computer-science",
+      "program_name": "PhD in Electrical Engineering and Computer Science",
+      "degree_type": "PhD",
+      "region": "us",
+      "official_program_url": "https://catalog.wichita.edu/graduate/engineering/electrical-computer-engineering/phd-in-eecs/",
+      "portfolio_status": "do_not_apply",
+      "is_primary_program": true,
+      "second_program_rule_verified": false,
+      "overall_score": 48,
+      "evidence_rank": "",
+      "funding_type": "official evidence below hard-gate standard",
+      "admission_plausibility": "Eligibility concern",
+      "all_hard_gates_pass": false,
+      "hard_gate_failures": [
+        "funding",
+        "eligibility"
+      ],
+      "distinct_verified_strong_matches": 1,
+      "application_fee": "75 by priority date, 135 by secondary date, and 175 after the secondary date in the latest published international Fall schedule",
+      "fee_currency": "USD",
+      "simultaneous_application_rules": "Not published",
+      "selection_rationale": "Failed hard gates: funding, eligibility.",
+      "unresolved_conflicts": "Will a CS-track faculty member commit to advise this bachelor's applicant and certify the record as exceptional? | Single-professor dependency. | Official funding evidence exists but does not prove a credible program-wide package or full scholarship. | Applicable waiver or final Fall 2027 cost is not guaranteed.",
+      "score_evidence_ids": [
+        "scoreev:8942f4ef7835e9ea",
+        "scoreev:35e944c7be017d81",
+        "scoreev:d434736f16edcb80",
+        "scoreev:d1833dce02331849",
+        "scoreev:79c44a5641f0ca02",
+        "scoreev:4795e8e2365ad60c"
+      ],
+      "pressure_test_answers": [
+        {
+          "question_number": 1,
+          "question": "Is there at least one genuinely relevant research program?",
+          "assessment": "pass",
+          "answer": "Yes—the exact research route and compatible degree structure are verified.",
+          "evidence_ids": [
+            "scoreev:79c44a5641f0ca02"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question": "Are there current, verified professor matches?",
+          "assessment": "pass",
+          "answer": "Yes—at least one current professor clears the appointment, supervision-authority, fit, and recent-work gates.",
+          "evidence_ids": [
+            "scoreev:8942f4ef7835e9ea"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question": "Is the department deeper than a single professor, or is that dependency worth the risk?",
+          "assessment": "risk",
+          "answer": "No—only one verified strong professor is recorded. The dependency is not worth application commitment until current availability or a second match is verified.",
+          "evidence_ids": [
+            "scoreev:35e944c7be017d81",
+            "scoreev:8942f4ef7835e9ea"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question": "Is funding credible for this applicant and degree type?",
+          "assessment": "fail",
+          "answer": "No—direct official evidence does not establish a credible package for this program and degree type.",
+          "evidence_ids": [
+            "scoreev:d434736f16edcb80"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question": "Is the applicant formally eligible?",
+          "assessment": "fail",
+          "answer": "No—formal eligibility is unresolved or fails the verified gate.",
+          "evidence_ids": [
+            "scoreev:d1833dce02331849"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question": "What evidence supports the strategic plausibility category?",
+          "assessment": "fail",
+          "answer": "Category: Eligibility concern. Will a CS-track faculty member commit to advise this bachelor's applicant and certify the record as exceptional?",
+          "evidence_ids": [
+            "scoreev:d1833dce02331849",
+            "scoreev:79c44a5641f0ca02"
+          ]
+        },
+        {
+          "question_number": 7,
+          "question": "Would the applicant prefer this opportunity over another already retained?",
+          "assessment": "fail",
+          "answer": "No—a program that fails a hard gate should not displace a hard-gate-clearing option.",
+          "evidence_ids": [
+            "scoreev:8942f4ef7835e9ea",
+            "scoreev:35e944c7be017d81",
+            "scoreev:d434736f16edcb80",
+            "scoreev:d1833dce02331849",
+            "scoreev:79c44a5641f0ca02",
+            "scoreev:4795e8e2365ad60c"
+          ]
+        },
+        {
+          "question_number": 8,
+          "question": "Is the application fee and effort justified?",
+          "assessment": "fail",
+          "answer": "No—the application fee and effort are not justified while a hard gate fails.",
+          "evidence_ids": [
+            "scoreev:4795e8e2365ad60c",
+            "scoreev:d434736f16edcb80"
+          ]
+        },
+        {
+          "question_number": 9,
+          "question": "Could one professor or administrator reply materially change the decision?",
+          "assessment": "yes",
+          "answer": "Yes—a verified-fit professor confirming supervision availability or an additional current supervisor; a program administrator supplying direct program-wide funding terms; admissions confirming formal eligibility could materially change the disposition.",
+          "evidence_ids": [
+            "scoreev:8942f4ef7835e9ea",
+            "scoreev:35e944c7be017d81",
+            "scoreev:d434736f16edcb80",
+            "scoreev:d1833dce02331849",
+            "scoreev:79c44a5641f0ca02",
+            "scoreev:4795e8e2365ad60c"
+          ]
+        },
+        {
+          "question_number": 10,
+          "question": "What new evidence would cause the recommendation to change?",
+          "assessment": "actionable",
+          "answer": "Direct official evidence must resolve every failed hard gate (funding, eligibility) before reconsideration.",
+          "evidence_ids": [
+            "scoreev:8942f4ef7835e9ea",
+            "scoreev:35e944c7be017d81",
+            "scoreev:d434736f16edcb80",
+            "scoreev:d1833dce02331849",
+            "scoreev:79c44a5641f0ca02",
+            "scoreev:4795e8e2365ad60c"
           ]
         }
       ]
@@ -17751,6 +18764,151 @@
             "scoreev:67939d2ea0d3eec3",
             "scoreev:4292ea24c3ea22e3",
             "scoreev:14ca6690402eeb11"
+          ]
+        }
+      ]
+    },
+    {
+      "institution_id": "ca:dli:O19361109242",
+      "institution_name": "York University",
+      "program_id": "ca:dli:O19361109242:program:thesis-or-research-master-s:masc-in-electrical-and-computer-engineering",
+      "program_name": "MASc in Electrical and Computer Engineering",
+      "degree_type": "Thesis or research master's",
+      "region": "canada",
+      "official_program_url": "https://futurestudents.yorku.ca/graduate/programs/electrical-engineering-and-computer-science",
+      "portfolio_status": "do_not_apply",
+      "is_primary_program": false,
+      "second_program_rule_verified": false,
+      "overall_score": 45,
+      "evidence_rank": "",
+      "funding_type": "official evidence below hard-gate standard",
+      "admission_plausibility": "Eligibility concern",
+      "all_hard_gates_pass": false,
+      "hard_gate_failures": [
+        "funding",
+        "eligibility"
+      ],
+      "distinct_verified_strong_matches": 1,
+      "application_fee": "Not verified on the official program pages checked",
+      "fee_currency": "CAD",
+      "simultaneous_application_rules": "Not published",
+      "selection_rationale": "Failed hard gates: funding, eligibility.",
+      "unresolved_conflicts": "Will York treat the applicant's CS bachelor's and senior project as equivalent to the listed engineering preparation? | Single-professor dependency. | Official funding evidence exists but does not prove a credible program-wide package or full scholarship. | Fee is high or the applicable Fall 2027 amount/waiver remains unverified.",
+      "score_evidence_ids": [
+        "scoreev:da79cca2fc213f46",
+        "scoreev:68de7a56785ed110",
+        "scoreev:b3cefe12a2d207e8",
+        "scoreev:b88c26dc68f90c73",
+        "scoreev:df6b0babe8917b04",
+        "scoreev:c212df869a7ef2cf"
+      ],
+      "pressure_test_answers": [
+        {
+          "question_number": 1,
+          "question": "Is there at least one genuinely relevant research program?",
+          "assessment": "pass",
+          "answer": "Yes—the exact research route and compatible degree structure are verified.",
+          "evidence_ids": [
+            "scoreev:df6b0babe8917b04"
+          ]
+        },
+        {
+          "question_number": 2,
+          "question": "Are there current, verified professor matches?",
+          "assessment": "pass",
+          "answer": "Yes—at least one current professor clears the appointment, supervision-authority, fit, and recent-work gates.",
+          "evidence_ids": [
+            "scoreev:da79cca2fc213f46"
+          ]
+        },
+        {
+          "question_number": 3,
+          "question": "Is the department deeper than a single professor, or is that dependency worth the risk?",
+          "assessment": "risk",
+          "answer": "No—only one verified strong professor is recorded. The dependency is not worth application commitment until current availability or a second match is verified.",
+          "evidence_ids": [
+            "scoreev:68de7a56785ed110",
+            "scoreev:da79cca2fc213f46"
+          ]
+        },
+        {
+          "question_number": 4,
+          "question": "Is funding credible for this applicant and degree type?",
+          "assessment": "fail",
+          "answer": "No—direct official evidence does not establish a credible package for this program and degree type.",
+          "evidence_ids": [
+            "scoreev:b3cefe12a2d207e8"
+          ]
+        },
+        {
+          "question_number": 5,
+          "question": "Is the applicant formally eligible?",
+          "assessment": "fail",
+          "answer": "No—formal eligibility is unresolved or fails the verified gate.",
+          "evidence_ids": [
+            "scoreev:b88c26dc68f90c73"
+          ]
+        },
+        {
+          "question_number": 6,
+          "question": "What evidence supports the strategic plausibility category?",
+          "assessment": "fail",
+          "answer": "Category: Eligibility concern. Will York treat the applicant's CS bachelor's and senior project as equivalent to the listed engineering preparation?",
+          "evidence_ids": [
+            "scoreev:b88c26dc68f90c73",
+            "scoreev:df6b0babe8917b04"
+          ]
+        },
+        {
+          "question_number": 7,
+          "question": "Would the applicant prefer this opportunity over another already retained?",
+          "assessment": "fail",
+          "answer": "No—a program that fails a hard gate should not displace a hard-gate-clearing option.",
+          "evidence_ids": [
+            "scoreev:da79cca2fc213f46",
+            "scoreev:68de7a56785ed110",
+            "scoreev:b3cefe12a2d207e8",
+            "scoreev:b88c26dc68f90c73",
+            "scoreev:df6b0babe8917b04",
+            "scoreev:c212df869a7ef2cf"
+          ]
+        },
+        {
+          "question_number": 8,
+          "question": "Is the application fee and effort justified?",
+          "assessment": "fail",
+          "answer": "No—the application fee and effort are not justified while a hard gate fails.",
+          "evidence_ids": [
+            "scoreev:c212df869a7ef2cf",
+            "scoreev:b3cefe12a2d207e8"
+          ]
+        },
+        {
+          "question_number": 9,
+          "question": "Could one professor or administrator reply materially change the decision?",
+          "assessment": "yes",
+          "answer": "Yes—a verified-fit professor confirming supervision availability or an additional current supervisor; a program administrator supplying direct program-wide funding terms; admissions confirming formal eligibility could materially change the disposition.",
+          "evidence_ids": [
+            "scoreev:da79cca2fc213f46",
+            "scoreev:68de7a56785ed110",
+            "scoreev:b3cefe12a2d207e8",
+            "scoreev:b88c26dc68f90c73",
+            "scoreev:df6b0babe8917b04",
+            "scoreev:c212df869a7ef2cf"
+          ]
+        },
+        {
+          "question_number": 10,
+          "question": "What new evidence would cause the recommendation to change?",
+          "assessment": "actionable",
+          "answer": "Direct official evidence must resolve every failed hard gate (funding, eligibility) before reconsideration.",
+          "evidence_ids": [
+            "scoreev:da79cca2fc213f46",
+            "scoreev:68de7a56785ed110",
+            "scoreev:b3cefe12a2d207e8",
+            "scoreev:b88c26dc68f90c73",
+            "scoreev:df6b0babe8917b04",
+            "scoreev:c212df869a7ef2cf"
           ]
         }
       ]
