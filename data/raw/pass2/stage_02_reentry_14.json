@@ -1,0 +1,294 @@
+{
+  "trigger": "Stage 6 re-entry 13 still produced zero evidence-justified core applications, so the workflow requires another bounded high-recall discovery pass before re-verification.",
+  "scope": "Twelve net-new exact routes: six U.S. research doctorates, three Canadian thesis master's routes, and three English-taught European two-year research master's routes. Official program, research, admission, and preliminary funding sources only; no scoring or retention decision.",
+  "candidates": [
+    {
+      "institution_id": "us:ipeds:181394",
+      "institution_name": "University of Nebraska at Omaha",
+      "country": "United States",
+      "region": "us",
+      "program_name": "Computing & Information Science, Ph.D.",
+      "degree_type": "PhD",
+      "relevant_degree_route": "Research-intensive multidisciplinary computing doctorate with faculty mentorship, original research, annual progress review, and dissertation work",
+      "research_topic_clusters": ["software_quality", "systems_security", "ai_for_se"],
+      "exact_research_fit_signal": "The doctorate explicitly includes software engineering and cybersecurity among its research areas and supports faculty-mentored funded research and research assistantships.",
+      "preliminary_international_eligibility": "Applicants with an undergraduate or graduate degree in computing or a closely related field may apply; exact transcript, GRE, English, and Fall 2027 requirements remain for Stage 3.",
+      "preliminary_funding_signal": "All admitted doctoral students are automatically considered for competitive research or teaching assistantships with nine credits of tuition support and a monthly stipend; awards and renewal are not guaranteed.",
+      "official_program_url": "https://www.unomaha.edu/college-of-information-science-and-technology/academics/computing_and_information_science_phd.php",
+      "official_institution_url": "https://www.unomaha.edu",
+      "seed_adjacency": ["TerraProbe-adjacent", "Evidex-adjacent"],
+      "unresolved_fields": ["Fall 2027 cycle", "degree and course equivalency", "GRE and English evidence", "assistantship selection and renewal", "summer support", "fees and insurance", "current advisor capacity"],
+      "evidence_confidence": "high",
+      "additional_discovery_paths": ["recognized_institution_record", "underrepresented_route_search"],
+      "sources": [
+        {"source_id": "reentry14:uno-cis:program", "discovery_path": "official_program_or_department_signal", "evidence_role": "exact doctorate, research structure, and software-security fit", "title": "Computing & Information Science, Ph.D.", "url": "https://www.unomaha.edu/college-of-information-science-and-technology/academics/computing_and_information_science_phd.php", "accessed_date": "2026-09-11", "evidence_summary": "Official program page confirms a research-intensive Computing and Information Science PhD with faculty mentorship and active work in software engineering, cybersecurity, AI, and data analytics.", "limitations": "Program existence and research breadth do not establish admission, a willing advisor, or funding."},
+        {"source_id": "reentry14:uno-cis:funding", "discovery_path": "research_masters_or_scholarship_search", "evidence_role": "doctoral assistantship mechanism and coverage boundary", "title": "Financial Aid", "url": "https://www.unomaha.edu/college-of-information-science-and-technology/phd-it/prospective-students/financial-aid.php", "accessed_date": "2026-09-11", "evidence_summary": "Official doctoral page states that admitted students are automatically considered for competitive research or teaching assistantships carrying nine credits of tuition support and a monthly stipend.", "limitations": "Selection, stipend value, renewal, summer coverage, fees, insurance, and net sufficiency remain unverified."}
+      ]
+    },
+    {
+      "institution_id": "us:ipeds:126580",
+      "institution_name": "University of Colorado Colorado Springs",
+      "country": "United States",
+      "region": "us",
+      "program_name": "Cybersecurity, PhD",
+      "degree_type": "PhD",
+      "relevant_degree_route": "On-campus cybersecurity research doctorate with multidisciplinary security coursework, dissertation research, proposal examination, and defense",
+      "research_topic_clusters": ["systems_security", "formal_verification", "cyber_physical_systems"],
+      "exact_research_fit_signal": "The program targets computer, network, physical, and cyber-physical security, with department research spanning systems security, networking, embedded systems, and secure CPS.",
+      "preliminary_international_eligibility": "A bachelor's or master's in a STEM, homeland-security, or closely related field is permitted, subject to computing prerequisites, GRE exceptions, and English evidence that require Stage 3 mapping.",
+      "preliminary_funding_signal": "An official faculty research-group notice reports tuition-and-stipend research assistantship support for qualified PhD students regardless of citizenship, but this is faculty-controlled and not a program guarantee.",
+      "official_program_url": "https://www.uccs.edu/academics/programs/security-phd",
+      "official_institution_url": "https://www.uccs.edu",
+      "seed_adjacency": ["Evidex-adjacent", "TerraProbe-adjacent"],
+      "unresolved_fields": ["Fall 2027 cycle", "degree and prerequisite mapping", "GRE exception", "English evidence", "operational-security requirement", "assistantship availability and duration", "fees and insurance", "current supervisor capacity"],
+      "evidence_confidence": "high",
+      "additional_discovery_paths": ["recognized_institution_record", "underrepresented_route_search"],
+      "sources": [
+        {"source_id": "reentry14:uccs-cyber:program", "discovery_path": "official_program_or_department_signal", "evidence_role": "exact doctorate, entry rules, and security research scope", "title": "Cybersecurity, PhD", "url": "https://www.uccs.edu/academics/programs/security-phd", "accessed_date": "2026-09-11", "evidence_summary": "Official program page confirms the on-campus Cybersecurity PhD, STEM entry routes, qualifying preparation, cyber and cyber-physical security scope, and dissertation requirement.", "limitations": "Published admission rules do not establish transcript equivalency, admission, funding, or supervision."},
+        {"source_id": "reentry14:uccs-cyber:lab-funding", "discovery_path": "lab_or_center_signal", "evidence_role": "systems-security fit and faculty-controlled assistantship signal", "title": "Prospective Students - UCCS Systems Security Lab", "url": "https://academics.uccs.edu/~schang2/docs/Prospective_Students_UCCS_Systems_Security_Lab.pdf", "accessed_date": "2026-09-11", "evidence_summary": "Official UCCS faculty material describes systems, network, embedded, and cyber-physical security work and a tuition-and-stipend RA path for qualified PhD students regardless of citizenship.", "limitations": "A faculty opportunity is capacity- and grant-dependent and does not establish current availability, admission, or a durable funding package."}
+      ]
+    },
+    {
+      "institution_id": "us:ipeds:166513",
+      "institution_name": "University of Massachusetts-Lowell",
+      "country": "United States",
+      "region": "us",
+      "program_name": "Doctor of Philosophy (Ph.D.) in Computer Science",
+      "degree_type": "PhD",
+      "relevant_degree_route": "Computer science research doctorate with doctoral coursework, proposal, original dissertation research, and defense",
+      "research_topic_clusters": ["formal_verification", "systems_security", "software_quality"],
+      "exact_research_fit_signal": "The school lists active work in cybersecurity and privacy, program analysis, programming languages, systems and networks, including externally funded research groups and labs.",
+      "preliminary_international_eligibility": "The doctorate accepts appropriately prepared applicants under graduate admission rules; exact degree, course, GRE, English, and advisor mapping remain for Stage 3.",
+      "preliminary_funding_signal": "Department guidance says PhD students may receive advisor-controlled research assistantships or school-controlled teaching assistantships, while explicitly stating that support is not guaranteed.",
+      "official_program_url": "https://www.uml.edu/sciences/computer-science/programs/doctorate.aspx",
+      "official_institution_url": "https://www.uml.edu",
+      "seed_adjacency": ["TerraProbe-adjacent", "Evidex-adjacent"],
+      "unresolved_fields": ["Fall 2027 cycle", "degree and course equivalency", "GRE and English evidence", "advisor match", "assistantship offer and duration", "summer support", "fees and insurance"],
+      "evidence_confidence": "high",
+      "additional_discovery_paths": ["recognized_institution_record", "underrepresented_route_search"],
+      "sources": [
+        {"source_id": "reentry14:uml-cs:program", "discovery_path": "official_program_or_department_signal", "evidence_role": "exact doctorate, milestones, and funding guidance", "title": "Doctor of Philosophy (Ph.D.) in Computer Science", "url": "https://www.uml.edu/sciences/computer-science/programs/doctorate.aspx", "accessed_date": "2026-09-11", "evidence_summary": "Official school page confirms the Computer Science PhD and its research and dissertation pathway, with funding opportunities referenced for doctoral students.", "limitations": "The page does not establish applicant equivalency, admission, advisor capacity, or a funding offer."},
+        {"source_id": "reentry14:uml-cs:research", "discovery_path": "lab_or_center_signal", "evidence_role": "current program-analysis, security, systems, and network research breadth", "title": "Research", "url": "https://www.uml.edu/Sciences/computer-science/Research/", "accessed_date": "2026-09-11", "evidence_summary": "Official research page lists active, externally funded work in cybersecurity and privacy, program analysis, programming languages, computer systems and networks, and related labs that employ students.", "limitations": "Research breadth and lab employment do not establish a willing advisor, an assistantship, or funding duration."}
+      ]
+    },
+    {
+      "institution_id": "us:ipeds:157289",
+      "institution_name": "University of Louisville",
+      "country": "United States",
+      "region": "us",
+      "program_name": "Doctor of Philosophy in Computer Science and Engineering",
+      "degree_type": "PhD",
+      "relevant_degree_route": "Computer science and engineering research doctorate admitting from bachelor's or master's preparation and requiring independent scholarly research and dissertation credits",
+      "research_topic_clusters": ["software_quality", "distributed_systems", "systems_security"],
+      "exact_research_fit_signal": "The doctoral curriculum includes software engineering, communications and networks, distributed-system design, information assurance, and related computing research areas.",
+      "preliminary_international_eligibility": "Applicants may enter with an appropriate bachelor's or master's degree, including related backgrounds with remediation; transcript, GRE, English, and prerequisite mapping remain unresolved.",
+      "preliminary_funding_signal": "Qualified engineering doctoral applicants are automatically considered for renewable fellowships listing a stipend, full tuition remission, and health insurance, but selection is not guaranteed.",
+      "official_program_url": "https://catalog.louisville.edu/graduate/programs-study/doctor-philosophy-computer-science-engineering/",
+      "official_institution_url": "https://louisville.edu",
+      "seed_adjacency": ["TerraProbe-adjacent", "Evidex-adjacent"],
+      "unresolved_fields": ["Fall 2027 cycle", "degree and prerequisite mapping", "GRE and English evidence", "research-area and advisor fit", "fellowship selection and renewal", "summer coverage", "fees and net support"],
+      "evidence_confidence": "high",
+      "additional_discovery_paths": ["recognized_institution_record", "underrepresented_route_search"],
+      "sources": [
+        {"source_id": "reentry14:louisville-cse:program", "discovery_path": "official_program_or_department_signal", "evidence_role": "exact doctorate, entry routes, curriculum fit, and dissertation structure", "title": "Computer Science and Engineering (PhD)", "url": "https://catalog.louisville.edu/graduate/programs-study/doctor-philosophy-computer-science-engineering/", "accessed_date": "2026-09-11", "evidence_summary": "Official graduate catalog confirms the CSE PhD, bachelor's- and master's-entry routes, original research requirement, dissertation credits, and coursework in software engineering, networks, security, and distributed systems.", "limitations": "Catalog requirements do not establish applicant equivalency, admission, advisor capacity, or funding."},
+        {"source_id": "reentry14:louisville-cse:funding", "discovery_path": "research_masters_or_scholarship_search", "evidence_role": "engineering doctoral fellowship coverage and competitiveness", "title": "Graduate Funding", "url": "https://engineering.louisville.edu/graduatefunding/", "accessed_date": "2026-09-11", "evidence_summary": "Official engineering page describes automatic fellowship consideration for qualified doctoral applicants and lists an annual stipend, full tuition remission, health insurance, and renewal up to four years.", "limitations": "The fellowship is selective; exact 2027 value, renewal, fees, summer coverage, and net sufficiency require offer-level verification."}
+      ]
+    },
+    {
+      "institution_id": "us:ipeds:172644",
+      "institution_name": "Wayne State University",
+      "country": "United States",
+      "region": "us",
+      "program_name": "Computer Science (Ph.D.)",
+      "degree_type": "PhD",
+      "relevant_degree_route": "Flexible computer science research doctorate with early advisor selection, qualifying and prospectus examinations, original dissertation research, and public defense",
+      "research_topic_clusters": ["software_quality", "distributed_systems", "systems_security"],
+      "exact_research_fit_signal": "The doctorate encourages early participation in faculty projects, while current dissertations include software-practice, scientific-workflow, edge-computing, and software-defined-vehicle topics.",
+      "preliminary_international_eligibility": "Applicants with a bachelor's or master's in computer science or a related field may apply, subject to GPA, computing preparation, GRE, transcript, and English requirements that need Stage 3 review.",
+      "preliminary_funding_signal": "The bounded official review found a graduate funding application route but no current CS-level funding guarantee; assistantship type, tuition coverage, value, and duration remain unresolved.",
+      "official_program_url": "https://bulletins.wayne.edu/graduate/college-engineering/computer-science/computer-science-phd/index.html",
+      "official_institution_url": "https://wayne.edu",
+      "seed_adjacency": ["TerraProbe-adjacent", "Evidex-adjacent"],
+      "unresolved_fields": ["Fall 2027 cycle", "degree and prerequisite mapping", "GRE and English evidence", "advisor selection", "assistantship availability and coverage", "fees and insurance", "current faculty capacity"],
+      "evidence_confidence": "high",
+      "additional_discovery_paths": ["recognized_institution_record", "underrepresented_route_search"],
+      "sources": [
+        {"source_id": "reentry14:wayne-cs:program", "discovery_path": "official_program_or_department_signal", "evidence_role": "exact doctorate, entry requirements, advisor process, and dissertation milestones", "title": "Computer Science (Ph.D.)", "url": "https://bulletins.wayne.edu/graduate/college-engineering/computer-science/computer-science-phd/index.html", "accessed_date": "2026-09-11", "evidence_summary": "Official graduate catalog confirms the Computer Science PhD, bachelor's- or master's-level entry, early advisor selection, research examinations, prospectus, dissertation, and public defense.", "limitations": "Program rules do not establish applicant equivalency, admission, advisor capacity, or funding."},
+        {"source_id": "reentry14:wayne-cs:dissertations", "discovery_path": "recent_paper_signal", "evidence_role": "recent software, workflow, edge, and distributed-systems discovery signal", "title": "Computer Science Dissertations", "url": "https://digitalcommons.wayne.edu/compsci_diss/", "accessed_date": "2026-09-11", "evidence_summary": "Wayne State's official repository lists recent doctoral work on software practitioner behavior, scientific workflows, low-power wide-area networks, edge computing, and software-defined vehicles.", "limitations": "Completed dissertations are only a topic-discovery signal and do not establish current faculty appointment, supervision capacity, admission, or funding."}
+      ]
+    },
+    {
+      "institution_id": "us:ipeds:190044",
+      "institution_name": "Clarkson University",
+      "country": "United States",
+      "region": "us",
+      "program_name": "PhD in Computer Science",
+      "degree_type": "PhD",
+      "relevant_degree_route": "Research doctorate with systems, software, security, and AI coursework, portfolio candidacy, dissertation proposal, original dissertation, and defense",
+      "research_topic_clusters": ["software_quality", "systems_security", "distributed_systems"],
+      "exact_research_fit_signal": "The department explicitly spans software, security, systems, and networks, and the doctorate includes languages and software-development plus computer-systems and networks foundations.",
+      "preliminary_international_eligibility": "Applicants need a computer-science or closely related bachelor's equivalent, committee approval, transcripts, recommendations, GRE unless waived, and English evidence; exact equivalency remains unresolved.",
+      "preliminary_funding_signal": "The program states that PhD applicants are eligible for fully funded research or teaching assistantships, but eligibility is not an individual award or duration guarantee.",
+      "official_program_url": "https://www.clarkson.edu/academics/majors-minors/computer-science-phd",
+      "official_institution_url": "https://www.clarkson.edu",
+      "seed_adjacency": ["TerraProbe-adjacent", "Evidex-adjacent"],
+      "unresolved_fields": ["Fall 2027 cycle", "degree and prerequisite equivalency", "GRE waiver", "English evidence", "advisor alignment", "assistantship selection and duration", "summer coverage", "fees and insurance"],
+      "evidence_confidence": "high",
+      "additional_discovery_paths": ["recognized_institution_record", "underrepresented_route_search"],
+      "sources": [
+        {"source_id": "reentry14:clarkson-cs:program", "discovery_path": "official_program_or_department_signal", "evidence_role": "exact doctorate, admission rules, research structure, and preliminary funding", "title": "PhD in Computer Science", "url": "https://www.clarkson.edu/academics/majors-minors/computer-science-phd", "accessed_date": "2026-09-11", "evidence_summary": "Official program page confirms the Computer Science PhD, portfolio candidacy, original dissertation, software and systems foundations, international application requirements, and eligibility for fully funded RA or TA support.", "limitations": "Assistantship eligibility is not a funding offer; admission, advisor availability, award value, duration, fees, and summer coverage remain unresolved."},
+        {"source_id": "reentry14:clarkson-cs:research", "discovery_path": "lab_or_center_signal", "evidence_role": "department software, security, systems, and networks research breadth", "title": "Computer Science Department", "url": "https://www.clarkson.edu/academics/schools-colleges/engineering/computer-science-department", "accessed_date": "2026-09-11", "evidence_summary": "Official department page describes faculty and graduate research across software, security, systems, networks, theory, and AI, including hands-on software-systems work.", "limitations": "Area breadth does not establish a willing advisor, current project capacity, admission, or an assistantship."}
+      ]
+    },
+    {
+      "institution_id": "ca:dli:O19359011146",
+      "institution_name": "Université du Québec en Outaouais",
+      "country": "Canada",
+      "region": "canada",
+      "program_name": "Maîtrise en informatique (profil mémoire)",
+      "degree_type": "Thesis or research master's",
+      "relevant_degree_route": "French-language 45-credit research master's in computer science centered on research methods, an original thesis project, and preparation for doctoral study",
+      "research_topic_clusters": ["systems_security", "software_quality", "distributed_systems"],
+      "exact_research_fit_signal": "The thesis route emphasizes current computing research, while the department identifies network and data security, telecommunications, information systems, and research supervision capacity.",
+      "preliminary_international_eligibility": "A relevant bachelor's or equivalent academic preparation is considered, with program selection and French-language evidence; international degree, course, and language mapping remain for Stage 3.",
+      "preliminary_funding_signal": "Thesis-profile students can access an internal encouragement scholarship and external funding opportunities, but no universal tuition-and-living-cost package is established.",
+      "official_program_url": "https://uqo.ca/programmes/3097",
+      "official_institution_url": "https://uqo.ca",
+      "seed_adjacency": ["TerraProbe-adjacent", "Evidex-adjacent"],
+      "unresolved_fields": ["Fall 2027 offering", "international degree and course equivalency", "French evidence", "supervisor agreement", "scholarship eligibility and amount", "international tuition", "living costs and net package"],
+      "evidence_confidence": "high",
+      "additional_discovery_paths": ["recognized_institution_record", "underrepresented_route_search"],
+      "sources": [
+        {"source_id": "reentry14:uqo-info:program", "discovery_path": "official_program_or_department_signal", "evidence_role": "exact research master's, thesis, admission basis, and doctoral preparation", "title": "Maîtrise en informatique (profil mémoire)", "url": "https://uqo.ca/programmes/3097", "accessed_date": "2026-09-11", "evidence_summary": "Official program page confirms the 45-credit MSc-level Computer Science master's, research-centered thesis profile, current-topic research, and preparation for doctoral study.", "limitations": "Published structure does not establish international equivalency, admission, a supervisor, or financing."},
+        {"source_id": "reentry14:uqo-info:department", "discovery_path": "research_masters_or_scholarship_search", "evidence_role": "research areas, thesis supervision, and preliminary scholarship path", "title": "Maîtrise en sciences et technologies de l'information", "url": "https://uqo.ca/dep/informatique-ingenierie/maitrise-sciences-technologies-linformation", "accessed_date": "2026-09-11", "evidence_summary": "Official department page corroborates a memory-based research route, identifies network and data security and telecommunications topics, lists eligible thesis supervisors, and notes an internal thesis-master's encouragement scholarship route.", "limitations": "Related department guidance does not guarantee supervision or funding for the exact program; language, award value, tuition, and net costs remain unresolved."}
+      ]
+    },
+    {
+      "institution_id": "ca:dli:O19359011122",
+      "institution_name": "Université du Québec à Chicoutimi",
+      "country": "Canada",
+      "region": "canada",
+      "program_name": "Maîtrise en informatique - profil recherche (mémoire)",
+      "degree_type": "Thesis or research master's",
+      "relevant_degree_route": "French-language computer science research master's with research training, an original thesis, and preparation for doctoral study",
+      "research_topic_clusters": ["software_quality", "ai_for_se", "systems_security"],
+      "exact_research_fit_signal": "The official program separates a research-thesis profile and develops research competence in a selected computing area before doctoral study or R&D work.",
+      "preliminary_international_eligibility": "The program accepts applications under its published academic bases and UQAC provides an international graduate admission pathway; degree, prerequisite, French, and selection mapping remain unresolved.",
+      "preliminary_funding_signal": "Eligible international students in research master's programs may compete for limited enhanced-tuition exemption awards, but quota, award, residual tuition, and living-cost coverage are unresolved.",
+      "official_program_url": "https://programmes.uqac.ca/3017",
+      "official_institution_url": "https://www.uqac.ca",
+      "seed_adjacency": ["TerraProbe-adjacent", "Evidex-adjacent"],
+      "unresolved_fields": ["Fall 2027 cycle", "degree and prerequisite equivalency", "French evidence", "topic and supervisor fit", "tuition-exemption selection", "remaining tuition and fees", "living costs"],
+      "evidence_confidence": "high",
+      "additional_discovery_paths": ["recognized_institution_record", "underrepresented_route_search"],
+      "sources": [
+        {"source_id": "reentry14:uqac-info:program", "discovery_path": "official_program_or_department_signal", "evidence_role": "exact thesis master's and research progression", "title": "Maîtrise en informatique", "url": "https://programmes.uqac.ca/3017", "accessed_date": "2026-09-11", "evidence_summary": "Official program page confirms a Computer Science master's research profile with thesis, research-skill development, and preparation for doctoral study or research employment.", "limitations": "Program existence does not establish applicant equivalency, French readiness, admission, topic fit, or supervision."},
+        {"source_id": "reentry14:uqac-info:funding", "discovery_path": "research_masters_or_scholarship_search", "evidence_role": "international research-master's tuition-exemption mechanism", "title": "Bourses d'exemption des frais majorés - 2e cycle", "url": "https://sae.uqac.ca/bourses-dexemption-des-frais-majores-befm-2e-cycle-2/", "accessed_date": "2026-09-11", "evidence_summary": "Official student-services page describes limited enhanced-tuition exemption awards for international students enrolled in research master's programs with a thesis.", "limitations": "Awards are quota-limited and do not establish selection, residual tuition, fees, living costs, or full funding."}
+      ]
+    },
+    {
+      "institution_id": "ca:dli:O19359011172",
+      "institution_name": "Université du Québec à Trois-Rivières",
+      "country": "Canada",
+      "region": "canada",
+      "program_name": "Maîtrise en mathématiques et informatique appliquées (avec mémoire)",
+      "degree_type": "Thesis or research master's",
+      "relevant_degree_route": "French-language 45-credit applied mathematics and computing research master's with research methods, software-oriented investigation, and thesis",
+      "research_topic_clusters": ["software_quality", "ai_for_se", "repair_analysis"],
+      "exact_research_fit_signal": "The program lists software engineering and AI among departmental strengths, and a 2025 thesis applied large language models to unit-test generation and software-quality evaluation.",
+      "preliminary_international_eligibility": "The route accepts relevant bachelor's degrees or equivalents and explicitly supports full-time international applications; degree, GPA, course, and French-language equivalency remain for Stage 3.",
+      "preliminary_funding_signal": "The department notes possible teaching and research assistant work plus university and external awards, but support is grant-dependent and not guaranteed.",
+      "official_program_url": "https://oraprdnt.uqtr.uquebec.ca/portail/triw082.afficher?owa_cd_pgm=3799&owa_version=1",
+      "official_institution_url": "https://www.uqtr.ca",
+      "seed_adjacency": ["TerraProbe-adjacent", "Evidex-adjacent"],
+      "unresolved_fields": ["Fall 2027 cycle", "degree and GPA equivalency", "computing and mathematics preparation", "French evidence", "supervisor and topic fit", "assistantship or scholarship award", "international tuition and living costs"],
+      "evidence_confidence": "high",
+      "additional_discovery_paths": ["recognized_institution_record", "underrepresented_route_search"],
+      "sources": [
+        {"source_id": "reentry14:uqtr-mia:program", "discovery_path": "official_program_or_department_signal", "evidence_role": "exact thesis master's, admission basis, research topics, and preliminary support", "title": "Maîtrise en mathématiques et informatique appliquées (avec mémoire)", "url": "https://oraprdnt.uqtr.uquebec.ca/portail/triw082.afficher?owa_cd_pgm=3799&owa_version=1", "accessed_date": "2026-09-11", "evidence_summary": "Official program record confirms the 45-credit research master's, international full-time application route, thesis, software-engineering and AI strengths, and possible grant-dependent teaching or research assistant work.", "limitations": "Admission, French readiness, supervisor fit, assistantship selection, award value, tuition, and living costs remain unresolved."},
+        {"source_id": "reentry14:uqtr-mia:thesis", "discovery_path": "recent_paper_signal", "evidence_role": "recent exact software-testing and LLM research signal", "title": "Génération de tests unitaires dans les systèmes orientés objet à l'aide des grands modèles de langage", "url": "https://depot-e.uqtr.ca/id/eprint/12445/", "accessed_date": "2026-09-11", "evidence_summary": "UQTR's official repository records a 2025 thesis in this master's on LLM-assisted unit-test generation, mutation score, branch coverage, software quality, and bug detection.", "limitations": "A completed thesis demonstrates topic precedent only; it does not establish current supervisor capacity, admission, or funding."}
+      ]
+    },
+    {
+      "institution_id": "ror:006e5kg04",
+      "institution_name": "Vrije Universiteit Brussel",
+      "country": "Belgium",
+      "region": "europe",
+      "program_name": "Master of Science in Applied Sciences and Engineering: Computer Science - Software Systems",
+      "degree_type": "Thesis or research master's",
+      "relevant_degree_route": "English two-year 120-ECTS computer science master's with research training, a Software Systems specialization, and a 24-ECTS research thesis",
+      "research_topic_clusters": ["software_quality", "systems_security", "formal_verification"],
+      "exact_research_fit_signal": "The specialization combines scientific research training and thesis work with software architectures, security in computing, theory of computation, and software-systems electives.",
+      "preliminary_international_eligibility": "International applicants are evaluated for academic degree and subject equivalency through VUB's admission process; exact course mapping, English evidence, and Fall 2027 terms remain unresolved.",
+      "preliminary_funding_signal": "VUB publishes nationality- and program-dependent tuition plus several scholarship and financial-support mechanisms, but no route-specific full tuition and living-cost guarantee is established.",
+      "official_program_url": "https://www.vub.be/en/studying-vub/all-study-programmes-vub/bachelors-and-masters-programmes-vub/master-applied-sciences-and-engineering-computer-science/program/master/master-software-systems",
+      "official_institution_url": "https://www.vub.be/en",
+      "seed_adjacency": ["TerraProbe-adjacent", "Evidex-adjacent"],
+      "unresolved_fields": ["Fall 2027 offering and criteria", "degree and subject-credit equivalency", "English evidence", "scholarship eligibility and selection", "non-EEA tuition", "living costs", "research-training and thesis-group fit"],
+      "evidence_confidence": "high",
+      "additional_discovery_paths": ["recognized_institution_record", "underrepresented_route_search"],
+      "sources": [
+        {"source_id": "reentry14:vub-software:program", "discovery_path": "official_program_or_department_signal", "evidence_role": "exact English two-year route, software-security curriculum, research training, and thesis", "title": "Master Software Systems", "url": "https://www.vub.be/en/studying-vub/all-study-programmes-vub/bachelors-and-masters-programmes-vub/master-applied-sciences-and-engineering-computer-science/program/master/master-software-systems", "accessed_date": "2026-09-11", "evidence_summary": "Official program page confirms an English 120-ECTS two-year Software Systems master's with research training, a 24-ECTS thesis, software architecture, computing security, and theory content.", "limitations": "Program structure does not establish international equivalency, admission, thesis placement, or funding."},
+        {"source_id": "reentry14:vub-software:cost", "discovery_path": "research_masters_or_scholarship_search", "evidence_role": "tuition and scholarship boundary", "title": "Tuition fees", "url": "https://www.vub.be/en/studying-vub/practical-info-for-students/how-much-does-studying-cost/tuition-fees", "accessed_date": "2026-09-11", "evidence_summary": "Official VUB page explains that tuition depends on program, nationality, credits, and scholarship status and links current non-EEA rates and scholarship treatment.", "limitations": "Exact 2027 tuition, scholarship eligibility and selection, living costs, and a complete affordable package remain unresolved."}
+      ]
+    },
+    {
+      "institution_id": "ror:03yrrjy16",
+      "institution_name": "University of Southern Denmark",
+      "country": "Denmark",
+      "region": "europe",
+      "program_name": "Software Engineering - MSc in Engineering",
+      "degree_type": "Thesis or research master's",
+      "relevant_degree_route": "English two-year software-engineering master's integrating research-led study, specialization work, and a master's thesis",
+      "research_topic_clusters": ["software_quality", "distributed_systems", "systems_security"],
+      "exact_research_fit_signal": "The program includes modifiable and interactive software, scalable and reliable software, cybersecurity and data intelligence, architecture, testing, and research-related project work.",
+      "preliminary_international_eligibility": "International applicants must document a relevant bachelor's, detailed course preparation, and English proficiency by the non-EU deadline; exact academic equivalency remains for Stage 3.",
+      "preliminary_funding_signal": "The Odense route publishes EUR 17,300 annual non-EU tuition from September 2026, while the university's limited master scholarships apply only to named programs at other campuses; no viable route-specific award was established.",
+      "official_program_url": "https://www.sdu.dk/en/uddannelse/kandidat/softwareengineering",
+      "official_institution_url": "https://www.sdu.dk/en",
+      "seed_adjacency": ["TerraProbe-adjacent", "Evidex-adjacent"],
+      "unresolved_fields": ["Fall 2027 offering and criteria", "degree and course equivalency", "English evidence", "master's thesis and research-group fit", "tuition changes", "alternative scholarships", "living costs and complete funding plan"],
+      "evidence_confidence": "high",
+      "additional_discovery_paths": ["recognized_institution_record", "underrepresented_route_search"],
+      "sources": [
+        {"source_id": "reentry14:sdu-se:program", "discovery_path": "official_program_or_department_signal", "evidence_role": "exact English route, software-systems fit, research integration, and thesis", "title": "Software Engineering - MSc in Engineering", "url": "https://www.sdu.dk/en/uddannelse/kandidat/softwareengineering", "accessed_date": "2026-09-11", "evidence_summary": "Official program page confirms the English Software Engineering MSc, reliable and scalable software and cybersecurity specializations, research-integrated teaching, September intake, international deadline, and master's thesis route.", "limitations": "Degree equivalency, selection, future structure, thesis-group fit, and financing remain unverified."},
+        {"source_id": "reentry14:sdu-se:tuition", "discovery_path": "research_masters_or_scholarship_search", "evidence_role": "non-EU tuition and scholarship exclusion boundary", "title": "Tuition fee", "url": "https://www.sdu.dk/en/uddannelse/fees_and_funding/tuition", "accessed_date": "2026-09-11", "evidence_summary": "Official university page states the September 2026 engineering tuition rate for non-EU students and full-year advance-payment rules; the scholarship inventory does not list this Odense program for the limited government award.", "limitations": "Rates may change for 2027, and no tuition waiver or living-cost package for this exact route was established."}
+      ]
+    },
+    {
+      "institution_id": "ror:05q9m0937",
+      "institution_name": "University of Klagenfurt",
+      "country": "Austria",
+      "region": "europe",
+      "program_name": "Master's Degree Programme Informatics",
+      "degree_type": "Thesis or research master's",
+      "relevant_degree_route": "English four-semester 120-ECTS informatics master's with software, security, distributed-systems specializations, project work, and master's thesis",
+      "research_topic_clusters": ["software_quality", "systems_security", "distributed_systems"],
+      "exact_research_fit_signal": "The curriculum offers Software Engineering, Information and System Security, and Distributed Systems specializations and requires a master's thesis before direct progression to doctoral study.",
+      "preliminary_international_eligibility": "Applicants need an Applied Informatics bachelor's or academically equivalent degree and B2 English, with possible additional examinations; transcript-level equivalency remains unresolved.",
+      "preliminary_funding_signal": "Third-country tuition is currently EUR 726.72 per semester plus the student-union fee, and the university lists a competitive Klagenfurt Scholarship for master's students; no award or living-cost guarantee is established.",
+      "official_program_url": "https://www.aau.at/en/studien/master-informatics/",
+      "official_institution_url": "https://www.aau.at/en/",
+      "seed_adjacency": ["TerraProbe-adjacent", "Evidex-adjacent"],
+      "unresolved_fields": ["Fall 2027 offering and criteria", "degree and course equivalency", "additional examinations", "B2 English evidence", "scholarship eligibility and selection", "future tuition and living costs", "project and thesis-supervisor fit"],
+      "evidence_confidence": "high",
+      "additional_discovery_paths": ["recognized_institution_record", "underrepresented_route_search"],
+      "sources": [
+        {"source_id": "reentry14:klagenfurt-informatics:program", "discovery_path": "official_program_or_department_signal", "evidence_role": "exact English two-year route, specializations, admission basis, and thesis", "title": "Master Informatics", "url": "https://www.aau.at/en/studien/master-informatics/", "accessed_date": "2026-09-11", "evidence_summary": "Official program page confirms the English four-semester 120-ECTS Informatics master's, software engineering, systems security, and distributed-systems specializations, B2 English, equivalent-degree entry, and doctoral progression.", "limitations": "Transcript equivalency, added examinations, admission, thesis placement, and financing remain unverified."},
+        {"source_id": "reentry14:klagenfurt-informatics:funding", "discovery_path": "research_masters_or_scholarship_search", "evidence_role": "master's scholarship and tuition boundary", "title": "Scholarships and grants", "url": "https://www.aau.at/en/study/student-life/scholarships-grants/", "accessed_date": "2026-09-11", "evidence_summary": "Official university page lists the Klagenfurt Scholarship for master's students and other support routes; the university fee page publishes the current third-country semester charge.", "limitations": "Eligibility, selection, award value, 2027 continuation, tuition, and living-cost sufficiency remain unresolved."}
+      ]
+    }
+  ],
+  "false_negative_audits": [
+    {
+      "institution_id": "ca:dli:O19359011172",
+      "exclusion_reason_category": "catalog_signal_without_exact_research_masters_route",
+      "original_supporting_evidence": "The original funnel retained only unresolved registry-level computing signals for Université du Québec à Trois-Rivières and missed its current thesis master's, software-engineering and AI research breadth, grant-dependent assistantship path, and recent LLM-based unit-testing thesis precedent."
+    },
+    {
+      "institution_id": "ror:006e5kg04",
+      "exclusion_reason_category": "outside_bounded_positive_seed_screen",
+      "original_supporting_evidence": "Vrije Universiteit Brussel remained outside the bounded positive funnel despite a current English two-year Software Systems master's with research training, a 24-ECTS thesis, and direct software-architecture and computing-security content."
+    }
+  ]
+}
