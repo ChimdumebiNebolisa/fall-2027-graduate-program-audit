@@ -49,6 +49,7 @@ REENTRY_RAW_PATHS = (
     REPO_ROOT / "data/raw/pass2/stage_04_reentry_14.json",
     REPO_ROOT / "data/raw/pass2/stage_04_reentry_15.json",
     REPO_ROOT / "data/raw/pass2/stage_04_reentry_16.json",
+    REPO_ROOT / "data/raw/pass2/stage_04_reentry_17.json",
 )
 LATEST_REENTRY_RAW_PATH = REENTRY_RAW_PATHS[-1]
 UNKNOWN = "Not located in bounded Stage 4 review"
@@ -656,19 +657,21 @@ def write_report(result: dict[str, object]) -> None:
         "",
         table(["Assertion", "Result"], [[name, "PASS" if passed else "FAIL"] for name, passed in result["assertions"].items()]),
         "",
-        "- Stage-specific verification: `python -m pytest tests/test_professor_mapping.py -q` — 30 passed.",
-        "- Full-suite boundary: `python -m pytest -q` — 141 passed; the sole failure is the expected Stage 5 coverage gap for eight routes.",
+        "- Stage-specific verification: `python -m pytest tests/test_professor_mapping.py -q` — 32 passed.",
+        "- Live-source retrieval: 36 of 41 current-round URLs returned HTTP 200 to the automated checker; five official McGill/WPI pages returned anti-bot HTTP 403 responses but were independently readable through browser retrieval.",
+        "- Full-suite boundary: `python -m pytest -q` — 147 passed, with one expected downstream Stage 5 score-coverage failure for the nine new routes.",
         "",
         "## Material uncertainties or conflicts",
         "",
         "- Blockers: none prevented Stage 4 completion.",
         "",
         (
-            f"- Stage 4 re-entry 16 evaluated {counts['latest_reentry_programs']} newly eligible routes and retained "
+            f"- Stage 4 re-entry 17 evaluated {counts['latest_reentry_programs']} newly eligible routes and retained "
             f"{counts['latest_reentry_retained_match_rows']} fully verified strong lead matches; "
-            f"{counts['latest_reentry_zero_match_programs']} new routes remain without a retained match. Across all sixteen "
+            f"{counts['latest_reentry_zero_match_programs']} new routes remain without a retained match. Across all seventeen "
             f"re-entry batches, {counts['reentry_retained_match_rows']} of {counts['reentry_programs']} routes have a retained match."
         ),
+        "- EDISS has no retained professor match: its official FAQ assigns the main thesis supervisor from the later-selected second-year university, so exact supervision authority cannot yet be attributed to an Åbo faculty member.",
         "- UVA's strongest bounded fit has a current courtesy Computer Science appointment, but exact Computer Science PhD supervision authority was not verified; the candidate remains unscored and unretained.",
         f"- {counts['programs_with_one_strong_match']} of {counts['serious_programs']} programs have only one fully verified strong match and remain single-professor dependencies.",
         f"- {counts['programs_with_zero_strong_matches']} programs have no candidate that clears every current-appointment, supervision-authority, strong-fit, and recent-work gate; their faculty depth is 0.",
@@ -676,7 +679,7 @@ def write_report(result: dict[str, object]) -> None:
         f"- Official email remains unlocated for {counts['retained_matches_without_official_email']} retained professors and most unretained candidates; no address is guessed.",
         "- Recruiting status remains unknown unless a current direct statement/opening was already verified; publication activity and open labs are not used as recruiting proxies.",
         "- Faculty appointments, supervision rules, and recruiting statements are time-sensitive and require a refresh immediately before outreach or application submission.",
-        "- Stage 5 scoring still covers the prior 143-program roster. Its eight-route coverage gap is intentionally unresolved at this stage boundary and must be rebuilt in Stage 5 re-entry 16.",
+        f"- Stage 5 scoring does not yet cover the {counts['latest_reentry_programs']} new faculty-ready routes. That downstream gap is intentionally unresolved at this stage boundary and must be rebuilt in Stage 5 re-entry 17.",
         "- Stage 5 may use only the 5-point faculty-depth values supported here; it may not resurrect the inflated Pass 1 depth scores.",
         "",
         "## Records requiring human judgment",
@@ -690,14 +693,14 @@ def write_report(result: dict[str, object]) -> None:
         "- `data/processed/pass2/professor_candidates_evaluated.csv`",
         "- `data/processed/pass2/professor_matches_retained.csv`",
         "- `data/processed/pass2/professor_sources.csv`",
-        "- `data/raw/pass2/stage_04_reentry_16.json`",
+        "- `data/raw/pass2/stage_04_reentry_17.json`",
         "- `reports/pass2/04_professor_mapping.md`",
         "- `data/manifests/pass2/stage_04.json`",
         "- `state/progress.json`",
         "",
         "## Recommendation before the next stage",
         "",
-        "Proceed to Stage 5 only with the rebuilt Stage 4 depth values. Keep the eight new routes out of scored outputs until Stage 5 re-entry 16 regenerates and validates complete scoring coverage.",
+        f"Proceed to Stage 5 only with the rebuilt Stage 4 depth values. Keep the {counts['latest_reentry_programs']} new routes out of scored outputs until Stage 5 re-entry 17 regenerates and validates complete scoring coverage.",
         "",
     ]
     REPORT_PATH.parent.mkdir(parents=True, exist_ok=True)
@@ -750,6 +753,7 @@ def main() -> int:
     stage_status["4_reentry_14"] = "complete" if result["status"] == "PASS" else "failed"
     stage_status["4_reentry_15"] = "complete" if result["status"] == "PASS" else "failed"
     stage_status["4_reentry_16"] = "complete" if result["status"] == "PASS" else "failed"
+    stage_status["4_reentry_17"] = "complete" if result["status"] == "PASS" else "failed"
     pass2.update({
         "current_stage": 4,
         "last_completed_stage": max(int(pass2.get("last_completed_stage", 0)), 4) if result["status"] == "PASS" else 3,
@@ -761,7 +765,7 @@ def main() -> int:
         "stage_04_acceptance": result["status"],
         "stage_04_serious_programs": result["counts"]["serious_programs"],
         "stage_04_distinct_retained_professors": result["counts"]["distinct_retained_professors"],
-        "stage_04_reentry_completed": 16 if result["status"] == "PASS" else 15,
+        "stage_04_reentry_completed": 17 if result["status"] == "PASS" else 16,
         "stage_04_reentry_programs": result["counts"]["latest_reentry_programs"],
         "stage_04_reentry_cumulative_programs": result["counts"]["reentry_programs"],
         "stage_04_reentry_required": False,
@@ -771,7 +775,7 @@ def main() -> int:
     })
     update_progress(
         progress_path,
-        current_phase="pass2_stage_04_reentry_16_complete" if result["status"] == "PASS" else "pass2_stage_04_reentry_16_failed",
+        current_phase="pass2_stage_04_reentry_17_complete" if result["status"] == "PASS" else "pass2_stage_04_reentry_17_failed",
         pass2=pass2,
     )
 
@@ -779,11 +783,12 @@ def main() -> int:
         f"{result['counts']['programs_with_one_strong_match']} serious programs remain single-professor dependencies with one verified strong match and 5 faculty-depth points.",
         f"{result['counts']['programs_with_zero_strong_matches']} serious programs have no match clearing every evidence gate and receive 0 faculty-depth points.",
         f"The {result['counts']['candidate_evaluations'] - result['counts']['retained_match_rows']} unretained longlist evaluations still need exact-route supervision-authority and/or candidate-specific current-work verification before they could become strong matches.",
+        "EDISS remains a deliberate zero-match route because its main thesis supervisor depends on the second-year university selected after enrollment.",
         f"Official email remains unlocated for {result['counts']['retained_matches_without_official_email']} retained professors and most unretained candidates; no address is guessed.",
         "Recruiting remains unknown unless supported by a current explicit statement; research activity is not recruiting evidence.",
         "Faculty appointment and recruiting evidence must be refreshed before outreach or submission.",
         "The strongest bounded UVA fit has a courtesy Computer Science appointment, but exact Computer Science PhD supervision authority remains unresolved and no UVA match was retained.",
-        "Stage 5 scoring still covers the prior 143-program roster; all eight new routes remain intentionally absent until Stage 5 re-entry 16 is executed.",
+        f"Stage 5 scoring does not yet cover the {result['counts']['latest_reentry_programs']} new faculty-ready routes; they remain intentionally absent until Stage 5 re-entry 17 is executed.",
     ]
     output_paths = [EVALUATED_PATH, RETAINED_PATH, SOURCES_PATH, REPORT_PATH]
     artifacts = [
@@ -799,8 +804,8 @@ def main() -> int:
         "manifest_version": "1.0",
         "schema_version": PASS2_SCHEMA_VERSION,
         "stage": 4,
-        "run_type": "faculty_reentry_16",
-        "name": "Deep professor and department fit mapping — re-entry 16",
+        "run_type": "faculty_reentry_17",
+        "name": "Deep professor and department fit mapping — re-entry 17",
         "status": "complete" if result["status"] == "PASS" else "failed",
         "decision": result["status"],
         "source_commit_before_stage": source_commit,
@@ -817,11 +822,15 @@ def main() -> int:
             "individual_professor_scoring": "absent",
             "stage_specific_tests": {
                 "command": "python -m pytest tests/test_professor_mapping.py -q",
-                "result": "30 passed",
+                "result": "32 passed",
+            },
+            "live_source_retrieval": {
+                "command": "HTTP GET with browser user agent across all 41 stage_04_reentry_17 source URLs",
+                "result": "36 HTTP 200; 5 anti-bot HTTP 403 (1 McGill, 4 WPI) independently readable through browser retrieval",
             },
             "full_suite_boundary": {
                 "command": "python -m pytest -q",
-                "result": "141 passed, 1 expected downstream Stage 5 coverage failure",
+                "result": "147 passed, 1 expected downstream Stage 5 coverage failure",
                 "unresolved_stages": [5],
             },
         },

@@ -1454,6 +1454,96 @@ FACULTY_ROSTERS: dict[str, FacultyRoster] = {
             _c("Arash Reyhani-Masoleh", "hardware security; cryptography; dependable computing"),
         ),
     ),
+    "Drexel University": FacultyRoster(
+        "Nick Howley College of Engineering and Computing, Department of Computer Science",
+        "https://drexel.edu/cci/academics/computer-science-department/faculty/",
+        (
+            _c("Preetha Chatterjee", "AI for software engineering; natural language processing; mining software repositories"),
+            _c("Geoffrey Mainland", "programming languages; runtime systems; specialized computation"),
+            _c("Spiros Mancoridis", "software security; network security; software engineering"),
+            _c("Eric Sun", "computer security; privacy; trustworthy systems"),
+        ),
+    ),
+    "Lehigh University": FacultyRoster(
+        "P.C. Rossin College of Engineering and Applied Science, Department of Computer Science and Engineering",
+        "https://engineering.lehigh.edu/faculty",
+        (
+            _c("Brian D. Davison", "information retrieval; natural language processing; machine learning; data mining"),
+            _c("Lifang He", "machine learning; data mining; trustworthy artificial intelligence"),
+            _c("Jeffrey D. Heflin", "semantic web; knowledge representation; information integration"),
+            _c("Henry F. Korth", "distributed systems; databases; blockchain systems; dependable computing"),
+        ),
+    ),
+    "George Washington University": FacultyRoster(
+        "School of Engineering and Applied Science, Department of Computer Science",
+        "https://cs.engineering.gwu.edu/faculty-directory",
+        (
+            _c("Adam J. Aviv", "usable security and privacy; systems security; authentication"),
+            _c("Shi Feng", "AI safety; large-language-model evaluation; interpretable machine learning"),
+            _c("Timothy Wood", "cloud computing; distributed systems; systems reliability"),
+            _c("Jie Zhou", "edge computing; secure and resilient networked systems"),
+        ),
+    ),
+    "University at Albany": FacultyRoster(
+        "College of Nanotechnology, Science, and Engineering, Department of Computer Science",
+        "https://www.albany.edu/computer-science/faculty-staff",
+        (
+            _c("Amir Masoumzadeh", "security policy specification and verification; privacy; browser security"),
+            _c("Jeong-Hyon Hwang", "databases; distributed systems; real-time data processing"),
+            _c("Pradeep K. Atrey", "security and privacy; cloud computing; multimedia data analytics"),
+            _c("Haoyu Wang", "natural language processing; machine learning; accessible artificial intelligence"),
+        ),
+    ),
+    "Worcester Polytechnic Institute": FacultyRoster(
+        "Department of Computer Science",
+        "https://www.wpi.edu/academics/departments/computer-science/faculty-staff",
+        (
+            _c("Tian Guo", "cloud systems; systems performance; machine-learning systems"),
+            _c("Craig A. Shue", "network security; distributed systems; edge and cloud security"),
+            _c("Kyumin Lee", "artificial intelligence; natural language processing; cybersecurity"),
+            _c("Roee Shraga", "data integration; data discovery; human-machine decision support"),
+        ),
+    ),
+    "University of British Columbia": FacultyRoster(
+        "Department of Electrical and Computer Engineering",
+        "https://ece.ubc.ca/people/faculty/",
+        (
+            _c("Julia Rubin", "software and AI quality, security, and reliability; program analysis"),
+            _c("Ivan Beschastnikh", "distributed systems; software reliability; systems debugging"),
+            _c("Ali Mesbah", "software engineering; automated testing; program analysis"),
+            _c("Konstantin Beznosov", "computer security and privacy; usable security; software security"),
+        ),
+    ),
+    "University of Toronto": FacultyRoster(
+        "Edward S. Rogers Sr. Department of Electrical and Computer Engineering",
+        "https://www.ece.utoronto.ca/faculty/faculty-directory/",
+        (
+            _c("Ding Yuan", "systems reliability; debugging; distributed systems; log analysis"),
+            _c("Ashvin Goel", "operating systems; storage systems; distributed systems"),
+            _c("Michael Stumm", "computer systems; operating systems; cloud infrastructure"),
+            _c("Shurui Zhou", "software engineering; AI-assisted development; developer productivity"),
+        ),
+    ),
+    "McGill University": FacultyRoster(
+        "Department of Electrical and Computer Engineering",
+        "https://www.mcgill.ca/ece/people",
+        (
+            _c("Gunter Mussbacher", "model-driven software engineering; requirements engineering; safety assurance"),
+            _c("Lili Wei", "software engineering; program analysis; software security"),
+            _c("Brett Meyer", "software engineering; software design; software systems"),
+            _c("Muthucumaru Maheswaran", "distributed systems; cloud computing; Internet technologies"),
+        ),
+    ),
+    "Åbo Akademi University": FacultyRoster(
+        "Faculty of Science and Engineering, Information Technology",
+        "https://www.abo.fi/en/information-technology-research-and-researchers-2-2-2/",
+        (
+            _c("Ivan Porres Paltor", "trustworthy software and AI; AI for software engineering; validation and verification"),
+            _c("Dragos Truscan", "software validation and verification; model-based testing; AI-assisted testing"),
+            _c("Luigia Petre", "formal methods; networked systems; software verification"),
+            _c("Johan Pensar", "artificial intelligence; probabilistic models; machine learning"),
+        ),
+    ),
 }
 
 
