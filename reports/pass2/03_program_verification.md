@@ -1,41 +1,41 @@
 # Pass 2 Stage 3 — Program structure, eligibility, and funding verification
 
-Generated: 2026-09-11T01:23:55.802601+00:00
+Generated: 2026-09-11T02:26:38.995680+00:00
 
-Decision: **PASS — verification re-entry 05 complete**
+Decision: **PASS — verification re-entry 06 complete**
 
 ## Outcome
 
-All 2,025 Stage 2 candidates now have exactly one controlled retained, conditional, monitor, or excluded status with an evidence-backed reason. The 12 latest Stage 2 re-entry routes were re-verified from official program, admissions, funding, fee, and deadline sources. No score or admission recommendation was created.
+All 2,037 Stage 2 candidates now have exactly one controlled retained, conditional, monitor, or excluded status with an evidence-backed reason. The 12 latest Stage 2 re-entry routes were re-verified from official program, admissions, funding, fee, and deadline sources. No score or admission recommendation was created.
 
 | Status | All candidates | New routes |
 | --- | --- | --- |
-| Retained | 33 | 1 |
-| Conditional | 50 | 2 |
-| Monitor | 315 | 9 |
+| Retained | 33 | 0 |
+| Conditional | 56 | 6 |
+| Monitor | 321 | 6 |
 | Excluded | 1627 | 0 |
-| Faculty-review ready | 83 | 3 |
+| Faculty-review ready | 89 | 6 |
 
 ## Stage 2 re-entry routes
 
 | Institution | Program | Status | Eligibility gate | Funding gate | Largest unresolved question |
 | --- | --- | --- | --- | --- | --- |
-| Auburn University | [PhD in Computer Science and Software Engineering](https://www.eng.auburn.edu/program/phd-computer-science-software-engineering.html) | monitor | resolvable_question | resolvable_inquiry | Can the applicant produce Auburn's minimum GRE scores and obtain a renewable offer covering full tuition, fees, health insurance, and summers? |
-| Mississippi State University | [Doctor of Philosophy in Computer Science](https://www.cse.msstate.edu/grad/phd-cs/) | monitor | resolvable_question | resolvable_inquiry | Will the department admit the applicant below its expected bachelor's-entry GPA and issue a continuous funded offer beyond the first two teaching-assistantship years? |
-| University of Arkansas | [Doctor of Philosophy in Engineering with a concentration in Computer Science](https://catalog.uark.edu/graduatecatalog/programsofstudy/computerscienceandcomputerengineeringcsce/) | monitor | resolvable_question | resolvable_inquiry | Can the applicant satisfy the GRE gate and secure a renewable assistantship or fellowship covering tuition, residual fees, insurance, and summers? |
-| University of Alabama at Birmingham | [Ph.D. in Computer Science](https://www.uab.edu/cas/computerscience/graduate-programs/doctoral-program) | conditional | pass | resolvable_inquiry | Will a Fall 2027 offer guarantee renewable stipend, full tuition, mandatory fees, health insurance, and summer support? |
-| Concordia University | [Master of Applied Science in Software Engineering](https://www.concordia.ca/academics/graduate/software-engineering-masc.html) | conditional | pass | resolvable_inquiry | What guaranteed stipend, tuition offset, mandatory-fee, health-insurance, and summer support will the admission offer provide? |
-| McMaster University | [Master of Applied Science in Software Engineering](https://www.eng.mcmaster.ca/cas/degree-options/software-engineering-masc/) | retained | pass | pass | What is the guaranteed twenty-month net package after international tuition, mandatory fees, health coverage, and summer registration costs? |
-| University of Calgary | [MSc (Thesis-based) in Computer Science — Software Engineering specialization](https://calendar.ucalgary.ca/programs/CPSCSEMSCT/admissions-cMwRI) | monitor | not_met | pass | This route is ineligible for Fall 2027 because the required three years of post-bachelor's industry experience cannot be completed in time. |
-| University of Regina | [Master of Applied Science in Software Systems Engineering](https://www.uregina.ca/academics/programs/engineering/masters-phd-software-systems-engineering.html) | monitor | resolvable_question | resolvable_inquiry | Will an accredited SSE supervisor accept the applicant and fund a package that covers international tuition, fees, health insurance, and summers? |
-| University of Bamberg | [M.Sc. International Software Systems Science](https://www.uni-bamberg.de/en/ma-isosysc/) | monitor | resolvable_question | unverified | Will Bamberg accept the converted grade and 115-ECTS subject map without an unattainable GRE or GATE condition, and how will living costs be funded? |
-| Technische Universität Darmstadt | [M.Sc. Computer Science](https://www.informatik.tu-darmstadt.de/studium_fb20/im_studium/studiengaenge_liste/computer_science_msc.en.jsp) | monitor | resolvable_question | unverified | Will the 60-ECTS competence map and English-medium U.S. bachelor's satisfy admission without an entrance exam, and how will living costs be funded? |
-| University of Potsdam | [M.Sc. Computer Science](https://www.uni-potsdam.de/en/studium/what-to-study/master/computer-science) | monitor | resolvable_question | unverified | Will the bachelor's content, C1 evidence, VPD, and selection review clear admission, and what external source can fund living and insurance costs? |
-| Rheinland-Pfälzische Technische Universität Kaiserslautern-Landau | [M.Sc. Computer Science](https://rptu.de/studienangebot/22777/Computer_Science-Computer_Science-master) | monitor | resolvable_question | unverified | Will RPTU accept the curriculum and English evidence, what is the exact Winter 2027/28 deadline and fee schedule, and how will living costs be funded? |
+| North Dakota State University-Main Campus | [Doctor of Philosophy in Software and Security Engineering](https://catalog.ndsu.edu/curriculum/graduate/software-and-security-engineering-doctorate/) | conditional | pass | resolvable_inquiry | Will the program issue a renewable 20-hour assistantship with a current stipend adequate after uncovered differential tuition, mandatory fees, insurance, and summer costs? |
+| Boise State University | [Doctor of Philosophy in Computing — Computer Science or Cybersecurity emphasis](https://www.boisestate.edu/computing/academics/doctoral-program/) | conditional | resolvable_question | pass | Does the applicant's transcript satisfy an exact emphasis gate, and can an aligned advisor commit a complete post-first-year funding plan before enrollment? |
+| The University of Alabama | [Doctor of Philosophy in Computer Science](https://catalog.ua.edu/graduate/engineering/computer-science/phd/) | monitor | fail | resolvable_inquiry | Will the department formally consider a 3.35 applicant below its published 3.5 program threshold, and if so can an assistantship cover the full multiyear net cost? |
+| Florida International University | [Doctor of Philosophy in Computer Science](https://www.cis.fiu.edu/degree/doctor-of-philosophy-in-computer-science/) | conditional | resolvable_question | pass | Does the transcript clear FIU's upper-division GPA and calculus/statistics gates, and can an advisor commit support beyond the first TA year? |
+| Ontario Tech University | [Master of Applied Science in Software Engineering](https://gradstudies.ontariotechu.ca/future_students/programs/masters_programs/software_engineering/index.php) | conditional | resolvable_question | pass | Can an aligned software-verification professor sign a 24-month supervision and funding agreement whose net value remains viable after international tuition and fees? |
+| Carleton University | [Master of Applied Science in Electrical and Computer Engineering](https://graduate.carleton.ca/program/electrical-and-computer-engineering-masters-programs/) | conditional | pass | resolvable_inquiry | Will an aligned supervisor support admission with an international package that covers tuition, UHIP, fees, and living costs for the full thesis period? |
+| University of Ottawa | [Master of Applied Science in Electrical and Computer Engineering](https://catalogue.uottawa.ca/en/graduate/master-applied-science-electrical-computer-engineering/) | monitor | resolvable_question | resolvable_inquiry | Will the faculty accept the CS transcript as ECE-equivalent, secure a willing supervisor, and issue an international package adequate after tuition, UHIP, fees, and living costs? |
+| University of Windsor | [Master of Applied Science in Electrical Engineering](https://www.uwindsor.ca/graduate-studies/320/electrical-engineering) | monitor | resolvable_question | resolvable_inquiry | Will the department accept the CS degree without material background courses and produce a two-year international package beyond the limited CAD 7,500 entrance award? |
+| Saarland University | [Master of Science in Cybersecurity](https://www.uni-saarland.de/en/study/programmes/master/cybersecurity.html) | monitor | resolvable_question | unverified | Can the applicant produce an accepted C1 certificate and curriculum equivalence while independently securing sufficient living-cost, insurance, and semester-fee funding? |
+| University of Passau | [Master of Science in Computer Science](https://www.uni-passau.de/en/msc-computer-science) | monitor | resolvable_question | unverified | Will the transcript satisfy the 110-ECTS and grade-or-rank gates, and can the applicant independently fund the visa minimum, health insurance, and living costs? |
+| Technische Universität Berlin | [Master of Science in Computer Science (Informatik)](https://www.tu.berlin/en/studying/study-programs/all-programs-offered/study-course/computer-science-informatik-m-sc/) | monitor | resolvable_question | unverified | Does the transcript meet every strict credit bucket, and can the applicant secure living-cost and insurance funding before the visa and enrollment deadlines? |
+| University of Trento | [Master's Degree in Computer Science](https://corsi.unitn.it/en/computer-science-master) | conditional | resolvable_question | pass | What admission score and scholarship rank will the applicant receive under the 2027-2028 call, and will the annual award cover the actual Trento living-cost gap? |
 
 Retained means an exact research route, formal applicant eligibility, and a credible officially sourced funding route are present. It does not mean admission is likely or that an eventual offer will contain adequate net funding.
 
-Conditional rows are positioned only as `Outreach Before Decision`. UAB and Concordia require offer-specific funding confirmation. Auburn, Mississippi State, Arkansas, Calgary, Regina, Bamberg, Darmstadt, Potsdam, and RPTU remain monitors because a formal eligibility gate is unmet or unresolved, or no credible living-cost funding route was verified.
+Conditional rows are positioned only as `Outreach Before Decision`. North Dakota State, Boise State, FIU, Ontario Tech, Carleton, and Trento require applicant-specific eligibility or funding confirmation. Alabama, uOttawa, Windsor, Saarland, Passau, and TU Berlin remain monitors because a formal eligibility or funding gate is unmet or unresolved.
 
 ## Acceptance checks
 
@@ -62,12 +62,12 @@ None prevented Stage 3 completion.
 
 ## Unresolved coverage
 
-- Fall 2027 is not explicitly published for this batch; recurring dates are labeled as inferred, and RPTU's exact portal deadline remains unverified.
-- Simultaneous-application rules remain unknown for most new routes; Auburn, Concordia, Bamberg, and Darmstadt provide limited exact rules.
+- Ontario Tech explicitly publishes its Fall 2027 deadline; other target-cycle dates are recurring or latest-cycle evidence and remain labeled for reconfirmation.
+- Simultaneous-application and separate-fee rules remain unverified wherever the official source did not publish an exact rule.
 - Official pages were checked individually during evidence capture; repeatable bulk retrieval status is not part of this Stage 3 acceptance gate.
 - Offer-specific stipend, mandatory-fee, health-insurance, and summer coverage remain explicit unknowns wherever the official page did not publish them.
-- Bamberg, Darmstadt, Potsdam, and RPTU have no verified program-level living-cost funding route; Auburn, Mississippi State, Arkansas, and Regina have both eligibility and funding questions.
-- Calgary's exact specialization is not viable for Fall 2027 because it requires three years of relevant industry experience after the bachelor's degree.
-- 11 new routes remain conditional or monitor and must not be treated as funded recommendations.
-- Stage 4 may evaluate current faculty only for the 3 new retained/conditional routes; monitor routes do not pass the faculty-review gate.
-- Full-suite verification: 74 passed and 3 expected downstream coverage checks failed because Stage 4 lacks rosters/five-professor evaluations and Stage 5 lacks scores for the three new faculty-review-ready routes.
+- Saarland, Passau, and TU Berlin have no verified program-level living-cost funding route; uOttawa and Windsor have both applicant-specific eligibility and funding questions.
+- Alabama's published 3.5 GPA threshold is above the applicant's 3.35 GPA, so the route remains monitor-only.
+- 12 new routes remain conditional or monitor and must not be treated as funded recommendations.
+- Stage 4 may evaluate current faculty only for the 6 new retained/conditional routes; monitor routes do not pass the faculty-review gate.
+- Full-suite verification: 78 passed and 3 expected downstream coverage checks failed because Stage 4 lacks rosters/five-professor evaluations and Stage 5 lacks scores for the six new faculty-review-ready routes.
