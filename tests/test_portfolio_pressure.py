@@ -183,7 +183,7 @@ def test_stage_six_reentry_04_disposes_and_pressure_tests_every_new_route():
     assert len(latest_ids) == len(entries) == 9
     assert {row["program_id"] for row in entries} == latest_ids
     assert all(len(row["pressure_test_answers"]) == len(PRESSURE_QUESTIONS) for row in entries)
-    assert {row["portfolio_status"] for row in entries} == {"monitor", "do_not_apply"}
+    assert {row["portfolio_status"] for row in entries} == {"do_not_apply"}
 
 
 def test_stage_six_reentry_05_disposes_and_pressure_tests_every_new_route():
@@ -202,7 +202,7 @@ def test_stage_six_reentry_05_disposes_and_pressure_tests_every_new_route():
     assert len(latest_ids) == len(entries) == 3
     assert {row["program_id"] for row in entries} == latest_ids
     assert all(len(row["pressure_test_answers"]) == len(PRESSURE_QUESTIONS) for row in entries)
-    assert {row["portfolio_status"] for row in entries} == {"monitor", "do_not_apply"}
+    assert {row["portfolio_status"] for row in entries} == {"do_not_apply"}
 
 
 def test_stage_six_reentry_06_disposes_and_pressure_tests_every_new_route():
@@ -280,6 +280,26 @@ def test_stage_six_reentry_09_disposes_and_pressure_tests_every_new_route():
     assert sum(len(row["pressure_test_answers"]) for row in entries) == 60
     assert all(len(row["pressure_test_answers"]) == len(PRESSURE_QUESTIONS) for row in entries)
     assert {row["portfolio_status"] for row in entries} == {"monitor", "do_not_apply"}
+
+
+def test_stage_six_reentry_10_disposes_and_pressure_tests_every_new_route():
+    latest_ids = {
+        row["candidate_program_id"]
+        for row in read_csv(REPO_ROOT / "data/processed/pass2/stage_03_reentry_10_verification.csv")
+        if row["faculty_review_ready"] == "yes"
+    }
+    portfolio = read_json(REPO_ROOT / "data/processed/pass2/portfolio.json")
+    entries = [
+        row
+        for key in ("core", "reserve", "monitor", "do_not_apply", "not_retained_alternates")
+        for row in portfolio[key]
+        if row["program_id"] in latest_ids
+    ]
+    assert len(latest_ids) == len(entries) == 5
+    assert {row["program_id"] for row in entries} == latest_ids
+    assert sum(len(row["pressure_test_answers"]) for row in entries) == 50
+    assert all(len(row["pressure_test_answers"]) == len(PRESSURE_QUESTIONS) for row in entries)
+    assert {row["portfolio_status"] for row in entries} == {"do_not_apply"}
 
 
 def test_stage_six_report_uses_required_stage_template():
