@@ -8,9 +8,9 @@ Portfolio policy outcome: **RETURN_TO_CANDIDATE_DISCOVERY**.
 
 ## What changed
 
-Generated: 2026-09-11T10:12:25.037332+00:00
+Generated: 2026-09-11T11:15:01.793389+00:00
 
-All 126 scored programs across 119 universities received a preliminary disposition and all ten pressure-test answers (1260 answers total). The evidence supports 0 core, 0 reserve, 18 monitor, and 108 do-not-apply programs.
+All 131 scored programs across 124 universities received a preliminary disposition and all ten pressure-test answers (1310 answers total). The evidence supports 0 core, 0 reserve, 19 monitor, and 112 do-not-apply programs.
 
 The core is intentionally empty. Every hard-gate survivor still lacks an evidence-supported strategic admission calibration. Stage 6 therefore returns to candidate discovery instead of padding a 12–16 application target or relabeling a program as Plausible.
 
@@ -35,6 +35,7 @@ The core is intentionally empty. Every hard-gate survivor still lacks an evidenc
 | monitor | University of Michigan-Ann Arbor | Computer Science and Engineering PhD | 68 | Insufficient evidence | 1 |
 | monitor | University of Utah | Computing PhD | 68 | Insufficient evidence | 1 |
 | monitor | Brown University | Computer Science PhD | 65 | Insufficient evidence | 1 |
+| monitor | Old Dominion University | Computer Science (Ph.D.) | 65 | Insufficient evidence | 1 |
 | monitor | Trent University | MSc in Applied Modelling and Quantitative Methods — Thesis Stream | 65 | Insufficient evidence | 1 |
 | monitor | University of Waterloo | Master of Applied Science in Electrical and Computer Engineering | 65 | Insufficient evidence | 1 |
 | monitor | York University | Master of Science in Computer Science — Thesis Option | 65 | Insufficient evidence | 1 |
@@ -43,13 +44,13 @@ The core is intentionally empty. Every hard-gate survivor still lacks an evidenc
 
 | Dimension | Category | Count |
 | --- | --- | --- |
-| degree type | PhD | 15 |
+| degree type | PhD | 16 |
 | degree type | Thesis or research master's | 3 |
 | region | canada | 3 |
-| region | us | 15 |
+| region | us | 16 |
 | funding type | verified comprehensive support | 4 |
-| funding type | verified support with material cost gaps | 14 |
-| plausibility category | Insufficient evidence | 18 |
+| funding type | verified support with material cost gaps | 15 |
+| plausibility category | Insufficient evidence | 19 |
 
 ### Do-not-apply list
 
@@ -91,7 +92,9 @@ The core is intentionally empty. Every hard-gate survivor still lacks an evidenc
 | Tennessee Technological University | Computer Science PhD | funding | 58 |
 | The University of Texas at Arlington | Doctoral Degree in Computer Science/Computer Engineering | funding | 58 |
 | The University of Texas at Dallas | Computer Science PhD | funding | 58 |
+| The University of Texas at El Paso | Doctor of Philosophy in Computer Science | funding | 58 |
 | University of Alabama at Birmingham | Ph.D. in Computer Science | funding | 58 |
+| University of Alabama in Huntsville | Computer Science, Ph.D. | funding | 58 |
 | University of Cincinnati-Main Campus | Doctor of Philosophy in Computer Science and Engineering | funding | 58 |
 | University of Delaware | Ph.D. in Computer Science | funding | 58 |
 | University of Florence | MSc in Software: Science and Technology | funding | 58 |
@@ -116,6 +119,7 @@ The core is intentionally empty. Every hard-gate survivor still lacks an evidenc
 | McMaster University | Master of Applied Science in Software Engineering | funding | 55 |
 | Montana State University | Computer Science PhD | funding | 55 |
 | Simon Fraser University | Master of Science in Computing Science — Thesis Option | eligibility | 55 |
+| Temple University | Computer and Information Science PhD | funding | 55 |
 | The University of Texas at San Antonio | Ph.D. in Computer Science | funding | 55 |
 | University of California-Irvine | Software Engineering PhD | funding | 55 |
 | University of California-Riverside | Ph.D. in Computer Science | funding | 55 |
@@ -125,6 +129,7 @@ The core is intentionally empty. Every hard-gate survivor still lacks an evidenc
 | University of Guelph | Doctor of Philosophy in Computer Science | eligibility | 55 |
 | University of Iowa | Ph.D. in Computer Science | funding | 55 |
 | University of Louisiana at Lafayette | PhD in Applied Computing and Information Sciences | funding | 55 |
+| University of Rhode Island | Computer Science Ph.D. | funding | 55 |
 | University of Wisconsin-Madison | Computer Sciences, PhD | funding | 55 |
 | West Virginia University | Computer Science, Ph.D. | funding | 55 |
 | École Polytechnique de Montréal | Master of Applied Science in Computer Engineering — Software Engineering Option | funding | 55 |
@@ -166,18 +171,18 @@ The core is intentionally empty. Every hard-gate survivor still lacks an evidenc
 
 ### Pressure-test coverage
 
-| Question | Prompt | Assessments across 126 programs |
+| Question | Prompt | Assessments across 131 programs |
 | --- | --- | --- |
-| 1 | Is there at least one genuinely relevant research program? | pass: 126 |
-| 2 | Are there current, verified professor matches? | fail: 21, pass: 105 |
-| 3 | Is the department deeper than a single professor, or is that dependency worth the risk? | fail: 21, risk: 105 |
-| 4 | Is funding credible for this applicant and degree type? | fail: 98, pass: 28 |
-| 5 | Is the applicant formally eligible? | fail: 14, pass: 112 |
-| 6 | What evidence supports the strategic plausibility category? | fail: 14, unresolved: 112 |
-| 7 | Would the applicant prefer this opportunity over another already retained? | fail: 108, unresolved: 18 |
-| 8 | Is the application fee and effort justified? | fail: 108, unresolved: 18 |
-| 9 | Could one professor or administrator reply materially change the decision? | yes: 126 |
-| 10 | What new evidence would cause the recommendation to change? | actionable: 126 |
+| 1 | Is there at least one genuinely relevant research program? | pass: 131 |
+| 2 | Are there current, verified professor matches? | fail: 21, pass: 110 |
+| 3 | Is the department deeper than a single professor, or is that dependency worth the risk? | fail: 21, risk: 110 |
+| 4 | Is funding credible for this applicant and degree type? | fail: 102, pass: 29 |
+| 5 | Is the applicant formally eligible? | fail: 14, pass: 117 |
+| 6 | What evidence supports the strategic plausibility category? | fail: 14, unresolved: 117 |
+| 7 | Would the applicant prefer this opportunity over another already retained? | fail: 112, unresolved: 19 |
+| 8 | Is the application fee and effort justified? | fail: 112, unresolved: 19 |
+| 9 | Could one professor or administrator reply materially change the decision? | yes: 131 |
+| 10 | What new evidence would cause the recommendation to change? | actionable: 131 |
 
 The complete answer text and resolving Stage 5 score-evidence IDs are stored with every program in `data/processed/pass2/portfolio.json`.
 
@@ -186,7 +191,7 @@ The complete answer text and resolving Stage 5 score-evidence IDs are stored wit
 | Assertion | Result |
 | --- | --- |
 | all_scored_programs_receive_one_disposition | PASS |
-| latest_reentry_12_receives_dispositions_and_pressure_tests | PASS |
+| latest_reentry_13_receives_dispositions_and_pressure_tests | PASS |
 | every_university_has_exactly_one_primary_program | PASS |
 | primary_program_selection_uses_evidence_not_prestige | PASS |
 | every_program_answers_all_ten_pressure_questions | PASS |
@@ -206,21 +211,21 @@ The complete answer text and resolving Stage 5 score-evidence IDs are stored wit
 | active_composition_reconciles | PASS |
 | all_disposition_composition_reconciles | PASS |
 
-- Stage-specific verification: `python -m pytest tests/test_portfolio_pressure.py -q` — 20 passed.
-- Full-suite verification: `python -m pytest -q` — 119 passed.
+- Stage-specific verification: `python -m pytest tests/test_portfolio_pressure.py -q` — 21 passed.
+- Full-suite verification: `python -m pytest -q` — 125 passed.
 
 ## Material uncertainties or conflicts
 
 - No implementation blocker prevented Stage 6 completion. The lack of an evidence-supported core is the plan-required policy result, not permission to pad the list.
-- Stage 6 re-entry 12 pressure-tested all 6 newly scored routes: monitor-only routes: 0; do-not-apply routes: 6 because at least one hard gate fails.
-- All 18 monitor programs have only one verified strong professor and need either a verified second match or persuasive availability confirmation.
-- All 18 monitor programs lack evidence adequate for a strategic Competitive/Plausible/Reach calibration.
-- 108 programs fail at least one hard gate and remain do-not-apply until direct official evidence resolves every failure.
+- Stage 6 re-entry 13 pressure-tested all 5 newly scored routes: monitor-only routes: 1; do-not-apply routes: 4 because at least one hard gate fails.
+- All 19 monitor programs have only one verified strong professor and need either a verified second match or persuasive availability confirmation.
+- All 19 monitor programs lack evidence adequate for a strategic Competitive/Plausible/Reach calibration.
+- 112 programs fail at least one hard gate and remain do-not-apply until direct official evidence resolves every failure.
 - Candidate discovery must find additional hard-gate-clearing, strategically calibrated options before a quality-first core can be recommended.
 
 ## Records requiring human judgment
 
-- Applicant preference among the 18 monitor opportunities is not directly verified.
+- Applicant preference among the 19 monitor opportunities is not directly verified.
 - Single-professor dependencies require a judgment about whether verified availability is sufficient without broader department depth.
 - Offer-specific funding, fee, health-insurance, summer, and duration gaps remain where recorded in Stage 5 evidence.
 
