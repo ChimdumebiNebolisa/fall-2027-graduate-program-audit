@@ -48,8 +48,9 @@ DEFINITION_PATHS = [
     REPO_ROOT / "data/raw/pass2/stage_02_reentry_10.json",
     REPO_ROOT / "data/raw/pass2/stage_02_reentry_11.json",
     REPO_ROOT / "data/raw/pass2/stage_02_reentry_12.json",
+    REPO_ROOT / "data/raw/pass2/stage_02_reentry_13.json",
 ]
-CURRENT_REENTRY_NUMBER = 12
+CURRENT_REENTRY_NUMBER = 13
 CURRENT_REENTRY_LABEL = f"{CURRENT_REENTRY_NUMBER:02d}"
 CURRENT_REENTRY_PREFIX = f"reentry{CURRENT_REENTRY_LABEL}"
 PREVIOUS_REENTRY_LABEL = f"{CURRENT_REENTRY_NUMBER - 1:02d}"
@@ -482,8 +483,8 @@ def build_report(
         "and offer-level assistantship review; every recorded support mechanism remains preliminary.",
         "- The three current Canadian thesis routes require degree and course equivalency, willing-supervisor, "
         "current international-package, and net-cost verification.",
-        "- The three current Swedish routes require ECTS and English mapping plus a viable tuition and "
-        "living-cost plan; every recorded institutional scholarship is selective and partial.",
+        "- The three current European routes require subject-credit and English mapping plus a viable tuition and "
+        "living-cost plan; every recorded institutional discount or funding route remains incomplete.",
         "- Existing Stage 3-6 artifacts are intentionally unchanged and therefore do not yet include "
         "these routes.",
         "- Discovery remains explicitly non-saturated; this pass reduces observed false-negative risk "
@@ -493,8 +494,8 @@ def build_report(
         "",
         "Stage 3 must determine whether each route is actually eligible and credibly funded. The "
         "highest-impact judgments are the six U.S. transcript and assistantship conditions, whether the three "
-        "Canadian thesis routes clear supervisor and international net-cost gates, and whether the three Swedish "
-        "routes combine qualification equivalency with a viable scholarship and living-cost plan.",
+        "Canadian thesis routes clear supervisor and international net-cost gates, and whether the three European "
+        "routes combine qualification equivalency with a viable tuition and living-cost plan.",
         "",
         "## Files created or modified",
         "",
@@ -723,7 +724,7 @@ def main() -> None:
         "downstream_integration_check": {
             "command": "python -m pytest -q",
             "result": "EXPECTED_FAIL_PENDING_STAGE_3_REENTRY",
-            "passed": 112,
+            "passed": 119,
             "failed": 1,
             "failure": "tests/test_program_verification.py::test_every_stage2_candidate_has_exactly_one_controlled_status",
             "reason": f"program_verification.csv has {verification_rows} rows while the Stage 2 funnel now has {len(merged)}; Stage 3 was intentionally not modified in this one-stage run",
@@ -739,7 +740,7 @@ def main() -> None:
             "European registry coverage and national-registry access limitations from the initial Stage 2 run remain.",
             "The six current U.S. doctoral routes require transcript-level entry, current-advisor capacity, and offer-level assistantship review; only preliminary support mechanisms are recorded.",
             "The three current Canadian thesis routes require degree and course equivalency, willing-supervisor, international-package, and net-cost verification.",
-            "The three current Swedish routes require ECTS, English, and thesis-fit mapping plus a viable tuition and living-cost plan; all recorded institutional scholarships are selective and partial.",
+            "The three current European routes require subject-credit, English, and thesis-fit mapping plus a viable tuition and living-cost plan; all recorded institutional discounts or funding routes remain incomplete.",
             *(
                 [
                     f"Automated source retrieval exceptions remain for {len(retrieval_qa['unresolved_source_ids'])} of {retrieval_qa['checked']} current-round official source records; all were browser-reviewed during discovery."
