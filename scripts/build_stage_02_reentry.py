@@ -42,8 +42,9 @@ DEFINITION_PATHS = [
     REPO_ROOT / "data/raw/pass2/stage_02_reentry_04.json",
     REPO_ROOT / "data/raw/pass2/stage_02_reentry_05.json",
     REPO_ROOT / "data/raw/pass2/stage_02_reentry_06.json",
+    REPO_ROOT / "data/raw/pass2/stage_02_reentry_07.json",
 ]
-CURRENT_REENTRY_NUMBER = 6
+CURRENT_REENTRY_NUMBER = 7
 CURRENT_REENTRY_LABEL = f"{CURRENT_REENTRY_NUMBER:02d}"
 CURRENT_REENTRY_PREFIX = f"reentry{CURRENT_REENTRY_LABEL}"
 PREVIOUS_REENTRY_LABEL = f"{CURRENT_REENTRY_NUMBER - 1:02d}"
@@ -346,8 +347,8 @@ def build_report(
         "",
         "## What changed",
         "",
-        "Stage 6 re-entry 05 returned the workflow to discovery because the evidence-calibrated "
-        "portfolio still had zero justified core applications. This sixth bounded non-saturation "
+        f"Stage 6 re-entry {PREVIOUS_REENTRY_LABEL} returned the workflow to discovery because the evidence-calibrated "
+        "portfolio still had zero justified core applications. This bounded non-saturation "
         f"pass adds {len(candidates)} genuinely new exact research routes supported by current official program, "
         "research, and preliminary funding evidence. It does not score, rank, retain, or claim "
         "verified funding or faculty capacity.",
@@ -422,7 +423,7 @@ def build_report(
             ],
         ),
         "",
-        ", and ".join(row["institution_name"] for row in corrected)
+        " and ".join(row["institution_name"] for row in corrected)
         + " were missed by the original bounded screen. Current official evidence corrects those "
         "omissions, but promotes the routes only to Stage 3 verification.",
         "",
@@ -472,14 +473,12 @@ def build_report(
         "EHESO/ETER and several national registries remain blocked.",
         "- Current faculty appointment, supervision authority, and capacity remain Stage 4 work "
         "after program verification.",
-        "- NDSU's program GPA and computing preparation, Boise's emphasis prerequisites, Alabama's exact "
-        "bachelor's-entry treatment, and FIU's upper-division GPA and mathematics rules require transcript-level review.",
-        "- NDSU, Boise, Alabama, and FIU publish assistantship mechanisms, but awards are competitive; "
-        "Boise and FIU also leave post-first-year funding dependent on an advisor.",
-        "- Ontario Tech, Carleton, uOttawa, and Windsor publish research-master's support mechanisms, "
-        "but international eligibility, supervisor commitments, package duration, and net cost remain unresolved.",
-        "- Saarland, Passau, and TU Berlin avoid regular tuition but leave curriculum, language, semester-charge, "
-        "and living-cost funding questions; Trento's tuition waiver and stipend are limited and merit-ranked.",
+        "- Baylor, Rice, Washington State, and South Florida require transcript-level entry review; "
+        "Baylor and Rice publish strong doctoral support signals, while WSU and USF leave awards conditional.",
+        "- Waterloo, Queen's, Alberta, and Victoria require degree-equivalency, supervisor, international-package, "
+        "and net-cost verification even where a minimum or assistantship mechanism is published.",
+        "- TU Graz, LUT, VU Amsterdam, and Gothenburg require curriculum and language mapping plus a viable "
+        "tuition and living-cost plan; their scholarship routes are limited or competitive.",
         "- Existing Stage 3-6 artifacts are intentionally unchanged and therefore do not yet include "
         "these routes.",
         "- Discovery remains explicitly non-saturated; this pass reduces observed false-negative risk "
@@ -488,8 +487,8 @@ def build_report(
         "## Records requiring human judgment",
         "",
         "Stage 3 must determine whether each route is actually eligible and credibly funded. The "
-        "highest-impact judgments are NDSU's GPA and preparation gate, Boise and FIU's continuation funding, "
-        "whether any Canadian MASc package clears international net cost, and whether the European routes "
+        "highest-impact judgments are the U.S. transcript and funding conditions, whether any Canadian MASc "
+        "package clears international net cost, and whether the European routes "
         "combine transcript equivalency with viable living-cost funding.",
         "",
         "## Files created or modified",
@@ -713,7 +712,7 @@ def main() -> None:
         "downstream_integration_check": {
             "command": "python -m pytest -q",
             "result": "EXPECTED_FAIL_PENDING_STAGE_3_REENTRY",
-            "passed": 79,
+            "passed": 83,
             "failed": 1,
             "failure": "tests/test_program_verification.py::test_every_stage2_candidate_has_exactly_one_controlled_status",
             "reason": f"program_verification.csv has {verification_rows} rows while the Stage 2 funnel now has {len(merged)}; Stage 3 was intentionally not modified in this one-stage run",
@@ -727,9 +726,9 @@ def main() -> None:
             "Current faculty appointment, supervision authority, and capacity remain unverified.",
             "Other active catalog/manual-review rows remain unresolved and discovery remains non-saturated.",
             "European registry coverage and national-registry access limitations from the initial Stage 2 run remain.",
-            "NDSU, Boise, Alabama, and FIU require transcript-level entry review; all publish competitive assistantship mechanisms, while Boise and FIU leave continuation funding advisor-dependent.",
+            "Baylor, Rice, Washington State, and South Florida require transcript-level entry review; only preliminary doctoral support mechanisms are recorded at this stage.",
             "The four Canadian MASc routes require degree-equivalency, supervisor, international-package, and net-cost verification.",
-            "Saarland, Passau, and TU Berlin require curriculum and language mapping plus a living-cost plan; Trento's scholarship is limited and merit-ranked.",
+            "TU Graz, LUT, VU Amsterdam, and Gothenburg require curriculum and language mapping plus a viable tuition and living-cost plan; scholarship routes are limited or competitive.",
             *(
                 [
                     f"Automated source retrieval exceptions remain for {len(retrieval_qa['unresolved_source_ids'])} of {retrieval_qa['checked']} current-round official source records; all were browser-reviewed during discovery."

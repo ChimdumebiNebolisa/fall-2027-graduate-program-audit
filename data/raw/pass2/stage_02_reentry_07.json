@@ -1,0 +1,486 @@
+{
+  "trigger": "Stage 6 re-entry 06 returned to candidate discovery because the evidence-calibrated portfolio still had zero justified core applications.",
+  "scope": "A bounded seventh non-saturation pass for exact, previously unverified research routes; discovery evidence only, with no scoring, retention, eligibility, funding, or faculty-capacity decision.",
+  "candidates": [
+    {
+      "institution_id": "us:ipeds:223232",
+      "institution_name": "Baylor University",
+      "country": "United States",
+      "region": "us",
+      "program_name": "Ph.D. in Computer Science",
+      "degree_type": "PhD",
+      "relevant_degree_route": "Research doctorate in computer science with original dissertation work and software-engineering coursework and supervision options",
+      "research_topic_clusters": ["repair_analysis", "software_quality", "systems_security"],
+      "exact_research_fit_signal": "Current Baylor evidence identifies software engineering, fuzz testing, software security, formal methods, model-driven engineering, and cloud-native software architecture research within Computer Science.",
+      "preliminary_international_eligibility": "The doctorate accepts applicants with a bachelor's degree in computer science or a closely related field, subject to transcript, prerequisite, English, and Fall 2027 review.",
+      "preliminary_funding_signal": "Baylor reports that nearly all incoming Computer Science PhD students receive tuition, health-insurance, and multi-year assistantship support; an applicant-specific offer and net-cost sufficiency remain unverified.",
+      "official_program_url": "https://www.ecs.baylor.edu/students-academics/degree-programs/graduate/phd-cs",
+      "official_institution_url": "https://www.baylor.edu/",
+      "seed_adjacency": ["TerraProbe-adjacent", "Evidex-adjacent"],
+      "unresolved_fields": ["Fall 2027 cycle", "transcript and prerequisite equivalency", "English requirement", "funding offer and duration", "fees and net cost", "current supervisor capacity"],
+      "evidence_confidence": "high",
+      "additional_discovery_paths": ["recognized_institution_record", "underrepresented_route_search"],
+      "sources": [
+        {
+          "source_id": "reentry07:baylor:program",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "exact doctorate and preliminary support package",
+          "title": "Ph.D. in Computer Science",
+          "url": "https://www.ecs.baylor.edu/students-academics/degree-programs/graduate/phd-cs",
+          "evidence_summary": "Official program page confirms the Computer Science PhD, research structure, related-field entry route, software-engineering preparation, and typical tuition, health-insurance, and stipend support.",
+          "limitations": "Typical support is not an applicant-specific offer, and the Fall 2027 cycle remains unverified."
+        },
+        {
+          "source_id": "reentry07:baylor:fit",
+          "discovery_path": "current_faculty_topic_signal",
+          "evidence_role": "current software-engineering research fit",
+          "title": "Mengfei Ren, Ph.D.",
+          "url": "https://www.ecs.baylor.edu/person/mengfei-ren-phd",
+          "evidence_summary": "Official faculty page identifies active software-engineering research in fuzz testing, IoT protocol testing, compiler and decompiler analysis, correctness, and robustness.",
+          "limitations": "A faculty profile does not establish supervision availability or admission."
+        }
+      ]
+    },
+    {
+      "institution_id": "us:ipeds:227757",
+      "institution_name": "Rice University",
+      "country": "United States",
+      "region": "us",
+      "program_name": "Ph.D. in Computer Science",
+      "degree_type": "PhD",
+      "relevant_degree_route": "Computer Science research doctorate combining advanced coursework with original research and a defended dissertation",
+      "research_topic_clusters": ["repair_analysis", "formal_verification", "ai_for_se"],
+      "exact_research_fit_signal": "Rice explicitly lists programming languages and software engineering among its graduate research areas and offers a research doctorate supervised by Computer Science faculty.",
+      "preliminary_international_eligibility": "Applicants from computer science, mathematics, and related undergraduate disciplines may apply; detailed preparation, foreign-degree equivalency, English proof, and the Fall 2027 cycle require Stage 3 review.",
+      "preliminary_funding_signal": "Rice states that Computer Science PhD students are fully supported through fellowships or research assistantships, but the exact future package, fees, duration, and conditions remain unverified.",
+      "official_program_url": "https://cs.rice.edu/academics/graduate-programs/phd-program",
+      "official_institution_url": "https://www.rice.edu/",
+      "seed_adjacency": ["TerraProbe-adjacent", "Evidex-adjacent"],
+      "unresolved_fields": ["Fall 2027 cycle", "preparation and degree equivalency", "English requirement", "support package details", "fees and net cost", "current supervisor capacity"],
+      "evidence_confidence": "high",
+      "additional_discovery_paths": ["recognized_institution_record", "underrepresented_route_search"],
+      "sources": [
+        {
+          "source_id": "reentry07:rice:program",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "exact Computer Science research doctorate",
+          "title": "PhD Program",
+          "url": "https://cs.rice.edu/academics/graduate-programs/phd-program",
+          "evidence_summary": "Official department page confirms the Computer Science PhD, full-time research structure, dissertation, and faculty-directed research.",
+          "limitations": "The overview does not establish applicant admission or a current supervisor commitment."
+        },
+        {
+          "source_id": "reentry07:rice:admission-funding",
+          "discovery_path": "research_masters_or_scholarship_search",
+          "evidence_role": "software-engineering fit, related-field entry, and doctoral support",
+          "title": "Graduate Admission",
+          "url": "https://compsci.rice.edu/academics/graduate-programs/graduate-admission",
+          "evidence_summary": "Official admissions page identifies programming languages and software engineering research, encourages related-discipline applicants, and states that PhD students are fully supported.",
+          "limitations": "Stage 3 must verify the Fall 2027 requirements and complete package conditions."
+        }
+      ]
+    },
+    {
+      "institution_id": "us:ipeds:236939",
+      "institution_name": "Washington State University",
+      "country": "United States",
+      "region": "us",
+      "program_name": "Doctor of Philosophy in Computer Science",
+      "degree_type": "PhD",
+      "relevant_degree_route": "Computer Science doctorate with advanced graded coursework and at least 30 credits of original supervised research",
+      "research_topic_clusters": ["software_quality", "systems_security", "distributed_systems"],
+      "exact_research_fit_signal": "The current graduate handbook includes Software Engineering as a research area, while the doctorate requires substantial research credit and supports systems-oriented work.",
+      "preliminary_international_eligibility": "The official route publishes a 93 TOEFL minimum and standard application materials; detailed prerequisite, degree-equivalency, and Fall 2027 review remain outstanding.",
+      "preliminary_funding_signal": "Most current doctoral students receive assistantships and incoming applicants are automatically considered, but awards and semester-by-semester renewals depend on application strength, faculty interest, and available funds.",
+      "official_program_url": "https://gradschool.wsu.edu/degrees/doctor-of-philosophy-computer-science/",
+      "official_institution_url": "https://wsu.edu/",
+      "seed_adjacency": ["TerraProbe-adjacent", "Evidex-adjacent"],
+      "unresolved_fields": ["Fall 2027 cycle", "prerequisite and degree equivalency", "English treatment", "assistantship award and renewal", "mandatory fees", "current supervisor capacity"],
+      "evidence_confidence": "high",
+      "additional_discovery_paths": ["recognized_institution_record", "underrepresented_route_search"],
+      "sources": [
+        {
+          "source_id": "reentry07:wsu:program",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "exact doctorate, research structure, and published program metrics",
+          "title": "Doctor of Philosophy in Computer Science",
+          "url": "https://gradschool.wsu.edu/degrees/doctor-of-philosophy-computer-science/",
+          "evidence_summary": "Official Graduate School page confirms the Computer Science PhD, research-credit structure, application requirements, and that 47 of 52 current students receive assistantships.",
+          "limitations": "Program-level counts do not guarantee an assistantship or admission."
+        },
+        {
+          "source_id": "reentry07:wsu:handbook",
+          "discovery_path": "research_masters_or_scholarship_search",
+          "evidence_role": "software-engineering area and assistantship conditions",
+          "title": "Graduate Student Handbook 2025-2027",
+          "url": "https://school.eecs.wsu.edu/academics/graduate-program/current-students/graduate-student-handbook-2025-2027/",
+          "evidence_summary": "Official handbook lists Software Engineering as an area and explains automatic incoming assistantship consideration, stipends, tuition waivers, fees, and renewal conditions.",
+          "limitations": "Assistantships are competitive, funding-dependent, and renewed by semester."
+        }
+      ]
+    },
+    {
+      "institution_id": "us:ipeds:137351",
+      "institution_name": "University of South Florida",
+      "country": "United States",
+      "region": "us",
+      "program_name": "Ph.D. in Computer Science and Engineering",
+      "degree_type": "PhD",
+      "relevant_degree_route": "Research doctorate in computer science and engineering with faculty-supervised original research",
+      "research_topic_clusters": ["systems_security", "formal_verification", "ai_for_se"],
+      "exact_research_fit_signal": "USF identifies research in complex software systems, cybersecurity, privacy and trust, formal methods, distributed systems, and systematic security analysis within the doctorate's academic home.",
+      "preliminary_international_eligibility": "The program accepts international graduate applications, but exact degree preparation, post-baccalaureate versus post-master's standing, English rules, and Fall 2027 requirements remain for Stage 3.",
+      "preliminary_funding_signal": "Official materials identify research and teaching assistantship mechanisms, but no universal doctoral funding commitment or applicant-specific package was found in discovery.",
+      "official_program_url": "https://www.usf.edu/ai-cybersecurity-computing/academics/graduate/prospective-students.aspx",
+      "official_institution_url": "https://www.usf.edu/",
+      "seed_adjacency": ["TerraProbe-adjacent", "Evidex-adjacent"],
+      "unresolved_fields": ["Fall 2027 cycle", "entry standing and prerequisite mapping", "international degree and English review", "assistantship probability and package", "net cost", "current supervisor capacity"],
+      "evidence_confidence": "medium",
+      "additional_discovery_paths": ["recognized_institution_record", "underrepresented_route_search"],
+      "sources": [
+        {
+          "source_id": "reentry07:usf:program",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "exact doctoral route and international application boundary",
+          "title": "Prospective Graduate Students",
+          "url": "https://www.usf.edu/ai-cybersecurity-computing/academics/graduate/prospective-students.aspx",
+          "evidence_summary": "Official college page lists the PhD in Computer Science and Engineering and publishes graduate and international application guidance.",
+          "limitations": "The page does not promise funding or establish applicant-specific eligibility."
+        },
+        {
+          "source_id": "reentry07:usf:research",
+          "discovery_path": "lab_or_center_signal",
+          "evidence_role": "software, security, and trustworthy-systems research fit",
+          "title": "Research Overview",
+          "url": "https://www.usf.edu/ai-cybersecurity-computing/research/index.aspx",
+          "evidence_summary": "Official research page documents active funded work in cybersecurity, privacy, trust, edge technologies, and complex software systems in the program's college.",
+          "limitations": "Research breadth does not establish a supervisor opening or funding package."
+        }
+      ]
+    },
+    {
+      "institution_id": "ca:dli:O19305471522",
+      "institution_name": "University of Waterloo",
+      "country": "Canada",
+      "region": "canada",
+      "program_name": "Master of Applied Science in Electrical and Computer Engineering",
+      "degree_type": "Thesis or research master's",
+      "relevant_degree_route": "Two-year research MASc with graduate coursework, original supervised research, and a thesis",
+      "research_topic_clusters": ["repair_analysis", "software_quality", "systems_security"],
+      "exact_research_fit_signal": "Waterloo's ECE MASc supports software-engineering research, including software analysis, testing, architecture, cloud-native systems, and security-oriented work.",
+      "preliminary_international_eligibility": "A relevant four-year bachelor's degree may qualify, but academic equivalency, detailed preparation, English proof, supervisor endorsement, and Fall 2027 terms require Stage 3 review.",
+      "preliminary_funding_signal": "The department currently guarantees minimum funding for admitted domestic and international MASc students, but tuition, living-cost sufficiency, supervisor support, and future rates remain unresolved.",
+      "official_program_url": "https://uwaterloo.ca/electrical-computer-engineering/master-applied-science-masc",
+      "official_institution_url": "https://uwaterloo.ca/",
+      "seed_adjacency": ["TerraProbe-adjacent", "Evidex-adjacent"],
+      "unresolved_fields": ["Fall 2027 cycle", "degree and course equivalency", "English evidence", "supervisor endorsement", "future minimum package", "international net cost"],
+      "evidence_confidence": "high",
+      "additional_discovery_paths": ["recognized_institution_record", "research_masters_or_scholarship_search"],
+      "sources": [
+        {
+          "source_id": "reentry07:waterloo-ece:program",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "exact research MASc and supervision structure",
+          "title": "Master of Applied Science (MASc)",
+          "url": "https://uwaterloo.ca/electrical-computer-engineering/master-applied-science-masc",
+          "evidence_summary": "Official department page confirms a two-year MASc with original research, thesis, and required faculty supervision.",
+          "limitations": "Published cycle details are not yet the Fall 2027 terms."
+        },
+        {
+          "source_id": "reentry07:waterloo-ece:funding-fit",
+          "discovery_path": "research_masters_or_scholarship_search",
+          "evidence_role": "guaranteed minimum support and software-engineering fit",
+          "title": "Thinking of Applying",
+          "url": "https://uwaterloo.ca/electrical-computer-engineering/thinking-applying",
+          "evidence_summary": "Official FAQ permits related undergraduate backgrounds and states that admitted international and domestic MASc students receive minimum funding; linked research groups include software-engineering work.",
+          "limitations": "The minimum may not cover international tuition and living costs, and admission still requires supervisor support."
+        }
+      ]
+    },
+    {
+      "institution_id": "ca:dli:O19376023352",
+      "institution_name": "Queen’s University",
+      "country": "Canada",
+      "region": "canada",
+      "program_name": "Master of Applied Science in Electrical and Computer Engineering",
+      "degree_type": "Thesis or research master's",
+      "relevant_degree_route": "Thesis-based Electrical and Computer Engineering MASc with graduate coursework, seminar, and faculty-supervised research",
+      "research_topic_clusters": ["formal_verification", "systems_security", "software_quality"],
+      "exact_research_fit_signal": "Queen's ECE houses safety-critical software research in runtime verification, specification mining, model checking, software security, reliability, and trustworthy systems.",
+      "preliminary_international_eligibility": "The research MASc is open through ECE graduate admission, but degree equivalency, prerequisite depth, English evidence, supervisor approval, and Fall 2027 terms remain unresolved.",
+      "preliminary_funding_signal": "Queen's publishes a minimum MASc funding guarantee for domestic and international students, while exact 2027 value, tuition differential, composition, and net cost require verification.",
+      "official_program_url": "https://www.queensu.ca/academic-calendar/graduate-studies/programs-study/electrical-computer-engineering/",
+      "official_institution_url": "https://www.queensu.ca/",
+      "seed_adjacency": ["TerraProbe-adjacent", "Evidex-adjacent"],
+      "unresolved_fields": ["Fall 2027 cycle", "degree and prerequisite equivalency", "English requirement", "supervisor approval", "future funding guarantee", "tuition differential and net cost"],
+      "evidence_confidence": "high",
+      "additional_discovery_paths": ["recognized_institution_record", "research_masters_or_scholarship_search"],
+      "sources": [
+        {
+          "source_id": "reentry07:queens-ece:program",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "exact thesis-based MASc",
+          "title": "Electrical and Computer Engineering Graduate Calendar",
+          "url": "https://www.queensu.ca/academic-calendar/graduate-studies/programs-study/electrical-computer-engineering/",
+          "evidence_summary": "Official graduate calendar identifies the ECE MASc as a thesis and research-based master's with graduate coursework and a seminar requirement.",
+          "limitations": "Applicant equivalency, supervisor approval, and the Fall 2027 cycle require Stage 3 review."
+        },
+        {
+          "source_id": "reentry07:queens-ece:fit",
+          "discovery_path": "lab_or_center_signal",
+          "evidence_role": "safety-critical software research and active MASc route",
+          "title": "Join CritLab",
+          "url": "https://critlab.smithengineering.queensu.ca/join/",
+          "evidence_summary": "Official Queen's laboratory page identifies MASc positions and research aimed at safer software within Electrical and Computer Engineering.",
+          "limitations": "Position availability is dynamic and the page is not an admission or funding guarantee."
+        }
+      ]
+    },
+    {
+      "institution_id": "ca:dli:O19257171832",
+      "institution_name": "University of Alberta",
+      "country": "Canada",
+      "region": "canada",
+      "program_name": "Master of Science in Electrical and Computer Engineering",
+      "degree_type": "Thesis or research master's",
+      "relevant_degree_route": "Research MSc in Electrical and Computer Engineering with coursework, supervised thesis research, and an oral examination",
+      "research_topic_clusters": ["software_quality", "ai_for_se", "systems_security"],
+      "exact_research_fit_signal": "The official graduate inventory lists Software Engineering and Intelligent Systems as an MSc research area alongside computer engineering, communications, and security-relevant systems fields.",
+      "preliminary_international_eligibility": "The department admits qualified graduates of recognized universities, but related-discipline status, course preparation, GPA, English proof, supervisor fit, and Fall 2027 rules need Stage 3 review.",
+      "preliminary_funding_signal": "The department reports research and teaching assistantships and some tuition scholarships with automatic applicant consideration, but award probability, duration, tuition coverage, and net cost remain unresolved.",
+      "official_program_url": "https://www.ualberta.ca/en/graduate-programs/electrical-and-computer-engineering.html",
+      "official_institution_url": "https://www.ualberta.ca/",
+      "seed_adjacency": ["TerraProbe-adjacent", "Evidex-adjacent"],
+      "unresolved_fields": ["Fall 2027 cycle", "related-discipline and course mapping", "GPA and English requirements", "supervisor availability", "assistantship package and duration", "international net cost"],
+      "evidence_confidence": "medium",
+      "additional_discovery_paths": ["recognized_institution_record", "research_masters_or_scholarship_search"],
+      "sources": [
+        {
+          "source_id": "reentry07:alberta-ece:program",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "exact research MSc and degree requirements",
+          "title": "ECE Graduate Student Handbook",
+          "url": "https://www.ualberta.ca/en/engineering/media-library/dept-electrical-computer-engineering/graduate/grad-docs/graduate-student-handbook-fall-2024.pdf",
+          "evidence_summary": "Official handbook confirms the Electrical and Computer Engineering MSc and its supervised thesis-research requirements.",
+          "limitations": "The handbook predates the target cycle and does not establish applicant eligibility."
+        },
+        {
+          "source_id": "reentry07:alberta-ece:fit-funding",
+          "discovery_path": "research_masters_or_scholarship_search",
+          "evidence_role": "software-engineering research area and support mechanisms",
+          "title": "Graduate Programs in Engineering Viewbook",
+          "url": "https://www.ualberta.ca/en/engineering/media-library/study-with-us/graduates/enggradviewbookcomplete.pdf",
+          "evidence_summary": "Official viewbook lists the ECE research MSc, Software Engineering and Intelligent Systems, and departmental assistantship and tuition-scholarship mechanisms.",
+          "limitations": "Automatic consideration does not establish an award, package duration, or net-cost coverage."
+        }
+      ]
+    },
+    {
+      "institution_id": "ca:dli:O19280533442",
+      "institution_name": "University of Victoria",
+      "country": "Canada",
+      "region": "canada",
+      "program_name": "Master of Applied Science in Electrical and Computer Engineering",
+      "degree_type": "Thesis or research master's",
+      "relevant_degree_route": "Full-time research MASc with coursework, seminars, a supervised thesis, and an oral defence",
+      "research_topic_clusters": ["software_quality", "systems_security", "adaptive_systems"],
+      "exact_research_fit_signal": "The MASc program lists computers, software, networking, software and requirements engineering, testing, cyber-security, privacy, distributed systems, and trusted AI among current supervision areas.",
+      "preliminary_international_eligibility": "International applicants may apply and must identify an agreeing supervisor, but degree equivalency, academic preparation, English proof, and Fall 2027 requirements remain unresolved.",
+      "preliminary_funding_signal": "Research MASc students may receive supervisor-funded research assistantships and are considered for fellowships, but both depend on funds and academic performance and are not guaranteed.",
+      "official_program_url": "https://www.uvic.ca/graduate/programs/graduate-programs/credential-pages/electrical-computer-engineering-cred/electrical-and-computer-engineering-masc.php",
+      "official_institution_url": "https://www.uvic.ca/",
+      "seed_adjacency": ["TerraProbe-adjacent", "Evidex-adjacent"],
+      "unresolved_fields": ["Fall 2027 cycle", "degree and preparation equivalency", "English evidence", "supervisor agreement", "assistantship or fellowship award", "international net cost"],
+      "evidence_confidence": "high",
+      "additional_discovery_paths": ["recognized_institution_record", "research_masters_or_scholarship_search"],
+      "sources": [
+        {
+          "source_id": "reentry07:uvic-ece:program-fit",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "exact research MASc and current software-oriented supervision",
+          "title": "Electrical and Computer Engineering (MASc)",
+          "url": "https://www.uvic.ca/graduate/programs/graduate-programs/credential-pages/electrical-computer-engineering-cred/electrical-and-computer-engineering-masc.php",
+          "evidence_summary": "Official program page confirms the research MASc, thesis and oral examination, international cohort, required supervisor, and software, security, privacy, and systems research interests.",
+          "limitations": "A listed faculty interest does not establish supervision availability."
+        },
+        {
+          "source_id": "reentry07:uvic-ece:funding",
+          "discovery_path": "research_masters_or_scholarship_search",
+          "evidence_role": "conditional research assistantship and fellowship mechanisms",
+          "title": "Awards and Funding",
+          "url": "https://www.uvic.ca/ecs/ece/future/graduate/awards-and-funding/index.php",
+          "evidence_summary": "Official ECE page states that research MASc students may receive supervisor-funded assistantships and that Canadian and international students are considered for fellowships.",
+          "limitations": "Both mechanisms are conditional and do not establish total net-cost coverage."
+        }
+      ]
+    },
+    {
+      "institution_id": "ror:00d7xrm67",
+      "institution_name": "Graz University of Technology",
+      "country": "Austria",
+      "region": "europe",
+      "program_name": "Master's Degree Programme in Software Engineering and Management",
+      "degree_type": "Thesis or research master's",
+      "relevant_degree_route": "English-taught 120-ECTS research-led software-engineering master's with a master's thesis",
+      "research_topic_clusters": ["software_quality", "systems_security", "formal_verification"],
+      "exact_research_fit_signal": "The program covers the full software lifecycle and offers focal areas in information security, software technology, algorithms, intelligent systems, and research-led software engineering.",
+      "preliminary_international_eligibility": "A relevant bachelor's degree and English competence are required; international degree mapping, any additional coursework, admissions procedure, and Fall 2027 terms remain unresolved.",
+      "preliminary_funding_signal": "No program-level full-funding commitment was found during discovery; tuition or statutory fee status, scholarships, semester charges, and living-cost financing require Stage 3 verification.",
+      "official_program_url": "https://www.tugraz.at/en/studying-and-teaching/degree-and-certificate-programmes/masters-degree-programmes/software-engineering-and-management",
+      "official_institution_url": "https://www.tugraz.at/en/",
+      "seed_adjacency": ["TerraProbe-adjacent", "Evidex-adjacent"],
+      "unresolved_fields": ["Fall 2027 cycle", "bachelor's equivalency and supplemental courses", "English evidence", "admission procedure", "tuition and semester charges", "scholarship and living-cost funding"],
+      "evidence_confidence": "high",
+      "additional_discovery_paths": ["recognized_institution_record", "underrepresented_route_search"],
+      "sources": [
+        {
+          "source_id": "reentry07:tu-graz:program",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "exact English software-engineering master's and admission boundary",
+          "title": "Software Engineering and Management",
+          "url": "https://www.tugraz.at/en/studying-and-teaching/degree-and-certificate-programmes/masters-degree-programmes/software-engineering-and-management",
+          "evidence_summary": "Official program page confirms the English, four-semester, 120-ECTS master's, software-engineering focal areas, thesis, and relevant-bachelor admission route.",
+          "limitations": "International equivalency, fees, and Fall 2027 terms remain unverified."
+        },
+        {
+          "source_id": "reentry07:tu-graz:curriculum",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "research-led curriculum and software-security fit",
+          "title": "Curriculum Software Engineering and Management",
+          "url": "https://www.tugraz.at/fileadmin/user_upload/tugrazInternal/Studium/Studienangebot/Masterstudien/Curricula/Curriculum_Master_Software_Engineering_Management_EN.pdf",
+          "evidence_summary": "Current official curriculum describes research-led training across software development, maintenance, software technology, information security, and other technical specializations.",
+          "limitations": "Curriculum fit does not establish funding or applicant admission."
+        }
+      ]
+    },
+    {
+      "institution_id": "ror:0208vgz68",
+      "institution_name": "Lappeenranta-Lahti University of Technology",
+      "country": "Finland",
+      "region": "europe",
+      "program_name": "Master's Programme in Software Engineering and Digital Transformation",
+      "degree_type": "Thesis or research master's",
+      "relevant_degree_route": "English-taught 120-ECTS software-engineering master's with advanced specialization, research preparation, and a master's thesis",
+      "research_topic_clusters": ["software_quality", "ai_for_se", "distributed_systems"],
+      "exact_research_fit_signal": "The Software Engineering specialization covers software design, architecture, development processes, quality assurance, testing, maintenance, security, and research methods.",
+      "preliminary_international_eligibility": "The program publishes a related prior-study route, but the applicant's degree and credit mapping, English evidence, application documents, and Fall 2027 call remain unresolved.",
+      "preliminary_funding_signal": "The published non-EU tuition is EUR 15,000 per year and scholarships may be available; scholarship eligibility, amount, renewal, and living-cost sufficiency remain unverified.",
+      "official_program_url": "https://www.lut.fi/en/studies/technology/masters-programmes-technology/masters-programme-software-engineering-and-digital",
+      "official_institution_url": "https://www.lut.fi/en/",
+      "seed_adjacency": ["TerraProbe-adjacent", "Evidex-adjacent"],
+      "unresolved_fields": ["Fall 2027 call", "degree and credit equivalency", "English evidence", "application documents", "scholarship amount and renewal", "tuition and living-cost funding"],
+      "evidence_confidence": "high",
+      "additional_discovery_paths": ["recognized_institution_record", "research_masters_or_scholarship_search"],
+      "sources": [
+        {
+          "source_id": "reentry07:lut:program",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "exact English software-engineering master's, thesis, and tuition",
+          "title": "Software Engineering and Digital Transformation",
+          "url": "https://www.lut.fi/en/studies/technology/masters-programmes-technology/masters-programme-software-engineering-and-digital",
+          "evidence_summary": "Official program page confirms the two-year English MSc, Software Engineering specialization, research preparation, thesis, and current non-EU tuition.",
+          "limitations": "The target Fall 2027 call and applicant-specific admission remain unverified."
+        },
+        {
+          "source_id": "reentry07:lut:study-guide",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "current official study-guide route",
+          "title": "Software Engineering Study Guides",
+          "url": "https://elut.lut.fi/en/completing-studies/planning-your-studies/study-guides/software-engineering-study-guides",
+          "evidence_summary": "Official study-guide directory lists the Software Engineering and Digital Transformation master's among current software-engineering degree routes.",
+          "limitations": "The directory does not determine scholarship availability or eligibility."
+        }
+      ]
+    },
+    {
+      "institution_id": "ror:008xxew50",
+      "institution_name": "Vrije Universiteit Amsterdam",
+      "country": "Netherlands",
+      "region": "europe",
+      "program_name": "Computer Science MSc - Software Engineering and Green IT",
+      "degree_type": "Thesis or research master's",
+      "relevant_degree_route": "English two-year joint Computer Science master's with a Software Engineering and Green IT specialization and research facilities across VU and UvA",
+      "research_topic_clusters": ["software_quality", "distributed_systems", "sustainable_software"],
+      "exact_research_fit_signal": "The joint MSc explicitly offers Software Engineering and Green IT and covers software engineering, distributed computing, data infrastructures, and energy-efficient computing.",
+      "preliminary_international_eligibility": "International bachelor's graduates may apply subject to research-university equivalency, computer-science depth, mathematics, English, and program-specific review.",
+      "preliminary_funding_signal": "Non-EU applicants may compete for a merit-based tuition waiver, but awards are scarce, do not cover living costs, and require admission and academic excellence.",
+      "official_program_url": "https://vu.nl/en/education/master/computer-science-joint-degree-vu-uva",
+      "official_institution_url": "https://vu.nl/en",
+      "seed_adjacency": ["TerraProbe-adjacent", "Evidex-adjacent"],
+      "unresolved_fields": ["Fall 2027 cycle", "research-university and subject equivalency", "English evidence", "specialization availability", "institutional tuition", "scholarship rank and living costs"],
+      "evidence_confidence": "high",
+      "additional_discovery_paths": ["recognized_institution_record", "research_masters_or_scholarship_search"],
+      "sources": [
+        {
+          "source_id": "reentry07:vu:program",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "exact English MSc and software-engineering specialization",
+          "title": "Computer Science Joint Degree VU/UvA",
+          "url": "https://vu.nl/en/education/master/computer-science-joint-degree-vu-uva",
+          "evidence_summary": "Official program page confirms the English two-year MSc and Software Engineering and Green IT specialization with access to both universities' research expertise.",
+          "limitations": "Stage 3 must verify international admission, the target cycle, and exact specialization rules."
+        },
+        {
+          "source_id": "reentry07:vu:scholarship",
+          "discovery_path": "research_masters_or_scholarship_search",
+          "evidence_role": "competitive non-EU tuition waiver boundary",
+          "title": "Scholarships for Incoming Master's Students",
+          "url": "https://vu.nl/en/education/more-about/incoming-master-scholarships",
+          "evidence_summary": "Official scholarship page describes the merit-based VU Fellowship Programme tuition waiver for eligible non-EU master's applicants.",
+          "limitations": "The award is highly competitive, covers tuition only, and does not fund living costs."
+        }
+      ]
+    },
+    {
+      "institution_id": "ror:01tm6cn81",
+      "institution_name": "University of Gothenburg",
+      "country": "Sweden",
+      "region": "europe",
+      "program_name": "Software Engineering and Management Master's Programme",
+      "degree_type": "Thesis or research master's",
+      "relevant_degree_route": "English 120-ECTS software-engineering master's combining advanced technical work, empirical research, industry practice, and a master's thesis",
+      "research_topic_clusters": ["software_quality", "software_architecture", "adaptive_systems"],
+      "exact_research_fit_signal": "The program trains students to design sustainable, high-quality software for safety-critical and evolving systems and explicitly prepares future software-engineering researchers.",
+      "preliminary_international_eligibility": "The route publishes a relevant 180-credit bachelor's, independent project, programming, algorithms and data structures, and English requirements; transcript mapping remains for Stage 3.",
+      "preliminary_funding_signal": "The Fall 2027 route publishes non-EU tuition and is eligible for Swedish Institute scholarship nomination, but selection, award value, renewal, and living-cost coverage remain unresolved.",
+      "official_program_url": "https://www.gu.se/en/study-gothenburg/software-engineering-and-management-masters-programme-n2sof",
+      "official_institution_url": "https://www.gu.se/en",
+      "seed_adjacency": ["TerraProbe-adjacent", "Evidex-adjacent"],
+      "unresolved_fields": ["course-by-course prerequisite mapping", "English equivalency", "Fall 2027 application documents", "scholarship nomination and award", "tuition payment", "living-cost funding"],
+      "evidence_confidence": "high",
+      "additional_discovery_paths": ["recognized_institution_record", "underrepresented_route_search", "research_masters_or_scholarship_search"],
+      "sources": [
+        {
+          "source_id": "reentry07:gothenburg:program",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "exact Fall 2027 English software-engineering master's",
+          "title": "Software Engineering and Management Master's Programme",
+          "url": "https://www.gu.se/en/study-gothenburg/software-engineering-and-management-masters-programme-n2sof",
+          "evidence_summary": "Official program page confirms the English 120-ECTS route, software-engineering research preparation, prerequisites, tuition, and scholarship-nomination pathway.",
+          "limitations": "Nomination eligibility does not establish a scholarship award or admission."
+        },
+        {
+          "source_id": "reentry07:gothenburg:syllabus",
+          "discovery_path": "official_program_or_department_signal",
+          "evidence_role": "formal degree and thesis structure",
+          "title": "Programme Syllabus - Software Engineering and Management",
+          "url": "https://www.gu.se/sites/default/files/2020-10/GU2020-2125_UP_N2SOF_eng_201001.pdf",
+          "evidence_summary": "Official syllabus confirms the 120-credit master's degree, English instruction, software-engineering subject, and advanced-level study structure.",
+          "limitations": "The older syllabus must be reconciled with the live Fall 2027 program page in Stage 3."
+        }
+      ]
+    }
+  ],
+  "false_negative_audits": [
+    {
+      "institution_id": "us:ipeds:223232",
+      "exclusion_reason_category": "registry_only_signals_not_promoted_to_exact_program_review",
+      "original_supporting_evidence": "Baylor remained a catalog placeholder although current official pages establish a Computer Science PhD, direct software-engineering research fit, and a strong preliminary multi-year support signal."
+    },
+    {
+      "institution_id": "ror:01tm6cn81",
+      "exclusion_reason_category": "outside_bounded_positive_seed_screen",
+      "original_supporting_evidence": "Gothenburg remained an unresolved catalog row despite a current Fall 2027 English Software Engineering and Management master's with explicit research preparation and scholarship-nomination eligibility."
+    }
+  ]
+}
