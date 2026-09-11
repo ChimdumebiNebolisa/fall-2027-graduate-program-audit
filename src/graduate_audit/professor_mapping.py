@@ -804,6 +804,66 @@ FACULTY_ROSTERS: dict[str, FacultyRoster] = {
             _c("Carlos Toxtli-Hernández", "human-centered software; collaborative systems; developer experience"),
         ),
     ),
+    "North Dakota State University-Main Campus": FacultyRoster(
+        "Department of Computer Science",
+        "https://www.ndsu.edu/cs/people/faculty/",
+        (
+            _c("Gursimran Walia", "empirical software engineering; software testing; requirements engineering; software quality"),
+            _c("Jeremy Straub", "cybersecurity; artificial intelligence; robotics; trustworthy systems"),
+            _c("Jun Kong", "model-driven software engineering; human-computer interaction; software visualization"),
+            _c("Simone Ludwig", "machine learning; computational intelligence; privacy and security"),
+        ),
+    ),
+    "Boise State University": FacultyRoster(
+        "Department of Computer Science; School of Computing",
+        "https://www.boisestate.edu/coen-cs/people/faculty/",
+        (
+            _c("Hoda Mehrpouyan", "formal verification; cybersecurity; cyber-physical systems; trustworthy computing"),
+            _c("Max Taylor", "formal methods; systems security; dependability; software assurance"),
+            _c("Gaby Dagher", "security and privacy; data security; trustworthy systems"),
+            _c("Jyh-haw Yeh", "cybersecurity; cyber-physical systems; dependable computing"),
+        ),
+    ),
+    "Florida International University": FacultyRoster(
+        "Knight Foundation School of Computing and Information Sciences",
+        "https://www.cis.fiu.edu/faculty-staff/",
+        (
+            _c("Bogdan Carbunar", "systems security; privacy; distributed systems; mobile security"),
+            _c("Ruimin Sun", "cyber-physical systems security; mobile security; trustworthy systems"),
+            _c("Selcuk Uluagac", "Internet of Things security; cyber-physical security; privacy"),
+            _c("Farhad Shirani", "privacy; security; information theory; trustworthy machine learning"),
+        ),
+    ),
+    "Ontario Tech University": FacultyRoster(
+        "Department of Electrical, Computer and Software Engineering",
+        "https://engineering.ontariotechu.ca/people/ecse/index.php",
+        (
+            _c("Akramul Azim", "embedded software; model-based testing; software verification; real-time systems"),
+            _c("Khalid Elgazzar", "intelligent software systems; distributed systems; Internet of Things"),
+            _c("Masoud Makrehchi", "artificial intelligence; data analytics; trustworthy learning systems"),
+            _c("Mohamed El-Darieby", "software systems; Internet of Things; intelligent infrastructure"),
+        ),
+    ),
+    "Carleton University": FacultyRoster(
+        "Department of Systems and Computer Engineering",
+        "https://carleton.ca/sce/faculty/",
+        (
+            _c("Nafiseh Kahani", "AI-based software testing; automated test repair; software engineering"),
+            _c("Jason Jaskolka", "model-driven security; formal methods; software assurance"),
+            _c("Babak Esfandiari", "software agents; distributed software systems; software engineering"),
+            _c("Hala Assal", "usable security; privacy; human-centered software systems"),
+        ),
+    ),
+    "University of Trento": FacultyRoster(
+        "Department of Information Engineering and Computer Science",
+        "https://www.disi.unitn.it/research/programs/sweng",
+        (
+            _c("Chiara Di Francescomarino", "process mining; business-process management; software engineering"),
+            _c("Paolo Giorgini", "agent-oriented software; requirements engineering; security engineering"),
+            _c("Alessandro Marchetto", "software testing; empirical software engineering; software quality"),
+            _c("Roberto Sebastiani", "automated reasoning; formal methods; software verification"),
+        ),
+    ),
     "University of Manitoba": FacultyRoster(
         "Department of Computer Science",
         "https://umanitoba.ca/science/directory/computer-science",
