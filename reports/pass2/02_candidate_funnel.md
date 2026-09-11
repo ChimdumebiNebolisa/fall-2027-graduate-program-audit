@@ -6,12 +6,12 @@ Pass
 
 ## What changed
 
-Stage 6 re-entry 15 returned the workflow to discovery because the evidence-calibrated portfolio still had zero justified core applications. This bounded non-saturation pass adds 12 genuinely new exact research routes supported by current official program, research, and preliminary funding evidence. It does not score, rank, retain, or claim verified funding or faculty capacity.
+Stage 6 re-entry 16 returned the workflow to discovery because the evidence-calibrated portfolio still had zero justified core applications. This bounded non-saturation pass adds 12 genuinely new exact research routes supported by current official program, research, and preliminary funding evidence. It does not score, rank, retain, or claim verified funding or faculty capacity.
 
-| Measure | After re-entry 15 | After re-entry 16 |
+| Measure | After re-entry 16 | After re-entry 17 |
 | --- | --- | --- |
-| Funnel rows | 2145 | 2157 |
-| Advance to Stage 3 | 263 | 275 |
+| Funnel rows | 2157 | 2169 |
+| Advance to Stage 3 | 275 | 287 |
 | Net new exact routes | — | 12 |
 | Current-round official source records | — | 24 |
 | Active rows missing exact program URL | documented | 264 |
@@ -33,25 +33,25 @@ The round was checked against the cumulative funnel by deterministic program ID.
 
 | Region | Institution | Exact route | Degree | Confidence | Still unresolved |
 | --- | --- | --- | --- | --- | --- |
-| us | Florida Atlantic University | [Doctor of Philosophy with Major in Computer Science](https://www.fau.edu/engineering/eecs/graduate/phd/) | PhD | high | Fall 2027 cycle/degree and prerequisite equivalency/English evidence/advisor capacity/assistantship selection and renewal/summer support/fees and net funding |
-| us | New Mexico Institute of Mining and Technology | [Doctor of Philosophy in Computer Science](https://www.nmt.edu/academics/compsci/graduate.php) | PhD | high | Fall 2027 cycle/degree and course equivalency/English evidence/advisor capacity/assistantship value and tuition coverage/renewal and summer support/fees and insurance |
-| us | Southern Illinois University-Carbondale | [Computer Science, Doctor of Philosophy](https://academics.siu.edu/computing-and-technology/computer-science/doctoral/) | PhD | medium | Fall 2027 cycle/degree and prerequisite mapping/English evidence/advisor capacity/assistantship award and renewal/summer coverage/fees and insurance |
-| us | Wichita State University | [PhD in Electrical Engineering and Computer Science](https://catalog.wichita.edu/graduate/engineering/electrical-computer-engineering/phd-in-eecs/) | PhD | high | Fall 2027 cycle/exceptional bachelor's-entry threshold/degree and prerequisite equivalency/English evidence/faculty willingness and capacity/assistantship selection and renewal/fees and summer support |
-| us | Michigan Technological University | [Computer Science, PhD](https://www.mtu.edu/gradschool/programs/degrees/computer-science/) | PhD | high | Fall 2027 cycle/degree and prerequisite equivalency/GRE and English evidence/advisor capacity/assistantship appointment and tuition coverage/renewal and summer support/fees and insurance |
-| us | University of Tulsa | [Computer Science, Ph.D.](https://utulsa.edu/programs/computer-science/) | PhD | medium | Fall 2027 cycle/degree and prerequisite mapping/English evidence/doctoral curriculum details/advisor capacity/assistantship selection and renewal/summer and fee coverage |
-| canada | Western University | [Master of Engineering Science (MESc) in Electrical and Computer Engineering](https://www.eng.uwo.ca/graduate/future-students/Graduate-Degree-Programs/electrical-computer.html) | Thesis or research master's | high | Fall 2027 cycle/degree similarity and prerequisite mapping/English evidence/supervisor capacity/funding amount for 2027/renewal and summer coverage/ancillary fees and insurance |
-| canada | York University | [MASc in Electrical and Computer Engineering](https://futurestudents.yorku.ca/graduate/programs/electrical-engineering-and-computer-science) | Thesis or research master's | high | Fall 2027 cycle/degree and senior-project equivalency/English evidence/supervisor assignment and capacity/offer-specific funding/tuition and ancillary fees/insurance and net support |
-| canada | University of Saskatchewan | [Electrical Engineering, Master of Science (M.Sc.) — Thesis](https://grad.usask.ca/programs/electrical-computer-engineering.php) | Thesis or research master's | high | Fall 2027 cycle/degree and field equivalency/English evidence/supervisor approval and capacity/funding award and duration/international tuition offset/fees and insurance |
-| europe | Politecnico di Milano | [Master's Degree in Computer Science and Engineering](https://www.polimi.it/en/education/laurea-programmes/programme-detail/computer-science-and-engineering) | Thesis or research master's | high | Fall 2027 offering and scholarship cycle/degree and subject equivalency/English evidence/thesis placement and supervision/scholarship selection/living costs/fees and insurance |
-| europe | Universidade do Porto | [Master in Informatics and Computing Engineering](https://fe.up.pt/estudar/meic/?lang=en) | Thesis or research master's | high | Fall 2027 cycle/foreign degree and subject equivalency/teaching-language details/dissertation supervisor and topic/international tuition/funding selection and amount/living costs and insurance |
-| europe | University of Minho | [Master in Informatics Engineering](https://www.eng.uminho.pt/en/study/_layouts/15/uminho.portaisuoei.ui/pages/catalogocursodetail.aspx?catid=16&itemid=5482) | Thesis or research master's | medium | Fall 2027 offering/foreign degree and subject equivalency/language of instruction/dissertation structure and supervision/tuition for the engineering school/merit scholarship selection/living costs and insurance |
+| us | Drexel University | [PhD in Computer Science](https://drexel.edu/cci/academics/doctoral-programs/) | PhD | high | Fall 2027 cycle/credential and prerequisite equivalency/English evidence/advisor capacity/assistantship duration and renewal/summer support/fees, insurance, and net funding |
+| us | Lehigh University | [PhD in Computer Science](https://engineering.lehigh.edu/academics/graduate/phd/phd-computer-science) | PhD | high | Fall 2027 cycle/degree and prerequisite equivalency/English evidence/advisor and research-group capacity/funding term and renewal/summer support/fees, insurance, and net funding |
+| us | George Washington University | [PhD in Computer Science](https://graduate.engineering.gwu.edu/phd-computer-science) | PhD | high | Fall 2027 cycle/degree and prerequisite equivalency/English funding threshold/advisor capacity/assistantship selection and renewal/remaining tuition, summer support, and fees/insurance and net funding |
+| us | University at Albany | [Doctor of Philosophy in Computer Science](https://www.albany.edu/computer-science/programs/phd-computer-science) | PhD | high | Fall 2027 cycle/credential and course equivalency/English evidence/advisor capacity/assistantship availability and award value/tuition waiver and renewal/summer support, fees, and insurance |
+| us | Worcester Polytechnic Institute | [PhD in Computer Science](https://www.wpi.edu/academics/study/computer-science-phd) | PhD | high | Fall 2027 cycle/bachelor's-entry and prerequisite mapping/English evidence/advisor capacity/assistantship selection and tuition coverage/renewal and summer support/fees, insurance, and net funding |
+| us | Oakland University | [Doctor of Philosophy in Computer Science and Informatics](https://www.oakland.edu/secs/doctoral-programs/) | PhD | high | Fall 2027 cycle and position availability/degree and master's equivalency/English evidence/supervisor capacity and recruiting status/stipend and tuition coverage/renewal and summer support/fees and insurance |
+| canada | University of British Columbia | [Master of Applied Science in Electrical and Computer Engineering](https://ece.ubc.ca/graduate/programs/master-applied-science/) | Thesis or research master's | high | Fall 2027 application details/degree and subject equivalency/English evidence/supervisor capacity/RA or scholarship award/international tuition and fees/living costs, insurance, and net support |
+| canada | University of Toronto | [Master of Applied Science in Electrical and Computer Engineering](https://www.ece.utoronto.ca/graduates/degree-programs/masc/) | Thesis or research master's | high | Fall 2027 cycle/degree and prerequisite equivalency/English evidence/supervisor capacity/2027-28 funding amount/international tuition and ancillary fees/insurance, living costs, and net support |
+| canada | McGill University | [Electrical Engineering (Thesis) (M.Sc.)](https://www.mcgill.ca/gradapplicants/program/electrical-engineering-msc) | Thesis or research master's | high | Fall 2027 deadline/degree and subject equivalency/English evidence/supervisor capacity/assistantship or award selection/international tuition and fees/living costs, insurance, and net funding |
+| europe | Norwegian University of Science and Technology | [Erasmus Mundus Joint Master in Cybersecurity and Assurance (CYBERSURE)](https://www.ntnu.edu/studies/mscybsure) | Thesis or research master's | high | exact bachelor's-course eligibility/English test and document timing/scholarship selection/full versus partial award/mobility and visa costs/insurance and net funding/thesis supervisor and topic allocation |
+| europe | Université Libre de Bruxelles | [Erasmus Mundus Joint Master in Cybersecurity (CYBERUS)](https://www.ulb.be/en/programme/m-secum) | Thesis or research master's | medium | Fall 2027 intake and application dates/foreign-degree and course equivalency/English evidence/Erasmus Mundus scholarship availability and selection/mobility and visa costs/insurance and net funding/dissertation supervision |
+| europe | Åbo Akademi University | [Erasmus Mundus Joint Master in Engineering of Data-intensive Intelligent Software Systems (EDISS)](https://www.master-ediss.eu/) | Thesis or research master's | medium | Fall 2027 intake and scholarship call/degree and course equivalency/country-specific documents/English evidence/scholarship selection and coverage/mobility, visa, insurance, and net funding/specialization and thesis placement |
 
 | Cumulative priority route bucket | Active rows |
 | --- | --- |
 | doctoral_bachelors_entry | 48 |
 | research_masters | 35 |
 | structured_or_masters_required_doctorate | 13 |
-| unresolved_or_exceptional_route | 443 |
+| unresolved_or_exceptional_route | 455 |
 
 All three regions and the required doctoral and research-master route families remain represented. Inclusion was driven by exact fit and official-route evidence, not a global top-N or prestige cutoff.
 
@@ -59,24 +59,24 @@ All three regions and the required doctoral and research-master route families r
 
 | Institution | Original stratum | Audit result | Correction |
 | --- | --- | --- | --- |
-| New Mexico Institute of Mining and Technology | mechanical_signal_without_exact_doctoral_route | false_negative_corrected | us:ipeds:187967:program:phd:doctor-of-philosophy-in-computer-science |
-| Politecnico di Milano | outside_bounded_positive_seed_screen | false_negative_corrected | ror:01nffqt88:program:thesis-or-research-master-s:master-s-degree-in-computer-science-and-engineering |
+| Oakland University | mechanical_signal_without_exact_doctoral_route | false_negative_corrected | us:ipeds:171571:program:phd:doctor-of-philosophy-in-computer-science-and-informatics |
+| Norwegian University of Science and Technology | outside_bounded_positive_seed_screen | false_negative_corrected | ror:05xg72x27:program:thesis-or-research-master-s:erasmus-mundus-joint-master-in-cybersecurity-and-assurance-cybersure |
 
-New Mexico Institute of Mining and Technology and Politecnico di Milano were missed by the original bounded screen. Current official evidence corrects those omissions, but promotes the routes only to Stage 3 verification.
+Oakland University and Norwegian University of Science and Technology were missed by the original bounded screen. Current official evidence corrects those omissions, but promotes the routes only to Stage 3 verification.
 
 ### Discovery-source contribution and yield
 
 | Path | Examined | Contributed | Advanced | Active yield |
 | --- | --- | --- | --- | --- |
-| recognized_institution_record | 5834 | 2137 | 255 | 0.243 |
-| official_program_or_department_signal | 2082 | 284 | 274 | 0.965 |
+| recognized_institution_record | 5834 | 2149 | 267 | 0.247 |
+| official_program_or_department_signal | 2094 | 296 | 286 | 0.966 |
 | recent_paper_signal | 1649 | 907 | 76 | 0.363 |
 | current_faculty_topic_signal | 6933 | 64 | 24 | 0.375 |
-| lab_or_center_signal | 89 | 90 | 90 | 1.000 |
+| lab_or_center_signal | 90 | 91 | 91 | 1.000 |
 | calendar_prior_list | 55 | 204 | 21 | 0.270 |
 | first_audit_program | 56 | 57 | 57 | 1.000 |
-| research_masters_or_scholarship_search | 1954 | 201 | 198 | 0.985 |
-| underrepresented_route_search | 1871 | 265 | 180 | 0.989 |
+| research_masters_or_scholarship_search | 1965 | 212 | 209 | 0.986 |
+| underrepresented_route_search | 1871 | 277 | 192 | 0.989 |
 
 ## Validation performed
 
@@ -98,28 +98,28 @@ New Mexico Institute of Mining and Technology and Politecnico di Milano were mis
 | baseline::no_global_top_n_cutoff | PASS |
 | baseline::no_university_scoring_fields | PASS |
 | baseline::false_negative_saturation_or_limitation_documented | PASS |
-| reentry16::bounded_reentry_has_exact_routes | PASS |
-| reentry16::reentry_covers_all_regions | PASS |
-| reentry16::research_masters_reentry_present | PASS |
-| reentry16::doctoral_reentry_present | PASS |
-| reentry16::all_candidates_advance_only_to_stage_3 | PASS |
-| reentry16::all_candidates_have_exact_official_program_urls | PASS |
-| reentry16::all_candidates_have_official_institution_urls | PASS |
-| reentry16::all_candidates_have_fit_and_preliminary_route_fields | PASS |
-| reentry16::all_candidate_source_ids_resolve | PASS |
-| reentry16::all_sources_are_official_https | PASS |
-| reentry16::program_ids_unique_after_merge | PASS |
-| reentry16::all_reentry_routes_are_net_new | PASS |
-| reentry16::all_reentry_candidates_present_after_merge | PASS |
-| reentry16::known_seed_adjacency_retained | PASS |
-| reentry16::confirmed_false_negatives_reaudited | PASS |
-| reentry16::no_scoring_fields_introduced | PASS |
+| reentry17::bounded_reentry_has_exact_routes | PASS |
+| reentry17::reentry_covers_all_regions | PASS |
+| reentry17::research_masters_reentry_present | PASS |
+| reentry17::doctoral_reentry_present | PASS |
+| reentry17::all_candidates_advance_only_to_stage_3 | PASS |
+| reentry17::all_candidates_have_exact_official_program_urls | PASS |
+| reentry17::all_candidates_have_official_institution_urls | PASS |
+| reentry17::all_candidates_have_fit_and_preliminary_route_fields | PASS |
+| reentry17::all_candidate_source_ids_resolve | PASS |
+| reentry17::all_sources_are_official_https | PASS |
+| reentry17::program_ids_unique_after_merge | PASS |
+| reentry17::all_reentry_routes_are_net_new | PASS |
+| reentry17::all_reentry_candidates_present_after_merge | PASS |
+| reentry17::known_seed_adjacency_retained | PASS |
+| reentry17::confirmed_false_negatives_reaudited | PASS |
+| reentry17::no_scoring_fields_introduced | PASS |
 
-The original Stage 2 acceptance contract still passes, and every re-entry 16 assertion passes. The 12 exact program IDs are unique, all resolve to canonical institution records, all current-round source records use official HTTPS URLs, and no scoring field was introduced.
+The original Stage 2 acceptance contract still passes, and every re-entry 17 assertion passes. The 12 exact program IDs are unique, all resolve to canonical institution records, all current-round source records use official HTTPS URLs, and no scoring field was introduced.
 
-Automated source retrieval returned HTTP 200 for 23 of 24 current-round official records. Non-200 or connection exceptions are preserved in the manifest and do not erase browser-reviewed evidence.
+Automated source retrieval returned HTTP 200 for 24 of 24 current-round official records. Non-200 or connection exceptions are preserved in the manifest and do not erase browser-reviewed evidence.
 
-The cross-stage control is expected to fail until the next separate Stage 3 re-entry: program verification has 2145 rows while the expanded funnel has 2157. This is the only permitted downstream mismatch; Stage 3 artifacts were not changed here.
+The cross-stage control is expected to fail until the next separate Stage 3 re-entry: program verification has 2157 rows while the expanded funnel has 2169. This is the only permitted downstream mismatch; Stage 3 artifacts were not changed here.
 
 ## Material uncertainties or conflicts
 
@@ -140,12 +140,12 @@ Stage 3 must determine whether each route is actually eligible and credibly fund
 
 ## Files created or modified
 
-- `data/raw/pass2/stage_02_reentry_16.json`
+- `data/raw/pass2/stage_02_reentry_17.json`
 - `data/processed/pass2/candidate_program_funnel.csv`
 - `data/processed/pass2/discovery_source_yield.csv`
 - `data/processed/pass2/exclusion_sample_audit.csv`
-- `data/processed/pass2/stage_02_reentry_16_candidates.csv`
-- `data/processed/pass2/stage_02_reentry_16_sources.csv`
+- `data/processed/pass2/stage_02_reentry_17_candidates.csv`
+- `data/processed/pass2/stage_02_reentry_17_sources.csv`
 - `scripts/build_stage_02_reentry.py`
 - `tests/test_candidate_reentry.py`
 - `state/progress.json`
