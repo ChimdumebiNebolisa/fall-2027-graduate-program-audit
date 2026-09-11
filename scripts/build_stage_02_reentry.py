@@ -51,8 +51,9 @@ DEFINITION_PATHS = [
     REPO_ROOT / "data/raw/pass2/stage_02_reentry_13.json",
     REPO_ROOT / "data/raw/pass2/stage_02_reentry_14.json",
     REPO_ROOT / "data/raw/pass2/stage_02_reentry_15.json",
+    REPO_ROOT / "data/raw/pass2/stage_02_reentry_16.json",
 ]
-CURRENT_REENTRY_NUMBER = 15
+CURRENT_REENTRY_NUMBER = 16
 CURRENT_REENTRY_LABEL = f"{CURRENT_REENTRY_NUMBER:02d}"
 CURRENT_REENTRY_PREFIX = f"reentry{CURRENT_REENTRY_LABEL}"
 PREVIOUS_REENTRY_LABEL = f"{CURRENT_REENTRY_NUMBER - 1:02d}"
@@ -726,7 +727,7 @@ def main() -> None:
         "downstream_integration_check": {
             "command": "python -m pytest -q",
             "result": "EXPECTED_FAIL_PENDING_STAGE_3_REENTRY",
-            "passed": 132,
+            "passed": 138,
             "failed": 1,
             "failure": "tests/test_program_verification.py::test_every_stage2_candidate_has_exactly_one_controlled_status",
             "reason": f"program_verification.csv has {verification_rows} rows while the Stage 2 funnel now has {len(merged)}; Stage 3 was intentionally not modified in this one-stage run",

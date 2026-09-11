@@ -1,0 +1,294 @@
+{
+  "trigger": "Stage 6 re-entry 15 still produced zero evidence-justified core applications, so the workflow requires another bounded high-recall discovery pass before re-verification.",
+  "scope": "Twelve net-new exact routes: six U.S. research doctorates, three Canadian thesis master's routes, and three European two-year research master's routes. Official program, research, admission, and preliminary funding sources only; no scoring or retention decision.",
+  "candidates": [
+    {
+      "institution_id": "us:ipeds:133669",
+      "institution_name": "Florida Atlantic University",
+      "country": "United States",
+      "region": "us",
+      "program_name": "Doctor of Philosophy with Major in Computer Science",
+      "degree_type": "PhD",
+      "relevant_degree_route": "Computer science research doctorate with advanced coursework, qualifying milestones, and dissertation research",
+      "research_topic_clusters": ["systems_security", "distributed_systems", "software_quality", "ai_for_se"],
+      "exact_research_fit_signal": "The EECS doctorate and research pages expose computer science doctoral study plus security, networking, distributed computing, data science, and software-oriented laboratories.",
+      "preliminary_international_eligibility": "The university lists the Computer Science PhD and international graduate application routes; exact degree equivalency, prerequisites, English evidence, and Fall 2027 rules remain for Stage 3.",
+      "preliminary_funding_signal": "The college states that traditional doctoral students are supported through teaching or research assistantships with a stipend, tuition waiver, and health insurance, contingent on available positions and advisor support.",
+      "official_program_url": "https://www.fau.edu/engineering/eecs/graduate/phd/",
+      "official_institution_url": "https://www.fau.edu",
+      "seed_adjacency": ["TerraProbe-adjacent", "Evidex-adjacent"],
+      "unresolved_fields": ["Fall 2027 cycle", "degree and prerequisite equivalency", "English evidence", "advisor capacity", "assistantship selection and renewal", "summer support", "fees and net funding"],
+      "evidence_confidence": "high",
+      "additional_discovery_paths": ["recognized_institution_record", "underrepresented_route_search"],
+      "sources": [
+        {"source_id": "reentry16:fau-cs:program", "discovery_path": "official_program_or_department_signal", "evidence_role": "exact doctorate and departmental research structure", "title": "Ph.D. Programs", "url": "https://www.fau.edu/engineering/eecs/graduate/phd/", "accessed_date": "2026-09-11", "evidence_summary": "Official EECS page confirms doctoral programs including Computer Science and identifies dissertation-oriented graduate study within the department.", "limitations": "The page does not establish admission, applicant equivalency, a willing advisor, or an individual funding award."},
+        {"source_id": "reentry16:fau-cs:funding", "discovery_path": "research_masters_or_scholarship_search", "evidence_role": "doctoral assistantship coverage and contingency", "title": "Ph.D. Funding", "url": "https://www.fau.edu/engineering/graduate/phd-funding/", "accessed_date": "2026-09-11", "evidence_summary": "Official college page states that traditional PhD students are supported through TA or RA positions carrying a stipend, tuition waiver, and health insurance.", "limitations": "Support depends on available positions and advisor arrangements; amount, duration, fees, summer coverage, and Fall 2027 availability require verification."}
+      ]
+    },
+    {
+      "institution_id": "us:ipeds:187967",
+      "institution_name": "New Mexico Institute of Mining and Technology",
+      "country": "United States",
+      "region": "us",
+      "program_name": "Doctor of Philosophy in Computer Science",
+      "degree_type": "PhD",
+      "relevant_degree_route": "Post-baccalaureate computer science doctorate requiring research, dissertation, and defense",
+      "research_topic_clusters": ["software_quality", "formal_verification", "systems_security", "distributed_systems"],
+      "exact_research_fit_signal": "The graduate program explicitly names software engineering, programming languages, systems, security and privacy, cloud, and distributed computing among its research areas.",
+      "preliminary_international_eligibility": "The program publishes a 60-credit post-baccalaureate PhD route; exact transcript equivalency, prerequisites, English requirements, and Fall 2027 cycle remain unresolved.",
+      "preliminary_funding_signal": "Graduate assistantships and fellowships are available through departments and the graduate office, including opportunities for international students, but awards and coverage are competitive and not guaranteed.",
+      "official_program_url": "https://www.nmt.edu/academics/compsci/graduate.php",
+      "official_institution_url": "https://www.nmt.edu",
+      "seed_adjacency": ["TerraProbe-adjacent", "Evidex-adjacent"],
+      "unresolved_fields": ["Fall 2027 cycle", "degree and course equivalency", "English evidence", "advisor capacity", "assistantship value and tuition coverage", "renewal and summer support", "fees and insurance"],
+      "evidence_confidence": "high",
+      "additional_discovery_paths": ["recognized_institution_record", "underrepresented_route_search"],
+      "sources": [
+        {"source_id": "reentry16:nmt-cs:program", "discovery_path": "official_program_or_department_signal", "evidence_role": "exact doctorate, post-baccalaureate route, dissertation, and research breadth", "title": "Computer Science Graduate Program", "url": "https://www.nmt.edu/academics/compsci/graduate.php", "accessed_date": "2026-09-11", "evidence_summary": "Official department page confirms the Computer Science PhD, a 60-credit post-baccalaureate structure, dissertation research, and areas spanning software engineering, programming languages, security, privacy, cloud, and distributed systems.", "limitations": "Published structure does not establish applicant equivalency, admission, supervision, or funding."},
+        {"source_id": "reentry16:nmt-cs:funding", "discovery_path": "research_masters_or_scholarship_search", "evidence_role": "graduate assistantship and fellowship mechanisms", "title": "Graduate Funding", "url": "https://www.nmt.edu/gradstudies/funding.php", "accessed_date": "2026-09-11", "evidence_summary": "Official graduate-studies page describes assistantships, fellowships, scholarships, and international-student funding opportunities.", "limitations": "The page does not guarantee an award or establish stipend, tuition, fee, insurance, duration, or net-support sufficiency for this route."}
+      ]
+    },
+    {
+      "institution_id": "us:ipeds:149222",
+      "institution_name": "Southern Illinois University-Carbondale",
+      "country": "United States",
+      "region": "us",
+      "program_name": "Computer Science, Doctor of Philosophy",
+      "degree_type": "PhD",
+      "relevant_degree_route": "Computer science doctorate built around advanced research, candidacy, and an original dissertation",
+      "research_topic_clusters": ["systems_security", "software_quality", "ai_for_se", "distributed_systems"],
+      "exact_research_fit_signal": "The doctoral route supports computing research while current school evidence includes privacy-preserving AI, cybersecurity, data systems, and software-oriented work.",
+      "preliminary_international_eligibility": "The official doctoral page provides a Computer Science PhD application route; exact prior-degree preparation, English evidence, and Fall 2027 requirements remain for Stage 3.",
+      "preliminary_funding_signal": "The program reports that many qualified doctoral students receive assistantships with a stipend and tuition waiver, subject to appointment and satisfactory progress.",
+      "official_program_url": "https://academics.siu.edu/computing-and-technology/computer-science/doctoral/",
+      "official_institution_url": "https://siu.edu",
+      "seed_adjacency": ["TerraProbe-adjacent", "Evidex-adjacent"],
+      "unresolved_fields": ["Fall 2027 cycle", "degree and prerequisite mapping", "English evidence", "advisor capacity", "assistantship award and renewal", "summer coverage", "fees and insurance"],
+      "evidence_confidence": "medium",
+      "additional_discovery_paths": ["recognized_institution_record", "underrepresented_route_search"],
+      "sources": [
+        {"source_id": "reentry16:siu-cs:program", "discovery_path": "official_program_or_department_signal", "evidence_role": "exact doctorate, dissertation route, and assistantship signal", "title": "Computer Science Doctoral Program", "url": "https://academics.siu.edu/computing-and-technology/computer-science/doctoral/", "accessed_date": "2026-09-11", "evidence_summary": "Official program page confirms the Computer Science doctorate and states that many qualified students receive assistantships carrying stipends and tuition waivers.", "limitations": "The page does not guarantee admission, an advisor, or an assistantship, and it does not fully specify net coverage or duration."},
+        {"source_id": "reentry16:siu-cs:research", "discovery_path": "current_faculty_topic_signal", "evidence_role": "current privacy, AI, security, and computing research signal", "title": "School of Computing News", "url": "https://soc.siu.edu/news/", "accessed_date": "2026-09-11", "evidence_summary": "Official school news records current work and recognition involving privacy-preserving AI and computing research relevant to trustworthy and secure systems.", "limitations": "News and research activity do not establish faculty recruiting, supervision capacity, admission, or funding."}
+      ]
+    },
+    {
+      "institution_id": "us:ipeds:156125",
+      "institution_name": "Wichita State University",
+      "country": "United States",
+      "region": "us",
+      "program_name": "PhD in Electrical Engineering and Computer Science",
+      "degree_type": "PhD",
+      "relevant_degree_route": "EECS doctorate with a computer science track, faculty-supervised research, and dissertation",
+      "research_topic_clusters": ["software_quality", "systems_security", "distributed_systems", "ai_for_se"],
+      "exact_research_fit_signal": "The current graduate catalog defines a computer science doctoral track and dissertation route with research spanning advanced computing systems and software-related topics.",
+      "preliminary_international_eligibility": "The catalog allows exceptional bachelor's-entry applicants when a faculty member is willing to supervise from the outset; exact preparation, English, and Fall 2027 rules require Stage 3 review.",
+      "preliminary_funding_signal": "The Graduate School offers competitive assistantships that can include stipends and up to a full tuition waiver, while fees and individual award availability remain unresolved.",
+      "official_program_url": "https://catalog.wichita.edu/graduate/engineering/electrical-computer-engineering/phd-in-eecs/",
+      "official_institution_url": "https://www.wichita.edu",
+      "seed_adjacency": ["TerraProbe-adjacent", "Evidex-adjacent"],
+      "unresolved_fields": ["Fall 2027 cycle", "exceptional bachelor's-entry threshold", "degree and prerequisite equivalency", "English evidence", "faculty willingness and capacity", "assistantship selection and renewal", "fees and summer support"],
+      "evidence_confidence": "high",
+      "additional_discovery_paths": ["recognized_institution_record", "underrepresented_route_search"],
+      "sources": [
+        {"source_id": "reentry16:wichita-eecs:catalog", "discovery_path": "official_program_or_department_signal", "evidence_role": "exact doctorate, computer science track, bachelor's-entry condition, and dissertation", "title": "PhD in Electrical Engineering and Computer Science", "url": "https://catalog.wichita.edu/graduate/engineering/electrical-computer-engineering/phd-in-eecs/", "accessed_date": "2026-09-11", "evidence_summary": "The official 2026-27 catalog confirms the EECS PhD, its computer science track and dissertation, and a conditional bachelor's-entry route requiring faculty willingness.", "limitations": "The exceptional-entry standard, applicant equivalency, advisor capacity, and admission remain unresolved."},
+        {"source_id": "reentry16:wichita-eecs:funding", "discovery_path": "research_masters_or_scholarship_search", "evidence_role": "graduate assistantship stipend and tuition-waiver mechanism", "title": "Graduate Assistantships", "url": "https://www.wichita.edu/academics/graduate_school/assistantships.php", "accessed_date": "2026-09-11", "evidence_summary": "Official Graduate School page describes assistantship appointments and tuition waivers of up to 100 percent.", "limitations": "Appointments are competitive and semester-based; fees, insurance, stipend sufficiency, renewal, summer coverage, and program allocation remain unresolved."}
+      ]
+    },
+    {
+      "institution_id": "us:ipeds:171128",
+      "institution_name": "Michigan Technological University",
+      "country": "United States",
+      "region": "us",
+      "program_name": "Computer Science, PhD",
+      "degree_type": "PhD",
+      "relevant_degree_route": "On-campus computer science doctorate with BS-to-PhD entry, research examinations, dissertation, and defense",
+      "research_topic_clusters": ["software_quality", "systems_security", "distributed_systems", "ai_for_se"],
+      "exact_research_fit_signal": "Michigan Tech explicitly lists software engineering, cybersecurity, cloud computing, distributed systems, AI, and related laboratory research within the doctoral program.",
+      "preliminary_international_eligibility": "A four-year bachelor's in computer science or a similar field can support PhD application, with a GRE requirement for international PhD applicants unless waived by a U.S. degree; exact mapping remains unresolved.",
+      "preliminary_funding_signal": "The Graduate School publishes minimum assistantship stipend rates for PhD students without an MS, but appointment, tuition coverage, duration, and net sufficiency require individual verification.",
+      "official_program_url": "https://www.mtu.edu/gradschool/programs/degrees/computer-science/",
+      "official_institution_url": "https://www.mtu.edu",
+      "seed_adjacency": ["TerraProbe-adjacent", "Evidex-adjacent"],
+      "unresolved_fields": ["Fall 2027 cycle", "degree and prerequisite equivalency", "GRE and English evidence", "advisor capacity", "assistantship appointment and tuition coverage", "renewal and summer support", "fees and insurance"],
+      "evidence_confidence": "high",
+      "additional_discovery_paths": ["recognized_institution_record", "underrepresented_route_search"],
+      "sources": [
+        {"source_id": "reentry16:mtu-cs:program", "discovery_path": "official_program_or_department_signal", "evidence_role": "exact doctorate, BS-to-PhD structure, dissertation, and research breadth", "title": "Computer Science MS, PhD Programs", "url": "https://www.mtu.edu/gradschool/programs/degrees/computer-science/", "accessed_date": "2026-09-11", "evidence_summary": "Official Graduate School page confirms the on-campus Computer Science PhD, a 60-credit BS-to-PhD path, examinations and dissertation, and research spanning software engineering, cybersecurity, cloud, and distributed systems.", "limitations": "Program structure does not establish applicant equivalency, admission, advisor capacity, or funding."},
+        {"source_id": "reentry16:mtu-cs:stipends", "discovery_path": "research_masters_or_scholarship_search", "evidence_role": "current doctoral assistantship minimum stipend schedule", "title": "Minimum Stipend Rates", "url": "https://www.mtu.edu/gradschool/financial/assistantships/stipends/", "accessed_date": "2026-09-11", "evidence_summary": "Official Graduate School page publishes 2026-27 minimum stipend rates, including a category for PhD students lacking an MS degree.", "limitations": "A rate schedule does not establish an appointment, tuition coverage, fees, insurance, duration, summer support, or net affordability."}
+      ]
+    },
+    {
+      "institution_id": "us:ipeds:207971",
+      "institution_name": "University of Tulsa",
+      "country": "United States",
+      "region": "us",
+      "program_name": "Computer Science, Ph.D.",
+      "degree_type": "PhD",
+      "relevant_degree_route": "Computer science research doctorate in a small research institution with faculty-guided original work",
+      "research_topic_clusters": ["systems_security", "software_quality", "ai_for_se", "distributed_systems"],
+      "exact_research_fit_signal": "The Tandy School lists the Computer Science PhD and current multidisciplinary research in computer science, security, trustworthy AI, data analytics, and complex computing systems.",
+      "preliminary_international_eligibility": "The university publishes a Computer Science PhD and international graduate-admission process; exact degree preparation, English evidence, and Fall 2027 requirements remain for Stage 3.",
+      "preliminary_funding_signal": "Doctoral assistantships are open to admitted full-time students and carry a published minimum nine-month stipend, full tuition remission, and health insurance, but selection is not guaranteed.",
+      "official_program_url": "https://utulsa.edu/programs/computer-science/",
+      "official_institution_url": "https://utulsa.edu",
+      "seed_adjacency": ["TerraProbe-adjacent", "Evidex-adjacent"],
+      "unresolved_fields": ["Fall 2027 cycle", "degree and prerequisite mapping", "English evidence", "doctoral curriculum details", "advisor capacity", "assistantship selection and renewal", "summer and fee coverage"],
+      "evidence_confidence": "medium",
+      "additional_discovery_paths": ["recognized_institution_record", "underrepresented_route_search"],
+      "sources": [
+        {"source_id": "reentry16:tulsa-cs:program", "discovery_path": "official_program_or_department_signal", "evidence_role": "exact doctorate and current research environment", "title": "Programs in Computer Science", "url": "https://utulsa.edu/programs/computer-science/", "accessed_date": "2026-09-11", "evidence_summary": "Official program page lists the Computer Science PhD and describes multidisciplinary faculty-guided computing research and current facilities.", "limitations": "The page does not fully resolve doctoral requirements, bachelor's-entry eligibility, advisor capacity, admission, or funding."},
+        {"source_id": "reentry16:tulsa-cs:funding", "discovery_path": "research_masters_or_scholarship_search", "evidence_role": "doctoral assistantship stipend, tuition, and insurance coverage", "title": "Assistantships and Fellowships", "url": "https://utulsa.edu/tuition-aid/graduate-financial-assistance/assistantships-fellowships/", "accessed_date": "2026-09-11", "evidence_summary": "Official university page states that doctoral assistantships are open to full-time admitted students and include a published minimum nine-month stipend, 100 percent tuition remission, and health insurance.", "limitations": "Selection, departmental allocation, renewal, summer support, fees, and Fall 2027 terms are not guaranteed."}
+      ]
+    },
+    {
+      "institution_id": "ca:dli:O19375892122",
+      "institution_name": "Western University",
+      "country": "Canada",
+      "region": "canada",
+      "program_name": "Master of Engineering Science (MESc) in Electrical and Computer Engineering",
+      "degree_type": "Thesis or research master's",
+      "relevant_degree_route": "Two-year thesis-based electrical and computer engineering master's with supervised research",
+      "research_topic_clusters": ["systems_security", "distributed_systems", "software_quality", "ai_for_se"],
+      "exact_research_fit_signal": "The research MESc provides an electrical and computer engineering route that can host computing systems, networking, security, and software-related research under faculty supervision.",
+      "preliminary_international_eligibility": "The program accepts a four-year engineering bachelor's or a similar program with a published minimum average; exact degree similarity, prerequisites, English evidence, and supervisor match remain for Stage 3.",
+      "preliminary_funding_signal": "Eligible research-based MESc students receive a published minimum package plus tuition through research grants, scholarships, contracts, and teaching assistantships, subject to fundable status.",
+      "official_program_url": "https://www.eng.uwo.ca/graduate/future-students/Graduate-Degree-Programs/electrical-computer.html",
+      "official_institution_url": "https://uwo.ca",
+      "seed_adjacency": ["TerraProbe-adjacent", "Evidex-adjacent"],
+      "unresolved_fields": ["Fall 2027 cycle", "degree similarity and prerequisite mapping", "English evidence", "supervisor capacity", "funding amount for 2027", "renewal and summer coverage", "ancillary fees and insurance"],
+      "evidence_confidence": "high",
+      "additional_discovery_paths": ["recognized_institution_record", "underrepresented_route_search"],
+      "sources": [
+        {"source_id": "reentry16:western-ece:program", "discovery_path": "official_program_or_department_signal", "evidence_role": "exact thesis route, duration, entry background, and funding availability", "title": "Electrical and Computer Engineering Graduate Studies", "url": "https://www.eng.uwo.ca/graduate/future-students/Graduate-Degree-Programs/electrical-computer.html", "accessed_date": "2026-09-11", "evidence_summary": "Official Faculty of Engineering page confirms the two-year thesis-based MESc, four-year engineering entry background, published minimum average, and funding for admissible research students.", "limitations": "Applicant equivalency, English evidence, supervision, admission, and an individual funding package remain unresolved."},
+        {"source_id": "reentry16:western-ece:mesc", "discovery_path": "research_masters_or_scholarship_search", "evidence_role": "research-master's duration and minimum funding mechanism", "title": "MESc Program Information", "url": "https://www.eng.uwo.ca/electrical/graduate/current_students/mesc_program.html", "accessed_date": "2026-09-11", "evidence_summary": "Official department page states a six-term duration and a minimum package for eligible research-based MESc students funded through research grants, contracts, scholarships, and teaching assistantships.", "limitations": "The published amount is subject to status and future revision; ancillary fees, insurance, net sufficiency, and individual award terms require Stage 3 review."}
+      ]
+    },
+    {
+      "institution_id": "ca:dli:O19361109242",
+      "institution_name": "York University",
+      "country": "Canada",
+      "region": "canada",
+      "program_name": "MASc in Electrical and Computer Engineering",
+      "degree_type": "Thesis or research master's",
+      "relevant_degree_route": "Five-term electrical and computer engineering research master's with courses, supervised research, and thesis",
+      "research_topic_clusters": ["software_quality", "systems_security", "distributed_systems", "ai_for_se"],
+      "exact_research_fit_signal": "York's MASc supports software engineering and computer engineering research in a department with groups spanning security, systems, software, AI, and information systems.",
+      "preliminary_international_eligibility": "An honours undergraduate degree in electrical, computer, or software engineering or equivalent with a B+ average is listed; exact equivalency, project preparation, English evidence, and Fall 2027 cycle remain unresolved.",
+      "preliminary_funding_signal": "Full-time thesis or project master's students are automatically considered for a five-term package composed of teaching and research assistantships and other university funding; offer-specific sufficiency is unresolved.",
+      "official_program_url": "https://futurestudents.yorku.ca/graduate/programs/electrical-engineering-and-computer-science",
+      "official_institution_url": "https://www.yorku.ca",
+      "seed_adjacency": ["TerraProbe-adjacent", "Evidex-adjacent"],
+      "unresolved_fields": ["Fall 2027 cycle", "degree and senior-project equivalency", "English evidence", "supervisor assignment and capacity", "offer-specific funding", "tuition and ancillary fees", "insurance and net support"],
+      "evidence_confidence": "high",
+      "additional_discovery_paths": ["recognized_institution_record", "underrepresented_route_search"],
+      "sources": [
+        {"source_id": "reentry16:york-ece:program", "discovery_path": "official_program_or_department_signal", "evidence_role": "exact five-term thesis route, entry requirements, and research preparation", "title": "Electrical Engineering and Computer Science", "url": "https://futurestudents.yorku.ca/graduate/programs/electrical-engineering-and-computer-science", "accessed_date": "2026-09-11", "evidence_summary": "Official future-student page confirms the five-term MASc in Electrical and Computer Engineering, its thesis component, research preparation, and published academic and English requirements.", "limitations": "Published requirements do not establish degree equivalency, admission, a supervisor, or net affordability."},
+        {"source_id": "reentry16:york-ece:funding", "discovery_path": "research_masters_or_scholarship_search", "evidence_role": "full-time master's funding consideration and components", "title": "Financial Information and Awards", "url": "https://lassonde.yorku.ca/eecs/academics/financial-information-awards/", "accessed_date": "2026-09-11", "evidence_summary": "Official EECS page states that full-time master's students in thesis or project options are automatically considered for support during their first five terms, including TA and RA components.", "limitations": "Offer-specific amounts, eligibility details, tuition and fee effects, renewal, insurance, and net sufficiency remain unresolved."}
+      ]
+    },
+    {
+      "institution_id": "ca:dli:O19425660421",
+      "institution_name": "University of Saskatchewan",
+      "country": "Canada",
+      "region": "canada",
+      "program_name": "Electrical Engineering, Master of Science (M.Sc.) — Thesis",
+      "degree_type": "Thesis or research master's",
+      "relevant_degree_route": "Two-year research-intensive electrical engineering master's requiring supervisor approval and a thesis",
+      "research_topic_clusters": ["systems_security", "distributed_systems", "ai_for_se", "software_quality"],
+      "exact_research_fit_signal": "The research-intensive program and ECE environment provide a thesis route for networked, intelligent, secure, and computing-adjacent systems work.",
+      "preliminary_international_eligibility": "The official catalog accepts a relevant four-year honours degree or equivalent with a published minimum average and possible English proof; exact field mapping and supervisor fit remain for Stage 3.",
+      "preliminary_funding_signal": "Most thesis-based engineering graduate students receive some funding, with typical MSc stipend ranges published, but support is competitive and not guaranteed.",
+      "official_program_url": "https://grad.usask.ca/programs/electrical-computer-engineering.php",
+      "official_institution_url": "https://www.usask.ca/",
+      "seed_adjacency": ["TerraProbe-adjacent", "Evidex-adjacent"],
+      "unresolved_fields": ["Fall 2027 cycle", "degree and field equivalency", "English evidence", "supervisor approval and capacity", "funding award and duration", "international tuition offset", "fees and insurance"],
+      "evidence_confidence": "high",
+      "additional_discovery_paths": ["recognized_institution_record", "underrepresented_route_search"],
+      "sources": [
+        {"source_id": "reentry16:usask-ee:program", "discovery_path": "official_program_or_department_signal", "evidence_role": "exact two-year thesis route, supervisor condition, and funding range", "title": "Electrical Engineering - Future Graduate Students", "url": "https://grad.usask.ca/programs/electrical-computer-engineering.php", "accessed_date": "2026-09-11", "evidence_summary": "Official graduate-program page confirms the two-year thesis MSc, required supervisor approval, research-intensive structure, and typical funding levels for thesis-based engineering master's students.", "limitations": "Funding is competitive and the page does not establish a supervisor, admission, or individual net-support package."},
+        {"source_id": "reentry16:usask-ee:catalog", "discovery_path": "official_program_or_department_signal", "evidence_role": "current official admission and thesis-degree requirements", "title": "Electrical Engineering Master of Science - Thesis-based", "url": "https://programs.usask.ca/grad-studies/electrical-engineering/electrical-eng-msc-thesis.php", "accessed_date": "2026-09-11", "evidence_summary": "The official 2026-27 catalog confirms the thesis-based MSc and requires a relevant four-year honours degree or equivalent, a minimum academic average, and English evidence where applicable.", "limitations": "Exact degree equivalency, research fit, supervisor capacity, admission, and funding remain unresolved."}
+      ]
+    },
+    {
+      "institution_id": "ror:01nffqt88",
+      "institution_name": "Politecnico di Milano",
+      "country": "Italy",
+      "region": "europe",
+      "program_name": "Master's Degree in Computer Science and Engineering",
+      "degree_type": "Thesis or research master's",
+      "relevant_degree_route": "English-taught two-year, 120-credit computer science and engineering master's with a 20-credit thesis",
+      "research_topic_clusters": ["software_quality", "software_repair", "systems_security", "distributed_systems"],
+      "exact_research_fit_signal": "The English program includes software and systems pathways and a thesis, while existing discovery signals identify infrastructure-as-code, software engineering, AI, and dependable-systems research at the institution.",
+      "preliminary_international_eligibility": "Foreign applicants with a bachelor's in computer science and engineering have a stated admission route, while other backgrounds require fundamental computing, science, and engineering preparation; exact equivalency remains for Stage 3.",
+      "preliminary_funding_signal": "Competitive international merit scholarships can waive full tuition and may add an allowance, but the published 2026-27 early application window has passed and Fall 2027 terms are not yet verified.",
+      "official_program_url": "https://www.polimi.it/en/education/laurea-programmes/programme-detail/computer-science-and-engineering",
+      "official_institution_url": "https://polimi.it",
+      "seed_adjacency": ["TerraProbe-adjacent", "Evidex-adjacent"],
+      "unresolved_fields": ["Fall 2027 offering and scholarship cycle", "degree and subject equivalency", "English evidence", "thesis placement and supervision", "scholarship selection", "living costs", "fees and insurance"],
+      "evidence_confidence": "high",
+      "additional_discovery_paths": ["recognized_institution_record", "underrepresented_route_search"],
+      "sources": [
+        {"source_id": "reentry16:polimi-cse:program", "discovery_path": "official_program_or_department_signal", "evidence_role": "exact English two-year route, foreign-degree eligibility, and thesis weight", "title": "Computer Science and Engineering", "url": "https://www.polimi.it/en/education/laurea-programmes/programme-detail/computer-science-and-engineering", "accessed_date": "2026-09-11", "evidence_summary": "Official program page confirms an English-taught two-year MSc totaling 120 credits, including a 20-credit thesis, and describes admission for foreign bachelor's holders.", "limitations": "Applicant equivalency, admission, thesis-supervision fit, and Fall 2027 availability require Stage 3 verification."},
+        {"source_id": "reentry16:polimi-cse:scholarships", "discovery_path": "research_masters_or_scholarship_search", "evidence_role": "international merit-scholarship coverage and timing boundary", "title": "Scholarships", "url": "https://www.polimi.it/en/prospective-students/how-much-does-it-cost/scholarships", "accessed_date": "2026-09-11", "evidence_summary": "Official scholarship page states that competitive international MSc awards include full tuition waivers and that some add a gross allowance up to EUR 10,000 per year.", "limitations": "The current page covers 2026-27 with an expired early window; Fall 2027 eligibility, selection, living-cost sufficiency, and award terms are unresolved."}
+      ]
+    },
+    {
+      "institution_id": "ror:043pwc612",
+      "institution_name": "Universidade do Porto",
+      "country": "Portugal",
+      "region": "europe",
+      "program_name": "Master in Informatics and Computing Engineering",
+      "degree_type": "Thesis or research master's",
+      "relevant_degree_route": "Two-year, 120-ECTS informatics and computing engineering master's with a 30-ECTS original scientific dissertation",
+      "research_topic_clusters": ["software_quality", "software_repair", "systems_security", "distributed_systems"],
+      "exact_research_fit_signal": "The program covers software engineering, cybersecurity, operating systems and networks, programming, AI, and information systems, and culminates in an original scientific dissertation.",
+      "preliminary_international_eligibility": "The English program page documents the degree and curriculum; exact foreign-degree equivalency, subject prerequisites, language expectations, and Fall 2027 application route remain for Stage 3.",
+      "preliminary_funding_signal": "FEUP lists merit, international-student incentive, and external study or research funding mechanisms, but international eligibility, amount, timing, and sufficiency are award-specific.",
+      "official_program_url": "https://fe.up.pt/estudar/meic/?lang=en",
+      "official_institution_url": "https://www.up.pt",
+      "seed_adjacency": ["TerraProbe-adjacent", "Evidex-adjacent"],
+      "unresolved_fields": ["Fall 2027 cycle", "foreign degree and subject equivalency", "teaching-language details", "dissertation supervisor and topic", "international tuition", "funding selection and amount", "living costs and insurance"],
+      "evidence_confidence": "high",
+      "additional_discovery_paths": ["recognized_institution_record", "underrepresented_route_search"],
+      "sources": [
+        {"source_id": "reentry16:porto-meic:program", "discovery_path": "official_program_or_department_signal", "evidence_role": "exact 120-ECTS route, research areas, and original dissertation", "title": "Master in Informatics and Computing Engineering", "url": "https://fe.up.pt/estudar/meic/?lang=en", "accessed_date": "2026-09-11", "evidence_summary": "Official FEUP page confirms a 120-ECTS master's with a 30-ECTS original scientific dissertation and core areas including cybersecurity, software engineering, systems and networks, programming, AI, and information systems.", "limitations": "The page does not fully resolve foreign-degree equivalency, language delivery, admission, supervision, or funding."},
+        {"source_id": "reentry16:porto-meic:funding", "discovery_path": "research_masters_or_scholarship_search", "evidence_role": "international master's tuition and funding mechanisms", "title": "Master's Degree - Information and Tuition Fees", "url": "https://www.up.pt/feup/en/study/masters-degree/information-and-tuition-fees/", "accessed_date": "2026-09-11", "evidence_summary": "Official FEUP page describes master’s tuition categories and merit, international-student incentive, social-support, and external study or research funding routes.", "limitations": "Specific international eligibility, award value, selection, program tuition, living costs, and Fall 2027 terms remain unresolved."}
+      ]
+    },
+    {
+      "institution_id": "ror:037wpkx04",
+      "institution_name": "University of Minho",
+      "country": "Portugal",
+      "region": "europe",
+      "program_name": "Master in Informatics Engineering",
+      "degree_type": "Thesis or research master's",
+      "relevant_degree_route": "Two-year, four-semester, 120-ECTS informatics engineering master's with advanced computing and research progression",
+      "research_topic_clusters": ["software_repair", "software_quality", "ai_for_se", "formal_verification"],
+      "exact_research_fit_signal": "The official program is a two-year computing master's, and institutional discovery signals identify current automated program repair, code completion, software analysis, and AI-for-software work.",
+      "preliminary_international_eligibility": "The university publishes a dedicated international master's application process; exact first-degree recognition, subject preparation, language delivery, and Fall 2027 offering remain for Stage 3.",
+      "preliminary_funding_signal": "International students can access merit scholarship mechanisms, but no program-specific full package or living-cost support is established; tuition and support require exact 2027 verification.",
+      "official_program_url": "https://www.eng.uminho.pt/en/study/_layouts/15/uminho.portaisuoei.ui/pages/catalogocursodetail.aspx?catid=16&itemid=5482",
+      "official_institution_url": "https://www.uminho.pt",
+      "seed_adjacency": ["TerraProbe-adjacent", "Evidex-adjacent"],
+      "unresolved_fields": ["Fall 2027 offering", "foreign degree and subject equivalency", "language of instruction", "dissertation structure and supervision", "tuition for the engineering school", "merit scholarship selection", "living costs and insurance"],
+      "evidence_confidence": "medium",
+      "additional_discovery_paths": ["recognized_institution_record", "underrepresented_route_search"],
+      "sources": [
+        {"source_id": "reentry16:minho-mei:program", "discovery_path": "official_program_or_department_signal", "evidence_role": "exact 120-ECTS two-year computing route and research progression", "title": "Informatics Engineering", "url": "https://www.eng.uminho.pt/en/study/_layouts/15/uminho.portaisuoei.ui/pages/catalogocursodetail.aspx?catid=16&itemid=5482", "accessed_date": "2026-09-11", "evidence_summary": "Official School of Engineering page identifies the Master in Informatics Engineering as a four-semester, 120-ECTS computer science program intended to support advanced professional and doctoral progression.", "limitations": "The current page does not fully establish dissertation structure, English delivery, foreign-degree equivalency, supervision, or funding."},
+        {"source_id": "reentry16:minho-mei:applications", "discovery_path": "research_masters_or_scholarship_search", "evidence_role": "current international master's application route and fee", "title": "Master Degrees", "url": "https://alunos.uminho.pt/EN/candidates/MastersDegrees/Pages/default.aspx", "accessed_date": "2026-09-11", "evidence_summary": "Official academic portal documents the 2026-27 master's application process, international applicant category, application periods, and application fee.", "limitations": "The page does not guarantee the specific program's Fall 2027 offering, admission, scholarship, tuition rate, or living-cost support."}
+      ]
+    }
+  ],
+  "false_negative_audits": [
+    {
+      "institution_id": "us:ipeds:187967",
+      "exclusion_reason_category": "mechanical_signal_without_exact_doctoral_route",
+      "original_supporting_evidence": "New Mexico Tech remained only a mechanical discovery signal despite a current post-baccalaureate Computer Science PhD with dissertation research in software engineering, programming languages, security, cloud, and distributed systems."
+    },
+    {
+      "institution_id": "ror:01nffqt88",
+      "exclusion_reason_category": "outside_bounded_positive_seed_screen",
+      "original_supporting_evidence": "Politecnico di Milano was screened out at program discovery despite a current English two-year Computer Science and Engineering MSc with a thesis and competitive international tuition-waiver scholarships."
+    }
+  ]
+}
