@@ -375,8 +375,8 @@ FACULTY_ROSTERS: dict[str, FacultyRoster] = {
         ),
     ),
     "University of Victoria": FacultyRoster(
-        "Department of Computer Science",
-        "https://www.uvic.ca/ecs/computerscience/faculty-staff/index.php",
+        "Departments of Electrical and Computer Engineering / Computer Science",
+        "https://www.uvic.ca/ecs/software/research/our-researchers/index.php",
         (
             _c("Neil Ernst", "software architecture; requirements; software ecosystems"),
             _c("Daniela Damian", "requirements engineering; collaborative software engineering"),
@@ -385,12 +385,12 @@ FACULTY_ROSTERS: dict[str, FacultyRoster] = {
         ),
     ),
     "University of Waterloo": FacultyRoster(
-        "Cheriton School of Computer Science",
-        "https://uwaterloo.ca/computer-science/about/our-people",
+        "Cheriton School of Computer Science / Department of Electrical and Computer Engineering",
+        "https://uwaterloo.ca/electrical-computer-engineering/contacts?group%5B61%5D=61&title=",
         (
             _c("Mei Nagappan", "software analytics; mining repositories; software quality"),
             _c("Michael W. Godfrey", "software evolution; program comprehension; architecture"),
-            _c("Patrick Lam", "program analysis; software engineering; verification"),
+            _c("Werner Dietl", "programming languages; type systems; program verification"),
             _c("Krzysztof Czarnecki", "software engineering; variability; model-driven systems"),
         ),
     ),
@@ -872,6 +872,56 @@ FACULTY_ROSTERS: dict[str, FacultyRoster] = {
             _c("Mengjun Hu", "cybersecurity; data systems; trustworthy machine learning"),
             _c("Jimmy Zhu", "machine learning; software systems; reliable data analysis"),
             _c("Shaiful Chowdhury", "software systems; artificial intelligence; data-driven computing"),
+        ),
+    ),
+    "Baylor University": FacultyRoster(
+        "Department of Computer Science",
+        "https://www.ecs.baylor.edu/departments/computer-science/computer-science-faculty",
+        (
+            _c("Eunjee Song", "software engineering; model-driven engineering; software testing"),
+            _c("Xiao Shou", "cybersecurity; secure systems; threat analysis"),
+            _c("Chen Zhao", "trustworthy artificial intelligence; security; data systems"),
+            _c("Greg Hamerly", "machine learning; data mining; reliable intelligent systems"),
+        ),
+    ),
+    "Rice University": FacultyRoster(
+        "Department of Computer Science",
+        "https://compsci.rice.edu/people/faculty",
+        (
+            _c("Dan S. Wallach", "systems security; software security; electronic voting"),
+            _c("Ang Chen", "network security; distributed systems; secure infrastructure"),
+            _c("Yuke Wang", "systems security; trustworthy AI infrastructure; computer architecture"),
+            _c("Scott Rixner", "computer systems; virtualization; reliable infrastructure"),
+        ),
+    ),
+    "Washington State University": FacultyRoster(
+        "School of Electrical Engineering and Computer Science",
+        "https://school.eecs.wsu.edu/directory/",
+        (
+            _c("Xu Lin", "web security; software security; vulnerability analysis"),
+            _c("Janardhan Rao Doppa", "artificial intelligence; trustworthy machine learning; optimization"),
+            _c("Leon Li", "cybersecurity; systems security; privacy"),
+            _c("Shih-Lien Lu", "computer systems; architecture; dependable computing"),
+        ),
+    ),
+    "University of South Florida": FacultyRoster(
+        "Bellini College of Artificial Intelligence, Cybersecurity and Computing",
+        "https://www.usf.edu/ai-cybersecurity-computing/people/faculty/",
+        (
+            _c("Jay Ligatti", "software security; programming languages; program enforcement"),
+            _c("Xinming Ou", "cybersecurity; attack analysis; security automation"),
+            _c("Hao Zheng", "formal methods; software verification; cyber-physical systems"),
+            _c("Tempestt Neal", "identity; trustworthy artificial intelligence; usable security"),
+        ),
+    ),
+    "University of Gothenburg": FacultyRoster(
+        "Department of Computer Science and Engineering",
+        "https://www.gu.se/en/about/find-organisation/department-of-computer-science-and-engineering-3",
+        (
+            _c("Robert Feldt", "software engineering; software testing; artificial intelligence"),
+            _c("Richard Torkar", "empirical software engineering; software analytics; quality"),
+            _c("Jennifer Horkoff", "requirements engineering; modeling; explainable systems"),
+            _c("Daniel Strüber", "model-driven engineering; software evolution; program transformation"),
         ),
     ),
 }
