@@ -87,3 +87,13 @@ def test_stage3_reentry_06_artifacts_pass_incremental_gate():
     assert result["counts"]["reentry_retained"] == 0
     assert result["counts"]["reentry_conditional"] == 6
     assert result["counts"]["reentry_monitor"] == 6
+
+
+def test_stage3_reentry_07_artifacts_pass_incremental_gate():
+    result = _validate_round(7)
+
+    assert result["validation_status"] == "PASS"
+    assert all(result["assertions"].values())
+    assert result["counts"]["reentry_retained"] == 3
+    assert result["counts"]["reentry_conditional"] == 4
+    assert result["counts"]["reentry_monitor"] == 5
