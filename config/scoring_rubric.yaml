@@ -1,7 +1,7 @@
 schema_version: "2.0"
 framework:
   total_points: 100
-  generating_process: graduate_audit.evidence_scoring:v1
+  generating_process: graduate_audit.evidence_scoring:v2
   precision_rule: Scores use only the listed anchors. Tied totals share a dense rank; no tie is broken by prestige or an unexplained point.
 
 components:
@@ -124,4 +124,5 @@ admission_calibration:
     - Insufficient evidence
   probability_output: forbidden
   minimum_gpa_rule: Matching a published minimum cannot by itself produce Plausible, Plausible to reach, or Reach.
+  equivalent_strategic_evidence_rule: A normal or competitive research-degree entry norm may be combined with the verified applicant research record and at least one current verified strong faculty match; all three are required when official cohort evidence is absent.
   insufficient_evidence_rule: Use Insufficient evidence when official cohort/selectivity evidence or equivalent strategic calibration evidence is absent.

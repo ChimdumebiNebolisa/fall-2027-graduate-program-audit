@@ -133,6 +133,7 @@ def test_noncommittal_funding_language_does_not_pass_funding_gate():
         "Nearly all CS PhD students are described as fully funded through TA or RA support.",
         "Not every PhD student is funded; offer-specific one-to-five-year packages may be offered.",
         "A majority of admitted doctoral students receive support without a universal guarantee.",
+        "Applicants receive one-year guaranteed-funding consideration, but no award is promised.",
     )
     for claim in noncommittal_claims:
         sources["stage3src:funding"]["exact_claim_supported"] = claim
@@ -163,6 +164,79 @@ def test_minimum_gpa_match_alone_does_not_create_plausible_assessment():
     category, rationale = calibrate_admission(program, sources, eligibility_gate=True)
     assert category == "Insufficient evidence"
     assert "cohort/selectivity" in rationale
+
+
+def test_verified_record_and_faculty_match_can_calibrate_normal_research_entry():
+    program = {
+        "bachelors_entry_eligibility": "Yes — bachelor's degree or equivalent accepted",
+        "degree_type": "PhD",
+        "research_requirement": "Original dissertation research",
+        "largest_unresolved_question": "",
+    }
+    profile = {"verified_background": ["TerraProbe: accepted as a full paper at ICTAI 2026"]}
+    category, rationale = calibrate_admission(
+        program,
+        [{"exact_claim_supported": "The current PhD accepts bachelor's degree applicants."}],
+        eligibility_gate=True,
+        profile=profile,
+        verified_strong_matches=1,
+    )
+    assert category == "Plausible"
+    assert "no probability" in rationale.casefold()
+
+
+def test_normal_entry_wording_does_not_require_one_exact_phrase():
+    program = {
+        "bachelors_entry_eligibility": "A bachelor's degree is accepted; a master's degree is not required for PhD admission",
+        "degree_type": "PhD",
+        "research_requirement": "Dissertation research",
+        "largest_unresolved_question": "",
+    }
+    profile = {"verified_background": ["Undergraduate research and technical-project experience"]}
+    category, _ = calibrate_admission(
+        program,
+        [{"exact_claim_supported": "The official FAQ states that a master's is not required."}],
+        eligibility_gate=True,
+        profile=profile,
+        verified_strong_matches=1,
+    )
+    assert category == "Plausible"
+
+
+def test_exceptional_entry_is_not_upgraded_to_plain_plausible():
+    program = {
+        "bachelors_entry_eligibility": "Exceptional direct entry from a bachelor's is discretionary",
+        "degree_type": "PhD",
+        "research_requirement": "Original dissertation research",
+        "largest_unresolved_question": "",
+    }
+    profile = {"verified_background": ["Undergraduate research and technical-project experience"]}
+    category, _ = calibrate_admission(
+        program,
+        [{"exact_claim_supported": "Exceptional bachelor's entry is permitted."}],
+        eligibility_gate=True,
+        profile=profile,
+        verified_strong_matches=1,
+    )
+    assert category == "Plausible to reach"
+
+
+def test_highly_selective_official_evidence_remains_a_reach():
+    program = {
+        "bachelors_entry_eligibility": "Bachelor's degree route",
+        "degree_type": "PhD",
+        "research_requirement": "Original dissertation research",
+        "largest_unresolved_question": "",
+    }
+    profile = {"verified_background": ["Undergraduate research and technical-project experience"]}
+    category, _ = calibrate_admission(
+        program,
+        [{"exact_claim_supported": "This is a highly selective doctoral admission process."}],
+        eligibility_gate=True,
+        profile=profile,
+        verified_strong_matches=1,
+    )
+    assert category == "Reach"
 
 
 def test_stage_five_outputs_cover_all_programs_and_enforce_depth_deduplication():
@@ -514,6 +588,26 @@ def test_stage_five_reentry_17_scores_every_new_faculty_ready_route():
     assert professor_gate_failures[0]["institution_name"] == "Åbo Akademi University"
 
 
+def test_stage_five_reentry_18_scores_every_new_faculty_ready_route():
+    latest_ids = {
+        row["candidate_program_id"]
+        for row in read_csv(REPO_ROOT / "data/processed/pass2/stage_03_reentry_18_verification.csv")
+        if row["faculty_review_ready"] == "yes"
+    }
+    scores = read_csv(REPO_ROOT / "data/processed/pass2/program_scores.csv")
+    evidence = read_csv(REPO_ROOT / "data/processed/pass2/score_evidence.csv")
+    scored_latest = [row for row in scores if row["program_id"] in latest_ids]
+    evidence_by_program = defaultdict(list)
+    for row in evidence:
+        if row["program_id"] in latest_ids:
+            evidence_by_program[row["program_id"]].append(row)
+    assert len(latest_ids) == len(scored_latest) == 6
+    assert {row["program_id"] for row in scored_latest} == latest_ids
+    assert set(evidence_by_program) == latest_ids
+    assert all(len(rows) == len(COMPONENT_ORDER) for rows in evidence_by_program.values())
+    assert all(row["professor_hard_gate"] == "true" for row in scored_latest)
+
+
 def test_missing_gate_evidence_reduces_confidence_and_blocks_rank():
     scores = read_csv(REPO_ROOT / "data/processed/pass2/program_scores.csv")
     incomplete = [
@@ -549,6 +643,10 @@ def test_no_probability_and_no_institution_specific_score_constants():
     scores = read_csv(REPO_ROOT / "data/processed/pass2/program_scores.csv")
     manifest = read_json(REPO_ROOT / "data/manifests/pass2/stage_05.json")
     assert all(not row["admission_probability"] for row in scores)
-    assert all(row["admission_plausibility"] in {"Insufficient evidence", "Eligibility concern"} for row in scores)
+    assert all(
+        row["admission_plausibility"]
+        in {"Plausible", "Plausible to reach", "Reach", "Insufficient evidence", "Eligibility concern"}
+        for row in scores
+    )
     assert manifest["validation"]["institution_specific_score_constant_hits"] == []
     assert manifest["validation"]["assertions"]["no_institution_specific_score_constants"] is True

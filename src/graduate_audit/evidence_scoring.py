@@ -10,7 +10,7 @@ import yaml
 
 from graduate_audit.schema import PASS2_SCHEMA_VERSION
 
-GENERATING_PROCESS = "graduate_audit.evidence_scoring:v1"
+GENERATING_PROCESS = "graduate_audit.evidence_scoring:v2"
 COMPONENT_ORDER = (
     "professor_alignment",
     "department_program_depth",
@@ -157,6 +157,7 @@ def funding_hard_gate_from_evidence(
         "later funding patterns", "later funding is not", "later support expected",
         "not a guarantee", "not guaranteed", "lack of guaranteed", "distinction between", "nearly all", "majority",
         "not every", "not universal", "without a universal guarantee", "one-to-five-year",
+        "consideration",
     )
     credible_markers = (
         "guaranteed", "funding guarantee", "five-year package",
@@ -312,14 +313,95 @@ def _economics_score(program: Mapping[str, object], refs: tuple[str, ...]) -> tu
     return 0, "high_or_unverified_cost", "partial" if fee is not None else "missing", "low", "Fee is high or the applicable Fall 2027 amount/waiver remains unverified."
 
 
+def _verified_applicant_research_record(profile: Mapping[str, object] | None) -> bool:
+    if not profile:
+        return False
+    background = " ".join(str(item) for item in profile.get("verified_background", [])).casefold()
+    research_markers = ("accepted as a full paper", "publication", "undergraduate research")
+    return any(marker in background for marker in research_markers)
+
+
 def calibrate_admission(
-    program: Mapping[str, object], official_sources: Iterable[Mapping[str, object]], eligibility_gate: bool
+    program: Mapping[str, object],
+    official_sources: Iterable[Mapping[str, object]],
+    eligibility_gate: bool,
+    *,
+    profile: Mapping[str, object] | None = None,
+    verified_strong_matches: int = 0,
 ) -> tuple[str, str]:
     if not eligibility_gate:
         return "Eligibility concern", str(program.get("largest_unresolved_question", "")) or "Formal eligibility remains unresolved."
+    official_sources = tuple(official_sources)
     strategic_text = " ".join(str(source.get("exact_claim_supported", "")) for source in official_sources).casefold()
+    entry_text = " ".join(
+        str(program.get(field, ""))
+        for field in ("bachelors_entry_eligibility", "admissions_model", "degree_type", "research_requirement")
+    ).casefold()
+    has_verified_record = _verified_applicant_research_record(profile)
+    has_faculty_alignment = verified_strong_matches > 0
+    has_research_route = any(marker in entry_text for marker in ("phd", "doctoral", "thesis", "research master", "research master's"))
+    highly_selective = any(marker in strategic_text for marker in ("highly selective", "very selective"))
+    competitive_entry = any(
+        marker in strategic_text
+        for marker in ("competitive admission", "competitive selection", "selective admission")
+    )
+    exceptional_entry = any(
+        marker in entry_text
+        for marker in ("exceptional", "discretionary", "case-by-case", "case by case")
+    )
+    explicit_standard_entry = any(
+        marker in entry_text
+        for marker in (
+            "bachelor's degree route", "bachelor's degree or equivalent", "bachelor's or",
+            "bachelor degree", "bs entry", "direct admission from a bachelor's",
+            "relevant bachelor's", "four-year undergraduate degree", "thesis supervisor",
+            "supervisor commitment", "engineering degree or equivalent",
+        )
+    )
+    general_standard_entry = (
+        any(
+            marker in entry_text
+            for marker in (
+                "bachelor", "undergraduate", "honours", "engineering or related program",
+                "master's is not required", "master's degree is not required", "no prior master's",
+                "direct route",
+            )
+        )
+        and any(
+            marker in entry_text
+            for marker in (
+                "accepted", "accepts", "eligible", "welcomed", "not required", "direct route",
+                "entry route", "equivalent", "assumes completed", "no prior master's",
+                "five-year path", "five year path",
+            )
+        )
+    )
+    standard_entry = (explicit_standard_entry or general_standard_entry) and not exceptional_entry
+    equivalent_strategic_evidence = (
+        bool(official_sources)
+        and has_verified_record
+        and has_faculty_alignment
+        and has_research_route
+    )
+
+    if highly_selective and equivalent_strategic_evidence:
+        return (
+            "Reach",
+            "Official evidence describes a highly selective route; formal eligibility, a verified research record, and one current strong faculty match support consideration but not a probability estimate.",
+        )
+    if (competitive_entry or exceptional_entry) and equivalent_strategic_evidence:
+        return (
+            "Plausible to reach",
+            "Official evidence describes competitive or exceptional entry; the applicant has a verified research record and a current strong faculty match, but no cohort evidence supports a stronger category.",
+        )
+    if standard_entry and equivalent_strategic_evidence:
+        return (
+            "Plausible",
+            "Official evidence confirms the normal research-degree entry route, while the verified applicant research record and a current strong faculty match provide equivalent strategic calibration beyond the published minimum; no probability is inferred.",
+        )
+
     strategic_markers = ("admit rate", "acceptance rate", "cohort profile", "applications received", "selectivity")
-    if not any(marker in strategic_text for marker in strategic_markers):
+    if not any(marker in strategic_text for marker in strategic_markers) and not equivalent_strategic_evidence:
         return (
             "Insufficient evidence",
             "Published minimums and formal eligibility do not calibrate admission chances; no official cohort/selectivity evidence is recorded.",
@@ -407,7 +489,13 @@ def score_program(
         })
 
     official_program_sources = [sources_by_id[ref] for ref in eligibility_refs if ref in sources_by_id]
-    plausibility, plausibility_rationale = calibrate_admission(program, official_program_sources, eligibility_gate)
+    plausibility, plausibility_rationale = calibrate_admission(
+        program,
+        official_program_sources,
+        eligibility_gate,
+        profile=profile,
+        verified_strong_matches=match_count,
+    )
     overall = sum(component.score for component in components)
     lowest_confidence = min((component.confidence for component in components), key=CONFIDENCE_ORDER.get)
     incomplete = [component.component for component in components if component.completeness != "complete"]
