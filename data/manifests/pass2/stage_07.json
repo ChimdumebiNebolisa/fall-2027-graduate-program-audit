@@ -1,0 +1,180 @@
+{
+  "manifest_version": "1.0",
+  "schema_version": "2.0",
+  "stage": 7,
+  "name": "Contact-history verification and outreach prioritization",
+  "status": "complete",
+  "decision": "PASS",
+  "next_action": "CONTINUE_TO_STAGE_8",
+  "source_commit_before_stage": "81e24925dcb36052dda2052768587baeeaf2fd7b",
+  "triggered_by_stage": 6,
+  "started_at": "2026-09-11T16:35:57.288668+00:00",
+  "completed_at": "2026-09-11T16:35:57.671476+00:00",
+  "inputs": [
+    {
+      "path": "data/manifests/pass2/stage_06.json",
+      "sha256": "3ac459d1e08036e818fab720674678c796cbd9c660041e2772a3d402dce4bbec",
+      "bytes": 7265,
+      "modified_at": "2026-09-11T16:25:16.460333+00:00",
+      "row_count": null
+    },
+    {
+      "path": "data/processed/pass2/portfolio.json",
+      "sha256": "843edbf1d73e8ae3f43cc718a9011c43205039ad058a4bb05548644a437d4eed",
+      "bytes": 1089595,
+      "modified_at": "2026-09-11T16:25:16.170015+00:00",
+      "row_count": null
+    },
+    {
+      "path": "data/processed/pass2/program_verification.csv",
+      "sha256": "92ebf587dc1ce3b5d629d63acc7c6b968a68687bea6e805d2ec7c54b38c9f121",
+      "bytes": 4808857,
+      "modified_at": "2026-09-11T16:01:10.334399+00:00",
+      "row_count": 2181
+    },
+    {
+      "path": "data/processed/pass2/professor_matches_retained.csv",
+      "sha256": "dd267fbb155f322f84f7581074656576e8c59c9a6498e398650cc0046ba9e4fe",
+      "bytes": 339267,
+      "modified_at": "2026-09-11T16:11:14.891732+00:00",
+      "row_count": 144
+    },
+    {
+      "path": "config/outreach_priority.yaml",
+      "sha256": "17ed83a2f65bb0886a83ffd4af902868cbef76a796af5d05a63dd56e12875c79",
+      "bytes": 1662,
+      "modified_at": "2026-09-11T16:31:42.067521+00:00",
+      "row_count": null
+    }
+  ],
+  "private_input": {
+    "path": "data/processed/pass2/contact_history_status.csv",
+    "row_count": 28,
+    "tracking": "git_ignored",
+    "content_policy": "broad status only; no raw private message material"
+  },
+  "outputs": [
+    {
+      "path": "data/processed/pass2/outreach_priority.csv",
+      "sha256": "2498422cea435dd9544ab5fbd5002f7d08cca748c628351a8ebc41cbc89e99b3",
+      "bytes": 28225,
+      "modified_at": "2026-09-11T16:35:57.571086+00:00",
+      "row_count": 28
+    },
+    {
+      "path": "reports/pass2/07_outreach_prioritization.md",
+      "sha256": "0f83698b344df88d49b883c606ab44a44c3911759eada6337a4159375c1bcbe9",
+      "bytes": 8531,
+      "modified_at": "2026-09-11T16:35:57.665945+00:00",
+      "row_count": null
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "config/outreach_priority.yaml",
+      "sha256": "17ed83a2f65bb0886a83ffd4af902868cbef76a796af5d05a63dd56e12875c79",
+      "bytes": 1662,
+      "modified_at": "2026-09-11T16:31:42.067521+00:00",
+      "row_count": null
+    },
+    {
+      "path": "src/graduate_audit/outreach_prioritization.py",
+      "sha256": "f6c4a9ec3040462b4ff290c150b9a5532503d4160b4fac71d1b87a8fa9468437",
+      "bytes": 12526,
+      "modified_at": "2026-09-11T16:31:42.074591+00:00",
+      "row_count": null
+    },
+    {
+      "path": "src/graduate_audit/schema.py",
+      "sha256": "9871eba3a72b98d0f9d2191724fd2ec113e475123456ea3176c62b021b13a46a",
+      "bytes": 15351,
+      "modified_at": "2026-09-11T16:35:51.154606+00:00",
+      "row_count": null
+    },
+    {
+      "path": "scripts/build_stage_07.py",
+      "sha256": "1f3e017b2d58717218d32e97e384fa7af166b46768f2bc0c459c47cf11f9f311",
+      "bytes": 16393,
+      "modified_at": "2026-09-11T16:35:51.162571+00:00",
+      "row_count": null
+    },
+    {
+      "path": "tests/test_outreach_prioritization.py",
+      "sha256": "1714e07f66451d63a57bce23b6cdac4a5f1b557b360a88dee214375649aa3748",
+      "bytes": 4147,
+      "modified_at": "2026-09-11T16:35:51.156523+00:00",
+      "row_count": null
+    },
+    {
+      "path": "state/progress.json",
+      "sha256": "3ef02cbe7e22c54998a6f713282fc67f56a354e46ae95051c3169e2028f36cd5",
+      "bytes": 6782,
+      "modified_at": "2026-09-11T16:35:57.669479+00:00",
+      "row_count": null
+    },
+    {
+      "path": "data/processed/pass2/outreach_priority.csv",
+      "sha256": "2498422cea435dd9544ab5fbd5002f7d08cca748c628351a8ebc41cbc89e99b3",
+      "bytes": 28225,
+      "modified_at": "2026-09-11T16:35:57.571086+00:00",
+      "row_count": 28
+    },
+    {
+      "path": "reports/pass2/07_outreach_prioritization.md",
+      "sha256": "0f83698b344df88d49b883c606ab44a44c3911759eada6337a4159375c1bcbe9",
+      "bytes": 8531,
+      "modified_at": "2026-09-11T16:35:57.665945+00:00",
+      "row_count": null
+    }
+  ],
+  "validation": {
+    "status": "PASS",
+    "assertions": {
+      "every_active_program_has_recommended_professor_disposition": true,
+      "every_recommended_contact_has_history_status": true,
+      "contact_history_values_are_tristate": true,
+      "unknown_history_is_preserved": true,
+      "first_wave_size_is_evidence_bounded": true,
+      "every_first_wave_reply_can_change_a_specific_decision": true,
+      "first_wave_has_verified_contact_and_no_prior_contact": true,
+      "prior_contact_never_receives_fresh_introduction": true,
+      "missing_official_contacts_are_blocked": true,
+      "all_priority_dimensions_are_scored": true,
+      "no_duplicate_official_contact": true,
+      "second_wave_is_ranked": true,
+      "only_active_programs_are_prioritized": true,
+      "private_history_has_no_raw_message_material": true,
+      "private_history_is_git_ignored": true
+    },
+    "stage_specific_tests": {
+      "command": "python -m pytest tests/test_outreach_prioritization.py -q",
+      "result": "10 passed"
+    },
+    "full_suite": {
+      "command": "python -m pytest -q",
+      "result": "170 passed"
+    }
+  },
+  "counts": {
+    "active_programs": 22,
+    "recommended_contacts": 28,
+    "professor_contacts": 22,
+    "department_contacts": 6,
+    "first_wave": 12,
+    "second_wave": 11,
+    "follow_up_review": 0,
+    "blocked_missing_official_contact": 5,
+    "do_not_contact": 0,
+    "history_yes": 0,
+    "history_no": 23,
+    "history_unknown": 5
+  },
+  "failures": [],
+  "blockers": [],
+  "unresolved_coverage": [
+    "5 contacts lack verified official addresses and retain unknown history status.",
+    "Connected history covers the searched Gmail account only; other accounts are out of scope.",
+    "Offer-specific and future-cycle questions may not be answerable until official updates or an offer exists.",
+    "Applicant preference has not been directly elicited and can change wave ordering."
+  ]
+}

@@ -142,9 +142,16 @@ SCORE_COMPONENT_COLUMNS_V2 = (
 )
 
 OUTREACH_PRIORITY_COLUMNS_V2 = (
-    "schema_version", "program_id", "institution_name", "contact_type",
-    "contact_name", "official_contact", "information_gap",
-    "outreach_status", "evidence_ids",
+    "schema_version", "priority_rank", "wave", "portfolio_status", "program_id",
+    "institution_name", "program_name", "contact_type", "contact_name",
+    "official_contact", "contact_source_url", "contact_history_status",
+    "last_relevant_contact_date", "reply_received", "follow_up_appropriate",
+    "information_value_score", "research_match_score",
+    "admission_supervisor_impact_score", "funding_supervisor_impact_score",
+    "resolvable_uncertainty_score", "appropriateness_score", "timing_score",
+    "outreach_score", "information_gap", "decision_that_reply_could_change",
+    "recommended_outreach_angle", "evidence_ids", "scoring_process",
+    "verification_status",
 )
 
 CANDIDATE_FUNNEL_COLUMNS_V2 = (

@@ -10,6 +10,7 @@
 # Private connected-source material
 data/private/**
 !data/private/README.md
+data/processed/pass2/contact_history_status.csv
 data/raw/**
 !data/raw/README.md
 *.mbox

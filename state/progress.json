@@ -1,6 +1,6 @@
 {
   "project": "fall-2027-graduate-program-audit",
-  "current_phase": "pass2_stage_06_reentry_18_complete",
+  "current_phase": "pass2_stage_07_complete",
   "phases": {
     "foundation": "complete",
     "universe": "complete",
@@ -32,8 +32,8 @@
     "Canada retains 50 explicitly unresolved indexed institutions and 9 blocked/insufficient program pages."
   ],
   "pass2": {
-    "current_stage": 6,
-    "last_completed_stage": 6,
+    "current_stage": 7,
+    "last_completed_stage": 7,
     "stage_status": {
       "0": "complete",
       "1": "complete",
@@ -131,12 +131,13 @@
       "3_reentry_18": "complete",
       "4_reentry_18": "complete",
       "5_reentry_18": "complete",
-      "6_reentry_18": "complete"
+      "6_reentry_18": "complete",
+      "7": "complete"
     },
-    "next_stage": 7,
+    "next_stage": 8,
     "next_stage_authorized": true,
     "baseline_commit": "d2e770b2d5dafe25537481f7b83663471e7060fc",
-    "stage_manifest": "data/manifests/pass2/stage_06.json",
+    "stage_manifest": "data/manifests/pass2/stage_07.json",
     "open_issue_count": 17,
     "critical_issue_count": 6,
     "high_issue_count": 9,
@@ -177,7 +178,11 @@
     "stage_05_reentry_latest_programs": 6,
     "stage_06_reentry_required": false,
     "stage_06_reentry_source_stage": 5,
-    "stage_06_reentry_latest_programs": 6
+    "stage_06_reentry_latest_programs": 6,
+    "stage_07_acceptance": "PASS",
+    "stage_07_first_wave_count": 12,
+    "stage_07_second_wave_count": 11,
+    "stage_07_unknown_history_count": 5
   },
-  "updated_at": "2026-09-11T16:25:16.184565+00:00"
+  "updated_at": "2026-09-11T16:35:57.667460+00:00"
 }

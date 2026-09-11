@@ -1,0 +1,35 @@
+schema_version: "2.0"
+generating_process: graduate_audit.outreach_prioritization:v1
+first_wave:
+  minimum_contacts: 10
+  maximum_contacts: 15
+  target_contacts: 12
+  minimum_score: 70
+components:
+  information_value:
+    max_score: 25
+    criterion: A reply can change whether, when, or how the applicant pursues the exact program.
+  research_match:
+    max_score: 15
+    criterion: The professor is a verified strong research match; administrative contacts receive zero for this dimension.
+  admission_supervisor_impact:
+    max_score: 15
+    criterion: The reply can clarify supervisor capacity, a supervisor-led route, or a material admissions rule.
+  funding_supervisor_impact:
+    max_score: 15
+    criterion: The reply can clarify supervisor-dependent funding or a material funding-package gap.
+  resolvable_uncertainty:
+    max_score: 15
+    criterion: The question is specific, unresolved, and appropriate for this recipient.
+  appropriateness:
+    max_score: 10
+    criterion: Official guidance supports contact and the recipient is the correct source for the question.
+  timing:
+    max_score: 5
+    criterion: The question is useful in the current Fall 2027 planning window.
+rules:
+  prior_contact: Never recommend a fresh introduction when relevant prior contact exists; route it to follow-up review.
+  unknown_history: Preserve unknown as unknown and do not treat it as no contact.
+  missing_contact: A contact without a verified official address cannot enter the first wave.
+  duplicates: One official address may appear only once in the prioritized output.
+  privacy: Store no raw private message body, subject, snippet, message ID, or thread ID.
