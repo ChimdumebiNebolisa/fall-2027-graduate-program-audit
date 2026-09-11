@@ -2,28 +2,28 @@
   "manifest_version": "1.0",
   "schema_version": "2.0",
   "stage": 3,
-  "run_type": "verification_reentry_17",
-  "name": "Program structure, eligibility, and funding verification — re-entry 17",
+  "run_type": "verification_reentry_18",
+  "name": "Program structure, eligibility, and funding verification — re-entry 18",
   "status": "complete",
   "decision": "PASS",
   "triggered_by_stage": 2,
-  "source_commit_before_stage": "4bd62597327810a6816d5b500e42c9457a9bba16",
-  "started_at": "2026-09-11T15:07:13.775698+00:00",
-  "completed_at": "2026-09-11T15:07:33.172231+00:00",
+  "source_commit_before_stage": "1a7d1c3223e179fb470fc5faa04e247937a3ff71",
+  "started_at": "2026-09-11T16:00:51.734936+00:00",
+  "completed_at": "2026-09-11T16:01:11.845366+00:00",
   "inputs": [
     {
       "path": "data/manifests/pass2/stage_02.json",
-      "sha256": "793e00cab332652d101943fbd0bb7838b3dddc3ca0a2f228d9e58b6a7a549667",
-      "bytes": 21166,
-      "modified_at": "2026-09-11T14:42:45.481856+00:00",
+      "sha256": "481424677d1388f694d3aff835d7182e59f182f842024ca27cec408397778c95",
+      "bytes": 21694,
+      "modified_at": "2026-09-11T15:46:53.790505+00:00",
       "row_count": null
     },
     {
       "path": "data/processed/pass2/candidate_program_funnel.csv",
-      "sha256": "e81decdaf889593de6560cf57191119bbc130f46d4b17c93965e3a06145977dd",
-      "bytes": 2632969,
-      "modified_at": "2026-09-11T14:42:44.669325+00:00",
-      "row_count": 2169
+      "sha256": "e7fc47618b0c10d672d127c0805ff459c5068991564ea3b1ec077279cd728574",
+      "bytes": 2654580,
+      "modified_at": "2026-09-11T15:46:53.038453+00:00",
+      "row_count": 2181
     },
     {
       "path": "data/raw/pass2/stage_03_reentry_01.json",
@@ -143,273 +143,294 @@
       "bytes": 72746,
       "modified_at": "2026-09-11T15:05:06.071402+00:00",
       "row_count": null
+    },
+    {
+      "path": "data/raw/pass2/stage_03_reentry_18.json",
+      "sha256": "0e8cfec030d7640e8d590b052fe9e22656f41190911bce5fb41d51aab3910ebb",
+      "bytes": 63486,
+      "modified_at": "2026-09-11T15:55:09.848565+00:00",
+      "row_count": null
     }
   ],
   "outputs": [
     {
       "path": "data/processed/pass2/program_verification.csv",
-      "sha256": "22fb0e913c5c5a2f1e02226ff292bb2b04435c4e6229d63664edd17cb1428b21",
-      "bytes": 4773048,
-      "modified_at": "2026-09-11T15:07:31.655357+00:00",
-      "row_count": 2169
+      "sha256": "92ebf587dc1ce3b5d629d63acc7c6b968a68687bea6e805d2ec7c54b38c9f121",
+      "bytes": 4808857,
+      "modified_at": "2026-09-11T16:01:10.334399+00:00",
+      "row_count": 2181
     },
     {
       "path": "data/processed/pass2/program_sources.csv",
-      "sha256": "189b09e9528647618b40781f7d413e28f6cf1cbae354e740c2ed3e36eaa1d08f",
-      "bytes": 1770645,
-      "modified_at": "2026-09-11T15:07:31.782227+00:00",
-      "row_count": 2735
+      "sha256": "ea5cfad38dfc8e9b0863b421d0a36b9b70e0c5abb1c04ebc5c4ea339c8f6e22f",
+      "bytes": 1786399,
+      "modified_at": "2026-09-11T16:01:10.481816+00:00",
+      "row_count": 2759
     },
     {
       "path": "data/processed/pass2/program_exclusions.csv",
       "sha256": "a99b76e6a18a0ce256037cfca4fdf2ee0a2d9d30e35799b83232c148afaa39fc",
       "bytes": 1127300,
-      "modified_at": "2026-09-11T15:07:31.862326+00:00",
+      "modified_at": "2026-09-11T16:01:10.562711+00:00",
       "row_count": 1628
     },
     {
       "path": "data/processed/pass2/stage_03_reentry_verification.csv",
       "sha256": "bef8e54a26c7ccb0ccf66c3541d0a48d87917bef222081cdcdf74ec877482726",
       "bytes": 38602,
-      "modified_at": "2026-09-11T15:07:31.872433+00:00",
+      "modified_at": "2026-09-11T16:01:10.572978+00:00",
       "row_count": 12
     },
     {
       "path": "data/processed/pass2/stage_03_reentry_sources.csv",
       "sha256": "cc68e7c06288ae2a1c724f3cf1a9c0558924ec94b3cb1c09f5a4a85772a8e1fe",
       "bytes": 26495,
-      "modified_at": "2026-09-11T15:07:31.883129+00:00",
+      "modified_at": "2026-09-11T16:01:10.580126+00:00",
       "row_count": 44
     },
     {
       "path": "data/processed/pass2/stage_03_reentry_02_verification.csv",
       "sha256": "d27f27994e1c6a16e3d7a1a9f292e2022b0d959553436f0dcae793a169622faf",
       "bytes": 48150,
-      "modified_at": "2026-09-11T15:07:31.894468+00:00",
+      "modified_at": "2026-09-11T16:01:10.586729+00:00",
       "row_count": 12
     },
     {
       "path": "data/processed/pass2/stage_03_reentry_02_sources.csv",
       "sha256": "31c0987481fd27a06b376d1f8864b80b0840b32119a1ae061d917e618c1c74f8",
       "bytes": 30858,
-      "modified_at": "2026-09-11T15:07:31.901545+00:00",
+      "modified_at": "2026-09-11T16:01:10.593414+00:00",
       "row_count": 51
     },
     {
       "path": "data/processed/pass2/stage_03_reentry_03_verification.csv",
       "sha256": "4e973c92c8d7ca8b55e3c0c84a085020f4660b01d82e4ddb41a5c845fcc8e664",
       "bytes": 38423,
-      "modified_at": "2026-09-11T15:07:31.913305+00:00",
+      "modified_at": "2026-09-11T16:01:10.604523+00:00",
       "row_count": 12
     },
     {
       "path": "data/processed/pass2/stage_03_reentry_03_sources.csv",
       "sha256": "7c07556a378464c9d0d4df3460fb6a5c651c8fd3634d949d78372b0544b84471",
       "bytes": 23021,
-      "modified_at": "2026-09-11T15:07:31.922090+00:00",
+      "modified_at": "2026-09-11T16:01:10.614598+00:00",
       "row_count": 40
     },
     {
       "path": "data/processed/pass2/stage_03_reentry_04_verification.csv",
       "sha256": "6ab92788d5b865bc51eea81c57b6fd0029d815a5711ff9a842bd87f77780a5d0",
       "bytes": 40136,
-      "modified_at": "2026-09-11T15:07:31.933953+00:00",
+      "modified_at": "2026-09-11T16:01:10.621574+00:00",
       "row_count": 12
     },
     {
       "path": "data/processed/pass2/stage_03_reentry_04_sources.csv",
       "sha256": "9fe17044551417407b39d5bee7b465e453d8f9dfa79a65173b250af7220464df",
       "bytes": 22952,
-      "modified_at": "2026-09-11T15:07:31.943806+00:00",
+      "modified_at": "2026-09-11T16:01:10.627425+00:00",
       "row_count": 38
     },
     {
       "path": "data/processed/pass2/stage_03_reentry_05_verification.csv",
       "sha256": "c78d5abb376e6214dbae31db1d4d986e51edc7c31345df975037a2d02351d1cd",
       "bytes": 42512,
-      "modified_at": "2026-09-11T15:07:31.953500+00:00",
+      "modified_at": "2026-09-11T16:01:10.636701+00:00",
       "row_count": 12
     },
     {
       "path": "data/processed/pass2/stage_03_reentry_05_sources.csv",
       "sha256": "0ab37febf0e308264c330c7c80e64e15a8bfcd6471482b7b4262abbc3cfeae1f",
       "bytes": 28427,
-      "modified_at": "2026-09-11T15:07:31.961128+00:00",
+      "modified_at": "2026-09-11T16:01:10.643564+00:00",
       "row_count": 45
     },
     {
       "path": "data/processed/pass2/stage_03_reentry_06_verification.csv",
       "sha256": "727266ab80464a6c3118bbee85f37a63b2eec48a274bbd32e14f84ca5c33e033",
       "bytes": 47803,
-      "modified_at": "2026-09-11T15:07:31.972279+00:00",
+      "modified_at": "2026-09-11T16:01:10.652420+00:00",
       "row_count": 12
     },
     {
       "path": "data/processed/pass2/stage_03_reentry_06_sources.csv",
       "sha256": "ba8f55d4c8de7757889f73261e4f9b648f16b1bd805789e6cdaf7c9cdce7f80f",
       "bytes": 26155,
-      "modified_at": "2026-09-11T15:07:31.982414+00:00",
+      "modified_at": "2026-09-11T16:01:10.657553+00:00",
       "row_count": 37
     },
     {
       "path": "data/processed/pass2/stage_03_reentry_07_verification.csv",
       "sha256": "f76bd1ebb820a75c66ec550668317a3f48909c98c7e4f1c659faa4595d64ccf1",
       "bytes": 44492,
-      "modified_at": "2026-09-11T15:07:31.993100+00:00",
+      "modified_at": "2026-09-11T16:01:10.667253+00:00",
       "row_count": 12
     },
     {
       "path": "data/processed/pass2/stage_03_reentry_07_sources.csv",
       "sha256": "77661d39fac5aa4534637969b9f2efa355b5efcde1d5d68622da17e2c050e028",
       "bytes": 20860,
-      "modified_at": "2026-09-11T15:07:32.001348+00:00",
+      "modified_at": "2026-09-11T16:01:10.678286+00:00",
       "row_count": 31
     },
     {
       "path": "data/processed/pass2/stage_03_reentry_08_verification.csv",
       "sha256": "3b52d935f7966a6e6e9f9343d9db1afa9fe862caaea03892df3963ea56842de3",
       "bytes": 46357,
-      "modified_at": "2026-09-11T15:07:32.011852+00:00",
+      "modified_at": "2026-09-11T16:01:10.687465+00:00",
       "row_count": 12
     },
     {
       "path": "data/processed/pass2/stage_03_reentry_08_sources.csv",
       "sha256": "71b0e6a9379b6db81cdc3e9ba268f0865627365f74f3947fcfa028d84c16c03c",
       "bytes": 24415,
-      "modified_at": "2026-09-11T15:07:32.021313+00:00",
+      "modified_at": "2026-09-11T16:01:10.692679+00:00",
       "row_count": 37
     },
     {
       "path": "data/processed/pass2/stage_03_reentry_09_verification.csv",
       "sha256": "20b8776c46163ef45bf1ec4771ae93cc5f1781990a93cc273e0a1436bffc551a",
       "bytes": 47340,
-      "modified_at": "2026-09-11T15:07:32.031721+00:00",
+      "modified_at": "2026-09-11T16:01:10.706031+00:00",
       "row_count": 12
     },
     {
       "path": "data/processed/pass2/stage_03_reentry_09_sources.csv",
       "sha256": "3b9f93994dd582dfa2b055d028a75f976614cfdb4491bad5d43de193f2d2c0c7",
       "bytes": 25157,
-      "modified_at": "2026-09-11T15:07:32.041790+00:00",
+      "modified_at": "2026-09-11T16:01:10.715137+00:00",
       "row_count": 42
     },
     {
       "path": "data/processed/pass2/stage_03_reentry_10_verification.csv",
       "sha256": "e353e2ac15636e09cc5f248c23e50598337c9d67787d49ab12dee88cce380cbe",
       "bytes": 45797,
-      "modified_at": "2026-09-11T15:07:32.050821+00:00",
+      "modified_at": "2026-09-11T16:01:10.722686+00:00",
       "row_count": 12
     },
     {
       "path": "data/processed/pass2/stage_03_reentry_10_sources.csv",
       "sha256": "5ee779d909181a018ad0277811240c83e285e60613ec9124a6482981bf670811",
       "bytes": 23620,
-      "modified_at": "2026-09-11T15:07:32.060441+00:00",
+      "modified_at": "2026-09-11T16:01:10.730933+00:00",
       "row_count": 39
     },
     {
       "path": "data/processed/pass2/stage_03_reentry_11_verification.csv",
       "sha256": "2785df07a3bc91cc49aa4a7234891235c9ab6ec8fcf58e1275f01d6000e8862b",
       "bytes": 45089,
-      "modified_at": "2026-09-11T15:07:32.070747+00:00",
+      "modified_at": "2026-09-11T16:01:10.742460+00:00",
       "row_count": 12
     },
     {
       "path": "data/processed/pass2/stage_03_reentry_11_sources.csv",
       "sha256": "2f2784713367479f08d11f5406ed31b58f4ada604b435fee80680ea5e3860e5d",
       "bytes": 25916,
-      "modified_at": "2026-09-11T15:07:32.080224+00:00",
+      "modified_at": "2026-09-11T16:01:10.750499+00:00",
       "row_count": 43
     },
     {
       "path": "data/processed/pass2/stage_03_reentry_12_verification.csv",
       "sha256": "ac938be7d248f3ee1753d6249a0900fcbec0192f614b71acad4592e91e049a4b",
       "bytes": 43103,
-      "modified_at": "2026-09-11T15:07:32.089497+00:00",
+      "modified_at": "2026-09-11T16:01:10.758421+00:00",
       "row_count": 12
     },
     {
       "path": "data/processed/pass2/stage_03_reentry_12_sources.csv",
       "sha256": "f762e46c834fb4f0391c382b828ced62c26e572b995867ea8c66d5a89c721910",
       "bytes": 21812,
-      "modified_at": "2026-09-11T15:07:32.098357+00:00",
+      "modified_at": "2026-09-11T16:01:10.766027+00:00",
       "row_count": 36
     },
     {
       "path": "data/processed/pass2/stage_03_reentry_13_verification.csv",
       "sha256": "2faa0cdba3fa7a150b71cb18fb19ddef4c3afd7aca87d2011eceedd2eaa1a22b",
       "bytes": 48678,
-      "modified_at": "2026-09-11T15:07:32.108420+00:00",
+      "modified_at": "2026-09-11T16:01:10.775834+00:00",
       "row_count": 12
     },
     {
       "path": "data/processed/pass2/stage_03_reentry_13_sources.csv",
       "sha256": "0364c4f62efd6c6727a15c8087b619b31ef916698c61d19686ead8147f759352",
       "bytes": 23202,
-      "modified_at": "2026-09-11T15:07:32.115534+00:00",
+      "modified_at": "2026-09-11T16:01:10.784227+00:00",
       "row_count": 36
     },
     {
       "path": "data/processed/pass2/stage_03_reentry_14_verification.csv",
       "sha256": "4fc65de218b9fe9ed8e412d07af7459711ff3f84749bf6071c3ed70dd836983c",
       "bytes": 40715,
-      "modified_at": "2026-09-11T15:07:32.126163+00:00",
+      "modified_at": "2026-09-11T16:01:10.794564+00:00",
       "row_count": 12
     },
     {
       "path": "data/processed/pass2/stage_03_reentry_14_sources.csv",
       "sha256": "082f947e1580f737f3a975ad065a692348050ffd53be33864825454e3358e7f3",
       "bytes": 23951,
-      "modified_at": "2026-09-11T15:07:32.134975+00:00",
+      "modified_at": "2026-09-11T16:01:10.804199+00:00",
       "row_count": 37
     },
     {
       "path": "data/processed/pass2/stage_03_reentry_15_verification.csv",
       "sha256": "89a87ddb15007a910a7a4b43100c97a2e51b47da034f955c7eabcc86eba1feee",
       "bytes": 40161,
-      "modified_at": "2026-09-11T15:07:32.146352+00:00",
+      "modified_at": "2026-09-11T16:01:10.813254+00:00",
       "row_count": 12
     },
     {
       "path": "data/processed/pass2/stage_03_reentry_15_sources.csv",
       "sha256": "99a53ae874a0c8ca2e89ec66cd49ac29e6159c2788236286590bd6795b20f9e8",
       "bytes": 16265,
-      "modified_at": "2026-09-11T15:07:32.155301+00:00",
+      "modified_at": "2026-09-11T16:01:10.821155+00:00",
       "row_count": 24
     },
     {
       "path": "data/processed/pass2/stage_03_reentry_16_verification.csv",
       "sha256": "cbb2ed35b7a02034f7963efa1699905e45db719b93b4476fac04763e679d633d",
       "bytes": 42824,
-      "modified_at": "2026-09-11T15:07:32.162100+00:00",
+      "modified_at": "2026-09-11T16:01:10.831121+00:00",
       "row_count": 12
     },
     {
       "path": "data/processed/pass2/stage_03_reentry_16_sources.csv",
       "sha256": "b5afd8b5fd69c4f8fa36aa073273aeaede6bb641a057cb89945f79705d5a84cf",
       "bytes": 24659,
-      "modified_at": "2026-09-11T15:07:32.171876+00:00",
+      "modified_at": "2026-09-11T16:01:10.840365+00:00",
       "row_count": 36
     },
     {
       "path": "data/processed/pass2/stage_03_reentry_17_verification.csv",
       "sha256": "469e7b74e202462d6e84f46280dce8d77bf09db2211324017d3369c422d0751f",
       "bytes": 41079,
-      "modified_at": "2026-09-11T15:07:32.182957+00:00",
+      "modified_at": "2026-09-11T16:01:10.849823+00:00",
       "row_count": 12
     },
     {
       "path": "data/processed/pass2/stage_03_reentry_17_sources.csv",
       "sha256": "ade63fbdfb9f5b13c14947a32782d7d36437741468605c76b6dce460506946b3",
       "bytes": 26838,
-      "modified_at": "2026-09-11T15:07:32.192182+00:00",
+      "modified_at": "2026-09-11T16:01:10.856347+00:00",
       "row_count": 42
     },
     {
+      "path": "data/processed/pass2/stage_03_reentry_18_verification.csv",
+      "sha256": "825aa510385d38d72c5151de957df3e8386c0a89102480f36372dd500e3398cf",
+      "bytes": 37015,
+      "modified_at": "2026-09-11T16:01:10.864687+00:00",
+      "row_count": 12
+    },
+    {
+      "path": "data/processed/pass2/stage_03_reentry_18_sources.csv",
+      "sha256": "b5b61d10803062077a08ccfa60d67dbdc6ad6cd90811df63734033ff892e66e6",
+      "bytes": 16048,
+      "modified_at": "2026-09-11T16:01:10.873016+00:00",
+      "row_count": 24
+    },
+    {
       "path": "reports/pass2/03_program_verification.md",
-      "sha256": "3ce5dd6de571dad750a3f6d10d71fc9cd9b03b85378081c3103447083c799f2c",
-      "bytes": 8316,
-      "modified_at": "2026-09-11T15:07:33.159646+00:00",
+      "sha256": "6a1873cff791e38a2c9217405a57d2298261ccac33a66ff9e2108c27f8435613",
+      "bytes": 8625,
+      "modified_at": "2026-09-11T16:01:11.831945+00:00",
       "row_count": null
     }
   ],
@@ -534,6 +555,13 @@
       "row_count": null
     },
     {
+      "path": "data/raw/pass2/stage_03_reentry_18.json",
+      "sha256": "0e8cfec030d7640e8d590b052fe9e22656f41190911bce5fb41d51aab3910ebb",
+      "bytes": 63486,
+      "modified_at": "2026-09-11T15:55:09.848565+00:00",
+      "row_count": null
+    },
+    {
       "path": "src/graduate_audit/program_reentry.py",
       "sha256": "d85993ca2dd509b93587a263d9e78e954e8e4677900df9a91bacdec9d22617fb",
       "bytes": 15898,
@@ -542,289 +570,303 @@
     },
     {
       "path": "scripts/build_stage_03_reentry.py",
-      "sha256": "7266911767067952d2bf3bd86a222f3bd6a13140ea46d1ab6fe77d6d050fc271",
-      "bytes": 27475,
-      "modified_at": "2026-09-11T15:04:12.913536+00:00",
+      "sha256": "a4bc70ebc0a5a96fae07dbe2f697029f6651ad6a9ffef00ebe30afc90a06d150",
+      "bytes": 28348,
+      "modified_at": "2026-09-11T16:00:40.997306+00:00",
       "row_count": null
     },
     {
       "path": "tests/test_program_reentry.py",
-      "sha256": "ee2f8e2ffee47c6f5dee1b0a25e810e0880d3e240e418c31ad5913be68767c14",
-      "bytes": 7317,
-      "modified_at": "2026-09-11T15:05:06.076942+00:00",
+      "sha256": "dbf0f72cc193c39c5fb60aaceeb4e8be4e19d4d596427dedfb5faaed9df35148",
+      "bytes": 7724,
+      "modified_at": "2026-09-11T15:58:33.540237+00:00",
       "row_count": null
     },
     {
       "path": "state/progress.json",
-      "sha256": "37021e38e89eabf31fc00b9e59a49b06b25cf688e47d85bc56728d4ff04af6e6",
-      "bytes": 6448,
-      "modified_at": "2026-09-11T15:07:33.169714+00:00",
+      "sha256": "47d5625e444721718114f1e30ecf9dd1f845b7c76eac5120964944dec246c47e",
+      "bytes": 6617,
+      "modified_at": "2026-09-11T16:01:11.843642+00:00",
       "row_count": null
     },
     {
       "path": "data/processed/pass2/program_verification.csv",
-      "sha256": "22fb0e913c5c5a2f1e02226ff292bb2b04435c4e6229d63664edd17cb1428b21",
-      "bytes": 4773048,
-      "modified_at": "2026-09-11T15:07:31.655357+00:00",
-      "row_count": 2169
+      "sha256": "92ebf587dc1ce3b5d629d63acc7c6b968a68687bea6e805d2ec7c54b38c9f121",
+      "bytes": 4808857,
+      "modified_at": "2026-09-11T16:01:10.334399+00:00",
+      "row_count": 2181
     },
     {
       "path": "data/processed/pass2/program_sources.csv",
-      "sha256": "189b09e9528647618b40781f7d413e28f6cf1cbae354e740c2ed3e36eaa1d08f",
-      "bytes": 1770645,
-      "modified_at": "2026-09-11T15:07:31.782227+00:00",
-      "row_count": 2735
+      "sha256": "ea5cfad38dfc8e9b0863b421d0a36b9b70e0c5abb1c04ebc5c4ea339c8f6e22f",
+      "bytes": 1786399,
+      "modified_at": "2026-09-11T16:01:10.481816+00:00",
+      "row_count": 2759
     },
     {
       "path": "data/processed/pass2/program_exclusions.csv",
       "sha256": "a99b76e6a18a0ce256037cfca4fdf2ee0a2d9d30e35799b83232c148afaa39fc",
       "bytes": 1127300,
-      "modified_at": "2026-09-11T15:07:31.862326+00:00",
+      "modified_at": "2026-09-11T16:01:10.562711+00:00",
       "row_count": 1628
     },
     {
       "path": "data/processed/pass2/stage_03_reentry_verification.csv",
       "sha256": "bef8e54a26c7ccb0ccf66c3541d0a48d87917bef222081cdcdf74ec877482726",
       "bytes": 38602,
-      "modified_at": "2026-09-11T15:07:31.872433+00:00",
+      "modified_at": "2026-09-11T16:01:10.572978+00:00",
       "row_count": 12
     },
     {
       "path": "data/processed/pass2/stage_03_reentry_sources.csv",
       "sha256": "cc68e7c06288ae2a1c724f3cf1a9c0558924ec94b3cb1c09f5a4a85772a8e1fe",
       "bytes": 26495,
-      "modified_at": "2026-09-11T15:07:31.883129+00:00",
+      "modified_at": "2026-09-11T16:01:10.580126+00:00",
       "row_count": 44
     },
     {
       "path": "data/processed/pass2/stage_03_reentry_02_verification.csv",
       "sha256": "d27f27994e1c6a16e3d7a1a9f292e2022b0d959553436f0dcae793a169622faf",
       "bytes": 48150,
-      "modified_at": "2026-09-11T15:07:31.894468+00:00",
+      "modified_at": "2026-09-11T16:01:10.586729+00:00",
       "row_count": 12
     },
     {
       "path": "data/processed/pass2/stage_03_reentry_02_sources.csv",
       "sha256": "31c0987481fd27a06b376d1f8864b80b0840b32119a1ae061d917e618c1c74f8",
       "bytes": 30858,
-      "modified_at": "2026-09-11T15:07:31.901545+00:00",
+      "modified_at": "2026-09-11T16:01:10.593414+00:00",
       "row_count": 51
     },
     {
       "path": "data/processed/pass2/stage_03_reentry_03_verification.csv",
       "sha256": "4e973c92c8d7ca8b55e3c0c84a085020f4660b01d82e4ddb41a5c845fcc8e664",
       "bytes": 38423,
-      "modified_at": "2026-09-11T15:07:31.913305+00:00",
+      "modified_at": "2026-09-11T16:01:10.604523+00:00",
       "row_count": 12
     },
     {
       "path": "data/processed/pass2/stage_03_reentry_03_sources.csv",
       "sha256": "7c07556a378464c9d0d4df3460fb6a5c651c8fd3634d949d78372b0544b84471",
       "bytes": 23021,
-      "modified_at": "2026-09-11T15:07:31.922090+00:00",
+      "modified_at": "2026-09-11T16:01:10.614598+00:00",
       "row_count": 40
     },
     {
       "path": "data/processed/pass2/stage_03_reentry_04_verification.csv",
       "sha256": "6ab92788d5b865bc51eea81c57b6fd0029d815a5711ff9a842bd87f77780a5d0",
       "bytes": 40136,
-      "modified_at": "2026-09-11T15:07:31.933953+00:00",
+      "modified_at": "2026-09-11T16:01:10.621574+00:00",
       "row_count": 12
     },
     {
       "path": "data/processed/pass2/stage_03_reentry_04_sources.csv",
       "sha256": "9fe17044551417407b39d5bee7b465e453d8f9dfa79a65173b250af7220464df",
       "bytes": 22952,
-      "modified_at": "2026-09-11T15:07:31.943806+00:00",
+      "modified_at": "2026-09-11T16:01:10.627425+00:00",
       "row_count": 38
     },
     {
       "path": "data/processed/pass2/stage_03_reentry_05_verification.csv",
       "sha256": "c78d5abb376e6214dbae31db1d4d986e51edc7c31345df975037a2d02351d1cd",
       "bytes": 42512,
-      "modified_at": "2026-09-11T15:07:31.953500+00:00",
+      "modified_at": "2026-09-11T16:01:10.636701+00:00",
       "row_count": 12
     },
     {
       "path": "data/processed/pass2/stage_03_reentry_05_sources.csv",
       "sha256": "0ab37febf0e308264c330c7c80e64e15a8bfcd6471482b7b4262abbc3cfeae1f",
       "bytes": 28427,
-      "modified_at": "2026-09-11T15:07:31.961128+00:00",
+      "modified_at": "2026-09-11T16:01:10.643564+00:00",
       "row_count": 45
     },
     {
       "path": "data/processed/pass2/stage_03_reentry_06_verification.csv",
       "sha256": "727266ab80464a6c3118bbee85f37a63b2eec48a274bbd32e14f84ca5c33e033",
       "bytes": 47803,
-      "modified_at": "2026-09-11T15:07:31.972279+00:00",
+      "modified_at": "2026-09-11T16:01:10.652420+00:00",
       "row_count": 12
     },
     {
       "path": "data/processed/pass2/stage_03_reentry_06_sources.csv",
       "sha256": "ba8f55d4c8de7757889f73261e4f9b648f16b1bd805789e6cdaf7c9cdce7f80f",
       "bytes": 26155,
-      "modified_at": "2026-09-11T15:07:31.982414+00:00",
+      "modified_at": "2026-09-11T16:01:10.657553+00:00",
       "row_count": 37
     },
     {
       "path": "data/processed/pass2/stage_03_reentry_07_verification.csv",
       "sha256": "f76bd1ebb820a75c66ec550668317a3f48909c98c7e4f1c659faa4595d64ccf1",
       "bytes": 44492,
-      "modified_at": "2026-09-11T15:07:31.993100+00:00",
+      "modified_at": "2026-09-11T16:01:10.667253+00:00",
       "row_count": 12
     },
     {
       "path": "data/processed/pass2/stage_03_reentry_07_sources.csv",
       "sha256": "77661d39fac5aa4534637969b9f2efa355b5efcde1d5d68622da17e2c050e028",
       "bytes": 20860,
-      "modified_at": "2026-09-11T15:07:32.001348+00:00",
+      "modified_at": "2026-09-11T16:01:10.678286+00:00",
       "row_count": 31
     },
     {
       "path": "data/processed/pass2/stage_03_reentry_08_verification.csv",
       "sha256": "3b52d935f7966a6e6e9f9343d9db1afa9fe862caaea03892df3963ea56842de3",
       "bytes": 46357,
-      "modified_at": "2026-09-11T15:07:32.011852+00:00",
+      "modified_at": "2026-09-11T16:01:10.687465+00:00",
       "row_count": 12
     },
     {
       "path": "data/processed/pass2/stage_03_reentry_08_sources.csv",
       "sha256": "71b0e6a9379b6db81cdc3e9ba268f0865627365f74f3947fcfa028d84c16c03c",
       "bytes": 24415,
-      "modified_at": "2026-09-11T15:07:32.021313+00:00",
+      "modified_at": "2026-09-11T16:01:10.692679+00:00",
       "row_count": 37
     },
     {
       "path": "data/processed/pass2/stage_03_reentry_09_verification.csv",
       "sha256": "20b8776c46163ef45bf1ec4771ae93cc5f1781990a93cc273e0a1436bffc551a",
       "bytes": 47340,
-      "modified_at": "2026-09-11T15:07:32.031721+00:00",
+      "modified_at": "2026-09-11T16:01:10.706031+00:00",
       "row_count": 12
     },
     {
       "path": "data/processed/pass2/stage_03_reentry_09_sources.csv",
       "sha256": "3b9f93994dd582dfa2b055d028a75f976614cfdb4491bad5d43de193f2d2c0c7",
       "bytes": 25157,
-      "modified_at": "2026-09-11T15:07:32.041790+00:00",
+      "modified_at": "2026-09-11T16:01:10.715137+00:00",
       "row_count": 42
     },
     {
       "path": "data/processed/pass2/stage_03_reentry_10_verification.csv",
       "sha256": "e353e2ac15636e09cc5f248c23e50598337c9d67787d49ab12dee88cce380cbe",
       "bytes": 45797,
-      "modified_at": "2026-09-11T15:07:32.050821+00:00",
+      "modified_at": "2026-09-11T16:01:10.722686+00:00",
       "row_count": 12
     },
     {
       "path": "data/processed/pass2/stage_03_reentry_10_sources.csv",
       "sha256": "5ee779d909181a018ad0277811240c83e285e60613ec9124a6482981bf670811",
       "bytes": 23620,
-      "modified_at": "2026-09-11T15:07:32.060441+00:00",
+      "modified_at": "2026-09-11T16:01:10.730933+00:00",
       "row_count": 39
     },
     {
       "path": "data/processed/pass2/stage_03_reentry_11_verification.csv",
       "sha256": "2785df07a3bc91cc49aa4a7234891235c9ab6ec8fcf58e1275f01d6000e8862b",
       "bytes": 45089,
-      "modified_at": "2026-09-11T15:07:32.070747+00:00",
+      "modified_at": "2026-09-11T16:01:10.742460+00:00",
       "row_count": 12
     },
     {
       "path": "data/processed/pass2/stage_03_reentry_11_sources.csv",
       "sha256": "2f2784713367479f08d11f5406ed31b58f4ada604b435fee80680ea5e3860e5d",
       "bytes": 25916,
-      "modified_at": "2026-09-11T15:07:32.080224+00:00",
+      "modified_at": "2026-09-11T16:01:10.750499+00:00",
       "row_count": 43
     },
     {
       "path": "data/processed/pass2/stage_03_reentry_12_verification.csv",
       "sha256": "ac938be7d248f3ee1753d6249a0900fcbec0192f614b71acad4592e91e049a4b",
       "bytes": 43103,
-      "modified_at": "2026-09-11T15:07:32.089497+00:00",
+      "modified_at": "2026-09-11T16:01:10.758421+00:00",
       "row_count": 12
     },
     {
       "path": "data/processed/pass2/stage_03_reentry_12_sources.csv",
       "sha256": "f762e46c834fb4f0391c382b828ced62c26e572b995867ea8c66d5a89c721910",
       "bytes": 21812,
-      "modified_at": "2026-09-11T15:07:32.098357+00:00",
+      "modified_at": "2026-09-11T16:01:10.766027+00:00",
       "row_count": 36
     },
     {
       "path": "data/processed/pass2/stage_03_reentry_13_verification.csv",
       "sha256": "2faa0cdba3fa7a150b71cb18fb19ddef4c3afd7aca87d2011eceedd2eaa1a22b",
       "bytes": 48678,
-      "modified_at": "2026-09-11T15:07:32.108420+00:00",
+      "modified_at": "2026-09-11T16:01:10.775834+00:00",
       "row_count": 12
     },
     {
       "path": "data/processed/pass2/stage_03_reentry_13_sources.csv",
       "sha256": "0364c4f62efd6c6727a15c8087b619b31ef916698c61d19686ead8147f759352",
       "bytes": 23202,
-      "modified_at": "2026-09-11T15:07:32.115534+00:00",
+      "modified_at": "2026-09-11T16:01:10.784227+00:00",
       "row_count": 36
     },
     {
       "path": "data/processed/pass2/stage_03_reentry_14_verification.csv",
       "sha256": "4fc65de218b9fe9ed8e412d07af7459711ff3f84749bf6071c3ed70dd836983c",
       "bytes": 40715,
-      "modified_at": "2026-09-11T15:07:32.126163+00:00",
+      "modified_at": "2026-09-11T16:01:10.794564+00:00",
       "row_count": 12
     },
     {
       "path": "data/processed/pass2/stage_03_reentry_14_sources.csv",
       "sha256": "082f947e1580f737f3a975ad065a692348050ffd53be33864825454e3358e7f3",
       "bytes": 23951,
-      "modified_at": "2026-09-11T15:07:32.134975+00:00",
+      "modified_at": "2026-09-11T16:01:10.804199+00:00",
       "row_count": 37
     },
     {
       "path": "data/processed/pass2/stage_03_reentry_15_verification.csv",
       "sha256": "89a87ddb15007a910a7a4b43100c97a2e51b47da034f955c7eabcc86eba1feee",
       "bytes": 40161,
-      "modified_at": "2026-09-11T15:07:32.146352+00:00",
+      "modified_at": "2026-09-11T16:01:10.813254+00:00",
       "row_count": 12
     },
     {
       "path": "data/processed/pass2/stage_03_reentry_15_sources.csv",
       "sha256": "99a53ae874a0c8ca2e89ec66cd49ac29e6159c2788236286590bd6795b20f9e8",
       "bytes": 16265,
-      "modified_at": "2026-09-11T15:07:32.155301+00:00",
+      "modified_at": "2026-09-11T16:01:10.821155+00:00",
       "row_count": 24
     },
     {
       "path": "data/processed/pass2/stage_03_reentry_16_verification.csv",
       "sha256": "cbb2ed35b7a02034f7963efa1699905e45db719b93b4476fac04763e679d633d",
       "bytes": 42824,
-      "modified_at": "2026-09-11T15:07:32.162100+00:00",
+      "modified_at": "2026-09-11T16:01:10.831121+00:00",
       "row_count": 12
     },
     {
       "path": "data/processed/pass2/stage_03_reentry_16_sources.csv",
       "sha256": "b5afd8b5fd69c4f8fa36aa073273aeaede6bb641a057cb89945f79705d5a84cf",
       "bytes": 24659,
-      "modified_at": "2026-09-11T15:07:32.171876+00:00",
+      "modified_at": "2026-09-11T16:01:10.840365+00:00",
       "row_count": 36
     },
     {
       "path": "data/processed/pass2/stage_03_reentry_17_verification.csv",
       "sha256": "469e7b74e202462d6e84f46280dce8d77bf09db2211324017d3369c422d0751f",
       "bytes": 41079,
-      "modified_at": "2026-09-11T15:07:32.182957+00:00",
+      "modified_at": "2026-09-11T16:01:10.849823+00:00",
       "row_count": 12
     },
     {
       "path": "data/processed/pass2/stage_03_reentry_17_sources.csv",
       "sha256": "ade63fbdfb9f5b13c14947a32782d7d36437741468605c76b6dce460506946b3",
       "bytes": 26838,
-      "modified_at": "2026-09-11T15:07:32.192182+00:00",
+      "modified_at": "2026-09-11T16:01:10.856347+00:00",
       "row_count": 42
     },
     {
+      "path": "data/processed/pass2/stage_03_reentry_18_verification.csv",
+      "sha256": "825aa510385d38d72c5151de957df3e8386c0a89102480f36372dd500e3398cf",
+      "bytes": 37015,
+      "modified_at": "2026-09-11T16:01:10.864687+00:00",
+      "row_count": 12
+    },
+    {
+      "path": "data/processed/pass2/stage_03_reentry_18_sources.csv",
+      "sha256": "b5b61d10803062077a08ccfa60d67dbdc6ad6cd90811df63734033ff892e66e6",
+      "bytes": 16048,
+      "modified_at": "2026-09-11T16:01:10.873016+00:00",
+      "row_count": 24
+    },
+    {
       "path": "reports/pass2/03_program_verification.md",
-      "sha256": "3ce5dd6de571dad750a3f6d10d71fc9cd9b03b85378081c3103447083c799f2c",
-      "bytes": 8316,
-      "modified_at": "2026-09-11T15:07:33.159646+00:00",
+      "sha256": "6a1873cff791e38a2c9217405a57d2298261ccac33a66ff9e2108c27f8435613",
+      "bytes": 8625,
+      "modified_at": "2026-09-11T16:01:11.831945+00:00",
       "row_count": null
     }
   ],
@@ -856,16 +898,16 @@
     "conditional_positioning": "Outreach Before Decision",
     "stage_specific_tests": {
       "command": "python -m pytest tests/test_program_verification.py tests/test_program_reentry.py -q",
-      "result": "24 passed"
+      "result": "25 passed"
     },
     "current_round_source_retrieval": {
-      "checked": 42,
-      "http_200": 42,
+      "checked": 24,
+      "http_200": 24,
       "result": "all_retrievable"
     },
     "full_suite_boundary": {
       "command": "python -m pytest -q",
-      "result": "143 passed, 3 expected downstream coverage failures",
+      "result": "149 passed, 3 expected downstream coverage failures",
       "unresolved_stages": [
         4,
         5
@@ -873,26 +915,26 @@
     }
   },
   "counts": {
-    "candidate_rows": 2169,
-    "verification_rows": 2169,
-    "source_rows": 2735,
+    "candidate_rows": 2181,
+    "verification_rows": 2181,
+    "source_rows": 2759,
     "exclusion_rows": 1628,
-    "conditional": 108,
+    "conditional": 112,
     "excluded": 1628,
-    "monitor": 381,
-    "retained": 52,
-    "faculty_review_ready": 160,
-    "official_program_url_present": 297,
-    "funding_source_linked": 242,
-    "reentry_retained": 4,
-    "reentry_conditional": 5,
-    "reentry_monitor": 2,
-    "reentry_excluded": 1
+    "monitor": 387,
+    "retained": 54,
+    "faculty_review_ready": 166,
+    "official_program_url_present": 309,
+    "funding_source_linked": 254,
+    "reentry_retained": 2,
+    "reentry_conditional": 4,
+    "reentry_monitor": 6,
+    "reentry_excluded": 0
   },
   "failures": [],
   "blockers": [],
   "unresolved_coverage": [
-    "Five of the 12 latest routes remain conditional, two remain monitor, and one is excluded because one or more eligibility, cycle, or funding gates do not pass.",
+    "Four of the 12 latest routes remain conditional and six remain monitor because one or more eligibility, cycle, or funding gates do not pass.",
     "Simultaneous-application rules remain unverified for most new routes.",
     "Offer-specific net funding terms remain unknown where official pages publish only program-level commitments.",
     "Existing Stage 4 through Stage 6 outputs intentionally remain unchanged pending their separate re-entry stages.",
