@@ -1,0 +1,294 @@
+{
+  "trigger": "Stage 6 re-entry 10 returned to candidate discovery because the evidence-calibrated portfolio still had zero justified core applications.",
+  "scope": "A bounded eleventh non-saturation pass for exact, previously unverified research routes across the United States, Canada, and Europe; discovery evidence only, with no scoring, retention, eligibility, funding, or faculty-capacity decision.",
+  "candidates": [
+    {
+      "institution_id": "us:ipeds:196079",
+      "institution_name": "Binghamton University",
+      "country": "United States",
+      "region": "us",
+      "program_name": "PhD in Computer Science",
+      "degree_type": "PhD",
+      "relevant_degree_route": "Computer science research doctorate with advanced study, faculty-directed research, and dissertation",
+      "research_topic_clusters": ["software_quality", "distributed_systems", "systems_security"],
+      "exact_research_fit_signal": "The doctoral route covers software engineering, systems, security, and related computer-science research with faculty-directed dissertation work.",
+      "preliminary_international_eligibility": "Computer-science preparation is expected and the department commonly describes master's preparation or faculty support; direct entry, transcript mapping, and English evidence require Stage 3 review.",
+      "preliminary_funding_signal": "The department reports substantial teaching- and research-assistantship activity and university scholarship mechanisms, but no applicant-specific or universal award.",
+      "official_program_url": "https://www.binghamton.edu/apps/academics/program/gd/computer-science",
+      "official_institution_url": "https://www.binghamton.edu",
+      "seed_adjacency": ["TerraProbe-adjacent", "Evidex-adjacent"],
+      "unresolved_fields": ["Fall 2027 cycle", "direct-entry and degree-preparation rule", "transcript and prerequisite mapping", "English evidence", "assistantship award and duration", "fees and insurance", "current supervisor capacity"],
+      "evidence_confidence": "high",
+      "additional_discovery_paths": ["recognized_institution_record", "underrepresented_route_search"],
+      "sources": [
+        {"source_id": "reentry11:binghamton-cs:program", "discovery_path": "official_program_or_department_signal", "evidence_role": "exact doctorate, research areas, and preliminary support", "title": "Computer Science Graduate Program", "url": "https://www.binghamton.edu/apps/academics/program/gd/computer-science", "accessed_date": "2026-09-11", "evidence_summary": "Official program page confirms the Computer Science PhD, research including software engineering, and assistantship and scholarship mechanisms.", "limitations": "Program and support mechanisms do not establish direct-entry eligibility, admission, funding, or advisor capacity."},
+        {"source_id": "reentry11:binghamton-cs:graduate", "discovery_path": "research_masters_or_scholarship_search", "evidence_role": "departmental research and assistantship volume", "title": "Graduate Programs", "url": "https://www.binghamton.edu/computer-science/graduate-programs/", "accessed_date": "2026-09-11", "evidence_summary": "Official department page describes the CS PhD and a recurring pool of teaching and research assistantships considered during graduate admissions.", "limitations": "Historical assistantship volume is not a guarantee, and degree-preparation language requires applicant-specific interpretation."}
+      ]
+    },
+    {
+      "institution_id": "us:ipeds:160658",
+      "institution_name": "University of Louisiana at Lafayette",
+      "country": "United States",
+      "region": "us",
+      "program_name": "PhD in Applied Computing and Information Sciences",
+      "degree_type": "PhD",
+      "relevant_degree_route": "Interdisciplinary computing research doctorate with direct bachelor's entry, research specialization, and dissertation",
+      "research_topic_clusters": ["ai_for_se", "systems_security", "software_quality"],
+      "exact_research_fit_signal": "The program includes artificial intelligence, cybersecurity, human-centered systems, and applied computing research, with nearby software and trusted-computing laboratory signals.",
+      "preliminary_international_eligibility": "The official route allows 66 graduate credits beyond a bachelor's degree; transcript preparation, English evidence, and the Fall 2027 cycle require Stage 3 verification.",
+      "preliminary_funding_signal": "Competitive doctoral fellowships and assistantships can include stipends and tuition or fee benefits, but no award or complete net-cost package is established.",
+      "official_program_url": "https://louisiana.edu/graduateschool/majors-minors/applied-computing-and-information-sciences-phd",
+      "official_institution_url": "https://louisiana.edu",
+      "seed_adjacency": ["TerraProbe-adjacent", "Evidex-adjacent"],
+      "unresolved_fields": ["Fall 2027 cycle", "bachelor's preparation and transcript mapping", "English evidence", "fellowship or assistantship selection", "support duration and summer coverage", "remaining fees and insurance", "current supervisor capacity"],
+      "evidence_confidence": "high",
+      "additional_discovery_paths": ["recognized_institution_record", "underrepresented_route_search"],
+      "sources": [
+        {"source_id": "reentry11:ull-acis:program", "discovery_path": "official_program_or_department_signal", "evidence_role": "exact doctorate, direct entry, and research fit", "title": "Applied Computing and Information Sciences, Ph.D.", "url": "https://louisiana.edu/graduateschool/majors-minors/applied-computing-and-information-sciences-phd", "accessed_date": "2026-09-11", "evidence_summary": "Official Graduate School page confirms the PhD, 66-credit bachelor's-entry route, research areas, and available assistantship and fellowship mechanisms.", "limitations": "The page does not establish applicant admission, an award, or a current supervisor opening."},
+        {"source_id": "reentry11:ull-acis:fellowships", "discovery_path": "research_masters_or_scholarship_search", "evidence_role": "competitive doctoral fellowship benefits", "title": "Graduate Fellowships", "url": "https://louisiana.edu/graduateschool/admissions/tuition-funding/assistantships-fellowships/graduate-fellowships", "accessed_date": "2026-09-11", "evidence_summary": "Official Graduate School page describes competitive doctoral fellowships with stipends and tuition and most-fee waivers, including differing durations by entry route.", "limitations": "A fellowship is competitive, not guaranteed, and remaining fees, insurance, and summer support require verification."}
+      ]
+    },
+    {
+      "institution_id": "us:ipeds:180461",
+      "institution_name": "Montana State University",
+      "country": "United States",
+      "region": "us",
+      "program_name": "Computer Science PhD",
+      "degree_type": "PhD",
+      "relevant_degree_route": "Computer science research doctorate with advanced coursework, qualifying milestones, and dissertation",
+      "research_topic_clusters": ["software_quality", "ai_for_se", "distributed_systems"],
+      "exact_research_fit_signal": "The department's doctoral and graduate materials connect the route to software, artificial intelligence, systems, and laboratory research.",
+      "preliminary_international_eligibility": "Applicants may hold a bachelor's or master's degree in computer science or a related area and normally need a 3.30 recent-coursework GPA; transcript and English mapping remain unresolved.",
+      "preliminary_funding_signal": "Incoming PhD students are typically supported first through teaching and later research appointments, but appointment, renewal, and full net coverage are not guaranteed.",
+      "official_program_url": "https://www.cs.montana.edu/phd-degree.html",
+      "official_institution_url": "https://www.montana.edu",
+      "seed_adjacency": ["TerraProbe-adjacent", "Evidex-adjacent"],
+      "unresolved_fields": ["Fall 2027 cycle", "3.30 recent-coursework GPA calculation", "related-degree and prerequisite mapping", "English evidence", "assistantship offer and renewal", "fees, insurance, and summer coverage", "current supervisor capacity"],
+      "evidence_confidence": "high",
+      "additional_discovery_paths": ["recognized_institution_record", "official_program_or_department_signal"],
+      "sources": [
+        {"source_id": "reentry11:montana-cs:program", "discovery_path": "official_program_or_department_signal", "evidence_role": "exact doctorate and milestones", "title": "Computer Science PhD Degree", "url": "https://www.cs.montana.edu/phd-degree.html", "accessed_date": "2026-09-11", "evidence_summary": "Official department page confirms the Computer Science PhD and its coursework, research, milestone, and dissertation structure.", "limitations": "Program existence does not establish applicant eligibility, support, or advisor capacity."},
+        {"source_id": "reentry11:montana-cs:graduate", "discovery_path": "research_masters_or_scholarship_search", "evidence_role": "entry requirements and typical PhD support sequence", "title": "Graduate Program", "url": "https://www.cs.montana.edu/grad/", "accessed_date": "2026-09-11", "evidence_summary": "Official department graduate page describes bachelor's- or master's-level preparation and the typical teaching-then-research funding pattern for incoming PhD students.", "limitations": "Typical support is not a universal offer, and transcript, appointment, duration, and net-cost terms remain unresolved."}
+      ]
+    },
+    {
+      "institution_id": "us:ipeds:221847",
+      "institution_name": "Tennessee Technological University",
+      "country": "United States",
+      "region": "us",
+      "program_name": "Computer Science PhD",
+      "degree_type": "PhD",
+      "relevant_degree_route": "Computer science research doctorate with a direct BS-to-PhD pathway and dissertation",
+      "research_topic_clusters": ["ai_for_se", "systems_security", "distributed_systems"],
+      "exact_research_fit_signal": "The doctorate supports research in artificial intelligence, cybersecurity, high-performance computing, and related computer-science systems areas.",
+      "preliminary_international_eligibility": "The department publishes a BS-to-PhD pathway; degree preparation, transcript requirements, English evidence, and the Fall 2027 cycle require Stage 3 review.",
+      "preliminary_funding_signal": "Competitive teaching and research assistantships provide stipends and tuition or some-fee benefits, with a material summer-support limitation for teaching appointments.",
+      "official_program_url": "https://www.tntech.edu/engineering/programs/csc/ph.d-program.php",
+      "official_institution_url": "https://www.tntech.edu",
+      "seed_adjacency": ["TerraProbe-adjacent", "Evidex-adjacent"],
+      "unresolved_fields": ["Fall 2027 cycle", "BS-to-PhD course and GPA mapping", "English evidence", "assistantship selection and renewal", "summer funding", "remaining fees and insurance", "current supervisor capacity"],
+      "evidence_confidence": "high",
+      "additional_discovery_paths": ["recognized_institution_record", "underrepresented_route_search"],
+      "sources": [
+        {"source_id": "reentry11:tntech-cs:program", "discovery_path": "official_program_or_department_signal", "evidence_role": "exact doctorate, direct route, and research areas", "title": "Ph.D. Program", "url": "https://www.tntech.edu/engineering/programs/csc/ph.d-program.php", "accessed_date": "2026-09-11", "evidence_summary": "Official department page confirms the Computer Science PhD, BS-to-PhD route, dissertation, and relevant research areas.", "limitations": "The route page does not establish applicant-specific admissibility or faculty capacity."},
+        {"source_id": "reentry11:tntech-cs:assistantships", "discovery_path": "research_masters_or_scholarship_search", "evidence_role": "assistantship mechanism and summer boundary", "title": "Graduate Assistantships", "url": "https://www.tntech.edu/engineering/programs/csc/graduate-assistantships.php", "accessed_date": "2026-09-11", "evidence_summary": "Official department page describes competitive teaching and research assistantships, stipend and tuition benefits, and the absence of summer teaching-assistant support.", "limitations": "Assistantships are limited and no appointment, renewal, or complete net-cost package is established."}
+      ]
+    },
+    {
+      "institution_id": "us:ipeds:220862",
+      "institution_name": "University of Memphis",
+      "country": "United States",
+      "region": "us",
+      "program_name": "PhD in Computer Science",
+      "degree_type": "PhD",
+      "relevant_degree_route": "Computer science research doctorate with advanced study, original research, and dissertation",
+      "research_topic_clusters": ["software_quality", "ai_for_se", "systems_security"],
+      "exact_research_fit_signal": "Department research includes the Systems Testing Excellence Program alongside cybersecurity, artificial intelligence, data, and systems work.",
+      "preliminary_international_eligibility": "The department describes four-year computer-science degree preparation or prerequisite remediation and published GPA expectations; transcript and English review remain applicant-specific.",
+      "preliminary_funding_signal": "The department says most doctoral students receive support, but the mechanism is not a universal award and package terms are not fully specified.",
+      "official_program_url": "https://www.memphis.edu/cs/programs/phd_computer_science.php",
+      "official_institution_url": "https://www.memphis.edu",
+      "seed_adjacency": ["TerraProbe-adjacent", "Evidex-adjacent"],
+      "unresolved_fields": ["Fall 2027 cycle", "four-year degree and prerequisite mapping", "GPA interpretation", "English evidence", "assistantship offer and duration", "tuition, fees, insurance, and summer support", "current supervisor capacity"],
+      "evidence_confidence": "high",
+      "additional_discovery_paths": ["recognized_institution_record", "lab_or_center_signal"],
+      "sources": [
+        {"source_id": "reentry11:memphis-cs:program", "discovery_path": "official_program_or_department_signal", "evidence_role": "exact doctorate and research structure", "title": "PhD in Computer Science", "url": "https://www.memphis.edu/cs/programs/phd_computer_science.php", "accessed_date": "2026-09-11", "evidence_summary": "Official department page confirms the Computer Science PhD and its advanced study, research, and dissertation requirements.", "limitations": "Program existence does not establish admission, funding, or advisor availability."},
+        {"source_id": "reentry11:memphis-cs:graduate", "discovery_path": "current_faculty_topic_signal", "evidence_role": "research fit, degree preparation, and preliminary funding prevalence", "title": "Graduate Applicants", "url": "https://www.memphis.edu/cs/future_students/graduate.php", "accessed_date": "2026-09-11", "evidence_summary": "Official department page describes research including systems testing, security, and AI, degree and GPA preparation, international applications, and funding for most doctoral students.", "limitations": "Most is not all; applicant eligibility, package details, cycle currency, and supervisor capacity require separate verification."}
+      ]
+    },
+    {
+      "institution_id": "us:ipeds:240727",
+      "institution_name": "University of Wyoming",
+      "country": "United States",
+      "region": "us",
+      "program_name": "PhD in Computer Science",
+      "degree_type": "PhD",
+      "relevant_degree_route": "Computer science research doctorate with advanced study, qualifying milestones, and dissertation",
+      "research_topic_clusters": ["formal_verification", "systems_security", "distributed_systems"],
+      "exact_research_fit_signal": "The program identifies formal verification and theorem proving, distributed computing, cybersecurity, and artificial intelligence as research strengths.",
+      "preliminary_international_eligibility": "The degree page describes bachelor's-level entry while departmental admissions language appears more restrictive for direct admission; Stage 3 must resolve the conflict and map the transcript.",
+      "preliminary_funding_signal": "The university reports stipend and tuition or fee-waiver support for many qualified students, but appointment level, duration, summer coverage, and remaining costs are unresolved.",
+      "official_program_url": "https://www.uwyo.edu/uw/degree-programs/computer-science-ms-phd.html",
+      "official_institution_url": "https://www.uwyo.edu",
+      "seed_adjacency": ["TerraProbe-adjacent", "Evidex-adjacent"],
+      "unresolved_fields": ["Fall 2027 cycle", "conflicting direct-entry language", "degree and course mapping", "English evidence", "assistantship appointment and duration", "fees, insurance, and summer support", "current supervisor capacity"],
+      "evidence_confidence": "high",
+      "additional_discovery_paths": ["recognized_institution_record", "underrepresented_route_search"],
+      "sources": [
+        {"source_id": "reentry11:wyoming-cs:program", "discovery_path": "official_program_or_department_signal", "evidence_role": "exact doctorate, research fit, and broad entry signal", "title": "Computer Science MS and PhD", "url": "https://www.uwyo.edu/uw/degree-programs/computer-science-ms-phd.html", "accessed_date": "2026-09-11", "evidence_summary": "Official degree page confirms the Computer Science PhD, bachelor's-level preparation, relevant formal-methods and systems research, and majority-student support language.", "limitations": "The broad entry and support statements require reconciliation with departmental rules and do not prove an offer."},
+        {"source_id": "reentry11:wyoming-cs:admissions", "discovery_path": "research_masters_or_scholarship_search", "evidence_role": "departmental admission conflict and assistantship benefits", "title": "Graduate Admissions", "url": "https://www.uwyo.edu/eecs/graduate/admissions.html", "accessed_date": "2026-09-11", "evidence_summary": "Official department page describes graduate admission and teaching- and research-assistantship stipend and waiver mechanisms, but includes narrower direct-PhD wording.", "limitations": "The entry-language conflict and applicant-specific appointment, renewal, and net-cost terms require Stage 3 resolution."}
+      ]
+    },
+    {
+      "institution_id": "ca:dli:O19395164223",
+      "institution_name": "Trent University",
+      "country": "Canada",
+      "region": "canada",
+      "program_name": "MSc in Applied Modelling and Quantitative Methods — Thesis Stream",
+      "degree_type": "Thesis or research master's",
+      "relevant_degree_route": "Two-year interdisciplinary research master's with supervisor-guided modelling work and thesis",
+      "research_topic_clusters": ["ai_for_se", "data_systems", "cyber_physical_systems"],
+      "exact_research_fit_signal": "The thesis stream combines computer science, mathematics, statistics, computational methods, and independent research applicable to data-intensive software systems.",
+      "preliminary_international_eligibility": "An honours degree, B+ standing, quantitative and programming preparation, and an identified supervisor are expected; degree equivalency and course mapping require Stage 3.",
+      "preliminary_funding_signal": "Eligible full-time research master's students receive a published annual funding package, while international tuition offsets, eligibility, and final net cost remain unresolved.",
+      "official_program_url": "https://www.trentu.ca/graduatestudies/program/applied-modelling-quantitative-methods-ma-or-msc/thesis-stream",
+      "official_institution_url": "https://www.trentu.ca",
+      "seed_adjacency": ["TerraProbe-adjacent"],
+      "unresolved_fields": ["Fall 2027 cycle", "honours-degree equivalency", "B+ and course mapping", "English evidence", "willing supervisor", "funding eligibility and duration", "international tuition and net cost"],
+      "evidence_confidence": "high",
+      "additional_discovery_paths": ["recognized_institution_record", "research_masters_or_scholarship_search"],
+      "sources": [
+        {"source_id": "reentry11:trent-amqm:program", "discovery_path": "official_program_or_department_signal", "evidence_role": "exact thesis route, prerequisites, and research fit", "title": "Applied Modelling and Quantitative Methods — Thesis Stream", "url": "https://www.trentu.ca/graduatestudies/program/applied-modelling-quantitative-methods-ma-or-msc/thesis-stream", "accessed_date": "2026-09-11", "evidence_summary": "Official program page confirms the MSc thesis stream, quantitative and programming preparation, supervisor requirement, interdisciplinary research, and annual funding signal.", "limitations": "Applicant degree equivalency, supervisor commitment, admission, and net international cost are unresolved."},
+        {"source_id": "reentry11:trent-amqm:funding", "discovery_path": "research_masters_or_scholarship_search", "evidence_role": "research-master funding range and international boundary", "title": "Funding", "url": "https://www.trentu.ca/graduatestudies/funding-tuition/funding", "accessed_date": "2026-09-11", "evidence_summary": "Official Graduate Studies page publishes two-year funding ranges for eligible research master's students and notes international scholarship offsets.", "limitations": "Eligibility, exact award, tuition differential, fees, and complete living-cost viability require applicant-specific verification."}
+      ]
+    },
+    {
+      "institution_id": "ca:dli:O19305471522",
+      "institution_name": "University of Waterloo",
+      "country": "Canada",
+      "region": "canada",
+      "program_name": "MASc in Systems Design Engineering",
+      "degree_type": "Thesis or research master's",
+      "relevant_degree_route": "Two-year engineering research master's with supervisor-guided study and thesis",
+      "research_topic_clusters": ["cyber_physical_systems", "ai_for_se", "distributed_systems"],
+      "exact_research_fit_signal": "The MASc emphasizes systems modelling and design across computational and physical systems and requires an original thesis under a research supervisor.",
+      "preliminary_international_eligibility": "A relevant engineering degree, mathematics preparation, minimum standing, English evidence, and a confirmed supervisor are required; exact equivalency remains for Stage 3.",
+      "preliminary_funding_signal": "The department publishes guaranteed minimum support for incoming full-time MASc students, but international tuition, deductions, award composition, and living-cost sufficiency need verification.",
+      "official_program_url": "https://uwaterloo.ca/future-graduate-students/programs/by-faculty/engineering/systems-design-engineering-master-applied-science-masc",
+      "official_institution_url": "https://uwaterloo.ca",
+      "seed_adjacency": ["TerraProbe-adjacent", "Evidex-adjacent"],
+      "unresolved_fields": ["Fall 2027 cycle", "engineering-degree equivalency", "mathematics and GPA mapping", "English evidence", "confirmed supervisor", "funding composition and deductions", "international tuition and net cost"],
+      "evidence_confidence": "high",
+      "additional_discovery_paths": ["recognized_institution_record", "research_masters_or_scholarship_search"],
+      "sources": [
+        {"source_id": "reentry11:waterloo-syde:program", "discovery_path": "official_program_or_department_signal", "evidence_role": "exact research master's, prerequisites, and thesis", "title": "Systems Design Engineering — MASc", "url": "https://uwaterloo.ca/future-graduate-students/programs/by-faculty/engineering/systems-design-engineering-master-applied-science-masc", "accessed_date": "2026-09-11", "evidence_summary": "Official program page confirms the research MASc, expected duration, engineering and mathematics preparation, supervisor requirement, and thesis.", "limitations": "Degree equivalency, admission, supervisor capacity, and applicant-specific net cost remain unresolved."},
+        {"source_id": "reentry11:waterloo-syde:funding", "discovery_path": "research_masters_or_scholarship_search", "evidence_role": "minimum MASc support and supervisor boundary", "title": "Future Students FAQ", "url": "https://uwaterloo.ca/systems-design-engineering/graduate-studies/future-students/faq", "accessed_date": "2026-09-11", "evidence_summary": "Official department FAQ states a guaranteed minimum annual funding level for incoming full-time MASc students over two years and confirms that a supervisor is required.", "limitations": "The published minimum does not by itself establish international tuition coverage or living-cost sufficiency."}
+      ]
+    },
+    {
+      "institution_id": "ca:dli:O19359011007",
+      "institution_name": "Concordia University",
+      "country": "Canada",
+      "region": "canada",
+      "program_name": "Cybersecurity Engineering (MASc)",
+      "degree_type": "Thesis or research master's",
+      "relevant_degree_route": "Two-year cybersecurity engineering research master's with applied research and thesis",
+      "research_topic_clusters": ["systems_security", "software_quality", "formal_verification"],
+      "exact_research_fit_signal": "The MASc targets secure real-world information systems through security engineering, cryptography, operating-system and network security, applied research, and thesis work.",
+      "preliminary_international_eligibility": "Relevant computer science, software, computer, or electrical engineering degrees are listed; transcript, GPA, prerequisite, and English mapping remain Stage 3 work.",
+      "preliminary_funding_signal": "The program states that advisor support and funding packages are generally available to thesis students, but no amount, duration, guarantee, or international net package is established.",
+      "official_program_url": "https://www.concordia.ca/academics/graduate/cybersecurity-engineering-masc.html",
+      "official_institution_url": "https://www.concordia.ca",
+      "seed_adjacency": ["Evidex-adjacent", "TerraProbe-adjacent"],
+      "unresolved_fields": ["Fall 2027 cycle", "degree and prerequisite mapping", "GPA interpretation", "English evidence", "willing research advisor", "funding amount and duration", "international tuition and net cost"],
+      "evidence_confidence": "high",
+      "additional_discovery_paths": ["recognized_institution_record", "lab_or_center_signal"],
+      "sources": [
+        {"source_id": "reentry11:concordia-cyber:program", "discovery_path": "official_program_or_department_signal", "evidence_role": "exact research master's, fit, eligibility, and preliminary funding", "title": "Cybersecurity Engineering (MASc)", "url": "https://www.concordia.ca/academics/graduate/cybersecurity-engineering-masc.html", "accessed_date": "2026-09-11", "evidence_summary": "Official program page confirms the two-year thesis MASc, accepted degree fields, applied secure-systems research, and generally available thesis-student funding packages.", "limitations": "Generally available is not guaranteed; applicant eligibility, advisor commitment, amount, duration, and net cost require verification."},
+        {"source_id": "reentry11:concordia-cyber:labs", "discovery_path": "lab_or_center_signal", "evidence_role": "current cybersecurity and intelligent-systems laboratory signal", "title": "GCS-CIISE Research Labs", "url": "https://www.concordia.ca/ginacody/research/centres/gcs-cise-research-labs.html", "accessed_date": "2026-09-11", "evidence_summary": "Official engineering research page identifies laboratories working in cybersecurity, secure systems, and related intelligent-systems research.", "limitations": "A laboratory listing does not establish supervisor authority, capacity, or an open funded position."}
+      ]
+    },
+    {
+      "institution_id": "ror:03ad39j10",
+      "institution_name": "University of Pisa",
+      "country": "Italy",
+      "region": "europe",
+      "program_name": "Master's Degree in Computer Science",
+      "degree_type": "Thesis or research master's",
+      "relevant_degree_route": "Two-year English-taught computer science master's with a Foundations of Software curriculum and dissertation",
+      "research_topic_clusters": ["formal_verification", "software_quality", "distributed_systems"],
+      "exact_research_fit_signal": "The Foundations of Software curriculum includes program analysis, software-verification laboratory and principles, advanced software topics, and a substantial final dissertation.",
+      "preliminary_international_eligibility": "A foreign bachelor's degree is evaluated against published computer-science, computer-engineering, mathematics, and English requirements; course-by-course mapping remains for Stage 3.",
+      "preliminary_funding_signal": "The current DSU route is open across nationalities and can include tuition exemption, accommodation or rent support, meals, and cash support, but it is means- and merit-tested and annual.",
+      "official_program_url": "https://www.unipi.it/en/education/courses/master-degree/computer-science-wif-lm-en/",
+      "official_institution_url": "https://www.unipi.it/en/",
+      "seed_adjacency": ["Evidex-adjacent", "TerraProbe-adjacent"],
+      "unresolved_fields": ["Fall 2027 cycle", "foreign-degree and 72-credit mapping", "B2 English evidence", "pre-enrolment and visa documents", "DSU income-document eligibility", "scholarship selection and renewal", "residual living costs"],
+      "evidence_confidence": "high",
+      "additional_discovery_paths": ["european_registry_followup", "research_masters_or_scholarship_search"],
+      "sources": [
+        {"source_id": "reentry11:pisa-cs:program", "discovery_path": "official_program_or_department_signal", "evidence_role": "exact master's, software curriculum, prerequisites, and dissertation", "title": "Master's Degree in Computer Science", "url": "https://www.unipi.it/en/education/courses/master-degree/computer-science-wif-lm-en/", "accessed_date": "2026-09-11", "evidence_summary": "Official university page confirms the English two-year MSc, Foundations of Software curriculum, verification coursework, dissertation, credit prerequisites, and B2 English requirement.", "limitations": "Foreign-degree equivalency, selection, cycle terms, and applicant admission require Stage 3 verification."},
+        {"source_id": "reentry11:pisa-cs:dsu", "discovery_path": "research_masters_or_scholarship_search", "evidence_role": "current regional scholarship benefits and conditions", "title": "DSU Scholarship", "url": "https://www.unipi.it/en/education/registration/enrolment-and-registration/enrolment-for-international-students/dsu-scholarship-university-of-pisa/", "accessed_date": "2026-09-11", "evidence_summary": "Official university page describes a nationality-open DSU scholarship route with tuition exemption, housing or rent support, meals, and monetary assistance under merit and financial conditions.", "limitations": "The scholarship is competitive and annual; Nigerian documentation, timing, selection, renewal, and residual costs remain unresolved."}
+      ]
+    },
+    {
+      "institution_id": "ror:04jr1s763",
+      "institution_name": "University of Florence",
+      "country": "Italy",
+      "region": "europe",
+      "program_name": "MSc in Software: Science and Technology",
+      "degree_type": "Thesis or research master's",
+      "relevant_degree_route": "Two-year English-taught software-science master's with advanced coursework and thesis",
+      "research_topic_clusters": ["software_quality", "formal_verification", "cyber_physical_systems"],
+      "exact_research_fit_signal": "The curriculum centers rigorous software design, development, validation, testing, performance, security, reliability, cyber-physical systems, and an independent thesis.",
+      "preliminary_international_eligibility": "A suitable foreign bachelor's degree and curriculum are evaluated through the non-EU admission process; detailed course mapping and English evidence remain for Stage 3.",
+      "preliminary_funding_signal": "The university lists DSU Toscana and international scholarship opportunities, but award eligibility, benefits, renewal, and the applicant's final net cost are not yet established.",
+      "official_program_url": "https://www.unifi.it/en/study-us/degree-programs/second-cycle-degree/software-science-and-technology",
+      "official_institution_url": "https://www.unifi.it/en",
+      "seed_adjacency": ["Evidex-adjacent", "TerraProbe-adjacent"],
+      "unresolved_fields": ["Fall 2027 cycle", "foreign-degree and curriculum mapping", "English evidence", "non-EU application and visa process", "DSU or university scholarship eligibility", "award benefits and renewal", "residual tuition and living costs"],
+      "evidence_confidence": "high",
+      "additional_discovery_paths": ["underrepresented_route_search", "research_masters_or_scholarship_search"],
+      "sources": [
+        {"source_id": "reentry11:florence-sst:program", "discovery_path": "official_program_or_department_signal", "evidence_role": "exact software master's and research fit", "title": "Software: Science and Technology", "url": "https://www.unifi.it/en/study-us/degree-programs/second-cycle-degree/software-science-and-technology", "accessed_date": "2026-09-11", "evidence_summary": "Official university page confirms the current English two-year MSc and its software testing, reliability, performance, security, cyber-physical-systems, and thesis components.", "limitations": "Foreign-degree equivalency, applicant selection, cycle terms, and thesis-supervisor fit remain unresolved."},
+        {"source_id": "reentry11:florence-sst:scholarships", "discovery_path": "research_masters_or_scholarship_search", "evidence_role": "regional and university scholarship routes", "title": "Scholarships and Grants", "url": "https://www.unifi.it/en/study-us/university-life/opportunities-and-experiences/scholarships-and-grants/scholarships", "accessed_date": "2026-09-11", "evidence_summary": "Official university page identifies DSU Toscana and other scholarship and grant mechanisms available to students.", "limitations": "A listed opportunity is not an award; nationality, income documentation, benefits, renewal, timing, and net cost require verification."}
+      ]
+    },
+    {
+      "institution_id": "ror:0005w8d69",
+      "institution_name": "Università di Camerino",
+      "country": "Italy",
+      "region": "europe",
+      "program_name": "Master of Science in Computer Science",
+      "degree_type": "Thesis or research master's",
+      "relevant_degree_route": "Two-year English-taught computer science master's with software, cybersecurity, and thesis pathways",
+      "research_topic_clusters": ["software_quality", "systems_security", "formal_verification"],
+      "exact_research_fit_signal": "The English MSc offers software-development and cybersecurity curricula, while current university materials connect the degree to formal methods, software engineering, and a substantial thesis.",
+      "preliminary_international_eligibility": "A bachelor's degree satisfying program access requirements, transcripts, course syllabi, qualification verification, and B2 English are required; applicant equivalency remains for Stage 3.",
+      "preliminary_funding_signal": "Current UNICAM and ERDIS mechanisms include a limited merit award and means-tested tuition, food, and lodging support, but selection, renewal, and residual costs are unresolved.",
+      "official_program_url": "https://sst.unicam.it/corsi/computer-science",
+      "official_institution_url": "https://www.unicam.it",
+      "seed_adjacency": ["Evidex-adjacent", "TerraProbe-adjacent"],
+      "unresolved_fields": ["Fall 2027 cycle", "bachelor's and course equivalency", "B2 English evidence", "CIMEA and visa documentation", "UNICAM or ERDIS selection", "award renewal", "residual tuition and living costs", "current thesis-supervisor fit"],
+      "evidence_confidence": "high",
+      "additional_discovery_paths": ["european_registry_followup", "research_masters_or_scholarship_search"],
+      "sources": [
+        {"source_id": "reentry11:camerino-cs:program", "discovery_path": "official_program_or_department_signal", "evidence_role": "exact English master's, curricula, and research route", "title": "Computer Science", "url": "https://sst.unicam.it/corsi/computer-science", "accessed_date": "2026-09-11", "evidence_summary": "Official School page confirms the English two-year, 120-CFU Computer Science MSc and its software-development and cybersecurity curriculum options and doctoral progression.", "limitations": "The page mixes current and earlier curriculum labels; exact 2027 offerings, degree equivalency, admission, and supervisor fit require verification."},
+        {"source_id": "reentry11:camerino-cs:scholarships", "discovery_path": "research_masters_or_scholarship_search", "evidence_role": "current merit and means-tested scholarship mechanisms", "title": "Scholarships", "url": "https://www.unicam.it/futuro-studente/vuoi-iscriverti/borse-di-studio", "accessed_date": "2026-09-11", "evidence_summary": "Official university page describes a current merit scholarship for first-year two-year master's entrants and ERDIS awards based on merit and income.", "limitations": "Awards are selective and annual; international documentation, eligibility, benefit composition, renewal, and net cost remain unresolved."}
+      ]
+    }
+  ],
+  "false_negative_audits": [
+    {
+      "institution_id": "us:ipeds:160658",
+      "exclusion_reason_category": "catalog_signal_without_exact_doctoral_route",
+      "original_supporting_evidence": "The original funnel retained only mechanical IPEDS computing signals for Louisiana-Lafayette and missed the current direct-bachelor Applied Computing and Information Sciences PhD with AI, cybersecurity, and funded-doctoral mechanisms."
+    },
+    {
+      "institution_id": "ror:04jr1s763",
+      "exclusion_reason_category": "outside_bounded_positive_seed_screen",
+      "original_supporting_evidence": "The University of Florence was absent from the original funnel despite a current English Software: Science and Technology MSc centered on testing, reliability, security, cyber-physical systems, and thesis work, with a regional scholarship route."
+    }
+  ]
+}

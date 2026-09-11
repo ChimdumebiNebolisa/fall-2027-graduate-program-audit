@@ -42,7 +42,7 @@ def _audit_targets(payload):
 
 
 def test_reentry_definitions_build_exact_auditable_routes():
-    for round_number in range(1, 11):
+    for round_number in range(1, 12):
         payload = _payload(round_number)
         reentry_id = f"stage_02_reentry_{round_number:02d}"
         candidates, sources = build_reentry_rows(
@@ -69,7 +69,7 @@ def test_reentry_merge_is_idempotent_and_reaudits_confirmed_omissions(tmp_path):
     merged = read_csv(tmp_path / "candidate_program_funnel.csv")
     yields = read_csv(tmp_path / "discovery_source_yield.csv")
     audits = read_csv(tmp_path / "exclusion_sample_audit.csv")
-    for round_number in range(1, 11):
+    for round_number in range(1, 12):
         payload = _payload(round_number)
         prefix = f"reentry{round_number:02d}"
         candidates, sources = build_reentry_rows(
@@ -101,9 +101,29 @@ def test_reentry_merge_is_idempotent_and_reaudits_confirmed_omissions(tmp_path):
         )["status"] == "PASS"
         merged = first
 
-    assert len(merged) == baseline["counts"]["candidate_rows"] + 120
+    assert len(merged) == baseline["counts"]["candidate_rows"] + 132
     assert all(int(row["candidate_rows_contributed"]) >= 0 for row in yields)
-    assert sum(row["audit_result"] == "false_negative_corrected" for row in audits) == 20
+    assert sum(row["audit_result"] == "false_negative_corrected" for row in audits) == 22
+
+
+def test_reentry_11_has_the_intended_regional_and_route_mix():
+    payload = _payload(11)
+    candidates, sources = build_reentry_rows(
+        payload["candidates"],
+        _institutions(),
+        "data/raw/pass2/stage_02_reentry_11.json",
+        reentry_id="stage_02_reentry_11",
+    )
+
+    assert len(candidates) == 12
+    assert sum(row["region"] == "us" for row in candidates) == 6
+    assert sum(row["region"] == "canada" for row in candidates) == 3
+    assert sum(row["region"] == "europe" for row in candidates) == 3
+    assert sum(row["degree_type"] == "PhD" for row in candidates) == 6
+    assert sum(row["degree_type"] == "Thesis or research master's" for row in candidates) == 6
+    assert len(sources) >= 24
+    assert {row["accessed_date"] for row in sources} == {"2026-09-11"}
+    assert len(payload["false_negative_audits"]) == 2
 
 
 def test_reentry_validation_rejects_a_route_already_in_the_prior_funnel(tmp_path):
