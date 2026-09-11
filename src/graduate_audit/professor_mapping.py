@@ -964,4 +964,64 @@ FACULTY_ROSTERS: dict[str, FacultyRoster] = {
             _c("Zohreh Sharafi", "software engineering; program comprehension; human factors; developer studies"),
         ),
     ),
+    "Emory University": FacultyRoster(
+        "Department of Computer Science",
+        "https://computerscience.emory.edu/graduate-phd/csi-faculty.html",
+        (
+            _c("Ymir Vigfusson", "distributed systems; systems security; privacy; networked systems"),
+            _c("Wei Jin", "trustworthy artificial intelligence; graph learning; privacy; robustness"),
+            _c("Subhasish Das", "computer systems; distributed systems; systems education"),
+            _c("Joon-Seok Kim", "distributed computing; data-intensive systems; simulation"),
+        ),
+    ),
+    "Northwestern University": FacultyRoster(
+        "Department of Computer Science",
+        "https://www.mccormick.northwestern.edu/computer-science/people/faculty/tenure-track.html",
+        (
+            _c("Christos Dimoulas", "programming languages; software contracts; program verification"),
+            _c("Simone Campanoni", "compilers; program optimization; software performance"),
+            _c("Yan Chen", "network security; distributed systems; systems measurement"),
+            _c("Jennie Rogers", "database systems; data analytics; reliable data infrastructure"),
+        ),
+    ),
+    "University of Pittsburgh-Pittsburgh Campus": FacultyRoster(
+        "Department of Computer Science",
+        "https://www.sci.pitt.edu/people/faculty",
+        (
+            _c("Panos K. Chrysanthis", "database systems; distributed systems; data privacy"),
+            _c("Daniel Mossé", "real-time systems; dependable systems; distributed computing"),
+            _c("Longfei Shangguan", "networked systems; sensing; mobile computing; security"),
+            _c("Balaji Palanisamy", "distributed systems; cloud computing; privacy; data management"),
+        ),
+    ),
+    "Brandeis University": FacultyRoster(
+        "Michtom School of Computer Science",
+        "https://www.brandeis.edu/computer-science/people/index.html",
+        (
+            _c("Liuba Shrira", "distributed systems; reliable storage; fault tolerance"),
+            _c("Olga Papaemmanouil", "database systems; data analytics; scalable data management"),
+            _c("Kostas Solomos", "web security; privacy; network measurement"),
+            _c("Elijah Rivera", "program synthesis; formal verification; programming languages"),
+        ),
+    ),
+    "Johns Hopkins University": FacultyRoster(
+        "Department of Computer Science",
+        "https://www.cs.jhu.edu/faculty/",
+        (
+            _c("Avi Rubin", "systems security; software security; privacy"),
+            _c("Abhishek Jain", "cryptography; privacy; secure computation"),
+            _c("Ashutosh Dhekne", "networked systems; wireless systems; systems measurement"),
+            _c("Anton Dahbura", "cybersecurity; dependable systems; critical infrastructure"),
+        ),
+    ),
+    "St. Francis Xavier University": FacultyRoster(
+        "Department of Computer Science",
+        "https://www.stfx.ca/directory-department/761?groupid=581",
+        (
+            _c("Hao Cai", "artificial intelligence; data-driven computing; software systems"),
+            _c("Jean-Alexis Delamer", "algorithms; theoretical computer science; optimization"),
+            _c("Milton King", "machine learning; data science; computational applications"),
+            _c("Man Lin", "software systems; data management; computer science education"),
+        ),
+    ),
 }

@@ -167,6 +167,47 @@ def test_reentry_08_evidence_exactly_covers_new_faculty_ready_routes():
     assert all(row["recruiting_status"] in RECRUITING_STATUSES for row in professors)
 
 
+def test_reentry_09_evidence_exactly_covers_new_faculty_ready_routes():
+    raw = json.loads(
+        (REPO_ROOT / "data/raw/pass2/stage_04_reentry_09.json").read_text(encoding="utf-8")
+    )
+    newly_ready = {
+        row["candidate_program_id"]
+        for row in _rows("stage_03_reentry_09_verification.csv")
+        if row["faculty_review_ready"] == "yes"
+    }
+    professors = raw["professors"]
+    assert {row["program_id"] for row in professors} == newly_ready
+    assert len(professors) == len(newly_ready) == 6
+    assert all(row["can_supervise_program"].casefold() == "yes" for row in professors)
+    assert all(row["fit_strength"].casefold() == "strong" for row in professors)
+    assert all(row["recent_work_1_url"].startswith("https://") for row in professors)
+    assert all(row["recent_work_1_year"].isdigit() for row in professors)
+    assert all(row["official_email"] or row["official_faculty_url"] for row in professors)
+    assert all(row["recruiting_status"] in RECRUITING_STATUSES for row in professors)
+
+
+def test_reentry_09_has_typed_source_records_for_every_lead_evidence_url():
+    raw = json.loads(
+        (REPO_ROOT / "data/raw/pass2/stage_04_reentry_09.json").read_text(encoding="utf-8")
+    )
+    source_urls = {row["url"].rstrip("/") for row in raw["sources"]}
+    evidence_urls = set()
+    for professor in raw["professors"]:
+        evidence_urls.add(professor["official_faculty_url"].rstrip("/"))
+        evidence_urls.update(
+            professor[f"recent_work_{index}_url"].rstrip("/")
+            for index in range(1, 4)
+            if professor[f"recent_work_{index}_url"]
+        )
+        evidence_urls.update(
+            url.strip().rstrip("/")
+            for url in professor["extra_evidence_urls"].split("|")
+            if url.strip()
+        )
+    assert evidence_urls <= source_urls
+
+
 def test_every_serious_program_has_five_evaluations_and_at_most_three_retained_matches():
     programs = [
         row
