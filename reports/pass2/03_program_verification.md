@@ -1,45 +1,45 @@
 # Stage 3 Result
 
-Generated: 2026-09-11T09:45:12.086178+00:00
+Generated: 2026-09-11T10:47:37.093694+00:00
 
 ## Decision
 
-Pass — program structure, eligibility, and funding verification re-entry 12 is complete.
+Pass — program structure, eligibility, and funding verification re-entry 13 is complete.
 
 ## What changed
 
-All 2,109 Stage 2 candidates now have exactly one controlled retained, conditional, monitor, or excluded status with an evidence-backed reason. The 12 re-entry 12 routes were verified against official program, admissions, funding, fee, and deadline sources. No score or admission recommendation was created.
+All 2,121 Stage 2 candidates now have exactly one controlled retained, conditional, monitor, or excluded status with an evidence-backed reason. The 12 re-entry 13 routes were verified against official program, admissions, funding, fee, and deadline sources. No score or admission recommendation was created.
 
 ## Coverage
 
 | Status | All candidates | New routes |
 | --- | --- | --- |
-| Retained | 42 | 0 |
-| Conditional | 84 | 6 |
-| Monitor | 356 | 6 |
+| Retained | 44 | 2 |
+| Conditional | 87 | 3 |
+| Monitor | 363 | 7 |
 | Excluded | 1627 | 0 |
-| Faculty-review ready | 126 | 6 |
+| Faculty-review ready | 131 | 5 |
 
-### Stage 2 re-entry 12 routes
+### Stage 2 re-entry 13 routes
 
 | Institution | Program | Status | Eligibility gate | Funding gate | Largest unresolved question |
 | --- | --- | --- | --- | --- | --- |
-| New Mexico State University-Main Campus | [Computer Science (Ph.D.)](https://nmsu.edu/degree-programs/graduate/doctoral/computer-science.html) | monitor | resolvable_question | resolvable_inquiry | Will the department waive or reinterpret the 3.5 GPA gate and issue a renewable assistantship covering tuition, fees, insurance, stipend, and summer? |
-| University of Idaho | [Computer Science, Ph.D.](https://www.uidaho.edu/academics/degree-finder/computer-sci-phd) | conditional | pass | resolvable_inquiry | Will the program issue a renewable faculty or departmental package that covers tuition, fees, insurance, stipend, and summer for an international PhD student? |
-| Kansas State University | [Doctor of Philosophy in Computer Science](https://www.cs.ksu.edu/academics/graduate/phd/) | conditional | pass | resolvable_inquiry | Which appointment will be offered, for how many years, and what tuition, fees, insurance, stipend, and summer costs will it cover? |
-| Oklahoma State University-Main Campus | [Doctor of Philosophy in Computer Science](https://cas.okstate.edu/computer_science/graduate/phd_cs) | conditional | pass | resolvable_inquiry | Will OSU issue and renew an assistantship that covers full tuition, mandatory fees, insurance, stipend, and summer for this applicant? |
-| West Virginia University | [Computer Science, Ph.D.](https://catalog.wvu.edu/graduate/collegeofengineeringandmineralresources/thelanedepartmentofcomputerscienceandelectricalengineering/cs/phd/) | conditional | pass | resolvable_inquiry | Will WVU provide a renewable GTA or GRA and what net tuition, college charges, fees, insurance, stipend, and summer costs remain? |
-| Louisiana State University and Agricultural & Mechanical College | [Ph.D. in Computer Science and Engineering](https://www.lsu.edu/eng/cse/programs/graduate_program/graduate_phd.php) | conditional | pass | resolvable_inquiry | Will LSU issue a renewable five-year package and exactly which tuition, fees, insurance, stipend, and summer costs will it cover? |
-| University of Lethbridge | [Master of Science in Computer Science](https://www.ulethbridge.ca/future-student/graduate-studies/master-science/computer-science) | monitor | resolvable_question | resolvable_inquiry | Can the applicant document the required upper-level preparation, secure a supervisor, and obtain a two-year package that covers international tuition and living costs? |
-| Brock University | [Computer Science MSc — Thesis Stream](https://brocku.ca/programs/graduate/msc-cosc/) | conditional | pass | resolvable_inquiry | What current six-term net package will Brock provide after international tuition, fees, taxes, insurance, and living costs? |
-| Lakehead University | [Master of Science in Computer Science — Thesis Route](https://www.lakeheadu.ca/programs/graduate/programs/masters/computer-science) | monitor | pass | unverified | Is any renewable funding package available that covers international tuition, fees, insurance, living costs, and summer for the thesis route? |
-| Blekinge Institute of Technology | [Master's Programme in Software Engineering, 120 credits](https://www.bth.se/english/education/programmes/masters-programme-in-software-engineering-120-credits) | monitor | resolvable_question | unverified | Can the transcript meet every ECTS prerequisite, and is there any external full-cost award beyond BTH's partial tuition scholarship? |
-| Karlstad University | [Master in Computer Science](https://www.kau.se/en/cs/education/programmes-and-courses/programmes/master-computer-science) | monitor | resolvable_question | unverified | Will the transcript satisfy every ECTS prerequisite, and is any funding available for the remaining tuition and all living costs? |
-| Linköping University | [Computer Science, Master's Programme, 120 credits](https://liu.se/en/education/program/6mics) | monitor | pass | unverified | Can the applicant win support despite the latest scholarship benchmark, and is any source available for the remaining tuition and living costs? |
+| University of Alabama in Huntsville | [Computer Science, Ph.D.](https://www.uah.edu/science/departments/computer-science/cs-graduate-programs) | conditional | pass | resolvable_inquiry | Will Computer Science issue a renewable assistantship that states stipend, tuition, mandatory fees, insurance, and summer support for the full doctorate? |
+| The University of Texas at El Paso | [Doctor of Philosophy in Computer Science](https://catalog.utep.edu/grad/college-of-engineering/computer-science/computer-science-phd/) | conditional | pass | resolvable_inquiry | Will UTEP issue a renewable 20-hour appointment with adequate stipend and written coverage of tuition, fees, insurance, and summers? |
+| University of Nevada-Las Vegas | [Doctor of Philosophy - Computer Science](https://www.unlv.edu/degree/phd-computer-science) | monitor | resolvable_question | resolvable_inquiry | Will UNLV approve direct-bachelor eligibility despite the cumulative GPA and pair admission with a renewable full-cost assistantship? |
+| Old Dominion University | [Computer Science (Ph.D.)](https://www.odu.edu/academics/programs/doctoral/computer-science) | retained | pass | pass | What written renewal, fee, insurance, and summer terms apply after the guaranteed first-year assistantship? |
+| Temple University | [Computer and Information Science PhD](https://bulletin.temple.edu/graduate/scd/cst/computer-information-science-phd/) | retained | pass | pass | Which Fall 2027 deadline controls and what written multi-year offer covers fees, insurance, and summers beyond tuition and stipend? |
+| University of Rhode Island | [Computer Science Ph.D.](https://www.uri.edu/programs/program/computer-science-ph-d/) | conditional | pass | resolvable_inquiry | Will the department issue a renewable full-time assistantship, and what is the net annual cost after uncovered fees, insurance details, and summer living support? |
+| Bishop's University | [M.Sc. in Computer Science — Thesis Option](https://www.ubishops.ca/academics/faculties-and-schools/faculty-of-natural-sciences-and-mathematics/computer-science/masters-degree-program/graduate-admission/) | monitor | pass | unverified | Can a supervisor commit enough renewable funding to cover international tuition, fees, insurance, living costs, and the full 20-24 month thesis period? |
+| Université du Québec à Montréal | [Maîtrise en informatique — profil avec mémoire](https://info.uqam.ca/ma%C3%AEtrise_en_informatique/) | monitor | resolvable_question | unverified | Will UQAM confirm academic and French eligibility and identify a realistically attainable package covering international tuition and living costs for two years? |
+| Université de Moncton | [Maîtrise ès sciences (informatique)](https://www.umcs.umoncton.ca/fesr/programmes?programme_id=222&programme_select=222) | monitor | resolvable_question | unverified | Will the program confirm French and academic eligibility and can a supervisor provide renewable support covering tuition, fees, insurance, and living costs for two years? |
+| Tampere University | [Master's Programme in AI-Native Software](https://www.tuni.fi/en/tau/masters-programmes/ai-native-software-computing-sciences-and-electrical-engineering) | monitor | resolvable_question | unverified | Do the Fall 2027 academic criteria admit this transcript, and is there any external award that closes the remaining tuition and full two-year living-cost gap? |
+| Paderborn University | [M.Sc. Computer Science](https://www.uni-paderborn.de/en/studyoffer/course_of_study/computer-science-master) | monitor | resolvable_question | unverified | Will the transcript satisfy every credit bucket and GRE rule, and can an external award cover the approximately EUR 1,210 monthly living-cost estimate plus fees and insurance? |
+| Åbo Akademi University | [Master's Degree Programme in Information Technology — Computer Science](https://www.abo.fi/en/study-programme/masters-degree-programme-in-information-technology/) | monitor | pass | unverified | Can an external scholarship cover the remaining tuition plus mandatory fees, insurance, and two years of living costs under the Fall 2027 terms? |
 
 Retained means an exact research route, formal applicant eligibility, and a credible officially sourced funding route are present. It does not mean admission is likely or that an eventual offer will contain adequate net funding.
 
-Idaho, Kansas State, Oklahoma State, West Virginia, LSU, and Brock are conditional and positioned only as `Outreach Before Decision`. NMSU, Lethbridge, Lakehead, BTH, Karlstad, and Linköping remain monitors because eligibility and/or credible full-cost funding gates remain unresolved. No re-entry 12 route meets the retained gate on current evidence.
+Old Dominion and Temple are retained on current official evidence. UAH, UTEP, and URI are conditional and positioned only as `Outreach Before Decision`. UNLV, Bishop's, UQAM, Moncton, Tampere, Paderborn, and Åbo Akademi remain monitors because eligibility and/or credible full-cost funding gates remain unresolved.
 
 ## Validation performed
 
@@ -62,27 +62,27 @@ Idaho, Kansas State, Oklahoma State, West Virginia, LSU, and Brock are condition
 
 ## Material uncertainties or conflicts
 
-- Karlstad and Linköping publish Autumn 2027 program timing; all other routes use recurring or latest-cycle dates that are labeled and must be reconfirmed when their 2027–28 calls open.
+- Tampere and Åbo Akademi publish Fall 2027 application timing; all other routes use recurring or latest-cycle dates that are labeled and must be reconfirmed when 2027–28 calls open.
 - Simultaneous-application and separate-fee rules remain unverified wherever the official source did not publish an exact rule.
 - Offer-specific stipend, mandatory-fee, health-insurance, and summer coverage remain explicit unknowns wherever official pages did not publish them.
-- NMSU's published 3.5 minimum exceeds the applicant's 3.35 GPA; Lethbridge and the two prerequisite-heavy Swedish routes need formal transcript mapping.
-- The verified Swedish scholarships are partial tuition awards without living-cost coverage and are not treated as credible full funding.
+- UNLV's direct-bachelor GPA reference exceeds the applicant's cumulative GPA; UQAM, Moncton, Tampere, and Paderborn need language, grade, or transcript resolution.
+- The verified Finnish scholarships are partial tuition awards without living-cost coverage and are not treated as credible full funding.
 
 ## Records requiring human judgment
 
-- 12 new routes remain conditional or monitor and must not be treated as funded recommendations.
-- Stage 4 may evaluate current faculty only for the 6 new retained/conditional routes; monitor routes do not pass the faculty-review gate.
-- The U.S. and Canadian conditionals need offer-level or net-cost funding confirmation before application spending.
-- All six conditional routes need offer-level tuition, fee, insurance, stipend, renewal, and summer confirmation before application spending.
+- 10 new routes remain conditional or monitor and must not be treated as funded recommendations.
+- Stage 4 may evaluate current faculty only for the 5 new retained/conditional routes; monitor routes do not pass the faculty-review gate.
+- All three conditional U.S. routes need offer-level tuition, fee, insurance, stipend, renewal, and summer confirmation before application spending.
+- The two retained routes still require written offer details; retained is a program gate, not an adequate-net-funding conclusion.
 
 ## Files created or modified
 
-- `data/raw/pass2/stage_03_reentry_12.json`
+- `data/raw/pass2/stage_03_reentry_13.json`
 - `data/processed/pass2/program_verification.csv`
 - `data/processed/pass2/program_sources.csv`
 - `data/processed/pass2/program_exclusions.csv`
-- `data/processed/pass2/stage_03_reentry_12_verification.csv`
-- `data/processed/pass2/stage_03_reentry_12_sources.csv`
+- `data/processed/pass2/stage_03_reentry_13_verification.csv`
+- `data/processed/pass2/stage_03_reentry_13_sources.csv`
 - `data/manifests/pass2/stage_03.json`
 - `state/progress.json`
 
