@@ -1,45 +1,45 @@
 # Stage 3 Result
 
-Generated: 2026-09-11T12:54:07.166360+00:00
+Generated: 2026-09-11T13:57:00.021662+00:00
 
 ## Decision
 
-Pass — program structure, eligibility, and funding verification re-entry 15 is complete.
+Pass — program structure, eligibility, and funding verification re-entry 16 is complete.
 
 ## What changed
 
-All 2,145 Stage 2 candidates now have exactly one controlled retained, conditional, monitor, or excluded status with an evidence-backed reason. The 12 re-entry 15 routes were verified against official program, admissions, funding, fee, and deadline sources. No score or admission recommendation was created.
+All 2,157 Stage 2 candidates now have exactly one controlled retained, conditional, monitor, or excluded status with an evidence-backed reason. The 12 re-entry 16 routes were verified against official program, admissions, funding, fee, and deadline sources. No score or admission recommendation was created.
 
 ## Coverage
 
 | Status | All candidates | New routes |
 | --- | --- | --- |
-| Retained | 47 | 1 |
-| Conditional | 96 | 6 |
-| Monitor | 375 | 5 |
+| Retained | 48 | 1 |
+| Conditional | 103 | 7 |
+| Monitor | 379 | 4 |
 | Excluded | 1627 | 0 |
-| Faculty-review ready | 143 | 7 |
+| Faculty-review ready | 151 | 8 |
 
-### Stage 2 re-entry 15 routes
+### Stage 2 re-entry 16 routes
 
 | Institution | Program | Status | Eligibility gate | Funding gate | Largest unresolved question |
 | --- | --- | --- | --- | --- | --- |
-| University of New Hampshire-Main Campus | [Computer Science, Ph.D.](https://www.unh.edu/program/doctor-philosophy/computer-science) | conditional | pass | resolvable_inquiry | Will UNH offer this applicant renewable year-round support covering tuition, mandatory fees, insurance, stipend, and summer? |
-| University of Missouri-Columbia | [PhD in Computer Science](https://catalog.missouri.edu/collegeofengineering/computerscience/) | conditional | pass | resolvable_inquiry | Will Mizzou issue an international-eligible assistantship with renewable tuition, fee, insurance, stipend, and summer coverage? |
-| University of Wisconsin-Milwaukee | [Computer Science PhD](https://uwm.edu/engineering/academics/computer-science-phd/) | conditional | pass | resolvable_inquiry | Will UWM award and renew an assistantship that covers full tuition, fees, insurance, stipend, and summer for this applicant? |
-| Illinois Institute of Technology | [Computer Science (Ph.D.)](https://www.iit.edu/academics/programs/computer-science-phd) | conditional | pass | resolvable_inquiry | Will the advertised faculty funding slot remain open for Fall 2027 with renewable stipend, tuition, fees, insurance, and summer coverage? |
-| New Jersey Institute of Technology | [Ph.D. Computer Science](https://www.njit.edu/academics/degree/phd-computer-science) | retained | pass | pass | What exact duration, stipend, tuition, mandatory-fee, health-insurance, and summer terms would NJIT put in this applicant's offer? |
-| University of Connecticut | [Computer Science and Engineering (PhD)](https://catalog.uconn.edu/graduate/degree-programs/computer-science-engineering-phd/) | conditional | pass | resolvable_inquiry | Can a verified-fit UConn advisor or the School confirm a renewable international package covering tuition, fees, insurance, stipend, and summer? |
-| École de technologie supérieure | [Maîtrise en génie logiciel — profil avec mémoire (M.Sc.A.)](https://www.etsmtl.ca/programmes-formations/maitrise-genie-logiciel) | monitor | resolvable_question | unverified | Can an eligible software-engineering supervisor accept the applicant and provide a package that covers base tuition, fees, insurance, and living costs beyond the limited exemption? |
-| Université du Québec à Rimouski | [Maîtrise en informatique — profil recherche avec mémoire](https://www.uqar.ca/programmes-domaines-detudes/maitrise-en-informatique/) | monitor | resolvable_question | unverified | Can UQAR confirm French/English completion rules, supervisor entry requirements, and a funding package sufficient for international tuition and living costs? |
-| Saint Mary’s University | [MSc in Applied Science — Computing Science research field](https://www.smu.ca/faculty-of-science/master-in-applied-science-future-students.html) | conditional | resolvable_question | pass | Will a Computing Science supervisor accept the applicant and confirm a two-year international package whose post-tuition value is adequate? |
-| Mälardalen University | [Master's Programme in Software Engineering](https://www.mdu.se/en/malardalen-university/education/international/programme/masters-programme-in-software-engineering) | monitor | resolvable_question | unverified | Does the applicant meet the exact mathematics and computing-credit gate, and how would living costs be funded even if the full-tuition scholarship is won? |
-| Linnaeus University | [Software Technology, Master Programme — 120 credits](https://www.lnu.se/en/programme/software-technology-master-programme-nada2/vaxjo-international-autumn/) | monitor | pass | unverified | What credible source will cover the remaining tuition and two years of living costs if the applicant receives at most the general 75% scholarship? |
-| University of Coimbra | [Master in Informatics Engineering](https://www.uc.pt/en/fctuc/dei/education/masters/master-in-informatics-engineering/) | monitor | resolvable_question | unverified | Will Coimbra recognize the applicant's degree and permit full English completion, and what source will cover remaining tuition and living costs? |
+| Florida Atlantic University | [Doctor of Philosophy with Major in Computer Science](https://www.fau.edu/engineering/eecs/graduate/phd/computer-science/) | conditional | resolvable_question | pass | Does FAU permit this international applicant with a U.S. computer science bachelor's but no master's to enter the direct BS-to-PhD route? |
+| New Mexico Institute of Mining and Technology | [Doctor of Philosophy in Computer Science](https://www.nmt.edu/academics/compsci/graduate.php) | conditional | pass | resolvable_inquiry | Will NMT issue a renewable 0.5 FTE appointment whose stipend and tuition remission also cover fees, insurance, and summer needs? |
+| Southern Illinois University-Carbondale | [Computer Science, Doctor of Philosophy](https://academics.siu.edu/computing-and-technology/computer-science/doctoral/) | conditional | resolvable_question | pass | Will SIU classify this 3.35-GPA bachelor's applicant as exceptional and admit them directly without a master's? |
+| Wichita State University | [PhD in Electrical Engineering and Computer Science](https://catalog.wichita.edu/graduate/engineering/electrical-computer-engineering/phd-in-eecs/) | conditional | resolvable_question | pass | Will a CS-track faculty member commit to advise this bachelor's applicant and certify the record as exceptional? |
+| Michigan Technological University | [Computer Science, PhD](https://www.mtu.edu/gradschool/programs/degrees/computer-science/) | retained | pass | pass | Will the actual assistantship offer provide renewable academic-year and summer support after fees and insurance? |
+| University of Tulsa | [Computer Science, Ph.D.](https://utulsa.edu/programs/computer-science/) | conditional | resolvable_question | pass | Will Tandy confirm direct bachelor's eligibility and the applicant's exact prerequisite fit for the CS PhD? |
+| Western University | [Master of Engineering Science (MESc) in Electrical and Computer Engineering](https://www.eng.uwo.ca/graduate/future-students/Graduate-Degree-Programs/electrical-computer.html) | conditional | resolvable_question | pass | Will ECE accept the applicant's computer science bachelor's as similar preparation and identify a fundable supervisor? |
+| York University | [MASc in Electrical and Computer Engineering](https://futurestudents.yorku.ca/graduate/programs/electrical-engineering-and-computer-science) | conditional | resolvable_question | pass | Will York treat the applicant's CS bachelor's and senior project as equivalent to the listed engineering preparation? |
+| University of Saskatchewan | [Electrical Engineering, Master of Science (M.Sc.) — Thesis](https://grad.usask.ca/programs/electrical-computer-engineering.php) | monitor | resolvable_question | resolvable_inquiry | Can a supervisor confirm both CS-to-ECE eligibility and funding that covers international tuition, fees, insurance, living costs, and summer? |
+| Politecnico di Milano | [Master's Degree in Computer Science and Engineering](https://www.polimi.it/en/education/laurea-programmes/programme-detail/computer-science-and-engineering) | monitor | pass | unverified | Can the applicant win a Fall 2027 scholarship whose waiver and allowance cover total tuition and living costs? |
+| Universidade do Porto | [Master in Informatics and Computing Engineering](https://fe.up.pt/estudar/meic/?lang=en) | monitor | resolvable_question | unverified | Is there an international-eligible Fall 2027 award that covers tuition and living costs from the first year? |
+| University of Minho | [Master in Informatics Engineering](https://www.eng.uminho.pt/en/study/_layouts/15/uminho.portaisuoei.ui/pages/catalogocursodetail.aspx?catid=16&itemid=5482) | monitor | resolvable_question | unverified | Can the applicant complete the bachelor's early enough for a 2027 application round and obtain full English-language, degree-equivalency, and funding terms? |
 
 Retained means an exact research route, formal applicant eligibility, and a credible officially sourced funding route are present. It does not mean admission is likely or that an eventual offer will contain adequate net funding.
 
-NJIT is retained on current official evidence. UNH, Missouri, UWM, Illinois Tech, UConn, and Saint Mary’s are conditional and positioned only as `Outreach Before Decision`. ÉTS, UQAR, Mälardalen, Linnaeus, and Coimbra remain monitors because eligibility and/or credible full-cost funding gates remain unresolved.
+Michigan Tech is retained on current official evidence. FAU, NMT, SIU, Wichita State, Tulsa, Western, and York are conditional and positioned only as `Outreach Before Decision`. Saskatchewan, Politecnico di Milano, Porto, and Minho remain monitors because eligibility and/or credible full-cost funding gates remain unresolved.
 
 ## Validation performed
 
@@ -65,24 +65,25 @@ NJIT is retained on current official evidence. UNH, Missouri, UWM, Illinois Tech
 - None of the latest routes publishes a confirmed Fall 2027 cycle; recurring or latest-cycle dates are labeled and must be reconfirmed when 2027–28 calls open.
 - Simultaneous-application and separate-fee rules remain unverified wherever the official source did not publish an exact rule.
 - Offer-specific stipend, mandatory-fee, health-insurance, and summer coverage remain explicit unknowns wherever official pages did not publish them.
-- ÉTS, UQAR, Saint Mary’s, Mälardalen, and Coimbra need language, degree-equivalency, prerequisite, or supervisor resolution.
+- FAU has conflicting official bachelor's-entry rules; SIU and Wichita publish discretionary bachelor's-entry exceptions.
+- Western, York, and Saskatchewan need CS-to-ECE degree-equivalency or supervisor resolution; Porto and Minho retain admission-language or timing questions.
 - The Canadian and European awards are partial, competitive, unavailable to this applicant, or unverified for living-cost coverage and are not treated as credible full funding.
 
 ## Records requiring human judgment
 
 - 11 new routes remain conditional or monitor and must not be treated as funded recommendations.
-- Stage 4 may evaluate current faculty only for the 7 new retained/conditional routes; monitor routes do not pass the faculty-review gate.
-- All five conditional U.S. routes and Saint Mary’s need offer-level tuition, fee, insurance, stipend, renewal, and summer confirmation before application spending.
-- NJIT still requires written offer details; retained is a program gate, not an adequate-net-funding conclusion.
+- Stage 4 may evaluate current faculty only for the 8 new retained/conditional routes; monitor routes do not pass the faculty-review gate.
+- Every conditional route needs its single eligibility or funding gate resolved before application spending; offer-level tuition, fee, insurance, renewal, and summer terms remain material.
+- Michigan Tech still requires written offer details; retained is a program gate, not an adequate-net-funding conclusion.
 
 ## Files created or modified
 
-- `data/raw/pass2/stage_03_reentry_15.json`
+- `data/raw/pass2/stage_03_reentry_16.json`
 - `data/processed/pass2/program_verification.csv`
 - `data/processed/pass2/program_sources.csv`
 - `data/processed/pass2/program_exclusions.csv`
-- `data/processed/pass2/stage_03_reentry_15_verification.csv`
-- `data/processed/pass2/stage_03_reentry_15_sources.csv`
+- `data/processed/pass2/stage_03_reentry_16_verification.csv`
+- `data/processed/pass2/stage_03_reentry_16_sources.csv`
 - `data/manifests/pass2/stage_03.json`
 - `state/progress.json`
 
