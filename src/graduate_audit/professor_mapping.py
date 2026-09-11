@@ -1074,4 +1074,100 @@ FACULTY_ROSTERS: dict[str, FacultyRoster] = {
             _c("Niusen Chen", "cybersecurity; network systems; trustworthy computing"),
         ),
     ),
+    "University of Louisiana at Lafayette": FacultyRoster(
+        "School of Computing and Informatics",
+        "https://computing.louisiana.edu/about-us/faculty-staff-0",
+        (
+            _c("Sheng Chen", "programming languages; software engineering; language security"),
+            _c("Shuvalaxmi Dass", "software security; misconfiguration security; machine learning"),
+            _c("Xiali Sharon Hei", "mobile and wireless security; privacy; digital forensics"),
+            _c("Arun Lakhotia", "software engineering; cybersecurity; trusted computing"),
+        ),
+    ),
+    "Montana State University": FacultyRoster(
+        "Gianforte School of Computing",
+        "https://web1vm.cs.montana.edu/research.html",
+        (
+            _c("Clem Izurieta", "software engineering; software evolution; cybersecurity; quality assurance"),
+            _c("Matt Revelle", "computer security; program analysis; binary analysis; exploit detection"),
+            _c("Ann Marie Reinhold", "environmental data science; cybersecurity threat detection"),
+            _c("Neda Nazemi", "data mining; machine learning; time-series analysis"),
+        ),
+    ),
+    "Tennessee Technological University": FacultyRoster(
+        "Department of Computer Science",
+        "https://www.tntech.edu/engineering/programs/csc/faculty-and-staff.php",
+        (
+            _c("Amani Altarawneh", "cybersecurity; formal methods; IoT; blockchain consensus"),
+            _c("Anthony Skjellum", "high-performance computing; scalable systems; IoT and blockchain security"),
+            _c("Michael Rogers", "distributed computing; operating systems; network protocols"),
+            _c("Gerald Gannod", "software engineering; agile methods; enterprise software; data"),
+        ),
+    ),
+    "University of Wyoming": FacultyRoster(
+        "Department of Electrical Engineering and Computer Science",
+        "https://www.uwyo.edu/eecs/faculty-staff/index.html",
+        (
+            _c("Duong Nguyen", "distributed systems; fault tolerance; cloud and IoT computing"),
+            _c("Yibo Wang", "systems security; software engineering; blockchain and network measurement"),
+            _c("Diksha Shukla", "secure and trustworthy machine learning; authentication; side channels"),
+            _c("Ruben Gamboa", "formal methods; theorem proving; software verification"),
+        ),
+    ),
+    "Trent University": FacultyRoster(
+        "Department of Computer Science",
+        "https://www.trentu.ca/cois/faculty-research",
+        (
+            _c("Richard Hurley", "distributed systems; systems performance; networking"),
+            _c("Bin Guo", "parallel and distributed computing; concurrency; graph algorithms"),
+            _c("Wenying Feng", "web caching; network intrusion detection; data systems"),
+            _c("Makhdumabanu Saiyed", "network security; IoT; artificial intelligence; machine learning"),
+        ),
+    ),
+    "University of Pisa": FacultyRoster(
+        "Department of Computer Science",
+        "https://di.unipi.it/en/people/",
+        (
+            _c("Stefano Forti", "cloud-edge systems; secure software; distributed applications"),
+            _c("Gabriele Mencagli", "parallel systems; data streams; distributed computing"),
+            _c("Massimo Torquati", "parallel and distributed systems; high-performance data processing"),
+            _c("Chiara Bodei", "formal methods; IoT security; software analysis"),
+        ),
+    ),
+    "University of Florence": FacultyRoster(
+        "Department of Mathematics and Computer Science",
+        "https://www.dimai.unifi.it/vp-484-staff-members.html",
+        (
+            _c("Andrea Bondavalli", "dependability; critical systems; cyber-physical systems"),
+            _c("Alessandro Fantechi", "formal methods; safety-critical systems; verification"),
+            _c("Paolo Lollini", "resilient computing; security; dependability assessment"),
+            _c("Tommaso Zoppi", "intrusion detection; anomaly detection; trustworthy software"),
+        ),
+    ),
+    "Università di Camerino": FacultyRoster(
+        "School of Science and Technology, Computer Science Division",
+        "https://sst.unicam.it/corsi/computer-science",
+        (
+            _c("Andrea Polini", "software testing; model-driven engineering; IoT systems"),
+            _c("Flavio Corradini", "formal specification; verification; distributed and real-time systems"),
+            _c("Andrea Morichetta", "software engineering; cloud-native systems; microservices"),
+            _c("Diletta Cacciagrano", "concurrency; formal semantics; process calculi"),
+        ),
+    ),
+}
+
+
+# Institutions can expose serious routes through more than one department. Use
+# an exact-program override where an institution-level roster would be wrong.
+PROGRAM_FACULTY_ROSTERS: dict[str, FacultyRoster] = {
+    "ca:dli:O19359011007:program:thesis-or-research-master-s:cybersecurity-engineering-masc": FacultyRoster(
+        "Department of Cybersecurity and Intelligent Systems Engineering",
+        "https://www.concordia.ca/ginacody/cybersecurity-intelligent-systems-eng/about/faculty-members.html",
+        (
+            _c("Amr Youssef", "cryptography; information security; privacy; secure systems"),
+            _c("Lingyu Wang", "network security; attack graphs; SDN and NFV security"),
+            _c("Suryadipta Majumdar", "cloud security; threat detection; security automation"),
+            _c("Jeremy Clark", "applied cryptography; blockchain; secure voting systems"),
+        ),
+    ),
 }

@@ -5,7 +5,7 @@ from collections import defaultdict
 from pathlib import Path
 
 from graduate_audit.io import read_csv
-from graduate_audit.professor_mapping import FACULTY_ROSTERS
+from graduate_audit.professor_mapping import FACULTY_ROSTERS, PROGRAM_FACULTY_ROSTERS
 from graduate_audit.schema import RECRUITING_STATUSES
 
 
@@ -25,6 +25,9 @@ def test_roster_configuration_covers_every_serious_institution():
     assert set(FACULTY_ROSTERS) == {row["institution_name"] for row in programs}
     assert all(len(roster.alternatives) == 4 for roster in FACULTY_ROSTERS.values())
     assert all(roster.roster_url.startswith("https://") for roster in FACULTY_ROSTERS.values())
+    serious_program_ids = {row["candidate_program_id"] for row in programs}
+    assert set(PROGRAM_FACULTY_ROSTERS).issubset(serious_program_ids)
+    assert all(len(roster.alternatives) == 4 for roster in PROGRAM_FACULTY_ROSTERS.values())
 
 
 def test_reentry_02_evidence_exactly_covers_new_faculty_ready_routes():
@@ -231,6 +234,47 @@ def test_reentry_10_evidence_exactly_covers_new_faculty_ready_routes():
 def test_reentry_10_has_typed_source_records_for_every_lead_evidence_url():
     raw = json.loads(
         (REPO_ROOT / "data/raw/pass2/stage_04_reentry_10.json").read_text(encoding="utf-8")
+    )
+    source_urls = {row["url"].rstrip("/") for row in raw["sources"]}
+    evidence_urls = set()
+    for professor in raw["professors"]:
+        evidence_urls.add(professor["official_faculty_url"].rstrip("/"))
+        evidence_urls.update(
+            professor[f"recent_work_{index}_url"].rstrip("/")
+            for index in range(1, 4)
+            if professor[f"recent_work_{index}_url"]
+        )
+        evidence_urls.update(
+            url.strip().rstrip("/")
+            for url in professor["extra_evidence_urls"].split("|")
+            if url.strip()
+        )
+    assert evidence_urls <= source_urls
+
+
+def test_reentry_11_evidence_exactly_covers_new_faculty_ready_routes():
+    raw = json.loads(
+        (REPO_ROOT / "data/raw/pass2/stage_04_reentry_11.json").read_text(encoding="utf-8")
+    )
+    newly_ready = {
+        row["candidate_program_id"]
+        for row in _rows("stage_03_reentry_11_verification.csv")
+        if row["faculty_review_ready"] == "yes"
+    }
+    professors = raw["professors"]
+    assert {row["program_id"] for row in professors} == newly_ready
+    assert len(professors) == len(newly_ready) == 9
+    assert all(row["can_supervise_program"].casefold() == "yes" for row in professors)
+    assert all(row["fit_strength"].casefold() == "strong" for row in professors)
+    assert all(row["recent_work_1_url"].startswith("https://") for row in professors)
+    assert all(row["recent_work_1_year"].isdigit() for row in professors)
+    assert all(row["official_email"] or row["official_faculty_url"] for row in professors)
+    assert all(row["recruiting_status"] in RECRUITING_STATUSES for row in professors)
+
+
+def test_reentry_11_has_typed_source_records_for_every_lead_evidence_url():
+    raw = json.loads(
+        (REPO_ROOT / "data/raw/pass2/stage_04_reentry_11.json").read_text(encoding="utf-8")
     )
     source_urls = {row["url"].rstrip("/") for row in raw["sources"]}
     evidence_urls = set()
