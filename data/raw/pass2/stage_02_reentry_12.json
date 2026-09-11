@@ -1,0 +1,294 @@
+{
+  "trigger": "Stage 6 re-entry 11 still produced zero evidence-justified core applications, so the workflow requires another bounded high-recall discovery pass before re-verification.",
+  "scope": "Twelve net-new exact routes: six U.S. research doctorates, three Canadian thesis MSc routes, and three Swedish two-year thesis master's routes. Official program, research, admission, and preliminary funding sources only; no scoring or retention decision.",
+  "candidates": [
+    {
+      "institution_id": "us:ipeds:188030",
+      "institution_name": "New Mexico State University-Main Campus",
+      "country": "United States",
+      "region": "us",
+      "program_name": "Computer Science (Ph.D.)",
+      "degree_type": "PhD",
+      "relevant_degree_route": "Research-intensive computer science doctorate with qualifying milestones and original dissertation research",
+      "research_topic_clusters": ["cyber_physical_systems", "systems_security", "distributed_systems"],
+      "exact_research_fit_signal": "The current doctorate identifies cyber-physical systems, security, and high-performance computing among its research areas and requires original dissertation work.",
+      "preliminary_international_eligibility": "The program admits from relevant bachelor's preparation, but transcript, prerequisite, GPA, and English-language mapping require Stage 3.",
+      "preliminary_funding_signal": "Departmental teaching and grant-funded research assistantships exist, but awards are competitive and no applicant-specific duration or net package is established.",
+      "official_program_url": "https://nmsu.edu/degree-programs/graduate/doctoral/computer-science.html",
+      "official_institution_url": "https://www.nmsu.edu",
+      "seed_adjacency": ["TerraProbe-adjacent", "Evidex-adjacent"],
+      "unresolved_fields": ["Fall 2027 cycle", "degree and prerequisite mapping", "GPA interpretation", "English evidence", "assistantship selection and duration", "fees and insurance", "current supervisor capacity"],
+      "evidence_confidence": "high",
+      "additional_discovery_paths": ["recognized_institution_record", "underrepresented_route_search"],
+      "sources": [
+        {"source_id": "reentry12:nmsu-cs:program", "discovery_path": "official_program_or_department_signal", "evidence_role": "exact doctorate, milestones, and research fit", "title": "Computer Science (Ph.D.)", "url": "https://nmsu.edu/degree-programs/graduate/doctoral/computer-science.html", "accessed_date": "2026-09-11", "evidence_summary": "Official degree page confirms the research-intensive in-person PhD, qualifying and comprehensive exams, dissertation research, and security, cyber-physical-systems, and high-performance-computing scope.", "limitations": "Program existence and broad preparation language do not establish applicant eligibility, admission, or an advisor."},
+        {"source_id": "reentry12:nmsu-cs:funding", "discovery_path": "research_masters_or_scholarship_search", "evidence_role": "assistantship mechanisms and international teaching constraint", "title": "Graduate Financial Aid", "url": "https://computerscience.nmsu.edu/grad-students/graduate-financial-aid.html", "accessed_date": "2026-09-11", "evidence_summary": "Official department page describes competitive teaching assistantships, faculty-controlled research assistantships, full-time and good-standing conditions, and an international teaching-screening requirement.", "limitations": "Availability is limited and competitive; stipend, waiver, duration, summer support, fees, and offer likelihood remain unverified."}
+      ]
+    },
+    {
+      "institution_id": "us:ipeds:142285",
+      "institution_name": "University of Idaho",
+      "country": "United States",
+      "region": "us",
+      "program_name": "Computer Science Ph.D.",
+      "degree_type": "PhD",
+      "relevant_degree_route": "Computer science research doctorate with faculty-advised investigation and dissertation",
+      "research_topic_clusters": ["formal_verification", "software_quality", "systems_security"],
+      "exact_research_fit_signal": "The degree is research-oriented, while current department evidence includes formal methods, model checking, high-assurance software testing, information assurance, and cyber-physical systems.",
+      "preliminary_international_eligibility": "The program expects strong computer science and mathematics preparation and identifies the route as STEM; transcript, GPA, and English evidence remain unverified.",
+      "preliminary_funding_signal": "Faculty-funded research opportunities and graduate fellowships are referenced, but no universal assistantship or complete international package is promised.",
+      "official_program_url": "https://www.uidaho.edu/academics/degree-finder/computer-sci-phd",
+      "official_institution_url": "https://www.uidaho.edu",
+      "seed_adjacency": ["Evidex-adjacent", "TerraProbe-adjacent"],
+      "unresolved_fields": ["Fall 2027 cycle", "degree and course mapping", "GPA threshold", "English evidence", "funding appointment and renewal", "fees and insurance", "current advisor capacity"],
+      "evidence_confidence": "high",
+      "additional_discovery_paths": ["recognized_institution_record", "underrepresented_route_search"],
+      "sources": [
+        {"source_id": "reentry12:idaho-cs:program", "discovery_path": "official_program_or_department_signal", "evidence_role": "exact research doctorate and broad funding path", "title": "Computer science (Ph.D.)", "url": "https://www.uidaho.edu/academics/degree-finder/computer-sci-phd", "accessed_date": "2026-09-11", "evidence_summary": "Official degree page confirms a computer science PhD centered on research, mathematics and computing preparation, faculty advising, external research funding, and fellowship routes.", "limitations": "The page does not guarantee funding, admission, or current supervisor availability."},
+        {"source_id": "reentry12:idaho-cs:faculty", "discovery_path": "current_faculty_topic_signal", "evidence_role": "current formal-methods, security, and software-quality fit", "title": "Rick Sheldon - Computer Science Faculty", "url": "https://www.uidaho.edu/engr/departments/cs/our-people/faculty/rick-sheldon.aspx", "accessed_date": "2026-09-11", "evidence_summary": "Official faculty page records current work in formal methods, specification, model checking, high-assurance software design and testing, information security, and cyber-physical systems.", "limitations": "A faculty profile does not establish willingness, supervision authority for this cycle, capacity, or funding."}
+      ]
+    },
+    {
+      "institution_id": "us:ipeds:155399",
+      "institution_name": "Kansas State University",
+      "country": "United States",
+      "region": "us",
+      "program_name": "Doctor of Philosophy in Computer Science",
+      "degree_type": "PhD",
+      "relevant_degree_route": "Ninety-credit computer science doctorate with research proficiency, proposal, dissertation, and public defense",
+      "research_topic_clusters": ["formal_verification", "software_quality", "cyber_physical_systems"],
+      "exact_research_fit_signal": "Department research includes programming-language semantics and analysis, high-assurance software engineering, and cyber-physical-system verification and validation.",
+      "preliminary_international_eligibility": "Published requirements allow a typical master's-credit component within the doctorate, but applicant degree equivalency, prerequisite gaps, and English conditions require Stage 3.",
+      "preliminary_funding_signal": "The PhD handbook recognizes departmental employment and substantial support mechanisms, but availability, tuition treatment, stipend, and duration are not yet verified for the applicant.",
+      "official_program_url": "https://www.cs.ksu.edu/academics/graduate/phd/",
+      "official_institution_url": "https://www.k-state.edu",
+      "seed_adjacency": ["Evidex-adjacent", "TerraProbe-adjacent"],
+      "unresolved_fields": ["Fall 2027 cycle", "bachelor's and master's credit mapping", "English evidence", "advisor acceptance", "assistantship availability and duration", "tuition and fee treatment", "current lab capacity"],
+      "evidence_confidence": "high",
+      "additional_discovery_paths": ["recognized_institution_record", "lab_or_center_signal"],
+      "sources": [
+        {"source_id": "reentry12:kstate-cs:program", "discovery_path": "official_program_or_department_signal", "evidence_role": "exact doctorate and research milestones", "title": "Doctor of Philosophy in Computer Science", "url": "https://www.cs.ksu.edu/academics/graduate/phd/", "accessed_date": "2026-09-11", "evidence_summary": "Official department page confirms the 90-credit PhD, research-proficiency and preliminary examinations, proposal, dissertation, defense, and research-advisor selection.", "limitations": "Requirements do not prove admission, faculty acceptance, or financial support."},
+        {"source_id": "reentry12:kstate-cs:research", "discovery_path": "lab_or_center_signal", "evidence_role": "high-assurance software and cyber-physical research fit", "title": "Computer Science Research", "url": "https://www.cs.ksu.edu/research/", "accessed_date": "2026-09-11", "evidence_summary": "Official research page identifies high-assurance software engineering through programming-language semantics and analysis and cyber-physical-systems verification and validation.", "limitations": "Research-area presence does not establish a recruiting advisor, capacity, or funding."}
+      ]
+    },
+    {
+      "institution_id": "us:ipeds:207388",
+      "institution_name": "Oklahoma State University-Main Campus",
+      "country": "United States",
+      "region": "us",
+      "program_name": "Doctor of Philosophy in Computer Science",
+      "degree_type": "PhD",
+      "relevant_degree_route": "Computer science research doctorate with examinations, proposal, dissertation, and defense",
+      "research_topic_clusters": ["systems_security", "cyber_physical_systems", "distributed_systems"],
+      "exact_research_fit_signal": "The department reports security and networking laboratories plus work on autonomous systems, explainable AI security, edge computing, IoT, and vehicular networks.",
+      "preliminary_international_eligibility": "The route is open to qualified graduate applicants, but transcript, calculus and computing prerequisites, GPA, and English requirements need applicant-specific mapping.",
+      "preliminary_funding_signal": "The department reports several teaching and research assistantships and says most PhD students who apply for a teaching assistantship receive one, but this is neither universal nor a complete net package.",
+      "official_program_url": "https://cas.okstate.edu/computer_science/graduate/phd_cs",
+      "official_institution_url": "https://go.okstate.edu",
+      "seed_adjacency": ["TerraProbe-adjacent", "Evidex-adjacent"],
+      "unresolved_fields": ["Fall 2027 cycle", "degree and prerequisite mapping", "GPA and English evidence", "assistantship offer and renewal", "tuition, fees, insurance, and summer support", "current advisor capacity"],
+      "evidence_confidence": "high",
+      "additional_discovery_paths": ["recognized_institution_record", "underrepresented_route_search"],
+      "sources": [
+        {"source_id": "reentry12:okstate-cs:program", "discovery_path": "official_program_or_department_signal", "evidence_role": "exact doctorate, dissertation structure, and preliminary funding prevalence", "title": "Doctor of Philosophy Degree", "url": "https://cas.okstate.edu/computer_science/graduate/phd_cs", "accessed_date": "2026-09-11", "evidence_summary": "Official department page confirms the computer science PhD, research examinations, proposal and dissertation defense, and describes competitive teaching and research assistantships.", "limitations": "Funding prevalence is not a guarantee and the displayed stipend and tuition language require current offer-level confirmation."},
+        {"source_id": "reentry12:okstate-cs:labs", "discovery_path": "lab_or_center_signal", "evidence_role": "current security, networking, and reasoning lab signal", "title": "Research Labs", "url": "https://cas.okstate.edu/computer_science/about_us/research_labs", "accessed_date": "2026-09-11", "evidence_summary": "Official department page lists current Security and Networking, Advanced Networks and Telecommunications Security, reasoning and AI, and robotics laboratories.", "limitations": "A lab listing does not establish which faculty may supervise, recruit, or fund a new doctoral student."}
+      ]
+    },
+    {
+      "institution_id": "us:ipeds:238032",
+      "institution_name": "West Virginia University",
+      "country": "United States",
+      "region": "us",
+      "program_name": "Ph.D. in Computer Science and Information Science",
+      "degree_type": "PhD",
+      "relevant_degree_route": "Research doctorate in computer science and information science with advisory committee, dissertation, and original contribution",
+      "research_topic_clusters": ["software_quality", "systems_security", "distributed_systems"],
+      "exact_research_fit_signal": "The department organizes doctoral work across computing concentrations and offers adjacent software engineering, computer forensics, and systems research pathways.",
+      "preliminary_international_eligibility": "The doctorate targets applicants with strong academic preparation; exact degree, GPA, prerequisite, and English-speaking evidence remain Stage 3 work.",
+      "preliminary_funding_signal": "The department describes GTA and GRA support, tuition waiver with some exclusions, and a best-effort doctoral support policy, explicitly without a guarantee.",
+      "official_program_url": "https://lcsee.statler.wvu.edu/graduate",
+      "official_institution_url": "https://www.wvu.edu",
+      "seed_adjacency": ["TerraProbe-adjacent", "Evidex-adjacent"],
+      "unresolved_fields": ["Fall 2027 cycle", "degree and GPA mapping", "English and spoken-English evidence", "advisor and concentration fit", "GTA or GRA offer and renewal", "college tuition, fees, insurance, and summer support"],
+      "evidence_confidence": "high",
+      "additional_discovery_paths": ["recognized_institution_record", "first_audit_program"],
+      "sources": [
+        {"source_id": "reentry12:wvu-cs:graduate", "discovery_path": "official_program_or_department_signal", "evidence_role": "exact doctorate, research structure, and funding boundaries", "title": "Graduate Program", "url": "https://lcsee.statler.wvu.edu/graduate", "accessed_date": "2026-09-11", "evidence_summary": "Official department page confirms the Computer Science and Information Science PhD and explains GTA and GRA mechanisms, tuition-waiver boundaries, and that support is not guaranteed.", "limitations": "Concentration fit, eligibility, actual appointment, uncovered tuition and fees, and duration require Stage 3 verification."},
+        {"source_id": "reentry12:wvu-cs:catalog", "discovery_path": "recognized_institution_record", "evidence_role": "doctoral research and dissertation requirements", "title": "Computer Science, Ph.D.", "url": "https://catalog.wvu.edu/graduate/collegeofengineeringandmineralresources/thelanedepartmentofcomputerscienceandelectricalengineering/cs/phd/", "accessed_date": "2026-09-11", "evidence_summary": "Official graduate catalog confirms a research plan, advisor and committee governance, and an original computer science dissertation contribution.", "limitations": "Catalog requirements do not identify a recruiting supervisor or guarantee funding."}
+      ]
+    },
+    {
+      "institution_id": "us:ipeds:159391",
+      "institution_name": "Louisiana State University and Agricultural & Mechanical College",
+      "country": "United States",
+      "region": "us",
+      "program_name": "Ph.D. in Computer Science and Engineering",
+      "degree_type": "PhD",
+      "relevant_degree_route": "Computer science and engineering doctorate with research qualification, proposal, dissertation, and defense",
+      "research_topic_clusters": ["software_quality", "formal_verification", "systems_security"],
+      "exact_research_fit_signal": "Current research groups cover program analysis, compilers, requirements, code analysis, software evolution, systems security, dependable cyber-physical systems, and formal methods.",
+      "preliminary_international_eligibility": "The doctorate uses departmental and graduate-school admission review; exact prior-degree, course, GPA, and English mapping remain unresolved.",
+      "preliminary_funding_signal": "Teaching assistantships are prioritized toward top doctoral admits and research assistantships are faculty-controlled; neither is assured before an offer.",
+      "official_program_url": "https://www.lsu.edu/eng/cse/programs/graduate_program/graduate_phd.php",
+      "official_institution_url": "https://www.lsu.edu",
+      "seed_adjacency": ["Evidex-adjacent", "TerraProbe-adjacent"],
+      "unresolved_fields": ["Fall 2027 cycle", "degree and course mapping", "GPA and English evidence", "advisor capacity", "assistantship offer and annual renewal", "tuition, fees, insurance, and summer coverage"],
+      "evidence_confidence": "high",
+      "additional_discovery_paths": ["recognized_institution_record", "recent_paper_signal"],
+      "sources": [
+        {"source_id": "reentry12:lsu-cse:program", "discovery_path": "official_program_or_department_signal", "evidence_role": "exact doctorate, milestones, and assistantship renewal boundary", "title": "PhD in Computer Science & Engineering", "url": "https://www.lsu.edu/eng/cse/programs/graduate_program/graduate_phd.php", "accessed_date": "2026-09-11", "evidence_summary": "Official division page confirms research qualification, proposal and dissertation requirements and describes annual teaching-assistantship award and renewal conditions.", "limitations": "The page does not establish an applicant's admission, initial award, full package, or supervisor capacity."},
+        {"source_id": "reentry12:lsu-cse:research", "discovery_path": "lab_or_center_signal", "evidence_role": "current software, security, systems, and formal-methods fit", "title": "Research Groups", "url": "https://www.lsu.edu/eng/cse/research/researchgroups.php", "accessed_date": "2026-09-11", "evidence_summary": "Official division page lists active groups in applied software engineering, programming systems, software evolution, systems security, and dependable cyber-physical systems.", "limitations": "Group presence and faculty topics do not demonstrate current doctoral recruitment or funding."}
+      ]
+    },
+    {
+      "institution_id": "ca:dli:O18776949622",
+      "institution_name": "University of Lethbridge",
+      "country": "Canada",
+      "region": "canada",
+      "program_name": "MSc in Computer Science (Thesis)",
+      "degree_type": "Thesis or research master's",
+      "relevant_degree_route": "Twenty-four-month computer science MSc with faculty supervision, original research, thesis, and oral defense",
+      "research_topic_clusters": ["software_quality", "distributed_systems", "ai_for_se"],
+      "exact_research_fit_signal": "The thesis program supports original work in algorithms, systems, computational intelligence, software engineering, and related computing fields.",
+      "preliminary_international_eligibility": "A four-year computer science degree or equivalent, 3.0 GPA in the final coursework, specified upper-level computing preparation, English evidence, and a secured supervisor are expected.",
+      "preliminary_funding_signal": "Competitive funding packages and teaching assistantships are available, but amount, international tuition interaction, duration, and net affordability are unverified.",
+      "official_program_url": "https://www.ulethbridge.ca/future-student/graduate-studies/master-science/computer-science",
+      "official_institution_url": "https://www.ulethbridge.ca",
+      "seed_adjacency": ["TerraProbe-adjacent", "Evidex-adjacent"],
+      "unresolved_fields": ["Fall 2027 cycle", "four-year degree equivalency", "upper-level course and GPA mapping", "English evidence", "secured supervisor", "funding amount and duration", "international tuition and net cost"],
+      "evidence_confidence": "high",
+      "additional_discovery_paths": ["recognized_institution_record", "underrepresented_route_search"],
+      "sources": [
+        {"source_id": "reentry12:lethbridge-cs:program", "discovery_path": "official_program_or_department_signal", "evidence_role": "exact thesis route, prerequisites, and research fit", "title": "Computer Science (MSc)", "url": "https://www.ulethbridge.ca/future-student/graduate-studies/master-science/computer-science", "accessed_date": "2026-09-11", "evidence_summary": "Official program page confirms the 24-month thesis MSc, original research, thesis defense, algorithms, systems, computational intelligence and software-engineering scope, preparation requirements, and supervisor prerequisite.", "limitations": "Equivalency, admission, supervisor commitment, and cycle-specific requirements remain unverified."},
+        {"source_id": "reentry12:lethbridge-cs:funding", "discovery_path": "research_masters_or_scholarship_search", "evidence_role": "admission-award and assistantship mechanisms", "title": "Awards & Scholarships", "url": "https://www.ulethbridge.ca/future-student/graduate-studies/funding-opportunities", "accessed_date": "2026-09-11", "evidence_summary": "Official Graduate Studies page describes automatic consideration for a graduate research admission award, graduate-assistantship consideration, and possible supervisor research support or stipend.", "limitations": "Admission does not guarantee an award; applicant-specific amount, duration, international tuition offset, and net cost remain unresolved."}
+      ]
+    },
+    {
+      "institution_id": "ca:dli:O19394569014",
+      "institution_name": "Brock University",
+      "country": "Canada",
+      "region": "canada",
+      "program_name": "Computer Science MSc — Thesis Stream",
+      "degree_type": "Thesis or research master's",
+      "relevant_degree_route": "Two-year research-based computer science master's with coursework, supervised thesis, and defense",
+      "research_topic_clusters": ["formal_verification", "ai_for_se", "software_quality"],
+      "exact_research_fit_signal": "The research MSc includes a thesis stream and current areas in computational logic, artificial intelligence, data mining, algorithms, and parallelism.",
+      "preliminary_international_eligibility": "Applicants need a four-year computer science degree, high-B standing, broad computing and mathematics prerequisites, research statement, references, and English evidence; mapping remains Stage 3 work.",
+      "preliminary_funding_signal": "Full-time thesis students receive graduate-assistantship funding under published departmental language, but current amount, taxation, tuition, extra costs, and living sufficiency require verification.",
+      "official_program_url": "https://brocku.ca/programs/graduate/msc-cosc/",
+      "official_institution_url": "https://brocku.ca",
+      "seed_adjacency": ["Evidex-adjacent", "TerraProbe-adjacent"],
+      "unresolved_fields": ["Fall 2027 cycle", "four-year degree and course mapping", "high-B interpretation", "English evidence", "potential supervisor", "current funding amount and guarantee", "international tuition, tax, and net cost"],
+      "evidence_confidence": "high",
+      "additional_discovery_paths": ["recognized_institution_record", "first_audit_program"],
+      "sources": [
+        {"source_id": "reentry12:brock-cs:program", "discovery_path": "official_program_or_department_signal", "evidence_role": "exact thesis route, research scope, and application materials", "title": "Computer Science (MSc)", "url": "https://brocku.ca/programs/graduate/msc-cosc/", "accessed_date": "2026-09-11", "evidence_summary": "Official program page confirms the research-based MSc, two-year thesis option, artificial-intelligence thesis specialization, research areas, references, and research-interest statement.", "limitations": "Minimum requirements and potential-supervisor identification do not establish admission or supervision capacity."},
+        {"source_id": "reentry12:brock-cs:funding", "discovery_path": "research_masters_or_scholarship_search", "evidence_role": "thesis-student assistantship and net-cost warning", "title": "Financial support - Computer Science", "url": "https://brocku.ca/mathematics-science/computer-science/programs/msc-program/msc-financial/", "accessed_date": "2026-09-11", "evidence_summary": "Official department page states that full-time thesis students receive a graduate assistantship and may obtain supervisor research funding, while warning that international costs can exceed the package.", "limitations": "Displayed numeric examples are old; current award amount, duration, tuition, tax, and living-cost sufficiency need fresh Stage 3 confirmation."}
+      ]
+    },
+    {
+      "institution_id": "ca:dli:O19396019447",
+      "institution_name": "Lakehead University",
+      "country": "Canada",
+      "region": "canada",
+      "program_name": "Master of Science in Computer Science — Thesis Route",
+      "degree_type": "Thesis or research master's",
+      "relevant_degree_route": "Computer science master's with thesis route, research supervision, references, and optional AI specialization",
+      "research_topic_clusters": ["ai_for_se", "distributed_systems", "systems_security"],
+      "exact_research_fit_signal": "The official route includes a thesis option and a two-year thesis-based AI specialization, with computer science research preparation and supervisor engagement encouraged.",
+      "preliminary_international_eligibility": "A four-year honours computer science degree or equivalent with B standing, computing prerequisites, references, background form, and English evidence are expected; Nigerian equivalency needs mapping.",
+      "preliminary_funding_signal": "The university exposes a graduate funding database and recognizes funding offers and assistantships, but the program page gives no guaranteed package or net-cost coverage.",
+      "official_program_url": "https://www.lakeheadu.ca/programs/graduate/programs/masters/computer-science",
+      "official_institution_url": "https://www.lakeheadu.ca",
+      "seed_adjacency": ["TerraProbe-adjacent", "Evidex-adjacent"],
+      "unresolved_fields": ["Fall 2027 cycle", "honours-degree equivalency", "B standing and prerequisite mapping", "English evidence", "potential supervisor", "assistantship or award amount and duration", "international tuition and net cost"],
+      "evidence_confidence": "high",
+      "additional_discovery_paths": ["recognized_institution_record", "underrepresented_route_search"],
+      "sources": [
+        {"source_id": "reentry12:lakehead-cs:program", "discovery_path": "official_program_or_department_signal", "evidence_role": "exact thesis route, AI option, and admission requirements", "title": "Computer Science", "url": "https://www.lakeheadu.ca/programs/graduate/programs/masters/computer-science", "accessed_date": "2026-09-11", "evidence_summary": "Official program page confirms thesis, project and course routes, a two-year thesis-based AI specialization, honours-computer-science or equivalent preparation, B standing, references, English evidence, and a background form.", "limitations": "The page does not guarantee admission, supervision, funding, or 2027 availability."},
+        {"source_id": "reentry12:lakehead-cs:international", "discovery_path": "research_masters_or_scholarship_search", "evidence_role": "international equivalency and thesis-supervisor guidance", "title": "Steps to Applying to Lakehead", "url": "https://www.lakeheadu.ca/international/applying/enrolling", "accessed_date": "2026-09-11", "evidence_summary": "Official international page states a four-year-equivalent degree and B or second-class-upper standing expectation and advises thesis applicants to contact a potential supervisor and complete English evidence.", "limitations": "General international guidance does not establish program admission, a willing supervisor, funding, or affordability."}
+      ]
+    },
+    {
+      "institution_id": "ror:0093a8w51",
+      "institution_name": "Blekinge Institute of Technology",
+      "country": "Sweden",
+      "region": "europe",
+      "program_name": "Master's Programme in Software Engineering, 120 credits",
+      "degree_type": "Thesis or research master's",
+      "relevant_degree_route": "Two-year English-taught software engineering master's with research-preparatory coursework and 30-credit thesis",
+      "research_topic_clusters": ["software_quality", "formal_verification", "ai_for_se"],
+      "exact_research_fit_signal": "The curriculum emphasizes requirements, architecture, testing, quality assurance, process improvement, research preparation, and a 30-credit software-engineering thesis.",
+      "preliminary_international_eligibility": "A computing or software-engineering bachelor's with detailed programming, systems, software-engineering, mathematics, and English preparation is required; transcript mapping remains unresolved.",
+      "preliminary_funding_signal": "Non-EU fee payers may compete for a BTH partial tuition scholarship, but it excludes living costs and neither selection nor remaining tuition is assured.",
+      "official_program_url": "https://www.bth.se/english/education/programmes/masters-programme-in-software-engineering-120-credits",
+      "official_institution_url": "https://www.bth.se/english/",
+      "seed_adjacency": ["Evidex-adjacent", "TerraProbe-adjacent"],
+      "unresolved_fields": ["Fall 2027 cycle", "degree and ECTS subject mapping", "mathematics and software-engineering prerequisites", "English evidence", "scholarship selection and percentage", "remaining tuition and living costs", "thesis-group fit"],
+      "evidence_confidence": "high",
+      "additional_discovery_paths": ["recognized_institution_record", "underrepresented_route_search"],
+      "sources": [
+        {"source_id": "reentry12:bth-se:program", "discovery_path": "official_program_or_department_signal", "evidence_role": "exact two-year master's, prerequisites, software fit, and thesis", "title": "Master's Programme in Software Engineering, 120 credits", "url": "https://www.bth.se/english/education/programmes/masters-programme-in-software-engineering-120-credits", "accessed_date": "2026-09-11", "evidence_summary": "Official program page confirms the English, full-time, two-year software-engineering master's, detailed computing and mathematics prerequisites, research preparation, and 30-credit thesis.", "limitations": "Applicant equivalency, admission, future curriculum, thesis placement, and scholarship outcome remain unverified."},
+        {"source_id": "reentry12:bth-se:scholarship", "discovery_path": "research_masters_or_scholarship_search", "evidence_role": "international partial tuition scholarship and living-cost boundary", "title": "Scholarships", "url": "https://www.bth.se/english/education/application-and-admission/scholarships", "accessed_date": "2026-09-11", "evidence_summary": "Official BTH page describes a competitive partial tuition scholarship for eligible non-EU/EEA applicants who choose a campus master's as first choice.", "limitations": "The scholarship is selective, excludes living expenses, and does not establish the applicant's reduction or residual cost."}
+      ]
+    },
+    {
+      "institution_id": "ror:05s754026",
+      "institution_name": "Karlstad University",
+      "country": "Sweden",
+      "region": "europe",
+      "program_name": "Master in Computer Science",
+      "degree_type": "Thesis or research master's",
+      "relevant_degree_route": "Two-year English-taught computer science master's with research project options and 30-credit thesis",
+      "research_topic_clusters": ["systems_security", "distributed_systems", "software_quality"],
+      "exact_research_fit_signal": "The curriculum focuses software-defined networked systems and cybersecurity and includes current research, research-project options, and an obligatory 30-credit thesis.",
+      "preliminary_international_eligibility": "A 180-credit bachelor's with 90 credits in computer science and specified programming, software, operating-systems, networking, statistics, and English preparation is required.",
+      "preliminary_funding_signal": "The current university Global Scholarship lists this program and covers 50 percent of tuition for a small number of selected non-EU students, not living expenses.",
+      "official_program_url": "https://www.kau.se/en/cs/education/programmes-and-courses/programmes/master-computer-science",
+      "official_institution_url": "https://www.kau.se/en",
+      "seed_adjacency": ["TerraProbe-adjacent", "Evidex-adjacent"],
+      "unresolved_fields": ["Fall 2027 cycle", "degree and 90-ECTS mapping", "named prerequisite equivalencies", "English evidence", "scholarship competitiveness and renewal", "remaining tuition and living costs", "thesis-supervisor fit"],
+      "evidence_confidence": "high",
+      "additional_discovery_paths": ["recognized_institution_record", "underrepresented_route_search"],
+      "sources": [
+        {"source_id": "reentry12:karlstad-cs:program", "discovery_path": "official_program_or_department_signal", "evidence_role": "exact English two-year master's, prerequisites, research options, and thesis", "title": "Master in Computer Science", "url": "https://www.kau.se/en/cs/education/programmes-and-courses/programmes/master-computer-science", "accessed_date": "2026-09-11", "evidence_summary": "Official program page confirms a 120-ECTS English MSc with networked-systems and cybersecurity focus, precise computing prerequisites, research projects, and an obligatory 30-ECTS thesis.", "limitations": "Program requirements do not establish applicant equivalency, admission, thesis placement, or financing."},
+        {"source_id": "reentry12:karlstad-cs:scholarship", "discovery_path": "research_masters_or_scholarship_search", "evidence_role": "current program-eligible partial tuition scholarship", "title": "Karlstad University Global Scholarship", "url": "https://www.kau.se/en/karlstad-university-global-scholarship", "accessed_date": "2026-09-11", "evidence_summary": "Official university page lists Master in Computer Science as eligible for a merit-based 50-percent tuition reduction for selected non-EU/EEA students, renewable with satisfactory results.", "limitations": "Only a small number are awarded; living expenses and remaining tuition are excluded and 2027 terms may change."}
+      ]
+    },
+    {
+      "institution_id": "ror:05ynxx418",
+      "institution_name": "Linköping University",
+      "country": "Sweden",
+      "region": "europe",
+      "program_name": "Computer Science, Master's Programme, 120 credits",
+      "degree_type": "Thesis or research master's",
+      "relevant_degree_route": "Two-year English-taught computer science master's with advanced systems and theory electives and 30-credit scientific thesis",
+      "research_topic_clusters": ["formal_verification", "systems_security", "distributed_systems"],
+      "exact_research_fit_signal": "The program spans theoretical computer science, programming languages, information security, databases, AI and internet computing and culminates in a 30-credit scientific thesis.",
+      "preliminary_international_eligibility": "A bachelor's equivalent with adequate computer science background, programming skill, and English evidence is required; course-level equivalency and selection remain unresolved.",
+      "preliminary_funding_signal": "A limited LiU International Scholarship normally reduces tuition by 50 percent for eligible first-choice non-EU applicants; it does not cover all tuition or living costs.",
+      "official_program_url": "https://liu.se/en/education/program/6mics",
+      "official_institution_url": "https://liu.se/en",
+      "seed_adjacency": ["Evidex-adjacent", "TerraProbe-adjacent"],
+      "unresolved_fields": ["Fall 2027 cycle", "bachelor's and computing-course equivalency", "English evidence", "selection competitiveness", "scholarship academic threshold and award", "remaining tuition and living costs", "thesis-supervisor fit"],
+      "evidence_confidence": "high",
+      "additional_discovery_paths": ["recognized_institution_record", "recent_paper_signal"],
+      "sources": [
+        {"source_id": "reentry12:liu-cs:program", "discovery_path": "official_program_or_department_signal", "evidence_role": "exact two-year English master's, computing breadth, and degree", "title": "Computer Science, Master's Programme, 120 credits", "url": "https://liu.se/en/education/program/6mics", "accessed_date": "2026-09-11", "evidence_summary": "Official program page confirms the English 120-credit MSc, computing and programming preparation, systems, security, theory and programming-language options, and non-EU tuition.", "limitations": "Applicant equivalency, admission, 2027 offering details, and thesis placement remain unresolved."},
+        {"source_id": "reentry12:liu-cs:scholarship", "discovery_path": "research_masters_or_scholarship_search", "evidence_role": "current international tuition scholarship and conditions", "title": "Scholarships", "url": "https://liu.se/en/article/scholarships", "accessed_date": "2026-09-11", "evidence_summary": "Official university page describes a limited LiU International Scholarship normally reducing tuition by 50 percent for eligible fee-paying first-choice master's applicants with strong academic results.", "limitations": "The scholarship is selective, normally partial, excludes living costs, and its annual eligibility and award level can change."}
+      ]
+    }
+  ],
+  "false_negative_audits": [
+    {
+      "institution_id": "us:ipeds:142285",
+      "exclusion_reason_category": "catalog_signal_without_exact_doctoral_route",
+      "original_supporting_evidence": "The original funnel retained only mechanical IPEDS computing signals for the University of Idaho and missed its current Computer Science PhD plus formal-methods, high-assurance-software, security, and cyber-physical-systems evidence."
+    },
+    {
+      "institution_id": "ror:0093a8w51",
+      "exclusion_reason_category": "outside_bounded_positive_seed_screen",
+      "original_supporting_evidence": "Blekinge Institute of Technology was absent from the original bounded funnel despite a current English two-year Software Engineering master's with research preparation, a 30-credit thesis, and an international partial-tuition scholarship route."
+    }
+  ]
+}

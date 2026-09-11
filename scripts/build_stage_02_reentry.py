@@ -47,8 +47,9 @@ DEFINITION_PATHS = [
     REPO_ROOT / "data/raw/pass2/stage_02_reentry_09.json",
     REPO_ROOT / "data/raw/pass2/stage_02_reentry_10.json",
     REPO_ROOT / "data/raw/pass2/stage_02_reentry_11.json",
+    REPO_ROOT / "data/raw/pass2/stage_02_reentry_12.json",
 ]
-CURRENT_REENTRY_NUMBER = 11
+CURRENT_REENTRY_NUMBER = 12
 CURRENT_REENTRY_LABEL = f"{CURRENT_REENTRY_NUMBER:02d}"
 CURRENT_REENTRY_PREFIX = f"reentry{CURRENT_REENTRY_LABEL}"
 PREVIOUS_REENTRY_LABEL = f"{CURRENT_REENTRY_NUMBER - 1:02d}"
@@ -477,13 +478,12 @@ def build_report(
         "EHESO/ETER and several national registries remain blocked.",
         "- Current faculty appointment, supervision authority, and capacity remain Stage 4 work "
         "after program verification.",
-        "- Binghamton, Louisiana-Lafayette, Montana State, Tennessee Tech, Memphis, and Wyoming require "
-        "transcript-level entry and offer-level assistantship review; Wyoming's direct-entry language is "
-        "internally inconsistent and every recorded support mechanism remains preliminary.",
-        "- Trent, Waterloo, and Concordia require degree-equivalency, willing-supervisor, international-package, "
-        "and net-cost verification; published funding prevalence or minimums are not applicant-specific awards.",
-        "- Pisa, Florence, and Camerino require course, qualification, language, and visa-document mapping plus "
-        "a viable tuition and living-cost plan; DSU, ERDIS, and university awards are selective or annual.",
+        "- The six current U.S. doctoral routes require transcript-level entry, current-advisor capacity, "
+        "and offer-level assistantship review; every recorded support mechanism remains preliminary.",
+        "- The three current Canadian thesis routes require degree and course equivalency, willing-supervisor, "
+        "current international-package, and net-cost verification.",
+        "- The three current Swedish routes require ECTS and English mapping plus a viable tuition and "
+        "living-cost plan; every recorded institutional scholarship is selective and partial.",
         "- Existing Stage 3-6 artifacts are intentionally unchanged and therefore do not yet include "
         "these routes.",
         "- Discovery remains explicitly non-saturated; this pass reduces observed false-negative risk "
@@ -492,10 +492,9 @@ def build_report(
         "## Records requiring human judgment",
         "",
         "Stage 3 must determine whether each route is actually eligible and credibly funded. The "
-        "highest-impact judgments are the six U.S. transcript and assistantship conditions, whether the Trent, "
-        "Waterloo, and Concordia research-master routes clear supervisor and international net-cost gates, "
-        "how Wyoming's conflicting direct-entry language resolves, and whether the three Italian routes combine "
-        "qualification equivalency with viable scholarship and living-cost coverage.",
+        "highest-impact judgments are the six U.S. transcript and assistantship conditions, whether the three "
+        "Canadian thesis routes clear supervisor and international net-cost gates, and whether the three Swedish "
+        "routes combine qualification equivalency with a viable scholarship and living-cost plan.",
         "",
         "## Files created or modified",
         "",
@@ -724,7 +723,7 @@ def main() -> None:
         "downstream_integration_check": {
             "command": "python -m pytest -q",
             "result": "EXPECTED_FAIL_PENDING_STAGE_3_REENTRY",
-            "passed": 106,
+            "passed": 112,
             "failed": 1,
             "failure": "tests/test_program_verification.py::test_every_stage2_candidate_has_exactly_one_controlled_status",
             "reason": f"program_verification.csv has {verification_rows} rows while the Stage 2 funnel now has {len(merged)}; Stage 3 was intentionally not modified in this one-stage run",
@@ -738,9 +737,9 @@ def main() -> None:
             "Current faculty appointment, supervision authority, and capacity remain unverified.",
             "Other active catalog/manual-review rows remain unresolved and discovery remains non-saturated.",
             "European registry coverage and national-registry access limitations from the initial Stage 2 run remain.",
-            "The six U.S. doctoral routes require transcript-level entry and offer-level assistantship review; Wyoming's direct-entry language conflicts across official pages and only preliminary support mechanisms are recorded.",
-            "The Trent, Waterloo, and Concordia research-master routes require degree-equivalency, willing-supervisor, international-package, and net-cost verification.",
-            "Pisa, Florence, and Camerino require course, qualification, language, and visa-document mapping plus a viable tuition and living-cost plan; DSU, ERDIS, and university awards are selective or annual.",
+            "The six current U.S. doctoral routes require transcript-level entry, current-advisor capacity, and offer-level assistantship review; only preliminary support mechanisms are recorded.",
+            "The three current Canadian thesis routes require degree and course equivalency, willing-supervisor, international-package, and net-cost verification.",
+            "The three current Swedish routes require ECTS, English, and thesis-fit mapping plus a viable tuition and living-cost plan; all recorded institutional scholarships are selective and partial.",
             *(
                 [
                     f"Automated source retrieval exceptions remain for {len(retrieval_qa['unresolved_source_ids'])} of {retrieval_qa['checked']} current-round official source records; all were browser-reviewed during discovery."
