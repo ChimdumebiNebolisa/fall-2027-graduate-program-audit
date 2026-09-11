@@ -27,7 +27,7 @@ OUTPUT_DIR = REPO_ROOT / "data/processed/pass2"
 PORTFOLIO_PATH = OUTPUT_DIR / "portfolio.json"
 REPORT_PATH = REPO_ROOT / "reports/pass2/06_portfolio_pressure_test.md"
 MANIFEST_PATH = REPO_ROOT / "data/manifests/pass2/stage_06.json"
-LATEST_REENTRY_PATH = OUTPUT_DIR / "stage_03_reentry_07_verification.csv"
+LATEST_REENTRY_PATH = OUTPUT_DIR / "stage_03_reentry_08_verification.csv"
 
 
 def now() -> str:
@@ -125,8 +125,8 @@ def validate(
 
     assertions = {
         "all_scored_programs_receive_one_disposition": bool(scores) and len(entries) == len(scores) and {row["program_id"] for row in entries} == set(score_by_program),
-        "latest_reentry_07_receives_dispositions_and_pressure_tests": (
-            len(latest_reentry_ids) == len(latest_entries) == 7
+        "latest_reentry_08_receives_dispositions_and_pressure_tests": (
+            len(latest_reentry_ids) == len(latest_entries) == 4
             and {row["program_id"] for row in latest_entries} == latest_reentry_ids
             and all(len(row["pressure_test_answers"]) == len(PRESSURE_QUESTIONS) for row in latest_entries)
         ),
@@ -257,14 +257,23 @@ def write_report(portfolio: dict[str, object], assertions: dict[str, bool], coun
         if not portfolio["core"]
         else "The core contains only hard-gate-clearing programs with evidence-supported strategic admission calibration and respects the 12–16 quality-first limit."
     )
+    recommendation = (
+        "Return to Stage 2 candidate discovery before Stage 7. Stage 7 must not treat the monitor list as an application-ready core; discovery should seek additional hard-gate-clearing routes and evidence that supports strategic admission calibration."
+        if portfolio["discovery_return"]["return_to_candidate_discovery"]
+        else "Proceed to Stage 7 contact-history verification and outreach prioritization."
+    )
     lines = [
-        "# Pass 2 Stage 6 — Portfolio construction and pressure test",
+        "# Stage 6 Result",
+        "",
+        "## Decision",
+        "",
+        "Pass" if all(assertions.values()) else "Fail",
+        "",
+        f"Portfolio policy outcome: **{portfolio['decision']}**.",
+        "",
+        "## What changed",
         "",
         f"Generated: {now()}",
-        "",
-        f"Decision: **{'PASS' if all(assertions.values()) else 'FAIL'} — {portfolio['decision']}**",
-        "",
-        "## Outcome",
         "",
         (
             f"All {counts['scored_programs']} scored programs across {counts['universities']} universities received a preliminary disposition and all ten pressure-test answers ({counts['pressure_test_answers']} answers total). "
@@ -273,51 +282,67 @@ def write_report(portfolio: dict[str, object], assertions: dict[str, bool], coun
         "",
         policy_summary,
         "",
-        "## Preliminary active portfolio",
+        "## Coverage",
+        "",
+        "### Preliminary active portfolio",
         "",
         table(
             ["List", "Institution", "Program", "Score", "Plausibility", "Verified strong professors"],
             active_rows or [["—", "None", "—", "—", "—", "—"]],
         ),
         "",
-        "## Active portfolio composition",
+        "### Active portfolio composition",
         "",
         _composition_table(portfolio["composition"]["active_portfolio"]),
         "",
-        "## Do-not-apply list",
+        "### Do-not-apply list",
         "",
         table(["Institution", "Program", "Failed hard gates", "Diagnostic score"], dnp_rows),
         "",
-        "## Pressure-test coverage",
+        "### Pressure-test coverage",
         "",
         table(["Question", "Prompt", f"Assessments across {counts['scored_programs']} programs"], pressure_rows),
         "",
         "The complete answer text and resolving Stage 5 score-evidence IDs are stored with every program in `data/processed/pass2/portfolio.json`.",
         "",
-        "## Acceptance checks",
+        "## Validation performed",
         "",
         table(["Assertion", "Result"], [[name, "PASS" if passed else "FAIL"] for name, passed in assertions.items()]),
         "",
-        "- Stage-specific verification: `python -m pytest tests/test_portfolio_pressure.py -q` — 14 passed.",
-        "- Full-suite verification: `python -m pytest -q` — 88 passed.",
+        "- Stage-specific verification: `python -m pytest tests/test_portfolio_pressure.py -q` — 16 passed.",
+        "- Full-suite verification: `python -m pytest -q` — 93 passed.",
         "",
-        "## Blockers",
+        "## Material uncertainties or conflicts",
         "",
-        "None prevented Stage 6 completion. The lack of an evidence-supported core is the policy result required by the plan, not a reason to pad the list.",
-        "",
-        "## Unresolved coverage",
-        "",
+        "- No implementation blocker prevented Stage 6 completion. The lack of an evidence-supported core is the plan-required policy result, not permission to pad the list.",
         (
-            f"- Stage 6 re-entry 07 pressure-tested all {counts['latest_reentry_programs']} newly scored routes: "
+            f"- Stage 6 re-entry 08 pressure-tested all {counts['latest_reentry_programs']} newly scored routes: "
             f"{counts['latest_reentry_monitor']} remain monitor-only and {counts['latest_reentry_do_not_apply']} "
             "remain do-not-apply because at least one hard gate fails."
         ),
         f"- All {counts['monitor']} monitor programs have only one verified strong professor and need either a verified second match or persuasive availability confirmation.",
         f"- All {counts['monitor']} monitor programs lack evidence adequate for a strategic Competitive/Plausible/Reach calibration.",
         f"- {counts['do_not_apply']} programs fail at least one hard gate and remain do-not-apply until direct official evidence resolves every failure.",
-        f"- Applicant preference among the {counts['monitor']} monitor opportunities is not directly verified.",
-        "- Offer-specific funding, fee, health-insurance, summer, and duration gaps remain where recorded in Stage 5 evidence.",
         "- Candidate discovery must find additional hard-gate-clearing, strategically calibrated options before a quality-first core can be recommended.",
+        "",
+        "## Records requiring human judgment",
+        "",
+        f"- Applicant preference among the {counts['monitor']} monitor opportunities is not directly verified.",
+        "- Single-professor dependencies require a judgment about whether verified availability is sufficient without broader department depth.",
+        "- Offer-specific funding, fee, health-insurance, summer, and duration gaps remain where recorded in Stage 5 evidence.",
+        "",
+        "## Files created or modified",
+        "",
+        "- `data/processed/pass2/portfolio.json`",
+        "- `reports/pass2/06_portfolio_pressure_test.md`",
+        "- `data/manifests/pass2/stage_06.json`",
+        "- `state/progress.json`",
+        "- `scripts/build_stage_06.py`",
+        "- `tests/test_portfolio_pressure.py`",
+        "",
+        "## Recommendation before the next stage",
+        "",
+        recommendation,
         "",
     ]
     REPORT_PATH.parent.mkdir(parents=True, exist_ok=True)
@@ -358,6 +383,7 @@ def main() -> int:
     stage_status["6_reentry_05"] = "complete" if status == "PASS" else "failed"
     stage_status["6_reentry_06"] = "complete" if status == "PASS" else "failed"
     stage_status["6_reentry_07"] = "complete" if status == "PASS" else "failed"
+    stage_status["6_reentry_08"] = "complete" if status == "PASS" else "failed"
     pass2.update({
         "current_stage": 6,
         "last_completed_stage": 6 if status == "PASS" else 5,
@@ -373,14 +399,14 @@ def main() -> int:
         "stage_06_portfolio_decision": portfolio["decision"],
         "stage_06_core_count": counts["core"],
         "stage_06_monitor_count": counts["monitor"],
-        "stage_06_reentry_completed": 7 if status == "PASS" else 6,
+        "stage_06_reentry_completed": 8 if status == "PASS" else 7,
         "stage_06_reentry_scored_programs": counts["scored_programs"],
         "stage_06_reentry_latest_programs": counts["latest_reentry_programs"],
         "stage_06_reentry_required": False,
     })
     update_progress(
         progress_path,
-        current_phase="pass2_stage_06_reentry_07_complete" if status == "PASS" else "pass2_stage_06_reentry_07_failed",
+        current_phase="pass2_stage_06_reentry_08_complete" if status == "PASS" else "pass2_stage_06_reentry_08_failed",
         pass2=pass2,
     )
 
@@ -396,7 +422,7 @@ def main() -> int:
     ]
     unresolved = [
         "No program has evidence adequate for a strategic Competitive, Plausible, Reach, or Lottery calibration; the core remains empty and candidate discovery must resume.",
-        f"Stage 6 re-entry 07 leaves {counts['latest_reentry_monitor']} of {counts['latest_reentry_programs']} newly scored routes on monitor and {counts['latest_reentry_do_not_apply']} as do-not-apply.",
+        f"Stage 6 re-entry 08 leaves {counts['latest_reentry_monitor']} of {counts['latest_reentry_programs']} newly scored routes on monitor and {counts['latest_reentry_do_not_apply']} as do-not-apply.",
         f"All {counts['monitor']} monitor programs are single-professor dependencies.",
         f"{counts['do_not_apply']} programs fail one or more hard gates.",
         f"Applicant preference among the {counts['monitor']} monitor opportunities is not directly verified.",
@@ -406,8 +432,8 @@ def main() -> int:
         "manifest_version": "1.0",
         "schema_version": "2.0",
         "stage": 6,
-        "run_type": "portfolio_reentry_07",
-        "name": "Construct and pressure-test the application portfolio — re-entry 07",
+        "run_type": "portfolio_reentry_08",
+        "name": "Construct and pressure-test the application portfolio — re-entry 08",
         "status": "complete" if status == "PASS" else "failed",
         "decision": status,
         "portfolio_decision": portfolio["decision"],
@@ -424,11 +450,11 @@ def main() -> int:
             "assertions": assertions,
             "stage_specific_tests": {
                 "command": "python -m pytest tests/test_portfolio_pressure.py -q",
-                "result": "14 passed",
+                "result": "16 passed",
             },
             "full_suite": {
                 "command": "python -m pytest -q",
-                "result": "88 passed",
+                "result": "93 passed",
             },
         },
         "counts": counts,

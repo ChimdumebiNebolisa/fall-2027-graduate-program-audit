@@ -243,6 +243,41 @@ def test_stage_six_reentry_07_disposes_and_pressure_tests_every_new_route():
     assert {row["portfolio_status"] for row in entries} == {"monitor", "do_not_apply"}
 
 
+def test_stage_six_reentry_08_disposes_and_pressure_tests_every_new_route():
+    latest_ids = {
+        row["candidate_program_id"]
+        for row in read_csv(REPO_ROOT / "data/processed/pass2/stage_03_reentry_08_verification.csv")
+        if row["faculty_review_ready"] == "yes"
+    }
+    portfolio = read_json(REPO_ROOT / "data/processed/pass2/portfolio.json")
+    entries = [
+        row
+        for key in ("core", "reserve", "monitor", "do_not_apply", "not_retained_alternates")
+        for row in portfolio[key]
+        if row["program_id"] in latest_ids
+    ]
+    assert len(latest_ids) == len(entries) == 4
+    assert {row["program_id"] for row in entries} == latest_ids
+    assert all(len(row["pressure_test_answers"]) == len(PRESSURE_QUESTIONS) for row in entries)
+    assert {row["portfolio_status"] for row in entries} == {"do_not_apply"}
+
+
+def test_stage_six_report_uses_required_stage_template():
+    report = (REPO_ROOT / "reports/pass2/06_portfolio_pressure_test.md").read_text(encoding="utf-8")
+    assert report.startswith("# Stage 6 Result\n")
+    for heading in (
+        "## Decision",
+        "## What changed",
+        "## Coverage",
+        "## Validation performed",
+        "## Material uncertainties or conflicts",
+        "## Records requiring human judgment",
+        "## Files created or modified",
+        "## Recommendation before the next stage",
+    ):
+        assert heading in report
+
+
 def test_stage_six_manifest_passes_every_acceptance_assertion():
     manifest = read_json(REPO_ROOT / "data/manifests/pass2/stage_06.json")
     scores = read_csv(REPO_ROOT / "data/processed/pass2/program_scores.csv")
