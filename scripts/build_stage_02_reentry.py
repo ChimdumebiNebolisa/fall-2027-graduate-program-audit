@@ -41,8 +41,9 @@ DEFINITION_PATHS = [
     REPO_ROOT / "data/raw/pass2/stage_02_reentry_03.json",
     REPO_ROOT / "data/raw/pass2/stage_02_reentry_04.json",
     REPO_ROOT / "data/raw/pass2/stage_02_reentry_05.json",
+    REPO_ROOT / "data/raw/pass2/stage_02_reentry_06.json",
 ]
-CURRENT_REENTRY_NUMBER = 5
+CURRENT_REENTRY_NUMBER = 6
 CURRENT_REENTRY_LABEL = f"{CURRENT_REENTRY_NUMBER:02d}"
 CURRENT_REENTRY_PREFIX = f"reentry{CURRENT_REENTRY_LABEL}"
 PREVIOUS_REENTRY_LABEL = f"{CURRENT_REENTRY_NUMBER - 1:02d}"
@@ -345,8 +346,8 @@ def build_report(
         "",
         "## What changed",
         "",
-        "Stage 6 re-entry 04 returned the workflow to discovery because the evidence-calibrated "
-        "portfolio still had zero justified core applications. This fifth bounded non-saturation "
+        "Stage 6 re-entry 05 returned the workflow to discovery because the evidence-calibrated "
+        "portfolio still had zero justified core applications. This sixth bounded non-saturation "
         f"pass adds {len(candidates)} genuinely new exact research routes supported by current official program, "
         "research, and preliminary funding evidence. It does not score, rank, retain, or claim "
         "verified funding or faculty capacity.",
@@ -471,14 +472,14 @@ def build_report(
         "EHESO/ETER and several national registries remain blocked.",
         "- Current faculty appointment, supervision authority, and capacity remain Stage 4 work "
         "after program verification.",
-        "- UAB's typical major-GPA signal and Calgary's last-two-years GPA and industry-experience "
-        "conditions require transcript and requirement-level review rather than inference from cumulative GPA.",
-        "- Auburn, Mississippi State, Arkansas, and UAB publish assistantship or fellowship mechanisms, "
-        "but none establishes an applicant-specific award, complete coverage, or renewal.",
-        "- Concordia and McMaster publish positive research-master's support signals and Calgary publishes "
-        "a minimum level, while Regina lists mechanisms only; all require offer and net-cost verification.",
-        "- The four German routes are research-relevant, but curriculum equivalency, language evidence, "
-        "semester charges, and a viable living-cost funding path remain unresolved.",
+        "- NDSU's program GPA and computing preparation, Boise's emphasis prerequisites, Alabama's exact "
+        "bachelor's-entry treatment, and FIU's upper-division GPA and mathematics rules require transcript-level review.",
+        "- NDSU, Boise, Alabama, and FIU publish assistantship mechanisms, but awards are competitive; "
+        "Boise and FIU also leave post-first-year funding dependent on an advisor.",
+        "- Ontario Tech, Carleton, uOttawa, and Windsor publish research-master's support mechanisms, "
+        "but international eligibility, supervisor commitments, package duration, and net cost remain unresolved.",
+        "- Saarland, Passau, and TU Berlin avoid regular tuition but leave curriculum, language, semester-charge, "
+        "and living-cost funding questions; Trento's tuition waiver and stipend are limited and merit-ranked.",
         "- Existing Stage 3-6 artifacts are intentionally unchanged and therefore do not yet include "
         "these routes.",
         "- Discovery remains explicitly non-saturated; this pass reduces observed false-negative risk "
@@ -487,9 +488,9 @@ def build_report(
         "## Records requiring human judgment",
         "",
         "Stage 3 must determine whether each route is actually eligible and credibly funded. The "
-        "highest-impact judgments are the UAB major-GPA calculation, Calgary's experience requirement, "
-        "whether Canadian funding signals clear the full net-cost gate, and whether any German route "
-        "has both transcript equivalency and a viable living-cost funding path.",
+        "highest-impact judgments are NDSU's GPA and preparation gate, Boise and FIU's continuation funding, "
+        "whether any Canadian MASc package clears international net cost, and whether the European routes "
+        "combine transcript equivalency with viable living-cost funding.",
         "",
         "## Files created or modified",
         "",
@@ -712,7 +713,7 @@ def main() -> None:
         "downstream_integration_check": {
             "command": "python -m pytest -q",
             "result": "EXPECTED_FAIL_PENDING_STAGE_3_REENTRY",
-            "passed": 75,
+            "passed": 79,
             "failed": 1,
             "failure": "tests/test_program_verification.py::test_every_stage2_candidate_has_exactly_one_controlled_status",
             "reason": f"program_verification.csv has {verification_rows} rows while the Stage 2 funnel now has {len(merged)}; Stage 3 was intentionally not modified in this one-stage run",
@@ -726,10 +727,9 @@ def main() -> None:
             "Current faculty appointment, supervision authority, and capacity remain unverified.",
             "Other active catalog/manual-review rows remain unresolved and discovery remains non-saturated.",
             "European registry coverage and national-registry access limitations from the initial Stage 2 run remain.",
-            "UAB's typical major-GPA signal and Calgary's last-two-years GPA and industry-experience conditions require applicant-specific review.",
-            "The four U.S. doctorates publish assistantship or fellowship mechanisms, but none establishes an applicant-specific award, complete coverage, or renewal.",
-            "Canadian research-master's support ranges from positive or minimum-funding language to listed mechanisms only; every route still needs offer and net-cost verification.",
-            "The four German routes require curriculum and language mapping and currently lack an established living-cost funding path for this applicant.",
+            "NDSU, Boise, Alabama, and FIU require transcript-level entry review; all publish competitive assistantship mechanisms, while Boise and FIU leave continuation funding advisor-dependent.",
+            "The four Canadian MASc routes require degree-equivalency, supervisor, international-package, and net-cost verification.",
+            "Saarland, Passau, and TU Berlin require curriculum and language mapping plus a living-cost plan; Trento's scholarship is limited and merit-ranked.",
             *(
                 [
                     f"Automated source retrieval exceptions remain for {len(retrieval_qa['unresolved_source_ids'])} of {retrieval_qa['checked']} current-round official source records; all were browser-reviewed during discovery."

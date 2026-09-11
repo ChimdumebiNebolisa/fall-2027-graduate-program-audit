@@ -120,8 +120,10 @@ def build_reentry_rows(
                 ),
                 "preliminary_funding_signal": str(definition["preliminary_funding_signal"]),
                 "official_program_url": str(definition["official_program_url"]),
-                "official_institution_url": institution.get("official_website", "")
-                or str(definition.get("official_institution_url", "")),
+                "official_institution_url": str(
+                    definition.get("official_institution_url", "")
+                )
+                or institution.get("official_website", ""),
                 "evidence_confidence": str(definition.get("evidence_confidence", "medium")),
                 "affiliation_normalization_status": "canonical institution registry match",
                 "seed_adjacency": _pipe(str(value) for value in definition["seed_adjacency"]),

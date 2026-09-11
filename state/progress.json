@@ -1,6 +1,6 @@
 {
   "project": "fall-2027-graduate-program-audit",
-  "current_phase": "pass2_stage_06_reentry_05_complete",
+  "current_phase": "pass2_stage_02_reentry_06_complete",
   "phases": {
     "foundation": "complete",
     "universe": "complete",
@@ -32,7 +32,7 @@
     "Canada retains 50 explicitly unresolved indexed institutions and 9 blocked/insufficient program pages."
   ],
   "pass2": {
-    "current_stage": 6,
+    "current_stage": 2,
     "last_completed_stage": 6,
     "stage_status": {
       "0": "complete",
@@ -66,12 +66,13 @@
       "3_reentry_05": "complete",
       "4_reentry_05": "complete",
       "5_reentry_05": "complete",
-      "6_reentry_05": "complete"
+      "6_reentry_05": "complete",
+      "2_reentry_06": "complete"
     },
-    "next_stage": 2,
+    "next_stage": 3,
     "next_stage_authorized": true,
     "baseline_commit": "d2e770b2d5dafe25537481f7b83663471e7060fc",
-    "stage_manifest": "data/manifests/pass2/stage_06.json",
+    "stage_manifest": "data/manifests/pass2/stage_02.json",
     "open_issue_count": 17,
     "critical_issue_count": 6,
     "high_issue_count": 9,
@@ -89,10 +90,10 @@
     "stage_06_portfolio_decision": "RETURN_TO_CANDIDATE_DISCOVERY",
     "stage_06_core_count": 0,
     "stage_06_monitor_count": 18,
-    "stage_02_reentry_required": true,
-    "stage_02_reentry_reason": "Only 0 hard-gate-clearing programs have an evidence-supported Competitive, Plausible, Reach, or Lottery calibration; fewer than 12 core applications are justified.",
+    "stage_02_reentry_required": false,
+    "stage_02_reentry_reason": "Stage 6 re-entry 05 returned to candidate discovery because the evidence-calibrated portfolio still had zero justified core applications.",
     "forward_stage_after_discovery_reentry": 7,
-    "stage_02_reentry_completed": 5,
+    "stage_02_reentry_completed": 6,
     "stage_02_reentry_new_exact_candidates": 12,
     "stage_03_reentry_completed": 5,
     "stage_03_reentry_faculty_review_ready": 3,
@@ -102,8 +103,8 @@
     "stage_05_reentry_serious_programs": 83,
     "stage_06_reentry_completed": 5,
     "stage_06_reentry_scored_programs": 83,
-    "stage_02_reentry_cumulative_exact_candidates": 60,
-    "stage_03_reentry_required": false,
+    "stage_02_reentry_cumulative_exact_candidates": 72,
+    "stage_03_reentry_required": true,
     "stage_04_reentry_required": false,
     "stage_04_reentry_source_stage": 3,
     "stage_04_reentry_cumulative_programs": 38,
@@ -114,5 +115,5 @@
     "stage_06_reentry_source_stage": 5,
     "stage_06_reentry_latest_programs": 3
   },
-  "updated_at": "2026-09-11T01:46:37.481308+00:00"
+  "updated_at": "2026-09-11T02:05:47.700085+00:00"
 }
