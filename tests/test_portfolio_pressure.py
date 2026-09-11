@@ -382,6 +382,27 @@ def test_stage_six_reentry_14_disposes_and_pressure_tests_every_new_route():
     assert {row["portfolio_status"] for row in entries} == {"do_not_apply"}
 
 
+def test_stage_six_reentry_15_disposes_and_pressure_tests_every_new_route():
+    latest_ids = {
+        row["candidate_program_id"]
+        for row in read_csv(REPO_ROOT / "data/processed/pass2/stage_03_reentry_15_verification.csv")
+        if row["faculty_review_ready"] == "yes"
+    }
+    portfolio = read_json(REPO_ROOT / "data/processed/pass2/portfolio.json")
+    entries = [
+        row
+        for key in ("core", "reserve", "monitor", "do_not_apply", "not_retained_alternates")
+        for row in portfolio[key]
+        if row["program_id"] in latest_ids
+    ]
+    assert len(latest_ids) == len(entries) == 7
+    assert {row["program_id"] for row in entries} == latest_ids
+    assert sum(len(row["pressure_test_answers"]) for row in entries) == 70
+    assert all(len(row["pressure_test_answers"]) == len(PRESSURE_QUESTIONS) for row in entries)
+    assert sum(row["portfolio_status"] == "monitor" for row in entries) == 1
+    assert sum(row["portfolio_status"] == "do_not_apply" for row in entries) == 6
+
+
 def test_stage_six_report_uses_required_stage_template():
     report = (REPO_ROOT / "reports/pass2/06_portfolio_pressure_test.md").read_text(encoding="utf-8")
     assert report.startswith("# Stage 6 Result\n")
