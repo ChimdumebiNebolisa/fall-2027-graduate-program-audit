@@ -1304,6 +1304,76 @@ FACULTY_ROSTERS: dict[str, FacultyRoster] = {
             _c("Olfa Nasraoui", "data mining; trustworthy artificial intelligence; machine learning"),
         ),
     ),
+    "University of New Hampshire-Main Campus": FacultyRoster(
+        "College of Engineering and Physical Sciences, Department of Computer Science",
+        "https://ceps.unh.edu/computer-science/faculty-staff-directory",
+        (
+            _c("Michel Charpentier", "formal specification and verification; distributed and parallel programming"),
+            _c("Aleksey Charapko", "distributed systems; databases; fault-tolerant computing"),
+            _c("Wheeler Ruml", "heuristic search; automated planning; artificial intelligence systems"),
+            _c("Laura Dietz", "information retrieval; natural language processing; knowledge graphs"),
+        ),
+    ),
+    "University of Missouri-Columbia": FacultyRoster(
+        "David L. Payne Department of Electrical Engineering and Computer Science",
+        "https://engineering.missouri.edu/departments/eecs/eecs-faculty/",
+        (
+            _c("Sean Patrick Goggins", "open-source software health; social computing; cybersecurity"),
+            _c("Khaza Anuarul Hoque", "cybersecurity; cyber-physical systems security; formal verification"),
+            _c("Prasad Calyam", "network and cloud security; cyberinfrastructure; distributed systems"),
+            _c("Tanu Malik", "reproducibility; provenance; data systems; scientific workflows"),
+        ),
+    ),
+    "University of Wisconsin-Milwaukee": FacultyRoster(
+        "College of Engineering and Applied Science, Department of Computer Science",
+        "https://uwm.edu/engineering/departments/computer-science/people-faculty-and-staff/",
+        (
+            _c("John Boyland", "programming languages; compilers; concurrency; formal logic"),
+            _c("Jerald Thomas", "cybersecurity; secure intelligent systems; trustworthy computing"),
+            _c("Zhen Zeng", "secure artificial intelligence; machine learning; trustworthy systems"),
+            _c("Rohit Kate", "natural language processing; machine learning; information extraction"),
+        ),
+    ),
+    "Illinois Institute of Technology": FacultyRoster(
+        "College of Computing, Department of Computer Science",
+        "https://www.iit.edu/directory/people?organization=116826&profile_type=21",
+        (
+            _c("Farzaneh Derakhshan", "programming languages; formal methods; software security"),
+            _c("Binghui Wang", "trustworthy machine learning; security; privacy"),
+            _c("Ioan Raicu", "distributed systems; high-performance computing; cloud computing"),
+            _c("Stefan Muller", "parallel computing; programming languages; verification"),
+        ),
+    ),
+    "New Jersey Institute of Technology": FacultyRoster(
+        "Ying Wu College of Computing, Department of Computer Science",
+        "https://cs.njit.edu/faculty",
+        (
+            _c("Iulian Neamtiu", "programming languages; software engineering; dependable systems; security"),
+            _c("Reza Curtmola", "software security; privacy; cloud security; applied cryptography"),
+            _c("Cristian Borcea", "distributed systems; mobile computing; cloud systems"),
+            _c("Zephyr Yao", "systems security; mobile computing; trustworthy systems"),
+        ),
+    ),
+    "University of Connecticut": FacultyRoster(
+        "College of Engineering, School of Computing",
+        "https://computing.engineering.uconn.edu/people/faculty/",
+        (
+            _c("Ghada Almashaqbeh", "cryptography; computer security; privacy; blockchain systems"),
+            _c("Yuan Hong", "security; privacy; trustworthy artificial intelligence"),
+            _c("Mohammad Khan", "distributed systems; cybersecurity; systems performance"),
+            _c("Walter Krawec", "quantum security; cryptography; secure communications"),
+        ),
+    ),
+    "Saint Mary’s University": FacultyRoster(
+        "Department of Mathematics and Computing Science",
+        "https://www.smu.ca/math-cs/faculty-and-staff.html",
+        (
+            _c("Pawan Lingras", "machine learning; data mining; soft computing"),
+            _c("Stavros Konstantinidis", "formal languages; automata; error detection"),
+            _c("Jiju Poovvancheri", "computer graphics; spatial computing; machine learning"),
+            _c("Yasushi Akiyama", "human-computer interaction; multimedia; machine learning"),
+        ),
+    ),
     "Clarkson University": FacultyRoster(
         "Coulter School of Engineering & Applied Sciences, Department of Computer Science",
         "https://www.clarkson.edu/academics/schools-colleges/arts-sciences/departments/computer-science/faculty-staff",
