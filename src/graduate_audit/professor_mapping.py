@@ -1454,6 +1454,56 @@ FACULTY_ROSTERS: dict[str, FacultyRoster] = {
             _c("Arash Reyhani-Masoleh", "hardware security; cryptography; dependable computing"),
         ),
     ),
+    "Portland State University": FacultyRoster(
+        "Maseeh College of Engineering and Computer Science, Department of Computer Science",
+        "https://www.pdx.edu/engineering/CS-research",
+        (
+            _c("Bart Massey", "open-source software; software engineering; lightweight formal methods"),
+            _c("Andrew Tolmach", "programming languages; compilers; software security"),
+            _c("Primal Pappachan", "data privacy; security; trustworthy data systems"),
+            _c("Wu-chang Feng", "networked systems; cloud security; cyber and data security"),
+        ),
+    ),
+    "Rensselaer Polytechnic Institute": FacultyRoster(
+        "Department of Computer Science",
+        "https://faculty.rpi.edu/departments/computer-science",
+        (
+            _c("Ana Milanova", "program analysis; software verification; programming languages"),
+            _c("Stacy Patterson", "distributed systems; fault tolerance; networked systems"),
+            _c("Mohammed J. Zaki", "data mining; machine learning; explainable models"),
+            _c("Bulent Yener", "cybersecurity; privacy; network science; trustworthy systems"),
+        ),
+    ),
+    "Southern Methodist University": FacultyRoster(
+        "Lyle School of Engineering, Department of Computer Science",
+        "https://www.smu.edu/lyle/departments/cs/people/faculty",
+        (
+            _c("LiGuo Huang", "AI for software engineering; repository mining; software quality assurance"),
+            _c("Jeff Tian", "software testing; quality engineering; reliability"),
+            _c("Mehak Gupta", "machine learning; trustworthy artificial intelligence; data systems"),
+            _c("Chen Wang", "distributed systems; edge computing; intelligent systems"),
+        ),
+    ),
+    "Texas A&M University-College Station": FacultyRoster(
+        "Department of Computer Science and Engineering",
+        "https://engineering.tamu.edu/cse/profiles/index.html",
+        (
+            _c("Guofei Gu", "systems security; malware analysis; cloud and edge security"),
+            _c("Khanh Nguyen", "programming languages; compilers; runtimes; big-data systems"),
+            _c("Abdullah Muzahid", "systems; software failure diagnosis; dependable computing"),
+            _c("Dilma Da Silva", "operating systems; cloud computing; dependable distributed systems"),
+        ),
+    ),
+    "Howard University": FacultyRoster(
+        "College of Engineering and Architecture, Department of Electrical Engineering and Computer Science",
+        "https://cea.howard.edu/academics/departments/electrical-engineering-and-computer-science/people-eecs",
+        (
+            _c("Gloria Washington", "human-computer interaction; usable security; data visualization"),
+            _c("Moses Garuba", "information assurance; cybersecurity; distributed systems"),
+            _c("Legand Burge", "distributed computing; computer architecture; mobile systems"),
+            _c("Jiang Li", "data communications; networks; distributed systems; computer architecture"),
+        ),
+    ),
     "Drexel University": FacultyRoster(
         "Nick Howley College of Engineering and Computing, Department of Computer Science",
         "https://drexel.edu/cci/academics/computer-science-department/faculty/",
@@ -1550,6 +1600,16 @@ FACULTY_ROSTERS: dict[str, FacultyRoster] = {
 # Institutions can expose serious routes through more than one department. Use
 # an exact-program override where an institution-level roster would be wrong.
 PROGRAM_FACULTY_ROSTERS: dict[str, FacultyRoster] = {
+    "ca:dli:O18781994282:program:thesis-or-research-master-s:master-of-applied-science-in-engineering-science": FacultyRoster(
+        "Faculty of Applied Sciences, School of Engineering Science",
+        "https://www.sfu.ca/fas/schools/engineering-science/faculty/",
+        (
+            _c("Lesley Shannon", "reconfigurable computing; operating systems; programming models"),
+            _c("Ivan Bajic", "machine learning; trustworthy multimedia systems; signal processing"),
+            _c("Michael Adachi", "computer engineering; embedded systems; intelligent systems"),
+            _c("Jie Liang", "multimedia systems; machine learning; signal processing"),
+        ),
+    ),
     "ca:dli:O19359011007:program:thesis-or-research-master-s:cybersecurity-engineering-masc": FacultyRoster(
         "Department of Cybersecurity and Intelligent Systems Engineering",
         "https://www.concordia.ca/ginacody/cybersecurity-intelligent-systems-eng/about/faculty-members.html",
