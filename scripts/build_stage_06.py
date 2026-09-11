@@ -27,7 +27,7 @@ OUTPUT_DIR = REPO_ROOT / "data/processed/pass2"
 PORTFOLIO_PATH = OUTPUT_DIR / "portfolio.json"
 REPORT_PATH = REPO_ROOT / "reports/pass2/06_portfolio_pressure_test.md"
 MANIFEST_PATH = REPO_ROOT / "data/manifests/pass2/stage_06.json"
-LATEST_REENTRY_PATH = OUTPUT_DIR / "stage_03_reentry_08_verification.csv"
+LATEST_REENTRY_PATH = OUTPUT_DIR / "stage_03_reentry_09_verification.csv"
 
 
 def now() -> str:
@@ -125,8 +125,8 @@ def validate(
 
     assertions = {
         "all_scored_programs_receive_one_disposition": bool(scores) and len(entries) == len(scores) and {row["program_id"] for row in entries} == set(score_by_program),
-        "latest_reentry_08_receives_dispositions_and_pressure_tests": (
-            len(latest_reentry_ids) == len(latest_entries) == 4
+        "latest_reentry_09_receives_dispositions_and_pressure_tests": (
+            len(latest_reentry_ids) == len(latest_entries) == 6
             and {row["program_id"] for row in latest_entries} == latest_reentry_ids
             and all(len(row["pressure_test_answers"]) == len(PRESSURE_QUESTIONS) for row in latest_entries)
         ),
@@ -309,14 +309,14 @@ def write_report(portfolio: dict[str, object], assertions: dict[str, bool], coun
         "",
         table(["Assertion", "Result"], [[name, "PASS" if passed else "FAIL"] for name, passed in assertions.items()]),
         "",
-        "- Stage-specific verification: `python -m pytest tests/test_portfolio_pressure.py -q` — 16 passed.",
-        "- Full-suite verification: `python -m pytest -q` — 93 passed.",
+        "- Stage-specific verification: `python -m pytest tests/test_portfolio_pressure.py -q` — 17 passed.",
+        "- Full-suite verification: `python -m pytest -q` — 99 passed.",
         "",
         "## Material uncertainties or conflicts",
         "",
         "- No implementation blocker prevented Stage 6 completion. The lack of an evidence-supported core is the plan-required policy result, not permission to pad the list.",
         (
-            f"- Stage 6 re-entry 08 pressure-tested all {counts['latest_reentry_programs']} newly scored routes: "
+            f"- Stage 6 re-entry 09 pressure-tested all {counts['latest_reentry_programs']} newly scored routes: "
             f"{counts['latest_reentry_monitor']} remain monitor-only and {counts['latest_reentry_do_not_apply']} "
             "remain do-not-apply because at least one hard gate fails."
         ),
@@ -384,6 +384,7 @@ def main() -> int:
     stage_status["6_reentry_06"] = "complete" if status == "PASS" else "failed"
     stage_status["6_reentry_07"] = "complete" if status == "PASS" else "failed"
     stage_status["6_reentry_08"] = "complete" if status == "PASS" else "failed"
+    stage_status["6_reentry_09"] = "complete" if status == "PASS" else "failed"
     pass2.update({
         "current_stage": 6,
         "last_completed_stage": 6 if status == "PASS" else 5,
@@ -399,14 +400,14 @@ def main() -> int:
         "stage_06_portfolio_decision": portfolio["decision"],
         "stage_06_core_count": counts["core"],
         "stage_06_monitor_count": counts["monitor"],
-        "stage_06_reentry_completed": 8 if status == "PASS" else 7,
+        "stage_06_reentry_completed": 9 if status == "PASS" else 8,
         "stage_06_reentry_scored_programs": counts["scored_programs"],
         "stage_06_reentry_latest_programs": counts["latest_reentry_programs"],
         "stage_06_reentry_required": False,
     })
     update_progress(
         progress_path,
-        current_phase="pass2_stage_06_reentry_08_complete" if status == "PASS" else "pass2_stage_06_reentry_08_failed",
+        current_phase="pass2_stage_06_reentry_09_complete" if status == "PASS" else "pass2_stage_06_reentry_09_failed",
         pass2=pass2,
     )
 
@@ -422,7 +423,7 @@ def main() -> int:
     ]
     unresolved = [
         "No program has evidence adequate for a strategic Competitive, Plausible, Reach, or Lottery calibration; the core remains empty and candidate discovery must resume.",
-        f"Stage 6 re-entry 08 leaves {counts['latest_reentry_monitor']} of {counts['latest_reentry_programs']} newly scored routes on monitor and {counts['latest_reentry_do_not_apply']} as do-not-apply.",
+        f"Stage 6 re-entry 09 leaves {counts['latest_reentry_monitor']} of {counts['latest_reentry_programs']} newly scored routes on monitor and {counts['latest_reentry_do_not_apply']} as do-not-apply.",
         f"All {counts['monitor']} monitor programs are single-professor dependencies.",
         f"{counts['do_not_apply']} programs fail one or more hard gates.",
         f"Applicant preference among the {counts['monitor']} monitor opportunities is not directly verified.",
@@ -432,8 +433,8 @@ def main() -> int:
         "manifest_version": "1.0",
         "schema_version": "2.0",
         "stage": 6,
-        "run_type": "portfolio_reentry_08",
-        "name": "Construct and pressure-test the application portfolio — re-entry 08",
+        "run_type": "portfolio_reentry_09",
+        "name": "Construct and pressure-test the application portfolio — re-entry 09",
         "status": "complete" if status == "PASS" else "failed",
         "decision": status,
         "portfolio_decision": portfolio["decision"],
@@ -450,11 +451,11 @@ def main() -> int:
             "assertions": assertions,
             "stage_specific_tests": {
                 "command": "python -m pytest tests/test_portfolio_pressure.py -q",
-                "result": "16 passed",
+                "result": "17 passed",
             },
             "full_suite": {
                 "command": "python -m pytest -q",
-                "result": "93 passed",
+                "result": "99 passed",
             },
         },
         "counts": counts,
