@@ -1,21 +1,23 @@
-# Pass 2 Stage 5 — Evidence-based scoring and admission calibration
+# Stage 5 Result
 
-Generated: 2026-09-11T05:01:15.679296+00:00
+Generated: 2026-09-11T06:33:21.382154+00:00
 
-Decision: **PASS**
+## Decision
 
-## Outcome
+**PASS**
 
-All 100 serious Stage 4 programs were recalculated from six recorded evidence components (600 component rows). Only 19 programs clear the direct funding, verified-professor, eligibility, degree-structure, and coursework-exception gates. Gated-out rows retain diagnostic component totals but receive no evidence rank.
+## What changed
 
-## Hard-gate result
+All 106 serious Stage 4 programs were recalculated from six recorded evidence components (636 component rows). Only 21 programs clear the direct funding, verified-professor, eligibility, degree-structure, and coursework-exception gates. Gated-out rows retain diagnostic component totals but receive no evidence rank.
+
+## Coverage
 
 | Gate | Programs passing | Programs failing |
 | --- | --- | --- |
-| Direct verified funding | 29 | 71 |
-| Verified strong professor | 79 | 21 |
-| Formal eligibility | 89 | 11 |
-| All hard gates | 19 | 81 |
+| Direct verified funding | 31 | 75 |
+| Verified strong professor | 85 | 21 |
+| Formal eligibility | 94 | 12 |
+| All hard gates | 21 | 85 |
 
 The funding gate is recomputed from exact-program source IDs whose source rows are official, verified, and explicitly funding-related. It never reads the Stage 3 retained/conditional label, a recommendation, total score, or funding score.
 
@@ -33,6 +35,8 @@ The funding gate is recomputed from exact-program source IDs whose source rows a
 | 3 | Duke University | Computer Science PhD | 70 | professor_alignment:20/30/department_program_depth:5/15/funding_net_viability:25/25/eligibility_credential_alignment:10/15/degree_admissions_alignment:10/10/application_economics:0/5 | Insufficient evidence |
 | 3 | Northeastern University | Computer Science PhD | 70 | professor_alignment:20/30/department_program_depth:5/15/funding_net_viability:20/25/eligibility_credential_alignment:15/15/degree_admissions_alignment:10/10/application_economics:0/5 | Insufficient evidence |
 | 3 | University of Kentucky | Doctoral Degree in Computer Science | 70 | professor_alignment:20/30/department_program_depth:5/15/funding_net_viability:20/25/eligibility_credential_alignment:15/15/degree_admissions_alignment:10/10/application_economics:0/5 | Insufficient evidence |
+| 4 | Johns Hopkins University | Doctor of Philosophy in Computer Science | 68 | professor_alignment:20/30/department_program_depth:5/15/funding_net_viability:20/25/eligibility_credential_alignment:10/15/degree_admissions_alignment:10/10/application_economics:3/5 | Insufficient evidence |
+| 4 | Northwestern University | Doctor of Philosophy in Computer Science | 68 | professor_alignment:20/30/department_program_depth:5/15/funding_net_viability:20/25/eligibility_credential_alignment:10/15/degree_admissions_alignment:10/10/application_economics:3/5 | Insufficient evidence |
 | 4 | University of Alabama at Birmingham | Ph.D. in Computer Science | 68 | professor_alignment:20/30/department_program_depth:5/15/funding_net_viability:20/25/eligibility_credential_alignment:10/15/degree_admissions_alignment:10/10/application_economics:3/5 | Insufficient evidence |
 | 4 | University of Illinois Chicago | PhD in Computer Science | 68 | professor_alignment:20/30/department_program_depth:5/15/funding_net_viability:20/25/eligibility_credential_alignment:10/15/degree_admissions_alignment:10/10/application_economics:3/5 | Insufficient evidence |
 | 4 | University of Illinois Urbana-Champaign | Computer Science PhD | 68 | professor_alignment:20/30/department_program_depth:5/15/funding_net_viability:20/25/eligibility_credential_alignment:10/15/degree_admissions_alignment:10/10/application_economics:3/5 | Insufficient evidence |
@@ -47,14 +51,14 @@ Tied totals share the same dense rank. Prestige and institution identity are not
 
 ## Admission calibration
 
-89 rows are `Insufficient evidence`; 11 carry an `Eligibility concern`. The source ledger contains formal requirements but no official cohort/selectivity evidence adequate for a strategic Plausible/Reach category. Published GPA minimums remain in a separate field and never create plausibility. No admission percentage is emitted.
+94 rows are `Insufficient evidence`; 12 carry an `Eligibility concern`. The source ledger contains formal requirements but no official cohort/selectivity evidence adequate for a strategic Plausible/Reach category. Published GPA minimums remain in a separate field and never create plausibility. No admission percentage is emitted.
 
-## Acceptance checks
+## Validation performed
 
 | Assertion | Result |
 | --- | --- |
 | entire_serious_program_pool_recalculated | PASS |
-| latest_reentry_08_fully_recalculated | PASS |
+| latest_reentry_09_fully_recalculated | PASS |
 | exactly_six_components_per_program | PASS |
 | program_rows_reference_exact_component_evidence | PASS |
 | component_evidence_has_required_audit_metadata | PASS |
@@ -75,20 +79,36 @@ Tied totals share the same dense rank. Prestige and institution identity are not
 | required_output_schemas_exact | PASS |
 | no_institution_specific_score_constants | PASS |
 
-- Stage-specific verification: `python -m pytest tests/test_evidence_scoring.py -q` — 24 passed.
-- Full-suite boundary: `python -m pytest -q` — 89 passed; the two failures are the expected Stage 6 portfolio-coverage gaps for the four new score rows.
+- Stage-specific verification: `python -m pytest tests/test_evidence_scoring.py -q` — 25 passed.
+- Full-suite boundary: `python -m pytest -q` — 96 passed; the two failures are the expected Stage 6 portfolio-coverage gaps for the six new score rows.
 
-## Blockers
+## Material uncertainties or conflicts
 
-None prevented Stage 5 completion.
+- Blockers: none prevented Stage 5 completion.
 
-## Unresolved coverage
-
-- Stage 5 re-entry 08 recalculated 4 newly eligible routes. All 4 pass the professor gate. The direct funding gate passes for 1, and 0 clear every hard gate.
-- 71 programs lack direct source evidence strong enough for the funding hard gate.
+- Stage 5 re-entry 09 recalculated 6 newly eligible routes. All 6 pass the professor gate. The direct funding gate passes for 2, and 2 clear every hard gate.
+- 75 programs lack direct source evidence strong enough for the funding hard gate.
 - 21 programs lack a fully verified strong professor with exact-route supervision authority.
-- 21 programs have zero verified faculty-depth points; 79 have only one verified strong match and remain capped at 5 points.
-- 89 programs lack official cohort/selectivity evidence for strategic admission calibration.
+- 21 programs have zero verified faculty-depth points; 85 have only one verified strong match and remain capped at 5 points.
+- 94 programs lack official cohort/selectivity evidence for strategic admission calibration.
 - Offer-specific net funding, fees, health insurance, summers, and duration remain incomplete where identified in the component evidence.
-- The existing Stage 6 portfolio still covers the prior score pool; Stage 6 must be rebuilt against these 100 scores.
+- The existing Stage 6 portfolio still covers the prior score pool; Stage 6 must be rebuilt against these 106 scores.
 - Stage 6 must pressure-test only hard-gate survivors for a core portfolio; diagnostic totals cannot override a failed gate.
+
+## Records requiring human judgment
+
+- Programs marked `Insufficient evidence` need official cohort or selectivity evidence before any strategic admission label can be assigned.
+- Single-professor dependencies require a human risk judgment even when every other hard gate passes.
+- Funding rows with unresolved fees, health coverage, summers, duration, or net cost need offer-specific confirmation before application commitment.
+
+## Files created or modified
+
+- `data/processed/pass2/program_scores.csv`
+- `data/processed/pass2/score_evidence.csv`
+- `reports/pass2/05_scoring_and_calibration.md`
+- `data/manifests/pass2/stage_05.json`
+- `state/progress.json`
+
+## Recommendation before the next stage
+
+Proceed to Stage 6 only with the regenerated 106-program score set. Build the portfolio from hard-gate survivors; do not promote gated-out diagnostic scores or invent admission probabilities.
