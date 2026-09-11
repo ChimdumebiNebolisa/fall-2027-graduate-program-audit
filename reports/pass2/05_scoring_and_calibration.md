@@ -1,6 +1,6 @@
 # Stage 5 Result
 
-Generated: 2026-09-11T09:07:50.500031+00:00
+Generated: 2026-09-11T10:06:07.481050+00:00
 
 ## Decision
 
@@ -8,16 +8,16 @@ Generated: 2026-09-11T09:07:50.500031+00:00
 
 ## What changed
 
-All 120 serious Stage 4 programs were recalculated from six recorded evidence components (720 component rows). Only 18 programs clear the direct funding, verified-professor, eligibility, degree-structure, and coursework-exception gates. Gated-out rows retain diagnostic component totals but receive no evidence rank.
+All 126 serious Stage 4 programs were recalculated from six recorded evidence components (756 component rows). Only 18 programs clear the direct funding, verified-professor, eligibility, degree-structure, and coursework-exception gates. Gated-out rows retain diagnostic component totals but receive no evidence rank.
 
 ## Coverage
 
 | Gate | Programs passing | Programs failing |
 | --- | --- | --- |
-| Direct verified funding | 28 | 92 |
-| Verified strong professor | 99 | 21 |
-| Formal eligibility | 106 | 14 |
-| All hard gates | 18 | 102 |
+| Direct verified funding | 28 | 98 |
+| Verified strong professor | 105 | 21 |
+| Formal eligibility | 112 | 14 |
+| All hard gates | 18 | 108 |
 
 The funding gate is recomputed from exact-program source IDs whose source rows are official, verified, and explicitly funding-related. It never reads the Stage 3 retained/conditional label, a recommendation, total score, or funding score.
 
@@ -48,14 +48,14 @@ Tied totals share the same dense rank. Prestige and institution identity are not
 
 ## Admission calibration
 
-106 rows are `Insufficient evidence`; 14 carry an `Eligibility concern`. The source ledger contains formal requirements but no official cohort/selectivity evidence adequate for a strategic Plausible/Reach category. Published GPA minimums remain in a separate field and never create plausibility. No admission percentage is emitted.
+112 rows are `Insufficient evidence`; 14 carry an `Eligibility concern`. The source ledger contains formal requirements but no official cohort/selectivity evidence adequate for a strategic Plausible/Reach category. Published GPA minimums remain in a separate field and never create plausibility. No admission percentage is emitted.
 
 ## Validation performed
 
 | Assertion | Result |
 | --- | --- |
 | entire_serious_program_pool_recalculated | PASS |
-| latest_reentry_11_fully_recalculated | PASS |
+| latest_reentry_12_fully_recalculated | PASS |
 | exactly_six_components_per_program | PASS |
 | program_rows_reference_exact_component_evidence | PASS |
 | component_evidence_has_required_audit_metadata | PASS |
@@ -76,20 +76,20 @@ Tied totals share the same dense rank. Prestige and institution identity are not
 | required_output_schemas_exact | PASS |
 | no_institution_specific_score_constants | PASS |
 
-- Stage-specific verification: `python -m pytest tests/test_evidence_scoring.py -q` — 29 passed.
-- Full-suite boundary: `python -m pytest -q` — 109 passed; the two failures are the expected Stage 6 portfolio-coverage gaps for the nine new score rows.
+- Stage-specific verification: `python -m pytest tests/test_evidence_scoring.py -q` — 30 passed.
+- Full-suite boundary: `python -m pytest -q` — 116 passed; the two failures are the expected Stage 6 portfolio-coverage gaps for the six new score rows.
 
 ## Material uncertainties or conflicts
 
 - Blockers: none prevented Stage 5 completion.
 
-- Stage 5 re-entry 11 recalculated 9 newly eligible routes. All 9 pass the professor gate. The direct funding gate passes for 1. Routes clearing every hard gate: 1.
-- 92 programs lack direct source evidence strong enough for the funding hard gate.
+- Stage 5 re-entry 12 recalculated 6 newly eligible routes. All 6 pass the professor gate. The direct funding gate passes for 0. Routes clearing every hard gate: 0.
+- 98 programs lack direct source evidence strong enough for the funding hard gate.
 - 21 programs lack a fully verified strong professor with exact-route supervision authority.
-- 21 programs have zero verified faculty-depth points; 99 have only one verified strong match and remain capped at 5 points.
-- 106 programs lack official cohort/selectivity evidence for strategic admission calibration.
+- 21 programs have zero verified faculty-depth points; 105 have only one verified strong match and remain capped at 5 points.
+- 112 programs lack official cohort/selectivity evidence for strategic admission calibration.
 - Offer-specific net funding, fees, health insurance, summers, and duration remain incomplete where identified in the component evidence.
-- The existing Stage 6 portfolio still covers the prior score pool; Stage 6 must be rebuilt against these 120 scores.
+- The existing Stage 6 portfolio still covers the prior score pool; Stage 6 must be rebuilt against these 126 scores.
 - Stage 6 must pressure-test only hard-gate survivors for a core portfolio; diagnostic totals cannot override a failed gate.
 
 ## Records requiring human judgment
@@ -108,4 +108,4 @@ Tied totals share the same dense rank. Prestige and institution identity are not
 
 ## Recommendation before the next stage
 
-Proceed to Stage 6 only with the regenerated 120-program score set. Build the portfolio from hard-gate survivors; do not promote gated-out diagnostic scores or invent admission probabilities.
+Proceed to Stage 6 only with the regenerated 126-program score set. Build the portfolio from hard-gate survivors; do not promote gated-out diagnostic scores or invent admission probabilities.
