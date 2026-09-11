@@ -1,45 +1,45 @@
 # Stage 3 Result
 
-Generated: 2026-09-11T13:57:00.021662+00:00
+Generated: 2026-09-11T15:07:33.156513+00:00
 
 ## Decision
 
-Pass — program structure, eligibility, and funding verification re-entry 16 is complete.
+Pass — program structure, eligibility, and funding verification re-entry 17 is complete.
 
 ## What changed
 
-All 2,157 Stage 2 candidates now have exactly one controlled retained, conditional, monitor, or excluded status with an evidence-backed reason. The 12 re-entry 16 routes were verified against official program, admissions, funding, fee, and deadline sources. No score or admission recommendation was created.
+All 2,169 Stage 2 candidates now have exactly one controlled retained, conditional, monitor, or excluded status with an evidence-backed reason. The 12 re-entry 17 routes were verified against official program, admissions, funding, fee, and deadline sources. No score or admission recommendation was created.
 
 ## Coverage
 
 | Status | All candidates | New routes |
 | --- | --- | --- |
-| Retained | 48 | 1 |
-| Conditional | 103 | 7 |
-| Monitor | 379 | 4 |
-| Excluded | 1627 | 0 |
-| Faculty-review ready | 151 | 8 |
+| Retained | 52 | 4 |
+| Conditional | 108 | 5 |
+| Monitor | 381 | 2 |
+| Excluded | 1628 | 1 |
+| Faculty-review ready | 160 | 9 |
 
-### Stage 2 re-entry 16 routes
+### Stage 2 re-entry 17 routes
 
 | Institution | Program | Status | Eligibility gate | Funding gate | Largest unresolved question |
 | --- | --- | --- | --- | --- | --- |
-| Florida Atlantic University | [Doctor of Philosophy with Major in Computer Science](https://www.fau.edu/engineering/eecs/graduate/phd/computer-science/) | conditional | resolvable_question | pass | Does FAU permit this international applicant with a U.S. computer science bachelor's but no master's to enter the direct BS-to-PhD route? |
-| New Mexico Institute of Mining and Technology | [Doctor of Philosophy in Computer Science](https://www.nmt.edu/academics/compsci/graduate.php) | conditional | pass | resolvable_inquiry | Will NMT issue a renewable 0.5 FTE appointment whose stipend and tuition remission also cover fees, insurance, and summer needs? |
-| Southern Illinois University-Carbondale | [Computer Science, Doctor of Philosophy](https://academics.siu.edu/computing-and-technology/computer-science/doctoral/) | conditional | resolvable_question | pass | Will SIU classify this 3.35-GPA bachelor's applicant as exceptional and admit them directly without a master's? |
-| Wichita State University | [PhD in Electrical Engineering and Computer Science](https://catalog.wichita.edu/graduate/engineering/electrical-computer-engineering/phd-in-eecs/) | conditional | resolvable_question | pass | Will a CS-track faculty member commit to advise this bachelor's applicant and certify the record as exceptional? |
-| Michigan Technological University | [Computer Science, PhD](https://www.mtu.edu/gradschool/programs/degrees/computer-science/) | retained | pass | pass | Will the actual assistantship offer provide renewable academic-year and summer support after fees and insurance? |
-| University of Tulsa | [Computer Science, Ph.D.](https://utulsa.edu/programs/computer-science/) | conditional | resolvable_question | pass | Will Tandy confirm direct bachelor's eligibility and the applicant's exact prerequisite fit for the CS PhD? |
-| Western University | [Master of Engineering Science (MESc) in Electrical and Computer Engineering](https://www.eng.uwo.ca/graduate/future-students/Graduate-Degree-Programs/electrical-computer.html) | conditional | resolvable_question | pass | Will ECE accept the applicant's computer science bachelor's as similar preparation and identify a fundable supervisor? |
-| York University | [MASc in Electrical and Computer Engineering](https://futurestudents.yorku.ca/graduate/programs/electrical-engineering-and-computer-science) | conditional | resolvable_question | pass | Will York treat the applicant's CS bachelor's and senior project as equivalent to the listed engineering preparation? |
-| University of Saskatchewan | [Electrical Engineering, Master of Science (M.Sc.) — Thesis](https://grad.usask.ca/programs/electrical-computer-engineering.php) | monitor | resolvable_question | resolvable_inquiry | Can a supervisor confirm both CS-to-ECE eligibility and funding that covers international tuition, fees, insurance, living costs, and summer? |
-| Politecnico di Milano | [Master's Degree in Computer Science and Engineering](https://www.polimi.it/en/education/laurea-programmes/programme-detail/computer-science-and-engineering) | monitor | pass | unverified | Can the applicant win a Fall 2027 scholarship whose waiver and allowance cover total tuition and living costs? |
-| Universidade do Porto | [Master in Informatics and Computing Engineering](https://fe.up.pt/estudar/meic/?lang=en) | monitor | resolvable_question | unverified | Is there an international-eligible Fall 2027 award that covers tuition and living costs from the first year? |
-| University of Minho | [Master in Informatics Engineering](https://www.eng.uminho.pt/en/study/_layouts/15/uminho.portaisuoei.ui/pages/catalogocursodetail.aspx?catid=16&itemid=5482) | monitor | resolvable_question | unverified | Can the applicant complete the bachelor's early enough for a 2027 application round and obtain full English-language, degree-equivalency, and funding terms? |
+| Drexel University | [PhD in Computer Science](https://drexel.edu/cci/academics/doctoral-programs/phd-computer-science/) | retained | pass | pass | What stipend, fee, insurance, summer, and renewal terms will appear in the Fall 2027 assistantship offer? |
+| Lehigh University | [PhD in Computer Science](https://engineering.lehigh.edu/academics/graduate/phd/phd-computer-science) | retained | pass | pass | What duration, summer, insurance, and mandatory-fee terms will Lehigh include in the actual funding offer? |
+| George Washington University | [PhD in Computer Science](https://graduate.engineering.gwu.edu/phd-computer-science) | conditional | pass | resolvable_inquiry | Will a CS faculty member select the applicant for a renewable package covering all tuition, living costs, fees, insurance, and summers? |
+| University at Albany | [Doctor of Philosophy in Computer Science](https://www.albany.edu/computer-science/programs/phd-computer-science) | conditional | pass | resolvable_inquiry | Does the Fall 2027 CS assistantship cover full tuition, fees, insurance, summer support, and multiple years at a livable stipend? |
+| Worcester Polytechnic Institute | [PhD in Computer Science](https://www.wpi.edu/academics/study/computer-science-phd) | conditional | pass | resolvable_inquiry | Will WPI issue a multi-year full package covering tuition, fees, health insurance, and summers in addition to stipend? |
+| Oakland University | [Doctor of Philosophy in Computer Science and Informatics](https://graduatecatalog.oakland.edu/programs/RiD4RoYOIfoKUJ6fRCKU/requirements-QhMWt) | monitor | resolvable_question | unverified | Will Oakland approve direct bachelor's entry for this record and pair it with a renewable full-cost Fall 2027 assistantship? |
+| University of British Columbia | [Master of Applied Science in Electrical and Computer Engineering](https://www.grad.ubc.ca/prospective-students/graduate-degree-programs/master-of-applied-science-electrical-computer-engineering) | conditional | resolvable_question | pass | Will ECE treat the applicant's CS curriculum as sufficiently overlapping with ECE and issue a two-year net-positive funding package? |
+| University of Toronto | [Master of Applied Science in Electrical and Computer Engineering](https://www.ece.utoronto.ca/graduates/degree-programs/masc/) | retained | pass | pass | What exact 2027-28 net funding, ancillary-fee, insurance, and summer payment terms apply to an international MASc offer? |
+| McGill University | [Electrical Engineering (Thesis) (M.Sc.)](https://www.mcgill.ca/gradapplicants/program/electrical-engineering-msc) | conditional | pass | resolvable_inquiry | What guaranteed net funding, tuition, fees, insurance, summer coverage, and renewal terms will an international ECE MSc offer contain? |
+| Norwegian University of Science and Technology | [Erasmus Mundus Joint Master in Cybersecurity and Assurance (CYBERSURE)](https://www.cybersure-master.eu/admission) | excluded | fail | pass | None for the gate: the applicant cannot supply a completed bachelor's by the published non-EU deadline. |
+| Université Libre de Bruxelles | [Erasmus Mundus Joint Master in Cybersecurity (CYBERUS)](https://www.ulb.be/en/programme/m-secum) | monitor | pass | unverified | Will CYBERUS run a Fall 2027 intake with scholarships after the current funding period ends? |
+| Åbo Akademi University | [Erasmus Mundus Joint Master in Engineering of Data-intensive Intelligent Software Systems (EDISS)](https://www.master-ediss.eu/) | retained | pass | pass | What exact Fall 2027 application window, number of awards, and local fee obligations will EDISS publish? |
 
 Retained means an exact research route, formal applicant eligibility, and a credible officially sourced funding route are present. It does not mean admission is likely or that an eventual offer will contain adequate net funding.
 
-Michigan Tech is retained on current official evidence. FAU, NMT, SIU, Wichita State, Tulsa, Western, and York are conditional and positioned only as `Outreach Before Decision`. Saskatchewan, Politecnico di Milano, Porto, and Minho remain monitors because eligibility and/or credible full-cost funding gates remain unresolved.
+Drexel, Lehigh, Toronto ECE, and EDISS are retained on current official evidence. GW, UAlbany, WPI, UBC ECE, and McGill ECE are conditional and positioned only as `Outreach Before Decision`. Oakland and CYBERUS remain monitors. CYBERSURE is excluded because its published non-EU degree-document deadline precedes the applicant's graduation.
 
 ## Validation performed
 
@@ -57,33 +57,38 @@ Michigan Tech is retained on current official evidence. FAU, NMT, SIU, Wichita S
 | conditional_rows_have_exactly_one_resolvable_gate | PASS |
 | conditional_rows_are_outreach_only | PASS |
 | monitor_rows_do_not_proceed | PASS |
+| excluded_rows_fail_eligibility_and_do_not_proceed | PASS |
 | exclusions_match_status | PASS |
 | no_score_or_recommendation_fields | PASS |
 
+- Current-round official URL retrieval: 42 of 42 returned HTTP 200.
+- Stage-specific tests: 24 passed.
+- Full suite boundary: 143 passed and 3 expected downstream coverage failures in Stages 4 and 5.
+
 ## Material uncertainties or conflicts
 
-- None of the latest routes publishes a confirmed Fall 2027 cycle; recurring or latest-cycle dates are labeled and must be reconfirmed when 2027–28 calls open.
+- Drexel, Lehigh, GW, UAlbany, Oakland, McGill, CYBERUS, and EDISS still rely partly or wholly on recurring or latest-cycle dates that must be reconfirmed for Fall 2027.
 - Simultaneous-application and separate-fee rules remain unverified wherever the official source did not publish an exact rule.
 - Offer-specific stipend, mandatory-fee, health-insurance, and summer coverage remain explicit unknowns wherever official pages did not publish them.
-- FAU has conflicting official bachelor's-entry rules; SIU and Wichita publish discretionary bachelor's-entry exceptions.
-- Western, York, and Saskatchewan need CS-to-ECE degree-equivalency or supervisor resolution; Porto and Minho retain admission-language or timing questions.
-- The Canadian and European awards are partial, competitive, unavailable to this applicant, or unverified for living-cost coverage and are not treated as credible full funding.
+- Oakland's direct bachelor's entry is discretionary; UBC still needs a CS-to-ECE course-overlap determination.
+- GW, UAlbany, WPI, and McGill publish competitive support routes rather than universal full-cost packages.
+- CYBERUS has no published Fall 2027 call; EDISS has renewed funding through 2031 but has not published the Fall 2027 application window or award count.
 
 ## Records requiring human judgment
 
-- 11 new routes remain conditional or monitor and must not be treated as funded recommendations.
-- Stage 4 may evaluate current faculty only for the 8 new retained/conditional routes; monitor routes do not pass the faculty-review gate.
+- 8 new routes are conditional, monitor, or excluded and must not be treated as unconditional funded recommendations.
+- Stage 4 may evaluate current faculty only for the 9 new retained/conditional routes; monitor routes do not pass the faculty-review gate.
 - Every conditional route needs its single eligibility or funding gate resolved before application spending; offer-level tuition, fee, insurance, renewal, and summer terms remain material.
-- Michigan Tech still requires written offer details; retained is a program gate, not an adequate-net-funding conclusion.
+- Every retained route still requires offer-level net-cost review; retained is a program gate, not an adequate-net-funding conclusion.
 
 ## Files created or modified
 
-- `data/raw/pass2/stage_03_reentry_16.json`
+- `data/raw/pass2/stage_03_reentry_17.json`
 - `data/processed/pass2/program_verification.csv`
 - `data/processed/pass2/program_sources.csv`
 - `data/processed/pass2/program_exclusions.csv`
-- `data/processed/pass2/stage_03_reentry_16_verification.csv`
-- `data/processed/pass2/stage_03_reentry_16_sources.csv`
+- `data/processed/pass2/stage_03_reentry_17_verification.csv`
+- `data/processed/pass2/stage_03_reentry_17_sources.csv`
 - `data/manifests/pass2/stage_03.json`
 - `state/progress.json`
 

@@ -44,6 +44,7 @@ RAW_PATH_13 = REPO_ROOT / "data/raw/pass2/stage_03_reentry_13.json"
 RAW_PATH_14 = REPO_ROOT / "data/raw/pass2/stage_03_reentry_14.json"
 RAW_PATH_15 = REPO_ROOT / "data/raw/pass2/stage_03_reentry_15.json"
 RAW_PATH_16 = REPO_ROOT / "data/raw/pass2/stage_03_reentry_16.json"
+RAW_PATH_17 = REPO_ROOT / "data/raw/pass2/stage_03_reentry_17.json"
 PROGRESS_PATH = REPO_ROOT / "state/progress.json"
 
 
@@ -97,12 +98,12 @@ def write_report(result: dict[str, object]) -> None:
     rows = read_csv(OUTPUT_DIR / "program_verification.csv")
     reentry_ids = {
         row["candidate_program_id"]
-        for row in read_csv(OUTPUT_DIR / "stage_03_reentry_16_verification.csv")
+        for row in read_csv(OUTPUT_DIR / "stage_03_reentry_17_verification.csv")
     }
     reentry = [row for row in rows if row["candidate_program_id"] in reentry_ids]
     counts = result["counts"]
     unresolved = [
-        row for row in reentry if row["verification_status"] in {"conditional", "monitor"}
+        row for row in reentry if row["verification_status"] != "retained"
     ]
     lines = [
         "# Stage 3 Result",
@@ -111,13 +112,13 @@ def write_report(result: dict[str, object]) -> None:
         "",
         "## Decision",
         "",
-        "Pass — program structure, eligibility, and funding verification re-entry 16 is complete.",
+        "Pass — program structure, eligibility, and funding verification re-entry 17 is complete.",
         "",
         "## What changed",
         "",
         f"All {counts['verification_rows']:,} Stage 2 candidates now have exactly one controlled "
         "retained, conditional, monitor, or excluded status with an evidence-backed reason. The "
-        "12 re-entry 16 routes were verified against official program, admissions, funding, fee, "
+        "12 re-entry 17 routes were verified against official program, admissions, funding, fee, "
         "and deadline sources. No score or admission recommendation was created.",
         "",
         "## Coverage",
@@ -128,12 +129,12 @@ def write_report(result: dict[str, object]) -> None:
                 ["Retained", counts["retained"], counts["reentry_retained"]],
                 ["Conditional", counts["conditional"], counts["reentry_conditional"]],
                 ["Monitor", counts["monitor"], counts["reentry_monitor"]],
-                ["Excluded", counts["excluded"], 0],
+                ["Excluded", counts["excluded"], counts["reentry_excluded"]],
                 ["Faculty-review ready", counts["faculty_review_ready"], counts["reentry_retained"] + counts["reentry_conditional"]],
             ],
         ),
         "",
-        "### Stage 2 re-entry 16 routes",
+        "### Stage 2 re-entry 17 routes",
         "",
         table(
             ["Institution", "Program", "Status", "Eligibility gate", "Funding gate", "Largest unresolved question"],
@@ -154,10 +155,10 @@ def write_report(result: dict[str, object]) -> None:
         "officially sourced funding route are present. It does not mean admission is likely or "
         "that an eventual offer will contain adequate net funding.",
         "",
-        "Michigan Tech is retained on current official evidence. FAU, NMT, SIU, Wichita State, "
-        "Tulsa, Western, and York are conditional and positioned only as `Outreach Before Decision`. "
-        "Saskatchewan, Politecnico di Milano, Porto, and Minho remain monitors because eligibility "
-        "and/or credible full-cost funding gates remain unresolved.",
+        "Drexel, Lehigh, Toronto ECE, and EDISS are retained on current official evidence. GW, "
+        "UAlbany, WPI, UBC ECE, and McGill ECE are conditional and positioned only as "
+        "`Outreach Before Decision`. Oakland and CYBERUS remain monitors. CYBERSURE is excluded "
+        "because its published non-EU degree-document deadline precedes the applicant's graduation.",
         "",
         "## Validation performed",
         "",
@@ -166,30 +167,34 @@ def write_report(result: dict[str, object]) -> None:
             [[key, "PASS" if value else "FAIL"] for key, value in result["assertions"].items()],
         ),
         "",
+        "- Current-round official URL retrieval: 42 of 42 returned HTTP 200.",
+        "- Stage-specific tests: 24 passed.",
+        "- Full suite boundary: 143 passed and 3 expected downstream coverage failures in Stages 4 and 5.",
+        "",
         "## Material uncertainties or conflicts",
         "",
-        "- None of the latest routes publishes a confirmed Fall 2027 cycle; recurring or latest-cycle dates are labeled and must be reconfirmed when 2027–28 calls open.",
+        "- Drexel, Lehigh, GW, UAlbany, Oakland, McGill, CYBERUS, and EDISS still rely partly or wholly on recurring or latest-cycle dates that must be reconfirmed for Fall 2027.",
         "- Simultaneous-application and separate-fee rules remain unverified wherever the official source did not publish an exact rule.",
         "- Offer-specific stipend, mandatory-fee, health-insurance, and summer coverage remain explicit unknowns wherever official pages did not publish them.",
-        "- FAU has conflicting official bachelor's-entry rules; SIU and Wichita publish discretionary bachelor's-entry exceptions.",
-        "- Western, York, and Saskatchewan need CS-to-ECE degree-equivalency or supervisor resolution; Porto and Minho retain admission-language or timing questions.",
-        "- The Canadian and European awards are partial, competitive, unavailable to this applicant, or unverified for living-cost coverage and are not treated as credible full funding.",
+        "- Oakland's direct bachelor's entry is discretionary; UBC still needs a CS-to-ECE course-overlap determination.",
+        "- GW, UAlbany, WPI, and McGill publish competitive support routes rather than universal full-cost packages.",
+        "- CYBERUS has no published Fall 2027 call; EDISS has renewed funding through 2031 but has not published the Fall 2027 application window or award count.",
         "",
         "## Records requiring human judgment",
         "",
-        f"- {len(unresolved)} new routes remain conditional or monitor and must not be treated as funded recommendations.",
+        f"- {len(unresolved)} new routes are conditional, monitor, or excluded and must not be treated as unconditional funded recommendations.",
         f"- Stage 4 may evaluate current faculty only for the {counts['reentry_retained'] + counts['reentry_conditional']} new retained/conditional routes; monitor routes do not pass the faculty-review gate.",
         "- Every conditional route needs its single eligibility or funding gate resolved before application spending; offer-level tuition, fee, insurance, renewal, and summer terms remain material.",
-        "- Michigan Tech still requires written offer details; retained is a program gate, not an adequate-net-funding conclusion.",
+        "- Every retained route still requires offer-level net-cost review; retained is a program gate, not an adequate-net-funding conclusion.",
         "",
         "## Files created or modified",
         "",
-        "- `data/raw/pass2/stage_03_reentry_16.json`",
+        "- `data/raw/pass2/stage_03_reentry_17.json`",
         "- `data/processed/pass2/program_verification.csv`",
         "- `data/processed/pass2/program_sources.csv`",
         "- `data/processed/pass2/program_exclusions.csv`",
-        "- `data/processed/pass2/stage_03_reentry_16_verification.csv`",
-        "- `data/processed/pass2/stage_03_reentry_16_sources.csv`",
+        "- `data/processed/pass2/stage_03_reentry_17_verification.csv`",
+        "- `data/processed/pass2/stage_03_reentry_17_sources.csv`",
         "- `data/manifests/pass2/stage_03.json`",
         "- `state/progress.json`",
         "",
@@ -223,6 +228,7 @@ def main() -> int:
     definitions_14 = json.loads(RAW_PATH_14.read_text(encoding="utf-8"))["programs"]
     definitions_15 = json.loads(RAW_PATH_15.read_text(encoding="utf-8"))["programs"]
     definitions_16 = json.loads(RAW_PATH_16.read_text(encoding="utf-8"))["programs"]
+    definitions_17 = json.loads(RAW_PATH_17.read_text(encoding="utf-8"))["programs"]
     verification_01, sources_01, exclusions_01 = apply_program_reentry(
         definitions_01,
         baseline["verification_rows"],
@@ -328,12 +334,19 @@ def main() -> int:
         exclusions_14,
         "data/raw/pass2/stage_03_reentry_15.json",
     )
-    verification, sources, exclusions = apply_program_reentry(
+    verification_16, sources_16, exclusions_16 = apply_program_reentry(
         definitions_16,
         verification_15,
         sources_15,
         exclusions_15,
         "data/raw/pass2/stage_03_reentry_16.json",
+    )
+    verification, sources, exclusions = apply_program_reentry(
+        definitions_17,
+        verification_16,
+        sources_16,
+        exclusions_16,
+        "data/raw/pass2/stage_03_reentry_17.json",
     )
     write_csv(OUTPUT_DIR / "program_verification.csv", verification, PROGRAM_VERIFICATION_COLUMNS_V2)
     write_csv(OUTPUT_DIR / "program_sources.csv", sources, PROGRAM_SOURCE_COLUMNS_V2)
@@ -354,6 +367,7 @@ def main() -> int:
     write_reentry_subsets(OUTPUT_DIR, definitions_14, verification, sources, "_14")
     write_reentry_subsets(OUTPUT_DIR, definitions_15, verification, sources, "_15")
     write_reentry_subsets(OUTPUT_DIR, definitions_16, verification, sources, "_16")
+    write_reentry_subsets(OUTPUT_DIR, definitions_17, verification, sources, "_17")
     result_01 = validate_program_reentry(definitions_01, verification, sources, exclusions)
     result_02 = validate_program_reentry(definitions_02, verification, sources, exclusions)
     result_03 = validate_program_reentry(definitions_03, verification, sources, exclusions)
@@ -369,10 +383,11 @@ def main() -> int:
     result_13 = validate_program_reentry(definitions_13, verification, sources, exclusions)
     result_14 = validate_program_reentry(definitions_14, verification, sources, exclusions)
     result_15 = validate_program_reentry(definitions_15, verification, sources, exclusions)
-    result = validate_program_reentry(definitions_16, verification, sources, exclusions)
+    result_16 = validate_program_reentry(definitions_16, verification, sources, exclusions)
+    result = validate_program_reentry(definitions_17, verification, sources, exclusions)
     if any(
         item["validation_status"] != "PASS"
-        for item in (result_01, result_02, result_03, result_04, result_05, result_06, result_07, result_08, result_09, result_10, result_11, result_12, result_13, result_14, result_15, result)
+        for item in (result_01, result_02, result_03, result_04, result_05, result_06, result_07, result_08, result_09, result_10, result_11, result_12, result_13, result_14, result_15, result_16, result)
     ):
         raise RuntimeError(
             f"Stage 3 cumulative re-entry failed: round01={result_01['assertions']}; "
@@ -383,7 +398,7 @@ def main() -> int:
             f"round10={result_10['assertions']}; round11={result_11['assertions']}; "
             f"round12={result_12['assertions']}; round13={result_13['assertions']}; "
             f"round14={result_14['assertions']}; round15={result_15['assertions']}; "
-            f"round16={result['assertions']}"
+            f"round16={result_16['assertions']}; round17={result['assertions']}"
         )
     write_report(result)
 
@@ -407,6 +422,7 @@ def main() -> int:
     stage_status["3_reentry_14"] = "complete"
     stage_status["3_reentry_15"] = "complete"
     stage_status["3_reentry_16"] = "complete"
+    stage_status["3_reentry_17"] = "complete"
     pass2.update(
         {
             "current_stage": 3,
@@ -418,14 +434,14 @@ def main() -> int:
             "stage_manifest": "data/manifests/pass2/stage_03.json",
             "stage_03_acceptance": "PASS",
             "stage_03_reentry_required": False,
-            "stage_03_reentry_completed": 16,
+            "stage_03_reentry_completed": 17,
             "stage_03_reentry_faculty_review_ready": result["counts"]["reentry_retained"] + result["counts"]["reentry_conditional"],
             "stage_03_faculty_review_ready": result["counts"]["faculty_review_ready"],
             "stage_04_reentry_required": True,
             "stage_04_reentry_source_stage": 3,
         }
     )
-    update_progress(PROGRESS_PATH, current_phase="pass2_stage_03_reentry_16_complete", pass2=pass2)
+    update_progress(PROGRESS_PATH, current_phase="pass2_stage_03_reentry_17_complete", pass2=pass2)
 
     output_paths = [
         OUTPUT_DIR / "program_verification.csv",
@@ -463,6 +479,8 @@ def main() -> int:
         OUTPUT_DIR / "stage_03_reentry_15_sources.csv",
         OUTPUT_DIR / "stage_03_reentry_16_verification.csv",
         OUTPUT_DIR / "stage_03_reentry_16_sources.csv",
+        OUTPUT_DIR / "stage_03_reentry_17_verification.csv",
+        OUTPUT_DIR / "stage_03_reentry_17_sources.csv",
         REPORT_PATH,
     ]
     artifact_paths = [
@@ -482,6 +500,7 @@ def main() -> int:
         RAW_PATH_14,
         RAW_PATH_15,
         RAW_PATH_16,
+        RAW_PATH_17,
         REPO_ROOT / "src/graduate_audit/program_reentry.py",
         REPO_ROOT / "scripts/build_stage_03_reentry.py",
         REPO_ROOT / "tests/test_program_reentry.py",
@@ -492,8 +511,8 @@ def main() -> int:
         "manifest_version": "1.0",
         "schema_version": "2.0",
         "stage": 3,
-        "run_type": "verification_reentry_16",
-        "name": "Program structure, eligibility, and funding verification — re-entry 16",
+        "run_type": "verification_reentry_17",
+        "name": "Program structure, eligibility, and funding verification — re-entry 17",
         "status": "complete",
         "decision": "PASS",
         "triggered_by_stage": 2,
@@ -519,6 +538,7 @@ def main() -> int:
             file_record(RAW_PATH_14),
             file_record(RAW_PATH_15),
             file_record(RAW_PATH_16),
+            file_record(RAW_PATH_17),
         ],
         "outputs": [file_record(path) for path in output_paths],
         "artifacts": [file_record(path) for path in artifact_paths],
@@ -529,11 +549,16 @@ def main() -> int:
             "conditional_positioning": "Outreach Before Decision",
             "stage_specific_tests": {
                 "command": "python -m pytest tests/test_program_verification.py tests/test_program_reentry.py -q",
-                "result": "23 passed",
+                "result": "24 passed",
+            },
+            "current_round_source_retrieval": {
+                "checked": 42,
+                "http_200": 42,
+                "result": "all_retrievable",
             },
             "full_suite_boundary": {
                 "command": "python -m pytest -q",
-                "result": "137 passed, 3 expected downstream coverage failures",
+                "result": "143 passed, 3 expected downstream coverage failures",
                 "unresolved_stages": [4, 5],
             },
         },
@@ -541,7 +566,7 @@ def main() -> int:
         "failures": [],
         "blockers": [],
         "unresolved_coverage": [
-            "Eleven of the 12 latest routes remain conditional or monitor because one or more eligibility or funding gates are unresolved.",
+            "Five of the 12 latest routes remain conditional, two remain monitor, and one is excluded because one or more eligibility, cycle, or funding gates do not pass.",
             "Simultaneous-application rules remain unverified for most new routes.",
             "Offer-specific net funding terms remain unknown where official pages publish only program-level commitments.",
             "Existing Stage 4 through Stage 6 outputs intentionally remain unchanged pending their separate re-entry stages.",
@@ -550,7 +575,7 @@ def main() -> int:
         ],
     }
     write_json(MANIFEST_PATH, manifest)
-    print("Stage 3 verification re-entry 16: PASS")
+    print("Stage 3 verification re-entry 17: PASS")
     print(json.dumps(result["counts"], indent=2))
     return 0
 

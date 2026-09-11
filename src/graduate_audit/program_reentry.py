@@ -44,6 +44,12 @@ def _controlled_status(eligibility_gate: str, funding_gate: str) -> str:
 
 
 def _status_fields(status: str, definition: dict[str, object]) -> dict[str, str]:
+    if status == "excluded":
+        return {
+            "status_reason": str(definition["exclusion_reason"]),
+            "faculty_review_ready": "no",
+            "application_positioning": "Do Not Advance",
+        }
     if status == "retained":
         return {
             "status_reason": (
@@ -144,7 +150,11 @@ def apply_program_reentry(
             raise ValueError(f"Institution name mismatch for {program_id}")
         eligibility_gate = str(definition["eligibility_gate"])
         funding_gate = str(definition["funding_gate"])
-        status = _controlled_status(eligibility_gate, funding_gate)
+        status = (
+            "excluded"
+            if eligibility_gate == "fail" and definition.get("exclusion_reason")
+            else _controlled_status(eligibility_gate, funding_gate)
+        )
         updated = dict(baseline)
         for key, value in definition["fields"].items():
             if key not in PROGRAM_VERIFICATION_COLUMNS_V2:
@@ -178,6 +188,40 @@ def apply_program_reentry(
     exclusion_rows = [
         row for row in baseline_exclusions if row["candidate_program_id"] not in programs
     ]
+    source_by_id = {row["stage3_source_id"]: row for row in source_rows}
+    for row in verification_rows:
+        program_id = row["candidate_program_id"]
+        definition = programs.get(program_id)
+        if not definition or row["verification_status"] != "excluded":
+            continue
+        source_ids = set(
+            _split(row["program_source_ids"])
+            + _split(row["admissions_source_ids"])
+            + _split(row["funding_source_ids"])
+        )
+        exclusion_rows.append(
+            {
+                "schema_version": PASS2_SCHEMA_VERSION,
+                "candidate_program_id": program_id,
+                "institution_id": row["institution_id"],
+                "institution_name": row["institution_name"],
+                "country": row["country"],
+                "region": row["region"],
+                "program_name": row["exact_degree_program_name"],
+                "degree_type": row["degree_type"],
+                "exclusion_category": str(
+                    definition.get("exclusion_category", "verified_eligibility_failure")
+                ),
+                "evidence_backed_reason": row["status_reason"],
+                "largest_unresolved_question": row["largest_unresolved_question"],
+                "source_ids": _join(sorted(source_ids)),
+                "source_urls": _join(
+                    source_by_id[source_id]["url"] for source_id in sorted(source_ids)
+                ),
+                "source_record_paths": row["source_record_paths"],
+                "excluded_at": row["verified_at"],
+            }
+        )
     return verification_rows, source_rows, exclusion_rows
 
 
@@ -258,6 +302,13 @@ def validate_program_reentry(
             for row in reentry
             if row["verification_status"] == "monitor"
         ),
+        "excluded_rows_fail_eligibility_and_do_not_proceed": all(
+            row["eligibility_gate"] == "fail"
+            and row["faculty_review_ready"] == "no"
+            and row["application_positioning"] == "Do Not Advance"
+            for row in reentry
+            if row["verification_status"] == "excluded"
+        ),
         "exclusions_match_status": {
             row["candidate_program_id"] for row in exclusion_rows
         }
@@ -287,6 +338,7 @@ def validate_program_reentry(
         "reentry_retained": sum(row["verification_status"] == "retained" for row in reentry),
         "reentry_conditional": sum(row["verification_status"] == "conditional" for row in reentry),
         "reentry_monitor": sum(row["verification_status"] == "monitor" for row in reentry),
+        "reentry_excluded": sum(row["verification_status"] == "excluded" for row in reentry),
     }
     return {
         "validation_status": "PASS" if all(assertions.values()) else "FAIL",
