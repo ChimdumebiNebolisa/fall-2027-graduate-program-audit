@@ -1,6 +1,6 @@
 {
   "project": "fall-2027-graduate-program-audit",
-  "current_phase": "pass2_stage_04_reentry_06_complete",
+  "current_phase": "pass2_stage_05_reentry_06_complete",
   "phases": {
     "foundation": "complete",
     "universe": "complete",
@@ -32,7 +32,7 @@
     "Canada retains 50 explicitly unresolved indexed institutions and 9 blocked/insufficient program pages."
   ],
   "pass2": {
-    "current_stage": 4,
+    "current_stage": 5,
     "last_completed_stage": 6,
     "stage_status": {
       "0": "complete",
@@ -69,12 +69,13 @@
       "6_reentry_05": "complete",
       "2_reentry_06": "complete",
       "3_reentry_06": "complete",
-      "4_reentry_06": "complete"
+      "4_reentry_06": "complete",
+      "5_reentry_06": "complete"
     },
-    "next_stage": 5,
+    "next_stage": 6,
     "next_stage_authorized": true,
     "baseline_commit": "d2e770b2d5dafe25537481f7b83663471e7060fc",
-    "stage_manifest": "data/manifests/pass2/stage_04.json",
+    "stage_manifest": "data/manifests/pass2/stage_05.json",
     "open_issue_count": 17,
     "critical_issue_count": 6,
     "high_issue_count": 9,
@@ -101,8 +102,8 @@
     "stage_03_reentry_faculty_review_ready": 6,
     "stage_04_reentry_completed": 6,
     "stage_04_reentry_programs": 6,
-    "stage_05_reentry_completed": 5,
-    "stage_05_reentry_serious_programs": 83,
+    "stage_05_reentry_completed": 6,
+    "stage_05_reentry_serious_programs": 89,
     "stage_06_reentry_completed": 5,
     "stage_06_reentry_scored_programs": 83,
     "stage_02_reentry_cumulative_exact_candidates": 72,
@@ -110,12 +111,12 @@
     "stage_04_reentry_required": false,
     "stage_04_reentry_source_stage": 3,
     "stage_04_reentry_cumulative_programs": 44,
-    "stage_05_reentry_required": true,
+    "stage_05_reentry_required": false,
     "stage_05_reentry_source_stage": 4,
-    "stage_05_reentry_latest_programs": 3,
-    "stage_06_reentry_required": false,
+    "stage_05_reentry_latest_programs": 6,
+    "stage_06_reentry_required": true,
     "stage_06_reentry_source_stage": 5,
     "stage_06_reentry_latest_programs": 3
   },
-  "updated_at": "2026-09-11T02:43:05.335050+00:00"
+  "updated_at": "2026-09-11T02:48:27.869303+00:00"
 }

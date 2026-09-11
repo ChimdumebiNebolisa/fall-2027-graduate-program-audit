@@ -36,7 +36,7 @@ EVIDENCE_PATH = OUTPUT_DIR / "score_evidence.csv"
 REPORT_PATH = REPO_ROOT / "reports/pass2/05_scoring_and_calibration.md"
 MANIFEST_PATH = REPO_ROOT / "data/manifests/pass2/stage_05.json"
 RUBRIC_PATH = REPO_ROOT / "config/scoring_rubric.yaml"
-LATEST_REENTRY_PATH = OUTPUT_DIR / "stage_03_reentry_05_verification.csv"
+LATEST_REENTRY_PATH = OUTPUT_DIR / "stage_03_reentry_06_verification.csv"
 
 
 def now() -> str:
@@ -213,8 +213,8 @@ def build() -> dict[str, object]:
     constant_hits = _institution_score_constant_hits()
     assertions = {
         "entire_serious_program_pool_recalculated": bool(programs) and len(scores) == len(programs) and {row["program_id"] for row in scores} == {row["candidate_program_id"] for row in programs},
-        "latest_reentry_05_fully_recalculated": (
-            len(latest_reentry_ids) == 3
+        "latest_reentry_06_fully_recalculated": (
+            len(latest_reentry_ids) == 6
             and {row["program_id"] for row in scores if row["program_id"] in latest_reentry_ids}
             == latest_reentry_ids
             and all(len(evidence_by_program[program_id]) == len(COMPONENT_ORDER) for program_id in latest_reentry_ids)
@@ -360,8 +360,8 @@ def write_report(result: dict[str, object]) -> None:
         "",
         table(["Assertion", "Result"], [[name, "PASS" if passed else "FAIL"] for name, passed in result["assertions"].items()]),
         "",
-        "- Stage-specific verification: `python -m pytest tests/test_evidence_scoring.py -q` — 21 passed.",
-        "- Full-suite boundary: `python -m pytest -q` — 77 passed; the two failures are the expected Stage 6 portfolio-coverage gaps for the three new score rows.",
+        "- Stage-specific verification: `python -m pytest tests/test_evidence_scoring.py -q` — 22 passed.",
+        "- Full-suite boundary: `python -m pytest -q` — 81 passed; the two failures are the expected Stage 6 portfolio-coverage gaps for the six new score rows.",
         "",
         "## Blockers",
         "",
@@ -370,7 +370,7 @@ def write_report(result: dict[str, object]) -> None:
         "## Unresolved coverage",
         "",
         (
-            f"- Stage 5 re-entry 05 recalculated {counts['latest_reentry_programs']} newly eligible routes. "
+            f"- Stage 5 re-entry 06 recalculated {counts['latest_reentry_programs']} newly eligible routes. "
             f"All {counts['latest_reentry_professor_gate_pass']} pass the professor gate. The direct funding gate "
             f"passes for {counts['latest_reentry_funding_gate_pass']}, and "
             f"{counts['latest_reentry_hard_gate_survivors']} clear every hard gate."
@@ -420,6 +420,7 @@ def main() -> int:
     stage_status["5_reentry_03"] = "complete" if result["status"] == "PASS" else "failed"
     stage_status["5_reentry_04"] = "complete" if result["status"] == "PASS" else "failed"
     stage_status["5_reentry_05"] = "complete" if result["status"] == "PASS" else "failed"
+    stage_status["5_reentry_06"] = "complete" if result["status"] == "PASS" else "failed"
     pass2.update({
         "current_stage": 5,
         "last_completed_stage": max(int(pass2.get("last_completed_stage", 0)), 5) if result["status"] == "PASS" else 4,
@@ -430,7 +431,7 @@ def main() -> int:
         "authorization_mode": "agent_stage_gate_per_user_instruction",
         "stage_05_acceptance": result["status"],
         "stage_05_hard_gate_survivors": result["counts"]["hard_gate_survivors"],
-        "stage_05_reentry_completed": 5 if result["status"] == "PASS" else 4,
+        "stage_05_reentry_completed": 6 if result["status"] == "PASS" else 5,
         "stage_05_reentry_serious_programs": result["counts"]["serious_programs_scored"],
         "stage_05_reentry_latest_programs": result["counts"]["latest_reentry_programs"],
         "stage_05_reentry_required": False,
@@ -439,7 +440,7 @@ def main() -> int:
     })
     update_progress(
         progress_path,
-        current_phase="pass2_stage_05_reentry_05_complete" if result["status"] == "PASS" else "pass2_stage_05_reentry_05_failed",
+        current_phase="pass2_stage_05_reentry_06_complete" if result["status"] == "PASS" else "pass2_stage_05_reentry_06_failed",
         pass2=pass2,
     )
 
@@ -450,7 +451,7 @@ def main() -> int:
         f"{counts['zero_depth_programs']} programs have zero verified faculty depth and {counts['single_professor_dependencies']} are single-professor dependencies.",
         f"{counts['insufficient_admission_evidence']} programs lack official cohort/selectivity evidence for strategic admission calibration.",
         "Offer-specific net cost and coverage details remain incomplete where recorded in score evidence.",
-        f"Stage 5 re-entry 05 produced {counts['latest_reentry_hard_gate_survivors']} hard-gate survivors from {counts['latest_reentry_programs']} newly scored routes; the others fail at least one hard gate.",
+        f"Stage 5 re-entry 06 produced {counts['latest_reentry_hard_gate_survivors']} hard-gate survivors from {counts['latest_reentry_programs']} newly scored routes; the others fail at least one hard gate.",
         f"The existing Stage 6 portfolio covers the prior score pool and must be rebuilt against the {counts['serious_programs_scored']} current score rows.",
     ]
     outputs = [SCORES_PATH, EVIDENCE_PATH, REPORT_PATH]
@@ -474,8 +475,8 @@ def main() -> int:
         "manifest_version": "1.0",
         "schema_version": "2.0",
         "stage": 5,
-        "run_type": "scoring_reentry_05",
-        "name": "Evidence-based scoring and admission calibration — re-entry 05",
+        "run_type": "scoring_reentry_06",
+        "name": "Evidence-based scoring and admission calibration — re-entry 06",
         "status": "complete" if result["status"] == "PASS" else "failed",
         "decision": result["status"],
         "source_commit_before_stage": source_commit,
@@ -492,11 +493,11 @@ def main() -> int:
             "institution_specific_score_constant_hits": result["constant_hits"],
             "stage_specific_tests": {
                 "command": "python -m pytest tests/test_evidence_scoring.py -q",
-                "result": "21 passed",
+                "result": "22 passed",
             },
             "full_suite_boundary": {
                 "command": "python -m pytest -q",
-                "result": "77 passed, 2 expected downstream coverage failures",
+                "result": "81 passed, 2 expected downstream coverage failures",
                 "unresolved_stages": [6],
             },
         },

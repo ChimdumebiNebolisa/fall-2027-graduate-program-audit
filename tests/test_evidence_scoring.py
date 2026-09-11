@@ -250,6 +250,26 @@ def test_stage_five_reentry_05_scores_every_new_faculty_ready_route():
     assert all(row["professor_hard_gate"] == "true" for row in scored_latest)
 
 
+def test_stage_five_reentry_06_scores_every_new_faculty_ready_route():
+    latest_ids = {
+        row["candidate_program_id"]
+        for row in read_csv(REPO_ROOT / "data/processed/pass2/stage_03_reentry_06_verification.csv")
+        if row["faculty_review_ready"] == "yes"
+    }
+    scores = read_csv(REPO_ROOT / "data/processed/pass2/program_scores.csv")
+    evidence = read_csv(REPO_ROOT / "data/processed/pass2/score_evidence.csv")
+    scored_latest = [row for row in scores if row["program_id"] in latest_ids]
+    evidence_by_program = defaultdict(list)
+    for row in evidence:
+        if row["program_id"] in latest_ids:
+            evidence_by_program[row["program_id"]].append(row)
+    assert len(latest_ids) == len(scored_latest) == 6
+    assert {row["program_id"] for row in scored_latest} == latest_ids
+    assert set(evidence_by_program) == latest_ids
+    assert all(len(rows) == len(COMPONENT_ORDER) for rows in evidence_by_program.values())
+    assert all(row["professor_hard_gate"] == "true" for row in scored_latest)
+
+
 def test_missing_gate_evidence_reduces_confidence_and_blocks_rank():
     scores = read_csv(REPO_ROOT / "data/processed/pass2/program_scores.csv")
     incomplete = [
